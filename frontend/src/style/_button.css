@@ -1,0 +1,16 @@
+.all_buttons{
+    padding: .5rem;
+    border-top-left-radius: 3rem;
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    transition: all 0.3s ease-in-out;
+
+    &:hover{
+        border-radius: 0;
+        transform: translateY(-10px);
+    }
+}
