@@ -1,0 +1,62 @@
+services:
+
+  traefik:
+    image: "traefik:v3.1"
+    container_name: "traefik"
+    command:
+      #- "--log.level=DEBUG"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
+      - "--entrypoints.web.http.redirections.entryPoint.scheme=https"
+      - "--entrypoints.web.http.redirections.entrypoint.permanent=true"
+      - "--entrypoints.websecure.address=:443"
+      - "--certificatesresolvers.certificadofront.acme.caserver=${LE_ACME_URL}"
+      - "--certificatesresolvers.certificadofront.acme.httpchallenge=true"
+      - "--certificatesresolvers.certificadofront.acme.httpchallenge.entrypoint=web"
+      - "--certificatesresolvers.certificadofront.acme.email=${LE_EMAIL}"
+      - "--certificatesresolvers.certificadofront.acme.storage=/letsencrypt/acme.json"
+    networks:
+      - traefik-net
+    ports:
+      - "80:80"
+      - "443:443"
+    restart: always
+    volumes:
+      - "traefik-data:/letsencrypt"
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+
+  frontend:
+    build:
+      args:
+      - PATH_PREFIX
+      context: .
+    image: site-smae:latest
+    networks:
+      - traefik-net
+    restart: always
+    volumes:
+      - nginx-cache:/var/cache/nginx
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.frontend.entrypoints=websecure"
+      - "traefik.http.routers.frontend.rule=Host(`${HOST_NAME}`) || Host(`www.${HOST_NAME}`)"
+      - "traefik.http.routers.frontend.tls.certresolver=certificadofront"
+      - "traefik.http.routers.frontend.tls=true"
+      - "traefik.http.routers.frontend.tls.domains[0].main=${HOST_NAME}"
+      - "traefik.http.routers.frontend.tls.domains[1].main=www.${HOST_NAME}"
+      - "traefik.http.services.frontend.loadbalancer.server.port=80"
+      - "traefik.http.routers.frontend.middlewares=frontend-ratelimit,rewrite-www"
+      - "traefik.http.middlewares.frontend-ratelimit.ratelimit.average=1000"
+      - "traefik.http.middlewares.frontend-ratelimit.ratelimit.period=10s"
+      - "traefik.http.middlewares.frontend-ratelimit.ratelimit.burst=500"
+      - "traefik.http.middlewares.rewrite-www.redirectregex.regex=^https://(www.)?(.*)"
+      - "traefik.http.middlewares.rewrite-www.redirectregex.replacement=https://$$2"
+
+networks:
+  traefik-net:
+
+volumes:
+  traefik-data:
+  nginx-cache:
