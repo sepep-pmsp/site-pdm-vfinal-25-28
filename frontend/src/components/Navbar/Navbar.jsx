@@ -20,9 +20,9 @@ export default function Navbar() {
 
   return (
     <div className="fixed w-full p-2 bg-white z-50">
-      <div className="flex flex-row flex-nowrap items-center justify-between p-2">
+      <div className="flex flex-row justify-around gap-56 items-center p-2">
         <div>
-            <h1 className='text-4xl'>PREFEITURA DE SÃO PAULO | <strong>PROGRAMA DE METAS</strong></h1>
+            <span className='text-4xl'>PREFEITURA DE SÃO PAULO | <span><strong>PROGRAMA DE METAS</strong></span></span>
         </div>
         <div>
           <button
@@ -30,7 +30,7 @@ export default function Navbar() {
             aria-expanded={isOpen}
             aria-controls="main-menu"
           >
-            <h2 className='text-4xl'>menu</h2>
+            <h2 className='text-4xl'><strong>menu</strong></h2>
           </button>
         </div>
       </div>
