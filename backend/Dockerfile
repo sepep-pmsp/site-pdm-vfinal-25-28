@@ -2,10 +2,10 @@
 FROM python:3.11-slim
 
 # Define a pasta de trabalho dentro do container
-WORKDIR /app
+WORKDIR /site_pdm_admin
 
 # Copia os arquivos do projeto
-COPY . /app
+COPY . /site_pdm_admin
 
 # Instala as dependências
 RUN pip install --upgrade pip \
@@ -15,4 +15,4 @@ RUN pip install --upgrade pip \
 EXPOSE 8000
 
 # Comando padrão: aplica migrações e inicia o servidor
-CMD ["sh", "-c", "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
+CMD ["sh", "-c", "python site_pdm_admin/manage.py migrate && python site_pdm_admin/manage.py runserver 0.0.0.0:8000"]
