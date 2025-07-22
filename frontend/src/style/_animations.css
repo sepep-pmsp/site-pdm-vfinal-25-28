@@ -313,3 +313,92 @@
     opacity: 0;
   }
 }
+
+/*Animações do hover do Menu*/
+
+.slide-top-in-item {
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+.slide-top-in:hover .slide-top-in-item {
+  transform: translateY(-150px);
+}
+
+/* Slide TOP IN 2 */
+.slide-top-in-item-2 {
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+.slide-top-in-2:hover .slide-top-in-item-2 {
+  transform: translateY(-350px);
+}
+
+/* Slide TOP IN 3 */
+.slide-top-in-item-3 {
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+.slide-top-in-3:hover .slide-top-in-item-3 {
+  transform: translateY(-90px);
+}
+
+/* Slide RIGHT IN */
+.slide-right-in-item {
+  transition: transform 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+.slide-right-in:hover .slide-right-in-item {
+  transform: translateX(175px);
+}
+
+/* Slide RIGHT IN IMG */
+.slide-right-in-item-img {
+  transition: transform 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+.slide-right-in-img:hover .slide-right-in-item-img {
+  transform: translateX(500px);
+}
+
+/* Slide BOTTOM IN */
+.slide-bottom-in-item {
+  transition: transform 0.6s cubic-bezier(0.42, 0, 0.58, 1);
+}
+.slide-bottom-in:hover .slide-bottom-in-item {
+  transform: translateY(300px);
+}
+
+/* Slide BOTTOM IN IMG */
+.slide-bottom-in-item-img {
+  transition: transform 0.6s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+.slide-bottom-in-img:hover .slide-bottom-in-item-img {
+  transform: translateY(350px);
+}
+
+/* Slide TOP IN IMG */
+.slide-top-in-item-img {
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+.slide-top-in-img:hover .slide-top-in-item-img {
+  transform: translateY(-400px);
+}
+
+/* Slide LEFT IN */
+.slide-left-in-item {
+  transition: transform 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+.slide-left-in:hover .slide-left-in-item {
+  transform: translateX(-100px);
+}
+
+/* Slide RIGHT IN LOGO */
+.slide-right-in-item-logo {
+  transition: transform 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+.slide-right-in-logo:hover .slide-right-in-item-logo {
+  transform: translateX(220px);
+}
+
+/* Slide LEFT IN IMG */
+.slide-left-in-item-img {
+  transition: transform 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+.slide-left-in-img:hover .slide-left-in-item-img {
+  transform: translateX(-500px);
+}
