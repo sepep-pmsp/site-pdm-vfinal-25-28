@@ -1,19 +1,23 @@
 import React, { useEffect, useState } from "react";
-import newsData from "./news.json";
+import { getNewsData } from "@/services/home/getNewsData";
 
 export default function NewsCarousel() {
-  const [current, setCurrent] = useState(0);
-  const [news, setNews] = useState([]);
+const [current, setCurrent] = useState(0);
+const [news, setNews] = useState([]);
 
-  useEffect(() => {
-    const sorted = newsData.sort((a, b) => {
-      if (a.priority !== b.priority) {
-        return a.priority - b.priority;
-      }
-      return new Date(b.date) - new Date(a.date);
-    });
-    setNews(sorted);
-  }, []);
+useEffect(() => {
+    getNewsData()
+        .then((newsData) => {
+            const sorted = newsData.sort((a, b) => {
+                if (a.priority !== b.priority) {
+                    return a.priority === 1 ? -1 : 1;
+                }
+                return new Date(b.date) - new Date(a.date);
+            });
+            setNews(sorted);
+        })
+        .catch(console.error);
+}, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
