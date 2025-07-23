@@ -3,11 +3,11 @@ import { scrollToSection } from "../../utils/scroll";
 
 export default function CustomButton({
   type,
-  label,
   target,
   onClick,
   className,
-  style
+  style,
+  children
 }) {
   const handleClick = () => {
     if (type === "scroll") {
@@ -38,7 +38,7 @@ export default function CustomButton({
 
   return (
     <button onClick={handleClick} className={buttonClass} style={style}>
-      {label}
+      {children}
     </button>
   );
 }
