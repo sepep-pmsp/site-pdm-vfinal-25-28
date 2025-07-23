@@ -249,9 +249,11 @@
     --color-cyan-light:                         rgb(3, 168, 197);
     --color-cyan-medium:                        rgb(106, 202, 219);
     --color-cyan-dark:                          rgb(14, 123, 168);
-    --color-blue:                               #0000AB;
+    --color-blue:                               rgb(0, 0, 171);
     --color-blue-dark:                          rgb(18, 78, 138);
     --color-navy:                               rgb(39, 35, 97);
+    --color-Filter-blue:                        rgba(41, 37, 97, 0.329);
+    --color-blue-light:                         rgba(41, 37, 97, 0.726);
 
     --color-green-light:                        rgb(139, 197, 64);
     --color-green-medium:                       rgb(104, 173, 67);
