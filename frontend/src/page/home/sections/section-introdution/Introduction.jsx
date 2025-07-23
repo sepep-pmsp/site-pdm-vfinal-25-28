@@ -41,7 +41,7 @@ export default function Introduction() {
                 <CustomButton
                 type="link"
                 target="download"
-                className="all_buttons text-3xl uppercase"
+                className="all_buttons text-2xl uppercase"
                 >
                     baixar o<br />
                 <strong>pdm 2025/2028</strong>
