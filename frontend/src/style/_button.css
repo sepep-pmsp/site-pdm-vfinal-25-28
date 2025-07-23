@@ -20,3 +20,10 @@
         transform: translateY(-10px);
     }
 }
+
+.btn-about{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-white);
+    text-transform: uppercase;
+}

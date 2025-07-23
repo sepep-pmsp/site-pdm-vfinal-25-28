@@ -402,3 +402,9 @@
 .slide-left-in-img:hover .slide-left-in-item-img {
   transform: translateX(-500px);
 }
+
+.linha{
+    background-color: var(--color-navy);
+    width: 100%;
+    height: 0.3rem;
+}
