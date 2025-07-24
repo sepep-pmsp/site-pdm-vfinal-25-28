@@ -39,8 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
-    'pdm_admin',
-    'pdm_api'
+    'cadastros_basicos',
+    'pdm_api',
+    'estrutura_pdm',
 ]
 
 MIDDLEWARE = [
