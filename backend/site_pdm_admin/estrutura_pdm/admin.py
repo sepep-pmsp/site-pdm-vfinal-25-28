@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from .models.eixos import Eixo, Tema
-from .models.metas import Meta, MetaOrgao, AcaoEstrategica
+from .models.metas import Meta, MetaOrgao, AcaoEstrategica, MetaSubprefeitura
 from cadastros_basicos.models.estrutura_administrativa import Orgao
 
 # Register your models here.
@@ -32,9 +32,15 @@ class MetaOrgaoInline(admin.TabularInline):
     verbose_name = "Órgão Responsável"
     verbose_name_plural = "Órgãos Responsáveis"
 
+class MetaSubprefeituraInline(admin.TabularInline):
+    model = MetaSubprefeitura
+    extra = 1
+    verbose_name = "Subprefeitura com Entregas"
+    verbose_name_plural = "Subprefeituras com Entregas"
+
 @admin.register(Meta)
 class MetaAdmin(admin.ModelAdmin):
     list_display = ('numero', 'destaque', 'descricao')
     search_fields = ('numero', 'destaque')
-    inlines = [AcaoEstrategicaInline, MetaOrgaoInline]
+    inlines = [AcaoEstrategicaInline, MetaOrgaoInline, MetaSubprefeituraInline]
 

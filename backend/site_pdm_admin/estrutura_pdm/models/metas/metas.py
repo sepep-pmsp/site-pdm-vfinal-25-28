@@ -3,7 +3,7 @@ from django.core.exceptions import ValidationError
 
 from ..eixos import Eixo, Tema
 from cadastros_basicos.models.estrutura_administrativa import Orgao
-
+from cadastros_basicos.models.regionalizacao import SubPrefeitura
 
 class MetaOrgao(models.Model):
     orgao = models.ForeignKey(
@@ -27,12 +27,36 @@ class MetaOrgao(models.Model):
 
     def __str__(self):
         return f'{self.orgao.nome} responsável pela meta {self.meta.numero}'
+    
+class MetaSubprefeitura(models.Model):
+    subprefeitura = models.ForeignKey(
+        SubPrefeitura,
+        blank=False,
+        related_name='meta_subprefeitura',
+        verbose_name="Subprefeitura",
+        on_delete=models.CASCADE
+    )
+    meta = models.ForeignKey(
+        'Meta',
+        blank=False,
+        related_name='meta_subprefeitura',
+        verbose_name="Meta",
+        on_delete=models.CASCADE
+    )
+
+    class Meta:
+        verbose_name = "Subprefeitura Responsável pela Meta"
+        verbose_name_plural = "Subprefeituras Responsáveis pelas Metas"
+
+    def __str__(self):
+        return f'Meta {self.meta.numero} com entregas na Subprefeitura {self.subprefeitura.sigla}  '
 
 class Meta(models.Model):
 
     numero = models.IntegerField(blank=False, null=False, verbose_name="Número da Meta")
-    destaque = models.CharField(max_length=250, null=False, blank=False, unique=True, verbose_name="Destaque da Meta")
+    destaque = models.CharField(max_length=500, null=False, blank=False, unique=True, verbose_name="Destaque da Meta")
     descricao = models.TextField(blank=False, null=False, verbose_name="Descrição da Meta")
+    indicador = models.CharField(max_length=500, blank=False, null=False, verbose_name="Indicador da Meta")
 
     eixo = models.ForeignKey(
         Eixo,
@@ -55,6 +79,14 @@ class Meta(models.Model):
         related_name='metas',
         verbose_name="Órgãos responsáveis",
         through='MetaOrgao'
+    )
+
+    subprefeituras_entregas = models.ManyToManyField(
+        SubPrefeitura,
+        blank=True,
+        related_name='metas',
+        verbose_name="Subprefeituras com entregas",
+        through='MetaSubprefeitura'
     )
 
     def clean(self):
