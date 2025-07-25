@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'cadastros_basicos',
     'pdm_api',
     'estrutura_pdm',
+    'secoes_pagina_inicial'
 ]
 
 MIDDLEWARE = [
