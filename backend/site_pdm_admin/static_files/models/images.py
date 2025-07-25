@@ -35,6 +35,10 @@ class Imagem(models.Model):
                 self.formato = img.format
                 super().save(update_fields=['largura', 'altura', 'formato'])
 
+    class Meta:
+        verbose_name = "Imagem"
+        verbose_name_plural = "Imagens"
+
     def __str__(self) -> str:
 
         return f'Imagem: {self.slug}'
