@@ -57,6 +57,7 @@ class Meta(models.Model):
     destaque = models.CharField(max_length=500, null=False, blank=False, unique=True, verbose_name="Destaque da Meta")
     descricao = models.TextField(blank=False, null=False, verbose_name="Descrição da Meta")
     indicador = models.CharField(max_length=500, blank=False, null=False, verbose_name="Indicador da Meta")
+    projecao = models.CharField(max_length=500, blank=False, null=False, verbose_name="Projeção da Meta")
 
     eixo = models.ForeignKey(
         Eixo,
