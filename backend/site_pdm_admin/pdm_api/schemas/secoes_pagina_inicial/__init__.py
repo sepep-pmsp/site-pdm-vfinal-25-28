@@ -1,1 +1,1 @@
-from .about_pdm import AboutPDM
+from .about_pdm import AboutPDMSchema
