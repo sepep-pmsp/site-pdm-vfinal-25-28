@@ -27,7 +27,7 @@ class AboutPDMAdmin(admin.ModelAdmin):
 
 @admin.register(Noticia)
 class NoticiaAdmin(admin.ModelAdmin):
-    list_display = ('titulo', 'data', 'publicado', 'criado_em', 'criado_por')
+    list_display = ('titulo', 'data', 'published', 'criado_em', 'criado_por')
     readonly_fields = ('criado_por', 'modificado_por', 'criado_em', 'modificado_em')
 
     def save_model(self, request, obj, form, change):

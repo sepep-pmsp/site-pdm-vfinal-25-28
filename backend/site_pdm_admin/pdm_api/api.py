@@ -3,9 +3,9 @@ from django.http import FileResponse
 from typing import List
 
 from .queries.static_files import get_image_by_id
-from .queries.secoes_pagina_inicial import get_about_pdm
+from .queries.secoes_pagina_inicial import get_about_pdm, get_noticias
 
-from .schemas.secoes_pagina_inicial import AboutPDMSchema
+from .schemas.secoes_pagina_inicial import AboutPDMSchema, NoticiaSchema
 
 api = NinjaAPI()
 
@@ -38,3 +38,16 @@ def about_pdm(request) -> AboutPDMSchema:
     }
 
     return AboutPDMSchema(**parsed)
+
+@api.get("/noticias", response=List[NoticiaSchema], tags=["Seções Página Inicial"])
+def noticias(request) -> List[NoticiaSchema]:
+    """
+    Retrieve the news articles.
+    """
+    noticias = get_noticias()
+    return [NoticiaSchema(
+        titulo=noticia.titulo,
+        link=noticia.link,
+        data=noticia.data_str,
+        prioridade=noticia.prioridade
+    ) for noticia in noticias]
