@@ -1,5 +1,5 @@
 from django.contrib import admin, messages
-from .models.about_pdm import AboutPDM
+from .models import AboutPDM, Noticia
 # Register your models here.
 
 
@@ -22,5 +22,17 @@ class AboutPDMAdmin(admin.ModelAdmin):
                     level=messages.WARNING
                 )
                 outras_publicadas.update(published=False)
+
+        super().save_model(request, obj, form, change)
+
+@admin.register(Noticia)
+class NoticiaAdmin(admin.ModelAdmin):
+    list_display = ('titulo', 'data', 'publicado', 'criado_em', 'criado_por')
+    readonly_fields = ('criado_por', 'modificado_por', 'criado_em', 'modificado_em')
+
+    def save_model(self, request, obj, form, change):
+        if not obj.pk:
+            obj.criado_por = request.user
+        obj.modificado_por = request.user
 
         super().save_model(request, obj, form, change)
