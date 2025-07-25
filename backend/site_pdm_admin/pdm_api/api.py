@@ -30,11 +30,13 @@ def about_pdm(request) -> AboutPDMSchema:
     if not about_pdm:
         return AboutPDMSchema()
     
+    rel_path_image = 'images/' + str(about_pdm.banner_image.id)
+    
     parsed = {
         'titulo' : about_pdm.titulo,
         'subtitulo' : about_pdm.subtitulo,
         'paragrafo' : about_pdm.paragrafo,
-        'link_img' : 'images/' + str(about_pdm.banner_image.id) if about_pdm.banner_image else None,
+        'link_img' :  request.build_absolute_uri(rel_path_image) if about_pdm.banner_image else '',
     }
 
     return AboutPDMSchema(**parsed)
