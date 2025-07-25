@@ -16,6 +16,14 @@ class Eixo(models.Model):
         max_length=255, blank=True, null=True, verbose_name="Resumo do Eixo"
     )
 
+
+    @property
+    def descricao_as_list(self)->list[str]:
+        """
+        Retorna a descrição do eixo como uma lista de strings, separando por quebras de linha.
+        """
+        return self.descricao.splitlines() if self.descricao else []
+
     logo = models.ForeignKey(
         Imagem,
         on_delete=models.SET_NULL,
