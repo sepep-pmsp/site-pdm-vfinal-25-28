@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.exceptions import ValidationError
 from django.contrib.auth import get_user_model
+from static_files.models import Imagem
 
 User = get_user_model()
 
@@ -22,6 +23,15 @@ class AboutPDM(models.Model):
         on_delete=models.PROTECT,
         related_name='secoes_modificadas',
         editable=False
+    )
+
+    banner_image = models.ForeignKey(
+        Imagem,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='about_pdm',
+        verbose_name="Imagem Banner"
     )
 
 
