@@ -1,0 +1,80 @@
+[
+    {
+        "id": 1,
+        "nome": "universo sp",
+        "titulo": "espaço e ambiente",
+        "cor_principal": "var(--color-green)",
+        "image":"svg/universo_sp_colorido.svg",
+        "imagem_card": "svg/universo_sp.svg",
+        "lista": [
+            "natureza e ambiente",
+            "Habitação de qualidade",
+            "Mobilidade",
+            "Infraestrutura e integração",
+            "Requalificação urbana",
+            "Desenvolvimento planejado"
+        ],
+        "texto": [
+            "Neste eixo, São Paulo é pensada em sua dimensão física, natural, territorial. É a cidade compreendida como espaço e ambiente da vida em sociedade.",
+            "É o eixo que reúne metas relacionadas à preservação da natureza e à intervenção na paisagem urbana. Trata tanto do ambiente natural — rios, córregos, represas, matas — quanto do ambiente transformado — vias, edificações, moradias.",
+            "Nele estão as metas de infraestrutura urbana, drenagem, habitação, requalificação de espaços públicos, integração dos bairros e mobilidade. O nome Universo SP indica o desafio que é organizar o território de uma das maiores cidades do mundo. Ao reunir natureza e urbanização, reflete a ambição de transformar São Paulo em um espaço mais ordenado e sustentável."
+        ]
+    },
+    {
+        "id": 2,
+        "nome": "capital do futuro",
+        "titulo": "gestão e modernidade",
+        "cor_principal": "var(--color-purple-red)",
+        "image":"svg/capital_futuro_colorido.svg",
+        "imagem_card": "svg/capital_do_futuro.svg",
+        "lista": [
+            "natureza e ambiente",
+            "Habitação de qualidade",
+            "Mobilidade",
+            "Infraestrutura e integração",
+            "Requalificação urbana",
+            "Desenvolvimento planejado"
+        ],
+        "texto": [
+            "O eixo Capital do Futuro reúne metas voltadas à modernização da administração pública, à transformação digital e ao aperfeiçoamento da relação entre governo e cidadão. Trata do compromisso com a transparência e da participação das pessoas como protagonistas dos processos decisórios.",
+            "São Paulo quer ser referência em governo digital, em plataformas de serviço integradas, em inovação, em participação cidadã. Quer melhorar agora seus processos para ser não só a capital de um lugar, mas uma das capitais dos novos tempos. Capital de um futuro em que os melhores recursos de gestão sejam empregados para transformar, de maneira sustentável, as realidades sociais. Um futuro que pertença às pessoas."
+        ]
+    },
+    {
+        "id": 3,
+        "nome": "cidade empreendedora",
+        "titulo": "negócios e capacitação",
+        "cor_principal": "var(--color-blue)",
+        "image":"svg/cidade_empreendedora_colorido.svg",
+        "imagem_card": "svg/cidade_empreendedora.svg",
+        "lista": [
+            "Ambiente de negócios",
+            "Economia criativa",
+            "Qualificação profissional, emprego e renda"
+        ],
+        "texto": [
+            "Este eixo reflete a convicção de que o desenvolvimento econômico que gera oportunidades precisa ter protagonismo no planejamento da cidade. Aqui estão as metas de qualificação profissional, fomento ao empreendedorismo, economia criativa e turismo como vetor de crescimento.",
+            "O nome Cidade Empreendedora carrega uma aspiração: que São Paulo seja um lugar que reconhece e valoriza as vocações de cada território, que favorece a geração de oportunidades em todos os bairros e que cria ambientes propícios à inovação, à produtividade e ao trabalho digno."
+        ]
+    },
+    {
+        "id": 4,
+        "nome": "viver são paulo",
+        "titulo": "pessoas e sociedade",
+        "cor_principal": "var(--color-orange-red)",
+        "image":"svg/viver_sp_colorido.svg",
+        "imagem_card": "svg/viver_sao_paulo.svg",
+        "lista": [
+            "segurança",
+            "saúde e bem-estar",
+            "educação",
+            "proteção social e cidadania plena",
+            "cultura, esporte e lazer"
+        ],
+        "texto": [
+            "O eixo Viver São Paulo concentra as metas mais diretamente associadas à qualidade de vida do cidadão. É onde se situam as ações que proporcionam condições para viver plenamente a cidade, com dignidade, bem-estar e pertencimento.",
+            "É o eixo da segurança pública, da proteção à mulher vítima de violência, da segurança alimentar e nutricional, do acolhimento à população em situação de rua, dos serviços de saúde, da educação e da cultura como dimensões indissociáveis da formação humana, do esporte, do lazer, da convivência respeitosa e pacífica.",
+            "Viver São Paulo é, em última instância, viver com direitos, serviços e oportunidades. É viver as relações com outras pessoas. É ser parte, ter lugar e ter voz na sociedade."
+        ]
+    }
+]

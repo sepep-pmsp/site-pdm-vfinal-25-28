@@ -1,0 +1,32 @@
+[
+  {
+    "titulo": "O Programa de Metas prevê quatro eixos estratégicos para o desenvolvimento da cidade.",
+    "link": "https://exemplo.com/noticia1",
+    "data": "01/02/2024",
+    "prioridade": 1
+  },
+  {
+    "titulo": "Audiências públicas serão realizadas em todas as regiões da cidade.",
+    "link": "https://exemplo.com/noticia2",
+    "data": "01/02/2024",
+    "prioridade": 2
+  },
+  {
+    "titulo": "Participe ativamente da construção do Programa de Metas 2025-2028.",
+    "link": "https://exemplo.com/noticia3",
+    "data": "01/02/2024",
+    "prioridade": 3
+  },
+  {
+    "titulo": "Eixos temáticos incluem sustentabilidade, mobilidade, inclusão e governança.",
+    "link": "https://exemplo.com/noticia4",
+    "data": "01/02/2024",
+    "prioridade": 4
+  },
+  {
+    "titulo": "Confira o cronograma completo das audiências regionais e temáticas.",
+    "link": "https://exemplo.com/noticia5",
+    "data": "01/02/2024",
+    "prioridade": 5
+  }
+]

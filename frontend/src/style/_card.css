@@ -1,26 +1,49 @@
 .card-hover {
   border: 4px solid transparent;
   transition: background-color 0.3s, border-color 0.3s;
+
+  & .text-hover-green,
+    text-hover-blue,
+    text-hover-purple,
+    text-hover-orange{
+    transition: all 0.3s ease-in-out;
+  }
 }
 
 .card-hover-green:hover {
   background-color: white;
   border-color: var(--color-green);
+
+  & .text-hover-green{
+    color: var(--color-green);
+  }
 }
 
 .card-hover-blue:hover {
   background-color: white;
-  border-color: var(--color-blue-950);
+  border-color: var(--color-blue);
+
+  & .text-hover-blue {
+    color: var(--color-blue);
+  }
 }
 
 .card-hover-purple:hover {
   background-color: white;
   border-color: var(--color-orange-red);
+
+    & .text-hover-orange {
+        color: var(--color-orange-red);
+    }
 }
 
 .card-hover-orange:hover {
   background-color: white;
   border-color: var(--color-purple-red);
+
+  & .text-hover-purple{
+    color: var(--color-purple-red);
+  }
 }
 
 .fa-solid{
@@ -36,6 +59,6 @@
     list-style-type: disc;
 
     &::marker{
-        font-size: 2rem;
+        font-size: 15px;
     }
 }

@@ -1,30 +1,37 @@
 import React from "react";
+import Vector_Sobre from "@/assets/svg/Vector-sobre.svg";
+import Vector from "@/assets/svg/Vector.svg";
+import Universo_SP from "@/assets/svg/universo_sp.svg";
+import Viver_SP from "@/assets/svg/viver_sao_paulo.svg";
+import Capital_Futuro from "@/assets/svg/capital_do_futuro.svg";
+import Logo_PDM_fPreto from "@/assets/svg/logo-pdm-black.svg";
+import Cidade_Empreendedora from "@/assets/svg/cidade_empreendedora.svg";
 
 export default function Grid_menu_navbar({ onClose }) {
   return (
     <div className="flex flex-row flex-nowrap items-center justify-center h-full w-full gap-4 p-4">
       {/* Grid lateral (coluna esquerda) */}
-      <div className="flex flex-col flex-nowrap items-start gap-4 ml-4">
+      <div className="flex flex-col flex-nowrap items-start gap-4 ">
         <div>
-          <button className="slide-bottom-in text-white w-80 bg-[var(--color-navy)] h-[25rem] flex flex-col items-start justify-start flex-nowrap text-2xl m-4 p-4 rounded-tr-[3rem] cursor-pointer">
+          <button className="slide-bottom-in text-white w-80 bg-[var(--color-navy)] h-[25rem] flex flex-col items-start justify-start flex-nowrap text-2xl  p-4 rounded-tr-[3rem] cursor-pointer">
             <h2 className="z-2 slide-bottom-in-item">sobre o pdm</h2>
             <img
               className="relative left-6 top-[2.8rem]"
-              src="/svg/Vector-sobre.svg"
+              src={Vector_Sobre}
             />
           </button>
         </div>
         <div>
-          <button className="slide-top-in text-white w-80 bg-[var(--color-navy)] h-60 flex flex-col items-start justify-end flex-nowrap text-2xl m-4 p-4 rounded-bl-[3rem] pb-4 cursor-pointer">
+          <button className="slide-top-in text-white w-80 bg-[var(--color-navy)] h-60 flex flex-col items-start justify-end flex-nowrap text-2xl p-4 rounded-bl-[3rem] pb-4 cursor-pointer">
             <h2 className="z-2 slide-top-in-item">pdms anteriores</h2>
             <img
               className="absolute w-[16.5rem] left-20 top-[28rem]"
-              src="/svg/Vector.svg"
+              src={Vector}
             />
           </button>
         </div>
         <div>
-          <button className="slide-right-in text-white w-80 bg-[var(--color-cyan-medium)] h-20 flex items-start flex-row text-2xl m-4 p-4 rounded-tr-[2rem] cursor-pointer ">
+          <button className="slide-right-in text-white w-80 bg-[var(--color-cyan-medium)] h-20 flex items-start flex-row text-2xl p-4 rounded-tr-[2rem] cursor-pointer ">
             <h2 className="slide-right-in-item">início</h2>
           </button>
         </div>
@@ -45,7 +52,7 @@ export default function Grid_menu_navbar({ onClose }) {
             <div className="slide-right-in-img flex items-start justify-start flex-row p-6 col-span-2 row-span-1 bg-[var(--color-green)] cursor-pointer rounded-tl-[2rem]">
               <img
                 className="w-48 slide-right-in-item-img"
-                src="/svg/universo_sp.svg"
+                src={Universo_SP}
                 alt=""
               />
             </div>
@@ -53,7 +60,7 @@ export default function Grid_menu_navbar({ onClose }) {
             <div className="slide-bottom-in-img flex flex-col justify-start items-end p-6 col-span-1 row-span-2 bg-[var(--color-orange-red)] cursor-pointer rounded-tr-[2rem]">
               <img
                 className="w-48 slide-bottom-in-item-img"
-                src="/svg/viver_sao_paulo.svg"
+                src={Viver_SP}
                 alt=""
               />
             </div>
@@ -61,7 +68,7 @@ export default function Grid_menu_navbar({ onClose }) {
             <div className="slide-top-in-img flex items-end justify-start p-6 col-span-1 row-span-2 bg-[var(--color-purple-red)] cursor-pointer rounded-bl-[2rem]">
               <img
                 className="w-48 slide-top-in-item-img"
-                src="/svg/capital_do_futuro.svg"
+                src={Capital_Futuro}
                 alt=""
               />
             </div>
@@ -71,7 +78,7 @@ export default function Grid_menu_navbar({ onClose }) {
                 <div>
                   <img
                     className="w-36 p-4 invert-[1] slide-right-in-item-logo"
-                    src="/svg/logo-pdm-black.svg"
+                    src={Logo_PDM_fPreto}
                     alt=""
                   />
                 </div>
@@ -87,7 +94,7 @@ export default function Grid_menu_navbar({ onClose }) {
             <div className="slide-left-in-img flex justify-end items-end p-6 col-span-2 bg-[var(--color-blue)] cursor-pointer rounded-br-[2rem]">
               <img
                 className="w-48 slide-left-in-item-img"
-                src="/svg/cidade_empreendedora.svg"
+                src={Cidade_Empreendedora}
                 alt=""
               />
             </div>
