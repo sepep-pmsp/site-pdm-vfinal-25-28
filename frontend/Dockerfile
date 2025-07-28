@@ -20,6 +20,7 @@ RUN npm install
 
 RUN npm run build
 
-FROM nginx:1.26-alpine
+EXPOSE 5173
 
-COPY --from=build /usr/src/app/dist/front-end/browser /usr/share/nginx/html
+# Comando padrão: aplica migrações e inicia o servidor
+CMD ["sh", "-c", "npm run dev -- --host"]
