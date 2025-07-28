@@ -3,9 +3,12 @@ from django.http import FileResponse
 from typing import List
 
 from .queries.static_files import get_image_by_id
-from .queries.secoes_pagina_inicial import get_about_pdm, get_noticias
+from .queries.secoes_pagina_inicial import get_about_pdm, get_noticias, get_eixos
 
 from .schemas.secoes_pagina_inicial import AboutPDMSchema, NoticiaSchema
+from .schemas.secoes_pagina_inicial import EixoSchema as EixoPaginaInicialSchema
+
+from .utils.static_files.images import get_rel_link, get_abs_link, get_content_type
 
 api = NinjaAPI()
 
@@ -17,7 +20,7 @@ def image(request, image_id: int) -> FileResponse:
     image = get_image_by_id(image_id)
     if not image:
         return FileResponse(status=404)
-    content_type = f'image/{image.formato}'
+    content_type = get_content_type(image)
     return FileResponse(image.arquivo.open('rb'), content_type=content_type)
 
 
@@ -27,16 +30,12 @@ def about_pdm(request) -> AboutPDMSchema:
     Retrieve the 'About PDM' section.
     """
     about_pdm = get_about_pdm()
-    if not about_pdm:
-        return AboutPDMSchema()
-    
-    rel_path_image = 'images/' + str(about_pdm.banner_image.id)
-    
+        
     parsed = {
         'titulo' : about_pdm.titulo,
         'subtitulo' : about_pdm.subtitulo,
         'paragrafo' : about_pdm.paragrafo,
-        'link_img' :  request.build_absolute_uri(rel_path_image) if about_pdm.banner_image else '',
+        'link_img' :  get_abs_link(request, about_pdm.banner_image) if about_pdm.banner_image else '',
     }
 
     return AboutPDMSchema(**parsed)
@@ -47,9 +46,30 @@ def noticias(request) -> List[NoticiaSchema]:
     Retrieve the news articles.
     """
     noticias = get_noticias()
-    return [NoticiaSchema(
+    parsed_list = [NoticiaSchema(
         titulo=noticia.titulo,
         link=noticia.link,
         data=noticia.data_str,
         prioridade=noticia.prioridade
     ) for noticia in noticias]
+
+    return parsed_list
+
+@api.get("/eixos_pagina_inicial", response=List[EixoPaginaInicialSchema], tags=["Seções Página Inicial"])
+def eixos_pagina_inicial(request) -> List[EixoPaginaInicialSchema]:
+    """
+    Retrieve the initial page axes.
+    """
+    eixos = get_eixos()
+    parsed_list = [EixoPaginaInicialSchema(
+        id=eixo.id,
+        nome=eixo.nome,
+        titulo=eixo.titulo,
+        cor_principal=eixo.cor_principal,
+        imagem=get_abs_link(request, eixo.logo) if eixo.logo else '',
+        imagem_card=get_abs_link(request, eixo.logo) if eixo.logo else '',
+        lista=[tema.nome for tema in eixo.temas.all()],
+        texto=eixo.descricao_as_list,
+    ) for eixo in eixos]
+
+    return parsed_list

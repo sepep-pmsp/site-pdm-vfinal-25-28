@@ -10,10 +10,10 @@ hex_color_validator = RegexValidator(
 class Eixo(models.Model):
 
     nome = models.CharField(max_length=100, unique=True, verbose_name="Nome do Eixo")
-    titulo = models.CharField(max_length=200, blank=True, null=True, verbose_name="Título do Eixo")
-    descricao = models.TextField(blank=True, null=True, verbose_name="Descrição do Eixo")
+    titulo = models.CharField(max_length=200, blank=False, null=False, verbose_name="Título do Eixo")
+    descricao = models.TextField(blank=False, null=False, verbose_name="Descrição do Eixo")
     resumo = models.CharField(
-        max_length=255, blank=True, null=True, verbose_name="Resumo do Eixo"
+        max_length=255, blank=False, null=False, verbose_name="Resumo do Eixo"
     )
 
 
