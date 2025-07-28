@@ -66,8 +66,8 @@ def eixos_pagina_inicial(request) -> List[EixoPaginaInicialSchema]:
         nome=eixo.nome,
         titulo=eixo.titulo,
         cor_principal=eixo.cor_principal,
-        imagem=get_abs_link(request, eixo.logo) if eixo.logo else '',
-        imagem_card=get_abs_link(request, eixo.logo) if eixo.logo else '',
+        imagem=get_abs_link(request, eixo.logo_branco) if eixo.logo_branco else '',
+        imagem_card=get_abs_link(request, eixo.logo_colorido) if eixo.logo_colorido else '',
         lista=[tema.nome for tema in eixo.temas.all()],
         texto=eixo.descricao_as_list,
     ) for eixo in eixos]

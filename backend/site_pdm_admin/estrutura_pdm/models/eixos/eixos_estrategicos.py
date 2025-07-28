@@ -24,13 +24,22 @@ class Eixo(models.Model):
         """
         return self.descricao.splitlines() if self.descricao else []
 
-    logo = models.ForeignKey(
+    logo_colorido = models.ForeignKey(
         Imagem,
         on_delete=models.SET_NULL,
         blank=True,
         null=True,
         verbose_name="Logo do Eixo",
         related_name="eixo_estrategico"
+    )
+
+    logo_branco = models.ForeignKey(
+        Imagem,
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True,
+        verbose_name="Logo do Eixo (Branco)",
+        related_name="eixo_estrategico_branco"
     )
 
     cor_principal = models.CharField(
