@@ -13,7 +13,7 @@ export default function More_Info() {
   if (!info.length) return <div>Carregando...</div>;
 
   return (
-    <div className="py-20">
+    <div className="py-20 h-[74rem]">
       <div className="agrupar1">
         <img src={agrupar1} alt="" />
       </div>
