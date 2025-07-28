@@ -53,7 +53,7 @@ export default function GridEixos() {
             alt=""
             className="relative right-40"
           />
-          <p className="w-38 text-3xl uppercase text-white text-hover-green absolute left-[52rem] top-[133rem]">
+          <p className="w-38 text-3xl uppercase text-white text-hover-green absolute left-[52rem] top-[138rem]">
             {
               eixosTematicos.find((eixo) =>
                 eixo.nome.toLowerCase().includes("universo")
@@ -76,7 +76,7 @@ export default function GridEixos() {
             alt=""
             className="relative right-31"
           />
-          <p className="w-45 text-3xl uppercase text-white text-hover-blue absolute left-[92rem] top-[133rem]">
+          <p className="w-45 text-3xl uppercase text-white text-hover-blue absolute left-[92rem] top-[138rem]">
             {
               eixosTematicos.find((eixo) =>
                 eixo.nome.toLowerCase().includes("cidade")
@@ -95,7 +95,7 @@ export default function GridEixos() {
             alt=""
             className="relative right-40"
           />
-          <p className="w-40 text-3xl uppercase text-white text-hover-orange absolute left-[51rem] top-[153rem]">
+          <p className="w-40 text-3xl uppercase text-white text-hover-orange absolute left-[51rem] top-[158rem]">
             {
               eixosTematicos.find((eixo) =>
                 eixo.nome.toLowerCase().includes("viver")
@@ -116,7 +116,7 @@ export default function GridEixos() {
             alt=""
             className="relative right-35"
           />
-          <p className="w-38 text-3xl uppercase text-white absolute left-[92rem] top-[153rem] text-hover-purple ">
+          <p className="w-38 text-3xl uppercase text-white absolute left-[92rem] top-[158rem] text-hover-purple ">
             {
               eixosTematicos.find((eixo) =>
                 eixo.nome.toLowerCase().includes("capital")
@@ -125,7 +125,7 @@ export default function GridEixos() {
           </p>
         </div>
         {selectedEixo && (
-          <div className="fixed inset-0 z-50">
+          <div className="absolute inset-0 z-10">
             <CardEixos
               eixo={selectedEixo}
               onClose={() => setSelectedEixo(null)}

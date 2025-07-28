@@ -44,7 +44,7 @@ export default function CardEixos({ eixo, onClose }) {
       setStyle({
         position: "absolute",
         left: "22rem",
-        top: "17rem",
+        top: "136rem",
         width: "84.2rem",
         height: "38.5rem",
         transform: "rotate(0deg) scale(1)",

@@ -30,23 +30,12 @@ export default function Introduction() {
             />
           </div>
           <div className="flex items-center bg-opacity-80 rounded-lg shadow-lg p-8">
-            <div className="bg-[var(--color-blue-light)] w-[40rem] h-[44rem] flex items-center justify-center flex-col flex-nowrap gap-16 p-4">
+            <div className="bg-[var(--color-blue-light)] w-[40rem] h-[44rem] flex items-end justify-center flex-col flex-nowrap gap-16 p-4">
               <span className="text-white w-[28rem] text-3xl">
-                <p>
-                  O Programa de Metas sela o compromisso do prefeito e de sua
-                  equipe com a população.
+                <p className="w-60">
+                  Um compromisso público do prefeito com a <strong>gestão eficiente <br></br> e de qualidade</strong>.
                 </p>
               </span>
-              <div>
-                <CustomButton
-                type="link"
-                target="download"
-                className="all_buttons text-2xl uppercase"
-                >
-                    baixar o<br />
-                <strong>pdm 2025/2028</strong>
-                </CustomButton>
-              </div>
             </div>
           </div>
         </div>
