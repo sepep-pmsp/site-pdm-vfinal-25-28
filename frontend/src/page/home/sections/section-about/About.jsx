@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Matarazzo from "@/assets/svg/foto_matarazzo.svg";
-import CustomButton from "@//components/Button/Button";
+import CustomButton from "@/components/Button/Button";
 import { getAboutData } from "@/services/home/getAboutData";
 
 export default function About() {
@@ -12,7 +12,7 @@ export default function About() {
 
   if (!about) return <div>Carregando...</div>;
   return (
-    <div className="mx-24">
+    <div className="my-34">
       <section>
         <div>
           <div className="my-8">
@@ -30,7 +30,7 @@ export default function About() {
               <p className="text-white text-3xl">{about.paragrafo}</p>
             </div>
           </div>
-          <div className="w-48 relative h-20 left-[70rem] bottom-[3.5rem]">
+          <div className="w-48 relative h-20 left-[75rem] bottom-[2.5rem]">
             <CustomButton
               type="link"
               target="download"
@@ -39,6 +39,15 @@ export default function About() {
               <p className="btn-about">saiba +</p>
             </CustomButton>
           </div>
+          <div className="w-48 relative h-20 left-[57rem] bottom-[7.5rem]">
+                <CustomButton
+                type="link"
+                target="download"
+                className="all_buttons uppercase"
+                >
+                    <p>palavra do prefeito <br></br> <strong>leia aqui!</strong></p> 
+                </CustomButton>
+              </div>
         </div>
         <div className="linha"></div>
       </section>
