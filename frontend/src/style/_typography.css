@@ -205,6 +205,7 @@ p, a, q, li,ul ol, dl, dt, dd {
 .mx-16   {margin-left: 4rem; margin-right: 4rem;}
 .mx-20   {margin-left: 5rem; margin-right: 5rem;}
 .mx-24   {margin-left: 6rem; margin-right: 6rem;}
+.mx-34   {margin-left: 12rem; margin-right: 12rem;}
 
 .my-0    {margin-top: 0; margin-bottom: 0;}
 .my-1    {margin-top: 0.25rem; margin-bottom: 0.25rem;}
