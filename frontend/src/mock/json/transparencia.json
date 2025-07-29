@@ -1,0 +1,21 @@
+{
+  "titulo": "Transparência e Monitoramento",
+  "descricao": "Diferentes ferramentas permitem ao cidadão acompanhar a execução do Programa de Metas.",
+  "recursos": [
+    {
+      "texto": "Dados Abertos, com índices sobre metas, ações e indicadores da Prefeitura.",
+      "nome_btn": "Dados Abertos",
+      "link": "https://dadosabertos.prefeitura.sp.gov.br/dataset/programa-de-metas"
+    },
+    {
+      "texto": "Painel de Monitoramento, com dados atualizados regularmente sobre o status das metas.",
+      "nome_btn": "painel de monitoramentos",
+      "link": "https://painel.prefeitura.sp.gov.br/monitoramento/programa-de-metas"
+    },
+    {
+      "texto": "Relatório de Execução, com os resultados consolidados do PdM.",
+      "nome_btn": "relatório de execução anual (dez/25)",
+      "link": "https://www.prefeitura.sp.gov.br/cidade/secretarias/planejamento/relatorios/"
+    }
+  ]
+}

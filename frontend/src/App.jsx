@@ -1,17 +1,16 @@
 import "./App.css";
-import { HashRouter } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import Home from "./page/home/Home";
 import Footer from "./components/Footer/Footer";
+import AppRoutes from "./routes/AppRoutes";
 
 function App() {
   return (
     <div>
-      <HashRouter>
+      <>
         <Navbar />
-        <Home />
+        <AppRoutes />
         <Footer />
-      </HashRouter>
+      </>
     </div>
   );
 }

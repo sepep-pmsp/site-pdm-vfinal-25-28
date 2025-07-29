@@ -6,7 +6,7 @@ import Footer_pdm from "./Footer_pdm";
 
 export default function Footer() {
   return (
-    <div className="pt-12 flex flex-row items-center flex-nowrap">
+    <div className="pt-12">
       <footer>
         <div className="bg-[var(--color-navy)] text-white h-[25rem] w-full flex items-center flex-nowrap flex-row">
           <div className="pt-4">

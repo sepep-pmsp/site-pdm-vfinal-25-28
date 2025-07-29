@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Vector_Sobre from "@/assets/svg/Vector-sobre.svg";
 import Vector from "@/assets/svg/Vector.svg";
 import Universo_SP from "@/assets/svg/universo_sp.svg";
@@ -8,6 +9,11 @@ import Logo_PDM_fPreto from "@/assets/svg/logo-pdm-black.svg";
 import Cidade_Empreendedora from "@/assets/svg/cidade_empreendedora.svg";
 
 export default function Grid_menu_navbar({ onClose }) {
+  const navigate = useNavigate();
+  const goTo = (path) => {
+    navigate(path);
+    onClose();
+  };
   return (
     <div className="flex flex-row flex-nowrap items-center justify-center h-full w-full gap-4 p-4">
       {/* Grid lateral (coluna esquerda) */}
@@ -15,10 +21,7 @@ export default function Grid_menu_navbar({ onClose }) {
         <div>
           <button className="slide-bottom-in text-white w-80 bg-[var(--color-navy)] h-[25rem] flex flex-col items-start justify-start flex-nowrap text-2xl  p-4 rounded-tr-[3rem] cursor-pointer">
             <h2 className="z-2 slide-bottom-in-item">sobre o pdm</h2>
-            <img
-              className="relative left-6 top-[2.8rem]"
-              src={Vector_Sobre}
-            />
+            <img className="relative left-6 top-[2.8rem]" src={Vector_Sobre} />
           </button>
         </div>
         <div>
@@ -31,7 +34,10 @@ export default function Grid_menu_navbar({ onClose }) {
           </button>
         </div>
         <div>
-          <button className="slide-right-in text-white w-80 bg-[var(--color-cyan-medium)] h-20 flex items-start flex-row text-2xl p-4 rounded-tr-[2rem] cursor-pointer ">
+          <button
+            onClick={() => goTo("/")}
+            className="slide-right-in text-white w-80 bg-[var(--color-cyan-medium)] h-20 flex items-start flex-row text-2xl p-4 rounded-tr-[2rem] cursor-pointer "
+          >
             <h2 className="slide-right-in-item">início</h2>
           </button>
         </div>
@@ -111,7 +117,10 @@ export default function Grid_menu_navbar({ onClose }) {
         </div>
 
         <div className="slide-top-in-3 w-[19rem] bg-[var(--color-cyan-dark)] text-white h-[11.5rem] p-4 flex items-end cursor-pointer">
-          <button className="text-start w-full cursor-pointer text-2xl">
+          <button
+            onClick={() => goTo("/transparencia")}
+            className="text-start w-full cursor-pointer text-2xl"
+          >
             <h2 className="slide-top-in-item-3">
               transparência e monitoramento
             </h2>
