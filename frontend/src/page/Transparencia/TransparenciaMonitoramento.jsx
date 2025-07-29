@@ -49,6 +49,8 @@ export default function TransparenciaMonitoramento() {
           ))}
         </div>
       </div>
+      <div className="absolute text-transparent img-fundo">
+      </div>
     </div>
   );
 }

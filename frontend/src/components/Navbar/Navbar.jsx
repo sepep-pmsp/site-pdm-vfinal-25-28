@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import Grid_menu_navbar from './Grid_menu_navbar';
+import React, { useState } from "react";
+import Grid_menu_navbar from "./Grid_menu_navbar";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,6 +8,7 @@ export default function Navbar() {
   const toggleMenu = () => {
     setAnimacao("slide-down");
     setIsOpen(true);
+    document.body.classList.add("menu-aberto");
   };
 
   const closeMenu = () => {
@@ -15,22 +16,31 @@ export default function Navbar() {
     setTimeout(() => {
       document.activeElement?.blur();
       setIsOpen(false);
+      document.body.classList.remove("menu-aberto");
     }, 500);
   };
 
   return (
-    <div className="fixed w-full p-2 bg-white z-50">
+    <div className="fixed w-full p-2 bg-white z-30">
       <div className="flex flex-row justify-around gap-56 items-center p-2">
         <div>
-            <span className='text-4xl'>PREFEITURA DE SÃO PAULO | <span><strong>PROGRAMA DE METAS</strong></span></span>
+          <span className="text-4xl">
+            PREFEITURA DE SÃO PAULO |{" "}
+            <span>
+              <strong>PROGRAMA DE METAS</strong>
+            </span>
+          </span>
         </div>
-        <div>
+        <div className="z-50 relative">
           <button
+            className="z-50 relative"
             onClick={toggleMenu}
             aria-expanded={isOpen}
             aria-controls="main-menu"
           >
-            <h2 className='text-4xl'><strong>menu</strong></h2>
+            <h2 className="text-4xl">
+              <strong>menu</strong>
+            </h2>
           </button>
         </div>
       </div>
@@ -45,5 +55,5 @@ export default function Navbar() {
         </div>
       )}
     </div>
-  )
+  );
 }

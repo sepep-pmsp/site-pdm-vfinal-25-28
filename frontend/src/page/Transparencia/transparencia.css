@@ -1,0 +1,18 @@
+.img-fundo {
+    background-image: url("@/assets/svg/Modo_de_isolamento.svg");
+    background-size: cover;
+    height: 83%;
+    width: 26%;
+    position: absolute;
+    top: 0rem;
+    z-index: 40;
+    pointer-events: none;
+    left: 88rem;
+    transition: all .5s ease-in-out;
+}
+
+body.menu-aberto .img-fundo {
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s ease-in-out;
+}
