@@ -1,5 +1,4 @@
 import React from "react";
-import CustomButton from "../../../../components/Button/Button";
 import video from "@/assets/video/video_introdutorio.mp4";
 import logo_pdm_fbranco from "@/assets/svg/logo_pdm_fundo_branco.svg";
 
