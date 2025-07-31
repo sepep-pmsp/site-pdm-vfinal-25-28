@@ -40,9 +40,11 @@ export default function More_Info() {
                   <div className="rounded-3xl absolute top-0 left-0 w-full h-full bg-[var(--color-Filter-blue-shadowns)] bg-opacity-40 mix-blend-multiply pointer-events-none transform transition-transform duration-300 group-hover:scale-[0.93]"></div>
                 </div>
               </div>
-              <h2 className="flex flex-col items-center justify-center text-6xl w-[21rem]">
-                {item.title}
-              </h2>
+              <a href={item.link_page} className="hover:underline">
+                <h2 className="flex flex-col items-center justify-center text-6xl w-[21rem]">
+                  {item.title}
+                </h2>
+              </a>
               <p className="flex flex-col items-center justify-center w-[23rem] text-xl">
                 {item.description}
               </p>

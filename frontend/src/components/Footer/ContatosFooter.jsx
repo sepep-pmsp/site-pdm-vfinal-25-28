@@ -15,7 +15,7 @@ export default function ContatosFooter() {
         </div>
         <div className='flex items-center gap-4 w-80'>
             <img src={TelefoneIcon} alt="" />
-            <p>Viaduto do Chá, 15 - Centro Histórico de São Paulo - SP, 01007-040</p>
+            <p>0800-123456</p>
         </div>
       </div>
     </div>
