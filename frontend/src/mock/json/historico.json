@@ -1,0 +1,153 @@
+{
+  "titulo": "Histórico",
+  "descricao": "Clique em cada documento para fazer seu download na íntegra",
+  "paragrafo": "O Programa de Metas de SP foi criado em 2008 para obrigar prefeitos a apresentar objetivos claros nos primeiros 90 dias de mandato. Desde então, cada gestão divulga metas para orientar ações e permitir o acompanhamento público, promovendo transparência e participação social.",
+  "cards": [
+    {
+      "id": "pdm-21-24",
+      "imagem": "svg/card-21-24.svg",
+      "data_inicio_fim": "pdm 21/24",
+      "color_primary": "var(--color-navy)",
+      "color_primary_btn": "var(--color-cyan-dark)",
+      "itens": [
+        {
+          "texto": "versão final participativa",
+          "link": "link_ou_download"
+        },
+        {
+          "texto": "alteração programática",
+          "link": "link_ou_download"
+        },
+        {
+          "texto": "versão inicial",
+          "link": "link_ou_download"
+        },
+        {
+          "texto": "relatório final",
+          "subitens": [
+            {
+              "texto": "relatório anual (24)",
+              "link": "link_ou_download"
+            },
+            {
+              "texto": "relatório anual (23)",
+              "link": "link_ou_download"
+            },
+            {
+              "texto": "relatório anual (22)",
+              "link": "link_ou_download"
+            },
+            {
+              "texto": "relatório anual (21)",
+              "link": "link_ou_download"
+            }
+          ]
+        },
+        {
+          "texto": "balanço semestral",
+          "subitens": [
+            {
+              "texto": "balanço semestral (dez/2024)",
+              "link": "link_ou_download"
+            },
+            {
+              "texto": "balanço semestral (jun/2024)",
+              "link": "link_ou_download"
+            },
+            {
+              "texto": "balanço semestral (dez/2023)",
+              "link": "link_ou_download"
+            },
+            {
+              "texto": "balanço semestral (jun/2023)",
+              "link": "link_ou_download"
+            },
+            {
+              "texto": "balanço semestral (dez/2022)",
+              "link": "link_ou_download"
+            },
+            {
+              "texto": "balanço semestral (jun/2022)",
+              "link": "link_ou_download"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pdm-20-17",
+      "imagem": "svg/card-19-20.svg",
+      "data_inicio_fim": "pdm 20/17",
+      "color_primary": "var(--color-cyan-dark)",
+      "color_primary_btn": "var(--color-navy)",
+      "itens": [
+        {
+          "texto": "versão final participativa",
+          "link": "link_ou_download"
+        },
+        {
+          "texto": "alteração programática",
+          "link": "link_ou_download"
+        },
+        {
+          "texto": "versão inicial",
+          "link": "link_ou_download"
+        },
+        {
+          "texto": "relatório final",
+          "link": "link_ou_download"
+        },
+        {
+          "texto": "relatório anual (18)",
+          "link": "link_ou_download"
+        },
+        {
+          "texto": "relatório anual (17)",
+          "link": "link_ou_download"
+        },
+        {
+          "texto": "balanço semestral (jun/18)",
+          "link": "link_ou_download"
+        }
+      ]
+    },
+    {
+      "id": "pdm-13-17",
+      "imagem": "svg/card-13-17.svg",
+      "data_inicio_fim": "pdm 13/17",
+      "color_primary": "var(--color-navy)",
+      "color_primary_btn": "var(--color-cyan-dark)",
+      "itens": [
+        {
+          "texto": "apresentação",
+          "link": "link_ou_download"
+        },
+        {
+          "texto": "ficha das metas",
+          "link": "link_ou_download"
+        },
+        {
+          "texto": "relatório final",
+          "link": "link_ou_download"
+        }
+      ]
+    },
+    {
+      "id": "pdm-08-12",
+      "imagem": "svg/card-08-12.svg",
+      "data_inicio_fim": "pdm 08/12",
+      "color_primary": "var(--color-cyan-dark)",
+      "color_primary_btn": "var(--color-navy)",
+      "itens": [
+        {
+          "texto": "agenda 2012",
+          "link": "link_ou_download"
+        },
+        {
+          "texto": "relatório final",
+          "link": "link_ou_download"
+        }
+      ]
+    }
+  ]
+}
