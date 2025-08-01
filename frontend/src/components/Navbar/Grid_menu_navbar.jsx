@@ -110,8 +110,8 @@ export default function Grid_menu_navbar({ onClose }) {
 
       {/* Grid lateral (coluna direita) */}
       <div className="flex flex-col flex-nowrap items-start gap-4">
-        <div className="slide-top-in-2 h-[27rem] w-[19rem] bg-[var(--color-cyan-dark)] text-white p-4 flex items-end justify-center cursor-pointer rounded-tl-[2rem]">
-          <button className="text-start w-full cursor-pointer text-2xl">
+        <div onClick={() => goTo("/regionalizacao")} className="slide-top-in-2 h-[27rem] w-[19rem] bg-[var(--color-cyan-dark)] text-white p-4 flex items-end justify-center cursor-pointer rounded-tl-[2rem]">
+          <button onClick={() => goTo("/regionalizacao")} className="text-start w-full cursor-pointer text-2xl">
             <h2 className="slide-top-in-item-2">regionalização</h2>
           </button>
         </div>
