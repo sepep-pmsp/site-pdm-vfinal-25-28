@@ -28,6 +28,10 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -42,6 +46,8 @@ INSTALLED_APPS = [
     'cadastros_basicos',
     'pdm_api',
     'estrutura_pdm',
+    'secoes_pagina_inicial',
+    'static_files',
 ]
 
 MIDDLEWARE = [
