@@ -1,4 +1,5 @@
 from ninja import NinjaAPI
+from ninja.errors import HttpError
 from django.http import FileResponse
 from typing import List
 
@@ -30,6 +31,9 @@ def about_pdm(request) -> AboutPDMSchema:
     Retrieve the 'About PDM' section.
     """
     about_pdm = get_about_pdm()
+
+    if about_pdm is None:
+        raise HttpError(404, "Sobre o PDM não encontrado")
         
     parsed = {
         'titulo' : about_pdm.titulo,
@@ -46,6 +50,8 @@ def noticias(request) -> List[NoticiaSchema]:
     Retrieve the news articles.
     """
     noticias = get_noticias()
+    if not noticias:
+        raise HttpError(404, "Notícias não encontradas")
     parsed_list = [NoticiaSchema(
         titulo=noticia.titulo,
         link=noticia.link,
@@ -61,6 +67,8 @@ def eixos_pagina_inicial(request) -> List[EixoPaginaInicialSchema]:
     Retrieve the initial page axes.
     """
     eixos = get_eixos()
+    if not eixos:
+        raise HttpError(404, "Eixos não encontrados")
     parsed_list = [EixoPaginaInicialSchema(
         id=eixo.id,
         nome=eixo.nome,
