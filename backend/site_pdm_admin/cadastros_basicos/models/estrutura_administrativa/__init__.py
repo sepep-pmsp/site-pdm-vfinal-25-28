@@ -1,1 +1,1 @@
-from .orgaos import Orgao
+from .orgaos import Orgao, TipoOrgao
