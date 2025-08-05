@@ -5,6 +5,7 @@ class SubPrefeitura(models.Model):
 
     nome = models.CharField(max_length=100, verbose_name='Nome da Subprefeitura')
     sigla = models.CharField(max_length=10, verbose_name='Sigla da Subprefeitura')
+    cd_geosampa = models.IntegerField(unique=True, verbose_name='Código Geosampa')
 
     class Meta:
         verbose_name = 'Subprefeitura'
@@ -19,6 +20,7 @@ class Distrito(models.Model):
     nome = models.CharField(max_length=100, verbose_name='Nome do Distrito')
     sigla = models.CharField(max_length=10, verbose_name='Sigla do Distrito')
     subprefeitura = models.ForeignKey(SubPrefeitura, on_delete=models.CASCADE, related_name='distritos')
+    cd_geosampa = models.IntegerField(unique=True, verbose_name='Código Geosampa')
 
     class Meta:
         verbose_name = 'Distrito'

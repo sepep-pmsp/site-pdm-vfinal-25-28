@@ -21,7 +21,8 @@ class Command(BaseCommand):
         properties = obj['properties']
         parsed = {
             'nome' : properties['nm_subprefeitura'],
-            'sigla' : properties['sg_subprefeitura']
+            'sigla' : properties['sg_subprefeitura'],
+            'cd_geosampa' : int(properties['cd_subprefeitura'])
         }
 
         return parsed
@@ -45,7 +46,8 @@ class Command(BaseCommand):
         for item in parsed_data:
             subprefeitura, created = SubPrefeitura.objects.get_or_create(
                 nome=item['nome'],
-                sigla=item['sigla']
+                sigla=item['sigla'],
+                cd_geosampa=item['cd_geosampa']
             )
             if created:
                 self.stdout.write(self.style.SUCCESS(f'Subprefeitura {subprefeitura.nome} criada.'))
