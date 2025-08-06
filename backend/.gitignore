@@ -1,3 +1,6 @@
+#imagens e videos do site
+site_pdm_admin/media/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

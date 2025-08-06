@@ -1,0 +1,24 @@
+[
+    {
+        "titulo" : "Notícia de Exemplo 1",
+        "link" : "https://prefeitura.sp.gov.br/web/planejamento",
+        "data" : "2025-01-01",
+        "colocar_no_topo" : true,
+        "published" : true
+    },
+        {
+        "titulo" : "Notícia de Exemplo 2",
+        "link" : "https://prefeitura.sp.gov.br/web/planejamento",
+        "data" : "2025-02-01",
+        "colocar_no_topo" : true,
+        "published" : true
+
+    },
+        {
+        "titulo" : "Notícia de Exemplo 3",
+        "link" : "https://prefeitura.sp.gov.br/web/planejamento",
+        "data" : "2025-03-01",
+        "colocar_no_topo" : true,
+        "published" : true
+    }
+]

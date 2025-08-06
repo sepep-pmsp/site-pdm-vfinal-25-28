@@ -1,45 +1,37 @@
 from django.db import models
 from django.core.exceptions import ValidationError
 from django.contrib.auth import get_user_model
-from secoes_pagina_inicial.models.carta_prefeito import CartaPrefeito
-from static_files.models import Imagem
+from cadastros_basicos.models.estrutura_administrativa import Prefeito
+from babel.dates import format_date
 
 User = get_user_model()
 
 
-class AboutPDM(models.Model):
+class CartaPrefeito(models.Model):
     titulo = models.CharField(max_length=255, verbose_name="Título")
-    subtitulo = models.CharField(max_length=500, verbose_name="Subtítulo")
+    subtitulo = models.CharField(max_length=500, verbose_name="Subtítulo", blank=True, null=True)
+    prefeito = models.ForeignKey(Prefeito, on_delete=models.PROTECT, related_name='cartas', verbose_name="Prefeito")
+    data_assinatura = models.DateField(verbose_name="Data de Assinatura", blank=False, null=False)
     published = models.BooleanField(default=False, verbose_name="Publicado")
-    carta_do_prefeito = models.ForeignKey(
-        CartaPrefeito,
-        on_delete=models.CASCADE,
-        related_name='about_pdm',
-        verbose_name="Carta do Prefeito"
-    )
     criado_em = models.DateTimeField(auto_now_add=True)
     criado_por = models.ForeignKey(
         User,
         on_delete=models.PROTECT,
-        related_name='secoes_about_criadas'
+        related_name='cartas_prefeito_criadas'
     )
 
     modificado_em = models.DateTimeField(auto_now=True)
     modificado_por = models.ForeignKey(
         User,
         on_delete=models.PROTECT,
-        related_name='secoes_about_modificadas',
+        related_name='cartas_prefeito_modificadas',
         editable=False
     )
 
-    banner_image = models.ForeignKey(
-        Imagem,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True,
-        related_name='about_pdm',
-        verbose_name="Imagem Banner"
-    )
+    @property
+    def data_assinatura_formatada(self):
+        return format_date(self.data_assinatura, format="LLLL 'de' y", locale='pt-BR') if self.data_assinatura else "Não definida"
+
 
     @property
     def paragrafo_as_str(self):
@@ -52,41 +44,41 @@ class AboutPDM(models.Model):
 
 
     class Meta:
-        verbose_name = "Seção Sobre o PDM"
-        verbose_name_plural = "Seções Sobre o PDM"
-            
+        verbose_name = "Carta do Prefeito"
+        verbose_name_plural = "Cartas do Prefeito"
+
     def save(self, *args, **kwargs):
 
         self.full_clean()
         if self.published:
-            AboutPDM.objects.filter(published=True).exclude(pk=self.pk).update(published=False)
+            CartaPrefeito.objects.filter(published=True).exclude(pk=self.pk).update(published=False)
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return f'Seção Sobre o PDM: {self.titulo[:20]}...'
-    
+        return f'Carta do Prefeito: {self.titulo[:20]}...'
 
-class ParagrafoAbout(models.Model):
 
-    sobre_pdm = models.ForeignKey(AboutPDM, related_name='paragrafos', on_delete=models.CASCADE)
-    conteudo = models.TextField(verbose_name="Conteúdo do Parágrafo")
+class ParagrafoCartaPrefeito(models.Model):
+
+    carta_do_prefeito = models.ForeignKey(CartaPrefeito, related_name='paragrafos', on_delete=models.CASCADE)
+    conteudo = models.TextField(verbose_name="Conteúdo do Parágrafo da Carta do Prefeito")
     ordem = models.PositiveIntegerField(verbose_name="Ordem do Parágrafo")
 
     @property
     def criado_por(self):
-        return self.sobre_pdm.criado_por
+        return self.carta_do_prefeito.criado_por
     
     @property
     def modificado_por(self):
-        return self.sobre_pdm.modificado_por
+        return self.carta_do_prefeito.modificado_por
     
     @property
     def criado_em(self):
-        return self.sobre_pdm.criado_em
+        return self.carta_do_prefeito.criado_em
     
     @property
     def modificado_em(self):
-        return self.sobre_pdm.modificado_em
+        return self.carta_do_prefeito.modificado_em
 
     class Meta:
         ordering = ['ordem']

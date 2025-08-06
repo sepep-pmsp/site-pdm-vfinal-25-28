@@ -38,7 +38,7 @@ def about_pdm(request) -> AboutPDMSchema:
     parsed = {
         'titulo' : about_pdm.titulo,
         'subtitulo' : about_pdm.subtitulo,
-        'paragrafo' : about_pdm.paragrafo,
+        'paragrafo' : about_pdm.paragrafo_as_str,
         'link_img' :  get_abs_link(request, about_pdm.banner_image) if about_pdm.banner_image else '',
     }
 
