@@ -1,5 +1,5 @@
 from django.contrib import admin, messages
-from .models import AboutPDM, Noticia, ParagrafoAbout, CartaPrefeito, ParagrafoCartaPDM
+from .models import AboutPDM, Noticia, ParagrafoAbout, CartaPrefeito, ParagrafoCartaPrefeito
 from django.core.exceptions import ValidationError
 from django.forms.models import BaseInlineFormSet
 # Register your models here.
@@ -71,7 +71,7 @@ class ParagrafoCartaInlineFormSet(BaseInlineFormSet):
 
 
 class ParagrafoCartaInline(admin.TabularInline):
-    model = ParagrafoCartaPDM
+    model = ParagrafoCartaPrefeito
     extra = 1
     formset = ParagrafoCartaInlineFormSet
 

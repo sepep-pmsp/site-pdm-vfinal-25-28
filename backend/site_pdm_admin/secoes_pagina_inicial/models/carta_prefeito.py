@@ -2,7 +2,7 @@ from django.db import models
 from django.core.exceptions import ValidationError
 from django.contrib.auth import get_user_model
 from cadastros_basicos.models.estrutura_administrativa import Prefeito
-
+from babel.dates import format_date
 
 User = get_user_model()
 
@@ -11,6 +11,7 @@ class CartaPrefeito(models.Model):
     titulo = models.CharField(max_length=255, verbose_name="Título")
     subtitulo = models.CharField(max_length=500, verbose_name="Subtítulo", blank=True, null=True)
     prefeito = models.ForeignKey(Prefeito, on_delete=models.PROTECT, related_name='cartas', verbose_name="Prefeito")
+    data_assinatura = models.DateField(verbose_name="Data de Assinatura", blank=False, null=False)
     published = models.BooleanField(default=False, verbose_name="Publicado")
     criado_em = models.DateTimeField(auto_now_add=True)
     criado_por = models.ForeignKey(
@@ -26,6 +27,10 @@ class CartaPrefeito(models.Model):
         related_name='cartas_prefeito_modificadas',
         editable=False
     )
+
+    @property
+    def data_assinatura_formatada(self):
+        return format_date(self.data_assinatura, format="LLLL 'de' y", locale='pt-BR') if self.data_assinatura else "Não definida"
 
 
     @property
@@ -53,7 +58,7 @@ class CartaPrefeito(models.Model):
         return f'Carta do Prefeito: {self.titulo[:20]}...'
 
 
-class ParagrafoCartaPDM(models.Model):
+class ParagrafoCartaPrefeito(models.Model):
 
     carta_do_prefeito = models.ForeignKey(CartaPrefeito, related_name='paragrafos', on_delete=models.CASCADE)
     conteudo = models.TextField(verbose_name="Conteúdo do Parágrafo da Carta do Prefeito")

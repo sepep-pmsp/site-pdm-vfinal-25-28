@@ -6,7 +6,7 @@ import json
 import os
 
 class Command(BaseCommand):
-    help = "Seed para usuários de exemplo"
+    help = "Seed para notícias de exemplo"
     json_file = 'noticias.json'
 
     
