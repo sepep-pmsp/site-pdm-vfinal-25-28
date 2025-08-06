@@ -1,2 +1,2 @@
-from .about_pdm import AboutPDM
+from .about_pdm import AboutPDM, ParagrafoAbout
 from .news import Noticia

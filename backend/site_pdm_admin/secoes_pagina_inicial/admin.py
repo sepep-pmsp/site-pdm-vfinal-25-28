@@ -1,12 +1,38 @@
 from django.contrib import admin, messages
-from .models import AboutPDM, Noticia
+from .models import AboutPDM, Noticia, ParagrafoAbout
+from django.core.exceptions import ValidationError
+from django.forms.models import BaseInlineFormSet
 # Register your models here.
 
+class ParagrafoInlineFormSet(BaseInlineFormSet):
+    def clean(self):
+        super().clean()
+        ativos = [
+                form for form in self.forms
+                #exclui os marcados para deleção
+                if not form.cleaned_data.get('DELETE', False)
+                #checa se o campo 'conteudo' está preenchido, ignorando id e sobre_pdm
+                and any(
+                    form.cleaned_data.get(field.name)
+                    for field in form._meta.model._meta.fields
+                    if field.name not in ['id', 'sobre_pdm']  # ignora chaves primárias e FKs automáticas
+                )
+            ]
+        #se nao achar ninguém, levanta o erro de validaçaõ
+        if not ativos:
+            raise ValidationError("Pelo menos um parágrafo deve ser preenchido.")
+
+
+class ParagrafoInline(admin.TabularInline):
+    model = ParagrafoAbout
+    extra = 1
+    formset = ParagrafoInlineFormSet
 
 @admin.register(AboutPDM)
 class AboutPDMAdmin(admin.ModelAdmin):
     list_display = ('titulo', 'published', 'criado_em', 'criado_por')
     readonly_fields = ('criado_por', 'modificado_por', 'criado_em', 'modificado_em')
+    inlines = [ParagrafoInline]
 
     def save_model(self, request, obj, form, change):
         if not obj.pk:

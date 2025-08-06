@@ -6,3 +6,4 @@ class SecoesPaginaInicialConfig(AppConfig):
     name = 'secoes_pagina_inicial'
     verbose_name = "Seções da Página Inicial"
 
+
