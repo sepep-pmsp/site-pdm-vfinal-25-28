@@ -1,2 +1,3 @@
 from .about_pdm import AboutPDM, ParagrafoAbout
 from .news import Noticia
+from .carta_prefeito import CartaPrefeito, ParagrafoCartaPDM
