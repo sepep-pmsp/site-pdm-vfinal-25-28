@@ -65,6 +65,22 @@ class ParagrafoAbout(models.Model):
     conteudo = models.TextField(verbose_name="Conteúdo do Parágrafo")
     ordem = models.PositiveIntegerField(verbose_name="Ordem do Parágrafo")
 
+    @property
+    def criado_por(self):
+        return self.sobre_pdm.criado_por
+    
+    @property
+    def modificado_por(self):
+        return self.sobre_pdm.modificado_por
+    
+    @property
+    def criado_em(self):
+        return self.sobre_pdm.criado_em
+    
+    @property
+    def modificado_em(self):
+        return self.sobre_pdm.modificado_em
+
     class Meta:
         ordering = ['ordem']
         verbose_name = "Parágrafo"
