@@ -16,8 +16,7 @@ def gen_env_file_from_example(env_file_path:str)->str:
 def get_env_file():
 
     curr_dir = os.path.dirname(os.path.abspath(__file__))
-    top_dir = os.path.dirname(curr_dir)
-    env_file_path = os.path.join(top_dir, '.env')
+    env_file_path = os.path.join(curr_dir, '.env')
     if not os.path.exists(env_file_path):
         gen_env_file_from_example(env_file_path)
 
