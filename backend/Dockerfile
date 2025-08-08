@@ -2,10 +2,10 @@
 FROM python:3.11-slim
 
 # Define a pasta de trabalho
-WORKDIR /site_pdm_admin
+WORKDIR /backend
 
 # Copia os arquivos do projeto
-COPY . /site_pdm_admin
+COPY . /backend
 
 # Copia o entrypoint e garante permissão de execução
 COPY entrypoint.sh /entrypoint.sh
