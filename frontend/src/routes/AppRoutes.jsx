@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "@/page/Home/Home";
-import TransparenciaMonitoramento from "@/page/transparencia/TransparenciaMonitoramento";
+import Home from "@/page/home/Home";
+import TransparenciaMonitoramento from "@/page/Transparencia/TransparenciaMonitoramento";
 import Historico from "@/page/Historico/Historico";
 import Regionalizacao from "../page/Regionalizacao/Regionalizacao";
 
