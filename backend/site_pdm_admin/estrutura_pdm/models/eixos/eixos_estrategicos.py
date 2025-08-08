@@ -15,6 +15,11 @@ class Eixo(models.Model):
     resumo = models.CharField(
         max_length=255, blank=False, null=False, verbose_name="Resumo do Eixo"
     )
+    ordem = models.PositiveIntegerField(
+        default=0,
+        verbose_name="Ordem de Exibição",
+        help_text="Define a ordem de exibição dos eixos. Eixos com ordem menor serão exibidos primeiro."
+    )
 
 
     @property
@@ -52,7 +57,7 @@ class Eixo(models.Model):
     class Meta:
         verbose_name = "Eixo"
         verbose_name_plural = "Eixos"
-        ordering = ['nome']
+        ordering = ['ordem']
 
     def __str__(self):
         return self.nome

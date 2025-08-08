@@ -12,4 +12,4 @@ def get_superuser():
     except KeyError as e:
         raise RuntimeError(f"Erro ao carregar variáveis de ambiente: {e}. Configuração para superusuário não encontrada.")
 
-    return User.objects.filter(username=username, email=email).first()
+    return User.objects.get(username=username, email=email)

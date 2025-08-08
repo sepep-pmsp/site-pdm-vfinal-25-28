@@ -6,11 +6,12 @@ class Tema(models.Model):
     descricao = models.TextField(blank=True, null=True, verbose_name="Descrição do Tema")
     eixo = models.ForeignKey(Eixo, blank=False, related_name='temas', 
                                         verbose_name="Eixo relacionado", on_delete=models.CASCADE)
+    order = models.PositiveIntegerField(default=0, verbose_name="Ordem de exibição")
 
     class Meta:
         verbose_name = "Tema"
         verbose_name_plural = "Temas"
-        ordering = ['nome']
+        ordering = ['order']
 
     def __str__(self):
         return self.nome

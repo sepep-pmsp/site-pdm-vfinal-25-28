@@ -3,6 +3,7 @@ from django.db import models
 from django.contrib.auth import get_user_model
 from django.core.files.storage import default_storage
 from static_files.utils import remover_caracteres_especiais
+from pathlib import Path
 
 User = get_user_model()
 
@@ -21,12 +22,11 @@ class Imagem(models.Model):
     @property
     def slug(self):
         return remover_caracteres_especiais(self.titulo.lower()).replace(' ', '_')
+    
+    def extract_metadata(self):
 
-    def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
-
-        # Extrai metadados da imagem
-        if self.arquivo and (self.largura is None or self.altura is None or not self.formato):
+        ext = Path(self.arquivo.name).suffix.lower()
+        if ext in ['.jpg', '.jpeg', '.png', '.gif']:
 
             with default_storage.open(self.arquivo.name, 'rb') as f:
                 img = PILImage.open(f)
@@ -34,6 +34,14 @@ class Imagem(models.Model):
                 self.altura = img.height
                 self.formato = img.format
                 super().save(update_fields=['largura', 'altura', 'formato'])
+
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+
+        # Extrai metadados da imagem
+        if self.arquivo and (self.largura is None or self.altura is None or not self.formato):
+            self.extract_metadata()
 
     class Meta:
         verbose_name = "Imagem"
