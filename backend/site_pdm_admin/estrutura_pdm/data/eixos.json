@@ -1,0 +1,118 @@
+[
+    {
+        "nome" : "universo sp",
+        "titulo" : "espaço e ambiente",
+        "descricao" : "Neste eixo, São Paulo é pensada em sua dimensão física, natural, territorial. É a cidade compreendida como espaço e ambiente da vida em sociedade.\nÉ o eixo que reúne metas relacionadas à preservação da natureza e à intervenção na paisagem urbana. Trata tanto do ambiente natural — rios, córregos, represas, matas — quanto do ambiente transformado — vias, edificações, moradias.\nNele estão as metas de infraestrutura urbana, drenagem, habitação, requalificação de espaços públicos, integração dos bairros e mobilidade. O nome Universo SP indica o desafio que é organizar o território de uma das maiores cidades do mundo. Ao reunir natureza e urbanização, reflete a ambição de transformar São Paulo em um espaço mais ordenado e sustentável.",
+        "resumo" : "XXX",
+        "logo_colorido_path" : "universo_sp_colorido.svg",
+        "logo_branco_path" : "universo_sp_branco.svg",
+        "hex_cor_principal" : "#008000",
+        "ordem" : 1,
+        "temas" : [
+            {
+                "nome" : "Natureza e Ambiente",
+                "descricao" : "XXXX"
+            },
+            {
+                "nome" : "Habitação de Qualidade",
+                "descricao" : "XXXX"
+            },
+            {
+                "nome" : "Infraestrutura e Integração",
+                "descricao" : "XXXX"
+            },
+            {
+                "nome" : "Requalificação Urbana",
+                "descricao" : "XXXX"
+            },
+            {
+                "nome" : "Desenvolvimento Planejado",
+                "descricao" : "XXXX"
+            }
+        ]
+
+    },
+        {
+        "nome" : "capital do futuro",
+        "titulo" : "gestão e modernidade",
+        "descricao" :  "O eixo Capital do Futuro reúne metas voltadas à modernização da administração pública, à transformação digital e ao aperfeiçoamento da relação entre governo e cidadão. Trata do compromisso com a transparência e da participação das pessoas como protagonistas dos processos decisórios.\nSão Paulo quer ser referência em governo digital, em plataformas de serviço integradas, em inovação, em participação cidadã. Quer melhorar agora seus processos para ser não só a capital de um lugar, mas uma das capitais dos novos tempos. Capital de um futuro em que os melhores recursos de gestão sejam empregados para transformar, de maneira sustentável, as realidades sociais. Um futuro que pertença às pessoas.",
+        "resumo" : "XXX",
+        "logo_colorido_path" : "capital_futuro_colorido.svg",
+        "logo_branco_path" : "capital_futuro_branco.svg",
+        "hex_cor_principal" : "#792D49",
+        "ordem" : 2,
+        "temas" : [
+            {
+                "nome" : "Modernização e Inovação",
+                "descricao" : "XXXX"
+            },
+            {
+                "nome" : "Governo Ágil e Acessível a Todos",
+                "descricao" : "XXXX"
+            },
+            {
+                "nome" : "Transparência e Participação Cidadã",
+                "descricao" : "XXXX"
+            }
+        ]
+
+    },
+        {
+        "nome" : "cidade empreendedora",
+        "titulo" : "negócios e capacitação",
+        "descricao" : "Este eixo reflete a convicção de que o desenvolvimento econômico que gera oportunidades precisa ter protagonismo no planejamento da cidade. Aqui estão as metas de qualificação profissional, fomento ao empreendedorismo, economia criativa e turismo como vetor de crescimento.\nO nome Cidade Empreendedora carrega uma aspiração: que São Paulo seja um lugar que reconhece e valoriza as vocações de cada território, que favorece a geração de oportunidades em todos os bairros e que cria ambientes propícios à inovação, à produtividade e ao trabalho digno.",
+        "resumo" : "XXX",
+        "logo_colorido_path" : "cidade_empreendedora_colorido.svg",
+        "logo_branco_path" : "cidade_empreendedora_branco.svg",
+        "hex_cor_principal" : "#0000AB",
+        "ordem" : 3,
+        "temas" : [
+            {
+                "nome" : "Ambiente de negócios",
+                "descricao" : "XXXX"
+            },
+            {
+                "nome" : "Economia criativa",
+                "descricao" : "XXXX"
+            },
+            {
+                "nome" : "Qualificação profissional, emprego e renda",
+                "descricao" : "XXXX"
+            }
+        ]
+
+    },
+        {
+        "nome" : "viver são paulo",
+        "titulo" : "pessoas e sociedade",
+        "descricao" :   "O eixo Viver São Paulo concentra as metas mais diretamente associadas à qualidade de vida do cidadão. É onde se situam as ações que proporcionam condições para viver plenamente a cidade, com dignidade, bem-estar e pertencimento.\nÉ o eixo da segurança pública, da proteção à mulher vítima de violência, da segurança alimentar e nutricional, do acolhimento à população em situação de rua, dos serviços de saúde, da educação e da cultura como dimensões indissociáveis da formação humana, do esporte, do lazer, da convivência respeitosa e pacífica.\nViver São Paulo é, em última instância, viver com direitos, serviços e oportunidades. É viver as relações com outras pessoas. É ser parte, ter lugar e ter voz na sociedade.",
+        "resumo" : "XXX",
+        "logo_colorido_path" : "viver_sp_colorido.svg",
+        "logo_branco_path" : "viver_sao_paulo_branco.svg",
+        "hex_cor_principal" : "#EF4C23",
+        "ordem" : 1,
+        "temas" : [
+            {
+                "nome" : "Segurança",
+                "descricao" : "XXXX"
+            },
+            {
+                "nome" : "Saúde e Bem-Estar",
+                "descricao" : "XXXX"
+            },
+            {
+                "nome" : "Educação",
+                "descricao" : "XXXX"
+            },
+            {
+                "nome" : "Proteção Social e Cidadania Plena",
+                "descricao" : "XXXX"
+            },
+            {
+                "nome" : "Cultura Esporte e Lazer",
+                "descricao" : "XXXX"
+            }
+        ]
+
+    }
+]
