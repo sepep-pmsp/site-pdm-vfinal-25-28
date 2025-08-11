@@ -1,6 +1,9 @@
 #imagens e videos do site
 media/
 
+#arquivos estaticos dos plugins
+staticfiles/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
