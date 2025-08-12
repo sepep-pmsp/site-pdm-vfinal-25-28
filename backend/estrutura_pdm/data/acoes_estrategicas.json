@@ -87,43 +87,43 @@
         "numero_meta": 4,
         "numero_acao": 4.01,
         "desc_acao": "Criação da Unidade de Tratamento Mecânico e de Resíduos e instalação de Usina\nFotovoltaica no Aterro Bandeirantes. ",
-        "orgao_acao": "SPREGULA"
+        "orgao_acao": "SPRegula"
     },
     {
         "numero_meta": 4,
         "numero_acao": 4.02,
         "desc_acao": "Ampliação da Central de Tratamento de Resíduos Leste.",
-        "orgao_acao": "SPREGULA"
+        "orgao_acao": "SPRegula"
     },
     {
         "numero_meta": 4,
         "numero_acao": 4.03,
         "desc_acao": "Criação da Unidade de Biossecagem de Resíduos Orgânicos.",
-        "orgao_acao": "SPREGULA"
+        "orgao_acao": "SPRegula"
     },
     {
         "numero_meta": 4,
         "numero_acao": 4.04,
         "desc_acao": "Substituição de 500 caminhões de lixo da frota de coleta domiciliar por modelos\nmovidos a biometano ou GNV, evitando o consumo mensal de cerca de 1 milhão de\nlitros de óleo diesel.",
-        "orgao_acao": "SPREGULA"
+        "orgao_acao": "SPRegula"
     },
     {
         "numero_meta": 4,
         "numero_acao": 4.05,
         "desc_acao": "Implantação de 10 novos ecopontos.",
-        "orgao_acao": "SPREGULA"
+        "orgao_acao": "SPRegula"
     },
     {
         "numero_meta": 4,
         "numero_acao": 4.06,
         "desc_acao": "Habilitação de 40 cooperativas e integração à coleta seletiva municipal.",
-        "orgao_acao": "SPREGULA"
+        "orgao_acao": "SPRegula"
     },
     {
         "numero_meta": 4,
         "numero_acao": 4.07,
         "desc_acao": "Implantação do Sistema de Monitoramento SP Coopera, permitindo o gerenciamento\ndo volume de resíduos tratados e da geração de renda dos cooperados.",
-        "orgao_acao": "SPREGULA"
+        "orgao_acao": "SPRegula"
     },
     {
         "numero_meta": 5,
@@ -399,13 +399,13 @@
         "numero_meta": 46,
         "numero_acao": 46.01,
         "desc_acao": "Modernização do sistema semafórico em 1.200 cruzamentos no centro expandido.",
-        "orgao_acao": "SPREGULA"
+        "orgao_acao": "SPRegula"
     },
     {
         "numero_meta": 46,
         "numero_acao": 46.02,
         "desc_acao": "Modernização do sistema semafórico em 500 cruzamentos fora do centro expandido.",
-        "orgao_acao": "SPREGULA"
+        "orgao_acao": "SPRegula"
     },
     {
         "numero_meta": 48,
@@ -1083,25 +1083,25 @@
         "numero_meta": 87,
         "numero_acao": 87.01,
         "desc_acao": "Instalação de 3 novos crematórios públicos.",
-        "orgao_acao": "SPREGULA"
+        "orgao_acao": "SPRegula"
     },
     {
         "numero_meta": 87,
         "numero_acao": 87.02,
         "desc_acao": "Reforma do Crematório Vila Alpina.",
-        "orgao_acao": "SPREGULA"
+        "orgao_acao": "SPRegula"
     },
     {
         "numero_meta": 87,
         "numero_acao": 87.03,
         "desc_acao": "Reforma de 21 cemitérios municipais.",
-        "orgao_acao": "SPREGULA"
+        "orgao_acao": "SPRegula"
     },
     {
         "numero_meta": 87,
         "numero_acao": 87.04,
         "desc_acao": "Reforma e restauro de bens tombados nos cemitérios. ",
-        "orgao_acao": "SPREGULA"
+        "orgao_acao": "SPRegula"
     },
     {
         "numero_meta": 88,
