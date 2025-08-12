@@ -32,7 +32,7 @@
         "descricao" : "Alcançar 11,4% de tratamento de materiais recicláveis, colocando São Paulo em um novo patamar de sustentabilidade",
         "projecao" : "O aumento da capacidade de separação de resíduos recicláveis passa pela abertura de novas usinas de tratamento, uso intensivo de tecnologia e pelas cooperativas de reciclagem",
         "indicador" : "Percentual de resíduos recicláveis não destinados a aterros sanitários.",
-        "orgao_responsavel" : ["SPREGULA", "SMSUB", "SMDET"],
+        "orgao_responsavel" : ["SPRegula", "SMSUB", "SMDET"],
         "eixo" : "universo sp"
     },
     {
@@ -59,7 +59,8 @@
         "descricao" : "Entregar 40 mil habitações de interesse social a famílias de baixa renda, para que tenham lar digno e definitivo.",
         "projecao" : "As habitações serão em locais com infraestrutura urbana e acesso à rede de transporte.",
         "indicador" : "Número de unidades habitacionais entregues.",
-        "orgao_responsavel" : ["SEHAB"]
+        "orgao_responsavel" : ["SEHAB"],
+        "eixo" : "universo sp"
     },
     {
         "numero" : 8,
@@ -121,7 +122,7 @@
         "descricao" : "Iniciar a operação do BRT Aricanduva, para reduzir o tempo de deslocamento entre a Radial Leste, a partir da altura da Estação Carrão do Metrô, e o Terminal São Mateus.",
         "projecao" : "Com estações de pré-embarque que tornam mais rápido e cômodo o acesso dos passageiros, o BRT (Bus Rapid Transit) é um modelo de corredor de ônibus que usa pistas exclusivas. Sua extensão de 13,6 quilômetros irá conectar a Linha 3 do Metrô, as linhas 11 e 12 da CPTM e o corredor metropolitano ABCD em São Mateus.",
         "indicador" : "BRT em operação.",
-        "orgao_responsavel" : ["SIURB", "SMT", "SPObras", "SPTRANS"],
+        "orgao_responsavel" : ["SIURB", "SMT", "SPObras", "SPTrans"],
         "eixo" : "universo sp"
     },
     {
@@ -130,7 +131,7 @@
         "descricao" : "Iniciar a operação do trecho I do novo BRT Radial Leste e as obras do trecho II, para reduzir o tempo de deslocamento entre a região e o Centro",
         "projecao" : "O BRT (Bus Rapid Transit), modelo de corredor de ônibus exclusivo e com estações de pré-embarque que tornam mais rápido e cômodo o acesso dos passageiros, será paralelo à Avenida Radial Leste. O primeiro trecho irá do Terminal Parque Dom Pedro II à altura da Rua Professor Miguel Russiano, próxima à Estação Penha do Metrô. O segundo continuará à margem da Radial até a Rua Salim Jorge, junto à Estação Corinthians-Itaquera do Metrô e da CPTM.",
         "indicador" : "BRT em operação.",
-        "orgao_responsavel" : ["SIURB", "SMT", "SPObras", "SPTRANS"],
+        "orgao_responsavel" : ["SIURB", "SMT", "SPObras", "SPTrans"],
         "eixo" : "universo sp"
     },
     {
@@ -157,7 +158,7 @@
         "descricao" : "Requalificar o Corredor Amador Bueno, na Zona Leste, proporcionando mais segurança, conforto e agilidade para os passageiros",
         "projecao" : "Os 5 quilômetros de extensão (da Praça Micaela Vieira, na Penha de França, ao encontro da Rua Embira com a Avenida São Miguel, no Jardim Popular, distrito da Ponte Rasa) receberão melhorias nos pavimentos, nivelamento de guias nos locais de embarque e desembarque, novas sinalizações, obras de microdrenagem e sistema de monitoramento por câmeras nas paradas, entre outras intervenções que vão beneficiar mais de 100 mil passageiros todos os dias.",
         "indicador" : "Obra concluída.",
-        "orgao_responsavel" : ["SIURB", "SPObras", "SMT", "SPTRANS"],
+        "orgao_responsavel" : ["SIURB", "SPObras", "SMT", "SPTrans"],
         "eixo" : "universo sp"
     },
     {
@@ -166,7 +167,7 @@
         "descricao" : "Requalificar o Corredor Imirim para oferecer mais segurança, conforto e agilidade aos passageiros da Zona Norte.",
         "projecao" : "O corredor da Avenida Imirim, com 4,6 quilômetros de extensão e 17 paradas, cruza a Avenida Engenheiro Caetano Álvares e liga a Avenida Itaberaba, próximo à Subprefeitura Freguesia/Brasilândia, à Alameda Afonso Schmidt, que separa o bairro de Santana do de Santa Teresinha. Com novos pavimentos, guias niveladas, acessibilidade, sinalização, iluminação e drenagem, entre outras reformas, vai melhorar o dia a dia de 112 mil passageiros de ônibus.",
         "indicador" : "Obra concluída.",
-        "orgao_responsavel" : ["SIURB", "SPObras", "SMT", "SPTRANS"],
+        "orgao_responsavel" : ["SIURB", "SPObras", "SMT", "SPTrans"],
         "eixo" : "universo sp"
     },
     {
@@ -175,7 +176,7 @@
         "descricao" : "Requalificar o Corredor Itapecerica, para oferecer mais segurança, conforto e agilidade aos passageiros que se deslocam entre os terminais João Dias e Capelinha.",
         "projecao" : "Mais de 120 mil pessoas utilizam diariamente o corredor de ônibus da Estrada de Itapecerica, na Zona Sul, e serão beneficiadas pelas diversas melhorias feitas ao longo de todos os 3,9 quilômetros de extensão da via, que preveem, entre outras medidas, a recuperação total dos pavimentos e a modernização das paradas e plataformas de embarque e desembarque.",
         "indicador" : "Obra concluída.",
-        "orgao_responsavel" : ["SIURB", "SPObras", "SMT", "SPTRANS"],
+        "orgao_responsavel" : ["SIURB", "SPObras", "SMT", "SPTrans"],
         "eixo" : "universo sp"
     },
     {
@@ -184,7 +185,7 @@
         "descricao" : "Requalificar o Corredor Interlagos, proporcionando mais segurança, conforto e agilidade para os passageiros.",
         "projecao" : "No corredor chegam a circular até 240 ônibus por hora no horário de pico da manhã. A reforma de pavimentos, passeios e diversas outras estruturas nas 40 paradas e ao longo dos 9,1 quilômetros que vão da Avenida Washington Luís à Avenida Atlântica, na Zona Sul, vai beneficiar cerca de 227 mil pessoas por dia.",
         "indicador" : "Obra concluída.",
-        "orgao_responsavel" : ["SIURB", "SPObras", "SMT", "SPTRANS"],
+        "orgao_responsavel" : ["SIURB", "SPObras", "SMT", "SPTrans"],
         "eixo" : "universo sp"
     },
     {
@@ -193,7 +194,7 @@
         "descricao" : "Entregar 14 requalificações de terminais urbanos, para maior conforto, segurança e acessibilidade dos passageiros",
         "projecao" : "A reforma dos terminais garantirá a modernização necessária para atender às atuais e futuras demandas do transporte coletivo, estimulando o uso dos ônibus e de outros modais públicos.",
         "indicador" : "Soma de terminais requalificados.",
-        "orgao_responsavel" : ["SMT", "SPTRANS", "SGM", "SEDP"],
+        "orgao_responsavel" : ["SMT", "SPTrans", "SGM", "SEDP"],
         "eixo" : "universo sp"
         },
     {
@@ -202,7 +203,7 @@
         "descricao" : "Entregar o novo Terminal Itaquera, para que a região possa contar com mais linhas de ônibus e seja facilitada a integração com o Metrô e a CPTM.",
         "projecao" : "A previsão é que o novo terminal receba 430 mil pessoas diariamente em seus 40 mil m² de área construída",
         "indicador" : "Obra concluída.",
-        "orgao_responsavel" : ["SIURB", "SPObras", "SMT", "SPTRANS"],
+        "orgao_responsavel" : ["SIURB", "SPObras", "SMT", "SPTrans"],
         "eixo" : "universo sp"
     },
     {
@@ -211,7 +212,8 @@
         "descricao" : "Iniciar as obras do novo Terminal Itaim Paulista, que oferecerá integração com a Estação Itaim Paulista da Linha 12-Safira da CPTM",
         "projecao" : "Serão acomodadas no terminal as linhas de ônibus municipais e intermunicipais que trafegam nos eixos da Avenida Marechal Tito e da Estrada Dom José Nery.",
         "indicador" : "Ordem de serviço de obra emitida.",
-        "orgao_responsavel" : ["SIURB", "SPObras", "SMT", "SPTRANS"]
+        "orgao_responsavel" : ["SIURB", "SPObras", "SMT", "SPTrans"],
+        "eixo" : "universo sp"
     },
     {
         "numero" : 25,
@@ -219,7 +221,7 @@
         "descricao" : "Iniciar as obras do novo Terminal Perus, junto à Estação Perus da Linha 7-Rubi da CPTM, para reestruturar a circulação de ônibus dos dois lados da linha férrea",
         "projecao" : "É uma antiga demanda da população local e beneficiará 44 mil pessoas por dia, facilitando a conexão entre os bairros no entorno do núcleo urbano de Perus.",
         "indicador" : "Ordem de serviço de obra emitida.",
-        "orgao_responsavel" : ["SIURB", "SPObras", "SMT", "SPTRANS"],
+        "orgao_responsavel" : ["SIURB", "SPObras", "SMT", "SPTrans"],
         "eixo" : "universo sp"
     },
     {
@@ -228,7 +230,7 @@
         "descricao" : "Iniciar a construção do Terminal Pedreira/Mar Paulista para integrar linhas de ônibus e transporte hidroviário na Zona Sul.",
         "projecao" : "O futuro terminal, conectado ao atracadouro Pedreira do Aquático SP, vai reduzir o tempo de deslocamento entre os bairros da região, beneficiando diretamente 110 mil pessoas por dia.",
         "indicador" : "Ordem de serviço de obra emitida.",
-        "orgao_responsavel" : ["SMT", "SPTRANS"],
+        "orgao_responsavel" : ["SMT", "SPTrans"],
         "eixo" : "universo sp"
     },
     {
@@ -237,7 +239,7 @@
         "descricao" : "Iniciar a construção do Terminal Cocaia para integrar linhas de ônibus e transporte hidroviário na Zona Sul.",
         "projecao" : "O futuro terminal, conectado ao atracadouro Cocaia do Aquático SP, vai reduzir o tempo de deslocamento entre os bairros da região, beneficiando diretamente 36 mil pessoas por dia.",
         "indicador" : "Ordem de serviço de obra emitida.",
-        "orgao_responsavel" : ["SMT", "SPTRANS"],
+        "orgao_responsavel" : ["SMT", "SPTrans"],
         "eixo" : "universo sp"
     },
     {
@@ -246,7 +248,7 @@
         "descricao" : "Contratar as obras de dois novos atracadouros na Represa Billings para expandir o Aquático SP e proporcionar à população da Zona Sul uma mobilidade mais sustentável e integrada.",
         "projecao" : "A abertura de novas paradas (Pedreira e Cocaia) deverá beneficiar diretamente a conexão entre o modal hidroviário e a rede de ônibus.",
         "indicador" : "Obras contratadas.",
-        "orgao_responsavel" : ["SMT", "SPTRANS"],
+        "orgao_responsavel" : ["SMT", "SPTrans"],
         "eixo" : "universo sp"
     },
     {
@@ -255,7 +257,7 @@
         "descricao" : "Viabilizar o Aquático Guarapiranga, para ampliar a utilização do modal hidroviário na região sul.",
         "projecao" : "A expansão do Aquático SP até a Represa Guarapiranga impulsionará o ecoturismo, a educação ambiental e a integração entre os bairros da Zona Sul.",
         "indicador" : "Estudos técnicos e ambientais concluídos.",
-        "orgao_responsavel" : ["SMT", "SPTRANS"],
+        "orgao_responsavel" : ["SMT", "SPTrans"],
         "eixo" : "universo sp"
     },
     {
@@ -381,7 +383,8 @@
         "descricao" : "Iniciar as obras de prolongamento da Avenida Marquês de São Vicente (novo Boulevard Marquês de São Vicente), melhorando a mobilidade no centro expandido e conectando-o à Zona Leste.",
         "projecao" : "O futuro corredor, de 6,9 quilômetros, irá da Avenida Sérgio Tomás até a Salim Farah Maluf, viabilizando a desativação posterior do Elevado Presidente João Goulart. Terá calçadas-parque e canteiros-parque, com impacto positivo na paisagem, no desenvolvimento urbano da cidade e na qualidade de vida da população",
         "indicador" : "Ordem de serviço de obra emitida.",
-        "orgao_responsavel" : ["SPObras", "SPUrbanismo"]
+        "orgao_responsavel" : ["SPObras", "SPUrbanismo"],
+        "eixo" : "universo sp"
     },
     {
         "numero" : 44,
@@ -407,7 +410,7 @@
         "descricao" : "Modernizar o sistema semafórico em 1.700 cruzamentos, melhorando a fluidez e a segurança no trânsito.",
         "projecao" : "O foco da meta é viabilizar ações de modernização do sistema semafórico, previstas nos contratos de concessão.",
         "indicador" : "Soma do número de sistemas semafóricos instalados.",
-        "orgao_responsavel" : ["SPREGULA"],
+        "orgao_responsavel" : ["SPRegula"],
         "eixo" : "universo sp"
     },
     {
@@ -677,7 +680,7 @@
         "descricao" : "Criar o Programa Mamãe Tarifa Zero no sistema municipal de ônibus, oferecendo 2 passagens por dia para pais e mães levarem seus filhos às creches.",
         "projecao" : "A iniciativa beneficiará cerca de 15 mil crianças, garantindo o acesso à educação infantil para famílias em situação de vulnerabilidade.",
         "indicador" : "Programa em operação",
-        "orgao_responsavel" : ["SMT", "SPTRANS"],
+        "orgao_responsavel" : ["SMT", "SPTrans"],
         "eixo" : "viver são paulo"
     },
     {
@@ -776,7 +779,7 @@
         "descricao" : "Priorizar 25 obras, novas ou de reforma, nos cemitérios públicos, para a melhoria dos serviços prestados às famílias.",
         "projecao" : "O objetivo é viabilizar iniciativas previstas nos contratos de concessão dos serviços cemiteriais e funerários, com foco na ampliação da oferta, modernização das estruturas e preservação do patrimônio público.",
         "indicador" : "Número de obras concluídas",
-        "orgao_responsavel" : ["SPREGULA"],
+        "orgao_responsavel" : ["SPRegula"],
         "eixo" : "viver são paulo"
     },
     {
@@ -785,7 +788,8 @@
         "descricao" : "Requalificar 65 equipamentos esportivos com estruturas mais adequadas para uso da população em suas atividades.",
         "projecao" : "As intervenções vão desde a modernização de Centros Esportivos até reformas estruturais em Clubes da Comunidade, para ampliação dos benefícios que as atividades físicas nesses espaços proporcionam em termos de saúde, lazer e convivência comunitária.",
         "indicador" : "Número de equipamentos esportivos requalificados",
-        "orgao_responsavel" : ["SEME"]
+        "orgao_responsavel" : ["SEME"],
+        "eixo" : "viver são paulo"
     },
     {
         "numero" : 89,
@@ -964,7 +968,7 @@
         "descricao" : "Iniciar a construção da Arena Multiuso do Anhembi, fortalecendo a vocação da cidade para receber eventos de diversos tipos",
         "projecao" : "Com capacidade para 20 mil pessoas, o espaço terá montagem modular, que permite a realização de espetáculos, competições esportivas e outros eventos que atraem visitantes à cidade, impulsionam o turismo, aquecem a economia e geram oportunidades de trabalho.",
         "indicador" : "Obras iniciadas.",
-        "orgao_responsavel" : ["SGM", "SPTURIS"],
+        "orgao_responsavel" : ["SGM", "SPTuris"],
         "eixo" : "cidade empreendedora"
     },
     {
