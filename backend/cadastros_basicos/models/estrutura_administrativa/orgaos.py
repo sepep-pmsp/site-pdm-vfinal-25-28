@@ -8,8 +8,8 @@ class TipoOrgao(models.TextChoices):
     TCM = 'TCM', 'Tribunal de Contas do Município'
 
 class Orgao(models.Model):
-    nome = models.CharField(max_length=100, verbose_name='Nome do Órgão')
-    sigla = models.CharField(max_length=10, verbose_name='Sigla do Órgão')
+    nome = models.CharField(max_length=100, verbose_name='Nome do Órgão', unique=True)
+    sigla = models.CharField(max_length=10, verbose_name='Sigla do Órgão', unique=True)
     tipo =models.CharField(
         max_length=20,
         choices=TipoOrgao.choices,

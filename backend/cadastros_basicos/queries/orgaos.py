@@ -1,4 +1,4 @@
-from models.estrutura_administrativa import Orgao
+from cadastros_basicos.models.estrutura_administrativa import Orgao
 
 def get_orgao_by_sigla(sigla:str, raise_error:bool=True)->Orgao:
 
