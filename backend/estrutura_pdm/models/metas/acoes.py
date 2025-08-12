@@ -17,7 +17,7 @@ class AcaoEstrategica(models.Model):
     class Meta:
         verbose_name = "Ação Estratégica"
         verbose_name_plural = "Ações Estratégicas"
-        ordering = ['posicao']
+        ordering = ['meta__numero', 'posicao']
 
     def __str__(self):
         return self.descricao
