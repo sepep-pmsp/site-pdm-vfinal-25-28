@@ -22,7 +22,7 @@ class Command(BaseCommand):
     def __build_image_path(self, image_fname:str, tipo_imagem:Literal['colorido', 'branco']) -> str:
         
         folder_tipo = f"logos_eixos_{tipo_imagem}s"
-        folder_imagem = os.path.join("estrutura_pdm", "data", "media", folder_tipo)
+        folder_imagem = os.path.join("estrutura_pdm", "data", "imgs", folder_tipo)
         return os.path.join(folder_imagem, image_fname)
 
 
