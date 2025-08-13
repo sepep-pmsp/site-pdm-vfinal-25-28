@@ -29,10 +29,7 @@ class Command(BaseCommand):
                 meta = get_meta_by_numero(item["numero_meta"])
             except Meta.DoesNotExist:
                 raise RuntimeError(f"Meta com número {item['numero_meta']} não encontrada.")
-            try:
-                orgao = get_orgao_by_sigla(item['orgao_acao'])
-            except Orgao.DoesNotExist:
-                raise RuntimeError(f"Órgão com sigla {item['orgao_acao']} não encontrado.")
+            
             qtd_acoes = meta.acoes_estrategicas.count()
             posit = qtd_acoes + 1 if qtd_acoes else 1
             acao, created = AcaoEstrategica.objects.get_or_create(
@@ -40,10 +37,20 @@ class Command(BaseCommand):
                 descricao=item['desc_acao'],
                 meta=meta,
                 posicao=posit,
-                orgao_responsavel=orgao
             )
 
             if created:
+
+                orgaos = item['orgao_acao']
+
+                for orgao_sigla in orgaos:
+                    try:
+                        orgao = get_orgao_by_sigla(orgao_sigla)
+                    except Orgao.DoesNotExist:
+                        raise RuntimeError(f"Órgão com sigla {orgao_sigla} não encontrado.")
+                    acao.orgaos_responsaveis.add(orgao)
+
+
                 self.stdout.write(self.style.SUCCESS(f'Ação {acao.numero} criada com sucesso.'))
                
             else:
