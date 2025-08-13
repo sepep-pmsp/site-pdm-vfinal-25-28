@@ -19,6 +19,7 @@ python manage.py seed_eixos
 python manage.py seed_news
 python manage.py seed_carta_prefeito
 python manage.py seed_about_pdm
+python manage.py seed_metas
 
 
 echo ">> Iniciando servidor"

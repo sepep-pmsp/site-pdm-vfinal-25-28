@@ -1,0 +1,1136 @@
+[
+    {
+        "numero" : 1,
+        "destaque" : "Entregar 8 novos parques",
+        "descricao" : "Entregar 8 novos parques, para ampliar a oferta de áreas de lazer e fortalecer a cultura de convivência harmoniosa entre as pessoas e a natureza.",
+        "projecao" : "Com essa medida, a cidade chegará a 125 parques municipais.",
+        "indicador" : "Número de parques entregues",
+        "orgao_responsavel" : ["SVMA"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 2,
+        "destaque" : "Revitalizar 25 parques",
+        "descricao" : "Revitalizar 25 parques, com a melhoria das instalações e para maior segurança dos frequentadores.",
+        "projecao" : "Serão priorizadas as unidades com indicadores mais baixos de acordo com diagnóstico do Projeto Viva o Verde – parceria entre a Prefeitura de São Paulo e o Programa das Nações Unidas para Assentamentos Humanos (ONU-Habitat) –, que avaliou 80 parques.",
+        "indicador" : "Número de parques revitalizados",
+        "orgao_responsavel" : ["SVMA"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 3,
+        "destaque" : "Realizar o Projeto Árvores de São Paulo",
+        "descricao" : "Realizar o Projeto Árvores de São Paulo, que vai promover o plantio de 200 mil árvores e ampliar e diversificar a cobertura vegetal da cidade.",
+        "projecao" : "A iniciativa envolve o plantio de árvores em parques, calçadas e vagas verdes, além da criação de bosques urbanos, áreas públicas transformadas em pequenas florestas (fechadas à visitação) com a recepção de árvores adultas transplantadas de obras de infraestrutura. Abrange também o projeto de áreas “Futuro Verde”, com foco nos bairros fora do centro expandido e prioridade para os menos arborizados",
+        "indicador" : "Soma do número de árvores plantadas.",
+        "orgao_responsavel" : ["SVMA", "SMSUB"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 4,
+        "destaque" : "Alcançar 11,4% de tratamento de materiais recicláveis",
+        "descricao" : "Alcançar 11,4% de tratamento de materiais recicláveis, colocando São Paulo em um novo patamar de sustentabilidade",
+        "projecao" : "O aumento da capacidade de separação de resíduos recicláveis passa pela abertura de novas usinas de tratamento, uso intensivo de tecnologia e pelas cooperativas de reciclagem",
+        "indicador" : "Percentual de resíduos recicláveis não destinados a aterros sanitários.",
+        "orgao_responsavel" : ["SPRegula", "SMSUB", "SMDET"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 5,
+        "destaque" : "Levar atividades de conscientização e educação ambiental a 240 mil pessoas",
+        "descricao" : "Levar atividades de conscientização e educação ambiental a 240 mil pessoas, para ampliar o engajamento da população em práticas sustentáveis.",
+        "projecao" : "Além de cursos e atividades formativas da Universidade Aberta do Meio Ambiente e da Cultura de Paz (Umapaz), serão realizadas ações do novo Plano Municipal de Educação Ambiental.",
+        "indicador" : "Número de pessoas atendidas em ações de educação ambiental",
+        "orgao_responsavel" : ["SVMA"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 6,
+        "destaque" : "Substituir 2.200 ônibus movidos a diesel por veículos de matriz energética mais limpa",
+        "descricao" : "Substituir 2.200 ônibus movidos a diesel por veículos de matriz energética mais limpa, reforçando o compromisso da cidade com a preservação ambiental.",
+        "projecao" : "A troca dos veículos aumentará a eficiência nos transportes e reduzirá emissões de poluentes, com impactos positivos na saúde e na qualidade de vida das pessoas.",
+        "indicador" : "Quantidade de novos veículos de matriz energética limpa entregues",
+        "orgao_responsavel" : ["SMT"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 7,
+        "destaque" : "Entregar 40 mil habitações de interesse social a famílias de baixa renda",
+        "descricao" : "Entregar 40 mil habitações de interesse social a famílias de baixa renda, para que tenham lar digno e definitivo.",
+        "projecao" : "As habitações serão em locais com infraestrutura urbana e acesso à rede de transporte.",
+        "indicador" : "Número de unidades habitacionais entregues.",
+        "orgao_responsavel" : ["SEHAB"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 8,
+        "destaque" : "Entregar 100 mil títulos de posse ou propriedade por meio do Pode Entrar",
+        "descricao" : "Entregar 100 mil títulos de posse ou propriedade por meio do Pode Entrar – Regularização Fundiária, garantindo a famílias de baixa renda moradia estável, com segurança jurídica",
+        "projecao" : "A titulação dá ao morador acesso a direitos e serviços e contribui para o planejamento urbano da cidade. As ações consideram a realidade de cada assentamento e serão conduzidas de forma articulada entre SEHAB e COHAB.",
+        "indicador" : "Número de títulos de garantia de posse ou propriedade entregues",
+        "orgao_responsavel" : ["SEHAB"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 9,
+        "destaque" : "Beneficiar 50 mil famílias com urbanização de áreas de favela",
+        "descricao" : "Beneficiar 50 mil famílias com urbanização de áreas de favela, oferecendo infraestrutura, segurança e condições dignas de moradia.",
+        "projecao" : "As obras transformarão a realidade de assentamentos precários, eliminando riscos e promovendo a recuperação ambiental. Vão de simples intervenções de complementação de infraestrutura até a urbanização integral.",
+        "indicador" : "Número de famílias beneficiadas com obras de urbanização.",
+        "orgao_responsavel" : ["SEHAB"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 10,
+        "destaque" : "Revitalizar 20 empreendimentos habitacionais sob responsabilidade da SEHAB/COHAB",
+        "descricao" : "Revitalizar 20 empreendimentos habitacionais sob responsabilidade da SEHAB/COHAB, gerando benefícios para 4 mil famílias e favorecendo o convívio e a integração comunitária",
+        "projecao" : "As obras vão recuperar as condições físicas, ambientais e de uso dos empreendimentos, melhorando áreas de uso compartilhado, prolongando a vida útil das edificações e qualificando o entorno em conformidade com as políticas municipais de zeladoria ",
+        "indicador" : "Soma do número de empreendimentos habitacionais revitalizados.",
+        "orgao_responsavel" : ["SEHAB"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 11,
+        "destaque" : "Realizar obras de canalização de córregos e contenção de encostas em 14 áreas prioritárias",
+        "descricao" : "Realizar obras de canalização de córregos e contenção de encostas em 14 áreas prioritárias do Plano Municipal de Redução de Riscos, protegendo famílias que residem em áreas de alto risco",
+        "projecao" : "O Plano Municipal de Redução de Riscos prevê um conjunto de medidas a serem tomadas ao longo de 16 anos e estruturadas em quatro fases de 4 anos. As análises de risco hidrológico e geológico e da vulnerabilidade social dos moradores dessas áreas foram os critérios para a definição das ações prioritárias para o presente quadriênio.",
+        "indicador" : "Soma das obras concluídas.",
+        "orgao_responsavel" : ["SIURB", "SEHAB"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 12,
+        "destaque" : "Entregar 8 piscinões e iniciar a construção de outros 6",
+        "descricao" : "Entregar 8 piscinões e iniciar a construção de outros 6 para reduzir alagamentos e dar mais segurança à população.",
+        "projecao" : "Os reservatórios armazenam o excesso de água que os rios e os córregos não conseguem escoar e são importantes para a proteção das áreas mais afetadas em épocas de chuva intensa.",
+        "indicador" : "Soma das obras concluídas e das ordens de serviço emitidas",
+        "orgao_responsavel" : ["SIURB"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 13,
+        "destaque" : "Entregar o novo Centro de Operações da SPTrans",
+        "descricao" : "Entregar o novo Centro de Operações da SPTrans, para melhorar o monitoramento da frota de ônibus municipal e a qualidade do serviço prestado.",
+        "projecao" : "O novo Centro de Operações, com o Sistema de Monitoramento e Gestão Operacional do Transporte Coletivo Público da cidade de São Paulo (SMGO), permitirá uma gestão muito mais eficiente da rede de transportes, que oferecerá mais segurança, previsibilidade, rapidez e comodidade a 7,3 milhões de passageiros.",
+        "indicador" : "Centro de Operações em funcionamento.",
+        "orgao_responsavel" : ["SPTrans", "SMT"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 14,
+        "destaque" : "Iniciar a operação do BRT Aricanduva",
+        "descricao" : "Iniciar a operação do BRT Aricanduva, para reduzir o tempo de deslocamento entre a Radial Leste, a partir da altura da Estação Carrão do Metrô, e o Terminal São Mateus.",
+        "projecao" : "Com estações de pré-embarque que tornam mais rápido e cômodo o acesso dos passageiros, o BRT (Bus Rapid Transit) é um modelo de corredor de ônibus que usa pistas exclusivas. Sua extensão de 13,6 quilômetros irá conectar a Linha 3 do Metrô, as linhas 11 e 12 da CPTM e o corredor metropolitano ABCD em São Mateus.",
+        "indicador" : "BRT em operação.",
+        "orgao_responsavel" : ["SIURB", "SMT", "SPObras", "SPTrans"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 15,
+        "destaque" : "Iniciar a operação do trecho I do novo BRT Radial Leste e as obras do trecho II",
+        "descricao" : "Iniciar a operação do trecho I do novo BRT Radial Leste e as obras do trecho II, para reduzir o tempo de deslocamento entre a região e o Centro",
+        "projecao" : "O BRT (Bus Rapid Transit), modelo de corredor de ônibus exclusivo e com estações de pré-embarque que tornam mais rápido e cômodo o acesso dos passageiros, será paralelo à Avenida Radial Leste. O primeiro trecho irá do Terminal Parque Dom Pedro II à altura da Rua Professor Miguel Russiano, próxima à Estação Penha do Metrô. O segundo continuará à margem da Radial até a Rua Salim Jorge, junto à Estação Corinthians-Itaquera do Metrô e da CPTM.",
+        "indicador" : "BRT em operação.",
+        "orgao_responsavel" : ["SIURB", "SMT", "SPObras", "SPTrans"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 16,
+        "destaque" : "Entregar o Corredor Celso Garcia",
+        "descricao" : "Entregar o Corredor Celso Garcia, para facilitar os deslocamentos de ônibus entre o Terminal Parque Dom Pedro e a Estação Bresser-Mooca do Metrô",
+        "projecao" : "Trata-se do primeiro trecho, de 2,7 quilômetros, de uma obra que terá 8,3 quilômetros no total, ligando a região central ao Terminal Aricanduva, na Zona Leste",
+        "indicador" : "Obra do primeiro trecho concluída.",
+        "orgao_responsavel" : ["SMT"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 17,
+        "destaque" : "Entregar o Corredor Itaquera-Líder",
+        "descricao" : "Entregar o Corredor Itaquera-Líder, com 9,3 quilômetros de extensão nos dois sentidos, para facilitar a circulação de ônibus em vias essenciais para a mobilidade na Zona Leste.",
+        "projecao" : "Com o primeiro trecho, de 6,2 quilômetros, em operação, os 3,1 quilômetros restantes estão divididos em dois lotes: um de 600 metros, do Terminal Vila Carrão à Avenida Aricanduva; outro de 2,5 quilômetros, entre as avenidas Líder e Jacu Pêssego.",
+        "indicador" : "Obra concluída.",
+        "orgao_responsavel" : ["SMT"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 18,
+        "destaque" : "Requalificar o Corredor Amador Bueno",
+        "descricao" : "Requalificar o Corredor Amador Bueno, na Zona Leste, proporcionando mais segurança, conforto e agilidade para os passageiros",
+        "projecao" : "Os 5 quilômetros de extensão (da Praça Micaela Vieira, na Penha de França, ao encontro da Rua Embira com a Avenida São Miguel, no Jardim Popular, distrito da Ponte Rasa) receberão melhorias nos pavimentos, nivelamento de guias nos locais de embarque e desembarque, novas sinalizações, obras de microdrenagem e sistema de monitoramento por câmeras nas paradas, entre outras intervenções que vão beneficiar mais de 100 mil passageiros todos os dias.",
+        "indicador" : "Obra concluída.",
+        "orgao_responsavel" : ["SIURB", "SPObras", "SMT", "SPTrans"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 19,
+        "destaque" : "Requalificar o Corredor Imirim",
+        "descricao" : "Requalificar o Corredor Imirim para oferecer mais segurança, conforto e agilidade aos passageiros da Zona Norte.",
+        "projecao" : "O corredor da Avenida Imirim, com 4,6 quilômetros de extensão e 17 paradas, cruza a Avenida Engenheiro Caetano Álvares e liga a Avenida Itaberaba, próximo à Subprefeitura Freguesia/Brasilândia, à Alameda Afonso Schmidt, que separa o bairro de Santana do de Santa Teresinha. Com novos pavimentos, guias niveladas, acessibilidade, sinalização, iluminação e drenagem, entre outras reformas, vai melhorar o dia a dia de 112 mil passageiros de ônibus.",
+        "indicador" : "Obra concluída.",
+        "orgao_responsavel" : ["SIURB", "SPObras", "SMT", "SPTrans"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 20,
+        "destaque" : "Requalificar o Corredor Itapecerica",
+        "descricao" : "Requalificar o Corredor Itapecerica, para oferecer mais segurança, conforto e agilidade aos passageiros que se deslocam entre os terminais João Dias e Capelinha.",
+        "projecao" : "Mais de 120 mil pessoas utilizam diariamente o corredor de ônibus da Estrada de Itapecerica, na Zona Sul, e serão beneficiadas pelas diversas melhorias feitas ao longo de todos os 3,9 quilômetros de extensão da via, que preveem, entre outras medidas, a recuperação total dos pavimentos e a modernização das paradas e plataformas de embarque e desembarque.",
+        "indicador" : "Obra concluída.",
+        "orgao_responsavel" : ["SIURB", "SPObras", "SMT", "SPTrans"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 21,
+        "destaque" : "Requalificar o Corredor Interlagos",
+        "descricao" : "Requalificar o Corredor Interlagos, proporcionando mais segurança, conforto e agilidade para os passageiros.",
+        "projecao" : "No corredor chegam a circular até 240 ônibus por hora no horário de pico da manhã. A reforma de pavimentos, passeios e diversas outras estruturas nas 40 paradas e ao longo dos 9,1 quilômetros que vão da Avenida Washington Luís à Avenida Atlântica, na Zona Sul, vai beneficiar cerca de 227 mil pessoas por dia.",
+        "indicador" : "Obra concluída.",
+        "orgao_responsavel" : ["SIURB", "SPObras", "SMT", "SPTrans"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 22,
+        "destaque" : "Entregar 14 requalificações de terminais urbanos",
+        "descricao" : "Entregar 14 requalificações de terminais urbanos, para maior conforto, segurança e acessibilidade dos passageiros",
+        "projecao" : "A reforma dos terminais garantirá a modernização necessária para atender às atuais e futuras demandas do transporte coletivo, estimulando o uso dos ônibus e de outros modais públicos.",
+        "indicador" : "Soma de terminais requalificados.",
+        "orgao_responsavel" : ["SMT", "SPTrans", "SGM", "SEDP"],
+        "eixo" : "universo sp"
+        },
+    {
+        "numero" : 23,
+        "destaque" : "Entregar o novo Terminal Itaquera",
+        "descricao" : "Entregar o novo Terminal Itaquera, para que a região possa contar com mais linhas de ônibus e seja facilitada a integração com o Metrô e a CPTM.",
+        "projecao" : "A previsão é que o novo terminal receba 430 mil pessoas diariamente em seus 40 mil m² de área construída",
+        "indicador" : "Obra concluída.",
+        "orgao_responsavel" : ["SIURB", "SPObras", "SMT", "SPTrans"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 24,
+        "destaque" : "Iniciar as obras do novo Terminal Itaim Paulista",
+        "descricao" : "Iniciar as obras do novo Terminal Itaim Paulista, que oferecerá integração com a Estação Itaim Paulista da Linha 12-Safira da CPTM",
+        "projecao" : "Serão acomodadas no terminal as linhas de ônibus municipais e intermunicipais que trafegam nos eixos da Avenida Marechal Tito e da Estrada Dom José Nery.",
+        "indicador" : "Ordem de serviço de obra emitida.",
+        "orgao_responsavel" : ["SIURB", "SPObras", "SMT", "SPTrans"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 25,
+        "destaque" : "Iniciar as obras do novo Terminal Perus",
+        "descricao" : "Iniciar as obras do novo Terminal Perus, junto à Estação Perus da Linha 7-Rubi da CPTM, para reestruturar a circulação de ônibus dos dois lados da linha férrea",
+        "projecao" : "É uma antiga demanda da população local e beneficiará 44 mil pessoas por dia, facilitando a conexão entre os bairros no entorno do núcleo urbano de Perus.",
+        "indicador" : "Ordem de serviço de obra emitida.",
+        "orgao_responsavel" : ["SIURB", "SPObras", "SMT", "SPTrans"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 26,
+        "destaque" : "Iniciar a construção do Terminal Pedreira/Mar Paulista",
+        "descricao" : "Iniciar a construção do Terminal Pedreira/Mar Paulista para integrar linhas de ônibus e transporte hidroviário na Zona Sul.",
+        "projecao" : "O futuro terminal, conectado ao atracadouro Pedreira do Aquático SP, vai reduzir o tempo de deslocamento entre os bairros da região, beneficiando diretamente 110 mil pessoas por dia.",
+        "indicador" : "Ordem de serviço de obra emitida.",
+        "orgao_responsavel" : ["SMT", "SPTrans"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 27,
+        "destaque" : "Iniciar a construção do Terminal Cocaia",
+        "descricao" : "Iniciar a construção do Terminal Cocaia para integrar linhas de ônibus e transporte hidroviário na Zona Sul.",
+        "projecao" : "O futuro terminal, conectado ao atracadouro Cocaia do Aquático SP, vai reduzir o tempo de deslocamento entre os bairros da região, beneficiando diretamente 36 mil pessoas por dia.",
+        "indicador" : "Ordem de serviço de obra emitida.",
+        "orgao_responsavel" : ["SMT", "SPTrans"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 28,
+        "destaque" : "Contratar as obras de dois novos atracadouros na Represa Billings",
+        "descricao" : "Contratar as obras de dois novos atracadouros na Represa Billings para expandir o Aquático SP e proporcionar à população da Zona Sul uma mobilidade mais sustentável e integrada.",
+        "projecao" : "A abertura de novas paradas (Pedreira e Cocaia) deverá beneficiar diretamente a conexão entre o modal hidroviário e a rede de ônibus.",
+        "indicador" : "Obras contratadas.",
+        "orgao_responsavel" : ["SMT", "SPTrans"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 29,
+        "destaque" : "Viabilizar o Aquático Guarapiranga",
+        "descricao" : "Viabilizar o Aquático Guarapiranga, para ampliar a utilização do modal hidroviário na região sul.",
+        "projecao" : "A expansão do Aquático SP até a Represa Guarapiranga impulsionará o ecoturismo, a educação ambiental e a integração entre os bairros da Zona Sul.",
+        "indicador" : "Estudos técnicos e ambientais concluídos.",
+        "orgao_responsavel" : ["SMT", "SPTrans"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 30,
+        "destaque" : "Entregar o prolongamento da Avenida Carlos Caldeira Filho",
+        "descricao" : "Entregar o prolongamento da Avenida Carlos Caldeira Filho, ligando-a à Estrada do M’Boi Mirim e beneficiando diretamente cerca de 870 mil moradores.",
+        "projecao" : "Capão Redondo, Campo Limpo, Vila Andrade e Jardim São Luís serão beneficiados com o projeto, que prevê também corredor de ônibus, ciclovia, viadutos e outras conexões viárias. A obra permitirá conexão direta do Terminal Jardim Ângela à estação Capão Redondo do Metrô.",
+        "indicador" : "Obra concluída.",
+        "orgao_responsavel" : ["SIURB", "SPObras"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 31,
+        "destaque" : "Concluir a duplicação da Avenida Senador Teotônio Vilela",
+        "descricao" : "Concluir a duplicação da Avenida Senador Teotônio Vilela, para melhorar a mobilidade na região da Cidade Dutra",
+        "projecao" : "Transporte público mais ágil e ciclistas e pedestres mais seguros são outros benefícios que a ampliação da via irá trazer.",
+        "indicador" : "Obra concluída.",
+        "orgao_responsavel" : ["SIURB", "SPObras"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 32,
+        "destaque" : "Realizar a duplicação da Ponte Jurubatuba",
+        "descricao" : "Realizar a duplicação da Ponte Jurubatuba, para maior fluidez no trânsito local e segurança nos deslocamentos.",
+        "projecao" : "A obra beneficiará diretamente 223 mil pessoas nos distritos de Cidade Dutra, Grajaú e Parelheiros.",
+        "indicador" : "Obra concluída.",
+        "orgao_responsavel" : ["SIURB", "SPObras"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 33,
+        "destaque" : "Realizar as obras do Complexo Viário João Beiçola",
+        "descricao" : "Realizar as obras do Complexo Viário João Beiçola, para maior fluidez no trânsito local e segurança nos deslocamentos",
+        "projecao" : "A duplicação do Viaduto Ivan da Costa Rodrigues (popularmente, João Beiçola) e as melhorias no entorno terão impacto positivo no cotidiano de cerca de 196 mil pessoas na região da Cidade Dutra, na Zona Sul.",
+        "indicador" : "Obra concluída.",
+        "orgao_responsavel" : ["SIURB", "SPObras"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 34,
+        "destaque" : "Iniciar as obras da Ponte Graúna-Gaivotas",
+        "descricao" : "Iniciar as obras da Ponte Graúna-Gaivotas, que estabelecerá nova conexão viária sobre a Represa Billings",
+        "projecao" : "A construção é essencial para facilitar a conexão entre os bairros do extremo sul da cidade e melhorar o fluxo do transporte coletivo no Grajaú, em Parelheiros e Marsilac, para benefício diário de aproximadamente 1 milhão de pessoas.",
+        "indicador" : "Ordem de serviço de obra emitida.",
+        "orgao_responsavel" : ["SIURB", "SPObras"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 35,
+        "destaque" : "Entregar o Túnel Cecília Lottenberg",
+        "descricao" : "Entregar o Túnel Cecília Lottenberg, integrando importantes eixos viários e garantindo conexões cicloviárias estratégicas.",
+        "projecao" : "A obra, no prolongamento da Avenida Dr. Chucri Zaidan, beneficiará diretamente 95 mil pessoas.",
+        "indicador" : "Obra concluída.",
+        "orgao_responsavel" : ["SIURB", "SPObras"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 36,
+        "destaque" : "Iniciar as obras de prolongamento da Avenida Jornalista Roberto Marinho",
+        "descricao" : "Iniciar as obras de prolongamento da Avenida Jornalista Roberto Marinho até a Rodovia dos Imigrantes, para melhorar o fluxo viário e requalificar a região.",
+        "projecao" : "A intervenção vai criar um eixo urbano estruturante e sustentável, com obras de drenagem para mitigar alagamentos, parque linear para ampliar as áreas verdes e instalação de espaços de lazer.",
+        "indicador" : "Ordem de serviço de obra emitida.",
+        "orgao_responsavel" : ["SPUrbanismo", "SPObras"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 37,
+        "destaque" : "Entregar a segunda e a terceira fase da requalificação da Avenida Santo Amaro",
+        "descricao" : "Entregar a segunda e a terceira fase da requalificação da Avenida Santo Amaro, para melhorar a segurança e a mobilidade na região",
+        "projecao" : "As intervenções incluem calçadas ampliadas, novo pavimento, iluminação, drenagem e enterramento de redes, beneficiando também os passageiros do transporte público e os pedestres que circulam pela região.",
+        "indicador" : "Obra concluída.",
+        "orgao_responsavel" : ["SIURB", "SPObras"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 38,
+        "destaque" : "Iniciar as obras de requalificação da Avenida Juscelino Kubitschek (Boulevard JK)",
+        "descricao" : "Iniciar as obras de requalificação da Avenida Juscelino Kubitschek (Boulevard JK), tornando-a mais segura e convidativa para pedestres, ciclistas e usuários de ônibus",
+        "projecao" : "O redesenho urbano, com alargamento de calçadas, ciclovia bidirecional e acessibilidade, favorecerá o comércio e a circulação na região, incentivando o uso do espaço público",
+        "indicador" : "Ordem de serviço de obra emitida.",
+        "orgao_responsavel" : ["SPUrbanismo", "SPObras"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 39,
+        "destaque" : "Iniciar o alargamento da Rua Ribeirão Claro",
+        "descricao" : "Iniciar o alargamento da Rua Ribeirão Claro, redistribuindo o tráfego local e beneficiando importantes polos econômicos como Vila Olímpia, Itaim Bibi, Moema e Jardins.",
+        "projecao" : "A obra permitirá conexão direta entre a Avenida dos Bandeirantes e a Hélio Pellegrino, com melhorias significativas no fluxo viário em uma área de alta demanda.",
+        "indicador" : "Ordem de serviço de obra emitida.",
+        "orgao_responsavel" : ["SPUrbanismo", "SPObras"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 40,
+        "destaque" : "Iniciar a construção do novo Túnel Sena Madureira",
+        "descricao" : "Iniciar a construção do novo Túnel Sena Madureira, que irá melhorar a mobilidade na região da Vila Mariana e facilitar o acesso a diversos bairros.",
+        "projecao" : "Ipiranga, Itaim Bibi e Morumbi são exemplos de outros locais que serão acessados mais facilmente com a obra. A integração das regiões sul, sudeste e sudoeste com a Zona Leste, sem a necessidade de utilizar vias que passam pelo Centro, também será favorecida, assim como o acesso à Rodovia dos Imigrantes e o deslocamento até o ABC. Terá 558 metros de extensão, do Túnel Jânio Quadros à Avenida Ricardo Jafet, passando pela Avenida Juscelino Kubistchek, o Túnel Ayrton Senna e o complexo viário João Saad, beneficiando 818 mil pessoas.",
+        "indicador" : "Ordem de serviço de obra emitida.",
+        "orgao_responsavel" : ["SIURB", "SPObras"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 41,
+        "destaque" : "Iniciar o prolongamento da Avenida Imperador até a Avenida José Aristodemo Pinotti",
+        "descricao" : "Iniciar o prolongamento da Avenida Imperador até a Avenida José Aristodemo Pinotti, garantindo melhor articulação da malha viária na Zona Leste.",
+        "projecao" : "A obra é essencial para a melhoria do tráfego em São Miguel Paulista.",
+        "indicador" : "Ordem de serviço de obra emitida.",
+        "orgao_responsavel" : ["SIURB"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 42,
+        "destaque" : "Entregar a Ponte Pirituba-Lapa",
+        "descricao" : "Entregar a Ponte Pirituba-Lapa, que vai melhorar a fluidez do trânsito na região.",
+        "projecao" : "Demanda histórica da população local, a obra deve diminuir os congestionamentos na Avenida Marginal Tietê e nas vias próximas. A expectativa é que reduza em até 36 minutos o tempo de deslocamento entre os terminais Pirituba e Lapa, beneficiando diariamente 78 mil pessoas.",
+        "indicador" : "Obra concluída.",
+        "orgao_responsavel" : ["SIURB", "SPObras"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 43,
+        "destaque" : "Iniciar as obras de prolongamento da Avenida Marquês de São Vicente (novo Boulevard Marquês de São Vicente)",
+        "descricao" : "Iniciar as obras de prolongamento da Avenida Marquês de São Vicente (novo Boulevard Marquês de São Vicente), melhorando a mobilidade no centro expandido e conectando-o à Zona Leste.",
+        "projecao" : "O futuro corredor, de 6,9 quilômetros, irá da Avenida Sérgio Tomás até a Salim Farah Maluf, viabilizando a desativação posterior do Elevado Presidente João Goulart. Terá calçadas-parque e canteiros-parque, com impacto positivo na paisagem, no desenvolvimento urbano da cidade e na qualidade de vida da população",
+        "indicador" : "Ordem de serviço de obra emitida.",
+        "orgao_responsavel" : ["SPObras", "SPUrbanismo"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 44,
+        "destaque" : "Atingir 1.000 quilômetros de malha cicloviária",
+        "descricao" : "Atingir 1.000 quilômetros de malha cicloviária, estimulando uma mobilidade que contribui para a preservação ambiental e promove qualidade de vida.",
+        "projecao" : "Com a instalação de 233 novos quilômetros de vias exclusivas e a manutenção de outros 150 dos 767 já existentes, São Paulo deverá consolidar e modernizar a maior rede cicloviária da América Latina.",
+        "indicador" : "Extensão total, em quilômetros, de estruturas cicloviárias existentes.",
+        "orgao_responsavel" : ["SMT"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 45,
+        "destaque" : "Instalar mais 200 quilômetros de Faixa Azul",
+        "descricao" : "Instalar mais 200 quilômetros de Faixa Azul, duplicando a extensão de vias exclusivas para motociclistas, de modo a reduzir acidentes com motos na cidade.",
+        "projecao" : "A ampliação do Programa Faixa Azul beneficiará especialmente quem circula nas vias com índices mais elevados de acidentes",
+        "indicador" : "Extensão, em quilômetros, de faixas instaladas.",
+        "orgao_responsavel" : ["SMT"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 46,
+        "destaque" : "Modernizar o sistema semafórico em 1.700 cruzamentos",
+        "descricao" : "Modernizar o sistema semafórico em 1.700 cruzamentos, melhorando a fluidez e a segurança no trânsito.",
+        "projecao" : "O foco da meta é viabilizar ações de modernização do sistema semafórico, previstas nos contratos de concessão.",
+        "indicador" : "Soma do número de sistemas semafóricos instalados.",
+        "orgao_responsavel" : ["SPRegula"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 47,
+        "destaque" : "Entregar um heliponto na Marginal Tietê",
+        "descricao" : "Entregar um heliponto na Marginal Tietê para atendimento a situações de emergência.",
+        "projecao" : "A medida atende à necessidade de criar pontos de pouso do helicóptero Águia da Polícia Militar nas proximidades das marginais, para facilitar as operações e evitar fechamento das vias e congestionamentos em casos de acidentes graves, resgates de vítimas e emergências médicas",
+        "indicador" : "Heliponto em operação",
+        "orgao_responsavel" : ["SMSUB"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 48,
+        "destaque" : "Recuperar 10.000.000 de metros quadrados de vias públicas com asfalto novo",
+        "descricao" : "Recuperar 10.000.000 de metros quadrados de vias públicas com asfalto novo, para aumentar a segurança viária e a fluidez do trânsito.",
+        "projecao" : "A iniciativa envolve ações de recapeamento (remoção do asfalto antigo e aplicação do novo) e de micropavimentação, quando não há desgaste extremo da via e o objetivo é melhorar seu alinhamento. A definição das vias a serem recuperadas vai considerar aspectos como volume de tráfego, deterioração do pavimento, demanda de transporte coletivo sobre pneus, histórico de operação de conservação de pavimentos viários e demandas comunitárias.",
+        "indicador" : "Soma, em metros quadrados, de vias recuperadas.",
+        "orgao_responsavel" : ["SMSUB"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 49,
+        "destaque" : "Pavimentar 400.000 metros quadrados de vias de terra",
+        "descricao" : "Pavimentar 400.000 metros quadrados de vias de terra par melhorar a infraestrutura urbana e as condições de mobilidade na cidade.",
+        "projecao" : "A pavimentação das vias reduz desigualdades, na medida em que a ausência de asfalto, nas periferias, agrava problemas de drenagem e dificulta a circulação de pedestres e veículos, prejudicando o transporte público e comprometendo a qualidade de vida da população. Serão priorizadas nesse projeto justamente as vias que são utilizadas por linhas de ônibus.",
+        "indicador" : "Soma, em metros quadrados, de vias pavimentadas.",
+        "orgao_responsavel" : ["SMSUB"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 50,
+        "destaque" : "Renovar 1.000.000 de metros quadrados de calçadas",
+        "descricao" : "Renovar 1.000.000 de metros quadrados de calçadas para melhorar a acessibilidade e oferecer mais segurança aos pedestres.",
+        "projecao" : "A qualificação das áreas de passeio é essencial para a qualidade de vida de pessoas com deficiência, idosos e demais cidadãos com mobilidade reduzida. Serão priorizadas as que dão acesso a equipamentos públicos, com ações das Subprefeituras e a fiscalização e adequação de calçadas de particulares.",
+        "indicador" : "Soma, em metros quadrados, de calçadas renovadas.",
+        "orgao_responsavel" : ["SMSUB"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 51,
+        "destaque" : "Realizar 10 ações de requalificação urbana",
+        "descricao" : "Realizar 10 ações de requalificação urbana para tornar os espaços públicos mais acessíveis, seguros e adequados à convivência.",
+        "projecao" : "A qualificação de praças, ruas e calçadas favorece o convívio entre as pessoas e a formação de vínculos comunitários, além de valorizar comércios e serviços locais.",
+        "indicador" : "Soma número de ações de requalificação urbana realizadas.",
+        "orgao_responsavel" : ["SMUL"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 52,
+        "destaque" : "Entregar o calçadão do Triângulo Histórico, iniciar a obra do Quadrilátero da República e viabilizar o VLT ‘Bonde São Paulo’",
+        "descricao" : "Entregar o calçadão do Triângulo Histórico, iniciar a obra do Quadrilátero da República e viabilizar o VLT ‘Bonde São Paulo’, para impulsionar a transformação da região.",
+        "projecao" : "A requalificação urbana e o investimento em transporte público são pilares do renascimento do centro como opção de moradia e território de convivência, assim como fomento a negócios e a oferta de lazer e cultura",
+        "indicador" : "Soma do número de ações estratégicas concluídas.",
+        "orgao_responsavel" : ["SMUL", "SIURB", "SPObras", "SGM", "SEDP"],
+        "eixo" : "universo sp"
+    },
+    {
+        "numero" : 53,
+        "destaque" : "Atingir 40 mil câmeras integradas à plataforma de monitoramento do Programa Smart Sampa",
+        "descricao" : "Atingir 40 mil câmeras integradas à plataforma de monitoramento do Programa Smart Sampa, para ampliar a capacidade de vigilância inteligente, apoiar o trabalho das polícias, prevenir delitos e identificar criminosos e infratores em todas as regiões da cidade.",
+        "projecao" : "A integração de câmeras de múltiplas fontes, como órgãos públicos, concessionárias e cidadãos, aliada ao uso de tecnologias de reconhecimento de placas e à mobilidade tática da Guarda Civil Metropolitana, ampliará substancialmente a capacidade de dar respostas mais rápidas às ocorrências e dará maior eficiência na identificação de veículos com registros de roubo ou furto.",
+        "indicador" : "Número de câmeras integradas à plataforma do Smart Sampa",
+        "orgao_responsavel" : ["SMSU"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 54,
+        "destaque" : "Abrir 2 mil novas vagas para Guardas Civis Metropolitanos e modernizar o sistema de comunicação da corporação",
+        "descricao" : "Abrir 2 mil novas vagas para Guardas Civis Metropolitanos e modernizar o sistema de comunicação da corporação, para aumentar sua presença no território e capacidade de proteger o patrimônio público e a população.",
+        "projecao" : "As contratações e a modernização da radiocomunicação permitirão colaboração mais efetiva e atuação mais integrada a outras forças de segurança",
+        "indicador" : "Número de GCMs que iniciaram exercício no período.",
+        "orgao_responsavel" : ["SMSU"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 55,
+        "destaque" : "Modernizar e ampliar a Academia de Formação em Segurança Urbana",
+        "descricao" : "Modernizar e ampliar a Academia de Formação em Segurança Urbana, para melhor capacitação dos agentes e aperfeiçoamento contínuo.",
+        "projecao" : "A modernização da unidade favorecerá a ampliação da grade de formação, com oferta de cursos extracurriculares e intercâmbio com instituições que são referência em segurança pública urbana.",
+        "indicador" : "Obra concluída.",
+        "orgao_responsavel" : ["SMSU"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 56,
+        "destaque" : "Incorporar 500 armas não letais ao equipamento da Guarda Civil Metropolitana",
+        "descricao" : "Incorporar 500 armas não letais ao equipamento da Guarda Civil Metropolitana, ampliando sua capacidade de atuação com base em protocolos de uso proporcional da força.",
+        "projecao" : "A utilização de armas não letais, com treinamento adequado para seu emprego, contribui para abordagens policiais mais seguras, com aumento progressivo de força, se necessário, conforme as circunstâncias. Fortalece a atuação preventiva da Guarda e deve elevar a confiança da população na capacidade resolutiva dos agentes.",
+        "indicador" : "Número de kits de armas não letais incorporadas ao arsenal da GCM.",
+        "orgao_responsavel" : ["SMSU"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 57,
+        "destaque" : "Levar a mais 200 escolas o Programa de Proteção Escolar",
+        "descricao" : "Levar a mais 200 escolas o Programa de Proteção Escolar, para prevenir ocorrências de violência no entorno das unidades e fortalecer vínculos comunitários.",
+        "projecao" : "A ampliação, aliada à atualização dos protocolos de atendimento e à integração de videomonitoramento em todas as escolas municipais, resultará em uma cobertura de segurança muito mais eficaz e integrada.",
+        "indicador" : "Número de escolas com o Programa de Proteção Escolar.",
+        "orgao_responsavel" : ["SMSU"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 58,
+        "destaque" : "Instalar o Centro de Monitoramento dos Parques Municipais",
+        "descricao" : "Instalar o Centro de Monitoramento dos Parques Municipais, integrado ao Smart Sampa, para reforçar a segurança, melhorar a gestão e garantir tranquilidade aos frequentadores.",
+        "projecao" : "O acompanhamento das condições dos parques poderá ser feito em tempo real, com respostas mais ágeis a ocorrências e acionamento imediato das equipes de segurança e da Guarda Civil Metropolitana quando necessário.",
+        "indicador" : "Centro de Monitoramento integrado ao Smart Sampa.",
+        "orgao_responsavel" : ["SMSU"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 59,
+        "destaque" : "Promover 3 ações estratégicas",
+        "descricao" : "Promover 3 ações estratégicas, com incremento tecnológico e integração ao Smart Sampa, para fortalecer a Política Municipal de Pessoas Desaparecidas, Localização Familiar e Atenção a Familiares.",
+        "projecao" : "O acesso a bancos de dados, o uso de recursos tecnológicos e a articulação entre órgãos, facilitados pelo Smart Sampa, aumentam significativamente as chances de êxito na localização de desaparecidos e devem diminuir o tempo de resposta às famílias nessas ocorrências.",
+        "indicador" : "Número de ações estratégicas implementadas.",
+        "orgao_responsavel" : ["SMDHC", "SMSU"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 60,
+        "destaque" : "Assegurar o atendimento do Programa Guardiã Maria da Penha a 100% das mulheres em medidas protetivas encaminhadas pelo MP e desenvolver 8 ações estratégicas",
+        "descricao" : "Assegurar o atendimento do Programa Guardiã Maria da Penha a 100% das mulheres em medidas protetivas encaminhadas pelo MP e desenvolver 8 ações estratégicas para fortalecer as políticas de prevenção e enfrentamento à violência contra a mulher.",
+        "projecao" : "O objetivo da Prefeitura para os próximos anos é fortalecer a rede de serviços de proteção à mulher, de modo a garantir o bem-estar físico e psicológico das cidadãs paulistanas e o apoio, regular e emergencial, às que se encontram vulneráveis ou sujeitas a violências",
+        "indicador" : "Número de mulheres encaminhadas pelo Ministério Público e inseridas nas ações protetivas do Programa Guardiã Maria da Penha.",
+        "orgao_responsavel" : ["SMDHC", "SMSU", "SMDET", "SMADS", "SGM","SEPE"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 61,
+        "destaque" : "Ampliar o acesso à saúde com a entrega de 48 novos equipamentos",
+        "descricao" : "Ampliar o acesso à saúde com a entrega de 48 novos equipamentos, entre os quais 15 UPAs e 25 UBSs.",
+        "projecao" : "A expansão da rede, com preferência para as regiões periféricas e onde há maior demanda por serviços, vai melhorar a atenção básica e o atendimento de urgências na cidade",
+        "indicador" : "Número de novos equipamentos e ampliações com novas instalações entregues.",
+        "orgao_responsavel" : ["SMS"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 62,
+        "destaque" : "Entregar 4 unidades do novo Paulistão da Saúde",
+        "descricao" : "Entregar 4 unidades do novo Paulistão da Saúde, para facilitar o acesso a um conjunto de serviços no mesmo espaço.",
+        "projecao" : "Os quatro novos Paulistões da Saúde vão ampliar o acesso da população a serviços especializados em diferentes regiões da cidade. Cada unidade será estruturada conforme as necessidades locais e poderá reunir, entre outros, serviços como Hospital Dia, Unidade Básica de Saúde, Centro de Exame da Mulher, Centro de Referência da Dor Crônica e Centro de Especialidades Odontológicas, facilitando o cuidado integral e contínuo.",
+        "indicador" : "Número de equipamentos entregues.",
+        "orgao_responsavel" : ["SMS"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 63,
+        "destaque" : "Reformar 8 hospitais, viabilizar melhorias em outros 4 e entregar o novo Hospital Sorocabana",
+        "descricao" : "Reformar 8 hospitais, viabilizar melhorias em outros 4 e entregar o novo Hospital Sorocabana, oferecendo ambientes mais modernos e adequados ao cuidado com a população.",
+        "projecao" : "As medidas ampliarão a capacidade de atendimento da rede hospitalar e qualificarão os serviços prestados, aproveitando melhor a estrutura já existente.",
+        "indicador" : "Número de hospitais reformados.",
+        "orgao_responsavel" : ["SMS"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 64,
+        "destaque" : "Fortalecer o Serviço de Atendimento Móvel de Urgência (SAMU) com a ampliação da frota com 34 novos veículos e a habilitação de 60 motolâncias, além da integração ao sistema Smart Sampa",
+        "descricao" : "Fortalecer o Serviço de Atendimento Móvel de Urgência (SAMU) com a ampliação da frota com 34 novos veículos e a habilitação de 60 motolâncias, além da integração ao sistema Smart Sampa, para qualificar o atendimento emergencial na cidade.",
+        "projecao" : "Os investimentos vão tornar o atendimento pré-hospitalar de urgência e emergência mais ágeis e efetivos. A incorporação de tecnologias integradas otimiza recursos, coordena melhor as respostas aos chamados da população e, mais importante que tudo, permite que mais vidas sejam salvas.",
+        "indicador" : "Número de novos veículos na frota do SAMU.",
+        "orgao_responsavel" : ["SMS", "SMSU"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 65,
+        "destaque" : "Ampliar a cobertura da Estratégia Saúde da Família com a criação de 100 novas equipes",
+        "descricao" : "Ampliar a cobertura da Estratégia Saúde da Família com a criação de 100 novas equipes, para fortalecer a atuação da Prefeitura na atenção integral.",
+        "projecao" : "A expansão permitirá que o atendimento multiprofissional, integral, chegue a áreas de maior vulnerabilidade e garanta à população um atendimento humanizado, que compreende e considera as necessidades locais.",
+        "indicador" : "Ampliação do saldo de equipes ESF na comparação com 2024",
+        "orgao_responsavel" : ["SMS"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 66,
+        "destaque" : "Estabelecer a Estratégia de Saúde Digital em todas as regiões da cidade",
+        "descricao" : "Estabelecer a Estratégia de Saúde Digital em todas as regiões da cidade, para ampliar o acesso da população aos serviços por meio da telessaúde.",
+        "projecao" : "O projeto vai tornar a rede municipal de saúde mais acessível, ágil e eficiente, especialmente para a população que enfrenta barreiras de deslocamento ou não dispõe de tempo para procurar atendimento presencial. São Paulo avança para um novo modelo de cuidado complementar, com qualidade e segurança",
+        "indicador" : "Porcentagem da rede com acesso à solução.",
+        "orgao_responsavel" : ["SMS"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 67,
+        "destaque" : "Implantar prontuário eletrônico integrado em 100% dos Hospitais Dia, AMAs Especialidades, Ambulatórios de Especialidades e CAPS",
+        "descricao" : "Implantar prontuário eletrônico integrado em 100% dos Hospitais Dia, AMAs Especialidades, Ambulatórios de Especialidades e CAPS, para melhor articulação da rede de atendimento e maior agilidade.",
+        "projecao" : "A implantação do prontuário eletrônico integrado em mais de 140 equipamentos especializados da rede municipal qualificará o cuidado prestado aos usuários, facilitando a comunicação entre as unidades e proporcionando maior agilidade e segurança no atendimento. A medida dá continuidade ao processo de digitalização da rede iniciado nas UBSs, ampliando os benefícios da informatização para toda a rede de atenção à saúde.",
+        "indicador" : "Percentual de estabelecimentos da rede especializada constantes no rol definido com prontuário eletrônico implantado.",
+        "orgao_responsavel" : ["SMS"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 68,
+        "destaque" : "Atingir ou manter a cobertura vacinal preconizada (95%) para quatro vacinas indicadas a crianças de até 1 ano: poliomielite, pneumocócica 10-valente, pentavalente e SCR (tríplice viral, contra sarampo, caxumba e rubéola)",
+        "descricao" : "Atingir ou manter a cobertura vacinal preconizada (95%) para quatro vacinas indicadas a crianças de até 1 ano: poliomielite, pneumocócica 10-valente, pentavalente e SCR (tríplice viral, contra sarampo, caxumba e rubéola), reafirmando o compromisso com a saúde na primeira infância.",
+        "projecao" : "Garante acesso seguro e universal à imunização, protegendo as populações mais vulneráveis e prevenindo a disseminação de doenças graves.",
+        "indicador" : "Nível de cobertura de cada uma das vacinas selecionadas.",
+        "orgao_responsavel" : ["SMS"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 69,
+        "destaque" : "Constituir 30 novas equipes do Programa Acompanhante de Idosos e atualizar as diretrizes técnicas para a atenção à saúde dessa população",
+        "descricao" : "Constituir 30 novas equipes do Programa Acompanhante de Idosos e atualizar as diretrizes técnicas para a atenção à saúde dessa população, com foco em longevidade e qualidade de vida.",
+        "projecao" : "As iniciativas vão fortalecer o cuidado domiciliar prestado à população idosa, especialmente àqueles que vivem sozinhos ou em situação de vulnerabilidade. Com escuta qualificada e acompanhamento contínuo, os profissionais do programa atuam diretamente na promoção da saúde, no uso adequado de medicamentos e na articulação com outros serviços municipais",
+        "indicador" : "Número de equipes constituídas.",
+        "orgao_responsavel" : ["SMS"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 70,
+        "destaque" : "Entregar 3 Centros TEA nas regiões Leste, Sul e Oeste",
+        "descricao" : "Entregar 3 Centros TEA nas regiões Leste, Sul e Oeste, garantindo atendimento especializado a crianças, jovens e adultos e aos seus familiares.",
+        "projecao" : "Os centros oferecem atendimento multiprofissional e representam um grande avanço na qualidade dos serviços oferecidos na cidade para pessoas com Transtorno do Espectro Autista e suporte a seus familiares.",
+        "indicador" : "Número de centros municipais para pessoas com Transtorno do Espectro Autista entregues e em funcionamento.",
+        "orgao_responsavel" : ["SMPED"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 71,
+        "destaque" : "Abrir ou requalificar 15 equipamentos e serviços de atendimento a pessoas com deficiência e TEA",
+        "descricao" : "Abrir ou requalificar 15 equipamentos e serviços de atendimento a pessoas com deficiência e TEA, para ampliar e melhorar a atenção especializada em saúde.",
+        "projecao" : "As medidas abrangem a abertura de novos Centros Especializados em Reabilitação (CER), que atuam como espaços de referência para o cuidado integral em diferentes modalidades de reabilitação, e também a expansão da Estratégia Apoiador da Pessoa com Deficiência (APD), ampliando o suporte a pessoas com deficiência intelectual e a suas famílias, para o desenvolvimento de capacidades como a comunicação e o autocuidado.",
+        "indicador" : "Número de serviços ou equipamentos de saúde abertos ou requalificados.",
+        "orgao_responsavel" : ["SMS"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 72,
+        "destaque" : "Entregar 4 unidades da Casa Mãe Paulistana – Pessoa com Deficiência",
+        "descricao" : "Entregar 4 unidades da Casa Mãe Paulistana – Pessoa com Deficiência, para atendimento especializado e multiprofissional a mães e cuidadoras de pessoas com deficiência.",
+        "projecao" : "Com serviços multiprofissionais nas áreas socioassistencial, psicossocial, jurídica e de empreendedorismo, as Casas fortalecerão o cuidado e a autonomia das mulheres atendidas.",
+        "indicador" : "Número de Casas Mãe Paulistana entregues.",
+        "orgao_responsavel" : ["SMPED"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 73,
+        "destaque" : "Incentivar, por meio de solução digital, a prática de exercícios físicos e o engajamento da população em atividades coletivas",
+        "descricao" : "Incentivar, por meio de solução digital, a prática de exercícios físicos e o engajamento da população em atividades coletivas, para promover saúde e bem-estar.",
+        "projecao" : "O incentivo à prática de atividades físicas por meio de uma solução digital amplia o alcance das políticas de promoção da saúde, ao conectar cidadãos a espaços públicos e iniciativas voltadas ao movimento e ao autocuidado. A proposta busca superar barreiras comuns à adoção de uma vida ativa, como isolamento ou falta de informação e oportunidades, criando redes de estímulo mútuo e uso qualificado dos equipamentos urbanos. A medida será complementada pela formação de grupos voltados ao cuidado da obesidade em unidades básicas de saúde, com atuação multiprofissional, promovendo acolhimento, motivação e o protagonismo dos cidadãos no cuidado da própria saúde",
+        "indicador" : "Solução digital de promoção de saúde e engajamento disponibilizada.",
+        "orgao_responsavel" : ["SMS"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 74,
+        "destaque" : "Entregar um novo Hospital Veterinário, oferecer atendimento 24 horas em alguma das unidades existentes e ampliar o acesso à castração gratuita de cães e gatos",
+        "descricao" : "Entregar um novo Hospital Veterinário, oferecer atendimento 24 horas em alguma das unidades existentes e ampliar o acesso à castração gratuita de cães e gatos, promovendo a saúde animal e facilitando o cuidado responsável.",
+        "projecao" : "A entrega de um novo Hospital Veterinário – na Zona Leste – e a expansão dos serviços nas unidades existentes irão fortalecer a rede pública de saúde animal, garantindo acesso gratuito a consultas, exames, cirurgias e internações. O aumento das castrações gratuitas também contribui para a prevenção de doenças e o controle populacional de cães e gatos.",
+        "indicador" : "Número de hospitais implantados.",
+        "orgao_responsavel" : ["SMS"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 75,
+        "destaque" : "Manter a fila da creche zerada, criando todas as vagas necessárias na Educação Infantil",
+        "descricao" : "Manter a fila da creche zerada, criando todas as vagas necessárias na Educação Infantil para garantir às crianças o cuidado e o desenvolvimento integral desde os primeiros anos de vida.",
+        "projecao" : "O compromisso manifesta o esforço contínuo para gerir a demanda e ampliar vagas, com articulação entre unidades diretas e parceiras.",
+        "indicador" : "Número de cadastros sem indicação de unidade escolar específica, por um período superior a 30 dias, para matrícula de bebês e crianças de zero a três anos e onze meses de idade.",
+        "orgao_responsavel" : ["SME"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 76,
+        "destaque" : "Criar o Programa Mamãe Tarifa Zero",
+        "descricao" : "Criar o Programa Mamãe Tarifa Zero no sistema municipal de ônibus, oferecendo 2 passagens por dia para pais e mães levarem seus filhos às creches.",
+        "projecao" : "A iniciativa beneficiará cerca de 15 mil crianças, garantindo o acesso à educação infantil para famílias em situação de vulnerabilidade.",
+        "indicador" : "Programa em operação",
+        "orgao_responsavel" : ["SMT", "SPTrans"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 77,
+        "destaque" : "Atender 600 mil alunos no ensino em tempo integral",
+        "descricao" : "Atender 600 mil alunos no ensino em tempo integral, para que tenham mais oportunidades de dedicação à formação acadêmica e ao desenvolvimento pleno como pessoas.",
+        "projecao" : "A extensão da jornada escolar para o mínimo de sete horas diárias favorece a aquisição de competências físicas, socioemocionais e culturais que expandem o horizonte de interesses do aluno e são importantes para o despertar do cuidado consigo mesmo, para o desenvolvimento da capacidade de relacionar-se e criar vínculos e para que ele possa compreender melhor a realidade em que está inserido. Garante também aos pais e responsáveis pelos estudantes a tranquilidade de saber que os filhos estão tendo mais tempo de qualidade em suas rotinas, com atividades orientadas a uma formação humana integral e ao exercício pleno da cidadania.",
+        "indicador" : "Número de estudantes matriculados com jornada de sete horas ou mais.",
+        "orgao_responsavel" : ["SME"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 78,
+        "destaque" : "Alcançar 70% de alfabetização na idade certa, ao final do 2º ano do Ensino Fundamental",
+        "descricao" : "Alcançar 70% de alfabetização na idade certa, ao final do 2º ano do Ensino Fundamental, cumprindo a meta do MEC/INEP e assegurando que as crianças adquiram desde cedo competências essenciais para seu desenvolvimento posterior.",
+        "projecao" : "A meta reitera o compromisso com o aperfeiçoamento das políticas educacionais da cidade de modo a garantir a alfabetização na idade adequada, alicerce de toda a formação escolar.",
+        "indicador" : "Percentual de crianças no 2º ano consideradas alfabetizadas pelo Indicador Criança Alfabetizada (INEP).",
+        "orgao_responsavel" : ["SME"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 79,
+        "destaque" : "Atingir o resultado de 6,0 no IDEB para os anos iniciais do Ensino Fundamental",
+        "descricao" : "Atingir o resultado de 6,0 no IDEB para os anos iniciais do Ensino Fundamental, avançando no compromisso com o aprendizado efetivo e a evolução constante.",
+        "projecao" : "A meta reconhece a importância dos primeiros anos escolares para a trajetória educacional e baseia-se na consolidação de políticas pedagógicas consistentes, entre outras providências e investimentos necessários para que o objetivo seja atingido.",
+        "indicador" : "Resultado no Índice de Desenvolvimento da Educação Básica (IDEB).",
+        "orgao_responsavel" : ["SME"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 80,
+        "destaque" : "Atingir o resultado de 5,0 no IDEB para os anos finais do Ensino Fundamental",
+        "descricao" : "Atingir o resultado de 5,0 no IDEB para os anos finais do Ensino Fundamental, avançando no compromisso com o aprendizado efetivo e a evolução constante.",
+        "projecao" : "A prevenção da evasão escolar, com apoio às famílias dos estudantes e atenção a vulnerabilidades sociais que comprometem o progresso do aluno, é fundamental nessa fase que antecede e prepara a transição para outro nível de ensino. Além, evidentemente, de melhorias estruturais e pedagógicas para que o ambiente de ensino seja sempre mais atrativo e o estudante orientado em suas dificuldades e estimulado a avançar.",
+        "indicador" : "Resultado no Índice de Desenvolvimento da Educação Básica (IDEB).",
+        "orgao_responsavel" : ["SME"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 81,
+        "destaque" : "Inaugurar 12 novos CEUs e viabilizar mais 10",
+        "descricao" : "Inaugurar 12 novos CEUs e viabilizar mais 10, ampliando o acesso a espaços de educação, cultura, esporte e convivência nas regiões que mais precisam de equipamentos públicos integrados.",
+        "projecao" : "Os Centros Educacionais Unificados (CEUs), mais que estabelecimentos de ensino regular, são uma política pública intersetorial que fortalece os vínculos comunitários em um ambiente estruturado, atrativo para todas as gerações",
+        "indicador" : "Número de CEUs entregues.",
+        "orgao_responsavel" : ["SME"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 82,
+        "destaque" : "Criar a Escola Municipal de Formação de Profissionais da Educação do Futuro",
+        "descricao" : "Criar a Escola Municipal de Formação de Profissionais da Educação do Futuro, para favorecer a qualificação permanente e valorizar os profissionais.",
+        "projecao" : "A iniciativa inovadora vai preparar os servidores da rede de ensino para os desafios contemporâneos e as perspectivas futuras da educação pública. Representa um avanço para a consolidação em São Paulo de uma gestão educacional estratégica e moderna",
+        "indicador" : "Escola criada.",
+        "orgao_responsavel" : ["SME"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 83,
+        "destaque" : "Entregar 25 novos equipamentos de Segurança Alimentar e Nutricional",
+        "descricao" : "Entregar 25 novos equipamentos de Segurança Alimentar e Nutricional, para garantir refeições de qualidade à população em situação de vulnerabilidade",
+        "projecao" : "A proposta estende o alcance de iniciativas como o Armazém Solidário, o Bom Prato Paulistano e a Rede Cozinha Escola, algumas das quais, para além da oferta facilitada a mantimentos e refeições, tratam da capacitação para o trabalho e da reinserção social.",
+        "indicador" : "Número de equipamentos entregues",
+        "orgao_responsavel" : ["SMDHC", "SESANA"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 84,
+        "destaque" : "Entregar 10 Vilas Reencontro",
+        "descricao" : "Entregar 10 Vilas Reencontro, dobrando a rede de acolhimento e as oportunidades de reinserção social para a população em situação de rua.",
+        "projecao" : "A oferta de moradia temporária com a infraestrutura adequada, abordagem humanizada e apoio para o resgate da autonomia e o restabelecimento de vínculos  sociais é o pilar da política municipal para pessoas em situação de rua na cidade.",
+        "indicador" : "Número de Vilas Reencontro entregues.",
+        "orgao_responsavel" : ["SMADS"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 85,
+        "destaque" : "Fortalecer e publicizar o Programa Família Acolhedora",
+        "descricao" : "Fortalecer e publicizar o Programa Família Acolhedora, com 6 novos serviços para proteção integral a crianças e adolescentes afastados da família por medida imposta pelo Sistema de Garantia de Direitos (SGD).",
+        "projecao" : "A cobertura chegará a todas as regiões da cidade, com uma rede de proteção qualificada que favoreça o surgimento de vínculos afetivos necessários ao desenvolvimento integral de crianças e adolescentes impactados por essas medidas legais.",
+        "indicador" : "Número de Serviços de Família Acolhedora estabelecidos",
+        "orgao_responsavel" : ["SMADS"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 86,
+        "destaque" : "Apoiar 3 mil pessoas com os auxílios Reencontro Moradia e Reencontro Família",
+        "descricao" : "Apoiar 3 mil pessoas com os auxílios Reencontro Moradia e Reencontro Família, para saída qualificada da situação de rua.",
+        "projecao" : "A política reconhece a necessidade de auxílio financeiro à pessoa em situação de rua para que ela inicie um processo de reinserção social e busca da autonomia",
+        "indicador" : "Número de benefícios concedidos.",
+        "orgao_responsavel" : ["SMADS"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 87,
+        "destaque" : "Priorizar 25 obras, novas ou de reforma, nos cemitérios públicos",
+        "descricao" : "Priorizar 25 obras, novas ou de reforma, nos cemitérios públicos, para a melhoria dos serviços prestados às famílias.",
+        "projecao" : "O objetivo é viabilizar iniciativas previstas nos contratos de concessão dos serviços cemiteriais e funerários, com foco na ampliação da oferta, modernização das estruturas e preservação do patrimônio público.",
+        "indicador" : "Número de obras concluídas",
+        "orgao_responsavel" : ["SPRegula"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 88,
+        "destaque" : "Requalificar 65 equipamentos esportivos",
+        "descricao" : "Requalificar 65 equipamentos esportivos com estruturas mais adequadas para uso da população em suas atividades.",
+        "projecao" : "As intervenções vão desde a modernização de Centros Esportivos até reformas estruturais em Clubes da Comunidade, para ampliação dos benefícios que as atividades físicas nesses espaços proporcionam em termos de saúde, lazer e convivência comunitária.",
+        "indicador" : "Número de equipamentos esportivos requalificados",
+        "orgao_responsavel" : ["SEME"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 89,
+        "destaque" : "Expandir o Programa Centro Olímpico",
+        "descricao" : "Expandir o Programa Centro Olímpico para 6 novos locais, valorizando a formação de atletas e o esporte de alto rendimento.",
+        "projecao" : "Com mais investimento em infraestrutura, capacitação e oportunidades para jovens talentos, São Paulo pretende consolidar-se no cenário nacional como referência no apoio aos esportistas e na formação de atletas para o futuro.",
+        "indicador" : "Número de polos da Rede Centro Olímpico abertos.",
+        "orgao_responsavel" : ["SEME"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 90,
+        "destaque" : "Criar o Programa de Requalificação de Equipamentos Culturais 'SP+Cultura – Requalifica' e revitalizar 25 espaços culturais",
+        "descricao" : "Criar o Programa de Requalificação de Equipamentos Culturais 'SP+Cultura – Requalifica' e revitalizar 25 espaços culturais, para que sejam mais adequados às atividades desenvolvidas e confortáveis para o público.",
+        "projecao" : "A nova iniciativa irá valorizar o patrimônio cultural da cidade e melhorar a experiência do cidadão na relação com esses espaços e suas atividades.",
+        "indicador" : "Número de equipamentos com obras concluídas.",
+        "orgao_responsavel" : ["SMC"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 91,
+        "destaque" : "Abrir duas novas unidades da Escola Municipal de Iniciação Artística (EMIA)",
+        "descricao" : "Abrir duas novas unidades da Escola Municipal de Iniciação Artística (EMIA), ampliando o acesso à formação cultural de qualidade para crianças e adolescentes e fortalecendo o surgimento de vocações.",
+        "projecao" : "A educação da sensibilidade artística desde cedo é transformadora, com benefícios na criatividade e na capacidade de expressão de crianças e adolescentes. Não raro, com impacto na descoberta de potenciais a desenvolver e no acesso a oportunidades profissionais para a vida.",
+        "indicador" : "Número de equipamentos abertos.",
+        "orgao_responsavel" : ["SMC"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 92,
+        "destaque" : "Inaugurar o Memorial dos Aflitos",
+        "descricao" : "Inaugurar o Memorial dos Aflitos, em honra ao legado da população negra escravizada na cidade e para a promoção de uma cultura antirracista.",
+        "projecao" : "Será um marco simbólico, educativo e cultural, em um local de importância histórica para a população negra em primeiro lugar e para a cidade como um todo. Uma iniciativa que resgata o passado para transformar o presente e reafirma a determinação de São Paulo de combater o racismo.",
+        "indicador" : "Equipamento inaugurado.",
+        "orgao_responsavel" : ["SMC"],
+        "eixo" : "viver são paulo"
+    },
+    {
+        "numero" : 93,
+        "destaque" : "Desenvolver duas ações estratégicas para promover a segurança jurídica",
+        "descricao" : "Desenvolver duas ações estratégicas para promover a segurança jurídica e oferecer maior previsibilidade aos empreendedores.",
+        "projecao" : "Será criado o Conselho Municipal de Promoção da Segurança Jurídica Tributária e ampliada a transparência com a abertura de consultas públicas para atos normativos municipais, medidas que protegem o ambiente de negócios e favorecem a atração de investimentos.",
+        "indicador" : "Número de ações concluídas.",
+        "orgao_responsavel" : ["SF"],
+        "eixo" : "cidade empreendedora"
+    },
+    {
+        "numero" : 94,
+        "destaque" : "Criar o CredSampa",
+        "descricao" : "Criar o CredSampa, para oferecer R$ 20 milhões em garantias e alavancar até R$ 80 milhões de crédito para pequenos empreendimentos.",
+        "projecao" : "O fundo de aval facilitará aos empreendedores o acesso a financiamentos essenciais para a manutenção e o investimento na expansão de seus negócios, que geram oportunidades locais e contribuem para o desenvolvimento econômico das regiões em que se encontram.",
+        "indicador" : "Soma dos valores disponibilizados aos empreendedores",
+        "orgao_responsavel" : ["SMDET"],
+        "eixo" : "cidade empreendedora"
+    },
+    {
+        "numero" : 95,
+        "destaque" : "Acelerar 200 startups",
+        "descricao" : "Acelerar 200 startups por meio do Programa de Valorização de Iniciativas Tecnológicas (Vai Tec), para impulsionar o ambiente de inovação na cidade.",
+        "projecao" : "Cada startup acelerada receberá aporte financeiro e acompanhamento técnico por 6 meses. O resultado esperado é o desenvolvimento local, com geração de empregos e renda.",
+        "indicador" : "Número de empresas contempladas.",
+        "orgao_responsavel" : ["SMDET"],
+        "eixo" : "cidade empreendedora"
+    },
+    {
+        "numero" : 96,
+        "destaque" : "Inaugurar o Polo Sampa Games e acelerar o desenvolvimento de 100 empresas do setor",
+        "descricao" : "Inaugurar o Polo Sampa Games e acelerar o desenvolvimento de 100 empresas do setor, consolidando São Paulo como polo inovador na indústria de jogos eletrônicos.",
+        "projecao" : "O novo espaço contará com Arena Gamer, espaços de coworking e sala de podcast, enquanto as empresas aceleradas receberão aportes financeiros e acompanhamento especializado.",
+        "indicador" : "Percentual de ações realizadas.",
+        "orgao_responsavel" : ["SMDET"],
+        "eixo" : "cidade empreendedora"
+    },
+    {
+        "numero" : 97,
+        "destaque" : "Viabilizar um centro de economia criativa na Casa das Retortas",
+        "descricao" : "Viabilizar um centro de economia criativa na Casa das Retortas, com foco nas indústrias da moda, gastronomia e da madeira.",
+        "projecao" : "Com o projeto, o edifício histórico, tombado e hoje sem utilização, localizado no Brás, próximo ao Mercadão e ao Museu Catavento, voltará a ter lugar na economia da cidade, alinhado às vocações comerciais e culturais da região em que está localizado.",
+        "indicador" : "Projeto executivo elaborado",
+        "orgao_responsavel" : ["SMC", "SPUrbanismo"],
+        "eixo" : "cidade empreendedora"
+    },
+    {
+        "numero" : 98,
+        "destaque" : "Abrir 5 novos equipamentos de economia criativa",
+        "descricao" : "Abrir 5 novos equipamentos de economia criativa voltados especialmente aos jovens das periferias.",
+        "projecao" : "Com os novos espaços de formação oferecidos, serão 8 ao todo na cidade, fortalecendo o ambiente de inovação, o empreendedorismo cultural e aproximando o jovem do mercado criativo.",
+        "indicador" : "Número de equipamentos implantados.",
+        "orgao_responsavel" : ["SMC", "SMDET"],
+        "eixo" : "cidade empreendedora"
+    },
+    {
+        "numero" : 99,
+        "destaque" : "Ampliar o Programa Meu Trampo",
+        "descricao" : "Ampliar o Programa Meu Trampo e beneficiar 10 mil jovens com projetos gratuitos de capacitação profissional e geração de renda.",
+        "projecao" : "Os cursos oferecem formação teórica e prática em empreendedorismo, com acompanhamento técnico e incentivo à autonomia financeira dos participantes.",
+        "indicador" : "Número de jovens beneficiados.",
+        "orgao_responsavel" : ["SMDHC"],
+        "eixo" : "cidade empreendedora"
+    },
+    {
+        "numero" : 100,
+        "destaque" : "Dobrar o número de vagas oferecidas pelo Educavest",
+        "descricao" : "Dobrar o número de vagas oferecidas pelo Educavest, cursinho pré-vestibulinho municipal gratuito, para ampliar as oportunidades de acesso ao Ensino Técnico.",
+        "projecao" : "O salto de 435 para 870 vagas beneficiará alunos do 9º ano do Ensino Fundamental e do Ensino de Jovens e Adultos (EJA) em diversos CEUs da cidade.",
+        "indicador" : "Número de vagas ofertadas.",
+        "orgao_responsavel" : ["SME"],
+        "eixo" : "cidade empreendedora"
+    },
+    {
+        "numero" : 101,
+        "destaque" : "Oferecer 100 mil vagas em cursos de qualificação profissional",
+        "descricao" : "Oferecer 100 mil vagas em cursos de qualificação profissional, para facilitar o acesso da população a oportunidades de emprego e renda.",
+        "projecao" : "A formação será feita pela Fundação Paulistana que, além dos cursos técnicos no âmbito do Novo Ensino Médio, oferece capacitação gratuita e certificada em setores com grande demanda na cidade, como saúde, tecnologia, gastronomia, gestão, marketing, turismo, construção civil, comércio e logística.",
+        "indicador" : "Número de certificados emitidos.",
+        "orgao_responsavel" : ["SGM", "SMDET", "FPD"],
+        "eixo" : "cidade empreendedora"
+    },
+    {
+        "numero" : 102,
+        "destaque" : "Modernizar o Portal Cate",
+        "descricao" : "Modernizar o Portal Cate, oferecendo novos cursos e aperfeiçoando a ferramenta de ensino à distância voltada à qualificação profissional",
+        "projecao" : "Com a criação de novos cursos, alinhados a tendências do mercado de trabalho na cidade, e com o desenvolvimento de soluções tecnológicas que facilitem a navegação, a plataforma deverá tornar-se mais atrativa e útil ao cidadão em busca de formação adequada e oportunidades.",
+        "indicador" : "Percentual de ações implementadas.",
+        "orgao_responsavel" : ["SMDET"],
+        "eixo" : "cidade empreendedora"
+    },
+    {
+        "numero" : 103,
+        "destaque" : "Ampliar os serviços digitais de atendimento ao trabalhador e eliminar processos manuais",
+        "descricao" : "Ampliar os serviços digitais de atendimento ao trabalhador e eliminar processos manuais, para facilitar acesso a oportunidades.",
+        "projecao" : "Intermediação da contração de mão de obra e sistematização de cadastros e encaminhamentos são algumas das medidas que integram a proposta.",
+        "indicador" : "Percentual de ações implementadas",
+        "orgao_responsavel" : ["SMDET"],
+        "eixo" : "cidade empreendedora"
+    },
+    {
+        "numero" : 104,
+        "destaque" : "Criar o Empreende SP",
+        "descricao" : "Criar o Empreende SP, para ampliar o acesso a capacitações, espaços de trabalho e oportunidades de geração de renda por meio do empreendedorismo.",
+        "projecao" : "A iniciativa vai fortalecer o apoio à atividade empreendedora em territórios com maior vulnerabilidade social, promovendo a autonomia econômica. O programa reúne ações voltadas à qualificação profissional, ao uso compartilhado de infraestrutura e ao estímulo à criação de negócios próprios, com atenção especial ao empreendedorismo feminino.",
+        "indicador" : "Percentual de ações realizadas.",
+        "orgao_responsavel" : ["SMDET"],
+        "eixo" : "cidade empreendedora"
+    },
+    {
+        "numero" : 105,
+        "destaque" : "Criar o Programa de Longevidade Ativa",
+        "descricao" : "Criar o Programa de Longevidade Ativa, com 50 mil atendimentos a microempreendedores individuais com mais de 60 anos, oferecendo serviços de formalização, capacitação, consultoria e acesso a espaços de trabalho compartilhados.",
+        "projecao" : "A iniciativa ficará a cargo do Programa de Apoio ao Empreendedor (PAE), da Adesampa. Estima-se que São Paulo tenha hoje 417 mil idosos economicamente ativos, número que deve ultrapassar 450 mil até 2028. Entre eles, mais de 97 mil já são formalizados como MEIs.",
+        "indicador" : "Número de atendimentos realizados.",
+        "orgao_responsavel" : ["SMDET"],
+        "eixo" : "cidade empreendedora"
+    },
+    {
+        "numero" : 106,
+        "destaque" : "Fortalecer o Programa Sampa+Rural",
+        "descricao" : "Fortalecer o Programa Sampa+Rural, ampliando o apoio para 1.000 locais de agricultura",
+        "projecao" : "Serão realizados atendimentos técnicos, capacitações e investimentos estratégicos na produção local sustentável, com práticas inovadoras. A medida vai beneficiar o setor agrícola urbano e periurbano, promover a segurança alimentar e fortalecer a proteção ambiental.",
+        "indicador" : "Número de locais beneficiados com ao menos uma das ações do Programa Sampa+Rural.",
+        "orgao_responsavel" : ["SMDET"],
+        "eixo" : "cidade empreendedora"
+    },
+    {
+        "numero" : 107,
+        "destaque" : "Criar o SP CityPass",
+        "descricao" : "Criar o SP CityPass, cartão de venda combinada de atrativos e experiências, para o crescimento do turismo integrado na cidade.",
+        "projecao" : "Facilitará o acesso dos visitantes a diversas atrações, aumentando o tempo de permanência turística na cidade e movimentando a economia local.",
+        "indicador" : "CityPass em funcionamento.",
+        "orgao_responsavel" : ["SMTUR", "SMC"],
+        "eixo" : "cidade empreendedora"
+    },
+    {
+        "numero" : 108,
+        "destaque" : "Iniciar a construção da Arena Multiuso do Anhembi",
+        "descricao" : "Iniciar a construção da Arena Multiuso do Anhembi, fortalecendo a vocação da cidade para receber eventos de diversos tipos",
+        "projecao" : "Com capacidade para 20 mil pessoas, o espaço terá montagem modular, que permite a realização de espetáculos, competições esportivas e outros eventos que atraem visitantes à cidade, impulsionam o turismo, aquecem a economia e geram oportunidades de trabalho.",
+        "indicador" : "Obras iniciadas.",
+        "orgao_responsavel" : ["SGM", "SPTuris"],
+        "eixo" : "cidade empreendedora"
+    },
+    {
+        "numero" : 109,
+        "destaque" : "Dobrar o número de roteiros do Programa Vai de Roteiro",
+        "descricao" : "Dobrar o número de roteiros do Programa Vai de Roteiro, que promove o turismo local e valoriza a diversidade cultural e histórica dos bairros.",
+        "projecao" : "O aumento de 15 para 30 roteiros permitirá a inclusão de temas especiais e eventos comemorativos que expressam diferentes tradições e identidades regionais. Com isso o quadro de atrações se expande e gera novas oportunidades em locais com potencial de crescimento turístico",
+        "indicador" : "Número de roteiros criados.",
+        "orgao_responsavel" : ["SMTUR"],
+        "eixo" : "cidade empreendedora"
+    },
+    {
+        "numero" : 110,
+        "destaque" : "Realizar 256 ações internacionais que consolidem São Paulo como cidade global",
+        "descricao" : "Realizar 256 ações internacionais que consolidem São Paulo como cidade global junto às 25 maiores economias mundiais.",
+        "projecao" : "As ações fortalecerão a presença internacional da cidade, dando visibilidade e reconhecimento global às políticas municipais e favorecendo o ecoturismo e a agricultura sustentável. Também colocarão São Paulo em programas, projetos e atividades de capacitação que qualificarão a administração pública.",
+        "indicador" : "Número de ações realizadas",
+        "orgao_responsavel" : ["SMRI"],
+        "eixo" : "capital do futuro"
+    },
+    {
+        "numero" : 111,
+        "destaque" : "Instituir o Orçamento Climático Municipal",
+        "descricao" : "Instituir o Orçamento Climático Municipal para que os investimentos estejam alinhados às ações previstas no Plano de Ação Climática.",
+        "projecao" : "O Orçamento Climático será incorporado à Lei Orçamentária Anual, garantindo a priorização de recursos para medidas concretas de redução das emissões de carbono.",
+        "indicador" : "Orçamento Climático Municipal incorporado à Lei Orçamentária Anual.",
+        "orgao_responsavel" : ["SGM", "SEPLAN", "SECLIMA"],
+        "eixo" : "capital do futuro"
+    },
+    {
+        "numero" : 112,
+        "destaque" : "Viabilizar 10 novos projetos com o Plano Municipal de Desestatização",
+        "descricao" : "Viabilizar 10 novos projetos com o Plano Municipal de Desestatização, que atrai investimento privado para qualificar serviços públicos sem comprometer as finanças da cidade.",
+        "projecao" : "Dos 24 projetos mapeados, 14 são prioritários e têm grande potencial de gerar parcerias com a iniciativa privada. A concessão desses serviços irá garantir que sejam melhorados sem custo para a Prefeitura, que poderá destinar seus recursos a novos investimentos fundamentais para o desenvolvimento da cidade e a melhoria da qualidade de vida da população.",
+        "indicador" : "Número de editais de licitação publicados no âmbito do Plano Municipal de Desestatização.",
+        "orgao_responsavel" : ["SGM", "SEDP"],
+        "eixo" : "capital do futuro"
+    },
+    {
+        "numero" : 113,
+        "destaque" : "Elaborar o Plano Municipal de Cidade Inteligente, Resiliente e Sustentável",
+        "descricao" : "Elaborar o Plano Municipal de Cidade Inteligente, Resiliente e Sustentável para nortear a transformação digital e tecnológica de São Paulo.",
+        "projecao" : "Será o alicerce para a formulação de políticas inovadoras que melhorem a qualidade de vida dos cidadãos e posicionem a cidade como referência global de cidade inteligente.",
+        "indicador" : "Plano Municipal publicado.",
+        "orgao_responsavel" : ["SMIT"],
+        "eixo" : "capital do futuro"
+    },
+    {
+        "numero" : 114,
+        "destaque" : "Chegar a 95% de serviços disponíveis online no SP156",
+        "descricao" : "Chegar a 95% de serviços disponíveis online no SP156, para facilitar o acesso dos cidadãos e dar mais rapidez às solicitações",
+        "projecao" : "Atualmente 61% dos serviços municipais podem ser pedidos por meios digitais. A ampliação será de cerca de 56% na variedade de demandas online.",
+        "indicador" : "Percentual de serviços disponíveis online.",
+        "orgao_responsavel" : ["SMIT"],
+        "eixo" : "capital do futuro"
+    },
+    {
+        "numero" : 115,
+        "destaque" : "Criar uma Unidade Avançada de Inteligência Artificial",
+        "descricao" : "Criar uma Unidade Avançada de Inteligência Artificial para a melhoria de serviços públicos e impulsionamento de startups",
+        "projecao" : "A unidade desenvolverá soluções inovadoras em IA para desafios específicos da gestão pública e dará suporte ao ecossistema de empreendedorismo digital na cidade.",
+        "indicador" : "Unidade Avançada de IA em operação.",
+        "orgao_responsavel" : ["SMIT"],
+        "eixo" : "capital do futuro"
+    },
+    {
+        "numero" : 116,
+        "destaque" : "Estabelecer um Centro de Inovação",
+        "descricao" : "Estabelecer um Centro de Inovação para ampliar o acesso de empresas, startups e da população em geral às oportunidades do mercado de tecnologia.",
+        "projecao" : "O Centro promoverá um ecossistema de inovação aberto, inclusivo e distribuído territorialmente, focado tanto no ambiente de negócios da cidade quanto na capacitação de pessoas em situação de desemprego, subemprego e vulnerabilidade.",
+        "indicador" : "Centro de Inovação em operação.",
+        "orgao_responsavel" : ["SMIT"],
+        "eixo" : "capital do futuro"
+    },
+    {
+        "numero" : 117,
+        "destaque" : "Renovar anualmente as certificações internacionais ISO 37120, 37122 e 37123",
+        "descricao" : "Renovar anualmente as certificações internacionais ISO 37120, 37122 e 37123, garantindo o reconhecimento permanente de São Paulo como cidade inteligente, resiliente e sustentável.",
+        "projecao" : "São Paulo foi a primeira capital brasileira a receber a certificação de Cidade Inteligente, Sustentável e Resiliente. As certificações reforçam o compromisso municipal de continuar a avançar em inovação e sustentabilidade, posicionando São Paulo como protagonista no intercâmbio global de boas práticas.",
+        "indicador" : "Certificação renovada anualmente.",
+        "orgao_responsavel" : ["SMIT"],
+        "eixo" : "capital do futuro"
+    },
+    {
+        "numero" : 118,
+        "destaque" : "Facilitar o acesso à informação pública, ampliar a transparência ativa e passiva e fortalecer a participação cidadã",
+        "descricao" : "Facilitar o acesso à informação pública, ampliar a transparência ativa e passiva e fortalecer a participação cidadã por meio de 8 ações estratégicas.",
+        "projecao" : "Essas medidas envolverão ainda mais a população no processo de tomada de decisões e de formulação de políticas públicas. Vão aperfeiçoar mecanismos de controle social que fortalecem a democracia.",
+        "indicador" : "Número de ações estratégicas implementadas.",
+        "orgao_responsavel" : ["CGM"],
+        "eixo" : "capital do futuro"
+    },
+    {
+        "numero" : 119,
+        "destaque" : "Aprimorar o compliance da Prefeitura de São Paulo através da implementação do novo Programa de Integridade e Boas Práticas (PIBP)",
+        "descricao" : "Aprimorar o compliance da Prefeitura de São Paulo através da implementação do novo Programa de Integridade e Boas Práticas (PIBP), alcançando nota mínima 8,0 no Indicador de Maturidade.",
+        "projecao" : "O aperfeiçoamento de instrumentos de prevenção à corrupção e o enraizamento de uma cultura institucional de boas práticas administrativas na gestão pública vão elevar os índices de governança e integridade e gerar mais confiança dos cidadãos nas instituições municipais",
+        "indicador" : "Valor alcançado no Indicador de Maturidade do Programa de Integridade e Boas Práticas (IM-PIBP)",
+        "orgao_responsavel" : ["CGM"],
+        "eixo" : "capital do futuro"
+    },
+    {
+        "numero" : 120,
+        "destaque" : "Garantir a proteção dos dados pessoais",
+        "descricao" : "Garantir a proteção dos dados pessoais na administração municipal em conformidade plena com a Lei Geral de Proteção de Dados Pessoais (LGPD), por meio de 7 ações estratégicas.",
+        "projecao" : "A transparência na gestão das informações e a proteção efetiva contra o uso inadequado de dados pessoais consolidam uma cultura institucional de responsabilidade e segurança que aumenta a credibilidade da Prefeitura junto à população.",
+        "indicador" : "Número de ações implementadas.",
+        "orgao_responsavel" : ["CGM"],
+        "eixo" : "capital do futuro"
+    },
+    {
+        "numero" : 121,
+        "destaque" : "Desenvolver na Secretaria Municipal da Fazenda duas ferramentas de inteligência artificial",
+        "descricao" : "Desenvolver na Secretaria Municipal da Fazenda duas ferramentas de inteligência artificial para aumentar a produtividade e combater fraudes.",
+        "projecao" : "Essas soluções tecnológicas tornarão mais eficiente a análise do contencioso tributário e darão mais agilidade a outros processos administrativos da pasta.",
+        "indicador" : "Número de ações implementadas",
+        "orgao_responsavel" : ["SF"],
+        "eixo" : "capital do futuro"
+    },
+    {
+        "numero" : 122,
+        "destaque" : "Constituir dois fundos imobiliários com propriedades da Prefeitura",
+        "descricao" : "Constituir dois fundos imobiliários com propriedades da Prefeitura, para reduzir o déficit previdenciário municipal.",
+        "projecao" : "A criação dos fundos está prevista na Emenda 41/2021 à Lei Orgânica como medida para geração de receitas, equacionamento do déficit previdenciário e fortalecimento da sustentabilidade financeira do Instituto de Previdência Municipal (IPREM)",
+        "indicador" : "Número de fundos constituídos.",
+        "orgao_responsavel" : ["SF", "IPREM"],
+        "eixo" : "capital do futuro"
+    },
+    {
+        "numero" : 123,
+        "destaque" : "Aprimorar o Sistema de Gestão Patrimonial ",
+        "descricao" : "Aprimorar o Sistema de Gestão Patrimonial de modo a reduzir despesas da Prefeitura com aluguéis e tornar a administração dos imóveis municipais mais eficiente",
+        "projecao" : "A iniciativa prevê a integração do sistema GeoPatri com o Sistema de Bens Patrimoniais Imóveis, o que vai aperfeiçoar a governança patrimonial, propiciar economia de recursos e otimizar a ocupação e a preservação dos bens públicos.",
+        "indicador" : "Percentual de integração com o Sistema de Bens Patrimoniais Imóveis",
+        "orgao_responsavel" : ["SEGES"],
+        "eixo" : "capital do futuro"
+    },
+    {
+        "numero" : 124,
+        "destaque" : "Padronizar processos de compras públicas com a realização de 3 ações estratégicas",
+        "descricao" : "Padronizar processos de compras públicas com a realização de 3 ações estratégicas focadas em transparência, eficiência e sustentabilidade nas aquisições.",
+        "projecao" : "A padronização reduzirá custos e dará maior rapidez às licitações, além de priorizar aspectos como inovação e sustentabilidade nos novos processos de compras.",
+        "indicador" : "Número de procedimentos e instrumentos disponibilizados.",
+        "orgao_responsavel" : ["SEGES"],
+        "eixo" : "capital do futuro"
+    },
+    {
+        "numero" : 125,
+        "destaque" : "Ampliar e fortalecer as ações da Escola Municipal de Administração Pública de São Paulo (EMASP)",
+        "descricao" : "Ampliar e fortalecer as ações da Escola Municipal de Administração Pública de São Paulo (EMASP), para qualificar a atuação dos servidores.",
+        "projecao" : "A EMASP será fortalecida como um centro de excelência em formação, aprimorando a gestão pública municipal e aumentando a eficiência e a qualidade dos serviços prestados à população.",
+        "indicador" : "Número de ações formativas ofertadas",
+        "orgao_responsavel" : ["SEGES"],
+        "eixo" : "capital do futuro"
+    },
+    {
+        "numero" : 126,
+        "destaque" : "Oferecer o Recadastramento e a Prova de Vida Digital para os servidores ativos, aposentados e pensionistas da administração direta",
+        "descricao" : "Oferecer o Recadastramento e a Prova de Vida Digital para os servidores ativos, aposentados e pensionistas da administração direta, proporcionando maior comodidade e segurança aos beneficiários durante o procedimento.",
+        "projecao" : "A digitalização dessa ação resultará em economia, redução de fraudes, maior rapidez e mais conforto e facilidade para aposentados e pensionistas.",
+        "indicador" : "Plataforma implantada e em operação",
+        "orgao_responsavel" : ["SEGES", "IPREM"],
+        "eixo" : "capital do futuro"
+    }
+]

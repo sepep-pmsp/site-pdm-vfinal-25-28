@@ -11,9 +11,15 @@ class Command(BaseCommand):
     def __load_json(self)->dict:
 
         file_path = os.path.join("cadastros_basicos/data", self.json_file)
-        with open(file_path, "r") as file:
+        with open(file_path, "r", encoding='utf-8') as file:
             data = json.load(file)
         return data
+    
+    def __solve_tipo_orgao(self, item:dict)->TipoOrgao:
+
+        if item.get('indireta', False):
+            return TipoOrgao.INDIRETA
+        return TipoOrgao.DIRETA
     
     def __pipeline(self):
 
@@ -25,7 +31,7 @@ class Command(BaseCommand):
             orgao, created = Orgao.objects.get_or_create(
                 nome=item['nome'],
                 sigla=item['sigla'],
-                tipo=TipoOrgao.DIRETA
+                tipo=self.__solve_tipo_orgao(item)
             )
             if created:
                 self.stdout.write(self.style.SUCCESS(f'Órgão {orgao.nome} criado.'))

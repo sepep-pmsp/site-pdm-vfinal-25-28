@@ -15,7 +15,7 @@ class Command(BaseCommand):
 
     def __load_json(self) -> dict:
         file_path = os.path.join("estrutura_pdm/data", self.json_file)
-        with open(file_path, "r") as file:
+        with open(file_path, "r", encoding='utf-8') as file:
             data = json.load(file)
         return data
     
