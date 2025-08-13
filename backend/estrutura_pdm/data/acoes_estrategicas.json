@@ -2,1777 +2,2382 @@
     {
         "numero_meta": 2,
         "numero_acao": 2.01,
-        "desc_acao": "Requalificação de 25 parques. ",
-        "orgao_acao": "SVMA"
+        "desc_acao": "Requalificação de 25 parques.",
+        "orgao_acao": [
+            "SVMA"
+        ]
     },
     {
         "numero_meta": 2,
         "numero_acao": 2.02,
         "desc_acao": "Requalificação do Parque do Carmo.",
-        "orgao_acao": "SVMA"
+        "orgao_acao": [
+            "SVMA"
+        ]
     },
     {
         "numero_meta": 2,
         "numero_acao": 2.03,
-        "desc_acao": "Restauro da Marquise do Ibirapuera. ",
-        "orgao_acao": "SVMA"
+        "desc_acao": "Restauro da Marquise do Ibirapuera.",
+        "orgao_acao": [
+            "SVMA"
+        ]
     },
     {
         "numero_meta": 2,
         "numero_acao": 2.04,
-        "desc_acao": "Instituição ou eleição de 70 conselhos gestores de parques municipais. ",
-        "orgao_acao": "SVMA"
+        "desc_acao": "Instituição ou eleição de 70 conselhos gestores de parques municipais.",
+        "orgao_acao": [
+            "SVMA"
+        ]
     },
     {
         "numero_meta": 2,
         "numero_acao": 2.05,
         "desc_acao": "Elaboração dos planos de gestão de 80 parques urbanos e lineares.",
-        "orgao_acao": "SVMA"
+        "orgao_acao": [
+            "SVMA"
+        ]
     },
     {
         "numero_meta": 3,
         "numero_acao": 3.01,
-        "desc_acao": "Cultivo de mudas nativas da Mata Atlântica com o plantio de incremento. ",
-        "orgao_acao": "SVMA"
+        "desc_acao": "Cultivo de mudas nativas da Mata Atlântica com o plantio de incremento.",
+        "orgao_acao": [
+            "SVMA"
+        ]
     },
     {
         "numero_meta": 3,
         "numero_acao": 3.02,
         "desc_acao": "Plantio de compensação e reparação ambiental.",
-        "orgao_acao": "SVMA"
+        "orgao_acao": [
+            "SVMA"
+        ]
     },
     {
         "numero_meta": 3,
         "numero_acao": 3.03,
         "desc_acao": "Revisão do Manual Técnico de Arborização Urbana.",
-        "orgao_acao": "SVMA"
+        "orgao_acao": [
+            "SVMA"
+        ]
     },
     {
         "numero_meta": 3,
         "numero_acao": 3.04,
         "desc_acao": "Alcançar 50 bosques urbanos.",
-        "orgao_acao": "SVMA"
+        "orgao_acao": [
+            "SVMA"
+        ]
     },
     {
         "numero_meta": 3,
         "numero_acao": 3.05,
         "desc_acao": "Criação de 30 áreas Futuro Verde.",
-        "orgao_acao": "SVMA"
+        "orgao_acao": [
+            "SVMA"
+        ]
     },
     {
         "numero_meta": 3,
         "numero_acao": 3.06,
-        "desc_acao": " Regulamentação da Vaga Verde.",
-        "orgao_acao": "SVMA"
+        "desc_acao": "Regulamentação da Vaga Verde.",
+        "orgao_acao": [
+            "SVMA"
+        ]
     },
     {
         "numero_meta": 3,
         "numero_acao": 3.07,
-        "desc_acao": " Elaboração do Catálogo de Soluções Baseadas na Natureza.",
-        "orgao_acao": "SVMA"
+        "desc_acao": "Elaboração do Catálogo de Soluções Baseadas na Natureza.",
+        "orgao_acao": [
+            "SVMA"
+        ]
     },
     {
         "numero_meta": 3,
         "numero_acao": 3.08,
         "desc_acao": "Atingir 1.000 jardins de chuva.",
-        "orgao_acao": "SVMA"
+        "orgao_acao": [
+            "SVMA"
+        ]
     },
     {
         "numero_meta": 3,
         "numero_acao": 3.09,
         "desc_acao": "Realização do Inventário Arbóreo.",
-        "orgao_acao": "SVMA"
+        "orgao_acao": [
+            "SVMA"
+        ]
     },
     {
         "numero_meta": 4,
         "numero_acao": 4.01,
-        "desc_acao": "Criação da Unidade de Tratamento Mecânico e de Resíduos e instalação de Usina\nFotovoltaica no Aterro Bandeirantes. ",
-        "orgao_acao": "SPRegula"
+        "desc_acao": "Criação da Unidade de Tratamento Mecânico e de Resíduos e instalação de Usina Fotovoltaica no Aterro Bandeirantes.",
+        "orgao_acao": [
+            "SPRegula"
+        ]
     },
     {
         "numero_meta": 4,
         "numero_acao": 4.02,
         "desc_acao": "Ampliação da Central de Tratamento de Resíduos Leste.",
-        "orgao_acao": "SPRegula"
+        "orgao_acao": [
+            "SPRegula"
+        ]
     },
     {
         "numero_meta": 4,
         "numero_acao": 4.03,
         "desc_acao": "Criação da Unidade de Biossecagem de Resíduos Orgânicos.",
-        "orgao_acao": "SPRegula"
+        "orgao_acao": [
+            "SPRegula"
+        ]
     },
     {
         "numero_meta": 4,
         "numero_acao": 4.04,
-        "desc_acao": "Substituição de 500 caminhões de lixo da frota de coleta domiciliar por modelos\nmovidos a biometano ou GNV, evitando o consumo mensal de cerca de 1 milhão de\nlitros de óleo diesel.",
-        "orgao_acao": "SPRegula"
+        "desc_acao": "Substituição de 500 caminhões de lixo da frota de coleta domiciliar por modelos movidos a biometano ou GNV, evitando o consumo mensal de cerca de 1 milhão de litros de óleo diesel.",
+        "orgao_acao": [
+            "SPRegula"
+        ]
     },
     {
         "numero_meta": 4,
         "numero_acao": 4.05,
         "desc_acao": "Implantação de 10 novos ecopontos.",
-        "orgao_acao": "SPRegula"
+        "orgao_acao": [
+            "SPRegula"
+        ]
     },
     {
         "numero_meta": 4,
         "numero_acao": 4.06,
         "desc_acao": "Habilitação de 40 cooperativas e integração à coleta seletiva municipal.",
-        "orgao_acao": "SPRegula"
+        "orgao_acao": [
+            "SPRegula"
+        ]
     },
     {
         "numero_meta": 4,
         "numero_acao": 4.07,
-        "desc_acao": "Implantação do Sistema de Monitoramento SP Coopera, permitindo o gerenciamento\ndo volume de resíduos tratados e da geração de renda dos cooperados.",
-        "orgao_acao": "SPRegula"
+        "desc_acao": "Implantação do Sistema de Monitoramento SP Coopera, permitindo o gerenciamento do volume de resíduos tratados e da geração de renda dos cooperados.",
+        "orgao_acao": [
+            "SPRegula"
+        ]
     },
     {
         "numero_meta": 5,
         "numero_acao": 5.01,
         "desc_acao": "Realização de 240 mil atendimentos em atividades de educação ambiental.",
-        "orgao_acao": "SVMA"
+        "orgao_acao": [
+            "SVMA"
+        ]
     },
     {
         "numero_meta": 5,
         "numero_acao": 5.02,
-        "desc_acao": "Ampliação de sessões nos planetários do Carmo e de Parelheiros, visitas monitoradas\ndo Aventura Ambiental e ações educativas nos territórios.",
-        "orgao_acao": "SVMA"
+        "desc_acao": "Ampliação de sessões nos planetários do Carmo e de Parelheiros, visitas monitoradas do Aventura Ambiental e ações educativas nos territórios.",
+        "orgao_acao": [
+            "SVMA"
+        ]
     },
     {
         "numero_meta": 5,
         "numero_acao": 5.03,
-        "desc_acao": "Capacitação dos beneficiários do POT Parques e POT Mães Guardiãs em temáticas\nambientais, com foco em qualificação profissional e engajamento socioambiental.",
-        "orgao_acao": "SVMA"
+        "desc_acao": "Capacitação dos beneficiários do POT Parques e POT Mães Guardiãs em temáticas ambientais, com foco em qualificação profissional e engajamento socioambiental.",
+        "orgao_acao": [
+            "SVMA"
+        ]
     },
     {
         "numero_meta": 8,
         "numero_acao": 8.01,
         "desc_acao": "Entrega de 100 mil títulos de posse ou propriedade.",
-        "orgao_acao": "SEHAB"
+        "orgao_acao": [
+            "SEHAB"
+        ]
     },
     {
         "numero_meta": 8,
         "numero_acao": 8.02,
-        "desc_acao": "Realização de 100 mil ações e procedimentos administrativos voltados à\nregularização fundiária.",
-        "orgao_acao": "SEHAB"
+        "desc_acao": "Realização de 100 mil ações e procedimentos administrativos voltados à regularização fundiária.",
+        "orgao_acao": [
+            "SEHAB"
+        ]
     },
     {
         "numero_meta": 9,
         "numero_acao": 9.01,
         "desc_acao": "2,7 milhões de m² com etapas de urbanização finalizadas na região dos mananciais.",
-        "orgao_acao": "SEHAB"
+        "orgao_acao": [
+            "SEHAB"
+        ]
     },
     {
         "numero_meta": 9,
         "numero_acao": 9.02,
         "desc_acao": "1,3 milhões de m² com etapas de urbanização finalizadas no restante da cidade.",
-        "orgao_acao": "SEHAB"
+        "orgao_acao": [
+            "SEHAB"
+        ]
     },
     {
         "numero_meta": 10,
         "numero_acao": 10.01,
-        "desc_acao": "Revitalização de 20 empreendimentos habitacionais sob responsabilidade\nda SEHAB/COHAB.",
-        "orgao_acao": "SEHAB"
+        "desc_acao": "Revitalização de 20 empreendimentos habitacionais sob responsabilidade da SEHAB/COHAB.",
+        "orgao_acao": [
+            "SEHAB"
+        ]
     },
     {
         "numero_meta": 10,
         "numero_acao": 10.02,
         "desc_acao": "Melhorias em infraestrutura, acessibilidade e salubridade das áreas compartilhadas.",
-        "orgao_acao": "SEHAB"
+        "orgao_acao": [
+            "SEHAB"
+        ]
     },
     {
         "numero_meta": 11,
         "numero_acao": 11.01,
-        "desc_acao": "Obras de intervenção ou garantia de atendimento habitacional para famílias situadas em\náreas de risco R4.",
-        "orgao_acao": "SIURB;SEHAB"
+        "desc_acao": "Obras de intervenção ou garantia de atendimento habitacional para famílias situadas em áreas de risco R4.",
+        "orgao_acao": [
+            "SIURB",
+            "SEHAB"
+        ]
     },
     {
         "numero_meta": 11,
         "numero_acao": 11.02,
         "desc_acao": "Publicação de 29 Cadernos de Drenagem.",
-        "orgao_acao": "SIURB;SEHAB"
+        "orgao_acao": [
+            "SIURB",
+            "SEHAB"
+        ]
     },
     {
         "numero_meta": 11,
         "numero_acao": 11.03,
         "desc_acao": "Limpeza de 9.000.000 de metros de extensão de córregos, galerias e ramais pluviais.",
-        "orgao_acao": "SIURB;SEHAB"
+        "orgao_acao": [
+            "SIURB",
+            "SEHAB"
+        ]
     },
     {
         "numero_meta": 11,
         "numero_acao": 11.04,
         "desc_acao": "Preparação de 1.200 cidadãos em exercícios simulados de resposta a desastres.",
-        "orgao_acao": "SIURB;SEHAB"
+        "orgao_acao": [
+            "SIURB",
+            "SEHAB"
+        ]
     },
     {
         "numero_meta": 11,
         "numero_acao": 11.05,
-        "desc_acao": "Implantação de Serviço de Proteção em Situações de Calamidade Pública e\nEmergência, redefinindo fluxos e aumentando a celeridade da resposta.",
-        "orgao_acao": "SIURB;SEHAB"
+        "desc_acao": "Implantação de Serviço de Proteção em Situações de Calamidade Pública e Emergência, redefinindo fluxos e aumentando a celeridade da resposta.",
+        "orgao_acao": [
+            "SIURB",
+            "SEHAB"
+        ]
     },
     {
         "numero_meta": 12,
         "numero_acao": 12.01,
         "desc_acao": "Construção de 8 reservatórios.",
-        "orgao_acao": "SIURB"
+        "orgao_acao": [
+            "SIURB"
+        ]
     },
     {
         "numero_meta": 12,
         "numero_acao": 12.02,
         "desc_acao": "Início da construção de 6 novos reservatórios.",
-        "orgao_acao": "SIURB"
+        "orgao_acao": [
+            "SIURB"
+        ]
     },
     {
         "numero_meta": 13,
         "numero_acao": 13.01,
         "desc_acao": "Entrega do COP da SPTrans.",
-        "orgao_acao": "SMT"
+        "orgao_acao": [
+            "SMT"
+        ]
     },
     {
         "numero_meta": 13,
         "numero_acao": 13.02,
-        "desc_acao": " Instalação do Sistema de Monitoramento e Gestão Operacional (SMGO).",
-        "orgao_acao": "SMT"
+        "desc_acao": "Instalação do Sistema de Monitoramento e Gestão Operacional (SMGO).",
+        "orgao_acao": [
+            "SMT"
+        ]
     },
     {
         "numero_meta": 13,
         "numero_acao": 13.03,
         "desc_acao": "Definição de procedimentos para aceitar novos meios de pagamento da tarifa.",
-        "orgao_acao": "SMT"
+        "orgao_acao": [
+            "SMT"
+        ]
     },
     {
         "numero_meta": 15,
         "numero_acao": 15.01,
         "desc_acao": "Finalização de obras do Trecho I do BRT Radial Leste.",
-        "orgao_acao": "SIURB"
+        "orgao_acao": [
+            "SIURB"
+        ]
     },
     {
         "numero_meta": 15,
         "numero_acao": 15.02,
-        "desc_acao": "Elaboração de projeto básico, obtenção de licenciamento ambiental e\ncontratação de projeto executivo para início das obras do Trecho II do BRT\nRadial Leste.",
-        "orgao_acao": "SIURB"
+        "desc_acao": "Elaboração de projeto básico, obtenção de licenciamento ambiental e contratação de projeto executivo para início das obras do Trecho II do BRT Radial Leste.",
+        "orgao_acao": [
+            "SIURB"
+        ]
     },
     {
         "numero_meta": 28,
         "numero_acao": 28.01,
         "desc_acao": "Contratação das obras do Atracadouro Pedreira, com marina e estaleiro.",
-        "orgao_acao": "SMT"
+        "orgao_acao": [
+            "SMT"
+        ]
     },
     {
         "numero_meta": 28,
         "numero_acao": 28.02,
         "desc_acao": "Contratação das obras do Atracadouro Cocaia.",
-        "orgao_acao": "SMT"
+        "orgao_acao": [
+            "SMT"
+        ]
     },
     {
         "numero_meta": 28,
         "numero_acao": 28.03,
         "desc_acao": "Elaboração de estudos técnicos e ambientais do atracadouro Apurá.",
-        "orgao_acao": "SMT"
+        "orgao_acao": [
+            "SMT"
+        ]
     },
     {
         "numero_meta": 29,
         "numero_acao": 29.01,
-        "desc_acao": "Desenvolvimento de estudos técnicos e ambientais dos atracadouros Guaraci,\nSantapaula e Clube Náutico.",
-        "orgao_acao": "SMT"
+        "desc_acao": "Desenvolvimento de estudos técnicos e ambientais dos atracadouros Guaraci, Santapaula e Clube Náutico.",
+        "orgao_acao": [
+            "SMT"
+        ]
     },
     {
         "numero_meta": 33,
         "numero_acao": 33.01,
         "desc_acao": "Duplicação do Viaduto Ivan da Costa Rodrigues (João Beiçola).",
-        "orgao_acao": "SIURB"
+        "orgao_acao": [
+            "SIURB"
+        ]
     },
     {
         "numero_meta": 33,
         "numero_acao": 33.02,
         "desc_acao": "Intervenções viárias e urbanísticas complementares.",
-        "orgao_acao": "SIURB"
+        "orgao_acao": [
+            "SIURB"
+        ]
     },
     {
         "numero_meta": 36,
         "numero_acao": 36.01,
         "desc_acao": "Licitação das obras.",
-        "orgao_acao": "SIURB"
+        "orgao_acao": [
+            "SIURB"
+        ]
     },
     {
         "numero_meta": 36,
         "numero_acao": 36.02,
         "desc_acao": "Início das obras viárias e do parque linear",
-        "orgao_acao": "SIURB"
+        "orgao_acao": [
+            "SIURB"
+        ]
     },
     {
         "numero_meta": 38,
         "numero_acao": 38.01,
         "desc_acao": "Conclusão dos estudos e projetos necessários.",
-        "orgao_acao": "SIURB"
+        "orgao_acao": [
+            "SIURB"
+        ]
     },
     {
         "numero_meta": 38,
         "numero_acao": 38.02,
-        "desc_acao": "Início das obras. ",
-        "orgao_acao": "SIURB"
+        "desc_acao": "Início das obras.",
+        "orgao_acao": [
+            "SIURB"
+        ]
     },
     {
         "numero_meta": 39,
         "numero_acao": 39.01,
         "desc_acao": "Licitação das obras.",
-        "orgao_acao": "SIURB"
+        "orgao_acao": [
+            "SIURB"
+        ]
     },
     {
         "numero_meta": 39,
         "numero_acao": 39.02,
         "desc_acao": "Elaboração dos projetos técnicos.",
-        "orgao_acao": "SIURB"
+        "orgao_acao": [
+            "SIURB"
+        ]
     },
     {
         "numero_meta": 39,
         "numero_acao": 39.03,
         "desc_acao": "Início das desapropriações.",
-        "orgao_acao": "SIURB"
+        "orgao_acao": [
+            "SIURB"
+        ]
     },
     {
         "numero_meta": 39,
         "numero_acao": 39.04,
         "desc_acao": "Início das obras de alargamento.",
-        "orgao_acao": "SIURB"
+        "orgao_acao": [
+            "SIURB"
+        ]
     },
     {
         "numero_meta": 41,
         "numero_acao": 41.01,
         "desc_acao": "Licitação das obras.",
-        "orgao_acao": "SIURB"
+        "orgao_acao": [
+            "SIURB"
+        ]
     },
     {
         "numero_meta": 41,
         "numero_acao": 41.02,
         "desc_acao": "Início das obras.",
-        "orgao_acao": "SIURB"
+        "orgao_acao": [
+            "SIURB"
+        ]
     },
     {
         "numero_meta": 43,
         "numero_acao": 43.01,
         "desc_acao": "Assinatura do Decreto de Utilidade Pública.",
-        "orgao_acao": "SIURB"
+        "orgao_acao": [
+            "SIURB"
+        ]
     },
     {
         "numero_meta": 43,
         "numero_acao": 43.02,
         "desc_acao": "Contratação dos projetos necessários.",
-        "orgao_acao": "SIURB"
+        "orgao_acao": [
+            "SIURB"
+        ]
     },
     {
         "numero_meta": 43,
         "numero_acao": 43.03,
         "desc_acao": "Licenciamento ambiental.",
-        "orgao_acao": "SIURB"
+        "orgao_acao": [
+            "SIURB"
+        ]
     },
     {
         "numero_meta": 43,
         "numero_acao": 43.04,
         "desc_acao": "Desapropriações.",
-        "orgao_acao": "SIURB"
+        "orgao_acao": [
+            "SIURB"
+        ]
     },
     {
         "numero_meta": 43,
         "numero_acao": 43.05,
         "desc_acao": "Início das obras.",
-        "orgao_acao": "SIURB"
+        "orgao_acao": [
+            "SIURB"
+        ]
     },
     {
         "numero_meta": 44,
         "numero_acao": 44.01,
         "desc_acao": "Instalação de 233 quilômetros de malha cicloviária.",
-        "orgao_acao": "SMT"
+        "orgao_acao": [
+            "SMT"
+        ]
     },
     {
         "numero_meta": 44,
         "numero_acao": 44.02,
         "desc_acao": "Manutenção de 150 quilômetros de ciclovias.",
-        "orgao_acao": "SMT"
+        "orgao_acao": [
+            "SMT"
+        ]
     },
     {
         "numero_meta": 44,
         "numero_acao": 44.03,
         "desc_acao": "Planejamento da configuração adicional prevista no Plano Cicloviário.",
-        "orgao_acao": "SMT"
+        "orgao_acao": [
+            "SMT"
+        ]
     },
     {
         "numero_meta": 46,
         "numero_acao": 46.01,
         "desc_acao": "Modernização do sistema semafórico em 1.200 cruzamentos no centro expandido.",
-        "orgao_acao": "SPRegula"
+        "orgao_acao": [
+            "SPRegula"
+        ]
     },
     {
         "numero_meta": 46,
         "numero_acao": 46.02,
         "desc_acao": "Modernização do sistema semafórico em 500 cruzamentos fora do centro expandido.",
-        "orgao_acao": "SPRegula"
+        "orgao_acao": [
+            "SPRegula"
+        ]
     },
     {
         "numero_meta": 48,
         "numero_acao": 48.01,
         "desc_acao": "Recuperação de 5.000.000 m² com micropavimentação.",
-        "orgao_acao": "SMSUB"
+        "orgao_acao": [
+            "SMSUB"
+        ]
     },
     {
         "numero_meta": 48,
         "numero_acao": 48.02,
         "desc_acao": "Recuperação de 5.000.000 m² com recapeamento e pavimento rígido.",
-        "orgao_acao": "SMSUB"
+        "orgao_acao": [
+            "SMSUB"
+        ]
     },
     {
         "numero_meta": 50,
         "numero_acao": 50.01,
         "desc_acao": "Renovação de 500.000 m² de calçadas públicas.",
-        "orgao_acao": "SMSUB"
+        "orgao_acao": [
+            "SMSUB"
+        ]
     },
     {
         "numero_meta": 50,
         "numero_acao": 50.02,
-        "desc_acao": "Renovação de 500.000 m² de calçadas particulares mediante fiscalização, notificação\ne aplicação de multa. ",
-        "orgao_acao": "SMSUB"
+        "desc_acao": "Renovação de 500.000 m² de calçadas particulares mediante fiscalização, notificação e aplicação de multa.",
+        "orgao_acao": [
+            "SMSUB"
+        ]
     },
     {
         "numero_meta": 51,
         "numero_acao": 51.01,
         "desc_acao": "Realização de 4 projetos de qualificação de centros de bairro.",
-        "orgao_acao": "SMUL"
+        "orgao_acao": [
+            "SMUL"
+        ]
     },
     {
         "numero_meta": 51,
         "numero_acao": 51.02,
         "desc_acao": "Realização de 6 projetos de caminhabilidade e redesenho urbano.",
-        "orgao_acao": "SMUL"
+        "orgao_acao": [
+            "SMUL"
+        ]
     },
     {
         "numero_meta": 52,
         "numero_acao": 52.01,
         "desc_acao": "Conclusão das obras do Calçadão do Triângulo Histórico.",
-        "orgao_acao": "SMUL"
+        "orgao_acao": [
+            "SMUL"
+        ]
     },
     {
         "numero_meta": 52,
         "numero_acao": 52.02,
-        "desc_acao": " Início das obras do Calçadão do Quadrilátero da República.",
-        "orgao_acao": "SMUL"
+        "desc_acao": "Início das obras do Calçadão do Quadrilátero da República.",
+        "orgao_acao": [
+            "SMUL"
+        ]
     },
     {
         "numero_meta": 52,
         "numero_acao": 52.03,
-        "desc_acao": " Início das obras da Esplanada Liberdade.",
-        "orgao_acao": "SMUL"
+        "desc_acao": "Início das obras da Esplanada Liberdade.",
+        "orgao_acao": [
+            "SMUL"
+        ]
     },
     {
         "numero_meta": 52,
         "numero_acao": 52.04,
         "desc_acao": "Estímulo ao adensamento, com 220 mil novos moradores no Centro.",
-        "orgao_acao": "SMUL"
+        "orgao_acao": [
+            "SMUL"
+        ]
     },
     {
         "numero_meta": 52,
         "numero_acao": 52.05,
         "desc_acao": "Estudos e publicação do edital de licitação do VLT Bonde São Paulo.",
-        "orgao_acao": "SMUL"
+        "orgao_acao": [
+            "SMUL"
+        ]
     },
     {
         "numero_meta": 52,
         "numero_acao": 52.06,
         "desc_acao": "Publicação do edital da PPP do Novo Parque Dom Pedro.",
-        "orgao_acao": "SMUL"
+        "orgao_acao": [
+            "SMUL"
+        ]
     },
     {
         "numero_meta": 53,
         "numero_acao": 53.01,
         "desc_acao": "Integração com câmeras de outros órgãos públicos municipais, estaduais e federais.",
-        "orgao_acao": "SMSU"
+        "orgao_acao": [
+            "SMSU"
+        ]
     },
     {
         "numero_meta": 53,
         "numero_acao": 53.02,
         "desc_acao": "Integração com câmeras de concessionárias, da iniciativa privada e de munícipes.",
-        "orgao_acao": "SMSU"
+        "orgao_acao": [
+            "SMSU"
+        ]
     },
     {
         "numero_meta": 53,
         "numero_acao": 53.03,
         "desc_acao": "Atingir 6.000 câmeras com tecnologia de reconhecimento de placas de veículos.",
-        "orgao_acao": "SMSU"
+        "orgao_acao": [
+            "SMSU"
+        ]
     },
     {
         "numero_meta": 53,
         "numero_acao": 53.04,
-        "desc_acao": "Incorporação de 220 câmeras em motocicletas da Guarda Civil Metropolitana, para\nreconhecimento de placas de veículos com registro de roubo ou furto.",
-        "orgao_acao": "SMSU"
+        "desc_acao": "Incorporação de 220 câmeras em motocicletas da Guarda Civil Metropolitana, para reconhecimento de placas de veículos com registro de roubo ou furto.",
+        "orgao_acao": [
+            "SMSU"
+        ]
     },
     {
         "numero_meta": 54,
         "numero_acao": 54.01,
         "desc_acao": "Modernização do sistema de radiocomunicação da Guarda Civil Metropolitana.",
-        "orgao_acao": "SMSU"
+        "orgao_acao": [
+            "SMSU"
+        ]
     },
     {
         "numero_meta": 54,
         "numero_acao": 54.02,
-        "desc_acao": "Ampliação do treinamento dos novos GCMs para 12 meses, sendo seis meses\nna academia e seis meses de estágio operacional.",
-        "orgao_acao": "SMSU"
+        "desc_acao": "Ampliação do treinamento dos novos GCMs para 12 meses, sendo seis meses na academia e seis meses de estágio operacional.",
+        "orgao_acao": [
+            "SMSU"
+        ]
     },
     {
         "numero_meta": 55,
         "numero_acao": 55.01,
-        "desc_acao": "Convênios e parcerias com órgãos nacionais e internacionais para capacitação do\nefetivo municipal.",
-        "orgao_acao": "SMSU"
+        "desc_acao": "Convênios e parcerias com órgãos nacionais e internacionais para capacitação do efetivo municipal.",
+        "orgao_acao": [
+            "SMSU"
+        ]
     },
     {
         "numero_meta": 57,
         "numero_acao": 57.01,
         "desc_acao": "Atualização dos protocolos de atendimento do Programa de Proteção Escolar.",
-        "orgao_acao": "SMSU"
+        "orgao_acao": [
+            "SMSU"
+        ]
     },
     {
         "numero_meta": 57,
         "numero_acao": 57.02,
         "desc_acao": "Criação do protocolo de policiamento por videomonitoramento nas escolas.",
-        "orgao_acao": "SMSU"
+        "orgao_acao": [
+            "SMSU"
+        ]
     },
     {
         "numero_meta": 57,
         "numero_acao": 57.03,
         "desc_acao": "Cobertura de todas as escolas municipais com câmeras integradas ao Smart Sampa.",
-        "orgao_acao": "SMSU"
+        "orgao_acao": [
+            "SMSU"
+        ]
     },
     {
         "numero_meta": 59,
         "numero_acao": 59.01,
-        "desc_acao": "Instituição do Comitê Permanente de Acompanhamento da Política Municipal de\nBusca de Pessoas Desaparecidas, Localização Familiar e Atenção a Familiares de\nPessoas Desaparecidas.",
-        "orgao_acao": "SMDHC"
+        "desc_acao": "Instituição do Comitê Permanente de Acompanhamento da Política Municipal de Busca de Pessoas Desaparecidas, Localização Familiar e Atenção a Familiares de Pessoas Desaparecidas.",
+        "orgao_acao": [
+            "SMDHC"
+        ]
     },
     {
         "numero_meta": 59,
         "numero_acao": 59.02,
         "desc_acao": "Criação do Cadastro Municipal de Pessoas Desaparecidas.",
-        "orgao_acao": "SMDHC"
+        "orgao_acao": [
+            "SMDHC"
+        ]
     },
     {
         "numero_meta": 59,
         "numero_acao": 59.03,
         "desc_acao": "Integração formal do Smart Sampa no fluxo de busca de pessoas desaparecidas.",
-        "orgao_acao": "SMDHC;SMSU"
+        "orgao_acao": [
+            "SMDHC",
+            "SMSU"
+        ]
     },
     {
         "numero_meta": 60,
         "numero_acao": 60.01,
         "desc_acao": "Entrega de uma Unidade Móvel da Mulher.",
-        "orgao_acao": "SMDHC"
+        "orgao_acao": [
+            "SMDHC"
+        ]
     },
     {
         "numero_meta": 60,
         "numero_acao": 60.02,
         "desc_acao": "Entrega de uma nova Casa de Passagem.",
-        "orgao_acao": "SMADS"
+        "orgao_acao": [
+            "SMADS"
+        ]
     },
     {
         "numero_meta": 60,
         "numero_acao": 60.03,
         "desc_acao": "Implantação de dois protocolos integrados de atendimento a mulheres vítimas de violência.",
-        "orgao_acao": "SMDHC"
+        "orgao_acao": [
+            "SMDHC"
+        ]
     },
     {
         "numero_meta": 60,
         "numero_acao": 60.04,
-        "desc_acao": "Criação da Estratégia Municipal de Atendimento às mulheres em situação de violência em\ncontexto de cenas abertas de uso de drogas.",
-        "orgao_acao": "SGM/SEPE"
+        "desc_acao": "Criação da Estratégia Municipal de Atendimento às mulheres em situação de violência em contexto de cenas abertas de uso de drogas.",
+        "orgao_acao": [
+            "SEPE"
+        ]
     },
     {
         "numero_meta": 60,
         "numero_acao": 60.05,
-        "desc_acao": "Qualificação da capacidade operacional dos 15 Centros de Defesa e Convivência da Mulher\na partir da equiparação ao modelo das Casas da Mulher.",
-        "orgao_acao": "SMDHC"
+        "desc_acao": "Qualificação da capacidade operacional dos 15 Centros de Defesa e Convivência da Mulher a partir da equiparação ao modelo das Casas da Mulher.",
+        "orgao_acao": [
+            "SMDHC"
+        ]
     },
     {
         "numero_meta": 60,
         "numero_acao": 60.06,
-        "desc_acao": "Ampliação e reformulação do Programa Tem Saída, voltado à autonomia financeira e\nempregabilidade da mulher em situação de violência.",
-        "orgao_acao": "SMDET"
+        "desc_acao": "Ampliação e reformulação do Programa Tem Saída, voltado à autonomia financeira e empregabilidade da mulher em situação de violência.",
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 60,
         "numero_acao": 60.07,
-        "desc_acao": "Implementação do Programa Tempo de Despertar, para reflexão, conscientização e\nresponsabilização de agressores.",
-        "orgao_acao": "SMDHC"
+        "desc_acao": "Implementação do Programa Tempo de Despertar, para reflexão, conscientização e responsabilização de agressores.",
+        "orgao_acao": [
+            "SMDHC"
+        ]
     },
     {
         "numero_meta": 60,
         "numero_acao": 60.08,
-        "desc_acao": "Novo modelo de avaliação de satisfação pela usuária e implantação do Sistema Integrado de\nAtendimentos em Direitos Humanos (SIAD) na Rede de Direitos Humanos de Enfrentamento à\nViolência contra a Mulher.",
-        "orgao_acao": "SMDHC"
+        "desc_acao": "Novo modelo de avaliação de satisfação pela usuária e implantação do Sistema Integrado de Atendimentos em Direitos Humanos (SIAD) na Rede de Direitos Humanos de Enfrentamento à Violência contra a Mulher.",
+        "orgao_acao": [
+            "SMDHC"
+        ]
     },
     {
         "numero_meta": 61,
         "numero_acao": 61.01,
-        "desc_acao": "Implantação de 15 novas Unidades de Pronto Atendimento (UPA) com atendimento\nem saúde bucal.",
-        "orgao_acao": "SMS"
+        "desc_acao": "Implantação de 15 novas Unidades de Pronto Atendimento (UPA) com atendimento em saúde bucal.",
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 61,
         "numero_acao": 61.02,
-        "desc_acao": "Implantação de 25 Unidades Básicas de Saúde (UBS), incluindo novas instalações,\ncom atendimento em saúde bucal.",
-        "orgao_acao": "SMS"
+        "desc_acao": "Implantação de 25 Unidades Básicas de Saúde (UBS), incluindo novas instalações, com atendimento em saúde bucal.",
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 61,
         "numero_acao": 61.03,
         "desc_acao": "Implantação de 6 Centros de Exames da Mulher.",
-        "orgao_acao": "SMS"
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 61,
         "numero_acao": 61.04,
         "desc_acao": "Implantação de 2 Hospitais Dia.",
-        "orgao_acao": "SMS"
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 63,
         "numero_acao": 63.01,
         "desc_acao": "Reformas em 8 hospitais da rede direta.",
-        "orgao_acao": "SMS"
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 63,
         "numero_acao": 63.02,
         "desc_acao": "Entrega das novas instalações do Hospital Sorocabana.",
-        "orgao_acao": "SMS"
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 63,
         "numero_acao": 63.03,
         "desc_acao": "Reformas iniciadas em outros 4 hospitais.",
-        "orgao_acao": "SMS"
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 63,
         "numero_acao": 63.04,
         "desc_acao": "Criação de 1.000 novos leitos nos hospitais municipais reformados.",
-        "orgao_acao": "SMS"
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 64,
         "numero_acao": 64.01,
         "desc_acao": "Aquisição de 34 novos veículos, entre ambulâncias e motolâncias.",
-        "orgao_acao": "SMS"
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 64,
         "numero_acao": 64.02,
         "desc_acao": "Habilitação de 60 novas motolâncias.",
-        "orgao_acao": "SMS"
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 64,
         "numero_acao": 64.03,
-        "desc_acao": "Integração dos sistemas de despacho do SAMU ao Smart Sampa, para otimização\ndo atendimento emergencial.",
-        "orgao_acao": "SMS; SMSU"
+        "desc_acao": "Integração dos sistemas de despacho do SAMU ao Smart Sampa, para otimização do atendimento emergencial.",
+        "orgao_acao": [
+            "SMS",
+            "SMSU"
+        ]
     },
     {
         "numero_meta": 66,
         "numero_acao": 66.01,
         "desc_acao": "Lançamento da Central de Saúde Digital.",
-        "orgao_acao": "SMS"
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 66,
         "numero_acao": 66.02,
-        "desc_acao": "Publicação de, ao menos, 2 novos protocolos de acesso aos serviços de telessaúde\nofertados pela Central de Saúde Digital.",
-        "orgao_acao": "SMS"
+        "desc_acao": "Publicação de, ao menos, 2 novos protocolos de acesso aos serviços de telessaúde ofertados pela Central de Saúde Digital.",
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 66,
         "numero_acao": 66.03,
-        "desc_acao": "Oferta de 3 especialidades em telessaúde em todas as regiões da cidade, otimizando\nos processos de trabalho e aumentando a resolutividade do cuidado.",
-        "orgao_acao": "SMS"
+        "desc_acao": "Oferta de 3 especialidades em telessaúde em todas as regiões da cidade, otimizando os processos de trabalho e aumentando a resolutividade do cuidado.",
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 66,
         "numero_acao": 66.04,
         "desc_acao": "Desenvolvimento de painel de monitoramento da oferta e do acesso à telessaúde.",
-        "orgao_acao": "SMS"
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 68,
         "numero_acao": 68.01,
-        "desc_acao": "Cobertura Vacinal Preconizada (95%) para a vacina contra a Poliomielite\nem crianças de 1 ano de idade.",
-        "orgao_acao": "SMS"
+        "desc_acao": "Cobertura Vacinal Preconizada (95%) para a vacina contra a Poliomielite em crianças de 1 ano de idade.",
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 68,
         "numero_acao": 68.02,
-        "desc_acao": "Cobertura Vacinal Preconizada (95%) para a vacina Pneumocócica 10V em crianças\nde 1 ano de idade.",
-        "orgao_acao": "SMS"
+        "desc_acao": "Cobertura Vacinal Preconizada (95%) para a vacina Pneumocócica 10V em crianças de 1 ano de idade.",
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 68,
         "numero_acao": 68.03,
-        "desc_acao": "Cobertura Vacinal Preconizada (95%) para a vacina Pentavalente em crianças\nde 1 ano de idade.",
-        "orgao_acao": "SMS"
+        "desc_acao": "Cobertura Vacinal Preconizada (95%) para a vacina Pentavalente em crianças de 1 ano de idade.",
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 68,
         "numero_acao": 68.04,
-        "desc_acao": "Cobertura Vacinal Preconizada (95%) para a vacina contra SCR em crianças\nde 1 ano de idade.",
-        "orgao_acao": "SMS"
+        "desc_acao": "Cobertura Vacinal Preconizada (95%) para a vacina contra SCR em crianças de 1 ano de idade.",
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 69,
         "numero_acao": 69.01,
         "desc_acao": "Ampliação de 2 Unidades de Referência à Saúde do Idoso, com novas instalações.",
-        "orgao_acao": "SMS"
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 69,
         "numero_acao": 69.02,
         "desc_acao": "Constituição de 30 equipes do Programa Acompanhante de Idosos.",
-        "orgao_acao": "SMS"
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 69,
         "numero_acao": 69.03,
-        "desc_acao": "Publicação de 4 protocolos, diretrizes técnicas e documentos congêneres, novos ou\natualizados, sobre a rede de atenção às pessoas idosas.",
-        "orgao_acao": "SMS"
+        "desc_acao": "Publicação de 4 protocolos, diretrizes técnicas e documentos congêneres, novos ou atualizados, sobre a rede de atenção às pessoas idosas.",
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 70,
         "numero_acao": 70.01,
-        "desc_acao": "Implantação de 200 salas de descompressão para pessoas com TEA em\nequipamentos públicos.",
-        "orgao_acao": "SMPED"
+        "desc_acao": "Implantação de 200 salas de descompressão para pessoas com TEA em equipamentos públicos.",
+        "orgao_acao": [
+            "SMPED"
+        ]
     },
     {
         "numero_meta": 70,
         "numero_acao": 70.02,
         "desc_acao": "Realização anual da Semana Municipal de Conscientização do Autismo.",
-        "orgao_acao": "SMPED"
+        "orgao_acao": [
+            "SMPED"
+        ]
     },
     {
         "numero_meta": 70,
         "numero_acao": 70.03,
-        "desc_acao": "Aquisição de equipamentos de saúde e educação para o fortalecimento do\natendimento das pessoas com TEA na rede municipal.",
-        "orgao_acao": "SMPED"
+        "desc_acao": "Aquisição de equipamentos de saúde e educação para o fortalecimento do atendimento das pessoas com TEA na rede municipal.",
+        "orgao_acao": [
+            "SMPED"
+        ]
     },
     {
         "numero_meta": 71,
         "numero_acao": 71.01,
         "desc_acao": "Entrega de 3 novos CERs.",
-        "orgao_acao": "SMS"
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 71,
         "numero_acao": 71.02,
         "desc_acao": "Requalificação de 2 CERs.",
-        "orgao_acao": "SMS"
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 71,
         "numero_acao": 71.03,
         "desc_acao": "Criação de 10 equipes de APDs.",
-        "orgao_acao": "SMS"
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 72,
         "numero_acao": 72.01,
-        "desc_acao": "Inclusão de 500 pessoas, preferencialmente mulheres, em atividades de apoio a\nmães e cuidadoras de pessoas com deficiência.",
-        "orgao_acao": "SMPED"
+        "desc_acao": "Inclusão de 500 pessoas, preferencialmente mulheres, em atividades de apoio a mães e cuidadoras de pessoas com deficiência.",
+        "orgao_acao": [
+            "SMPED"
+        ]
     },
     {
         "numero_meta": 72,
         "numero_acao": 72.02,
-        "desc_acao": "Realização de 10.000 atendimentos em mutirões de serviços para pessoas com\ndeficiência, suas famílias e cuidadores.",
-        "orgao_acao": "SMPED"
+        "desc_acao": "Realização de 10.000 atendimentos em mutirões de serviços para pessoas com deficiência, suas famílias e cuidadores.",
+        "orgao_acao": [
+            "SMPED"
+        ]
     },
     {
         "numero_meta": 73,
         "numero_acao": 73.01,
-        "desc_acao": "Disponibilização de solução digital para conexão entre cidadãos, espaços públicos e iniciativas\npara a prática de atividades físicas.",
-        "orgao_acao": "SMS"
+        "desc_acao": "Disponibilização de solução digital para conexão entre cidadãos, espaços públicos e iniciativas para a prática de atividades físicas.",
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 73,
         "numero_acao": 73.02,
-        "desc_acao": "Criação de grupos voltados ao cuidado da obesidade em todas as Unidades Básicas de Saúde\ncom nutricionistas.",
-        "orgao_acao": "SMS"
+        "desc_acao": "Criação de grupos voltados ao cuidado da obesidade em todas as Unidades Básicas de Saúde com nutricionistas.",
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 73,
         "numero_acao": 73.03,
         "desc_acao": "Instituição de área técnica na Secretaria Municipal da Saúde dedicada à promoção da atividade física.",
-        "orgao_acao": "SMS"
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 73,
         "numero_acao": 73.04,
-        "desc_acao": "Realização de campanhas educativas em escolas, unidades de saúde e equipamentos sociais\npara promoção da alimentação saudável e combate ao sedentarismo.",
-        "orgao_acao": "SMS"
+        "desc_acao": "Realização de campanhas educativas em escolas, unidades de saúde e equipamentos sociais para promoção da alimentação saudável e combate ao sedentarismo.",
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 74,
         "numero_acao": 74.01,
         "desc_acao": "Abertura de novo Hospital Veterinário na Zona Leste.",
-        "orgao_acao": "SMS"
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 74,
         "numero_acao": 74.02,
         "desc_acao": "Ampliação do horário de atendimento de um Hospital Veterinário para 24 horas.",
-        "orgao_acao": "SMS"
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 74,
         "numero_acao": 74.03,
         "desc_acao": "Ampliação em 20% do número de castrações de cães e gatos.",
-        "orgao_acao": "SMS"
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 74,
         "numero_acao": 74.04,
-        "desc_acao": "Instituição do Programa Protetor Animal Paulistano, com apoio a até 200 projetos ou\natividades de organizações da sociedade civil.",
-        "orgao_acao": "SMS"
+        "desc_acao": "Instituição do Programa Protetor Animal Paulistano, com apoio a até 200 projetos ou atividades de organizações da sociedade civil.",
+        "orgao_acao": [
+            "SMS"
+        ]
     },
     {
         "numero_meta": 75,
         "numero_acao": 75.01,
         "desc_acao": "Realização de campanha anual sobre a importância da matrícula em creches.",
-        "orgao_acao": "SME"
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 75,
         "numero_acao": 75.02,
-        "desc_acao": "Identificação da demanda por vagas antes mesmo do nascimento da criança,\nem articulação com a Rede de Proteção Mãe Paulistana, assegurando 100% de\natendimento.",
-        "orgao_acao": "SME"
+        "desc_acao": "Identificação da demanda por vagas antes mesmo do nascimento da criança, em articulação com a Rede de Proteção Mãe Paulistana, assegurando 100% de atendimento.",
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 77,
         "numero_acao": 77.01,
-        "desc_acao": "Regulamentação da possibilidade de jornada de trabalho de 40 horas\naos professores.",
-        "orgao_acao": "SME"
+        "desc_acao": "Regulamentação da possibilidade de jornada de trabalho de 40 horas aos professores.",
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 77,
         "numero_acao": 77.02,
         "desc_acao": "Reformulação do Programa São Paulo Integral com publicação de nova normativa.",
-        "orgao_acao": "SME"
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 78,
         "numero_acao": 78.01,
         "desc_acao": "Criação de painel de acompanhamento de alfabetização por unidade educacional.",
-        "orgao_acao": "SME"
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 78,
         "numero_acao": 78.02,
-        "desc_acao": "Revisão do Prêmio de Desempenho Educacional (PDE) visando aumentar o desempenho\ndos estudantes.",
-        "orgao_acao": "SME"
+        "desc_acao": "Revisão do Prêmio de Desempenho Educacional (PDE) visando aumentar o desempenho dos estudantes.",
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 78,
         "numero_acao": 78.03,
-        "desc_acao": "Envio bimestral, a todas as unidades escolares do Ensino Fundamental, de Boletim\nPedagógico para orientação do planejamento e alfabetização.",
-        "orgao_acao": "SME"
+        "desc_acao": "Envio bimestral, a todas as unidades escolares do Ensino Fundamental, de Boletim Pedagógico para orientação do planejamento e alfabetização.",
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 78,
         "numero_acao": 78.04,
-        "desc_acao": "Garantia de que 100% dos professores alfabetizadores de 1° e 2° ano tenham realizado\nformações voltadas à alfabetização com base na prática.",
-        "orgao_acao": "SME"
+        "desc_acao": "Garantia de que 100% dos professores alfabetizadores de 1° e 2° ano tenham realizado formações voltadas à alfabetização com base na prática.",
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 78,
         "numero_acao": 78.05,
         "desc_acao": "Campanha anual de sensibilização da importância da alfabetização.",
-        "orgao_acao": "SME"
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 78,
         "numero_acao": 78.06,
         "desc_acao": "Elevação para 80% no índice de participação na avaliação do Sistema de Avaliação de Rendimento Escolar do Estado de São Paulo (SARESP).",
-        "orgao_acao": "SME"
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 79,
         "numero_acao": 79.01,
         "desc_acao": "Criação de painel de acompanhamento das aprendizagens por unidade educacional.",
-        "orgao_acao": "SME"
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 79,
         "numero_acao": 79.02,
         "desc_acao": "Revisão do PDE visando aumentar os índices de aprendizagem.",
-        "orgao_acao": "SME"
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 79,
         "numero_acao": 79.03,
         "desc_acao": "Garantia de que 100% dos professores dos anos iniciais tenham realizado formações a partir dos objetivos de aprendizagem do Currículo da Cidade.",
-        "orgao_acao": "SME"
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 79,
         "numero_acao": 79.04,
         "desc_acao": "Redução das desigualdades educacionais entre grupos socioeconômicos e raciais no 5º ano.",
-        "orgao_acao": "SME"
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 79,
         "numero_acao": 79.05,
         "desc_acao": "Designação de Professor de Atendimento Educacional Especializado (PAEE) em 100% das unidades de Ensino Fundamental.",
-        "orgao_acao": "SME"
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 79,
         "numero_acao": 79.06,
         "desc_acao": "Aplicação anual da Prova Saberes e Aprendizagens para o 5º ano no 1°, 2° e 3° bimestre.",
-        "orgao_acao": "SME"
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 79,
         "numero_acao": 79.07,
         "desc_acao": "Implementação do Serviço Educacional Psicossocial (SAEPS) para o atendimento dos estudantes em situação de vulnerabilidade educacional em todas as Diretorias Regionais de Educação.",
-        "orgao_acao": "SME"
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 79,
         "numero_acao": 79.08,
-        "desc_acao": "Elevação para 80% no índice de participação na avaliação do Sistema de Avaliação da Educação\nBásica (SAEB).",
-        "orgao_acao": "SME"
+        "desc_acao": "Elevação para 80% no índice de participação na avaliação do Sistema de Avaliação da Educação Básica (SAEB).",
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 79,
         "numero_acao": 79.09,
-        "desc_acao": "Reformulação das estratégias de recomposição das aprendizagens com ações específicas para\nescolas com baixo desempenho.",
-        "orgao_acao": "SME"
+        "desc_acao": "Reformulação das estratégias de recomposição das aprendizagens com ações específicas para escolas com baixo desempenho.",
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 80,
         "numero_acao": 80.01,
         "desc_acao": "Criação de painel de acompanhamento das aprendizagens por unidade educacional.",
-        "orgao_acao": "SME"
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 80,
         "numero_acao": 80.02,
         "desc_acao": "Revisão PDE visando aumentar a aprendizagem.",
-        "orgao_acao": "SME"
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 80,
         "numero_acao": 80.03,
-        "desc_acao": "Garantia de que 100% dos professores dos anos finais tenham realizado formações a partir dos\nobjetivos de aprendizagem do Currículo da Cidade.",
-        "orgao_acao": "SME"
+        "desc_acao": "Garantia de que 100% dos professores dos anos finais tenham realizado formações a partir dos objetivos de aprendizagem do Currículo da Cidade.",
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 80,
         "numero_acao": 80.04,
         "desc_acao": "Redução das desigualdades educacionais entre grupos socioeconômicos e raciais no 9º ano.",
-        "orgao_acao": "SME"
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 80,
         "numero_acao": 80.05,
         "desc_acao": "Designação de PAEE em 100% das unidades de Ensino Fundamental.",
-        "orgao_acao": "SME"
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 80,
         "numero_acao": 80.06,
         "desc_acao": "Aplicação anual da Prova Saberes e Aprendizagens para o 9º ano no 1°, 2° e 3° bimestre.",
-        "orgao_acao": "SME"
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 80,
         "numero_acao": 80.07,
-        "desc_acao": "Implementação do SAEPS para o atendimento dos estudantes em situação de vulnerabilidade\neducacional em todas as Diretorias Regionais de Educação.",
-        "orgao_acao": "SME"
+        "desc_acao": "Implementação do SAEPS para o atendimento dos estudantes em situação de vulnerabilidade educacional em todas as Diretorias Regionais de Educação.",
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 80,
         "numero_acao": 80.08,
         "desc_acao": "Elevação para 80% no índice de participação na avaliação do SAEB.",
-        "orgao_acao": "SME"
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 80,
         "numero_acao": 80.09,
-        "desc_acao": "Reformulação das estratégias de recomposição das aprendizagens com ações específicas para\nescolas com baixo desempenho.",
-        "orgao_acao": "SME"
+        "desc_acao": "Reformulação das estratégias de recomposição das aprendizagens com ações específicas para escolas com baixo desempenho.",
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 80,
         "numero_acao": 80.1,
         "desc_acao": "Criação e realização de Olimpíadas do Conhecimento com premiação motivadora.",
-        "orgao_acao": "SME"
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 81,
         "numero_acao": 81.01,
         "desc_acao": "Inauguração do CEU Ermelino Matarazzo.",
-        "orgao_acao": "SME"
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 81,
         "numero_acao": 81.02,
         "desc_acao": "Inauguração do CEU Cidade Lider.",
-        "orgao_acao": "SME"
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 81,
         "numero_acao": 81.03,
         "desc_acao": "Inauguração do CEU Imperador.",
-        "orgao_acao": "SME"
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 81,
         "numero_acao": 81.04,
         "desc_acao": "Inauguração do CEU Cidade Ademar.",
-        "orgao_acao": "SME"
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 81,
         "numero_acao": 81.05,
         "desc_acao": "Inauguração do CEU Grajaú.",
-        "orgao_acao": "SME"
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 81,
         "numero_acao": 81.06,
         "desc_acao": "Inauguração de outros 7 CEUs.",
-        "orgao_acao": "SME"
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 81,
         "numero_acao": 81.07,
         "desc_acao": "Início de obras de outros 10 CEUs.",
-        "orgao_acao": "SME"
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 81,
         "numero_acao": 81.08,
-        "desc_acao": "Garantia de implantação de Centros de Estudos de Línguas Paulistano\nem todos os CEUs.",
-        "orgao_acao": "SME"
+        "desc_acao": "Garantia de implantação de Centros de Estudos de Línguas Paulistano em todos os CEUs.",
+        "orgao_acao": [
+            "SME"
+        ]
     },
     {
         "numero_meta": 83,
         "numero_acao": 83.01,
         "desc_acao": "Implantação de 10 novas unidades do Armazém Solidário.",
-        "orgao_acao": "SMDHC"
+        "orgao_acao": [
+            "SMDHC"
+        ]
     },
     {
         "numero_meta": 83,
         "numero_acao": 83.02,
-        "desc_acao": "Implantação de outros 15 equipamentos de Segurança Alimentar e Nutricional,\ncomo unidades do Bom Prato Paulistano e da Rede Cozinha Escola.",
-        "orgao_acao": "SMDHC"
+        "desc_acao": "Implantação de outros 15 equipamentos de Segurança Alimentar e Nutricional, como unidades do Bom Prato Paulistano e da Rede Cozinha Escola.",
+        "orgao_acao": [
+            "SMDHC"
+        ]
     },
     {
         "numero_meta": 86,
         "numero_acao": 86.01,
         "desc_acao": "Concessão do auxílio Reencontro Família a 500 beneficiários.",
-        "orgao_acao": "SMADS"
+        "orgao_acao": [
+            "SMADS"
+        ]
     },
     {
         "numero_meta": 86,
         "numero_acao": 86.02,
         "desc_acao": "Concessão do auxílio Reencontro Moradia a 2.500 beneficiários.",
-        "orgao_acao": "SMADS"
+        "orgao_acao": [
+            "SMADS"
+        ]
     },
     {
         "numero_meta": 87,
         "numero_acao": 87.01,
         "desc_acao": "Instalação de 3 novos crematórios públicos.",
-        "orgao_acao": "SPRegula"
+        "orgao_acao": [
+            "SPRegula"
+        ]
     },
     {
         "numero_meta": 87,
         "numero_acao": 87.02,
         "desc_acao": "Reforma do Crematório Vila Alpina.",
-        "orgao_acao": "SPRegula"
+        "orgao_acao": [
+            "SPRegula"
+        ]
     },
     {
         "numero_meta": 87,
         "numero_acao": 87.03,
         "desc_acao": "Reforma de 21 cemitérios municipais.",
-        "orgao_acao": "SPRegula"
+        "orgao_acao": [
+            "SPRegula"
+        ]
     },
     {
         "numero_meta": 87,
         "numero_acao": 87.04,
-        "desc_acao": "Reforma e restauro de bens tombados nos cemitérios. ",
-        "orgao_acao": "SPRegula"
+        "desc_acao": "Reforma e restauro de bens tombados nos cemitérios.",
+        "orgao_acao": [
+            "SPRegula"
+        ]
     },
     {
         "numero_meta": 88,
         "numero_acao": 88.01,
-        "desc_acao": "Requalificação de 15 Centros Esportivos, com foco na cobertura, qualificação\ne implantação de piscinas.",
-        "orgao_acao": "SEME"
+        "desc_acao": "Requalificação de 15 Centros Esportivos, com foco na cobertura, qualificação e implantação de piscinas.",
+        "orgao_acao": [
+            "SEME"
+        ]
     },
     {
         "numero_meta": 88,
         "numero_acao": 88.02,
         "desc_acao": "Promoção de reformas em 50 Clubes da Comunidade.",
-        "orgao_acao": "SEME"
+        "orgao_acao": [
+            "SEME"
+        ]
     },
     {
         "numero_meta": 89,
         "numero_acao": 89.01,
         "desc_acao": "Implementação do Programa Rede Centro Olímpico em 6 novos locais.",
-        "orgao_acao": "SEME"
+        "orgao_acao": [
+            "SEME"
+        ]
     },
     {
         "numero_meta": 89,
         "numero_acao": 89.02,
-        "desc_acao": "Implementação do Programa de Formação para o Esporte de Alto Rendimento\nParalímpico.",
-        "orgao_acao": "SEME"
+        "desc_acao": "Implementação do Programa de Formação para o Esporte de Alto Rendimento Paralímpico.",
+        "orgao_acao": [
+            "SEME"
+        ]
     },
     {
         "numero_meta": 89,
         "numero_acao": 89.03,
         "desc_acao": "Implantação de 4 novas modalidades no Centro Olímpico de Treinamento e Pesquisa.",
-        "orgao_acao": "SEME"
+        "orgao_acao": [
+            "SEME"
+        ]
     },
     {
         "numero_meta": 93,
         "numero_acao": 93.01,
         "desc_acao": "Instituição do Conselho Municipal de Promoção da Segurança Jurídica Tributária.",
-        "orgao_acao": "SF"
+        "orgao_acao": [
+            "SF"
+        ]
     },
     {
         "numero_meta": 93,
         "numero_acao": 93.02,
         "desc_acao": "Realização de consultas públicas sobre atos normativos municipais.",
-        "orgao_acao": "SF"
+        "orgao_acao": [
+            "SF"
+        ]
     },
     {
         "numero_meta": 96,
         "numero_acao": 96.01,
-        "desc_acao": "Abertura da Escola Avança Tech Games com 500 vagas anuais para capacitação nas\náreas de tecnologia e desenvolvimento de games.",
-        "orgao_acao": "SMDET"
+        "desc_acao": "Abertura da Escola Avança Tech Games com 500 vagas anuais para capacitação nas áreas de tecnologia e desenvolvimento de games.",
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 96,
         "numero_acao": 96.02,
-        "desc_acao": "Aceleração de 100 empresas do setor de games com aporte financeiro, oficinas de\ncapacitação, mentoria e oportunidades de networking internacional.",
-        "orgao_acao": "SMDET"
+        "desc_acao": "Aceleração de 100 empresas do setor de games com aporte financeiro, oficinas de capacitação, mentoria e oportunidades de networking internacional.",
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 97,
         "numero_acao": 97.01,
         "desc_acao": "Regularização fundiária.",
-        "orgao_acao": "SMC"
+        "orgao_acao": [
+            "SMC"
+        ]
     },
     {
         "numero_meta": 97,
         "numero_acao": 97.02,
         "desc_acao": "Ações de recuperação ambiental.",
-        "orgao_acao": "SMC"
+        "orgao_acao": [
+            "SMC"
+        ]
     },
     {
         "numero_meta": 97,
         "numero_acao": 97.03,
-        "desc_acao": "Elaboração de projeto para uso do espaço. ",
-        "orgao_acao": "SMC"
+        "desc_acao": "Elaboração de projeto para uso do espaço.",
+        "orgao_acao": [
+            "SMC"
+        ]
     },
     {
         "numero_meta": 99,
         "numero_acao": 99.01,
-        "desc_acao": "Formação de 10 mil jovens em projetos de capacitação profissional e geração\nde renda.",
-        "orgao_acao": "SMDHC"
+        "desc_acao": "Formação de 10 mil jovens em projetos de capacitação profissional e geração de renda.",
+        "orgao_acao": [
+            "SMDHC"
+        ]
     },
     {
         "numero_meta": 99,
         "numero_acao": 99.02,
         "desc_acao": "Criação de unidade móvel de capacitação profissional.",
-        "orgao_acao": "SMDHC"
+        "orgao_acao": [
+            "SMDHC"
+        ]
     },
     {
         "numero_meta": 102,
         "numero_acao": 102.01,
-        "desc_acao": "Criação de cursos de capacitação profissional voltados às novas exigências do mercado\nde trabalho, com foco, entre outras, em tecnologia, inteligência artificial\ne habilidades socioemocionais.",
-        "orgao_acao": "SMDET"
+        "desc_acao": "Criação de cursos de capacitação profissional voltados às novas exigências do mercado de trabalho, com foco, entre outras, em tecnologia, inteligência artificial e habilidades socioemocionais.",
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 102,
         "numero_acao": 102.02,
-        "desc_acao": "Melhoria da experiência do usuário com navegação intuitiva e menor tempo de resposta\ndo sistema.",
-        "orgao_acao": "SMDET"
+        "desc_acao": "Melhoria da experiência do usuário com navegação intuitiva e menor tempo de resposta do sistema.",
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 102,
         "numero_acao": 102.03,
         "desc_acao": "Desenvolvimento de ferramentas tecnológicas de atendimento e acompanhamento do usuário.",
-        "orgao_acao": "SMDET"
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 102,
         "numero_acao": 102.04,
         "desc_acao": "Integração da ferramenta com parceiros externos para ampliação da oferta de cursos.",
-        "orgao_acao": "SMDET"
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 102,
         "numero_acao": 102.05,
-        "desc_acao": "Disponibilização do Portal Cate para beneficiários de programas sociais, a fim de ampliar\no letramento digital.",
-        "orgao_acao": "SMDET"
+        "desc_acao": "Disponibilização do Portal Cate para beneficiários de programas sociais, a fim de ampliar o letramento digital.",
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 103,
         "numero_acao": 103.01,
-        "desc_acao": "Ampliação do atendimento remoto do Portal Cate. ",
-        "orgao_acao": "SMDET"
+        "desc_acao": "Ampliação do atendimento remoto do Portal Cate.",
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 103,
         "numero_acao": 103.02,
         "desc_acao": "Criação de portal de intermediação de mão de obra voltado ao setor de gastronomia.",
-        "orgao_acao": "SMDET"
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 103,
         "numero_acao": 103.03,
-        "desc_acao": "Fortalecimento do portal Avança Tech, com intermediação de mão de obra online para\no setor de tecnologia.",
-        "orgao_acao": "SMDET"
+        "desc_acao": "Fortalecimento do portal Avança Tech, com intermediação de mão de obra online para o setor de tecnologia.",
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 103,
         "numero_acao": 103.04,
-        "desc_acao": "Informatização do Programa Operação Trabalho, com sistematização de cadastro,\nseleção, frequência e pagamento dos beneficiários.",
-        "orgao_acao": "SMDET"
+        "desc_acao": "Informatização do Programa Operação Trabalho, com sistematização de cadastro, seleção, frequência e pagamento dos beneficiários.",
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 103,
         "numero_acao": 103.05,
-        "desc_acao": "Informatização do Programa Bolsa Trabalho, com sistematização de cadastro,\nseleção, frequência e pagamento dos beneficiários.",
-        "orgao_acao": "SMDET"
+        "desc_acao": "Informatização do Programa Bolsa Trabalho, com sistematização de cadastro, seleção, frequência e pagamento dos beneficiários.",
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 103,
         "numero_acao": 103.06,
-        "desc_acao": "Informatização do Programa Tem Saída, com sistematização de cadastro e\nencaminhamento para entrevistas de emprego.",
-        "orgao_acao": "SMDET"
+        "desc_acao": "Informatização do Programa Tem Saída, com sistematização de cadastro e encaminhamento para entrevistas de emprego.",
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 104,
         "numero_acao": 104.01,
-        "desc_acao": "Realização de 50 mil capacitações para empreendedores, voltadas ao\ndesenvolvimento do próprio negócio",
-        "orgao_acao": "SMDET"
+        "desc_acao": "Realização de 50 mil capacitações para empreendedores, voltadas ao desenvolvimento do próprio negócio",
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 104,
         "numero_acao": 104.02,
         "desc_acao": "Atingir 100 mil utilizações dos espaços de trabalho compartilhados.",
-        "orgao_acao": "SMDET"
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 104,
         "numero_acao": 104.03,
-        "desc_acao": "Incentivo ao empreendedorismo feminino, com cursos, oficinas, orientação,\ncapacitação, acesso a eventos e apresentação de linhas de crédito,\nentre outras medidas.",
-        "orgao_acao": "SMDET"
+        "desc_acao": "Incentivo ao empreendedorismo feminino, com cursos, oficinas, orientação, capacitação, acesso a eventos e apresentação de linhas de crédito, entre outras medidas.",
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 105,
         "numero_acao": 105.01,
         "desc_acao": "Oferta de serviços de formalização e regularização para microempreendedores.",
-        "orgao_acao": "SMDET"
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 105,
         "numero_acao": 105.02,
         "desc_acao": "Realização de capacitações e consultorias voltadas ao público 60+.",
-        "orgao_acao": "SMDET"
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 105,
         "numero_acao": 105.03,
-        "desc_acao": "Disponibilização de espaços de trabalho compartilhados. ",
-        "orgao_acao": "SMDET"
+        "desc_acao": "Disponibilização de espaços de trabalho compartilhados.",
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 106,
         "numero_acao": 106.01,
         "desc_acao": "10 mil atendimentos de assistência técnica rural.",
-        "orgao_acao": "SMDET"
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 106,
         "numero_acao": 106.02,
         "desc_acao": "Abertura de 10 escolas-estufa.",
-        "orgao_acao": "SMDET"
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 106,
         "numero_acao": 106.03,
         "desc_acao": "1.000 vagas para beneficiários do Programa Operação Trabalho (POT Agricultura).",
-        "orgao_acao": "SMDET"
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 106,
         "numero_acao": 106.04,
         "desc_acao": "5.000 capacitações em técnicas de cultivo sustentável, agroecologia e compostagem.",
-        "orgao_acao": "SMDET"
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 106,
         "numero_acao": 106.05,
         "desc_acao": "Aceleração de 100 negócios rurais inovadores com apoio financeiro e técnico.",
-        "orgao_acao": "SMDET"
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 106,
         "numero_acao": 106.06,
-        "desc_acao": "Projeto Rolê Agroecológico: atendimento a 120 mil crianças e fomento de 80 locais de\nagricultura com vivências rurais.",
-        "orgao_acao": "SMDET"
+        "desc_acao": "Projeto Rolê Agroecológico: atendimento a 120 mil crianças e fomento de 80 locais de agricultura com vivências rurais.",
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 106,
         "numero_acao": 106.07,
         "desc_acao": "Destinação de R$ 10 milhões para aquisição de insumos e equipamentos agrícolas.",
-        "orgao_acao": "SMDET"
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 106,
         "numero_acao": 106.08,
         "desc_acao": "Orientação a 100 agricultores sobre crédito rural.",
-        "orgao_acao": "SMDET"
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 106,
         "numero_acao": 106.09,
-        "desc_acao": "Ampliação do turismo rural: 10.000 vagas em roteiros guiados, especialmente nos Polos de\nEcoturismo de Parelheiros e da Cantareira.",
-        "orgao_acao": "SMDET"
+        "desc_acao": "Ampliação do turismo rural: 10.000 vagas em roteiros guiados, especialmente nos Polos de Ecoturismo de Parelheiros e da Cantareira.",
+        "orgao_acao": [
+            "SMDET"
+        ]
     },
     {
         "numero_meta": 110,
         "numero_acao": 110.01,
         "desc_acao": "Realização de 200 ações internacionais de projeção da cidade.",
-        "orgao_acao": "SMRI"
+        "orgao_acao": [
+            "SMRI"
+        ]
     },
     {
         "numero_meta": 110,
         "numero_acao": 110.02,
         "desc_acao": "Realização de 16 ações voltadas ao ecoturismo e à agricultura urbana sustentável.",
-        "orgao_acao": "SMRI"
+        "orgao_acao": [
+            "SMRI"
+        ]
     },
     {
         "numero_meta": 110,
         "numero_acao": 110.03,
         "desc_acao": "Capacitação de servidores públicos municipais em 40 programas internacionais.",
-        "orgao_acao": "SMRI"
+        "orgao_acao": [
+            "SMRI"
+        ]
     },
     {
         "numero_meta": 110,
         "numero_acao": 110.04,
         "desc_acao": "Candidatura de São Paulo em iniciativas globais de reconhecimento de políticas públicas.",
-        "orgao_acao": "SMRI"
+        "orgao_acao": [
+            "SMRI"
+        ]
     },
     {
         "numero_meta": 111,
         "numero_acao": 111.01,
         "desc_acao": "Levantamento de boas práticas em orçamento climático.",
-        "orgao_acao": "SECLIMA;SEPLAN"
+        "orgao_acao": [
+            "SECLIMA",
+            "SEPLAN"
+        ]
     },
     {
         "numero_meta": 111,
         "numero_acao": 111.02,
         "desc_acao": "Realização de workshop técnico sobre planejamento climático-orçamentário.",
-        "orgao_acao": "SECLIMA;SEPLAN"
+        "orgao_acao": [
+            "SECLIMA",
+            "SEPLAN"
+        ]
     },
     {
         "numero_meta": 111,
         "numero_acao": 111.03,
         "desc_acao": "Implementação piloto do orçamento climático.",
-        "orgao_acao": "SECLIMA;SEPLAN"
+        "orgao_acao": [
+            "SECLIMA",
+            "SEPLAN"
+        ]
     },
     {
         "numero_meta": 111,
         "numero_acao": 111.04,
         "desc_acao": "Propor legislação específica para o orçamento climático.",
-        "orgao_acao": "SECLIMA;SEPLAN"
+        "orgao_acao": [
+            "SECLIMA",
+            "SEPLAN"
+        ]
     },
     {
         "numero_meta": 111,
         "numero_acao": 111.05,
         "desc_acao": "Instalação de Painel da Sustentabilidade em locais estratégicos.",
-        "orgao_acao": "SECLIMA;SEPLAN"
+        "orgao_acao": [
+            "SECLIMA",
+            "SEPLAN"
+        ]
     },
     {
         "numero_meta": 113,
         "numero_acao": 113.01,
         "desc_acao": "Regulamentação do Decreto nº 64.062/2025.",
-        "orgao_acao": "SMIT"
+        "orgao_acao": [
+            "SMIT"
+        ]
     },
     {
         "numero_meta": 113,
         "numero_acao": 113.02,
-        "desc_acao": "Desenvolvimento de projetos baseados no Marco Legal de Inovação e no Sandbox\nRegulatório.",
-        "orgao_acao": "SMIT"
+        "desc_acao": "Desenvolvimento de projetos baseados no Marco Legal de Inovação e no Sandbox Regulatório.",
+        "orgao_acao": [
+            "SMIT"
+        ]
     },
     {
         "numero_meta": 113,
         "numero_acao": 113.03,
-        "desc_acao": "Realização de 10 oficinas participativas com a população e publicação de diagnóstico\nsituacional.",
-        "orgao_acao": "SMIT"
+        "desc_acao": "Realização de 10 oficinas participativas com a população e publicação de diagnóstico situacional.",
+        "orgao_acao": [
+            "SMIT"
+        ]
     },
     {
         "numero_meta": 113,
         "numero_acao": 113.04,
         "desc_acao": "Elaboração da versão inicial do Plano e realização de consultas públicas.",
-        "orgao_acao": "SMIT"
+        "orgao_acao": [
+            "SMIT"
+        ]
     },
     {
         "numero_meta": 113,
         "numero_acao": 113.05,
-        "desc_acao": "Publicação da versão final do Plano e lançamento de painel com metas, ações e\nindicadores.",
-        "orgao_acao": "SMIT"
+        "desc_acao": "Publicação da versão final do Plano e lançamento de painel com metas, ações e indicadores.",
+        "orgao_acao": [
+            "SMIT"
+        ]
     },
     {
         "numero_meta": 113,
         "numero_acao": 113.06,
         "desc_acao": "Implantação de dois projetos-piloto do Plano.",
-        "orgao_acao": "SMIT"
+        "orgao_acao": [
+            "SMIT"
+        ]
     },
     {
         "numero_meta": 114,
         "numero_acao": 114.01,
         "desc_acao": "Revisão e atualização das Cartas de Serviços.",
-        "orgao_acao": "SMIT"
+        "orgao_acao": [
+            "SMIT"
+        ]
     },
     {
         "numero_meta": 114,
         "numero_acao": 114.02,
-        "desc_acao": "Expansão dos serviços ofertados pelo Portal 156 e Chat SP156, com a digitalização\nde 100 serviços adicionais com foco em saúde, educação e zeladoria.",
-        "orgao_acao": "SMIT"
+        "desc_acao": "Expansão dos serviços ofertados pelo Portal 156 e Chat SP156, com a digitalização de 100 serviços adicionais com foco em saúde, educação e zeladoria.",
+        "orgao_acao": [
+            "SMIT"
+        ]
     },
     {
         "numero_meta": 114,
         "numero_acao": 114.03,
-        "desc_acao": "Lançamento de nova versão do aplicativo SP156 com atendimento por IA, visual\nrenovado e integração com mais serviços.",
-        "orgao_acao": "SMIT"
+        "desc_acao": "Lançamento de nova versão do aplicativo SP156 com atendimento por IA, visual renovado e integração com mais serviços.",
+        "orgao_acao": [
+            "SMIT"
+        ]
     },
     {
         "numero_meta": 114,
         "numero_acao": 114.04,
         "desc_acao": "Integração de todos os canais de atendimento com histórico unificado do cidadão.",
-        "orgao_acao": "SMIT"
+        "orgao_acao": [
+            "SMIT"
+        ]
     },
     {
         "numero_meta": 114,
         "numero_acao": 114.05,
         "desc_acao": "Atingir no mínimo 90% de satisfação dos usuários nos canais digitais do SP156.",
-        "orgao_acao": "SMIT"
+        "orgao_acao": [
+            "SMIT"
+        ]
     },
     {
         "numero_meta": 115,
         "numero_acao": 115.01,
-        "desc_acao": "Criação da Unidade Avançada com equipe técnica formada e início de operação com\npelo menos uma solução-piloto implantada.",
-        "orgao_acao": "SMIT"
+        "desc_acao": "Criação da Unidade Avançada com equipe técnica formada e início de operação com pelo menos uma solução-piloto implantada.",
+        "orgao_acao": [
+            "SMIT"
+        ]
     },
     {
         "numero_meta": 115,
         "numero_acao": 115.02,
-        "desc_acao": "Desenvolvimento de plataforma com catálogo de soluções de IA e apoio aos órgãos\nmunicipais na implementação de IA em serviços públicos.",
-        "orgao_acao": "SMIT"
+        "desc_acao": "Desenvolvimento de plataforma com catálogo de soluções de IA e apoio aos órgãos municipais na implementação de IA em serviços públicos.",
+        "orgao_acao": [
+            "SMIT"
+        ]
     },
     {
         "numero_meta": 115,
         "numero_acao": 115.03,
         "desc_acao": "Criação do 1º Desafio de IA para Serviços Públicos, com premiação.",
-        "orgao_acao": "SMIT"
+        "orgao_acao": [
+            "SMIT"
+        ]
     },
     {
         "numero_meta": 115,
         "numero_acao": 115.04,
         "desc_acao": "Formação de 500 servidores em cursos de IA, com certificação.",
-        "orgao_acao": "SMIT"
+        "orgao_acao": [
+            "SMIT"
+        ]
     },
     {
         "numero_meta": 115,
         "numero_acao": 115.05,
         "desc_acao": "Apoio a startups especializadas em IA.",
-        "orgao_acao": "SMIT"
+        "orgao_acao": [
+            "SMIT"
+        ]
     },
     {
         "numero_meta": 116,
         "numero_acao": 116.01,
-        "desc_acao": "Inauguração do Centro de Inovação em local estratégico com coworking gratuito\ne agenda de eventos.",
-        "orgao_acao": "SMIT"
+        "desc_acao": "Inauguração do Centro de Inovação em local estratégico com coworking gratuito e agenda de eventos.",
+        "orgao_acao": [
+            "SMIT"
+        ]
     },
     {
         "numero_meta": 116,
         "numero_acao": 116.02,
-        "desc_acao": "Implantação de três laboratórios temáticos: GovTech, Cidades Sustentáveis e\nMobilidade Inteligente.",
-        "orgao_acao": "SMIT"
+        "desc_acao": "Implantação de três laboratórios temáticos: GovTech, Cidades Sustentáveis e Mobilidade Inteligente.",
+        "orgao_acao": [
+            "SMIT"
+        ]
     },
     {
         "numero_meta": 116,
         "numero_acao": 116.03,
         "desc_acao": "Lançamento de edital para incubação de 10 startups com acompanhamento técnico.",
-        "orgao_acao": "SMIT"
+        "orgao_acao": [
+            "SMIT"
+        ]
     },
     {
         "numero_meta": 116,
         "numero_acao": 116.04,
-        "desc_acao": "Expansão para três polos regionais em subprefeituras com estrutura de atendimento\ne formação.",
-        "orgao_acao": "SMIT"
+        "desc_acao": "Expansão para três polos regionais em subprefeituras com estrutura de atendimento e formação.",
+        "orgao_acao": [
+            "SMIT"
+        ]
     },
     {
         "numero_meta": 117,
         "numero_acao": 117.01,
-        "desc_acao": "Implantação de sistema de gestão alinhado à ISO 37101 e em indicadores ISO\nrelacionados, e publicação do plano de indicadores anuais.",
-        "orgao_acao": "SMIT"
+        "desc_acao": "Implantação de sistema de gestão alinhado à ISO 37101 e em indicadores ISO relacionados, e publicação do plano de indicadores anuais.",
+        "orgao_acao": [
+            "SMIT"
+        ]
     },
     {
         "numero_meta": 117,
         "numero_acao": 117.02,
         "desc_acao": "Lançamento de painel público com métricas ISO em tempo real.",
-        "orgao_acao": "SMIT"
+        "orgao_acao": [
+            "SMIT"
+        ]
     },
     {
         "numero_meta": 117,
         "numero_acao": 117.03,
-        "desc_acao": "Publicação de relatório anual com avanços e ações concretas associadas\nà certificação.",
-        "orgao_acao": "SMIT"
+        "desc_acao": "Publicação de relatório anual com avanços e ações concretas associadas à certificação.",
+        "orgao_acao": [
+            "SMIT"
+        ]
     },
     {
         "numero_meta": 117,
         "numero_acao": 117.04,
         "desc_acao": "Parcerias internacionais com cidades certificadas para intercâmbio de boas práticas.",
-        "orgao_acao": "SMIT"
+        "orgao_acao": [
+            "SMIT"
+        ]
     },
     {
         "numero_meta": 118,
         "numero_acao": 118.01,
         "desc_acao": "Alcançar nota mínima 9,5 no Indicador de Transparência Ativa.",
-        "orgao_acao": "CGM"
+        "orgao_acao": [
+            "CGM"
+        ]
     },
     {
         "numero_meta": 118,
         "numero_acao": 118.02,
         "desc_acao": "Alcançar nota mínima 9,5 no Indicador de Transparência Passiva.",
-        "orgao_acao": "CGM"
+        "orgao_acao": [
+            "CGM"
+        ]
     },
     {
         "numero_meta": 118,
         "numero_acao": 118.03,
         "desc_acao": "Alcançar nota mínima 4,0 no Indicador de Dados Abertos.",
-        "orgao_acao": "CGM"
+        "orgao_acao": [
+            "CGM"
+        ]
     },
     {
         "numero_meta": 118,
         "numero_acao": 118.04,
         "desc_acao": "Criação do Conselho de Usuários de Serviços Públicos (CONDEUSP) na plataforma Participe+.",
-        "orgao_acao": "CGM"
+        "orgao_acao": [
+            "CGM"
+        ]
     },
     {
         "numero_meta": 118,
         "numero_acao": 118.05,
-        "desc_acao": "Desenvolver o Programa de Acreditação da Rede de Ouvidoria SUS, certificando ao menos 40%\ndas unidades.",
-        "orgao_acao": "CGM"
+        "desc_acao": "Desenvolver o Programa de Acreditação da Rede de Ouvidoria SUS, certificando ao menos 40% das unidades.",
+        "orgao_acao": [
+            "CGM"
+        ]
     },
     {
         "numero_meta": 118,
         "numero_acao": 118.06,
-        "desc_acao": "Realização da campanha ParticipaSP: Conheça e Transforme!, incentivando participação\nsocial e acesso à informação.",
-        "orgao_acao": "CGM"
+        "desc_acao": "Realização da campanha ParticipaSP: Conheça e Transforme!, incentivando participação social e acesso à informação.",
+        "orgao_acao": [
+            "CGM"
+        ]
     },
     {
         "numero_meta": 118,
         "numero_acao": 118.07,
-        "desc_acao": "Promoção de 20 eventos formativos sobre governança pública e controle interno com escolas\ne universidades (Projeto Conhecendo a CGM).",
-        "orgao_acao": "CGM"
+        "desc_acao": "Promoção de 20 eventos formativos sobre governança pública e controle interno com escolas e universidades (Projeto Conhecendo a CGM).",
+        "orgao_acao": [
+            "CGM"
+        ]
     },
     {
         "numero_meta": 118,
         "numero_acao": 118.08,
-        "desc_acao": "Divulgação de informações semestrais sobre execução de obras públicas municipais no portal\nObras Abertas.",
-        "orgao_acao": "CGM; SEPLAN"
+        "desc_acao": "Divulgação de informações semestrais sobre execução de obras públicas municipais no portal Obras Abertas.",
+        "orgao_acao": [
+            "CGM",
+            "SEPLAN"
+        ]
     },
     {
         "numero_meta": 119,
         "numero_acao": 119.01,
         "desc_acao": "Elaboração da Política de Gestão de Riscos para Administração Direta.",
-        "orgao_acao": "CGM"
+        "orgao_acao": [
+            "CGM"
+        ]
     },
     {
         "numero_meta": 119,
         "numero_acao": 119.02,
         "desc_acao": "Alcançar nota mínima 9,0 no Indicador de Reclamações.",
-        "orgao_acao": "CGM"
+        "orgao_acao": [
+            "CGM"
+        ]
     },
     {
         "numero_meta": 119,
         "numero_acao": 119.03,
         "desc_acao": "Alcançar nota mínima 7,0 no Indicador de Denúncias.",
-        "orgao_acao": "CGM"
+        "orgao_acao": [
+            "CGM"
+        ]
     },
     {
         "numero_meta": 119,
         "numero_acao": 119.04,
         "desc_acao": "Alcançar nota mínima 9,0 no Indicador de Contratos Emergenciais.",
-        "orgao_acao": "CGM"
+        "orgao_acao": [
+            "CGM"
+        ]
     },
     {
         "numero_meta": 119,
         "numero_acao": 119.05,
-        "desc_acao": "Desenvolvimento e implementação do Indicador de Maturidade do Programa de Integridade\ne Boas Práticas (IM-PIBP).",
-        "orgao_acao": "CGM"
+        "desc_acao": "Desenvolvimento e implementação do Indicador de Maturidade do Programa de Integridade e Boas Práticas (IM-PIBP).",
+        "orgao_acao": [
+            "CGM"
+        ]
     },
     {
         "numero_meta": 119,
         "numero_acao": 119.06,
-        "desc_acao": "Implementação do Programa de Integridade e Boas Práticas (PIBP) nas fundações e autarquias\nmunicipais.",
-        "orgao_acao": "CGM"
+        "desc_acao": "Implementação do Programa de Integridade e Boas Práticas (PIBP) nas fundações e autarquias municipais.",
+        "orgao_acao": [
+            "CGM"
+        ]
     },
     {
         "numero_meta": 119,
         "numero_acao": 119.07,
-        "desc_acao": "Desenvolvimento e implementação do Programa de Integridade e Governança Estatal (PIGE)\nnas empresas municipais, baseada nos princípios ESG (Sustentabilidade Ambiental, Social\ne de Governança).",
-        "orgao_acao": "CGM"
+        "desc_acao": "Desenvolvimento e implementação do Programa de Integridade e Governança Estatal (PIGE) nas empresas municipais, baseada nos princípios ESG (Sustentabilidade Ambiental, Social e de Governança).",
+        "orgao_acao": [
+            "CGM"
+        ]
     },
     {
         "numero_meta": 119,
         "numero_acao": 119.08,
-        "desc_acao": "Promover eventos de orientação e treinamento para viabilizar a implementação dos Programas\n(PIBP e PIGE) nas fundações, autarquias e empresas municipais.",
-        "orgao_acao": "CGM"
+        "desc_acao": "Promover eventos de orientação e treinamento para viabilizar a implementação dos Programas (PIBP e PIGE) nas fundações, autarquias e empresas municipais.",
+        "orgao_acao": [
+            "CGM"
+        ]
     },
     {
         "numero_meta": 120,
         "numero_acao": 120.01,
-        "desc_acao": "Lançamento de Metodologia de Diagnóstico de Maturidade em Privacidade e Proteção\nde Dados Pessoais.",
-        "orgao_acao": "CGM"
+        "desc_acao": "Lançamento de Metodologia de Diagnóstico de Maturidade em Privacidade e Proteção de Dados Pessoais.",
+        "orgao_acao": [
+            "CGM"
+        ]
     },
     {
         "numero_meta": 120,
         "numero_acao": 120.02,
         "desc_acao": "Implementação de painel para divulgação dos resultados do Diagnóstico de Maturidade.",
-        "orgao_acao": "CGM"
+        "orgao_acao": [
+            "CGM"
+        ]
     },
     {
         "numero_meta": 120,
         "numero_acao": 120.03,
         "desc_acao": "Promoção de 8 ações de capacitação e publicação de guia orientativo para as fases do Diagnóstico de Maturidade e sobre a implementação do Programa de Governança.",
-        "orgao_acao": "CGM"
+        "orgao_acao": [
+            "CGM"
+        ]
     },
     {
         "numero_meta": 120,
         "numero_acao": 120.04,
-        "desc_acao": "Condução, junto aos órgãos, de ciclos anuais de autoavaliação do Diagnóstico\nde Maturidade.",
-        "orgao_acao": "CGM"
+        "desc_acao": "Condução, junto aos órgãos, de ciclos anuais de autoavaliação do Diagnóstico de Maturidade.",
+        "orgao_acao": [
+            "CGM"
+        ]
     },
     {
         "numero_meta": 120,
         "numero_acao": 120.05,
-        "desc_acao": "Realização de análise sobre as autoavaliações de quatro órgãos estrategicamente\ndefinidos, considerando a criticidade do tratamento de dados pessoais no âmbito do\nDiagnóstico de Maturidade.",
-        "orgao_acao": "CGM"
+        "desc_acao": "Realização de análise sobre as autoavaliações de quatro órgãos estrategicamente definidos, considerando a criticidade do tratamento de dados pessoais no âmbito do Diagnóstico de Maturidade.",
+        "orgao_acao": [
+            "CGM"
+        ]
     },
     {
         "numero_meta": 120,
         "numero_acao": 120.06,
-        "desc_acao": "Alcançar nota mínima 4,0 no Indicador de Ações Preliminares em Privacidade e Proteção\nde Dados Pessoais.",
-        "orgao_acao": "CGM"
+        "desc_acao": "Alcançar nota mínima 4,0 no Indicador de Ações Preliminares em Privacidade e Proteção de Dados Pessoais.",
+        "orgao_acao": [
+            "CGM"
+        ]
     },
     {
         "numero_meta": 121,
         "numero_acao": 121.01,
         "desc_acao": "Implementação da ferramenta OPTIMUS (assistente jurídico).",
-        "orgao_acao": "SF"
+        "orgao_acao": [
+            "SF"
+        ]
     },
     {
         "numero_meta": 121,
         "numero_acao": 121.02,
         "desc_acao": "Desenvolvimento e implementação de mais uma ferramenta de IA na Fazenda.",
-        "orgao_acao": "SF"
+        "orgao_acao": [
+            "SF"
+        ]
     },
     {
         "numero_meta": 122,
         "numero_acao": 122.01,
         "desc_acao": "Instituição de um Fundo Especial Imobiliário.",
-        "orgao_acao": "SF"
+        "orgao_acao": [
+            "SF"
+        ]
     },
     {
         "numero_meta": 122,
         "numero_acao": 122.02,
         "desc_acao": "Instituição de um Fundo Imobiliário Regular.",
-        "orgao_acao": "SF"
+        "orgao_acao": [
+            "SF"
+        ]
     },
     {
         "numero_meta": 123,
         "numero_acao": 123.01,
         "desc_acao": "Redução de despesas com aluguéis pagos a particulares por órgãos da Prefeitura.",
-        "orgao_acao": "SEGES"
+        "orgao_acao": [
+            "SEGES"
+        ]
     },
     {
         "numero_meta": 123,
         "numero_acao": 123.02,
         "desc_acao": "Integração de bancos de dados para gestão patrimonial eficiente.",
-        "orgao_acao": "SEGES"
+        "orgao_acao": [
+            "SEGES"
+        ]
     },
     {
         "numero_meta": 123,
         "numero_acao": 123.03,
         "desc_acao": "Adoção de ferramentas tecnológicas para gestão patrimonial imobiliária.",
-        "orgao_acao": "SEGES"
+        "orgao_acao": [
+            "SEGES"
+        ]
     },
     {
         "numero_meta": 123,
         "numero_acao": 123.04,
         "desc_acao": "Inclusão de áreas desapropriadas no sistema georreferenciado GeoPatri.",
-        "orgao_acao": "SEGES"
+        "orgao_acao": [
+            "SEGES"
+        ]
     },
     {
         "numero_meta": 124,
         "numero_acao": 124.01,
-        "desc_acao": "Disponibilização de 35 procedimentos auxiliares de contratação (20% relacionados a\ninovação/sustentabilidade).",
-        "orgao_acao": "SEGES"
+        "desc_acao": "Disponibilização de 35 procedimentos auxiliares de contratação (20% relacionados a inovação/sustentabilidade).",
+        "orgao_acao": [
+            "SEGES"
+        ]
     },
     {
         "numero_meta": 124,
         "numero_acao": 124.02,
         "desc_acao": "Disponibilização de 4 instrumentos padronizados de contratação.",
-        "orgao_acao": "SEGES"
+        "orgao_acao": [
+            "SEGES"
+        ]
     },
     {
         "numero_meta": 124,
         "numero_acao": 124.03,
         "desc_acao": "Criação do CADTERC  Caderno Municipal de Serviços Terceirizados.",
-        "orgao_acao": "SEGES"
+        "orgao_acao": [
+            "SEGES"
+        ]
     },
     {
         "numero_meta": 125,
         "numero_acao": 125.01,
-        "desc_acao": "Ofertar 12 ações formativas nos eixos de Gestão de Pessoas, Transformação Digital e\nInovação no Setor Público. ",
-        "orgao_acao": "SEGES"
+        "desc_acao": "Ofertar 12 ações formativas nos eixos de Gestão de Pessoas, Transformação Digital e Inovação no Setor Público.",
+        "orgao_acao": [
+            "SEGES"
+        ]
     },
     {
         "numero_meta": 125,
         "numero_acao": 125.02,
         "desc_acao": "Inclusão da educação socioemocional entre as competências ensinadas.",
-        "orgao_acao": "SEGES"
+        "orgao_acao": [
+            "SEGES"
+        ]
     },
     {
         "numero_meta": 125,
         "numero_acao": 125.03,
         "desc_acao": "Emitir 20 mil certificações.",
-        "orgao_acao": "SEGES"
+        "orgao_acao": [
+            "SEGES"
+        ]
     },
     {
         "numero_meta": 126,
         "numero_acao": 126.01,
         "desc_acao": "Plano de customização e implantação.",
-        "orgao_acao": "SEGES"
+        "orgao_acao": [
+            "SEGES"
+        ]
     },
     {
         "numero_meta": 126,
         "numero_acao": 126.02,
         "desc_acao": "Desenvolvimento de sistemas.",
-        "orgao_acao": "SEGES"
+        "orgao_acao": [
+            "SEGES"
+        ]
     },
     {
         "numero_meta": 126,
         "numero_acao": 126.03,
         "desc_acao": "Capacitação e gestão da mudança.",
-        "orgao_acao": "SEGES"
+        "orgao_acao": [
+            "SEGES"
+        ]
     }
 ]
