@@ -1,0 +1,36 @@
+{
+  "visaoGeral": {
+    "universoSP": {
+      "titulo": "Universo SP",
+      "corPrincipal":"#288140",
+      "metasPorEixo": 52,
+      "totalMetas": 126,
+      "orcamento": 31700000000,
+      "orcamentoTotal": 48841200000
+    },
+    "viverSP": {
+      "titulo": "Viver São Paulo",
+      "corPrincipal":"#F16622",
+      "metasPorEixo": 40,
+      "totalMetas": 126,
+      "orcamento": 16500000000,
+      "orcamentoTotal": 48841200000
+    },
+    "capitalFuturo": {
+      "titulo": "Capital do Futuro",
+      "corPrincipal":"#792D49",
+      "metasPorEixo": 35,
+      "totalMetas": 126,
+      "orcamento": 294400000,
+      "orcamentoTotal": 48841200000
+    },
+    "cidadeEmpreeendedora": {
+      "titulo": "Cidade Empreendedora",
+      "corPrincipal":"#0000AB",
+      "metasPorEixo": 17,
+      "totalMetas": 126,
+      "orcamento": 346800000,
+      "orcamentoTotal": 48841300000
+    }
+  }
+}
