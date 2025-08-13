@@ -1,12 +1,25 @@
 from django.contrib import admin
 
 from .models.eixos import Eixo, Tema
-from .models.metas import Meta, MetaOrgao, AcaoEstrategica, MetaSubprefeitura
+from .models.metas import Meta, MetaOrgao, MetaSubprefeitura, AcaoEstrategica, AcaoOrgao
 from cadastros_basicos.models.estrutura_administrativa import Orgao
 
 # Register your models here.
 admin.site.register(Tema)
-admin.site.register(AcaoEstrategica)
+
+
+
+class AcaoOrgaoInline(admin.TabularInline):
+    model = AcaoOrgao
+    extra = 1
+    verbose_name = "Órgão Responsável"
+    verbose_name_plural = "Órgãos Responsáveis"
+
+@admin.register(AcaoEstrategica)
+class AcaoEstrategicaAdmin(admin.ModelAdmin):
+    list_display = ('numero', 'descricao', 'siglas_orgaos_responsaveis')
+    search_fields = ('numero', 'descricao', 'siglas_orgaos_responsaveis')
+    inlines = [AcaoOrgaoInline]
 
 class EixoInline(admin.TabularInline):
     model = Tema
