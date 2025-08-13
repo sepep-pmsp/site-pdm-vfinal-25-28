@@ -1,0 +1,121 @@
+[
+    {
+        "numero" : 1,
+        "nome" : "Erradicação da Pobreza",
+        "descricao" : "Erradicar a pobreza em todas as formas e em todos os lugares",
+        "logo_colorido" : "logo_ods_colorido/ods_01.png",
+        "cor_principal" : "#E5243B"
+    },
+    {
+        "numero" : 2,
+        "nome" : "Fome zero e agricultura sustentável ",
+        "descricao" : "Erradicar a fome, alcançar a segurança alimentar, melhorar a nutrição e promover a agricultura sustentável",
+        "logo_colorido" : "logo_ods_colorido/ods_02.png",
+        "cor_principal" : "#dda63a"
+    },
+    {
+        "numero" : 3,
+        "nome" : "Saúde e Bem-Estar",
+        "descricao" : "Garantir o acesso à saúde de qualidade e promover o bem-estar para todos, em todas as idades",
+        "logo_colorido" : "logo_ods_colorido/ods_03.png",
+        "cor_principal" : "#4c9f38"
+    },
+    {
+        "numero" : 4,
+        "nome" : "Educação de qualidade ",
+        "descricao" : "Garantir o acesso à educação inclusiva, de qualidade e equitativa, e promover oportunidades de aprendizagem ao longo da vida para todos",
+        "logo_colorido" : "logo_ods_colorido/ods_04.png",
+        "cor_principal" : "#c5192d"
+    },
+    {
+        "numero" : 5,
+        "nome" : "Igualdade de gênero",
+        "descricao" : "Alcançar a igualdade de gênero e empoderar todas as mulheres e meninas",
+        "logo_colorido" : "logo_ods_colorido/ods_05.png",
+        "cor_principal" : "#ff3a21"
+    },
+    {
+        "numero" : 6,
+        "nome" : "Água potável e saneamento",
+        "descricao" : "Garantir a disponibilidade e a gestão sustentável da água potável e do saneamento para todos",
+        "logo_colorido" : "logo_ods_colorido/ods_06.png",
+        "cor_principal" : "#26bde2"
+    },
+    {
+        "numero" : 7,
+        "nome" : "Energia limpa e acessível",
+        "descricao" : "Garantir o acesso a fontes de energia fiáveis, sustentáveis e modernas para todos",
+        "logo_colorido" : "logo_ods_colorido/ods_07.png",
+        "cor_principal" : "#fcc30b"
+    },    
+    {
+        "numero" : 8,
+        "nome" : "Trabalho decente e crescimento econômico",
+        "descricao" : "Promover o crescimento econômico inclusivo e sustentável, o emprego pleno e produtivo e o trabalho digno para todos",
+        "logo_colorido" : "logo_ods_colorido/ods_08.png",
+        "cor_principal" : "#a21942"
+    },    
+    {
+        "numero" : 9,
+        "nome" : "Indústria, inovação e infraestrutura",
+        "descricao" : "Construir infraestruturas resilientes, promover a industrialização inclusiva e sustentável e fomentar a inovação",
+        "logo_colorido" : "logo_ods_colorido/ods_09.png",
+        "cor_principal" : "#fd6925"
+    },    
+    {
+        "numero" : 10,
+        "nome" : "Redução das desigualdades",
+        "descricao" : "Reduzir as desigualdades no interior dos países e entre países",
+        "logo_colorido" : "logo_ods_colorido/ods_10.png",
+        "cor_principal" : "#dd1367"
+    },    
+    {
+        "numero" : 11,
+        "nome" : "Cidades e comunidades sustentáveis",
+        "descricao" : "Tornar as cidades e comunidades mais inclusivas, seguras, resilientes e sustentáveis",
+        "logo_colorido" : "logo_ods_colorido/ods_11.png",
+        "cor_principal" : "#fd9d24"
+    },  
+    {
+        "numero" : 12,
+        "nome" : "Consumo e produção responsáveis",
+        "descricao" : "Garantir padrões de consumo e produção sustentáveis",
+        "logo_colorido" : "logo_ods_colorido/ods_12.png",
+        "cor_principal" : "#bf8b2e"
+    },      
+    {
+        "numero" : 13,
+        "nome" : "Ação contra a mudança global do clima",
+        "descricao" : "Adotar medidas urgentes para combater as alterações climáticas e os seus impactos",
+        "logo_colorido" : "logo_ods_colorido/ods_13.png",
+        "cor_principal" : "#3f7e44"
+    },    
+    {
+        "numero" : 14,
+        "nome" : "Vida na água",
+        "descricao" : "Conservar e utilizar de forma sustentável os oceanos, mares e recursos marinhos para o desenvolvimento sustentável",
+        "logo_colorido" : "logo_ods_colorido/ods_14.png",
+        "cor_principal" : "#0a97d9"
+    },
+    {
+        "numero" : 15,
+        "nome" : "Vida terrestre",
+        "descricao" : "Proteger, restaurar e promover o uso sustentável dos ecossistemas terrestres, gerir de forma sustentável as florestas, combater a desertificação, e reverter a degradação da terra e a perda de biodiversidade",
+        "logo_colorido" : "logo_ods_colorido/ods_15.png",
+        "cor_principal" : "#56c02b"
+    },
+    {
+        "numero" : 16,
+        "nome" : "Paz, justiça e instituições eficazes",
+        "descricao" : "Promover sociedades pacíficas e inclusivas para o desenvolvimento sustentável, proporcionar acesso à justiça para todos e construir instituições eficazes, responsáveis e inclusivas em todos os níveis",
+        "logo_colorido" : "logo_ods_colorido/ods_16.png",
+        "cor_principal" : "#00689d"
+    },
+    {
+        "numero" : 17,
+        "nome" : "Parcerias e meios de implementação",
+        "descricao" : "Fortalecer a implementação dos meios de execução e revitalizar a parceria global para o desenvolvimento sustentável",
+        "logo_colorido" : "logo_ods_colorido/ods_17.png",
+        "cor_principal" : "#19486a"
+    }
+]
