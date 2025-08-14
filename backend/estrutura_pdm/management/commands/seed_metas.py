@@ -26,6 +26,8 @@ class Command(BaseCommand):
                 numero=item['numero'],
                 destaque=item['destaque'],
                 descricao=item['descricao'],
+                projecao=item['projecao'],
+                indicador=item['indicador'],
                 eixo=eixo,
                 tema=eixo.temas.first()
             )
