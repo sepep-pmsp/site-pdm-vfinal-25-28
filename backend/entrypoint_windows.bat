@@ -40,6 +40,15 @@ python manage.py seed_about_pdm
 if errorlevel 1 exit /b %errorlevel%
 
 python manage.py seed_metas
+if errorlevel 1 exit /b %errorlevel%
+
+
+python manage.py seed_acoes
+if errorlevel 1 exit /b %errorlevel%
+
+python manage.py seed_planos_setoriais
+if errorlevel 1 exit /b %errorlevel%
+
 
 echo Iniciando servidor
 python manage.py runserver 0.0.0.0:8000
