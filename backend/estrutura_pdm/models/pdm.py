@@ -46,6 +46,11 @@ class PDM(models.Model):
     def periodo_str(self):
 
         return f"{self.ano_inicio}/{self.ano_fim}"
+    
+    @property
+    def is_pdm_atual(self):
+        ano_atual = datetime.now().year
+        return self.ano_inicio <= ano_atual <= self.ano_fim
 
     def clean(self):
         errors = {}
@@ -73,7 +78,7 @@ class PDM(models.Model):
     class Meta:
         verbose_name = "PDM"
         verbose_name_plural = "PDMs"
-        ordering = ['nome']
+        ordering = ['ano_fim']
         constraints = [
             models.UniqueConstraint(fields=['ano_inicio', 'ano_fim'], name='unique_periodo_pdm')
         ]

@@ -1,5 +1,8 @@
+import nested_admin
 from django.contrib import admin, messages
-from .models import AboutPDM, Noticia, ParagrafoAbout, CartaPrefeito, ParagrafoCartaPrefeito
+from .models import (AboutPDM, ParagrafoAbout, CartaPrefeito, ParagrafoCartaPrefeito, 
+                     Noticia,
+                     Historico, CardHistorico, ItemCard)
 from django.core.exceptions import ValidationError
 from django.forms.models import BaseInlineFormSet
 # Register your models here.
@@ -108,5 +111,42 @@ class NoticiaAdmin(admin.ModelAdmin):
         if not obj.pk:
             obj.criado_por = request.user
         obj.modificado_por = request.user
+
+        super().save_model(request, obj, form, change)
+
+
+class ItemCardHistoricoInline(nested_admin.NestedTabularInline):
+    model = ItemCard
+    extra = 1
+    verbose_name = "Item do Card da Seção Histórico"
+    verbose_name_plural = "Itens do Card da Seção Histórico"
+
+class CardHistoricoInline(nested_admin.NestedStackedInline):
+    model = CardHistorico
+    extra = 1
+    verbose_name = "Card do Histórico"
+    verbose_name_plural = "Cards do Histórico"
+    inlines = [ItemCardHistoricoInline]
+
+@admin.register(Historico)
+class HistoricoAdmin(nested_admin.NestedModelAdmin):
+    list_display = ('titulo', 'descricao', 'criado_em', 'criado_por')
+    readonly_fields =  ('criado_em', 'criado_por', 'modificado_em', 'modificado_por')
+    inlines = [CardHistoricoInline]
+
+    def save_model(self, request, obj, form, change):
+        if not obj.pk:
+            obj.criado_por = request.user
+        obj.modificado_por = request.user
+
+        if obj.published:
+            outras_publicadas = Historico.objects.filter(published=True).exclude(pk=obj.pk)
+            if outras_publicadas.exists():
+                self.message_user(
+                    request,
+                    "Outra seção publicada já existe. Ela será despublicada automaticamente.",
+                    level=messages.WARNING
+                )
+                outras_publicadas.update(published=False)
 
         super().save_model(request, obj, form, change)
