@@ -2,14 +2,17 @@
   {
     "id": "U01",
     "numeroMeta": "01",
-    "eixo": "Universo SP",
+    "eixo": "universo SP",
+    "subeixo": "natureza e ambiente",
     "cor_principal_eixo": "#288140",
     "cor_secundaria_eixo": "#3DB54A",
-    "indicadorDaMeta":"Número de novos parques entregues.",
-    "temaODS": ["Erradicação da Pobreza"],
+    "indicadorDaMeta": "Número de novos parques entregues.",
     "titulo_eixo": "<strong>Criar 10 novos parques</strong><br> para ampliar áreas de lazer e fortalecer a convivência com a natureza.",
+    "planos_vinculados": "plano plurianual",
+    "subprefeitura_responsavel": "mooca",
+    "temaODS": ["erradicação da pobreza"],
     "tituloCard": "Colocar esse texto na api, como titulo principal, ",
-    "contunuacaoTituloCard":"aqui o texto é a continuação já que esse texto entra como outra font.",
+    "contunuacaoTituloCard": "aqui o texto é a continuação já que esse texto entra como outra font.",
     "projecao": {
       "titulo": "Projeção",
       "descricao": "Até 2028, pretendemos entregar 10 novos parques em regiões estratégicas."
@@ -19,12 +22,7 @@
       "itens": [
         "Entrega de uma Unidade Móvel da Mulher.",
         "Entrega de uma nova Casa de Passagem.",
-        "Implantação de dois protocolos integrados de atendimento a mulheres vítimas de violência.",
-        "Criação da Estratégia Municipal de Atendimento às mulheres em situação de violência em contexto de cenas abertas de uso de drogas.",
-        "Qualificação da capacidade operacional dos 15 Centros de Defesa e Convivência da Mulher a partir da equiparação ao modelo das Casas da Mulher.",
-        "Ampliação e reformulação do Programa Tem Saída, voltado à autonomia financeira e empregabilidade da mulher em situação de violência.",
-        "Implementação do Programa Tempo de Despertar, para reflexão, conscientização e responsabilização de agressores.",
-        "Novo modelo de avaliação de satisfação pela usuária e implantação do Sistema Integrado de Atendimentos em Direitos Humanos (SIAD) na Rede de Direitos Humanos de Enfrentamento à Violência contra a Mulher."
+        "Implantação de dois protocolos integrados de atendimento a mulheres vítimas de violência."
       ]
     },
     "indicador": {
@@ -32,13 +30,7 @@
       "descricao": "Número de parques entregues"
     },
     "orgaosResponsaveis": ["SMIT", "SIURB"],
-    "regionalizacao": {
-      "titulo_regionalizacao_eixo": "REGIONALIZAÇÃO",
-      "subtitulo_regionalização_eixo":"Esta é uma meta regionalizada.",
-      "descricao": "Ao lado estão mais detalhes de como ela está distribuída nas diferentes regiões de São Paulo, ",
-      "nota": "Para saber mais sobre as metas regionalizáveis, clique aqui.",
-      "imagem": "https://i.makeagif.com/media/5-17-2021/YRo_E-.gif"
-    },
+    "regionalizacao": null,
     "rodape_eixo": {
       "titulo_rodape_eixo": "ESSA META FAZ PARTE DO EIXO UNIVERSO SP.",
       "descricao_rodape_eixo": "Neste eixo, São Paulo é pensada em sua dimensão física e ambiental. Clique para conferir todas as metas."
@@ -47,13 +39,17 @@
   {
     "id": "U02",
     "numeroMeta": "02",
-    "eixo": "Universo SP",
+    "eixo": "universo SP",
+    "subeixo": "habitação de qualidade",
     "cor_principal_eixo": "#288140",
     "cor_secundaria_eixo": "#3DB54A",
     "titulo_eixo": "<strong>Revitalizar 5 rios urbanos</strong> para melhorar a drenagem e a paisagem natural.",
-    "subtitulo": "<strong>COLOCAR NA API PARA ESSA PARTE DO TEXTO RECEBER E TRANSFORMAR EM UPPERCASE</strong> aqui o texto fica normal.",
-    "indicadorDaMeta":"Número de novos parques entregues.",
-    "temaODS": ["Saúde e bem-estar"],
+    "indicadorDaMeta": "Número de rios revitalizados.",
+    "temaODS": ["fome zero e agricultura sustentável"],
+    "planos_vinculados": "plano diretor estratégico",
+    "subprefeitura_responsavel": "mooca",
+    "tituloCard": "Colocar esse texto na api, como titulo principal, ",
+    "contunuacaoTituloCard": "aqui o texto é a continuação já que esse texto entra como outra font.",
     "projecao": {
       "titulo": "Projeção",
       "descricao": "A revitalização vai reduzir pontos de alagamento e criar áreas de lazer próximas aos rios."
@@ -76,13 +72,17 @@
   {
     "id": "U03",
     "numeroMeta": "03",
-    "eixo": "Universo SP",
+    "eixo": "universo SP",
+    "subeixo": "infraestrutura e integração",
     "cor_principal_eixo": "#288140",
     "cor_secundaria_eixo": "#3DB54A",
     "titulo_eixo": "<strong>Implantar 50 km de ciclovias</strong> integradas aos transportes públicos.",
-    "subtitulo": "<strong>COLOCAR NA API PARA ESSA PARTE DO TEXTO RECEBER E TRANSFORMAR EM UPPERCASE</strong> aqui o texto fica normal.",
-    "indicadorDaMeta":"Número de novos parques entregues.",
-    "temaODS": ["Vida Terrestre"],
+    "indicadorDaMeta": "Quilômetros de ciclovias implantadas",
+    "temaODS": ["saúde e bem-estar"],
+    "planos_vinculados": "plano SP 2040",
+    "subprefeitura_responsavel": "mooca",
+    "tituloCard": "Colocar esse texto na api, como titulo principal, ",
+    "contunuacaoTituloCard": "aqui o texto é a continuação já que esse texto entra como outra font.",
     "projecao": {
       "titulo": "Projeção",
       "descricao": "A cidade terá 50 km adicionais de ciclovias seguras e sinalizadas até 2028."
@@ -95,7 +95,7 @@
     "orgaosResponsaveis": ["SMT"],
     "regionalizacao": {
       "titulo_regionalizacao_eixo": "REGIONALIZAÇÃO",
-      "subtitulo_regionalização_eixo":"Esta é uma meta regionalizada.",
+      "subtitulo_regionalização_eixo": "Esta é uma meta regionalizada.",
       "descricao": "Ao lado estão mais detalhes de como ela está distribuída nas diferentes regiões de São Paulo, ",
       "nota": "Para saber mais sobre as metas regionalizáveis, clique aqui.",
       "imagem": "https://i.makeagif.com/media/5-17-2021/YRo_E-.gif"
@@ -108,13 +108,17 @@
   {
     "id": "V01",
     "numeroMeta": "04",
-    "eixo": "Viver São Paulo",
+    "eixo": "viver são paulo",
+    "subeixo": "saúde e bem-estar",
     "cor_principal_eixo": "#F16622",
     "cor_secundaria_eixo": "#FED300",
     "titulo_eixo": "<strong>Ampliar 2000 vagas em creches</strong> em regiões prioritárias.",
-    "subtitulo": "<strong>COLOCAR NA API PARA ESSA PARTE DO TEXTO RECEBER E TRANSFORMAR EM UPPERCASE</strong> aqui o texto fica normal.",
-    "indicadorDaMeta":"Número de novos parques entregues.",
-    "temaODS": ["Vida Terrestre"],
+    "indicadorDaMeta": "Número de vagas em creches",
+    "temaODS": ["educação de qualidade"],
+    "planos_vinculados": "plano SP 2040",
+    "subprefeitura_responsavel": "mooca",
+    "tituloCard": "Colocar esse texto na api, como titulo principal, ",
+    "contunuacaoTituloCard": "aqui o texto é a continuação já que esse texto entra como outra font.",
     "projecao": {
       "titulo": "Projeção",
       "descricao": "As novas creches atenderão mais de 5 mil crianças até 2027."
@@ -133,7 +137,7 @@
     "orgaosResponsaveis": ["SME"],
     "regionalizacao": {
       "titulo_regionalizacao_eixo": "REGIONALIZAÇÃO",
-      "subtitulo_regionalização_eixo":"Esta é uma meta regionalizada.",
+      "subtitulo_regionalização_eixo": "Esta é uma meta regionalizada.",
       "descricao": "Ao lado estão mais detalhes de como ela está distribuída nas diferentes regiões de São Paulo, ",
       "nota": "Para saber mais sobre as metas regionalizáveis, clique aqui.",
       "imagem": "https://i.makeagif.com/media/5-17-2021/YRo_E-.gif"
@@ -146,13 +150,17 @@
   {
     "id": "V02",
     "numeroMeta": "05",
-    "eixo": "Viver São Paulo",
+    "eixo": "viver são paulo",
+    "subeixo": "saúde e bem-estar",
     "cor_principal_eixo": "#F16622",
     "cor_secundaria_eixo": "#FED300",
     "titulo_eixo": "<strong>Implantar 10 UBS móveis</strong> para atendimento em regiões de difícil acesso.",
-    "subtitulo": "<strong>COLOCAR NA API PARA ESSA PARTE DO TEXTO RECEBER E TRANSFORMAR EM UPPERCASE</strong> aqui o texto fica normal.",
-    "indicadorDaMeta":"Número de novos parques entregues.",
+    "indicadorDaMeta": "Número de atendimentos realizados",
     "temaODS": ["Vida Terrestre"],
+    "planos_vinculados": "plano diretor estratégico",
+    "subprefeitura_responsavel": "campo limpo",
+    "tituloCard": "Colocar esse texto na api, como titulo principal, ",
+    "contunuacaoTituloCard": "aqui o texto é a continuação já que esse texto entra como outra font.",
     "projecao": {
       "titulo": "Projeção",
       "descricao": "As UBS móveis atenderão cerca de 50 mil pessoas por ano."
@@ -172,13 +180,17 @@
   {
     "id": "V03",
     "numeroMeta": "06",
-    "eixo": "Viver São Paulo",
+    "eixo": "viver são paulo",
+    "subeixo": "cultura e lazer",
     "cor_principal_eixo": "#F16622",
     "cor_secundaria_eixo": "#FED300",
     "titulo_eixo": "<strong>Reformar 15 unidades culturais</strong> para ampliar o acesso à cultura.",
-    "subtitulo": "<strong>COLOCAR NA API PARA ESSA PARTE DO TEXTO RECEBER E TRANSFORMAR EM UPPERCASE</strong> aqui o texto fica normal.",
-    "indicadorDaMeta":"Número de novos parques entregues.",
-    "temaODS": ["Vida Terrestre"],
+    "indicadorDaMeta": "Número de unidades reformadas",
+    "temaODS": ["igualdade de gênero"],
+    "planos_vinculados": "plano plurianual",
+    "subprefeitura_responsavel": "jaçanã",
+    "tituloCard": "Colocar esse texto na api, como titulo principal, ",
+    "contunuacaoTituloCard": "aqui o texto é a continuação já que esse texto entra como outra font.",
     "projecao": {
       "titulo": "Projeção",
       "descricao": "Até 2027, 15 unidades culturais estarão completamente reformadas e equipadas."
@@ -194,7 +206,7 @@
     "orgaosResponsaveis": ["SMC"],
     "regionalizacao": {
       "titulo_regionalizacao_eixo": "REGIONALIZAÇÃO",
-      "subtitulo_regionalização_eixo":"Esta é uma meta regionalizada.",
+      "subtitulo_regionalização_eixo": "Esta é uma meta regionalizada.",
       "descricao": "Ao lado estão mais detalhes de como ela está distribuída nas diferentes regiões de São Paulo, ",
       "nota": "Para saber mais sobre as metas regionalizáveis, clique aqui.",
       "imagem": "https://i.makeagif.com/media/5-17-2021/YRo_E-.gif"
@@ -207,13 +219,17 @@
   {
     "id": "C01",
     "numeroMeta": "07",
-    "eixo": "Capital do Futuro",
+    "eixo": "capital do futuro",
+    "subeixo": "inovação e tecnologia",
     "cor_principal_eixo": "#792D49",
     "cor_secundaria_eixo": "#B54C70",
     "titulo_eixo": "<strong>Digitalizar 80% dos serviços públicos</strong> para reduzir filas e agilizar atendimentos.",
-    "subtitulo": "<strong>COLOCAR NA API PARA ESSA PARTE DO TEXTO RECEBER E TRANSFORMAR EM UPPERCASE</strong> aqui o texto fica normal.",
-    "indicadorDaMeta":"Número de novos parques entregues.",
-    "temaODS": ["Vida Terrestre"],
+    "indicadorDaMeta": "Percentual de serviços digitalizados",
+    "temaODS": ["água potável e saneamento"],
+    "planos_vinculados": "plano plurianual",
+    "subprefeitura_responsavel": "perus",
+    "tituloCard": "Colocar esse texto na api, como titulo principal, ",
+    "contunuacaoTituloCard": "aqui o texto é a continuação já que esse texto entra como outra font.",
     "projecao": {
       "titulo": "Projeção",
       "descricao": "80% dos serviços municipais estarão disponíveis online até 2028."
@@ -229,7 +245,7 @@
     "orgaosResponsaveis": ["SMIT", "SMG"],
     "regionalizacao": {
       "titulo_regionalizacao_eixo": "REGIONALIZAÇÃO",
-      "subtitulo_regionalização_eixo":"Esta é uma meta regionalizada.",
+      "subtitulo_regionalização_eixo": "Esta é uma meta regionalizada.",
       "descricao": "Ao lado estão mais detalhes de como ela está distribuída nas diferentes regiões de São Paulo, ",
       "nota": "Para saber mais sobre as metas regionalizáveis, clique aqui.",
       "imagem": "https://i.makeagif.com/media/5-17-2021/YRo_E-.gif"
@@ -242,13 +258,17 @@
   {
     "id": "C02",
     "numeroMeta": "08",
-    "eixo": "Capital do Futuro",
+    "eixo": "capital do futuro",
+    "subeixo": "inovação e tecnologia",
     "cor_principal_eixo": "#792D49",
     "cor_secundaria_eixo": "#B54C70",
     "titulo_eixo": "<strong>Implantar 5 centros de inovação</strong> em parceria com universidades.",
-    "subtitulo": "<strong>COLOCAR NA API PARA ESSA PARTE DO TEXTO RECEBER E TRANSFORMAR EM UPPERCASE</strong> aqui o texto fica normal.",
-    "indicadorDaMeta":"Número de novos parques entregues.",
-    "temaODS": ["Vida Terrestre"],
+    "indicadorDaMeta": "Número de centros de inovação implantados",
+    "temaODS": ["energia acessível e limpa"],
+    "planos_vinculados": "plano plurianual",
+    "subprefeitura_responsavel": "sé",
+    "tituloCard": "Colocar esse texto na api, como titulo principal, ",
+    "contunuacaoTituloCard": "aqui o texto é a continuação já que esse texto entra como outra font.",
     "projecao": {
       "titulo": "Projeção",
       "descricao": "Centros de inovação vão gerar oportunidades para mais de 10 mil profissionais."
@@ -268,13 +288,17 @@
   {
     "id": "C03",
     "numeroMeta": "09",
-    "eixo": "Capital do Futuro",
+    "eixo": "capital do futuro",
+    "subeixo": "conectividade",
     "cor_principal_eixo": "#792D49",
     "cor_secundaria_eixo": "#B54C70",
     "titulo_eixo": "<strong>Instalar 200 km de fibra óptica</strong> para ampliar a conectividade da cidade.",
-    "subtitulo": "<strong>COLOCAR NA API PARA ESSA PARTE DO TEXTO RECEBER E TRANSFORMAR EM UPPERCASE</strong> aqui o texto fica normal.",
-    "indicadorDaMeta":"Número de novos parques entregues.",
-    "temaODS": ["Vida Terrestre"],
+    "indicadorDaMeta": "Quilômetros de fibra óptica instalados",
+    "temaODS": ["trabalho decente e crescimento econômico"],
+    "planos_vinculados": "plano plurianual",
+    "subprefeitura_responsavel": "cidade tiradentes",
+    "tituloCard": "Colocar esse texto na api, como titulo principal, ",
+    "contunuacaoTituloCard": "aqui o texto é a continuação já que esse texto entra como outra font.",
     "projecao": {
       "titulo": "Projeção",
       "descricao": "Até 2026, 200 km de fibra óptica serão instalados, conectando escolas e hospitais."
@@ -290,7 +314,7 @@
     "orgaosResponsaveis": ["SMIT"],
     "regionalizacao": {
       "titulo_regionalizacao_eixo": "REGIONALIZAÇÃO",
-      "subtitulo_regionalização_eixo":"Esta é uma meta regionalizada.",
+      "subtitulo_regionalização_eixo": "Esta é uma meta regionalizada.",
       "descricao": "Ao lado estão mais detalhes de como ela está distribuída nas diferentes regiões de São Paulo, ",
       "nota": "Para saber mais sobre as metas regionalizáveis, clique aqui.",
       "imagem": "https://i.makeagif.com/media/5-17-2021/YRo_E-.gif"
@@ -303,13 +327,17 @@
   {
     "id": "E01",
     "numeroMeta": "10",
-    "eixo": "Cidade Empreendedora",
+    "eixo": "cidade empreendedora",
+    "subeixo": "desenvolvimento econômico",
     "cor_principal_eixo": "#0000AB",
     "cor_secundaria_eixo": "#2E2EFF",
     "titulo_eixo": "<strong>Simplificar abertura de empresas</strong> para reduzir burocracias.",
-    "subtitulo": "<strong>COLOCAR NA API PARA ESSA PARTE DO TEXTO RECEBER E TRANSFORMAR EM UPPERCASE</strong> aqui o texto fica normal.",
-    "indicadorDaMeta":"Número de novos parques entregues.",
-    "temaODS": ["Vida Terrestre"],
+    "indicadorDaMeta": "Tempo médio para abertura de empresas",
+    "temaODS": ["indústria, inovação e infraestrutura"],
+    "planos_vinculados": "plano plurianual",
+    "subprefeitura_responsavel": "butantã",
+    "tituloCard": "Colocar esse texto na api, como titulo principal, ",
+    "contunuacaoTituloCard": "aqui o texto é a continuação já que esse texto entra como outra font.",
     "projecao": {
       "titulo": "Projeção",
       "descricao": "Abertura de empresas em até 2 dias úteis em 2026."
@@ -328,7 +356,7 @@
     "orgaosResponsaveis": ["ADE SAMPA"],
     "regionalizacao": {
       "titulo_regionalizacao_eixo": "REGIONALIZAÇÃO",
-      "subtitulo_regionalização_eixo":"Esta é uma meta regionalizada.",
+      "subtitulo_regionalização_eixo": "Esta é uma meta regionalizada.",
       "descricao": "Ao lado estão mais detalhes de como ela está distribuída nas diferentes regiões de São Paulo, ",
       "nota": "Para saber mais sobre as metas regionalizáveis, clique aqui.",
       "imagem": "https://i.makeagif.com/media/5-17-2021/YRo_E-.gif"
@@ -341,23 +369,27 @@
   {
     "id": "E02",
     "numeroMeta": "11",
-    "eixo": "Cidade Empreendedora",
+    "eixo": "cidade empreendedora",
+    "subeixo": "desenvolvimento econômico",
     "cor_principal_eixo": "#0000AB",
     "cor_secundaria_eixo": "#2E2EFF",
     "titulo_eixo": "<strong>Criar 3 hubs de capacitação</strong> para pequenos empreendedores.",
-    "subtitulo": "<strong>COLOCAR NA API PARA ESSA PARTE DO TEXTO RECEBER E TRANSFORMAR EM UPPERCASE</strong> aqui o texto fica normal.",
-    "indicadorDaMeta":"Número de novos parques entregues.",
-    "temaODS": ["Vida Terrestre"],
+    "indicadorDaMeta": "Número de empreendedores capacitados",
+    "temaODS": ["redução das desigualdades"],
+    "planos_vinculados": "plano plurianual",
+    "subprefeitura_responsavel": "aricanduva/formosa/carrão",
+    "tituloCard": "Colocar esse texto na api, como titulo principal, ",
+    "contunuacaoTituloCard": "aqui o texto é a continuação já que esse texto entra como outra font.",
     "projecao": {
       "titulo": "Projeção",
-      "descricao": "Mais de 2 mil empreendedores capacitados até 2027."
+      "descricao": "Capacitar até 3 mil empreendedores por ano."
     },
     "acoesEstrategicas": null,
     "indicador": {
       "titulo_indicador_eixo": "Indicador",
       "descricao": "Número de empreendedores capacitados"
     },
-    "orgaosResponsaveis": ["SMDET"],
+    "orgaosResponsaveis": ["SEME"],
     "regionalizacao": null,
     "rodape_eixo": {
       "titulo_rodape_eixo": "ESSA META FAZ PARTE DO EIXO CIDADE EMPREENDEDORA.",
@@ -367,29 +399,33 @@
   {
     "id": "E03",
     "numeroMeta": "12",
-    "eixo": "Cidade Empreendedora",
+    "eixo": "cidade empreendedora",
+    "subeixo": "inovação e tecnologia",
     "cor_principal_eixo": "#0000AB",
     "cor_secundaria_eixo": "#2E2EFF",
-    "titulo_eixo": "<strong>Realizar 50 feiras de negócios</strong> para promover produtos locais.",
-    "subtitulo": "<strong>COLOCAR NA API PARA ESSA PARTE DO TEXTO RECEBER E TRANSFORMAR EM UPPERCASE</strong> aqui o texto fica normal.",
-    "indicadorDaMeta":"Número de novos parques entregues.",
-    "temaODS": ["Vida Terrestre"],
+    "titulo_eixo": "<strong>Incentivar 50 startups</strong> com financiamento e apoio técnico.",
+    "indicadorDaMeta": "Número de startups apoiadas",
+    "temaODS": ["cidades e comunidades sustentáveis"],
+    "planos_vinculados": "plano plurianual",
+    "subprefeitura_responsavel": "freguesia do ó",
+    "tituloCard": "Colocar esse texto na api, como titulo principal, ",
+    "contunuacaoTituloCard": "aqui o texto é a continuação já que esse texto entra como outra font.",
     "projecao": {
       "titulo": "Projeção",
-      "descricao": "Serão realizadas 50 feiras até 2028 em regiões estratégicas."
+      "descricao": "Até 2027, apoiar 50 startups inovadoras em diferentes setores."
     },
     "acoesEstrategicas": {
       "titulo_acoesEstrategicas_eixo": "Ações estratégicas",
-      "itens": ["Organização de eventos", "Parcerias com associações locais"]
+      "itens": ["Financiamento inicial", "Mentoria e acompanhamento"]
     },
     "indicador": {
       "titulo_indicador_eixo": "Indicador",
-      "descricao": "Número de feiras realizadas"
+      "descricao": "Número de startups apoiadas"
     },
-    "orgaosResponsaveis": ["SMDET"],
+    "orgaosResponsaveis": ["SMIT", "SEME"],
     "regionalizacao": {
       "titulo_regionalizacao_eixo": "REGIONALIZAÇÃO",
-      "subtitulo_regionalização_eixo":"Esta é uma meta regionalizada.",
+      "subtitulo_regionalização_eixo": "Esta é uma meta regionalizada.",
       "descricao": "Ao lado estão mais detalhes de como ela está distribuída nas diferentes regiões de São Paulo, ",
       "nota": "Para saber mais sobre as metas regionalizáveis, clique aqui.",
       "imagem": "https://i.makeagif.com/media/5-17-2021/YRo_E-.gif"
