@@ -35,14 +35,25 @@ def about_pdm(request) -> AboutPDMSchema:
     if about_pdm is None:
         raise HttpError(404, "Sobre o PDM não encontrado")
         
-    parsed = {
+    parsed_about = {
         'titulo' : about_pdm.titulo,
         'subtitulo' : about_pdm.subtitulo,
         'paragrafo' : about_pdm.paragrafo_as_str,
         'link_img' :  get_abs_link(request, about_pdm.banner_image) if about_pdm.banner_image else '',
     }
 
-    return AboutPDMSchema(**parsed)
+    carta = about_pdm.carta_do_prefeito
+    if carta is None:
+        raise HttpError(404, "Carta do Prefeito não encontrada")
+    parsed_carta  = {
+        'titulo': carta.titulo,
+        'nome_prefeito': carta.prefeito.nome,
+        'paragrafos': carta.paragrafo_as_list
+    }
+
+    parsed_about['carta_prefeito'] = parsed_carta
+
+    return AboutPDMSchema(**parsed_about)
 
 @api.get("/noticias", response=List[NoticiaSchema], tags=["Seções Página Inicial"])
 def noticias(request) -> List[NoticiaSchema]:
