@@ -52,6 +52,8 @@ if errorlevel 1 exit /b %errorlevel%
 python manage.py seed_ods
 if errorlevel 1 exit /b %errorlevel%
 
+python manage.py seed_pdms
+if errorlevel 1 exit /b %errorlevel%
 
 echo Iniciando servidor
 python manage.py runserver 0.0.0.0:8000
