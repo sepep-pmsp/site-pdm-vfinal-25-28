@@ -1,0 +1,42 @@
+[
+    {
+        "nome" : "Agenda 2012",
+        "descricao" : "Primeiro PDM de São Paulo, elaborado na gestão Gilberto Kassab.",
+        "capa" : "capa_2008_2012.png",
+        "ano_inicio" : 2009,
+        "ano_fim" : 2012,
+        "nome_prefeito" : "Gilberto Kassab"
+    },
+    {
+        "nome" : "Programa de Metas da Cidade de São Paulo 2013-2016",
+        "descricao" : "Segundo PDM de São Paulo, elaborado na gestão Fernando Haddad.",
+        "capa" : "capa_13_17.png",
+        "ano_inicio" : 2013,
+        "ano_fim" : 2016,
+        "nome_prefeito" : "Fernando Haddad"
+    },
+    {
+        "nome" : "Programa de Metas 2017-2020",
+        "descricao" : "Terceiro PDM de São Paulo, elaborado na gestão João Doria.",
+        "capa" : "capa_19_20.png",
+        "ano_inicio" : 2017,
+        "ano_fim" : 2020,
+        "nome_prefeito" : "João Doria"
+    },
+    {
+        "nome" : "Programa de Metas 2021-2024",
+        "descricao" : "Quarto PDM de São Paulo, elaborado na gestão Bruno Covas/Ricardo Nunes.",
+        "capa" : "capa_21_24.png",
+        "ano_inicio" : 2021,
+        "ano_fim" : 2024,
+        "nome_prefeito" : "Bruno Covas"
+    },
+        {
+        "nome" : "Programa de Metas 2025-2028",
+        "descricao" : "Programa de Metas atual, da gestão Ricardo Nunes.",
+        "capa" : null,
+        "ano_inicio" : 2025,
+        "ano_fim" : 2028,
+        "nome_prefeito" : "Ricardo Nunes"
+    }
+]
