@@ -2,60 +2,60 @@
   "filtros": {
     "regioes": [
       {
-        "nome": "Zona Norte",
+        "nome": "zona norte",
         "subprefeituras": [
-          "Jaçanã",
-          "Tucuruvi",
-          "Santana",
-          "Casa Verde",
-          "Freguesia do Ó",
-          "Brasilândia",
-          "Pirituba",
-          "Perus"
+          "jaçanã",
+          "tucuruvi",
+          "santana",
+          "casa verde",
+          "freguesia do ó",
+          "brasilândia",
+          "pirituba",
+          "perus"
         ]
       },
       {
-        "nome": "Zona Sul",
+        "nome": "zona sul",
         "subprefeituras": [
-          "Campo Limpo",
-          "Capela do Socorro",
-          "Cidade Ademar",
-          "Ipiranga",
-          "M'Boi Mirim",
-          "Parelheiros",
-          "Santo Amaro"
+          "campo limpo",
+          "capela do socorro",
+          "cidade ademar",
+          "ipiranga",
+          "m'boi mirim",
+          "parelheiros",
+          "santo smaro"
         ]
       },
       {
-        "nome": "Centro",
-        "subprefeituras": ["Sé", "Pinheiros", "Bela Vista"]
+        "nome": "centro",
+        "subprefeituras": ["sé", "pinheiros", "bela vista"]
       },
       {
-        "nome": "Zona Leste",
+        "nome": "zona leste",
         "subprefeituras": [
-          "Mooca",
-          "Penha",
-          "Vila Prudente",
-          "Aricanduva",
-          "Sapopemba",
-          "Ermelino Matarazzo",
-          "São Miguel Paulista",
-          "Itaim Paulista",
-          "Itaquera",
-          "São Mateus",
-          "Guaianases",
-          "Cidade Tiradentes"
+          "mooca",
+          "penha",
+          "vila prudente",
+          "aricanduva",
+          "sapopemba",
+          "ermelino matarazzo",
+          "são miguel paulista",
+          "itaim paulista",
+          "itaquera",
+          "são mateus",
+          "guaianases",
+          "cidade tiradentes"
         ]
       },
       {
-        "nome": "Zona Oeste",
-        "subprefeituras": ["Butantã", "Aricanduva/Formosa/Carrão"]
+        "nome": "zona oeste",
+        "subprefeituras": ["butantã", "aricanduva/formosa/carrão"]
       }
     ],
     "planos_vinculados": [
-      "Plano Diretor Estratégico",
-      "Plano Plurianual",
-      "Plano SP 2040",
+      "plano diretor estratégico",
+      "plano plurianual",
+      "plano SP 2040",
       "teste de JSON",
       "Outro",
       "Nenhum",
@@ -84,41 +84,41 @@
   },
   "eixos": [
     {
-      "titulo": "Universo SP",
+      "titulo": "universo SP",
       "cor": "#3DB54A",
       "subeixos": [
-        "Natureza e ambiente",
-        "Habitação de qualidade",
-        "Infraestrutura e integração",
-        "Requalificação urbana"
+        "natureza e ambiente",
+        "habitação de qualidade",
+        "infraestrutura e integração",
+        "requalificação urbana"
       ]
     },
     {
-      "titulo": "Viver São Paulo",
+      "titulo": "viver são paulo",
       "cor": "#F16622",
       "subeixos": [
-        "Segurança",
-        "Saúde e bem-estar",
-        "Educação",
-        "Proteção social"
+        "segurança",
+        "saúde e bem-estar",
+        "educação",
+        "proteção social"
       ]
     },
     {
-      "titulo": "Cidade Empreendedora",
+      "titulo": "cidade empreendedora",
       "cor": "#0000AB",
       "subeixos": [
-        "Cultura, Esporte e Lazer",
-        "Economia criativa",
-        "Qualificação profissional, emprego e renda"
+        "cultura, esporte e lazer",
+        "economia criativa",
+        "qualificação profissional, emprego e renda"
       ]
     },
     {
-      "titulo": "Capital do Futuro",
+      "titulo": "capital do futuro",
       "cor": "#792D49",
       "subeixos": [
-        "Tecnologia e inovação",
-        "Sustentabilidade econômica",
-        "Competitividade global"
+        "tecnologia e inovação",
+        "sustentabilidade econômica",
+        "competitividade global"
       ]
     }
   ],
@@ -127,103 +127,103 @@
       "id": 1,
       "icone": "svg/ods1.svg",
       "color": "#D81F37",
-      "temaODS": "Erradicação da Pobreza"
+      "temaODS": "erradicação da pobreza"
     },
     {
       "id": 2,
       "icone": "svg/ods2.svg",
       "color": "#E2AB39",
-      "temaODS": "Fome zero e agricultura sustentável"
+      "temaODS": "fome zero e agricultura sustentável"
     },
     {
       "id": 3,
       "icone": "svg/ods3.svg",
       "color": "#439746",
-      "temaODS": "Saúde e bem-estar"
+      "temaODS": "saúde e bem-estar"
     },
     {
       "id": 4,
       "icone": "svg/ods4.svg",
       "color": "#BD242D",
-      "temaODS": "Educação de qualidade"
+      "temaODS": "educação de qualidade"
     },
     {
       "id": 5,
       "icone": "svg/ods5.svg",
       "color": "#E22F2D",
-      "temaODS": "Igualdade de gênero"
+      "temaODS": "igualdade de gênero"
     },
     {
       "id": 6,
       "icone": "svg/ods6.svg",
       "color": "#03ADD1",
-      "temaODS": "Água potável e saneamento"
+      "temaODS": "água potável e saneamento"
     },
     {
       "id": 7,
       "icone": "svg/ods7.svg",
       "color": "#EFB820",
-      "temaODS": "Energia acessível e limpa"
+      "temaODS": "energia acessível e limpa"
     },
     {
       "id": 8,
       "icone": "svg/ods8.svg",
       "color": "#A41B45",
-      "temaODS": "Trabalho decente e crescimento econômico"
+      "temaODS": "trabalho decente e crescimento econômico"
     },
     {
       "id": 9,
       "icone": "svg/ods9.svg",
       "color": "#ED6B30",
-      "temaODS": "Indústria, inovação e infraestrutura"
+      "temaODS": "indústria, inovação e infraestrutura"
     },
     {
       "id": 10,
       "icone": "svg/ods10.svg",
       "color": "#D31760",
-      "temaODS": "Redução das desigualdades"
+      "temaODS": "redução das desigualdades"
     },
     {
       "id": 11,
       "icone": "svg/ods11.svg",
       "color": "#F59D2C",
-      "temaODS": "Cidades e comunidades sustentáveis"
+      "temaODS": "cidades e comunidades sustentáveis"
     },
     {
       "id": 12,
       "icone": "svg/ods12.svg",
       "color": "#C9902B",
-      "temaODS": "Consumo e produção responsáveis"
+      "temaODS": "consumo e produção responsáveis"
     },
     {
       "id": 13,
       "icone": "svg/ods13.svg",
       "color": "#3E8C4D",
-      "temaODS": "Ação contra a mudança global do clima"
+      "temaODS": "ação contra a mudança global do clima"
     },
     {
       "id": 14,
       "icone": "svg/ods14.svg",
       "color": "#118CC6",
-      "temaODS": "Vida na água"
+      "temaODS": "vida na água"
     },
     {
       "id": 15,
       "icone": "svg/ods15.svg",
       "color": "#4EAF45",
-      "temaODS": "Vida terrestre"
+      "temaODS": "vida terrestre"
     },
     {
       "id": 16,
       "icone": "svg/ods16.svg",
       "color": "#1E6395",
-      "temaODS": "Paz, justiça e instituições eficazes"
+      "temaODS": "paz, justiça e instituições eficazes"
     },
     {
       "id": 17,
       "icone": "svg/ods17.svg",
       "color": "#21466B",
-      "temaODS": "Parcerias e meios de implementação"
+      "temaODS": "parcerias e meios de implementação"
     }
   ]
 }
