@@ -1,0 +1,438 @@
+[
+  {
+    "id": "U01",
+    "numeroMeta": "01",
+    "eixo": "universo SP",
+    "subeixo": "natureza e ambiente",
+    "cor_principal_eixo": "#288140",
+    "cor_secundaria_eixo": "#3DB54A",
+    "indicadorDaMeta": "Número de novos parques entregues.",
+    "titulo_eixo": "<strong>Criar 10 novos parques</strong><br> para ampliar áreas de lazer e fortalecer a convivência com a natureza.",
+    "planos_vinculados": "plano plurianual",
+    "subprefeitura_responsavel": "mooca",
+    "temaODS": ["erradicação da pobreza"],
+    "tituloCard": "Colocar esse texto na api, como titulo principal, ",
+    "contunuacaoTituloCard": "aqui o texto é a continuação já que esse texto entra como outra font.",
+    "projecao": {
+      "titulo": "Projeção",
+      "descricao": "Até 2028, pretendemos entregar 10 novos parques em regiões estratégicas."
+    },
+    "acoesEstrategicas": {
+      "titulo_acoesEstrategicas_eixo": "Ações estratégicas",
+      "itens": [
+        "Entrega de uma Unidade Móvel da Mulher.",
+        "Entrega de uma nova Casa de Passagem.",
+        "Implantação de dois protocolos integrados de atendimento a mulheres vítimas de violência."
+      ]
+    },
+    "indicador": {
+      "titulo_indicador_eixo": "Indicador",
+      "descricao": "Número de parques entregues"
+    },
+    "orgaosResponsaveis": ["SMIT", "SIURB"],
+    "regionalizacao": null,
+    "rodape_eixo": {
+      "titulo_rodape_eixo": "ESSA META FAZ PARTE DO EIXO UNIVERSO SP.",
+      "descricao_rodape_eixo": "Neste eixo, São Paulo é pensada em sua dimensão física e ambiental. Clique para conferir todas as metas."
+    }
+  },
+  {
+    "id": "U02",
+    "numeroMeta": "02",
+    "eixo": "universo SP",
+    "subeixo": "habitação de qualidade",
+    "cor_principal_eixo": "#288140",
+    "cor_secundaria_eixo": "#3DB54A",
+    "titulo_eixo": "<strong>Revitalizar 5 rios urbanos</strong> para melhorar a drenagem e a paisagem natural.",
+    "indicadorDaMeta": "Número de rios revitalizados.",
+    "temaODS": ["fome zero e agricultura sustentável"],
+    "planos_vinculados": "plano diretor estratégico",
+    "subprefeitura_responsavel": "mooca",
+    "tituloCard": "Colocar esse texto na api, como titulo principal, ",
+    "contunuacaoTituloCard": "aqui o texto é a continuação já que esse texto entra como outra font.",
+    "projecao": {
+      "titulo": "Projeção",
+      "descricao": "A revitalização vai reduzir pontos de alagamento e criar áreas de lazer próximas aos rios."
+    },
+    "acoesEstrategicas": {
+      "titulo_acoesEstrategicas_eixo": "Ações estratégicas",
+      "itens": ["Desassoreamento de rios", "Criação de parques lineares"]
+    },
+    "indicador": {
+      "titulo_indicador_eixo": "Indicador",
+      "descricao": "Número de rios revitalizados"
+    },
+    "orgaosResponsaveis": ["SIURB", "SVMA"],
+    "regionalizacao": null,
+    "rodape_eixo": {
+      "titulo_rodape_eixo": "ESSA META FAZ PARTE DO EIXO UNIVERSO SP.",
+      "descricao_rodape_eixo": "Neste eixo, São Paulo é pensada em sua dimensão física e ambiental. Clique para conferir todas as metas."
+    }
+  },
+  {
+    "id": "U03",
+    "numeroMeta": "03",
+    "eixo": "universo SP",
+    "subeixo": "infraestrutura e integração",
+    "cor_principal_eixo": "#288140",
+    "cor_secundaria_eixo": "#3DB54A",
+    "titulo_eixo": "<strong>Implantar 50 km de ciclovias</strong> integradas aos transportes públicos.",
+    "indicadorDaMeta": "Quilômetros de ciclovias implantadas",
+    "temaODS": ["saúde e bem-estar"],
+    "planos_vinculados": "plano SP 2040",
+    "subprefeitura_responsavel": "mooca",
+    "tituloCard": "Colocar esse texto na api, como titulo principal, ",
+    "contunuacaoTituloCard": "aqui o texto é a continuação já que esse texto entra como outra font.",
+    "projecao": {
+      "titulo": "Projeção",
+      "descricao": "A cidade terá 50 km adicionais de ciclovias seguras e sinalizadas até 2028."
+    },
+    "acoesEstrategicas": null,
+    "indicador": {
+      "titulo_indicador_eixo": "Indicador",
+      "descricao": "Quilômetros de ciclovias implantadas"
+    },
+    "orgaosResponsaveis": ["SMT"],
+    "regionalizacao": {
+      "titulo_regionalizacao_eixo": "REGIONALIZAÇÃO",
+      "subtitulo_regionalização_eixo": "Esta é uma meta regionalizada.",
+      "descricao": "Ao lado estão mais detalhes de como ela está distribuída nas diferentes regiões de São Paulo, ",
+      "nota": "Para saber mais sobre as metas regionalizáveis, clique aqui.",
+      "imagem": "https://i.makeagif.com/media/5-17-2021/YRo_E-.gif"
+    },
+    "rodape_eixo": {
+      "titulo_rodape_eixo": "ESSA META FAZ PARTE DO EIXO UNIVERSO SP.",
+      "descricao_rodape_eixo": "Neste eixo, São Paulo é pensada em sua dimensão física e ambiental. Clique para conferir todas as metas."
+    }
+  },
+  {
+    "id": "V01",
+    "numeroMeta": "04",
+    "eixo": "viver são paulo",
+    "subeixo": "saúde e bem-estar",
+    "cor_principal_eixo": "#F16622",
+    "cor_secundaria_eixo": "#FED300",
+    "titulo_eixo": "<strong>Ampliar 2000 vagas em creches</strong> em regiões prioritárias.",
+    "indicadorDaMeta": "Número de vagas em creches",
+    "temaODS": ["educação de qualidade"],
+    "planos_vinculados": "plano SP 2040",
+    "subprefeitura_responsavel": "mooca",
+    "tituloCard": "Colocar esse texto na api, como titulo principal, ",
+    "contunuacaoTituloCard": "aqui o texto é a continuação já que esse texto entra como outra font.",
+    "projecao": {
+      "titulo": "Projeção",
+      "descricao": "As novas creches atenderão mais de 5 mil crianças até 2027."
+    },
+    "acoesEstrategicas": {
+      "titulo_acoesEstrategicas_eixo": "Ações estratégicas",
+      "itens": [
+        "Construção de novas unidades",
+        "Ampliação de horários de atendimento"
+      ]
+    },
+    "indicador": {
+      "titulo_indicador_eixo": "Indicador",
+      "descricao": "Número de vagas em creches"
+    },
+    "orgaosResponsaveis": ["SME"],
+    "regionalizacao": {
+      "titulo_regionalizacao_eixo": "REGIONALIZAÇÃO",
+      "subtitulo_regionalização_eixo": "Esta é uma meta regionalizada.",
+      "descricao": "Ao lado estão mais detalhes de como ela está distribuída nas diferentes regiões de São Paulo, ",
+      "nota": "Para saber mais sobre as metas regionalizáveis, clique aqui.",
+      "imagem": "https://i.makeagif.com/media/5-17-2021/YRo_E-.gif"
+    },
+    "rodape_eixo": {
+      "titulo_rodape_eixo": "ESSA META FAZ PARTE DO EIXO VIVER SÃO PAULO.",
+      "descricao_rodape_eixo": "Aqui, o foco está na qualidade de vida do cidadão. Clique para ver todas as metas."
+    }
+  },
+  {
+    "id": "V02",
+    "numeroMeta": "05",
+    "eixo": "viver são paulo",
+    "subeixo": "saúde e bem-estar",
+    "cor_principal_eixo": "#F16622",
+    "cor_secundaria_eixo": "#FED300",
+    "titulo_eixo": "<strong>Implantar 10 UBS móveis</strong> para atendimento em regiões de difícil acesso.",
+    "indicadorDaMeta": "Número de atendimentos realizados",
+    "temaODS": ["Vida Terrestre"],
+    "planos_vinculados": "plano diretor estratégico",
+    "subprefeitura_responsavel": "campo limpo",
+    "tituloCard": "Colocar esse texto na api, como titulo principal, ",
+    "contunuacaoTituloCard": "aqui o texto é a continuação já que esse texto entra como outra font.",
+    "projecao": {
+      "titulo": "Projeção",
+      "descricao": "As UBS móveis atenderão cerca de 50 mil pessoas por ano."
+    },
+    "acoesEstrategicas": null,
+    "indicador": {
+      "titulo_indicador_eixo": "Indicador",
+      "descricao": "Número de atendimentos realizados"
+    },
+    "orgaosResponsaveis": ["SMS"],
+    "regionalizacao": null,
+    "rodape_eixo": {
+      "titulo_rodape_eixo": "ESSA META FAZ PARTE DO EIXO VIVER SÃO PAULO.",
+      "descricao_rodape_eixo": "Aqui, o foco está na qualidade de vida do cidadão. Clique para ver todas as metas."
+    }
+  },
+  {
+    "id": "V03",
+    "numeroMeta": "06",
+    "eixo": "viver são paulo",
+    "subeixo": "cultura e lazer",
+    "cor_principal_eixo": "#F16622",
+    "cor_secundaria_eixo": "#FED300",
+    "titulo_eixo": "<strong>Reformar 15 unidades culturais</strong> para ampliar o acesso à cultura.",
+    "indicadorDaMeta": "Número de unidades reformadas",
+    "temaODS": ["igualdade de gênero"],
+    "planos_vinculados": "plano plurianual",
+    "subprefeitura_responsavel": "jaçanã",
+    "tituloCard": "Colocar esse texto na api, como titulo principal, ",
+    "contunuacaoTituloCard": "aqui o texto é a continuação já que esse texto entra como outra font.",
+    "projecao": {
+      "titulo": "Projeção",
+      "descricao": "Até 2027, 15 unidades culturais estarão completamente reformadas e equipadas."
+    },
+    "acoesEstrategicas": {
+      "titulo_acoesEstrategicas_eixo": "Ações estratégicas",
+      "itens": ["Reformas estruturais", "Adequação de acessibilidade"]
+    },
+    "indicador": {
+      "titulo_indicador_eixo": "Indicador",
+      "descricao": "Número de unidades reformadas"
+    },
+    "orgaosResponsaveis": ["SMC"],
+    "regionalizacao": {
+      "titulo_regionalizacao_eixo": "REGIONALIZAÇÃO",
+      "subtitulo_regionalização_eixo": "Esta é uma meta regionalizada.",
+      "descricao": "Ao lado estão mais detalhes de como ela está distribuída nas diferentes regiões de São Paulo, ",
+      "nota": "Para saber mais sobre as metas regionalizáveis, clique aqui.",
+      "imagem": "https://i.makeagif.com/media/5-17-2021/YRo_E-.gif"
+    },
+    "rodape_eixo": {
+      "titulo_rodape_eixo": "ESSA META FAZ PARTE DO EIXO VIVER SÃO PAULO.",
+      "descricao_rodape_eixo": "Aqui, o foco está na qualidade de vida do cidadão. Clique para ver todas as metas."
+    }
+  },
+  {
+    "id": "C01",
+    "numeroMeta": "07",
+    "eixo": "capital do futuro",
+    "subeixo": "inovação e tecnologia",
+    "cor_principal_eixo": "#792D49",
+    "cor_secundaria_eixo": "#B54C70",
+    "titulo_eixo": "<strong>Digitalizar 80% dos serviços públicos</strong> para reduzir filas e agilizar atendimentos.",
+    "indicadorDaMeta": "Percentual de serviços digitalizados",
+    "temaODS": ["água potável e saneamento"],
+    "planos_vinculados": "plano plurianual",
+    "subprefeitura_responsavel": "perus",
+    "tituloCard": "Colocar esse texto na api, como titulo principal, ",
+    "contunuacaoTituloCard": "aqui o texto é a continuação já que esse texto entra como outra font.",
+    "projecao": {
+      "titulo": "Projeção",
+      "descricao": "80% dos serviços municipais estarão disponíveis online até 2028."
+    },
+    "acoesEstrategicas": {
+      "titulo_acoesEstrategicas_eixo": "Ações estratégicas",
+      "itens": ["Criação de portal único", "Integração de sistemas municipais"]
+    },
+    "indicador": {
+      "titulo_indicador_eixo": "Indicador",
+      "descricao": "Percentual de serviços digitalizados"
+    },
+    "orgaosResponsaveis": ["SMIT", "SMG"],
+    "regionalizacao": {
+      "titulo_regionalizacao_eixo": "REGIONALIZAÇÃO",
+      "subtitulo_regionalização_eixo": "Esta é uma meta regionalizada.",
+      "descricao": "Ao lado estão mais detalhes de como ela está distribuída nas diferentes regiões de São Paulo, ",
+      "nota": "Para saber mais sobre as metas regionalizáveis, clique aqui.",
+      "imagem": "https://i.makeagif.com/media/5-17-2021/YRo_E-.gif"
+    },
+    "rodape_eixo": {
+      "titulo_rodape_eixo": "ESSA META FAZ PARTE DO EIXO CAPITAL DO FUTURO.",
+      "descricao_rodape_eixo": "Foco em inovação e tecnologia para uma São Paulo moderna. Clique para ver todas as metas."
+    }
+  },
+  {
+    "id": "C02",
+    "numeroMeta": "08",
+    "eixo": "capital do futuro",
+    "subeixo": "inovação e tecnologia",
+    "cor_principal_eixo": "#792D49",
+    "cor_secundaria_eixo": "#B54C70",
+    "titulo_eixo": "<strong>Implantar 5 centros de inovação</strong> em parceria com universidades.",
+    "indicadorDaMeta": "Número de centros de inovação implantados",
+    "temaODS": ["energia acessível e limpa"],
+    "planos_vinculados": "plano plurianual",
+    "subprefeitura_responsavel": "sé",
+    "tituloCard": "Colocar esse texto na api, como titulo principal, ",
+    "contunuacaoTituloCard": "aqui o texto é a continuação já que esse texto entra como outra font.",
+    "projecao": {
+      "titulo": "Projeção",
+      "descricao": "Centros de inovação vão gerar oportunidades para mais de 10 mil profissionais."
+    },
+    "acoesEstrategicas": null,
+    "indicador": {
+      "titulo_indicador_eixo": "Indicador",
+      "descricao": "Número de centros de inovação implantados"
+    },
+    "orgaosResponsaveis": ["SMIT"],
+    "regionalizacao": null,
+    "rodape_eixo": {
+      "titulo_rodape_eixo": "ESSA META FAZ PARTE DO EIXO CAPITAL DO FUTURO.",
+      "descricao_rodape_eixo": "Foco em inovação e tecnologia para uma São Paulo moderna. Clique para ver todas as metas."
+    }
+  },
+  {
+    "id": "C03",
+    "numeroMeta": "09",
+    "eixo": "capital do futuro",
+    "subeixo": "conectividade",
+    "cor_principal_eixo": "#792D49",
+    "cor_secundaria_eixo": "#B54C70",
+    "titulo_eixo": "<strong>Instalar 200 km de fibra óptica</strong> para ampliar a conectividade da cidade.",
+    "indicadorDaMeta": "Quilômetros de fibra óptica instalados",
+    "temaODS": ["trabalho decente e crescimento econômico"],
+    "planos_vinculados": "plano plurianual",
+    "subprefeitura_responsavel": "cidade tiradentes",
+    "tituloCard": "Colocar esse texto na api, como titulo principal, ",
+    "contunuacaoTituloCard": "aqui o texto é a continuação já que esse texto entra como outra font.",
+    "projecao": {
+      "titulo": "Projeção",
+      "descricao": "Até 2026, 200 km de fibra óptica serão instalados, conectando escolas e hospitais."
+    },
+    "acoesEstrategicas": {
+      "titulo_acoesEstrategicas_eixo": "Ações estratégicas",
+      "itens": ["Instalação de cabos", "Monitoramento de cobertura"]
+    },
+    "indicador": {
+      "titulo_indicador_eixo": "Indicador",
+      "descricao": "Quilômetros de fibra óptica instalados"
+    },
+    "orgaosResponsaveis": ["SMIT"],
+    "regionalizacao": {
+      "titulo_regionalizacao_eixo": "REGIONALIZAÇÃO",
+      "subtitulo_regionalização_eixo": "Esta é uma meta regionalizada.",
+      "descricao": "Ao lado estão mais detalhes de como ela está distribuída nas diferentes regiões de São Paulo, ",
+      "nota": "Para saber mais sobre as metas regionalizáveis, clique aqui.",
+      "imagem": "https://i.makeagif.com/media/5-17-2021/YRo_E-.gif"
+    },
+    "rodape_eixo": {
+      "titulo_rodape_eixo": "ESSA META FAZ PARTE DO EIXO CAPITAL DO FUTURO.",
+      "descricao_rodape_eixo": "Foco em inovação e tecnologia para uma São Paulo moderna. Clique para ver todas as metas."
+    }
+  },
+  {
+    "id": "E01",
+    "numeroMeta": "10",
+    "eixo": "cidade empreendedora",
+    "subeixo": "desenvolvimento econômico",
+    "cor_principal_eixo": "#0000AB",
+    "cor_secundaria_eixo": "#2E2EFF",
+    "titulo_eixo": "<strong>Simplificar abertura de empresas</strong> para reduzir burocracias.",
+    "indicadorDaMeta": "Tempo médio para abertura de empresas",
+    "temaODS": ["indústria, inovação e infraestrutura"],
+    "planos_vinculados": "plano plurianual",
+    "subprefeitura_responsavel": "butantã",
+    "tituloCard": "Colocar esse texto na api, como titulo principal, ",
+    "contunuacaoTituloCard": "aqui o texto é a continuação já que esse texto entra como outra font.",
+    "projecao": {
+      "titulo": "Projeção",
+      "descricao": "Abertura de empresas em até 2 dias úteis em 2026."
+    },
+    "acoesEstrategicas": {
+      "titulo_acoesEstrategicas_eixo": "Ações estratégicas",
+      "itens": [
+        "Digitalização de processos",
+        "Redução de exigências burocráticas"
+      ]
+    },
+    "indicador": {
+      "titulo_indicador_eixo": "Indicador",
+      "descricao": "Tempo médio para abertura de empresas"
+    },
+    "orgaosResponsaveis": ["ADE SAMPA"],
+    "regionalizacao": {
+      "titulo_regionalizacao_eixo": "REGIONALIZAÇÃO",
+      "subtitulo_regionalização_eixo": "Esta é uma meta regionalizada.",
+      "descricao": "Ao lado estão mais detalhes de como ela está distribuída nas diferentes regiões de São Paulo, ",
+      "nota": "Para saber mais sobre as metas regionalizáveis, clique aqui.",
+      "imagem": "https://i.makeagif.com/media/5-17-2021/YRo_E-.gif"
+    },
+    "rodape_eixo": {
+      "titulo_rodape_eixo": "ESSA META FAZ PARTE DO EIXO CIDADE EMPREENDEDORA.",
+      "descricao_rodape_eixo": "Foco no crescimento econômico e geração de empregos. Clique para ver todas as metas."
+    }
+  },
+  {
+    "id": "E02",
+    "numeroMeta": "11",
+    "eixo": "cidade empreendedora",
+    "subeixo": "desenvolvimento econômico",
+    "cor_principal_eixo": "#0000AB",
+    "cor_secundaria_eixo": "#2E2EFF",
+    "titulo_eixo": "<strong>Criar 3 hubs de capacitação</strong> para pequenos empreendedores.",
+    "indicadorDaMeta": "Número de empreendedores capacitados",
+    "temaODS": ["redução das desigualdades"],
+    "planos_vinculados": "plano plurianual",
+    "subprefeitura_responsavel": "aricanduva/formosa/carrão",
+    "tituloCard": "Colocar esse texto na api, como titulo principal, ",
+    "contunuacaoTituloCard": "aqui o texto é a continuação já que esse texto entra como outra font.",
+    "projecao": {
+      "titulo": "Projeção",
+      "descricao": "Capacitar até 3 mil empreendedores por ano."
+    },
+    "acoesEstrategicas": null,
+    "indicador": {
+      "titulo_indicador_eixo": "Indicador",
+      "descricao": "Número de empreendedores capacitados"
+    },
+    "orgaosResponsaveis": ["SEME"],
+    "regionalizacao": null,
+    "rodape_eixo": {
+      "titulo_rodape_eixo": "ESSA META FAZ PARTE DO EIXO CIDADE EMPREENDEDORA.",
+      "descricao_rodape_eixo": "Foco no crescimento econômico e geração de empregos. Clique para ver todas as metas."
+    }
+  },
+  {
+    "id": "E03",
+    "numeroMeta": "12",
+    "eixo": "cidade empreendedora",
+    "subeixo": "inovação e tecnologia",
+    "cor_principal_eixo": "#0000AB",
+    "cor_secundaria_eixo": "#2E2EFF",
+    "titulo_eixo": "<strong>Incentivar 50 startups</strong> com financiamento e apoio técnico.",
+    "indicadorDaMeta": "Número de startups apoiadas",
+    "temaODS": ["cidades e comunidades sustentáveis"],
+    "planos_vinculados": "plano plurianual",
+    "subprefeitura_responsavel": "freguesia do ó",
+    "tituloCard": "Colocar esse texto na api, como titulo principal, ",
+    "contunuacaoTituloCard": "aqui o texto é a continuação já que esse texto entra como outra font.",
+    "projecao": {
+      "titulo": "Projeção",
+      "descricao": "Até 2027, apoiar 50 startups inovadoras em diferentes setores."
+    },
+    "acoesEstrategicas": {
+      "titulo_acoesEstrategicas_eixo": "Ações estratégicas",
+      "itens": ["Financiamento inicial", "Mentoria e acompanhamento"]
+    },
+    "indicador": {
+      "titulo_indicador_eixo": "Indicador",
+      "descricao": "Número de startups apoiadas"
+    },
+    "orgaosResponsaveis": ["SMIT", "SEME"],
+    "regionalizacao": {
+      "titulo_regionalizacao_eixo": "REGIONALIZAÇÃO",
+      "subtitulo_regionalização_eixo": "Esta é uma meta regionalizada.",
+      "descricao": "Ao lado estão mais detalhes de como ela está distribuída nas diferentes regiões de São Paulo, ",
+      "nota": "Para saber mais sobre as metas regionalizáveis, clique aqui.",
+      "imagem": "https://i.makeagif.com/media/5-17-2021/YRo_E-.gif"
+    },
+    "rodape_eixo": {
+      "titulo_rodape_eixo": "ESSA META FAZ PARTE DO EIXO CIDADE EMPREENDEDORA.",
+      "descricao_rodape_eixo": "Foco no crescimento econômico e geração de empregos. Clique para ver todas as metas."
+    }
+  }
+]

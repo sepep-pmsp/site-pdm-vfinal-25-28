@@ -1,0 +1,229 @@
+{
+  "filtros": {
+    "regioes": [
+      {
+        "nome": "zona norte",
+        "subprefeituras": [
+          "jaçanã",
+          "tucuruvi",
+          "santana",
+          "casa verde",
+          "freguesia do ó",
+          "brasilândia",
+          "pirituba",
+          "perus"
+        ]
+      },
+      {
+        "nome": "zona sul",
+        "subprefeituras": [
+          "campo limpo",
+          "capela do socorro",
+          "cidade ademar",
+          "ipiranga",
+          "m'boi mirim",
+          "parelheiros",
+          "santo smaro"
+        ]
+      },
+      {
+        "nome": "centro",
+        "subprefeituras": ["sé", "pinheiros", "bela vista"]
+      },
+      {
+        "nome": "zona leste",
+        "subprefeituras": [
+          "mooca",
+          "penha",
+          "vila prudente",
+          "aricanduva",
+          "sapopemba",
+          "ermelino matarazzo",
+          "são miguel paulista",
+          "itaim paulista",
+          "itaquera",
+          "são mateus",
+          "guaianases",
+          "cidade tiradentes"
+        ]
+      },
+      {
+        "nome": "zona oeste",
+        "subprefeituras": ["butantã", "aricanduva/formosa/carrão"]
+      }
+    ],
+    "planos_vinculados": [
+      "plano diretor estratégico",
+      "plano plurianual",
+      "plano SP 2040",
+      "teste de JSON",
+      "Outro",
+      "Nenhum",
+      "Não se aplica",
+      "Não se aplica (metas de órgãos)",
+      "Não se aplica (metas de programas)",
+      "Não se aplica (metas de projetos)"
+    ],
+    "orgaos": [
+      "SGM - Secretaria do Governo Municipal",
+      "SMUL - Secretaria Municipal de Urbanismo e Licenciamento",
+      "SMADS - Secretaria Municipal de Assistência e Desenvolvimento Social",
+      "SMS - Secretaria Municipal da Saúde",
+      "SME - Secretaria Municipal de Educação",
+      "SEME - Secretaria Municipal de Esportes e Lazer",
+      "SMT - Secretaria Municipal de Transportes",
+      "SMMA - Secretaria Municipal do Meio Ambiente",
+      "SMF - Secretaria Municipal da Fazenda",
+      "SMIT - Secretaria Municipal de Inovação e Tecnologia",
+      "SMDHC - Secretaria Municipal de Direitos Humanos e Cidadania",
+      "SMC - Secretaria Municipal de Cultura",
+      "SMDET - Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
+      "SEHAB - Secretaria Municipal de Habitação",
+      "SMRI - Secretaria Municipal de Relações Internacionais"
+    ]
+  },
+  "eixos": [
+    {
+      "titulo": "universo SP",
+      "cor": "#3DB54A",
+      "subeixos": [
+        "natureza e ambiente",
+        "habitação de qualidade",
+        "infraestrutura e integração",
+        "requalificação urbana"
+      ]
+    },
+    {
+      "titulo": "viver são paulo",
+      "cor": "#F16622",
+      "subeixos": [
+        "segurança",
+        "saúde e bem-estar",
+        "educação",
+        "proteção social"
+      ]
+    },
+    {
+      "titulo": "cidade empreendedora",
+      "cor": "#0000AB",
+      "subeixos": [
+        "cultura, esporte e lazer",
+        "economia criativa",
+        "qualificação profissional, emprego e renda"
+      ]
+    },
+    {
+      "titulo": "capital do futuro",
+      "cor": "#792D49",
+      "subeixos": [
+        "tecnologia e inovação",
+        "sustentabilidade econômica",
+        "competitividade global"
+      ]
+    }
+  ],
+  "ods": [
+    {
+      "id": 1,
+      "icone": "svg/ods1.svg",
+      "color": "#D81F37",
+      "temaODS": "erradicação da pobreza"
+    },
+    {
+      "id": 2,
+      "icone": "svg/ods2.svg",
+      "color": "#E2AB39",
+      "temaODS": "fome zero e agricultura sustentável"
+    },
+    {
+      "id": 3,
+      "icone": "svg/ods3.svg",
+      "color": "#439746",
+      "temaODS": "saúde e bem-estar"
+    },
+    {
+      "id": 4,
+      "icone": "svg/ods4.svg",
+      "color": "#BD242D",
+      "temaODS": "educação de qualidade"
+    },
+    {
+      "id": 5,
+      "icone": "svg/ods5.svg",
+      "color": "#E22F2D",
+      "temaODS": "igualdade de gênero"
+    },
+    {
+      "id": 6,
+      "icone": "svg/ods6.svg",
+      "color": "#03ADD1",
+      "temaODS": "água potável e saneamento"
+    },
+    {
+      "id": 7,
+      "icone": "svg/ods7.svg",
+      "color": "#EFB820",
+      "temaODS": "energia acessível e limpa"
+    },
+    {
+      "id": 8,
+      "icone": "svg/ods8.svg",
+      "color": "#A41B45",
+      "temaODS": "trabalho decente e crescimento econômico"
+    },
+    {
+      "id": 9,
+      "icone": "svg/ods9.svg",
+      "color": "#ED6B30",
+      "temaODS": "indústria, inovação e infraestrutura"
+    },
+    {
+      "id": 10,
+      "icone": "svg/ods10.svg",
+      "color": "#D31760",
+      "temaODS": "redução das desigualdades"
+    },
+    {
+      "id": 11,
+      "icone": "svg/ods11.svg",
+      "color": "#F59D2C",
+      "temaODS": "cidades e comunidades sustentáveis"
+    },
+    {
+      "id": 12,
+      "icone": "svg/ods12.svg",
+      "color": "#C9902B",
+      "temaODS": "consumo e produção responsáveis"
+    },
+    {
+      "id": 13,
+      "icone": "svg/ods13.svg",
+      "color": "#3E8C4D",
+      "temaODS": "ação contra a mudança global do clima"
+    },
+    {
+      "id": 14,
+      "icone": "svg/ods14.svg",
+      "color": "#118CC6",
+      "temaODS": "vida na água"
+    },
+    {
+      "id": 15,
+      "icone": "svg/ods15.svg",
+      "color": "#4EAF45",
+      "temaODS": "vida terrestre"
+    },
+    {
+      "id": 16,
+      "icone": "svg/ods16.svg",
+      "color": "#1E6395",
+      "temaODS": "paz, justiça e instituições eficazes"
+    },
+    {
+      "id": 17,
+      "icone": "svg/ods17.svg",
+      "color": "#21466B",
+      "temaODS": "parcerias e meios de implementação"
+    }
+  ]
+}
