@@ -2,6 +2,7 @@ from django.contrib import admin
 
 from .models.eixos import Eixo, Tema
 from .models.metas import Meta, MetaOrgao, MetaSubprefeitura, AcaoEstrategica, AcaoOrgao
+from .models.pdm import PDM
 from cadastros_basicos.models.estrutura_administrativa import Orgao
 
 # Register your models here.
@@ -56,4 +57,10 @@ class MetaAdmin(admin.ModelAdmin):
     list_display = ('numero', 'destaque', 'descricao')
     search_fields = ('numero', 'destaque')
     inlines = [AcaoEstrategicaInline, MetaOrgaoInline, MetaSubprefeituraInline]
+
+
+@admin.register(PDM)
+class PDMAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'ano_inicio', 'ano_fim', 'nome_prefeito')
+    search_fields = ('nome', 'ano_inicio', 'ano_fim', 'nome_prefeito')
 
