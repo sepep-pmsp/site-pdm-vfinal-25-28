@@ -1,53 +1,69 @@
 import React, { useEffect, useState } from "react";
-import { getFiltroMetasData } from "@/services/Metas/getFiltroMetasData";
+import { getFiltroMetasData, postFiltrosSelecionados } from "@/services/Metas/getFiltroMetasData";
 import FiltroODS from "./FiltroMeta/FiltroODS";
 import FiltroCentro from "./FiltroMeta/FiltroCentro";
 import FiltroEixos from "./FiltroMeta/FiltroEixos";
+import { getMetasData } from "@/services/Metas/getMetasData";
 
-export default function FiltroMeta({ onFilterChange }) {
+export default function FiltroMeta({ onCardsUpdate }) {
   const [data, setData] = useState(null);
   const [filtrosSelecionados, setFiltrosSelecionados] = useState({
     ods: [],
     regioes: [],
+    subprefeituras: [],
+    planos_vinculados: [],
     orgaos: [],
-    planos: [],
-    eixos: []
+    eixos: [],
+    subeixos: []
   });
 
   useEffect(() => {
-    async function fetchData() {
-      const filtroData = await getFiltroMetasData();
-      setData(filtroData);
-    }
-    fetchData();
+    getFiltroMetasData().then(setData).catch(console.error);
   }, []);
+
+  useEffect(() => {
+    if (data) {
+      postFiltrosSelecionados(filtrosSelecionados)
+        .then((res) => {
+          onCardsUpdate(res);
+        })
+        .catch(console.error);
+    }
+  }, [filtrosSelecionados, data, onCardsUpdate]);
 
   if (!data) return <p>Carregando filtros...</p>;
 
-  function toggleSelecionado(categoria, valor) {
+  // Alterna seleção de filtros (genérico para todos os componentes)
+  function toggleSelecionado(tipo, valor) {
     setFiltrosSelecionados((prev) => {
-      const atual = prev[categoria];
-      const novoArray = atual.includes(valor)
-        ? atual.filter((v) => v !== valor)
-        : [...atual, valor];
-      const novoEstado = { ...prev, [categoria]: novoArray };
-      onFilterChange && onFilterChange(novoEstado);
-      return novoEstado;
+      const jaSelecionado = prev[tipo]?.includes(valor);
+      return {
+        ...prev,
+        [tipo]: jaSelecionado
+          ? prev[tipo].filter((v) => v !== valor)
+          : [...prev[tipo], valor]
+      };
     });
   }
 
-  function setFiltroSimples(categoria, valorArray) {
-    setFiltrosSelecionados((prev) => {
-      const novoEstado = { ...prev, [categoria]: valorArray };
-      onFilterChange && onFilterChange(novoEstado);
-      return novoEstado;
-    });
+  function limparFiltros() {
+    const estadoInicial = {
+      ods: [],
+      regioes: [],
+      subprefeituras: [],
+      planos_vinculados: [],
+      orgaos: [],
+      eixos: [],
+      subeixos: []
+    };
+    setFiltrosSelecionados(estadoInicial);
+    getMetasData().then(onCardsUpdate).catch(console.error);
   }
 
   return (
     <div className="flex items-start">
       {/* Coluna esquerda - ODS */}
-       <FiltroODS
+      <FiltroODS
         ods={data.ods}
         filtrosSelecionados={filtrosSelecionados}
         toggleSelecionado={toggleSelecionado}
@@ -60,15 +76,15 @@ export default function FiltroMeta({ onFilterChange }) {
         orgaos={data.filtros.orgaos}
         planosVinculados={data.filtros.planos_vinculados}
         toggleSelecionado={toggleSelecionado}
-        setFiltroSimples={setFiltroSimples}
+        onLimparFiltros={limparFiltros}
       />
-
 
       {/* Coluna direita - Eixos */}
       <FiltroEixos
         eixos={data.eixos}
         filtrosSelecionados={filtrosSelecionados}
         toggleSelecionado={toggleSelecionado}
+        onLimparFiltros={limparFiltros}
       />
     </div>
   );
