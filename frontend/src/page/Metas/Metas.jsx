@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getMetasData } from "@/services/metas/getMetasData";
+import { getMetasData } from "@/services/Metas/getMetasData";
 import logo from "@/assets/svg/logo-pdm.svg";
 import CarouselOrcamento from "@/components/CarouselOrcamento/CarouselOrcamento";
 import FiltroMeta from "@/components/Meta/FiltroMeta";
