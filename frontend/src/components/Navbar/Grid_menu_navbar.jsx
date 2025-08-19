@@ -18,7 +18,7 @@ export default function Grid_menu_navbar({ onClose }) {
     <div className="flex flex-row flex-nowrap items-center justify-center h-full w-full gap-4 p-4">
       {/* Grid lateral (coluna esquerda) */}
       <div className="flex flex-col flex-nowrap items-start gap-4 ">
-        <div>
+        <div onClick={() => goTo("/sobre")}>
           <button className="slide-bottom-in text-white w-80 bg-[var(--color-navy)] h-[25rem] flex flex-col items-start justify-start flex-nowrap text-2xl  p-4 rounded-tr-[3rem] cursor-pointer">
             <h2 className="z-2 slide-bottom-in-item">sobre o pdm</h2>
             <img className="relative left-6 top-[2.8rem]" src={Vector_Sobre} />
@@ -116,11 +116,8 @@ export default function Grid_menu_navbar({ onClose }) {
           </button>
         </div>
 
-        <div className="slide-top-in-3 w-[19rem] bg-[var(--color-cyan-dark)] text-white h-[11.5rem] p-4 flex items-end cursor-pointer">
-          <button
-            onClick={() => goTo("/transparencia")}
-            className="text-start w-full cursor-pointer text-2xl"
-          >
+        <div onClick={() => goTo("/transparencia")} className="slide-top-in-3 w-[19rem] bg-[var(--color-cyan-dark)] text-white h-[11.5rem] p-4 flex items-end cursor-pointer">
+          <button className="text-start w-full cursor-pointer text-2xl">
             <h2 className="slide-top-in-item-3">
               transparência e monitoramento
             </h2>
