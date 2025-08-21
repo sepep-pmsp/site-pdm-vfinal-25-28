@@ -1,7 +1,32 @@
-
-{
-    "nome" : "Ricardo Nunes",
-    "partido" : "MDB",
-    "mandato_inicio" : "2024-01-01",
-    "mandato_fim" : "2028-12-31"
-}
+[
+    {
+        "nome" : "Ricardo Nunes",
+        "partido" : "MDB",
+        "mandato_inicio" : "2024-01-01",
+        "mandato_fim" : "2028-12-31"
+    },
+    {
+        "nome" : "Bruno Covas",
+        "partido" : "PDSB",
+        "mandato_inicio" : "2021-01-01",
+        "mandato_fim" : "2024-12-31"
+    },
+    {
+        "nome" : "João Dória",
+        "partido" : "PDSB",
+        "mandato_inicio" : "2017-01-01",
+        "mandato_fim" : "2020-12-31"
+    },
+    {
+        "nome" : "Fernando Haddad",
+        "partido" : "PT",
+        "mandato_inicio" : "2013-01-01",
+        "mandato_fim" : "2016-12-31"
+    },
+    {
+        "nome" : "Gilberto Kassab",
+        "partido" : "DEM",
+        "mandato_inicio" : "2008-01-01",
+        "mandato_fim" : "2012-12-31"
+    }
+]
