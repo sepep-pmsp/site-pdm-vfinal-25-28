@@ -48,6 +48,10 @@ class PDM(models.Model):
         return f"{self.ano_inicio}/{self.ano_fim}"
     
     @property
+    def id_pdm(self):
+        return f"PDM {self.periodo_str}"
+    
+    @property
     def is_pdm_atual(self):
         ano_atual = datetime.now().year
         return self.ano_inicio <= ano_atual <= self.ano_fim
@@ -86,24 +90,33 @@ class PDM(models.Model):
     def __str__(self):
         return self.nome
 
+class TipoDocumentoPDM(models.Model):
+
+    nome = models.CharField(max_length=150, unique=True, verbose_name="Nome do Tipo de Documento")
+    descricao = models.TextField(blank=True, null=True, verbose_name="Descrição do Tipo de Documento")
+
+    class Meta:
+        verbose_name = "Tipo de Documento PDM"
+        verbose_name_plural = "Tipos de Documentos PDM"
+        ordering = ['nome']
+
+    def __str__(self):
+        return self.nome
+
 class DocumentoPDM(models.Model):
 
     pdm = models.ForeignKey(PDM, on_delete=models.CASCADE, related_name='documentos', verbose_name="PDM")
     nome = models.CharField(max_length=300, verbose_name="Nome do Documento")
     ordem = models.PositiveIntegerField(default=1, verbose_name="Ordem do Documento")
     descricao = models.TextField(blank=True, null=True, verbose_name="Descrição do Documento")
-    tipo = models.CharField(max_length=50, choices=[
-        ('pdm', 'Programa de Metas'),
-        ('relatorio', 'Relatório  de Execução'),
-        ('outro', 'Outro')
-    ], verbose_name="Tipo de Documento")
+    tipo = models.ForeignKey(TipoDocumentoPDM, on_delete=models.PROTECT, blank=False, null=False, verbose_name="Tipo de Documento")
     url = models.URLField(max_length=200, verbose_name="Link para Arquivo do Documento")
     data_upload = models.DateTimeField(auto_now_add=True, verbose_name="Data de Upload")
 
     class Meta:
         verbose_name = "Documento PDM"
         verbose_name_plural = "Documentos PDM"
-        ordering = ['tipo', "ordem"]
+        ordering = ['tipo__nome', "ordem"]
     
     def __str__(self):
         return self.nome

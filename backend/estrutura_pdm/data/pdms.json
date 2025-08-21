@@ -8,8 +8,13 @@
         "nome_prefeito" : "Gilberto Kassab",
         "documentos" : [
             {
-                "nome" : "Versão Final PdM 2009-2012",
-                "url" : "http://www.prefeitura.sp.gov.br/cidade/secretarias/upload/governo/arquivos/programa_de_metas/2009-2012-Programa_de_Metas-Agenda_2012.pdf",
+                "nome" : "Relatório Final",
+                "url" : "https://drive.prefeitura.sp.gov.br/cidade/secretarias/upload/gestao/2009-2012.pdf",
+                "tipo" : "relatorio"
+            },
+            {
+                "nome" : "Agenda 2012",
+                "url" : "https://drive.prefeitura.sp.gov.br/cidade/secretarias/upload/governo/arquivos/programa_de_metas/2009-2012-Programa_de_Metas-Agenda_2012.pdf",
                 "tipo" : "pdm"
             }
         ]
@@ -23,9 +28,19 @@
         "nome_prefeito" : "Fernando Haddad",
         "documentos" : [
             {
-                "nome" : "Versão Final PdM 2009-2012",
-                "url" : "http://www.prefeitura.sp.gov.br/cidade/secretarias/upload/governo/arquivos/programa_de_metas/2009-2012-Programa_de_Metas-Agenda_2012.pdf",
+                "nome" : "Ficha das Metas",
+                "url" : "https://drive.prefeitura.sp.gov.br/cidade/secretarias/upload/planejamento/arquivos/15308-004_AF_FichasProgrmadeMetas2Fase.pdf",
                 "tipo" : "pdm"
+            },
+                        {
+                "nome" : "Apresentação",
+                "url" : "https://drive.prefeitura.sp.gov.br/cidade/secretarias/upload/planejamento/arquivos/15308-004_AF_FolhetoProgrmadeMetas2Fase.pdf",
+                "tipo" : "pdm"
+            },
+                        {
+                "nome" : "Versão Final PdM 2009-2012",
+                "url" : "https://drive.prefeitura.sp.gov.br/cidade/secretarias/upload/gestao/arquivos/Balanco%20final%20de%20gestao%20-%20Haddad.pdf",
+                "tipo" : "relatorio"
             }
         ]
     },
@@ -38,8 +53,48 @@
         "nome_prefeito" : "João Dória",
         "documentos" : [
             {
-                "nome" : "Versão Final PdM 2009-2012",
-                "url" : "http://www.prefeitura.sp.gov.br/cidade/secretarias/upload/governo/arquivos/programa_de_metas/2009-2012-Programa_de_Metas-Agenda_2012.pdf",
+                "nome" : "Relatório Final 2019-2020",
+                "url" : "https://drive.prefeitura.sp.gov.br/cidade/secretarias/upload/governo/arquivos/programa_de_metas/Relatorio_PdM_Final.pdf",
+                "tipo" : "relatorio"
+            },
+            {
+                "nome" : "Relatório Final 2019-2020 Atualização",
+                "url" : "https://drive.prefeitura.sp.gov.br/cidade/secretarias/upload/chamadas/atualizao-relatrio-2019-2020_1618435088.pdf",
+                "tipo" : "relatorio"
+            },
+            {
+                "nome" : "Revisão Programática 2019-2020",
+                "url" : "https://drive.prefeitura.sp.gov.br/cidade/secretarias/upload/governo/arquivos/programa_de_metas/2019-2020%20-%20Programa%20de%20Metas%20-%20Revisão%20Programática.pdf",
+                "tipo" : "pdm"
+            },
+            {
+                "nome" : "Relatório Anual 2018",
+                "url" : "https://drive.prefeitura.sp.gov.br/cidade/secretarias/upload/governo/arquivos/programa_de_metas/2018%20-%20Relatório%20Anual.pdf",
+                "tipo" : "relatorio"
+            },
+            {
+                "nome" : "Relatório de Execução Anual – 2018",
+                "url" : "https://drive.prefeitura.sp.gov.br/cidade/secretarias/upload/governo/arquivos/programa_de_metas/2017-2020%20-%20Relatório%20de%20Execução%20Anual%20–%202018.pdf",
+                "tipo" : "relatorio"
+            },
+            {
+                "nome" : "Balanço Semestral 2018",
+                "url" : "https://drive.prefeitura.sp.gov.br/cidade/secretarias/upload/governo/planejamento/Resumo%20Executivo%20Semestral%20-%20Julho%20de%202018.pdf",
+                "tipo" : "relatorio"
+            },
+            {
+                "nome" : "Relatório Anual 2017",
+                "url" : "https://drive.prefeitura.sp.gov.br/cidade/secretarias/upload/governo/planejamento/RelatoriodeExecucaoAnual2017.pdf",
+                "tipo" : "relatorio"
+            },
+            {
+                "nome" : "Versão Final-Participativa PdM 2017-2020",
+                "url" : "https://drive.prefeitura.sp.gov.br/cidade/secretarias/upload/governo/arquivos/programa_de_metas/2017-2020%20-%20Programa%20de%20Metas%20-%20Versão%20Final%20(Participativa).pdf",
+                "tipo" : "pdm"
+            },
+            {
+                "nome" : "Versão Inicial PdM 2017-2020",
+                "url" : "https://drive.prefeitura.sp.gov.br/cidade/secretarias/upload/governo/arquivos/programa_de_metas/2017-2020%20-%20Programa%20de%20Metas%20-%20Versão%20Inicial.pdf",
                 "tipo" : "pdm"
             }
         ]
@@ -53,8 +108,48 @@
         "nome_prefeito" : "Bruno Covas",
         "documentos" : [
             {
-                "nome" : "Versão Final PdM 2009-2012",
-                "url" : "http://www.prefeitura.sp.gov.br/cidade/secretarias/upload/governo/arquivos/programa_de_metas/2009-2012-Programa_de_Metas-Agenda_2012.pdf",
+                "nome" : "Relatório Final (2025)",
+                "url" : "https://drive.google.com/file/d/1KQHcqe_smZBj35QIRpJ_Wy0ehK3zRiaV/view?pli=1",
+                "tipo" : "relatorio"
+            },
+            {
+                "nome" : "Relatório Anual (2024)",
+                "url" : "https://prefeitura.sp.gov.br/documents/d/planejamento/relatorio-de-execucao-do-programa-de-metas-2021-2024_2024-pdf",
+                "tipo" : "relatorio"
+            },
+            {
+                "nome" : "Balanço Semestral (2024)",
+                "url" : "https://prefeitura.sp.gov.br/documents/d/planejamento/balanco-semestral-2024-pdf",
+                "tipo" : "relatorio"
+            },
+                        {
+                "nome" : "Relatório Anual (2023)",
+                "url" : "https://app.powerbi.com/view?r=eyJrIjoiZmMwYWI5ZjktMTEyOC00MjJhLWE4ZjItNTQzOTFiNTQ0OTJkIiwidCI6ImI5YjgwMjQ2LWYzMzgtNGRlZi04YzQ2LWY1MDhiZjY3YzU1ZSJ9",
+                "tipo" : "relatorio"
+            },
+                        {
+                "nome" : "Relatório Anual (2022)",
+                "url" : "https://prefeitura.sp.gov.br/documents/d/planejamento/relatorio_anual_2022-pdf",
+                "tipo" : "relatorio"
+            },
+                        {
+                "nome" : "Relatório Anual (2021)",
+                "url" : "https://drive.prefeitura.sp.gov.br/cidade/secretarias/upload/governo/SEPEP/arquivos/Prefeitura%20de%20São%20Paulo%20-%20Relatório%20de%20Execução%20Anual%20-%20Programa%20de%20Metas%20-2021-com-errata-maio-22.pdf",
+                "tipo" : "relatorio"
+            },
+              {
+                "nome" : "Alteração Programática",
+                "url" : "https://prefeitura.sp.gov.br/documents/d/planejamento/alteracaoprogramaticapdm21-24-pdf",
+                "tipo" : "pdm"
+            },
+                          {
+                "nome" : "Versão Final-Participativa",
+                "url" : "https://drive.prefeitura.sp.gov.br/cidade/secretarias/upload/governo/SEPEP/arquivos/pdm-versao-final-participativa.pdf",
+                "tipo" : "pdm"
+            },
+                                      {
+                "nome" : "Versão Inicial",
+                "url" : "https://drive.prefeitura.sp.gov.br/cidade/secretarias/upload/governo/arquivos/programa_de_metas/programa-de-metas-2021-2024/programa_de_metas_2021-2024_versao-inicial.pdf",
                 "tipo" : "pdm"
             }
         ]

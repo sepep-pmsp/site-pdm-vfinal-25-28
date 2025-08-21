@@ -1,12 +1,14 @@
 import json
 import os
 from django.core.management.base import BaseCommand
+from estrutura_pdm.models.pdm import TipoDocumentoPDM
 from estrutura_pdm.models.pdm import PDM, DocumentoPDM
 from cadastros_basicos.models.estrutura_administrativa import Prefeito
 from django.core.files import File
 from cadastros_basicos.queries.prefeito import get_prefeito_by_name
 from cadastros_basicos.queries.superuser import get_superuser
 from static_files.models import Imagem
+from estrutura_pdm.queries.pdms import get_tipo_doc_pdm_by_nome
 from typing import Literal
 
 
@@ -63,12 +65,21 @@ class Command(BaseCommand):
             return
 
         for doc in documentos:
+
+            tipo_doc: TipoDocumentoPDM | None = get_tipo_doc_pdm_by_nome(doc['tipo'], raise_error=False)
+            if tipo_doc is None:
+                self.stdout.write(self.style.WARNING(f'Tipo de documento {doc["tipo"]} não encontrado. Criando novo tipo.'))
+                TipoDocumentoPDM.objects.create(nome=doc['tipo'], descricao=doc.get('descricao'))
+                continue
+
             doc_data = {
                 'nome': doc['nome'],
                 'url': doc['url'],
-                'tipo': doc['tipo'],
+                'tipo': tipo_doc,
                 'pdm': pdm
             }
+
+
             documento, created = DocumentoPDM.objects.get_or_create(**doc_data)
             if created:
                 self.stdout.write(self.style.SUCCESS(f'Documento {documento.nome} criado com sucesso.'))
