@@ -2,7 +2,7 @@ import nested_admin
 from django.contrib import admin, messages
 from .models import (AboutPDM, ParagrafoAbout, CartaPrefeito, ParagrafoCartaPrefeito, 
                      Noticia,
-                     Historico, CardHistorico, ItemCard)
+                     Historico, CardHistorico)
 from django.core.exceptions import ValidationError
 from django.forms.models import BaseInlineFormSet
 # Register your models here.
@@ -115,21 +115,14 @@ class NoticiaAdmin(admin.ModelAdmin):
         super().save_model(request, obj, form, change)
 
 
-class ItemCardHistoricoInline(nested_admin.NestedTabularInline):
-    model = ItemCard
-    extra = 1
-    verbose_name = "Item do Card da Seção Histórico"
-    verbose_name_plural = "Itens do Card da Seção Histórico"
-
-class CardHistoricoInline(nested_admin.NestedStackedInline):
+class CardHistoricoInline(admin.TabularInline):
     model = CardHistorico
     extra = 1
     verbose_name = "Card do Histórico"
     verbose_name_plural = "Cards do Histórico"
-    inlines = [ItemCardHistoricoInline]
 
 @admin.register(Historico)
-class HistoricoAdmin(nested_admin.NestedModelAdmin):
+class HistoricoAdmin(admin.ModelAdmin):
     list_display = ('titulo', 'descricao', 'criado_em', 'criado_por')
     readonly_fields =  ('criado_em', 'criado_por', 'modificado_em', 'modificado_por')
     inlines = [CardHistoricoInline]

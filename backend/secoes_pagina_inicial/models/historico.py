@@ -65,7 +65,7 @@ class CardHistorico(models.Model):
         max_length=7,
         default="#000000",
         validators=[hex_color_validator],
-        verbose_name="Cor Principal do Eixo"
+        verbose_name="Cor Principal do Card"
     )
 
     cor_botao  = models.CharField(
@@ -101,6 +101,11 @@ class CardHistorico(models.Model):
     def modificado_em(self):
         return self.historico.modificado_em
     
+    @property
+    def documentos(self):
+
+        return self.pdm.documentos.all()
+    
     def clean(self):
 
         if self.ordem < 1:
@@ -117,23 +122,3 @@ class CardHistorico(models.Model):
 
         return f'Card do Histórico {self.ordem}: {self.id}'
     
-
-class ItemCard(models.Model):
-    card = models.ForeignKey(CardHistorico, related_name='itens', on_delete=models.CASCADE)
-    conteudo = models.TextField(verbose_name="Conteúdo do Item")
-    link = models.URLField(
-        max_length=200,
-        blank=True,
-        null=True,
-        verbose_name="Link do Item",
-        help_text="Link opcional para mais informações sobre o item."
-    )
-    ordem = models.PositiveIntegerField(verbose_name="Ordem do Item")
-
-    class Meta:
-        ordering = ['ordem']
-        verbose_name = "Item do Card"
-        verbose_name_plural = "Itens do Card"
-
-    def __str__(self):
-        return f'Item {self.ordem} do Card {self.card.id}'
