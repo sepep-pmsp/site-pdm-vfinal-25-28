@@ -6,9 +6,11 @@ from typing import List
 from .queries.static_files import get_image_by_id
 from .queries.secoes_pagina_inicial import get_about_pdm, get_noticias
 from estrutura_pdm.queries.eixos import get_eixos, total_metas_eixo
+from secoes_pagina_inicial.queries.transparencia import get_published_cards_transparencia, get_published_transparencia
 
 from .schemas.secoes_pagina_inicial import AboutPDMSchema, NoticiaSchema
 from .schemas.secoes_pagina_inicial import EixoSchema as EixoPaginaInicialSchema
+from .schemas.secoes_pagina_inicial import SecaoTransparenciaSchema, CardSecaoTransparenciaSchema
 from .schemas.visao_geral import DadosOrcamentoGeralSchema, OrcamentoEixoSchema
 
 from .utils.static_files.images import get_rel_link, get_abs_link, get_content_type
@@ -94,6 +96,40 @@ def eixos_pagina_inicial(request) -> List[EixoPaginaInicialSchema]:
     ) for eixo in eixos]
 
     return parsed_list
+
+@api.get('/transparencia_pagina_inicial', response=SecaoTransparenciaSchema, tags=["Seções Página Inicial"])
+def transparencia_pagina_inicial(request) -> SecaoTransparenciaSchema:
+    """
+    Retrieve the transparency section for the initial page.
+    """
+    
+    transparencia_obj = get_published_transparencia(raise_error=False)
+    if not transparencia_obj:
+        raise HttpError(404, "Seção de transparência não encontrada")
+    
+    parsed_transparencia = {
+        "titulo": transparencia_obj.titulo,
+        "subtitulo": transparencia_obj.subtitulo,
+        'recursos' : []
+    }
+
+    cards = get_published_cards_transparencia(transparencia_obj.id, raise_error=False)
+    if not cards:
+        raise HttpError(404, "Cards da seção de transparência não encontrados")
+    
+    for card in cards:
+        parsed_card = CardSecaoTransparenciaSchema(
+            subtitulo=card.titulo,
+            paragrafo=card.conteudo,
+            ordem=card.ordem,
+            nome_btn=card.botao_txt,
+            link=card.botao_url
+        )
+        parsed_transparencia['recursos'].append(parsed_card)
+
+    return SecaoTransparenciaSchema(**parsed_transparencia)
+
+
 
 
 @api.get("/orcamento_geral", response=DadosOrcamentoGeralSchema, tags=["Visão Geral"])
