@@ -5,6 +5,7 @@ from estrutura_pdm.models.eixos.eixos_estrategicos import Eixo
 from estrutura_pdm.models.eixos.temas import Tema
 from django.core.files import File
 from cadastros_basicos.queries.superuser import get_superuser
+from estrutura_pdm.queries.pdms import get_pdm_atual
 from static_files.models import Imagem
 from typing import Literal
 
@@ -80,6 +81,8 @@ class Command(BaseCommand):
             "logo_branco": logo_branco,
             "cor_principal": eixo_obj["hex_cor_principal"],
             "ordem": int(eixo_obj["ordem"]),
+            "orcamento" : int(eixo_obj['orcamento']),
+            "pdm" : get_pdm_atual()
         }
 
         return parsed

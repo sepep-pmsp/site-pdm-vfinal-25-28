@@ -8,6 +8,7 @@
         "logo_branco_path" : "universo_sp_branco.svg",
         "hex_cor_principal" : "#008000",
         "ordem" : 1,
+        "orcamento" : 31700000000,
         "temas" : [
             {
                 "nome" : "Natureza e Ambiente",
@@ -41,6 +42,7 @@
         "logo_branco_path" : "capital_do_futuro_branco.svg",
         "hex_cor_principal" : "#792D49",
         "ordem" : 2,
+        "orcamento" : 294400000,
         "temas" : [
             {
                 "nome" : "Modernização e Inovação",
@@ -66,7 +68,8 @@
         "logo_branco_path" : "cidade_empreendedora_branco.svg",
         "hex_cor_principal" : "#0000AB",
         "ordem" : 3,
-        "temas" : [
+        "orcamento" : 346800000,
+        "temas" : [ 
             {
                 "nome" : "Ambiente de negócios",
                 "descricao" : "XXXX"
@@ -91,6 +94,7 @@
         "logo_branco_path" : "viver_sao_paulo_branco.svg",
         "hex_cor_principal" : "#EF4C23",
         "ordem" : 1,
+        "orcamento" : 16500000000, 
         "temas" : [
             {
                 "nome" : "Segurança",

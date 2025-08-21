@@ -1,6 +1,7 @@
 from django.db import models
 from static_files.models import Imagem
 from django.core.validators import RegexValidator
+from estrutura_pdm.models.pdm import PDM
 
 hex_color_validator = RegexValidator(
     regex=r'^#([A-Fa-f0-9]{6})$',
@@ -21,6 +22,12 @@ class Eixo(models.Model):
         help_text="Define a ordem de exibição dos eixos. Eixos com ordem menor serão exibidos primeiro."
     )
 
+    pdm = models.ForeignKey(
+        PDM,
+        on_delete=models.PROTECT,
+        related_name="eixos",
+        verbose_name="PDM Associado"
+    )
 
     @property
     def descricao_as_list(self)->list[str]:
@@ -52,6 +59,12 @@ class Eixo(models.Model):
         default="#000000",
         validators=[hex_color_validator],
         verbose_name="Cor Principal do Eixo"
+    )
+
+    orcamento = models.IntegerField(
+        default=0,
+        verbose_name="Orçamento do Eixo",
+        help_text="Orçamento total alocado para este eixo."
     )
     
     class Meta:
