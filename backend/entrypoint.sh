@@ -15,6 +15,7 @@ python manage.py seed_subprefeituras
 python manage.py seed_distritos
 python manage.py seed_secretarias
 python manage.py seed_prefeito
+python manage.py seed_pdms
 python manage.py seed_eixos
 python manage.py seed_news
 python manage.py seed_carta_prefeito
@@ -23,7 +24,7 @@ python manage.py seed_metas
 python manage.py seed_acoes
 python manage.py seed_ods
 python manage.py seed_planos_setoriais
-python manage.py seed_pdms
+python manage.py seed_historico
 
 
 echo ">> Iniciando servidor"

@@ -10,14 +10,14 @@ class AcaoOrgao(models.Model):
         blank=False,
         related_name='acao_orgao',
         verbose_name="Órgão",
-        on_delete=models.CASCADE
+        on_delete=models.PROTECT
     )
     acao = models.ForeignKey(
         'AcaoEstrategica',
         blank=False,
         related_name='acoes_estrategicas',
         verbose_name="Ações Estratégicas",
-        on_delete=models.CASCADE
+        on_delete=models.PROTECT
     )
 
     class Meta:
