@@ -4,10 +4,12 @@ from django.http import FileResponse
 from typing import List
 
 from .queries.static_files import get_image_by_id
-from .queries.secoes_pagina_inicial import get_about_pdm, get_noticias, get_eixos
+from .queries.secoes_pagina_inicial import get_about_pdm, get_noticias
+from estrutura_pdm.queries.eixos import get_eixos, total_metas_eixo
 
 from .schemas.secoes_pagina_inicial import AboutPDMSchema, NoticiaSchema
 from .schemas.secoes_pagina_inicial import EixoSchema as EixoPaginaInicialSchema
+from .schemas.visao_geral import DadosOrcamentoGeralSchema, OrcamentoEixoSchema
 
 from .utils.static_files.images import get_rel_link, get_abs_link, get_content_type
 
@@ -92,3 +94,40 @@ def eixos_pagina_inicial(request) -> List[EixoPaginaInicialSchema]:
     ) for eixo in eixos]
 
     return parsed_list
+
+
+@api.get("/orcamento_geral", response=DadosOrcamentoGeralSchema, tags=["Visão Geral"])
+def orcamento_geral(request)->DadosOrcamentoGeralSchema:
+    """
+    Retrieve the general budget data.
+    """
+    orcamento_geral = {
+        "orcamento_total" : 0,
+        "total_metas" : 0,
+        "orcamentos_por_eixo" : []
+    }
+    
+    eixos = get_eixos()
+    if not eixos:
+        raise HttpError(404, "Eixos não encontrados")
+
+    for eixo in eixos:
+
+        total_metas = total_metas_eixo(eixo.id)
+        orcamento_eixo = eixo.orcamento
+
+        orcamento_geral["orcamento_total"] += orcamento_eixo
+        orcamento_geral["total_metas"] += total_metas
+
+        dados_eixo = OrcamentoEixoSchema(
+            nome=eixo.nome,
+            cor_principal=eixo.cor_principal,
+            qtd_metas=total_metas,
+            orcamento=orcamento_eixo
+        )
+
+        orcamento_geral["orcamentos_por_eixo"].append(dados_eixo)
+    
+    return DadosOrcamentoGeralSchema(**orcamento_geral)
+    
+       
