@@ -24,6 +24,7 @@ python manage.py seed_acoes
 python manage.py seed_ods
 python manage.py seed_planos_setoriais
 python manage.py seed_pdms
+python manage.py seed_historico
 
 
 echo ">> Iniciando servidor"
