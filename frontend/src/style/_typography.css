@@ -170,6 +170,8 @@ h1,h2,h3,h4,h5,h6{
 .px-16   { padding-left: 4rem; padding-right: 4rem; }
 .px-20   { padding-left: 5rem; padding-right: 5rem; }
 .px-24   { padding-left: 6rem; padding-right: 6rem; }
+.px-48   { padding-left: 12rem; padding-right: 12rem; }
+.px-60   { padding-left: 15rem; padding-right: 15rem; }
 
 .py-0    { padding-top: 0; padding-bottom: 0; }
 .py-1    { padding-top: 0.25rem; padding-bottom: 0.25rem; }
