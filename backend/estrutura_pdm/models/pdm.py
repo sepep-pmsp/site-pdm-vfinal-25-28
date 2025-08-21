@@ -82,3 +82,28 @@ class PDM(models.Model):
         constraints = [
             models.UniqueConstraint(fields=['ano_inicio', 'ano_fim'], name='unique_periodo_pdm')
         ]
+
+    def __str__(self):
+        return self.nome
+
+class DocumentoPDM(models.Model):
+
+    pdm = models.ForeignKey(PDM, on_delete=models.CASCADE, related_name='documentos', verbose_name="PDM")
+    nome = models.CharField(max_length=300, verbose_name="Nome do Documento")
+    ordem = models.PositiveIntegerField(default=1, verbose_name="Ordem do Documento")
+    descricao = models.TextField(blank=True, null=True, verbose_name="Descrição do Documento")
+    tipo = models.CharField(max_length=50, choices=[
+        ('pdm', 'Programa de Metas'),
+        ('relatorio', 'Relatório  de Execução'),
+        ('outro', 'Outro')
+    ], verbose_name="Tipo de Documento")
+    url = models.URLField(max_length=200, verbose_name="Link para Arquivo do Documento")
+    data_upload = models.DateTimeField(auto_now_add=True, verbose_name="Data de Upload")
+
+    class Meta:
+        verbose_name = "Documento PDM"
+        verbose_name_plural = "Documentos PDM"
+        ordering = ['tipo', "ordem"]
+    
+    def __str__(self):
+        return self.nome

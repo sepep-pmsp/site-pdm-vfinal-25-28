@@ -1,7 +1,7 @@
 import json
 import os
 from django.core.management.base import BaseCommand
-from estrutura_pdm.models.pdm import PDM
+from estrutura_pdm.models.pdm import PDM, DocumentoPDM
 from cadastros_basicos.models.estrutura_administrativa import Prefeito
 from django.core.files import File
 from cadastros_basicos.queries.prefeito import get_prefeito_by_name
@@ -55,6 +55,26 @@ class Command(BaseCommand):
 
         return imagem
     
+    def create_documentos(self, pdm_obj:dict, pdm:PDM)->None:
+
+        documentos = pdm_obj.get('documentos', [])
+        if not documentos:
+            self.stdout.write(self.style.WARNING(f'Nenhum documento encontrado para o PDM {pdm.nome}.'))
+            return
+
+        for doc in documentos:
+            doc_data = {
+                'nome': doc['nome'],
+                'url': doc['url'],
+                'tipo': doc['tipo'],
+                'pdm': pdm
+            }
+            documento, created = DocumentoPDM.objects.get_or_create(**doc_data)
+            if created:
+                self.stdout.write(self.style.SUCCESS(f'Documento {documento.nome} criado com sucesso.'))
+            else:
+                self.stdout.write(self.style.WARNING(f'Documento {documento.nome} já existe.'))
+    
 
     def get_prefeito(self, pdm_obj:dict)->Prefeito:
 
@@ -97,6 +117,7 @@ class Command(BaseCommand):
 
         pdm, created = PDM.objects.get_or_create(**pdm_data)
         if created:
+            self.create_documentos(pdm_obj, pdm)
             self.stdout.write(self.style.SUCCESS(f'PDM {pdm.nome} criado com sucesso.'))
         else:
             self.stdout.write(self.style.WARNING(f'PDM {pdm.nome} já existe.'))
