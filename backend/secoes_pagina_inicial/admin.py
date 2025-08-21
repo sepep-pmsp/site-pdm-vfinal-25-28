@@ -123,7 +123,7 @@ class CardHistoricoInline(admin.TabularInline):
 
 @admin.register(Historico)
 class HistoricoAdmin(admin.ModelAdmin):
-    list_display = ('titulo', 'descricao', 'criado_em', 'criado_por')
+    list_display = ('titulo', 'criado_em', 'criado_por', 'modificado_em', 'modificado_por')
     readonly_fields =  ('criado_em', 'criado_por', 'modificado_em', 'modificado_por')
     inlines = [CardHistoricoInline]
 

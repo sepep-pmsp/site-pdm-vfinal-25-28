@@ -14,7 +14,11 @@ hex_color_validator = RegexValidator(
 
 class Historico(models.Model):
     titulo = models.CharField(max_length=255, verbose_name="Título")
-    descricao = models.TextField(verbose_name="Descrição")
+    instrucao = models.TextField(verbose_name="Instrução")
+    paragrafo = models.TextField(
+        verbose_name="Parágrafo",
+        help_text="Texto adicional que será exibido abaixo do título."
+    )
 
 
     published = models.BooleanField(default=False, verbose_name="Publicado")
@@ -57,7 +61,9 @@ class CardHistorico(models.Model):
     conteudo = models.CharField(
         max_length=500,
         verbose_name="Conteúdo do Card",
-        help_text="Conteúdo do card, que pode incluir informações sobre o PDM."
+        help_text="Conteúdo do card, que pode incluir informações sobre o PDM.",
+        blank=True,
+        null=True
     )
 
 

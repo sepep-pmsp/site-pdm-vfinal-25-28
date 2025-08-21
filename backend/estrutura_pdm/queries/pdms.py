@@ -14,6 +14,21 @@ def get_pdms_anteriores():
     pdms_anteriores = PDM.objects.filter(ano_fim__lt=ano_atual).order_by('-ano_fim')
     return pdms_anteriores
 
+
+def get_pdm_by_id(pdm_id:str, raise_errors=True)->PDM | None:
+
+    anos = pdm_id.replace("PDM", "").split('/')
+    ano_inicio = int(anos[0].strip())
+    ano_fim = int(anos[1].strip())
+
+    try:
+        pdm = PDM.objects.get(ano_inicio=ano_inicio, ano_fim=ano_fim)
+        return pdm
+    except PDM.DoesNotExist:
+        if raise_errors:
+            raise ValueError(f"PDM com ID '{pdm_id}' não encontrado.")
+        return None
+
 def get_tipo_doc_pdm_by_nome(nome, raise_error=True):
 
     try:
