@@ -3,7 +3,7 @@ import CarouselPlanejamento from "@/components/CarouselPlanejamento/CarouselPlan
 
 export default function SectionPlanejamento({ sobre }) {
   return (
-    <div className="relative pt-20 ">
+    <div className="relative pt-20 mx-24">
       <div className="h-1 w-[100rem] relative left-12 bg-[var(--color-navy)]"></div>
       <div className="bg-[color:var(--color-cyan-dark)] h-35 rotate-[270deg] relative flex items-center flex-col justify-end p-4 rounded-br-4xl rounded-bl-4xl w-[30rem] right-[17rem] top-[11rem] shadow-[-4px_2px_20px_0px_gray] z-10">
         <h1 className="text-white text-7xl px-6">como é feito</h1>
