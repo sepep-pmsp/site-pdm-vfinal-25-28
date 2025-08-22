@@ -3,7 +3,7 @@ import bgFundo1 from "@/assets/svg/agrupar_2.svg";
 
 export default function SectionObjetivos({ sobre }) {
   return (
-    <div>
+    <div className="mx-24">
       <div className="absolute z-[-1] rotate-180 left-0">
         <img src={bgFundo1} alt="" />
       </div>
