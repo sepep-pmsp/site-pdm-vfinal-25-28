@@ -1,4 +1,4 @@
-import { USE_API, API_BASE_URL } from "./config";
+import { API_BASE_URL, USE_API } from "../config";
 
 /**
  * Expande regiões selecionadas para suas subprefeituras correspondentes

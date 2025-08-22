@@ -9,7 +9,15 @@ export default function CarouselOrcamento() {
   useEffect(() => {
     async function fetchData() {
       const response = await getOrcamentoData();
-      const valores = Object.values(response.visaoGeral);
+      const valores = response.orcamentos_por_eixo.map((eixo) => ({
+        titulo: eixo.nome,
+        corPrincipal: eixo.cor_principal,
+        metasPorEixo: eixo.qtd_metas,
+        totalMetas: response.total_metas,
+        orcamento: eixo.orcamento,
+        orcamentoTotal: response.orcamento_total
+      }));
+
       setData(valores);
     }
     fetchData();
@@ -49,7 +57,10 @@ export default function CarouselOrcamento() {
           </div>
           <div className="h-60 flex flex-col items-center justify-center w-[25rem] gap-8">
             <div className="flex items-center justify-center">
-              <div className="cursor-pointer transition-all duration-600 slideLeft" onClick={handlePrev}>
+              <div
+                className="cursor-pointer transition-all duration-600 slideLeft"
+                onClick={handlePrev}
+              >
                 <ChevronLeft size={28} />
               </div>
               <div

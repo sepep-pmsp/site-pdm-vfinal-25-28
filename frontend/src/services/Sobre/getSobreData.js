@@ -1,8 +1,8 @@
-const USE_API = false;
+import { API_BASE_URL, USE_API } from "../config";
 
 export async function getSobreData() {
   if (USE_API) {
-    const response = await fetch("https://sua-api.com/api/Sobre");
+    const response = await fetch(`${API_BASE_URL}/FiltroMetas`);
     if (!response.ok) {
       throw new Error("Erro ao carregar dados do Sobre");
     }

@@ -1,8 +1,8 @@
-const USE_API = false;
+import { API_BASE_URL, USE_API } from "../config";
 
 export async function getAboutData() {
   if (USE_API) {
-    const response = await fetch("https://sua-api.com/api/home/about");
+    const response = await fetch(`${API_BASE_URL}/about_pdm`);
     if (!response.ok) {
       throw new Error("Erro ao carregar dados do About");
     }
