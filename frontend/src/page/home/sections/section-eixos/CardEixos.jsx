@@ -66,7 +66,7 @@ export default function CardEixos({ eixo, onClose }) {
         onClick={() => setIsExiting(true)}
         className="absolute top-4 right-4 text-white text-2xl"
       >
-        <i className="fa-solid fa-xmark"></i>
+        <i className="fa-solid fa-xmark text-6xl"></i>
       </button>
 
       <div className="grid items-center grid-cols-[repeat(2,1fr)] justify-items-stretch p-4">
