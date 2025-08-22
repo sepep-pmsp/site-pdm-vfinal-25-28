@@ -54,10 +54,10 @@ export default function ModalPrefeito({ isOpen, onClose, carta }) {
             </h2>
           </div>
           <div>
-            <p className="text-white text-2xl"> {carta?.nome || "Nome não disponível"} </p>
+            <p className="text-white text-2xl"> {carta?.nome_prefeito || "Nome não disponível"} </p>
           </div>
           <div className="flex flex-row flex-nowrap items-center justify-start gap-8">
-            {carta?.paragrafo?.map((par, index) => (
+            {carta?.paragrafos?.map((par, index) => (
               <p className="text-white text-lg font-light" key={index}>{par}</p>
             ))}
           </div>
