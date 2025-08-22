@@ -44,7 +44,7 @@ export default function ModalPrefeito({ isOpen, onClose, carta }) {
           className="absolute top-5 right-20 cursor-pointer"
           onClick={onClose}
         >
-          <i className="fa-solid fa-xmark text-white"></i>
+          <i className="fa-solid fa-xmark text-white text-6xl"></i>
         </button>
 
         <div className="flex flex-col flex-nowrap items-start gap-8 p-10">

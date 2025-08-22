@@ -11,13 +11,13 @@
       "subtitulo": "Painel de Monitoramento, com dados atualizados regularmente sobre o status das metas.",
       "paragrafo": "O Sistema de Monitoramento e Acompanhamento Estratégico - SMAE, é o sistema oficial de registro de dados e informações para o monitoramento interno do Programa de Metas, definido pelo Art. 5º do Decreto 63.336/2024. O SMAE é um software livre e de código aberto, que permite a coleta estruturada dos dados e viabiliza o consumo analítico dos dados coletados, seja por meio de extrações em formato de relatórios, ou por meio de painéis gerenciais (dashboards) interativos que têm por objetivo subsidiar a alta gestão da Prefeitura de São Paulo com informações estratégicas. Saiba mais em: <a href=\"https://smae.prefeitura.sp.gov.br/\" target=\"_blank\" class=\"underline text-[var(--color-cyan-medium)]\">https://smae.prefeitura.sp.gov.br/</a>",
       "nome_btn": "painel de monitoramentos",
-      "link": "https://painel.prefeitura.sp.gov.br/monitoramento/programa-de-metas"
+      "link": ""
     },
     {
       "subtitulo": "Relatório de Execução, com os resultados consolidados do PdM.",
       "paragrafo": "A fim de garantir que as ações do Prefeitura sejam transparentes e acessíveis à sociedade, a Lei Orgânica do Município determina que sejam publicados Relatórios Anuais e Balanços Semestrais de Execução do Programa de Metas, promovendo a prestação de contas de forma ativa, não apenas aos órgãos de controle, mas também à população em geral. Essa clareza na condução das políticas públicas é essencial para que os cidadãos, a mídia e as organizações da sociedade civil possam acompanhar o andamento e execução das metas.",
       "nome_btn": "relatório de execução anual (dez/25)",
-      "link": "https://www.prefeitura.sp.gov.br/cidade/secretarias/planejamento/relatorios/"
+      "link": ""
     }
   ]
 }

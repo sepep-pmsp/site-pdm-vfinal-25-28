@@ -142,6 +142,7 @@ h1,h2,h3,h4,h5,h6{
 .pl-24   { padding-left: 6rem; }
 .pl-28   { padding-left: 7rem; }
 .pl-36   { padding-left: 9rem; }
+.pl-80   {padding-left: 20rem;}
 
 .pr-0    { padding-right: 0; }
 .pr-1    { padding-right: 0.25rem; }
@@ -170,6 +171,8 @@ h1,h2,h3,h4,h5,h6{
 .px-16   { padding-left: 4rem; padding-right: 4rem; }
 .px-20   { padding-left: 5rem; padding-right: 5rem; }
 .px-24   { padding-left: 6rem; padding-right: 6rem; }
+.px-48   { padding-left: 12rem; padding-right: 12rem; }
+.px-60   { padding-left: 15rem; padding-right: 15rem; }
 
 .py-0    { padding-top: 0; padding-bottom: 0; }
 .py-1    { padding-top: 0.25rem; padding-bottom: 0.25rem; }
@@ -181,9 +184,11 @@ h1,h2,h3,h4,h5,h6{
 .py-8    { padding-top: 2rem; padding-bottom: 2rem; }
 .py-10   { padding-top: 2.5rem; padding-bottom: 2.5rem; }
 .py-12   { padding-top: 3rem; padding-bottom: 3rem; }
+.py-14   { padding-top: 3.5rem; padding-bottom: 3.5rem; }
 .py-16   { padding-top: 4rem; padding-bottom: 4rem; }
 .py-20   { padding-top: 5rem; padding-bottom: 5rem; }
 .py-24   { padding-top: 6rem; padding-bottom: 6rem; }
+
 
 .m-0    {margin:   0;}
 .m-1_2  {margin:   0.1rem;}
@@ -213,6 +218,8 @@ h1,h2,h3,h4,h5,h6{
 .mt-16   {margin-top: 4rem;}
 .mt-20   {margin-top: 5rem;}
 .mt-24   {margin-top: 6rem;}
+.mt-40   {margin-top: 10rem;}
+.mt-45   {margin-top: 10.5rem;}
 
 .mb-0    {margin-bottom: 0;}
 .mb-1    {margin-bottom: 0.25rem;}
