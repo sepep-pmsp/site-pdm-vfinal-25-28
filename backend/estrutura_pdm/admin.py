@@ -2,6 +2,7 @@ from django.contrib import admin
 
 from .models.eixos import Eixo, Tema
 from .models.metas import Meta, MetaOrgao, MetaSubprefeitura, AcaoEstrategica, AcaoOrgao
+from .models.pdm import PDM, DocumentoPDM, TipoDocumentoPDM
 from cadastros_basicos.models.estrutura_administrativa import Orgao
 
 # Register your models here.
@@ -56,4 +57,42 @@ class MetaAdmin(admin.ModelAdmin):
     list_display = ('numero', 'destaque', 'descricao')
     search_fields = ('numero', 'destaque')
     inlines = [AcaoEstrategicaInline, MetaOrgaoInline, MetaSubprefeituraInline]
+
+
+@admin.register(TipoDocumentoPDM)
+class TipoDocumentoPDMAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'descricao')
+    search_fields = ('nome',)
+    ordering = ('nome',)
+
+class TipoDocumentoPDMInline(admin.TabularInline):
+    model = TipoDocumentoPDM
+    extra = 1
+    verbose_name = "Tipos de Documento do PDM"
+    verbose_name_plural = "Tipos de Documentos do PDM"
+
+
+@admin.register(DocumentoPDM)
+class DocumentoPDMAdmin(admin.ModelAdmin):
+    list_display = ('pdm', 'nome', 'ordem')
+    search_fields = ('pdm__nome', 'nome')
+    list_filter = ('pdm',)
+    ordering = ('pdm', 'ordem')
+
+    def get_queryset(self, request):
+        return super().get_queryset(request).select_related('pdm')
+
+
+class PDMDocumentoInline(admin.TabularInline):
+    model = DocumentoPDM
+    extra = 1
+    verbose_name = "Documento do PDM"
+    verbose_name_plural = "Documentos do PDM"
+
+
+@admin.register(PDM)
+class PDMAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'ano_inicio', 'ano_fim', 'nome_prefeito')
+    search_fields = ('nome', 'ano_inicio', 'ano_fim', 'nome_prefeito')
+    inlines = [PDMDocumentoInline]
 

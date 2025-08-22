@@ -34,19 +34,22 @@ class Command(BaseCommand):
     def __pipeline(self):
 
         data = self.__load_json()
-        parsed_data = self.__parse_data(data)
 
-        if Prefeito.objects.filter(nome=parsed_data['nome'], partido=parsed_data['partido']).exists():
-            self.stdout.write(self.style.WARNING(f'Prefeito {parsed_data["nome"]} já existe.'))
-            return
+        for prefeito in data:
 
-        prefeito, created = Prefeito.objects.get_or_create(
-            **parsed_data
-        )
-        if created:
-            self.stdout.write(self.style.SUCCESS(f'Prefeito {prefeito.nome} criado.'))
-        else:
-            self.stdout.write(self.style.WARNING(f'Prefeito {prefeito.nome} já existe.'))
+            parsed_data = self.__parse_data(prefeito)
+
+            if Prefeito.objects.filter(nome=parsed_data['nome'], partido=parsed_data['partido']).exists():
+                self.stdout.write(self.style.WARNING(f'Prefeito {parsed_data["nome"]} já existe.'))
+                continue
+
+            prefeito, created = Prefeito.objects.get_or_create(
+                **parsed_data
+            )
+            if created:
+                self.stdout.write(self.style.SUCCESS(f'Prefeito {prefeito.nome} criado.'))
+            else:
+                self.stdout.write(self.style.WARNING(f'Prefeito {prefeito.nome} já existe.'))
 
     def handle(self, *args, **kwargs):
         self.__pipeline()

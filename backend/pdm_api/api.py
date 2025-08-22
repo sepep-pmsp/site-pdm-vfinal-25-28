@@ -4,10 +4,14 @@ from django.http import FileResponse
 from typing import List
 
 from .queries.static_files import get_image_by_id
-from .queries.secoes_pagina_inicial import get_about_pdm, get_noticias, get_eixos
+from .queries.secoes_pagina_inicial import get_about_pdm, get_noticias
+from estrutura_pdm.queries.eixos import get_eixos, total_metas_eixo
+from secoes_pagina_inicial.queries.transparencia import get_published_cards_transparencia, get_published_transparencia
 
 from .schemas.secoes_pagina_inicial import AboutPDMSchema, NoticiaSchema
 from .schemas.secoes_pagina_inicial import EixoSchema as EixoPaginaInicialSchema
+from .schemas.secoes_pagina_inicial import SecaoTransparenciaSchema, CardSecaoTransparenciaSchema
+from .schemas.visao_geral import DadosOrcamentoGeralSchema, OrcamentoEixoSchema
 
 from .utils.static_files.images import get_rel_link, get_abs_link, get_content_type
 
@@ -35,14 +39,25 @@ def about_pdm(request) -> AboutPDMSchema:
     if about_pdm is None:
         raise HttpError(404, "Sobre o PDM não encontrado")
         
-    parsed = {
+    parsed_about = {
         'titulo' : about_pdm.titulo,
         'subtitulo' : about_pdm.subtitulo,
         'paragrafo' : about_pdm.paragrafo_as_str,
         'link_img' :  get_abs_link(request, about_pdm.banner_image) if about_pdm.banner_image else '',
     }
 
-    return AboutPDMSchema(**parsed)
+    carta = about_pdm.carta_do_prefeito
+    if carta is None:
+        raise HttpError(404, "Carta do Prefeito não encontrada")
+    parsed_carta  = {
+        'titulo': carta.titulo,
+        'nome_prefeito': carta.prefeito.nome,
+        'paragrafos': carta.paragrafo_as_list
+    }
+
+    parsed_about['carta_prefeito'] = parsed_carta
+
+    return AboutPDMSchema(**parsed_about)
 
 @api.get("/noticias", response=List[NoticiaSchema], tags=["Seções Página Inicial"])
 def noticias(request) -> List[NoticiaSchema]:
@@ -81,3 +96,74 @@ def eixos_pagina_inicial(request) -> List[EixoPaginaInicialSchema]:
     ) for eixo in eixos]
 
     return parsed_list
+
+@api.get('/transparencia_pagina_inicial', response=SecaoTransparenciaSchema, tags=["Seções Página Inicial"])
+def transparencia_pagina_inicial(request) -> SecaoTransparenciaSchema:
+    """
+    Retrieve the transparency section for the initial page.
+    """
+    
+    transparencia_obj = get_published_transparencia(raise_error=False)
+    if not transparencia_obj:
+        raise HttpError(404, "Seção de transparência não encontrada")
+    
+    parsed_transparencia = {
+        "titulo": transparencia_obj.titulo,
+        "subtitulo": transparencia_obj.subtitulo,
+        'recursos' : []
+    }
+
+    cards = get_published_cards_transparencia(transparencia_obj.id, raise_error=False)
+    if not cards:
+        raise HttpError(404, "Cards da seção de transparência não encontrados")
+    
+    for card in cards:
+        parsed_card = CardSecaoTransparenciaSchema(
+            subtitulo=card.titulo,
+            paragrafo=card.conteudo,
+            ordem=card.ordem,
+            nome_btn=card.botao_txt,
+            link=card.botao_url
+        )
+        parsed_transparencia['recursos'].append(parsed_card)
+
+    return SecaoTransparenciaSchema(**parsed_transparencia)
+
+
+
+
+@api.get("/orcamento_geral", response=DadosOrcamentoGeralSchema, tags=["Visão Geral"])
+def orcamento_geral(request)->DadosOrcamentoGeralSchema:
+    """
+    Retrieve the general budget data.
+    """
+    orcamento_geral = {
+        "orcamento_total" : 0,
+        "total_metas" : 0,
+        "orcamentos_por_eixo" : []
+    }
+    
+    eixos = get_eixos()
+    if not eixos:
+        raise HttpError(404, "Eixos não encontrados")
+
+    for eixo in eixos:
+
+        total_metas = total_metas_eixo(eixo.id)
+        orcamento_eixo = eixo.orcamento
+
+        orcamento_geral["orcamento_total"] += orcamento_eixo
+        orcamento_geral["total_metas"] += total_metas
+
+        dados_eixo = OrcamentoEixoSchema(
+            nome=eixo.nome,
+            cor_principal=eixo.cor_principal,
+            qtd_metas=total_metas,
+            orcamento=orcamento_eixo
+        )
+
+        orcamento_geral["orcamentos_por_eixo"].append(dados_eixo)
+    
+    return DadosOrcamentoGeralSchema(**orcamento_geral)
+    
+       

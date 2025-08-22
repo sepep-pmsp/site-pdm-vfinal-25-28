@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Matarazzo from "@/assets/svg/foto_matarazzo.svg";
 import CustomButton from "@/components/Button/Button";
 import ModalPrefeito from "@/components/ModalPrefeito/ModalPrefeito";
@@ -7,6 +8,10 @@ import { getAboutData } from "@/services/home/getAboutData";
 export default function About() {
   const [about, setAbout] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
+  const goTo = (path) => {
+    navigate(path);
+  };
 
   useEffect(() => {
     getAboutData().then(setAbout).catch(console.error);
@@ -39,8 +44,8 @@ export default function About() {
           <div className="w-48 relative h-20 left-[75rem] bottom-[2.5rem]">
             <CustomButton
               type="link"
-              target="download"
               className="all_buttons uppercase"
+              onClick={() => goTo("/sobre")}
             >
               <p className="btn-about">saiba +</p>
             </CustomButton>

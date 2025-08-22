@@ -1,5 +1,5 @@
-import "../../style/_button.css";
-import { scrollToSection } from "../../utils/scroll";
+import "@/style/_button.css";
+import { scrollToSection } from "@/utils/scroll";
 
 export default function CustomButton({
   type,
@@ -9,7 +9,9 @@ export default function CustomButton({
   style,
   children
 }) {
-  const handleClick = () => {
+  const handleClick = (e) => {
+    e.preventDefault();
+
     if (type === "scroll") {
       scrollToSection(target);
     } else if (type === "download") {
@@ -20,7 +22,7 @@ export default function CustomButton({
     } else if (type === "modal") {
       onClick && onClick();
     } else if (type === "link") {
-      window.location.href = target;
+      onClick && onClick(); 
     }
   };
 

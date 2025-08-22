@@ -37,6 +37,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 INSTALLED_APPS = [
     'jazzmin',
+    "nested_admin",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -172,7 +173,7 @@ JAZZMIN_SETTINGS = {
     "welcome_sign": "Bem vindo à interface de administrador do site do PDM 25-28",
 
     # Copyright on the footer
-    "copyright": "CODATA/SEPLAN",
+    "copyright": "Prefeitura de São Paulo. 🄯 Software Livre - Licenciado sob AGPL-3.0 (Copyleft)",
 
     # List of model admins to search from the search bar, search bar omitted if excluded
     # If you want to use a single search field you dont need to use a list, you can use a simple string 

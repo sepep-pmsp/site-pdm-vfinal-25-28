@@ -38,17 +38,19 @@ export default function TransparenciaMonitoramento() {
           ))}
         </div>
         <div className="flex flex-row gap-[17rem]">
-          {transparencia.recursos.map((item, index) => (
-            <section className="h-20 w-[17rem]" key={index}>
-              <CustomButton
-                onClick={() => window.open(item.link, "_blank")}
-                type="link"
-                className="all_buttons capitalize"
-              >
-                <p className="text-xl font-black">{item.nome_btn}</p>
-              </CustomButton>
-            </section>
-          ))}
+          {transparencia.recursos.map((item, index) =>
+            item.link && item.link.trim() !== "" ? (
+              <section className="h-20 w-[17rem]" key={index}>
+                <CustomButton
+                  onClick={() => window.open(item.link, "_blank")}
+                  type="link"
+                  className="all_buttons capitalize"
+                >
+                  <p className="text-xl font-black">{item.nome_btn}</p>
+                </CustomButton>
+              </section>
+            ) : null
+          )}
         </div>
       </div>
       <div className="absolute text-transparent img-fundo"></div>

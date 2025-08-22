@@ -11,14 +11,14 @@ class MetaOrgao(models.Model):
         blank=False,
         related_name='meta_orgao',
         verbose_name="Órgão",
-        on_delete=models.CASCADE
+        on_delete=models.PROTECT
     )
     meta = models.ForeignKey(
         'Meta',
         blank=False,
         related_name='meta_orgao',
         verbose_name="Meta",
-        on_delete=models.CASCADE
+        on_delete=models.PROTECT
     )
 
     class Meta:

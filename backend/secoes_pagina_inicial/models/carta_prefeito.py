@@ -34,8 +34,12 @@ class CartaPrefeito(models.Model):
 
 
     @property
+    def paragrafo_as_list(self):
+        return [paragrafo.conteudo for paragrafo in self.paragrafos.all()]
+
+    @property
     def paragrafo_as_str(self):
-        return '\n'.join([paragrafo.conteudo for paragrafo in self.paragrafos.all()])
+        return '\n'.join(self.paragrafo_as_list)
 
     def clean(self):
         if self.pk and self.paragrafos.count() == 0:

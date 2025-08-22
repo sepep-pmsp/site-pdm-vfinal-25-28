@@ -34,7 +34,7 @@ export default function Regionalizacao() {
                   {regionalizacao.texto}
                 </p>
               </div>
-              <div className="w-60 h-20 absolute top-[57.5rem]">
+              <div className="w-60 h-20 absolute top-[60.5rem]">
                 <CustomButton
                   type="download"
                   target={regionalizacao.download_arquivo}
