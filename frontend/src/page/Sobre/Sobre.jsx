@@ -25,7 +25,7 @@ export default function Sobre() {
           selectedButton={selectedButton}
         />
       </div>
-      <div className="mx-24">
+      <div >
         <SectionObjetivos sobre={sobre}/>
         <SectionPlanejamento sobre={sobre}/>
         <SectionIndicadores sobre={sobre}/>
