@@ -4,7 +4,7 @@ import CustomButton from "@/components/Button/Button";
 export default function SectionIntroSobre({sobre ,setSelectedButton, selectedButton}) {
   return (
     <div>
-      <section className="relative w-full h-[92vh] overflow-hidden">
+      <section className="relative w-full h-[98vh] overflow-hidden">
         <div>
           <img
             className="absolute top-[-10rem]"
