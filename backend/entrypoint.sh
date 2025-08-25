@@ -12,6 +12,7 @@ echo ">> Rodando seeds do banco de dados em ordem"
 
 python manage.py seed_superuser
 python manage.py seed_subprefeituras
+python manage.py seed_zonas
 python manage.py seed_distritos
 python manage.py seed_secretarias
 python manage.py seed_prefeito

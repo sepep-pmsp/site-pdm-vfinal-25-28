@@ -1,35 +1,24 @@
-from ninja import NinjaAPI
+from ninja import Router
 from ninja.errors import HttpError
-from django.http import FileResponse
+
+from pdm_api.queries.secoes_pagina_inicial import get_about_pdm, get_noticias
+from estrutura_pdm.queries.eixos import get_eixos
+from secoes_pagina_inicial.queries.transparencia import get_published_cards_transparencia, get_published_transparencia
+from secoes_pagina_inicial.queries.historico import get_published_historico
+
+from pdm_api.schemas.secoes_pagina_inicial import AboutPDMSchema, NoticiaSchema
+from pdm_api.schemas.secoes_pagina_inicial import EixoSchema as EixoPaginaInicialSchema
+from pdm_api.schemas.secoes_pagina_inicial import SecaoTransparenciaSchema, CardSecaoTransparenciaSchema
+from pdm_api.schemas.secoes_pagina_inicial import HistoricoSchema, CardHistoricoSchema, DocumentoHistoricoSchema
+
 from typing import List
 
-from .queries.static_files import get_image_by_id
-from .queries.secoes_pagina_inicial import get_about_pdm, get_noticias
-from estrutura_pdm.queries.eixos import get_eixos, total_metas_eixo
-from secoes_pagina_inicial.queries.transparencia import get_published_cards_transparencia, get_published_transparencia
-
-from .schemas.secoes_pagina_inicial import AboutPDMSchema, NoticiaSchema
-from .schemas.secoes_pagina_inicial import EixoSchema as EixoPaginaInicialSchema
-from .schemas.secoes_pagina_inicial import SecaoTransparenciaSchema, CardSecaoTransparenciaSchema
-from .schemas.visao_geral import DadosOrcamentoGeralSchema, OrcamentoEixoSchema
-
-from .utils.static_files.images import get_rel_link, get_abs_link, get_content_type
-
-api = NinjaAPI()
-
-@api.get("/images/{image_id}", tags=["Imagens"])
-def image(request, image_id: int) -> FileResponse:
-    """
-    Retrieve an image by its ID.
-    """
-    image = get_image_by_id(image_id)
-    if not image:
-        return FileResponse(status=404)
-    content_type = get_content_type(image)
-    return FileResponse(image.arquivo.open('rb'), content_type=content_type)
+from pdm_api.utils.static_files.images import get_abs_link
 
 
-@api.get("/about_pdm", response=AboutPDMSchema, tags=["Seções Página Inicial"])
+router = Router(tags=['Seções Página Inicial'])
+
+@router.get("/about_pdm", response=AboutPDMSchema, tags=["Seções Página Inicial"])
 def about_pdm(request) -> AboutPDMSchema:
     """
     Retrieve the 'About PDM' section.
@@ -59,7 +48,8 @@ def about_pdm(request) -> AboutPDMSchema:
 
     return AboutPDMSchema(**parsed_about)
 
-@api.get("/noticias", response=List[NoticiaSchema], tags=["Seções Página Inicial"])
+
+@router.get("/noticias", response=List[NoticiaSchema], tags=["Seções Página Inicial"])
 def noticias(request) -> List[NoticiaSchema]:
     """
     Retrieve the news articles.
@@ -76,7 +66,7 @@ def noticias(request) -> List[NoticiaSchema]:
 
     return parsed_list
 
-@api.get("/eixos_pagina_inicial", response=List[EixoPaginaInicialSchema], tags=["Seções Página Inicial"])
+@router.get("/eixos", response=List[EixoPaginaInicialSchema], tags=["Seções Página Inicial"])
 def eixos_pagina_inicial(request) -> List[EixoPaginaInicialSchema]:
     """
     Retrieve the initial page axes.
@@ -97,7 +87,8 @@ def eixos_pagina_inicial(request) -> List[EixoPaginaInicialSchema]:
 
     return parsed_list
 
-@api.get('/transparencia_pagina_inicial', response=SecaoTransparenciaSchema, tags=["Seções Página Inicial"])
+
+@router.get('/transparencia', response=SecaoTransparenciaSchema, tags=["Seções Página Inicial"])
 def transparencia_pagina_inicial(request) -> SecaoTransparenciaSchema:
     """
     Retrieve the transparency section for the initial page.
@@ -129,41 +120,49 @@ def transparencia_pagina_inicial(request) -> SecaoTransparenciaSchema:
 
     return SecaoTransparenciaSchema(**parsed_transparencia)
 
-
-
-
-@api.get("/orcamento_geral", response=DadosOrcamentoGeralSchema, tags=["Visão Geral"])
-def orcamento_geral(request)->DadosOrcamentoGeralSchema:
+@router.get('/historico', response=HistoricoSchema, tags=['Seções Página Inicial'])
+def historico_pagina_inicial(request)->HistoricoSchema:
     """
-    Retrieve the general budget data.
+    Retrieves the previous Programa de Metas files and historical information for the initial page.
     """
-    orcamento_geral = {
-        "orcamento_total" : 0,
-        "total_metas" : 0,
-        "orcamentos_por_eixo" : []
+
+    historico_obj = get_published_historico()
+    if not historico_obj:
+        raise HttpError(404, "Histórico não encontrado")
+    
+    cards = []
+
+    for card_obj in historico_obj.cards.all():
+        card_data = {
+            'id' : card_obj.id_str,
+            'imagem' : get_abs_link(request, card_obj.imagem),
+            'cor_principal' : card_obj.cor_principal,
+            'cor_botao' : card_obj.cor_botao,
+            'documentos' : []
+        }
+        for doc in card_obj.documentos:
+            doc_data ={
+                'tipo' : doc.tipo.nome,
+                'nome' : doc.nome,
+                'url' : doc.url
+            }
+
+            parsed_doc = DocumentoHistoricoSchema(**doc_data)
+            card_data['documentos'].append(parsed_doc)
+
+        parsed_card = CardHistoricoSchema(**card_data)
+        cards.append(parsed_card)
+
+    parsed_historico = {
+        'titulo' : historico_obj.titulo,
+        'instrucao' : historico_obj.instrucao,
+        'paragrafo' : historico_obj.paragrafo,
+        'cards' : cards
     }
-    
-    eixos = get_eixos()
-    if not eixos:
-        raise HttpError(404, "Eixos não encontrados")
 
-    for eixo in eixos:
+    return HistoricoSchema(**parsed_historico)
 
-        total_metas = total_metas_eixo(eixo.id)
-        orcamento_eixo = eixo.orcamento
 
-        orcamento_geral["orcamento_total"] += orcamento_eixo
-        orcamento_geral["total_metas"] += total_metas
 
-        dados_eixo = OrcamentoEixoSchema(
-            nome=eixo.nome,
-            cor_principal=eixo.cor_principal,
-            qtd_metas=total_metas,
-            orcamento=orcamento_eixo
-        )
 
-        orcamento_geral["orcamentos_por_eixo"].append(dados_eixo)
-    
-    return DadosOrcamentoGeralSchema(**orcamento_geral)
-    
-       
+

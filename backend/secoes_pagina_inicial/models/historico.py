@@ -3,6 +3,7 @@ from django.core.exceptions import ValidationError
 from django.contrib.auth import get_user_model
 from estrutura_pdm.models.pdm import PDM
 from django.core.validators import RegexValidator
+from typing import List
 
 User = get_user_model()
 
@@ -37,6 +38,18 @@ class Historico(models.Model):
         editable=False
     )
 
+    @property
+    def cards(self)->List['CardHistorico']:
+
+        return list(self.cards_historico.all())
+
+    def save(self, *args, **kwargs):
+
+        self.full_clean()
+        if self.published:
+            Historico.objects.filter(published=True).exclude(pk=self.pk).update(published=False)
+        super().save(*args, **kwargs)
+
 
     class Meta:
         verbose_name = "Seção Historico"
@@ -53,7 +66,7 @@ class CardHistorico(models.Model):
     
     pdm = models.ForeignKey(
         PDM,
-        on_delete=models.CASCADE,
+        on_delete=models.PROTECT,
         related_name='cards_historico',
         verbose_name="PDM Associado"
     )
@@ -82,7 +95,7 @@ class CardHistorico(models.Model):
     )
 
     @property
-    def id(self):
+    def id_str(self):
 
         return f"pdm-{self.pdm.ano_inicio}-{self.pdm.ano_fim}"
     

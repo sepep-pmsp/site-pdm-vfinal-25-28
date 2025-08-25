@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from pdm_api.api import api as pdm_api
+from pdm_api.api.main import api as pdm_api
 from django.conf import settings
 from django.conf.urls.static import static
 
