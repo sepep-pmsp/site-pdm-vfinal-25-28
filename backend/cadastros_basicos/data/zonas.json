@@ -1,0 +1,27 @@
+[
+    {
+    "nome" : "Zona Norte",
+    "sigla" : "ZN",
+    "codigos_subprefeituras" : [6, 5, 4, 3, 2, 1, 7]
+    },    
+    {
+    "nome" : "Zona Sul",
+    "sigla" : "ZS",
+    "codigos_subprefeituras" : [17, 19, 16, 13, 18, 20, 14]
+    },    
+    {
+    "nome" : "Zona Leste",
+    "sigla" : "ZL",
+    "codigos_subprefeituras" : [25, 29, 26, 21, 32, 30, 27, 31, 28, 24, 23, 22]
+    },    
+    {
+    "nome" : "Zona Oeste",
+    "sigla" : "ZO",
+    "codigos_subprefeituras" : [8, 10, 11]
+    },    
+    {
+    "nome" : "Centro",
+    "sigla" : "Centro",
+    "codigos_subprefeituras" : [9]
+    }
+]

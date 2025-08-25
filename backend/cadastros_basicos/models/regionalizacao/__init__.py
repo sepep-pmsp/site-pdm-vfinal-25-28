@@ -1,1 +1,1 @@
-from .divisoes_administrativas import SubPrefeitura, Distrito
+from .divisoes_administrativas import Zona, SubPrefeitura, Distrito

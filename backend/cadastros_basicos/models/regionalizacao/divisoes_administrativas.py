@@ -1,11 +1,12 @@
 from django.db import models
-
+from .divisoes_regionais import Zona
 
 class SubPrefeitura(models.Model):
 
     nome = models.CharField(max_length=100, verbose_name='Nome da Subprefeitura')
     sigla = models.CharField(max_length=10, verbose_name='Sigla da Subprefeitura')
     cd_geosampa = models.IntegerField(unique=True, verbose_name='Código Geosampa')
+    zona = models.ForeignKey(Zona, on_delete=models.CASCADE, related_name='subprefeituras', null=True)
 
     class Meta:
         verbose_name = 'Subprefeitura'
