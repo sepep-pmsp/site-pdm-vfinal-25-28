@@ -5,11 +5,13 @@ from pdm_api.queries.secoes_pagina_inicial import get_about_pdm, get_noticias
 from estrutura_pdm.queries.eixos import get_eixos
 from secoes_pagina_inicial.queries.transparencia import get_published_cards_transparencia, get_published_transparencia
 from secoes_pagina_inicial.queries.historico import get_published_historico
+from pdm_api.queries.secoes_pagina_inicial import get_secao_regionalizacao
 
 from pdm_api.schemas.secoes_pagina_inicial import AboutPDMSchema, NoticiaSchema
 from pdm_api.schemas.secoes_pagina_inicial import EixoSchema as EixoPaginaInicialSchema
 from pdm_api.schemas.secoes_pagina_inicial import SecaoTransparenciaSchema, CardSecaoTransparenciaSchema
 from pdm_api.schemas.secoes_pagina_inicial import HistoricoSchema, CardHistoricoSchema, DocumentoHistoricoSchema
+from pdm_api.schemas.secoes_pagina_inicial import SecaoRegionalizacaoSchema
 
 from typing import List
 
@@ -162,7 +164,23 @@ def historico_pagina_inicial(request)->HistoricoSchema:
 
     return HistoricoSchema(**parsed_historico)
 
+@router.get("/regionalizacao", response=SecaoRegionalizacaoSchema, tags=["Seções Página Inicial"])
+def regionalizacao_pagina_inicial(request) -> SecaoRegionalizacaoSchema:
+    """
+    Retrieve the regionalization section for the initial page.
+    """
+    regionalizacao_obj = get_secao_regionalizacao()
+    if not regionalizacao_obj:
+        raise HttpError(404, "Seção de regionalização não encontrada")
 
+    regionalizacao_data = {
+        "titulo": regionalizacao_obj.titulo,
+        "subtitulo": regionalizacao_obj.subtitulo,
+        "instrucao" : regionalizacao_obj.instrucao,
+        "paragrafo": regionalizacao_obj.paragrafo_as_str,
+        "link_arquivo": regionalizacao_obj.link_arquivo,
+        "link_dashboard": regionalizacao_obj.link_dashboard
+    }
 
-
+    return SecaoRegionalizacaoSchema(**regionalizacao_data)
 
