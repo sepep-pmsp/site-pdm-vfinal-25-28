@@ -3,3 +3,4 @@ from .news import Noticia
 from .carta_prefeito import CartaPrefeito, ParagrafoCartaPrefeito
 from .historico import Historico, CardHistorico
 from .transparencia import SecaoTransparencia, CardTransparencia
+from .regionalizacao import SecaoRegionalizacao, ParagrafoSecaoRegionalizacao
