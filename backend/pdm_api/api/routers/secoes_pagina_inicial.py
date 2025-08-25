@@ -4,10 +4,12 @@ from ninja.errors import HttpError
 from pdm_api.queries.secoes_pagina_inicial import get_about_pdm, get_noticias
 from estrutura_pdm.queries.eixos import get_eixos
 from secoes_pagina_inicial.queries.transparencia import get_published_cards_transparencia, get_published_transparencia
+from secoes_pagina_inicial.queries.historico import get_published_historico
 
 from pdm_api.schemas.secoes_pagina_inicial import AboutPDMSchema, NoticiaSchema
 from pdm_api.schemas.secoes_pagina_inicial import EixoSchema as EixoPaginaInicialSchema
 from pdm_api.schemas.secoes_pagina_inicial import SecaoTransparenciaSchema, CardSecaoTransparenciaSchema
+from pdm_api.schemas.secoes_pagina_inicial import HistoricoSchema, CardHistoricoSchema, DocumentoHistoricoSchema
 
 from typing import List
 
@@ -117,3 +119,50 @@ def transparencia_pagina_inicial(request) -> SecaoTransparenciaSchema:
         parsed_transparencia['recursos'].append(parsed_card)
 
     return SecaoTransparenciaSchema(**parsed_transparencia)
+
+@router.get('/historico', response=HistoricoSchema, tags=['Seções Página Inicial'])
+def historico_pagina_inicial(request)->HistoricoSchema:
+    """
+    Retrieves the previous Programa de Metas files and historical information for the initial page.
+    """
+
+    historico_obj = get_published_historico()
+    if not historico_obj:
+        raise HttpError(404, "Histórico não encontrado")
+    
+    cards = []
+
+    for card_obj in historico_obj.cards.all():
+        card_data = {
+            'id' : card_obj.id_str,
+            'imagem' : get_abs_link(request, card_obj.imagem),
+            'cor_principal' : card_obj.cor_principal,
+            'cor_botao' : card_obj.cor_botao,
+            'documentos' : []
+        }
+        for doc in card_obj.documentos:
+            doc_data ={
+                'tipo' : doc.tipo.nome,
+                'nome' : doc.nome,
+                'url' : doc.url
+            }
+
+            parsed_doc = DocumentoHistoricoSchema(**doc_data)
+            card_data['documentos'].append(parsed_doc)
+
+        parsed_card = CardHistoricoSchema(**card_data)
+        cards.append(parsed_card)
+
+    parsed_historico = {
+        'titulo' : historico_obj.titulo,
+        'instrucao' : historico_obj.instrucao,
+        'paragrafo' : historico_obj.paragrafo,
+        'cards' : cards
+    }
+
+    return HistoricoSchema(**parsed_historico)
+
+
+
+
+

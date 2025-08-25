@@ -2,7 +2,7 @@ from secoes_pagina_inicial.models import Historico
 
 def get_published_historico() -> Historico | None:
 
-    historicos = Historico.objects.filter(publicado=True)
+    historicos = Historico.objects.filter(published=True)
 
     historicos = list(historicos)
     if len(historicos) > 1:
