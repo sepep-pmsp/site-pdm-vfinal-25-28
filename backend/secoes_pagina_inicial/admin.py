@@ -3,7 +3,9 @@ from django.contrib import admin, messages
 from .models import (AboutPDM, ParagrafoAbout, CartaPrefeito, ParagrafoCartaPrefeito, 
                      Noticia,
                      Historico, CardHistorico,
-                     SecaoTransparencia, CardTransparencia)
+                     SecaoTransparencia, CardTransparencia,
+                     SecaoRegionalizacao, ParagrafoSecaoRegionalizacao)
+
 from django.core.exceptions import ValidationError
 from django.forms.models import BaseInlineFormSet
 # Register your models here.
@@ -150,6 +152,7 @@ class CardTransparenciaInline(admin.TabularInline):
     extra = 1
     verbose_name = "Card da Transparência"
     verbose_name_plural = "Cards da Transparência"
+    
 
 @admin.register(SecaoTransparencia)
 class SecaoTransparenciaAdmin(admin.ModelAdmin):
@@ -168,6 +171,56 @@ class SecaoTransparenciaAdmin(admin.ModelAdmin):
                 self.message_user(
                     request,
                     "Outra seção Transparência publicada já existe. Ela será despublicada automaticamente.",
+                    level=messages.WARNING
+                )
+                outras_publicadas.update(published=False)
+
+        super().save_model(request, obj, form, change)
+
+class ParagrafoRegionalizacaoInlineFormSet(BaseInlineFormSet):
+    def clean(self):
+        super().clean()
+        ativos = [
+                form for form in self.forms
+                #exclui os marcados para deleção
+                if not form.cleaned_data.get('DELETE', False)
+                #checa se o campo 'conteudo' está preenchido, ignorando id e sobre_pdm
+                and any(
+                    form.cleaned_data.get(field.name)
+                    for field in form._meta.model._meta.fields
+                    if field.name not in ['id', 'secao_regionalizacao']  # ignora chaves primárias e FKs automáticas
+                )
+            ]
+        #se nao achar ninguém, levanta o erro de validaçaõ
+        if not ativos:
+            raise ValidationError("Pelo menos um parágrafo deve ser preenchido.")
+
+class ParagrafoRegionalizacaoInline(admin.TabularInline):
+    model = ParagrafoSecaoRegionalizacao
+    extra = 1
+    verbose_name = "Parágrafo da Regionalização"
+    verbose_name_plural = "Parágrafos da Regionalização"
+    formset = ParagrafoRegionalizacaoInlineFormSet
+
+
+@admin.register(SecaoRegionalizacao)
+class SecaoRegionalizacaoAdmin(admin.ModelAdmin):
+
+    list_display = ('titulo', 'criado_em', 'criado_por', 'modificado_em', 'modificado_por')
+    readonly_fields =  ('criado_em', 'criado_por', 'modificado_em', 'modificado_por')
+    inlines = [ParagrafoRegionalizacaoInline]
+
+    def save_model(self, request, obj, form, change):
+        if not obj.pk:
+            obj.criado_por = request.user
+        obj.modificado_por = request.user
+
+        if obj.published:
+            outras_publicadas = SecaoRegionalizacao.objects.filter(published=True).exclude(pk=obj.pk)
+            if outras_publicadas.exists():
+                self.message_user(
+                    request,
+                    "Outra seção Regionalização publicada já existe. Ela será despublicada automaticamente.",
                     level=messages.WARNING
                 )
                 outras_publicadas.update(published=False)
