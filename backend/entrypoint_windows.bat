@@ -18,6 +18,9 @@ if errorlevel 1 exit /b %errorlevel%
 python manage.py seed_subprefeituras
 if errorlevel 1 exit /b %errorlevel%
 
+python manage.py seed_zonas
+if errorlevel 1 exit /b %errorlevel%
+
 python manage.py seed_distritos
 if errorlevel 1 exit /b %errorlevel%
 
