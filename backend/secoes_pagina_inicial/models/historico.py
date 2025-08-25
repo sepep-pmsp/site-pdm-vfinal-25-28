@@ -37,6 +37,13 @@ class Historico(models.Model):
         editable=False
     )
 
+    def save(self, *args, **kwargs):
+
+        self.full_clean()
+        if self.published:
+            Historico.objects.filter(published=True).exclude(pk=self.pk).update(published=False)
+        super().save(*args, **kwargs)
+
 
     class Meta:
         verbose_name = "Seção Historico"
