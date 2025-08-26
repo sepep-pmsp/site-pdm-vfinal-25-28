@@ -1,7 +1,10 @@
 import React from "react";
 import GridEixos from "./GridEixos";
+import { useLocation } from "react-router-dom";
 
 export default function Eixos() {
+  const location = useLocation();
+  const eixoSelecionadoDoMenu = location.state?.eixo || null;
   return (
     <div>
       <div className="bg-[color:var(--color-navy)] h-40 rotate-[270deg] relative flex items-end flex-col justify-end p-4 rounded-br-3xl rounded-bl-3xl w-[54rem] right-[22rem] top-[29rem] shadow-[-4px_2px_20px_0px_gray]">
@@ -20,7 +23,7 @@ export default function Eixos() {
         </div>
       </section>
       <section>
-        <GridEixos />
+        <GridEixos eixoSelecionadoDoMenu={eixoSelecionadoDoMenu}/>
       </section>
     </div>
   );

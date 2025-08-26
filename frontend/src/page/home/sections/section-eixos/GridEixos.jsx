@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import CardEixos from "./CardEixos";
 import { getEixosData } from "@/services/home/getEixosData";
 import Universo_SP from "@/assets/svg/universo_sp.svg";
@@ -10,16 +10,33 @@ import Viver_SP_colorido from "@/assets/svg/viver_sp_colorido.svg";
 import Capital_Futuro_colorido from "@/assets/svg/capital_futuro_colorido.svg";
 import Cidade_Empreendedora_colorido from "@/assets/svg/cidade_empreendedora_colorido.svg";
 
-export default function GridEixos() {
+export default function GridEixos({ eixoSelecionadoDoMenu }) {
   const [selectedEixo, setSelectedEixo] = useState(null);
   const [hovered, setHovered] = useState("");
   const [eixosTematicos, setEixosTematicos] = useState([]);
+  const sectionRef = useRef(null);
 
   React.useEffect(() => {
     getEixosData().then((data) => {
       setEixosTematicos(data);
     });
   }, []);
+
+  useEffect(() => {
+    if (!eixoSelecionadoDoMenu || eixosTematicos.length === 0) return;
+
+    const eixo = eixosTematicos.find((e) =>
+      e.nome.toLowerCase().includes(eixoSelecionadoDoMenu.toLowerCase())
+    );
+
+    if (eixo) {
+      setSelectedEixo(eixo);
+      sectionRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+    }
+  }, [eixoSelecionadoDoMenu, eixosTematicos]);
 
   const handleClick = (nomeChave, event) => {
     const eixoSelecionado = eixosTematicos.find((eixo) =>
@@ -40,7 +57,11 @@ export default function GridEixos() {
     });
   };
   return (
-    <div className="flex items-center h-[42rem] justify-center pl-36">
+    <div
+      ref={sectionRef}
+      id="eixos"
+      className="flex items-center h-[42rem] justify-center pl-36"
+    >
       <div className=" grid grid-cols-[repeat(2,1fr)] items-center h-[40rem] content-center justify-center p-2 w-[85rem] gap-8">
         <div
           className="flex items-center justify-center bg-[var(--color-green)] transition-all duration-[0.3s] ease-in-out card-hover card-hover-green h-70 rounded-tl-[2.5rem] gap-38"
@@ -125,7 +146,15 @@ export default function GridEixos() {
           </p>
         </div>
         {selectedEixo && (
-          <div className="absolute inset-0 z-10">
+          <div
+            className="absolute inset-0 z-10"
+            style={{
+              top: selectedEixo.origin?.y ?? "136rem",
+              left: selectedEixo.origin?.x ?? "22rem",
+              width: selectedEixo.origin?.width ?? "84.2rem",
+              height: selectedEixo.origin?.height ?? "38.5rem"
+            }}
+          >
             <CardEixos
               eixo={selectedEixo}
               onClose={() => setSelectedEixo(null)}
