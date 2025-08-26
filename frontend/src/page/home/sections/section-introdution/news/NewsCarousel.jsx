@@ -46,7 +46,7 @@ return (
                                 href={news.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className={`absolute transition-all duration-700 ease-in-out underline ${
+                                className={`absolute transition-all duration-700 ease-in-out underline roboto-regular ${
                                     index === current
                                         ? "opacity-100 translate-y-0"
                                         : "opacity-0 translate-y-2 pointer-events-none"

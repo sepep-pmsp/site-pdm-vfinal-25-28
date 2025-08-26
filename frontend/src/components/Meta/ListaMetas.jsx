@@ -19,7 +19,7 @@ export default function ListaMetas({ metas, onSelectMeta }) {
                 <div className="h-[0.5px] bg-[black] w-full"></div>
                 <div className="flex items-center justify-start flex-row flex-nowrap gap-12">
                   <span
-                    className="text-8xl font-light"
+                    className="text-8xl font-bebas-regular"
                     style={{
                       color:
                         meta.botao?.cor_secundaria_eixo || meta.cor_principal_eixo
