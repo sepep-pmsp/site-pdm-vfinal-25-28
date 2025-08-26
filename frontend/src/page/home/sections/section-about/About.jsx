@@ -36,7 +36,7 @@ export default function About() {
             </div>
             <div className="bg-[color:var(--color-navy)] h-[35rem] w-[45rem] py-4 px-10 rounded-tr-3xl rounded-br-3xl flex items-start flex-col justify-center gap-8">
               <h3 className="text-white text-6xl">{about.subtitulo}</h3>
-              <p className="text-white text-3xl">{about.paragrafo}</p>
+              <p className="text-white text-3xl roboto-regular">{about.paragrafo}</p>
             </div>
           </div>
 
@@ -58,8 +58,8 @@ export default function About() {
               onClick={() => setShowModal(true)}
               className="all_buttons uppercase"
             >
-              <p>
-                palavra do prefeito <br /> <strong>leia aqui!</strong>
+              <p className="roboto-regular">
+                palavra do prefeito <br /> <strong className="roboto-black">leia aqui!</strong>
               </p>
             </CustomButton>
           </div>

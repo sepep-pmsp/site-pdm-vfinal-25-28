@@ -40,10 +40,10 @@ export default function CardMetas({ meta, onClose }) {
         style={{ scrollbarColor: `${meta.cor_principal_eixo} transparent` }}
       >
         <div
-          className="absolute font-extrabold select-none pointer-events-none"
+          className="absolute font-bebas-bold select-none pointer-events-none"
           style={{
-            fontSize: "55rem",
-            bottom: "8.5rem",
+            fontSize: "60rem",
+            bottom: "-1.5rem",
             left: 0,
             zIndex: -1,
             color: `${hexToRgba(meta.cor_principal_eixo, 0.15)}`,
@@ -54,7 +54,7 @@ export default function CardMetas({ meta, onClose }) {
         </div>
         <div
           style={{ backgroundColor: meta.cor_principal_eixo }}
-          className="w-full h-24"
+          className="w-full h-auto"
         >
           {/* Botão X */}
           <button
@@ -69,12 +69,12 @@ export default function CardMetas({ meta, onClose }) {
           <div className="flex justify-center items-start flex-col py-10 px-20">
             <div>
               <h2
-                className="text-5xl"
+                className="text-5xl "
                 dangerouslySetInnerHTML={{ __html: meta.tituloCard }}
                 style={{ color: meta.cor_principal_eixo }}
               />
               <p
-                className="text-5xl BebasNeueBook uppercase font-light"
+                className="text-5xl font-bebas-book uppercase font-light"
                 dangerouslySetInnerHTML={{ __html: meta.contunuacaoTituloCard }}
                 style={{ color: meta.cor_principal_eixo }}
               />
@@ -92,7 +92,7 @@ export default function CardMetas({ meta, onClose }) {
                     >
                       {meta.projecao.titulo}
                     </h3>
-                    <p className="text-xl">{meta.projecao.descricao}</p>
+                    <p className="text-xl roboto-regular">{meta.projecao.descricao}</p>
                   </div>
                 )}
               </div>
@@ -105,7 +105,7 @@ export default function CardMetas({ meta, onClose }) {
                     >
                       {meta.acoesEstrategicas.titulo_acoesEstrategicas_eixo}
                     </h3>
-                    <ul className="list-disc list-inside listCard w-[45rem]">
+                    <ul className="list-disc list-inside listCard w-[45rem] roboto-regular">
                       {meta.acoesEstrategicas.itens.map((acao, idx) => (
                         <li className="text-xl itemListCard pb-2" key={idx}>
                           {acao}
@@ -124,7 +124,7 @@ export default function CardMetas({ meta, onClose }) {
                     >
                       {meta.indicador.titulo_indicador_eixo}
                     </h3>
-                    <p className="text-xl">{meta.indicador.descricao}</p>
+                    <p className="text-xl roboto-regular">{meta.indicador.descricao}</p>
                   </div>
                 )}
               </div>
@@ -133,13 +133,13 @@ export default function CardMetas({ meta, onClose }) {
                   <div className="flex items-end gap-12 flex-row justify-start flex-nowrap ">
                     <h3
                       style={{ color: meta.cor_principal_eixo }}
-                      className="text-4xl font-semibold text-end w-40"
+                      className="text-4xl font-bebas-bold text-end w-40"
                     >
                       Órgãos Responsáveis
                     </h3>
                     <p
                       style={{ color: meta.cor_principal_eixo }}
-                      className="text-6xl BebasNeueLight font-light"
+                      className="text-8xl font-bebas-book"
                     >
                       {meta.orgaosResponsaveis.join(" • ")}
                     </p>
@@ -207,10 +207,10 @@ export default function CardMetas({ meta, onClose }) {
                 <h4 className="text-3xl">{meta.eixo}</h4>
               </div>
               <div>
-                <h3 className="text-4xl font-semibold text-white">
+                <h3 className="text-4xl roboto-bold text-white">
                   {meta.rodape_eixo.titulo_rodape_eixo}
                 </h3>
-                <p className="text-xl w-130 text-white">
+                <p className="text-xl w-130 roboto-regular text-white">
                   {meta.rodape_eixo.descricao_rodape_eixo}
                 </p>
               </div>

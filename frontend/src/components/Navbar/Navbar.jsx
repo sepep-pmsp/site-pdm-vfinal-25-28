@@ -24,10 +24,10 @@ export default function Navbar() {
     <div className="fixed w-full p-2 bg-white z-30">
       <div className="flex flex-row justify-around gap-56 items-center p-2">
         <div>
-          <span className="text-4xl">
+          <span className="text-4xl roboto-light">
             PREFEITURA DE SÃO PAULO |{" "}
             <span>
-              <strong>PROGRAMA DE METAS</strong>
+              <strong className="font-bebas-regular">PROGRAMA DE METAS</strong>
             </span>
           </span>
         </div>
