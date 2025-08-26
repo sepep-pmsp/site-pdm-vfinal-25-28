@@ -1,22 +1,82 @@
 version: '3.8'
- 
+
 services:
-  backend:
-    build: ./backend
-    ports:
-      - "8000:8000"
-    networks:
-      - traefik
- 
-  frontend:
-    build: ./frontend
-    ports:
-      - "5173:5173"
-    networks:
-      - traefik
-    depends_on:
-          - backend
- 
-networks:
+  # Traefik é o único serviço com portas expostas para a internet.
   traefik:
-    driver: bridge  
+    image: "traefik:v3.1"
+    container_name: "traefik"
+    command:
+      - "--log.level=DEBUG"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
+      - "--entrypoints.web.http.redirections.entryPoint.scheme=https"
+      - "--entrypoints.web.http.redirections.entrypoint.permanent=true"
+      - "--entrypoints.websecure.address=:443"
+      - "--certificatesresolvers.certificadofront.acme.caserver=${LE_ACME_URL}"
+      - "--certificatesresolvers.certificadofront.acme.httpchallenge=true"
+      - "--certificatesresolvers.certificadofront.acme.httpchallenge.entrypoint=web"
+      - "--certificatesresolvers.certificadofront.acme.email=${LE_EMAIL}"
+      - "--certificatesresolvers.certificadofront.acme.storage=/letsencrypt/acme.json"
+    networks:
+      - traefik-net
+    ports:
+      - "80:80"
+      - "443:443"
+    restart: always
+    volumes:
+      - "traefik-data:/letsencrypt"
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+
+  # Serviço do Front-end: Construído e servido por Nginx.
+  frontend:
+    build:
+      context: ./frontend
+    image: site-smae:latest
+    networks:
+      - traefik-net
+    restart: always
+    volumes:
+      # Garante que o nginx.conf correto seja usado
+      - ./frontend/nginx.conf:/etc/nginx/conf.d/default.conf
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.frontend.entrypoints=websecure"
+      - "traefik.http.routers.frontend.rule=Host(`${HOST_NAME}`) || Host(`www.${HOST_NAME}`)"
+      - "traefik.http.routers.frontend.tls.certresolver=certificadofront"
+      - "traefik.http.routers.frontend.tls=true"
+      - "traefik.http.routers.frontend.tls.domains[0].main=${HOST_NAME}"
+      - "traefik.http.routers.frontend.tls.domains[1].main=www.${HOST_NAME}"
+      - "traefik.http.services.frontend.loadbalancer.server.port=80"
+      - "traefik.http.routers.frontend.middlewares=frontend-ratelimit,rewrite-www"
+      - "traefik.http.middlewares.frontend-ratelimit.ratelimit.average=1000"
+      - "traefik.http.middlewares.frontend-ratelimit.ratelimit.period=10s"
+      - "traefik.http.middlewares.frontend-ratelimit.ratelimit.burst=500"
+      - "traefik.http.middlewares.rewrite-www.redirectregex.regex=^https://(www.)?(.*)"
+      - "traefik.http.middlewares.rewrite-www.redirectregex.replacement=https://$$2"
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend
+    networks:
+      - traefik-net
+    restart: always
+    volumes:
+      - ./backend:/backend
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.backend.entrypoints=websecure"
+      - "traefik.http.routers.backend.priority=100"
+      - "traefik.http.routers.backend.rule=Host(`${HOST_NAME}`) && (PathPrefix(`/backend`) || PathPrefix(`/static`) || PathPrefix(`/media`))"
+      - "traefik.http.routers.backend.tls.certresolver=certificadofront"
+      - "traefik.http.routers.backend.tls=true"
+      - "traefik.http.services.backend.loadbalancer.server.port=8000"
+
+networks:
+  traefik-net:
+
+volumes:
+  traefik-data:

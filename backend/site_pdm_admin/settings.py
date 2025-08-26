@@ -26,8 +26,15 @@ SECRET_KEY = 'django-insecure-@hfjj3m4p0=tb66ogy=tzlpm8-4^=@es619(q67we$f_p8knv=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["0.0.0.0", "localhost", '127.0.0.1']
+ALLOWED_HOSTS = ["0.0.0.0", 
+"localhost", '127.0.0.1', "10.80.14.21", 
+"projetos.codata.prefeitura.sp.gov.br"]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://projetos.codata.prefeitura.sp.gov.br',
+     'http://projetos.codata.prefeitura.sp.gov.br',
+    'https://www.projetos.codata.prefeitura.sp.gov.br',
+]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
@@ -140,7 +147,9 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
+    "http://localhost:5173","http://10.80.14.21:8000","http://10.80.14.21:5173",
+"https://projetos.codata.prefeitura.sp.gov.br",
+"http://projetos.codata.prefeitura.sp.gov.br"
 ]
 
 
