@@ -4,11 +4,16 @@ from ninja.errors import HttpError
 from cadastros_basicos.queries.regionalizacao import get_all_zonas
 from cadastros_basicos.queries.orgaos import get_all_orgaos
 from estrutura_pdm.queries.eixos import get_eixos
+from cadastros_basicos.queries.ods import get_all_ods
 
 from pdm_api.schemas.filtro_metas.regionalizacao import ParametroZonaSchema, ParametroSubprefeituraSchema
 from pdm_api.schemas.filtro_metas.orgaos import ParametroOrgaosSchema
 from pdm_api.schemas.filtro_metas.eixos import ParametrosEixosSchema, ParametrosTemasSchema
+from pdm_api.schemas.filtro_metas.ods import ParametroODSSchema
 from pdm_api.schemas.filtro_metas.geral import ParametrosGeral
+
+from pdm_api.utils.static_files.images import get_abs_link
+
 
 router = Router(tags=["Filtro de Metas"])
 
@@ -89,6 +94,29 @@ def get_parametros_eixos(request):
         return eixos_list
     except Exception as e:
         raise HttpError(500, f"Erro ao obter parâmetros de eixos: {str(e)}")
+
+@router.get("/parametros_ods", response=list[ParametroODSSchema])
+def get_parametros_ods(request):
+    """
+    Retorna os ODS disponíveis para filtragem de metas.
+    """
+    try:
+        ods = get_all_ods()
+        ods_list = []
+
+        for ods in ods:
+            ods_data = {
+                "id": ods.id,
+                "numero": ods.numero,
+                "nome": ods.nome_titlecase,
+                "cor": ods.cor_principal,
+                "icone": get_abs_link(request, ods.logo_colorido)
+            }
+            ods_list.append(ParametroODSSchema(**ods_data))
+
+        return ods_list
+    except Exception as e:
+        raise HttpError(500, f"Erro ao obter parâmetros de ODS: {str(e)}")
 
 @router.get("/parametros_geral", response=ParametrosGeral)
 def get_todos_parametros(request) -> ParametrosGeral:
