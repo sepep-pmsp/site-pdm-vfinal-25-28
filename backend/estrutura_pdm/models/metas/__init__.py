@@ -1,2 +1,2 @@
-from .metas import Meta, MetaOrgao, MetaSubprefeitura, MetaZona
+from .metas import Meta, MetaOrgao, MetaSubprefeitura, MetaZona, MetaODS, MetaPlanoSetorial
 from .acoes import AcaoEstrategica, AcaoOrgao

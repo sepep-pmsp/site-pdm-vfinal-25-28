@@ -4,6 +4,7 @@ from django.core.exceptions import ValidationError
 from ..eixos import Eixo, Tema
 from cadastros_basicos.models.estrutura_administrativa import Orgao
 from cadastros_basicos.models.regionalizacao import SubPrefeitura, Zona
+from cadastros_basicos.models.vinculos_externos import ODS, PlanoSetorial
 
 class MetaOrgao(models.Model):
     orgao = models.ForeignKey(
@@ -73,6 +74,53 @@ class MetaZona(models.Model):
 
     def __str__(self):
         return f'Meta {self.meta.numero} com entregas na Zona {self.zona.sigla}'
+    
+class MetaPlanoSetorial(models.Model):
+    plano_setorial = models.ForeignKey(
+        PlanoSetorial,
+        blank=False,
+        related_name='meta_plano_setorial',
+        verbose_name="Plano Setorial",
+        on_delete=models.CASCADE
+    )
+    meta = models.ForeignKey(
+        'Meta',
+        blank=False,
+        related_name='meta_plano_setorial',
+        verbose_name="Meta",
+        on_delete=models.CASCADE
+    )
+
+    class Meta:
+        verbose_name = "Plano Setorial relacionado à Meta"
+        verbose_name_plural = "Planos relacionado à Meta"
+
+    def __str__(self):
+        return f'Meta {self.meta.numero} relacionada ao Plano Setorial {self.plano_setorial.nome}'
+
+
+class MetaODS(models.Model):
+    ods = models.ForeignKey(
+        ODS,
+        blank=False,
+        related_name='meta_ods',
+        verbose_name="ODS",
+        on_delete=models.CASCADE
+    )
+    meta = models.ForeignKey(
+        'Meta',
+        blank=False,
+        related_name='meta_ods',
+        verbose_name="Meta",
+        on_delete=models.CASCADE
+    )
+
+    class Meta:
+        verbose_name = "ODS relacionado à Meta"
+        verbose_name_plural = "ODS relacionado à Meta"
+
+    def __str__(self):
+        return f'Meta {self.meta.numero} relacionada ao ODS {self.ods.numero}'
 
 
 class Meta(models.Model):
@@ -120,6 +168,22 @@ class Meta(models.Model):
         related_name='metas',
         verbose_name="Zonas com entregas",
         through='MetaZona'
+    )
+
+    ods_relacionados = models.ManyToManyField(
+        ODS,
+        blank=True,
+        related_name='metas',
+        verbose_name="ODS relacionados",
+        through='MetaODS'
+    )
+
+    planos_setoriais_relacionados = models.ManyToManyField(
+        PlanoSetorial,
+        blank=True,
+        related_name='metas',
+        verbose_name="Planos Setoriais relacionados",
+        through='MetaPlanoSetorial'
     )
 
     @property
