@@ -35,9 +35,13 @@ class Command(BaseCommand):
 
         subprefeitura = self.get_subprefeitura(sigla_subprefeitura)
 
-        meta_obj.subprefeituras_entregas.add(subprefeitura)
+        if not meta_obj.subprefeituras_entregas.filter(id=subprefeitura.id).exists():
 
-        self.stdout.write(self.style.SUCCESS(f'Subprefeitura {subprefeitura.sigla} vinculada à Meta {meta_obj.numero} com sucesso.'))
+            meta_obj.subprefeituras_entregas.add(subprefeitura)
+            self.stdout.write(self.style.SUCCESS(f'Subprefeitura {subprefeitura.sigla} vinculada à Meta {meta_obj.numero} com sucesso.'))
+        else:
+            self.stdout.write(self.style.WARNING(f'Subprefeitura {subprefeitura.sigla} já está vinculada à Meta {meta_obj.numero}.'))
+
         return meta_obj
 
 
