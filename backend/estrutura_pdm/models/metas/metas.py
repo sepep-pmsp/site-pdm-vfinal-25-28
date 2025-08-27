@@ -90,6 +90,19 @@ class Meta(models.Model):
         through='MetaSubprefeitura'
     )
 
+    @property
+    def subprefeituras_entregas_list(self)->list[str]:
+        return [sub.sigla for sub in self.subprefeituras_entregas.all()]
+    
+
+    @property
+    def zonas_entregas_list(self)->list[str]:
+        zonas = set()
+        for sub in self.subprefeituras_entregas.all():
+            zonas.add(sub.zona.sigla)
+        return list(zonas)
+    
+
     def clean(self):
         super().clean()
         if not self.descricao.startswith(self.destaque):

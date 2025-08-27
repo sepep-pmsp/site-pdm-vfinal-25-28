@@ -48,6 +48,8 @@ if errorlevel 1 exit /b %errorlevel%
 python manage.py seed_metas
 if errorlevel 1 exit /b %errorlevel%
 
+subprefeituras_entregas
+if errorlevel 1 exit /b %errorlevel%
 
 python manage.py seed_acoes
 if errorlevel 1 exit /b %errorlevel%
