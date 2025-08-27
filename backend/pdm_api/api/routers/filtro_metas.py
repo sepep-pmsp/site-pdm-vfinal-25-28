@@ -3,9 +3,11 @@ from ninja.errors import HttpError
 
 from cadastros_basicos.queries.regionalizacao import get_all_zonas
 from cadastros_basicos.queries.orgaos import get_all_orgaos
+from estrutura_pdm.queries.eixos import get_eixos
 
 from pdm_api.schemas.filtro_metas.regionalizacao import ParametroZonaSchema, ParametroSubprefeituraSchema
 from pdm_api.schemas.filtro_metas.orgaos import ParametroOrgaosSchema
+from pdm_api.schemas.filtro_metas.eixos import ParametrosEixosSchema, ParametrosTemasSchema
 from pdm_api.schemas.filtro_metas.geral import ParametrosGeral
 
 router = Router(tags=["Filtro de Metas"])
@@ -56,6 +58,37 @@ def get_parametros_orgaos(request):
         return [ParametroOrgaosSchema(**orgao_data) for orgao_data in orgaos_list]
     except Exception as e:
         raise HttpError(500, f"Erro ao obter parâmetros de órgãos: {str(e)}")
+    
+@router.get("/parametros_eixos", response=list[ParametrosEixosSchema])
+def get_parametros_eixos(request):
+    """
+    Retorna os eixos e temas disponíveis para filtragem de metas.
+    """
+    try:
+        eixos_objs = get_eixos()
+        eixos_list = []
+
+        for eixo_obj in eixos_objs:
+            eixo_data = {
+                "id": eixo_obj.id,
+                "nome": eixo_obj.nome_titlecase,
+                "cor" : eixo_obj.cor_principal
+            }
+
+            temas = [
+                {
+                    "id": tema.id,
+                    "nome": tema.nome
+                }
+                for tema in eixo_obj.temas.all()
+            ]
+
+            eixo_data["temas"] = [ParametrosTemasSchema(**tema) for tema in temas]
+            eixos_list.append(ParametrosEixosSchema(**eixo_data))
+
+        return eixos_list
+    except Exception as e:
+        raise HttpError(500, f"Erro ao obter parâmetros de eixos: {str(e)}")
 
 @router.get("/parametros_geral", response=ParametrosGeral)
 def get_todos_parametros(request) -> ParametrosGeral:
@@ -65,9 +98,11 @@ def get_todos_parametros(request) -> ParametrosGeral:
     try:
         zonas = get_parametros_regionalizacao(request)
         orgaos = get_parametros_orgaos(request)
+        eixos = get_parametros_eixos(request)
         geral = ParametrosGeral(
                 regionalizacao=zonas, 
-                orgaos=orgaos
+                orgaos=orgaos,
+                eixos=eixos
                 )
 
         return geral
