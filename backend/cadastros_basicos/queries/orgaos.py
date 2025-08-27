@@ -9,3 +9,7 @@ def get_orgao_by_sigla(sigla:str, raise_error:bool=True)->Orgao:
             return Orgao.objects.get(sigla=sigla)
         except Orgao.DoesNotExist:
             return None
+        
+def get_all_orgaos()->list[Orgao]:
+
+    return list(Orgao.objects.all().order_by("sigla"))
