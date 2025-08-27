@@ -37,3 +37,10 @@ def get_zona_by_sigla(sigla:str, raise_error=True)->Zona|None:
             return Zona.objects.get(sigla=sigla)
         except Zona.DoesNotExist:
             return None
+        
+def get_all_zonas():
+
+    return Zona.objects.all().order_by("sigla")
+
+def get_subprefeituras_by_zona(zona: Zona):
+    return SubPrefeitura.objects.filter(zona=zona).order_by("sigla")
