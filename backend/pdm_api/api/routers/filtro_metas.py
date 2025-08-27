@@ -5,11 +5,13 @@ from cadastros_basicos.queries.regionalizacao import get_all_zonas
 from cadastros_basicos.queries.orgaos import get_all_orgaos
 from estrutura_pdm.queries.eixos import get_eixos
 from cadastros_basicos.queries.ods import get_all_ods
+from cadastros_basicos.queries.planos_setoriais import get_all_planos_setoriais
 
 from pdm_api.schemas.filtro_metas.regionalizacao import ParametroZonaSchema, ParametroSubprefeituraSchema
 from pdm_api.schemas.filtro_metas.orgaos import ParametroOrgaosSchema
 from pdm_api.schemas.filtro_metas.eixos import ParametrosEixosSchema, ParametrosTemasSchema
 from pdm_api.schemas.filtro_metas.ods import ParametroODSSchema
+from pdm_api.schemas.filtro_metas.planos_setoriais import ParametroPlanoSetorialSchema
 from pdm_api.schemas.filtro_metas.geral import ParametrosGeral
 
 from pdm_api.utils.static_files.images import get_abs_link
@@ -117,6 +119,25 @@ def get_parametros_ods(request):
         return ods_list
     except Exception as e:
         raise HttpError(500, f"Erro ao obter parâmetros de ODS: {str(e)}")
+    
+@router.get('/parametros_planos_setoriais', response=list[ParametroPlanoSetorialSchema])
+def get_parametros_planos_setoriais(request):
+    """
+    Retorna os Planos Setoriais disponíveis para filtragem de metas.
+    """
+
+    try:
+        planos_obj = get_all_planos_setoriais()
+        planos_list = []
+        for plano in planos_obj:
+            plano_data = {
+                "id" : plano.id,
+                "nome" : plano.nome
+            }
+            planos_list.append(ParametroPlanoSetorialSchema(**plano_data))
+        return planos_list
+    except Exception as e:
+        raise HttpError(500, f"Erro ao obter os parâmetros de Planos Setoriais: {str(e)}")
 
 @router.get("/parametros_geral", response=ParametrosGeral)
 def get_todos_parametros(request) -> ParametrosGeral:
@@ -128,11 +149,13 @@ def get_todos_parametros(request) -> ParametrosGeral:
         orgaos = get_parametros_orgaos(request)
         eixos = get_parametros_eixos(request)
         ods = get_parametros_ods(request)
+        planos_setoriais = get_parametros_planos_setoriais(request)
         geral = ParametrosGeral(
                 regionalizacao=zonas, 
                 orgaos=orgaos,
                 eixos=eixos,
-                ods=ods
+                ods=ods,
+                planos_setoriais=planos_setoriais
                 )
 
         return geral
