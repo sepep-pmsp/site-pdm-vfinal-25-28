@@ -53,6 +53,7 @@ export default function SectionParticipacaoSocial({ sobre }) {
                       <button
                         onClick={() => (window.location.href = "/outra-pagina")}
                         className="w-50 h-full relative bottom-8 shadow-[0px_9px_20px_1px_#00000052] flex items-center justify-center flex-nowrap flex-col transition-all duration-[0.3s] ease-[ease-in-out] text-[var(--color-white)] cursor-pointer bg-[var(--color-cyan-medium)] p-2 py-6  rounded-2xl hover:-translate-y-2.5"
+                        href={card.link_devolutivas}
                       >
                         <p className="text-3xl">SAIBA +</p>
                       </button>

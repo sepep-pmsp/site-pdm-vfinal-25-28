@@ -6,7 +6,7 @@ import Historico from "@/page/Historico/Historico";
 import Regionalizacao from "@/page/Regionalizacao/Regionalizacao";
 import Metas from "@/page/Metas/Metas";
 import Sobre from "@/page/Sobre/Sobre";
-
+import ParticipacaoSocial from "@/page/Participacao/ParticipacaoSocial";
 
 
 export default function AppRoutes() {
@@ -18,6 +18,7 @@ export default function AppRoutes() {
       <Route path="/regionalizacao" element={<Regionalizacao />} />
       <Route path="/metas" element={<Metas/>} />
       <Route path="/sobre" element={<Sobre/>} />
+      <Route path="/participacao-social" element={<ParticipacaoSocial/>} />
     </Routes>
   );
 }
