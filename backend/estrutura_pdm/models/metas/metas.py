@@ -3,7 +3,7 @@ from django.core.exceptions import ValidationError
 
 from ..eixos import Eixo, Tema
 from cadastros_basicos.models.estrutura_administrativa import Orgao
-from cadastros_basicos.models.regionalizacao import SubPrefeitura
+from cadastros_basicos.models.regionalizacao import SubPrefeitura, Zona
 
 class MetaOrgao(models.Model):
     orgao = models.ForeignKey(
@@ -45,11 +45,35 @@ class MetaSubprefeitura(models.Model):
     )
 
     class Meta:
-        verbose_name = "Subprefeitura Responsável pela Meta"
-        verbose_name_plural = "Subprefeituras Responsáveis pelas Metas"
+        verbose_name = "Subprefeitura que a Meta possui entregas"
+        verbose_name_plural = "Subprefeituras que a Meta possui entregas"
 
     def __str__(self):
-        return f'Meta {self.meta.numero} com entregas na Subprefeitura {self.subprefeitura.sigla}  '
+        return f'Meta {self.meta.numero} com entregas na Subprefeitura {self.subprefeitura.sigla}'
+
+class MetaZona(models.Model):
+    zona = models.ForeignKey(
+        Zona,
+        blank=False,
+        related_name='meta_zona',
+        verbose_name="Zona",
+        on_delete=models.CASCADE
+    )
+    meta = models.ForeignKey(
+        'Meta',
+        blank=False,
+        related_name='meta_zona',
+        verbose_name="Meta",
+        on_delete=models.CASCADE
+    )
+
+    class Meta:
+        verbose_name = "Zona que a Meta possui entregas"
+        verbose_name_plural = "Zonas que a Meta possui entregas"
+
+    def __str__(self):
+        return f'Meta {self.meta.numero} com entregas na Zona {self.zona.sigla}'
+
 
 class Meta(models.Model):
 
@@ -88,6 +112,14 @@ class Meta(models.Model):
         related_name='metas',
         verbose_name="Subprefeituras com entregas",
         through='MetaSubprefeitura'
+    )
+
+    zonas_entregas = models.ManyToManyField(
+        Zona,
+        blank=True,
+        related_name='metas',
+        verbose_name="Zonas com entregas",
+        through='MetaZona'
     )
 
     @property
