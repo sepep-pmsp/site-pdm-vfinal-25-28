@@ -15,7 +15,7 @@ export default function Footer_pdm() {
           </h2>
           <p className="text-xl">
             Para conhecer outros produtos da secretaria acesse o nosso site:{" "}
-            <a>prefeitura.com.br</a>
+            <a className="underline" href="https://prefeitura.sp.gov.br/web/planejamento/" target="blank">prefeitura.sp.gov.br</a>
           </p>
         </div>
       </div>

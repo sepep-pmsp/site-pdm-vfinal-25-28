@@ -10,6 +10,10 @@ import Cidade_Empreendedora from "@/assets/svg/cidade_empreendedora.svg";
 
 export default function Grid_menu_navbar({ onClose }) {
   const navigate = useNavigate();
+  const goToEixo = (nomeEixo) => {
+    navigate("/", { state: { eixo: nomeEixo } });
+    onClose();
+  };
   const goTo = (path) => {
     navigate(path);
     onClose();
@@ -55,7 +59,7 @@ export default function Grid_menu_navbar({ onClose }) {
       <div>
         <div className="w-full h-screen flex items-center justify-center relative">
           <div className="grid grid-cols-3 grid-rows-3 gap-8 content-center justify-center p-2 w-[75rem] h-[54rem]">
-            <div className="slide-right-in-img flex items-start justify-start flex-row p-6 col-span-2 row-span-1 bg-[var(--color-green)] cursor-pointer rounded-tl-[2rem]">
+            <div onClick={() => goToEixo("universo")} className="slide-right-in-img flex items-start justify-start flex-row p-6 col-span-2 row-span-1 bg-[var(--color-green)] cursor-pointer rounded-tl-[2rem]">
               <img
                 className="w-48 slide-right-in-item-img"
                 src={Universo_SP}
@@ -63,7 +67,7 @@ export default function Grid_menu_navbar({ onClose }) {
               />
             </div>
 
-            <div className="slide-bottom-in-img flex flex-col justify-start items-end p-6 col-span-1 row-span-2 bg-[var(--color-orange-red)] cursor-pointer rounded-tr-[2rem]">
+            <div onClick={() => goToEixo("viver")} className="slide-bottom-in-img flex flex-col justify-start items-end p-6 col-span-1 row-span-2 bg-[var(--color-orange-red)] cursor-pointer rounded-tr-[2rem]">
               <img
                 className="w-48 slide-bottom-in-item-img"
                 src={Viver_SP}
@@ -71,7 +75,7 @@ export default function Grid_menu_navbar({ onClose }) {
               />
             </div>
 
-            <div className="slide-top-in-img flex items-end justify-start p-6 col-span-1 row-span-2 bg-[var(--color-purple-red)] cursor-pointer rounded-bl-[2rem]">
+            <div onClick={() => goToEixo("capital")} className="slide-top-in-img flex items-end justify-start p-6 col-span-1 row-span-2 bg-[var(--color-purple-red)] cursor-pointer rounded-bl-[2rem]">
               <img
                 className="w-48 slide-top-in-item-img"
                 src={Capital_Futuro}
@@ -97,7 +101,7 @@ export default function Grid_menu_navbar({ onClose }) {
               </button>
             </div>
 
-            <div className="slide-left-in-img flex justify-end items-end p-6 col-span-2 bg-[var(--color-blue)] cursor-pointer rounded-br-[2rem]">
+            <div onClick={() => goToEixo("cidade")} className="slide-left-in-img flex justify-end items-end p-6 col-span-2 bg-[var(--color-blue)] cursor-pointer rounded-br-[2rem]">
               <img
                 className="w-48 slide-left-in-item-img"
                 src={Cidade_Empreendedora}

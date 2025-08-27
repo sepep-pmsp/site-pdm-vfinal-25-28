@@ -11,22 +11,22 @@ export default function RedesSociaisFooter() {
         <p className="text-[23px] w-56">Siga a Prefeitura de SP nas redes sociais: </p>
         <div>
           <button>
-            <a href="">
+            <a target="blank" href="https://www.facebook.com/PrefSP">
               <img src={facebookIcon} alt="Facebook" />
             </a>
           </button>
           <button>
-            <a href="">
+            <a target="blank" href="https://x.com/prefsp">
               <img src={twitterIcon} alt="Twitter" />
             </a>
           </button>
           <button>
-            <a href="">
+            <a target="blank" href="https://www.instagram.com/prefsp/">
               <img src={instagramIcon} alt="Instagram" />
             </a>
           </button>
           <button>
-            <a href="">
+            <a target="blank" href="https://www.youtube.com/prefeiturasaopaulo">
               <img src={youtubeIcon} alt="Youtube" />
             </a>
           </button>
