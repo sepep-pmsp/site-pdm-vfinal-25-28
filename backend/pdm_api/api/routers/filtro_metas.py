@@ -127,10 +127,12 @@ def get_todos_parametros(request) -> ParametrosGeral:
         zonas = get_parametros_regionalizacao(request)
         orgaos = get_parametros_orgaos(request)
         eixos = get_parametros_eixos(request)
+        ods = get_parametros_ods(request)
         geral = ParametrosGeral(
                 regionalizacao=zonas, 
                 orgaos=orgaos,
-                eixos=eixos
+                eixos=eixos,
+                ods=ods
                 )
 
         return geral
