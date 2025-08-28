@@ -195,9 +195,22 @@ class Meta(models.Model):
     def zonas_entregas_list(self)->list[str]:
         zonas = set()
         for sub in self.subprefeituras_entregas.all():
-            zonas.add(sub.zona.sigla)
+            zona_sub = sub.zona
+            if zona_sub:
+                zonas.add(zona_sub.sigla)
         return list(zonas)
     
+    @property
+    def orgaos_responsaveis_list(self)->list[str]:
+        return [org.sigla for org in self.orgaos_responsaveis.all()]
+    
+    @property
+    def ods_relacionados_list(self)->list[str]:
+        return [f'ODS {ods.numero}' for ods in self.ods_relacionados.all()]
+    
+    @property
+    def planos_setoriais_relacionados_list(self)->list[str]:
+        return [plano.nome for plano in self.planos_setoriais_relacionados.all()]
 
     def clean(self):
         super().clean()
