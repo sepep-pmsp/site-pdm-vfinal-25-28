@@ -188,7 +188,8 @@ def search_metas(request, params: SearchParamSchema):
             ods_relacionados=meta.ods_relacionados_list,
             planos_setoriais_relacionados=meta.planos_setoriais_relacionados_list,
             subprefeituras_entregas=meta.subprefeituras_entregas_list,
-            zonas_entregas=meta.zonas_entregas_list
+            zonas_entregas=meta.zonas_entregas_list,
+            acoes_estrategicas=meta.acoes_estrategicas_as_list
         ) for meta in resultados]
         return SearchResponseSchema(total=resultados.count(), metas=metas)
     except Exception as e:

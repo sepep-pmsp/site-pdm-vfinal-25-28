@@ -241,6 +241,11 @@ class Meta(models.Model):
         desc_com_destaque = self.descricao.replace(self.destaque, destaque_negrito)
         return desc_com_destaque
 
+    @property
+    def acoes_estrategicas_as_list(self):
+
+        return [acao.descricao for acao in self.acoes_estrategicas.all()]
+
     def clean(self):
         super().clean()
         if not self.descricao.startswith(self.destaque):

@@ -16,6 +16,7 @@ class MetaResponseSchema(BaseModel):
     planos_setoriais_relacionados: list[str]=[]
     subprefeituras_entregas: list[str]=[]
     zonas_entregas: list[str]=[]
+    acoes_estrategicas: list[str]=[]
 
 
 class SearchResponseSchema(BaseModel):
