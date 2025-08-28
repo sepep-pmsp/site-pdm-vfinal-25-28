@@ -2,12 +2,15 @@ from pydantic import BaseModel
 
 class MetaResponseSchema(BaseModel):
 
+    id: str
     numero: int
     destaque: str
     descricao: str
     indicador: str
     projecao: str
     eixo: str
+    cor_principal_eixo: str
+    cor_secundaria_eixo: str
     tema: str
     orgaos_responsaveis: list[str]=[]
     ods_relacionados: list[str]=[]

@@ -211,6 +211,28 @@ class Meta(models.Model):
     @property
     def planos_setoriais_relacionados_list(self)->list[str]:
         return [plano.nome for plano in self.planos_setoriais_relacionados.all()]
+    
+    @property
+    def numero_as_str(self):
+        return str(self.numero).zfill(3)
+
+    @property
+    def id_eixo(self):
+
+        primeira_letra_eixo = self.eixo.nome[0].upper()
+        numero = self.numero_as_str
+
+        return f'{primeira_letra_eixo}{numero}'
+    
+    @property
+    def cor_principal_eixo(self):
+
+        return self.eixo.cor_principal
+    
+    @property
+    def cor_secundaria_eixo(self):
+
+        return self.eixo.cor_secundaria
 
     def clean(self):
         super().clean()
