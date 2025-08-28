@@ -28,6 +28,7 @@ python manage.py seed_ods
 python manage.py seed_planos_setoriais
 python manage.py seed_historico
 python manage.py seed_transparencia
+python manage.py seed_regionalizacao
 
 
 echo ">> Iniciando servidor"

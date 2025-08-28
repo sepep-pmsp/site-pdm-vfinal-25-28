@@ -66,5 +66,8 @@ if errorlevel 1 exit /b %errorlevel%
 python manage.py seed_transparencia
 if errorlevel 1 exit /b %errorlevel%
 
+python manage.py seed_regionalizacao
+if errorlevel 1 exit /b %errorlevel%
+
 echo Iniciando servidor
 python manage.py runserver 0.0.0.0:8000
