@@ -6,6 +6,7 @@ from cadastros_basicos.queries.orgaos import get_all_orgaos
 from estrutura_pdm.queries.eixos import get_eixos
 from cadastros_basicos.queries.ods import get_all_ods
 from cadastros_basicos.queries.planos_setoriais import get_all_planos_setoriais
+from pdm_api.queries.filter_metas import SearchMeta
 
 from pdm_api.schemas.filtro_metas.regionalizacao import ParametroZonaSchema, ParametroSubprefeituraSchema
 from pdm_api.schemas.filtro_metas.orgaos import ParametroOrgaosSchema
@@ -13,6 +14,8 @@ from pdm_api.schemas.filtro_metas.eixos import ParametrosEixosSchema, Parametros
 from pdm_api.schemas.filtro_metas.ods import ParametroODSSchema
 from pdm_api.schemas.filtro_metas.planos_setoriais import ParametroPlanoSetorialSchema
 from pdm_api.schemas.filtro_metas.geral import ParametrosGeral
+from pdm_api.schemas.filtro_metas.search_param import SearchParamSchema
+from pdm_api.schemas.filtro_metas.search_response import SearchResponseSchema, MetaResponseSchema
 
 from pdm_api.utils.static_files.images import get_abs_link
 
@@ -161,3 +164,31 @@ def get_todos_parametros(request) -> ParametrosGeral:
         return geral
     except Exception as e:
         raise HttpError(500, f"Erro ao obter parâmetros gerais: {str(e)}")
+    
+
+@router.post("/search", response=SearchResponseSchema)
+def search_metas(request, params: SearchParamSchema):
+    """
+    Realiza a busca de metas com base nos parâmetros fornecidos.
+    """
+    try:
+        search_meta = SearchMeta(params)
+        resultados = search_meta()
+        metas = [MetaResponseSchema(
+            numero=meta.numero,
+            destaque=meta.destaque,
+            descricao=meta.descricao,
+            indicador=meta.indicador,
+            projecao=meta.projecao,
+            eixo=meta.eixo.nome if meta.eixo else "",
+            tema=meta.tema.nome if meta.tema else "",
+            orgaos_responsaveis=meta.orgaos_responsaveis_list,
+            ods_relacionados=meta.ods_relacionados_list,
+            planos_setoriais_relacionados=meta.planos_setoriais_relacionados_list,
+            subprefeituras_entregas=meta.subprefeituras_entregas_list,
+            zonas_entregas=meta.zonas_entregas_list
+        ) for meta in resultados]
+        return SearchResponseSchema(total=resultados.count(), metas=metas)
+    except Exception as e:
+        raise(e)
+        raise HttpError(500, f"Erro ao buscar metas: {str(e)}")
