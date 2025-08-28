@@ -240,6 +240,14 @@ class Meta(models.Model):
         destaque_negrito = f"<strong>{self.destaque}</strong>"
         desc_com_destaque = self.descricao.replace(self.destaque, destaque_negrito)
         return desc_com_destaque
+    
+    @property
+    def frase_pertencimento_eixo(self):
+
+        resumo = self.eixo.resumo
+        frase = f'Essa meta faz parte do eixo {self.eixo.nome}.'
+
+        return [frase, resumo] if resumo else frase
 
     @property
     def acoes_estrategicas_as_list(self):
