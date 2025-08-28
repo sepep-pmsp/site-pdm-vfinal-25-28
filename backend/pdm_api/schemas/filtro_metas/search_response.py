@@ -4,8 +4,7 @@ class MetaResponseSchema(BaseModel):
 
     id: str
     numero: int
-    destaque: str
-    descricao: str
+    titulo: str
     indicador: str
     projecao: str
     eixo: str

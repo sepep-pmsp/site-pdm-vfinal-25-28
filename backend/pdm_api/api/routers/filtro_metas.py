@@ -177,8 +177,7 @@ def search_metas(request, params: SearchParamSchema):
         metas = [MetaResponseSchema(
             id = meta.id_eixo,
             numero=meta.numero,
-            destaque=meta.destaque,
-            descricao=meta.descricao,
+            titulo=meta.titulo,
             indicador=meta.indicador,
             projecao=meta.projecao,
             eixo=meta.eixo.nome,

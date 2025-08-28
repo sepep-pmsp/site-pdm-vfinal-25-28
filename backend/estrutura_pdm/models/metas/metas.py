@@ -233,6 +233,13 @@ class Meta(models.Model):
     def cor_secundaria_eixo(self):
 
         return self.eixo.cor_secundaria
+    
+    @property
+    def titulo(self):
+
+        destaque_negrito = f"<strong>{self.destaque}</strong>"
+        desc_com_destaque = self.descricao.replace(self.destaque, destaque_negrito)
+        return desc_com_destaque
 
     def clean(self):
         super().clean()
