@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 
 
-class SearchParam(BaseModel):
+class SearchParamSchema(BaseModel):
 
     ods:  list[int] | None = None
     planos_setoriais: list[int] | None = None
