@@ -211,6 +211,48 @@ class Meta(models.Model):
     @property
     def planos_setoriais_relacionados_list(self)->list[str]:
         return [plano.nome for plano in self.planos_setoriais_relacionados.all()]
+    
+    @property
+    def numero_as_str(self):
+        return str(self.numero).zfill(3)
+
+    @property
+    def id_eixo(self):
+
+        primeira_letra_eixo = self.eixo.nome[0].upper()
+        numero = self.numero_as_str
+
+        return f'{primeira_letra_eixo}{numero}'
+    
+    @property
+    def cor_principal_eixo(self):
+
+        return self.eixo.cor_principal
+    
+    @property
+    def cor_secundaria_eixo(self):
+
+        return self.eixo.cor_secundaria
+    
+    @property
+    def titulo(self):
+
+        destaque_negrito = f"<strong>{self.destaque}</strong>"
+        desc_com_destaque = self.descricao.replace(self.destaque, destaque_negrito)
+        return desc_com_destaque
+    
+    @property
+    def frase_pertencimento_eixo(self):
+
+        resumo = self.eixo.resumo
+        frase = f'Essa meta faz parte do eixo {self.eixo.nome}.'
+
+        return [frase, resumo] if resumo else frase
+
+    @property
+    def acoes_estrategicas_as_list(self):
+
+        return [acao.descricao for acao in self.acoes_estrategicas.all()]
 
     def clean(self):
         super().clean()

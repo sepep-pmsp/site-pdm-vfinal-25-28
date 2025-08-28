@@ -15,7 +15,14 @@ from pdm_api.schemas.filtro_metas.ods import ParametroODSSchema
 from pdm_api.schemas.filtro_metas.planos_setoriais import ParametroPlanoSetorialSchema
 from pdm_api.schemas.filtro_metas.geral import ParametrosGeral
 from pdm_api.schemas.filtro_metas.search_param import SearchParamSchema
-from pdm_api.schemas.filtro_metas.search_response import SearchResponseSchema, MetaResponseSchema
+from pdm_api.schemas.filtro_metas.search_response import ( 
+                                                            SearchResponseSchema, 
+                                                            MetaResponseSchema, 
+                                                            MetaCardSchema,
+                                                            MetaListingSchema,
+                                                            AtributoStrCardSchema,
+                                                            AtributoListCardSchema,
+                                                            )
 
 from pdm_api.utils.static_files.images import get_abs_link
 
@@ -174,21 +181,35 @@ def search_metas(request, params: SearchParamSchema):
     try:
         search_meta = SearchMeta(params)
         resultados = search_meta()
-        metas = [MetaResponseSchema(
-            numero=meta.numero,
-            destaque=meta.destaque,
-            descricao=meta.descricao,
-            indicador=meta.indicador,
-            projecao=meta.projecao,
-            eixo=meta.eixo.nome if meta.eixo else "",
-            tema=meta.tema.nome if meta.tema else "",
-            orgaos_responsaveis=meta.orgaos_responsaveis_list,
-            ods_relacionados=meta.ods_relacionados_list,
-            planos_setoriais_relacionados=meta.planos_setoriais_relacionados_list,
-            subprefeituras_entregas=meta.subprefeituras_entregas_list,
-            zonas_entregas=meta.zonas_entregas_list
-        ) for meta in resultados]
-        return SearchResponseSchema(total=resultados.count(), metas=metas)
+
+        retorno_final = []
+        for meta in resultados:
+            listing = MetaListingSchema(
+                numero=meta.numero_as_str,
+                titulo=meta.titulo,
+                eixo_cor_principal=meta.cor_principal_eixo
+            )
+
+            card = MetaCardSchema(
+                numero=meta.numero_as_str,
+                eixo_nome=meta.eixo.nome.upper(),
+                eixo_cor_principal=meta.cor_principal_eixo,
+                eixo_cor_secundaria=meta.cor_secundaria_eixo,
+                eixo_frase=meta.frase_pertencimento_eixo,
+                projecao=AtributoStrCardSchema(titulo="PROJEÇÃO", valor=meta.projecao), 
+                acoes_estrategicas=AtributoListCardSchema(titulo="AÇÕES ESTRATÉGICAS", valor=meta.acoes_estrategicas_as_list),
+                indicador=AtributoStrCardSchema(titulo="INDICADOR", valor=meta.indicador),
+                orgaos_responsaveis=AtributoListCardSchema(titulo="ÓRGÃOS RESPONSÁVEIS", valor=meta.orgaos_responsaveis_list)
+            )
+
+            meta_response = MetaResponseSchema(
+                id=meta.id_eixo,
+                card=card,
+                listing=listing
+            )
+
+            retorno_final.append(meta_response)
+        return SearchResponseSchema(total=resultados.count(), metas=retorno_final)
     except Exception as e:
         raise(e)
         raise HttpError(500, f"Erro ao buscar metas: {str(e)}")

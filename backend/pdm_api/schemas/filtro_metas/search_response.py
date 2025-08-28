@@ -1,19 +1,55 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, model_validator, field_validator
+from typing import Optional, Literal
+
+class MetaListingSchema(BaseModel):
+
+    numero: str
+    titulo: str
+    eixo_cor_principal: str
+
+class AtributoStrCardSchema(BaseModel):
+
+    titulo: str
+    valor: str
+    tipo: Literal['str']='str'
+
+    @model_validator(mode='after')
+    def validate_tipo(self):
+
+        if not self.tipo== 'str':
+            raise ValueError('Invalid tipo for AtributoStrCardSchema')
+        return self
+
+class AtributoListCardSchema(BaseModel):
+
+    titulo: str
+    valor: list[str]
+    tipo: Literal['list']='list'
+
+    @model_validator(mode='after')
+    def validate_tipo(self):
+
+        if not self.tipo== 'list':
+            raise ValueError('Invalid tipo for AtributoListCardSchema')
+        return self
+
+class MetaCardSchema(BaseModel):
+
+    numero: str
+    projecao: AtributoStrCardSchema
+    acoes_estrategicas: Optional[AtributoListCardSchema]=None
+    indicador: AtributoStrCardSchema
+    orgaos_responsaveis: AtributoListCardSchema
+    eixo_nome: str
+    eixo_cor_principal: str
+    eixo_cor_secundaria: str
+    eixo_frase: list[str]=[]
 
 class MetaResponseSchema(BaseModel):
 
-    numero: int
-    destaque: str
-    descricao: str
-    indicador: str
-    projecao: str
-    eixo: str
-    tema: str
-    orgaos_responsaveis: list[str]=[]
-    ods_relacionados: list[str]=[]
-    planos_setoriais_relacionados: list[str]=[]
-    subprefeituras_entregas: list[str]=[]
-    zonas_entregas: list[str]=[]
+    id: str
+    card: MetaCardSchema
+    listing: MetaListingSchema
 
 
 class SearchResponseSchema(BaseModel):

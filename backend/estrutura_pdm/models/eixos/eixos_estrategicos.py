@@ -68,6 +68,15 @@ class Eixo(models.Model):
         verbose_name="Cor Principal do Eixo"
     )
 
+    cor_secundaria = models.CharField(
+        max_length=7,
+        default="#000000",
+        validators=[hex_color_validator],
+        verbose_name="Cor Secundária do Eixo",
+        blank=True,
+        null=True
+    )
+
     orcamento = models.IntegerField(
         default=0,
         verbose_name="Orçamento do Eixo",
