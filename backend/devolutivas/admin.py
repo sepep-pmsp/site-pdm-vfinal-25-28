@@ -3,14 +3,13 @@ from django.forms.models import BaseInlineFormSet
 from django.core.exceptions import ValidationError
 from devolutivas.models.canal import Canal
 from devolutivas.models.temas import Tema
-from devolutivas.models.contribuicao import Contribuicao, OrigensContribuicao, ContribuicaoSubPrefeitura
+from devolutivas.models.contribuicao import Contribuicao, ContribuicaoSubPrefeitura
 from devolutivas.models.devolutiva import Devolutiva
 from cadastros_basicos.models.estrutura_administrativa import Orgao
 
 
 admin.site.register(Canal)
 admin.site.register(Tema)
-admin.site.register(OrigensContribuicao)
 
 class ContribuicaoSubPrefeituraInline(admin.TabularInline):
     model = ContribuicaoSubPrefeitura
@@ -27,8 +26,8 @@ class ContribuicaoDevolutivaInline(admin.TabularInline):
 
 @admin.register(Contribuicao)
 class ContribuicaoAdmin(admin.ModelAdmin):
-    list_display = ('id_contribuicao', 'origem__nome', 'canal__nome', 'conteudo_truncated')
-    search_fields = ('id_contribuicao', 'titulo', 'origem__nome ', 'canal__nome', 'counteudo', 'titulo', 'resumo')
+    list_display = ('id_contribuicao', 'origem', 'canal__nome', 'conteudo_truncated')
+    search_fields = ('id_contribuicao', 'titulo', 'origem ', 'canal__nome', 'counteudo', 'titulo', 'resumo')
     inlines = [ContribuicaoSubPrefeituraInline, ContribuicaoDevolutivaInline]
 
 

@@ -3,10 +3,6 @@ from .canal import Canal
 from cadastros_basicos.models.estrutura_administrativa import Orgao
 from cadastros_basicos.models.regionalizacao import SubPrefeitura
 
-class OrigensContribuicao(models.Model):
-
-    nome = models.CharField(max_length=100, unique=True)
-    descricao = models.TextField(blank=True, null=True)
 
 class ContribuicaoSubPrefeitura(models.Model):
 
@@ -35,10 +31,17 @@ class ContribuicaoSubPrefeitura(models.Model):
 
 class Contribuicao(models.Model):
 
+    ORIGEM_CHOICES = [
+        ('fala', 'Fala em Audiência Pública'),
+        ('revisao', 'Sugestão de Revisão/Alteração no Participe+'),
+        ('proposta', 'Proposta no Participe+')
+    ]
+
+
     id_contribuicao = models.CharField(max_length=36, primary_key=True)
     id_participe_mais = models.CharField(max_length=36, blank=True, null=True)
     canal = models.ForeignKey(Canal, on_delete=models.PROTECT, related_name='contribuicoes')
-    origem = models.ForeignKey(OrigensContribuicao, on_delete=models.PROTECT, related_name='contribuicoes')
+    origem = models.CharField(max_length=20, choices=ORIGEM_CHOICES)
     titulo = models.CharField(max_length=600, blank=True, null=True)
     resumo = models.CharField(max_length=1000, blank=True, null=True)
     conteudo = models.TextField()
