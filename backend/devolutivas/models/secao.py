@@ -8,6 +8,8 @@ class SubSecaoApresentacao(models.Model):
 
     titulo = models.CharField(max_length=255, verbose_name='Título do Modal')
     subtitulo = models.CharField(max_length=500, blank=True, null=True, verbose_name='Subtítulo do Modal')
+    texto = models.TextField(verbose_name='Texto da Seção')
+
     imagem = models.ForeignKey(
         Imagem,
         on_delete=models.SET_NULL,
@@ -36,7 +38,6 @@ class SecaoParticipacao(models.Model):
 
     titulo = models.CharField(max_length=255, verbose_name='Título da Seção')
     subtitulo = models.CharField(max_length=500, blank=True, null=True, verbose_name='Subtítulo da Seção')
-    texto = models.TextField(verbose_name='Texto da Seção')
     imagem = models.ForeignKey(
         Imagem,
         on_delete=models.SET_NULL,
@@ -47,8 +48,4 @@ class SecaoParticipacao(models.Model):
     )
     subtitulo_box = models.CharField(max_length=500, blank=True, null=True, verbose_name='Subtítulo do Box Devolutivas')
     texto_box = models.TextField(verbose_name='Texto do Box Devolutivas')
-    modal = models.OneToOneField(
-        SubSecaoApresentacao,
-        on_delete=models.CASCADE,
-        verbose_name='Modal de Apresentação')
     

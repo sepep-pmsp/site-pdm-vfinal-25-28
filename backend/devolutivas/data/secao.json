@@ -1,0 +1,19 @@
+{
+    "titulo" : "Participação Social",
+    "subtitulo" : null,
+    "apresentacao" : {
+        "titulo" : "Seja bem-vindo(a)!",
+        "subtitulo" : "O que é esse portal?",
+        "texto" : "Siga participando, discutindo e contribuindo!",
+        "paragrafos" : [
+            "Esse é o Portal de Devoltuvias, uma iniciativa da Prefeitura de São Paulo, para responder as sugestões recebidas durante o ciclo participativo do Programa de Meta (PDM) 201-2024 da Cidade. Este canal tem o objetivo de ampliar a transparência e facilitar o controle social.",
+            "Durante o ciclo participativo, a população pôde, por meio de 36 audiência gerais, regionais e temáticas e da plataforma de governo aberto Participe+, construir coletivamente este importante instrumento junto ao poder público.",
+            "Por aqui, é possível aplicar diferentes filtros ou fazer uma busca livre para encontrar o retorno da Prefeitura para cada sugestão encaminhada pelas plataformas de participação."
+        ],
+        "imagem" : "Logo-pdm-letras-colorido.svg"
+    },
+    "subtitulo_box" : "Veja informações sobre as devolutivas",
+    "texto_box" : "Esse é o Portal de Devolutivas, iniciativa da Prefeitura de São Paulo para responder às sugestões recebida durante o ciclo participativo do Programa de Metas (PDM) 2021-2024. Este canal tem op objetivo de ampliar a transparência e facilitar o controle social do planejamento público municipal.",
+    "imagem" : "bg-participacao.svg"
+
+}
