@@ -16,6 +16,10 @@ class Orgao(models.Model):
         default=TipoOrgao.DIRETA,
     )
 
+    @property
+    def sigla_nome(self):
+        return f"{self.sigla} - {self.nome}"
+
     class Meta:
         verbose_name = 'Órgão'
         verbose_name_plural = 'Órgãos'

@@ -1,4 +1,4 @@
-from devolutivas.models import Canal, Contribuicao, OrigensContribuicao, Tema, Devolutiva
+from devolutivas.models import Canal, Tema
 
 
 def get_all_canais():

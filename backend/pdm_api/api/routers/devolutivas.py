@@ -3,7 +3,7 @@ from ninja.errors import HttpError
 
 from devolutivas.queries.objs_filtro import get_all_canais, get_all_temas
 from cadastros_basicos.queries.regionalizacao import get_nomes_subprefeituras
-from cadastros_basicos.queries.orgaos import get_all_nomes_orgaos
+from cadastros_basicos.queries.orgaos import get_all_nomes_sigla_orgaos
 
 from pdm_api.schemas.devolutivas.filtro import FiltroDevolutivaSchema
 
@@ -20,7 +20,7 @@ def get_filtro(request):
         canais = get_all_canais()
         temas = get_all_temas()
         subprefeituras = get_nomes_subprefeituras()
-        orgaos = get_all_nomes_orgaos()
+        orgaos = get_all_nomes_sigla_orgaos()
 
         return FiltroDevolutivaSchema(
             canais=canais,
