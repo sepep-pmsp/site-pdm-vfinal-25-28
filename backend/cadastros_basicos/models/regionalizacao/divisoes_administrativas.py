@@ -8,6 +8,10 @@ class SubPrefeitura(models.Model):
     cd_geosampa = models.IntegerField(unique=True, verbose_name='Código Geosampa')
     zona = models.ForeignKey(Zona, on_delete=models.CASCADE, related_name='subprefeituras', null=True)
 
+    @property
+    def sigla_nome(self):
+        return f"{self.sigla} - {self.nome}"
+
     class Meta:
         verbose_name = 'Subprefeitura'
         verbose_name_plural = 'Subprefeituras'
