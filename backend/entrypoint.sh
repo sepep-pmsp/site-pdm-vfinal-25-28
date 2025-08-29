@@ -29,7 +29,7 @@ python manage.py seed_planos_setoriais
 python manage.py seed_historico
 python manage.py seed_transparencia
 python manage.py seed_regionalizacao
-
+python manage.py seed_devolutivas
 
 echo ">> Iniciando servidor"
 exec gunicorn site_pdm_admin.wsgi:application --bind 0.0.0.0:8000

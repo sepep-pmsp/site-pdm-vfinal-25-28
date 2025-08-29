@@ -13,6 +13,18 @@ def get_subprefeitura_by_sigla(sigla:str, raise_error=True)->SubPrefeitura|None:
         except SubPrefeitura.DoesNotExist:
             return None
         
+def get_subprefeitura_by_name(name:str, raise_error=True)->SubPrefeitura|None:
+    """
+    Retorna uma subprefeitura pelo campo nome.
+    """
+    if raise_error:
+        return SubPrefeitura.objects.get(nome=name)
+    else:
+        try:
+            return SubPrefeitura.objects.get(nome=name)
+        except SubPrefeitura.DoesNotExist:
+            return None
+        
 def get_subprefeitura_by_cd_geosampa(cd_geosampa:int, raise_error=True)->SubPrefeitura|None:
     """
     Retorna uma subprefeitura pelo campo cd_geosampa.
