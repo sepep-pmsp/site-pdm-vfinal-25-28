@@ -56,3 +56,6 @@ def get_all_zonas():
 
 def get_subprefeituras_by_zona(zona: Zona):
     return SubPrefeitura.objects.filter(zona=zona).order_by("sigla")
+
+def get_nomes_subprefeituras():
+    return list(SubPrefeitura.objects.values_list('nome', flat=True).distinct().order_by('nome'))
