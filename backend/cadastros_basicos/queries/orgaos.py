@@ -23,3 +23,13 @@ def get_orgao_by_name(name:str, raise_error:bool=True)->Orgao|None:
 def get_all_orgaos()->list[Orgao]:
 
     return list(Orgao.objects.all().order_by("sigla"))
+
+
+def get_all_nomes_orgaos()->list[str]:
+
+    return list(Orgao.objects.values_list('nome', flat=True).distinct().order_by('nome'))
+
+def get_all_nomes_sigla_orgaos()->list[str]:
+
+    all_orgaos = get_all_orgaos()
+    return [orgao.sigla_nome for orgao in all_orgaos]

@@ -4,6 +4,7 @@ from .routers.static_files import router as static_files_router
 from .routers.secoes_pagina_inicial import router as secoes_pagina_inicial_router
 from .routers.visao_geral import router as visao_geral_router
 from .routers.filtro_metas import router as filtro_metas_router
+from .routers.devolutivas import router as devolutivas_router
 
 
 api = NinjaAPI(
@@ -26,3 +27,4 @@ api.add_router("/static", static_files_router)
 api.add_router("/secoes_pagina_inicial", secoes_pagina_inicial_router)
 api.add_router("/visao_geral", visao_geral_router)
 api.add_router("/filtro_metas", filtro_metas_router)
+api.add_router("/devolutivas", devolutivas_router)

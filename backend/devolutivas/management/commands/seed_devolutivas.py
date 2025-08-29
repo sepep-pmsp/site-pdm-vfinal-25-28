@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 
-from devolutivas.models.contribuicao import Contribuicao, OrigensContribuicao, ContribuicaoSubPrefeitura
+from devolutivas.models.contribuicao import Contribuicao, ContribuicaoSubPrefeitura
 from devolutivas.models.canal import Canal
 from devolutivas.models.temas import Tema
 from devolutivas.models.devolutiva import Devolutiva
@@ -38,22 +38,17 @@ class Command(BaseCommand):
             if created:
                 self.stdout.write(self.style.SUCCESS(f"Canal '{canal.nome}' criado com sucesso."))
 
-            origem, created = OrigensContribuicao.objects.get_or_create(nome=contrib['tipo_origem'])
-
-            if created:
-                self.stdout.write(self.style.SUCCESS(f"Origem de contribuição '{origem.nome}' criada com sucesso."))
-
             contrib_obj, created = Contribuicao.objects.get_or_create(
                 id_contribuicao=contrib['id_contribuicao'],
                 id_participe_mais=contrib['id_participe_mais'],
                 canal=canal,
-                origem=origem,
+                origem=contrib['tipo_origem'],
                 titulo=contrib['titulo'],
                 conteudo=contrib['conteudo'],
                 resumo=contrib['resumo'],
                 qtd_apoios=contrib['qtd_apoios'],
-                qtd_comentarios=contrib['qtd_comentarios']
-    
+                qtd_comentarios=contrib['qtd_comentarios'],
+                municipe = contrib['municipe']
             )
 
             if created:
