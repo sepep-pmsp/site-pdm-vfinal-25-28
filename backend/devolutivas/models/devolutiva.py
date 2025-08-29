@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.exceptions import ValidationError
 from .contribuicao import Contribuicao
 from .temas import Tema
 from cadastros_basicos.models.estrutura_administrativa import Orgao
@@ -70,7 +71,15 @@ class Devolutiva(models.Model):
     @property
     def str_siglas_orgaos_responsaveis(self):
         return ', '.join(self.list_siglas_orgaos_responsaveis)
+    
+    def clean(self):
+        super().clean()
+        if self.pk and not self.orgaos_responsaveis.exists():
+            raise ValidationError("É necessário informar ao menos um Órgão responsável.")
 
     class Meta:
         verbose_name = "Devolutiva"
         verbose_name_plural = "Devolutivas"
+
+    def __str__(self):
+        return f'Devolutiva {self.id} para a Contribuição {self.contribuicao.id_contribuicao}'
