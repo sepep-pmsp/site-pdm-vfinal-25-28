@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'estrutura_pdm',
     'secoes_pagina_inicial',
     'static_files',
+    'devolutivas'
 ]
 
 MIDDLEWARE = [
