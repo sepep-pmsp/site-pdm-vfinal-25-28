@@ -5,29 +5,6 @@ from .temas import Tema
 from cadastros_basicos.models.estrutura_administrativa import Orgao
 
 
-class DevolutivaOrgao(models.Model):
-
-    orgao = models.ForeignKey(
-        Orgao,
-        blank=False,
-        related_name='devolutiva_orgao',
-        verbose_name="Órgão",
-        on_delete=models.PROTECT
-    )
-    devolutiva = models.ForeignKey(
-        'Devolutiva',
-        blank=False,
-        related_name='devolutivas_orgaos',
-        verbose_name="Devolutiva",
-        on_delete=models.PROTECT
-    )
-
-    class Meta:
-        verbose_name = "Órgão Responsável pela Devolutiva"
-        verbose_name_plural = "Órgãos Responsáveis pelas Devolutivas"
-
-    def __str__(self):
-        return f'Devolutiva {self.devolutiva.id} com resposta pelo Órgão {self.orgao.sigla}  '
 
 class Devolutiva(models.Model):
 
@@ -46,15 +23,14 @@ class Devolutiva(models.Model):
         on_delete=models.PROTECT
     )
     
-
-    orgaos_responsaveis = models.ManyToManyField(
+    orgao = models.ForeignKey(
         Orgao,
-        blank=True,
+        blank=False,
+        null=False,
         related_name='devolutivas',
-        verbose_name="Órgãos responsáveis pela Devolutiva",
-        through=DevolutivaOrgao
+        verbose_name="Órgão Responsável pela Devolutiva",
+        on_delete=models.PROTECT
     )
-
     resposta = models.TextField()
 
 
@@ -63,23 +39,15 @@ class Devolutiva(models.Model):
         if len(self.resposta) > 75:
             return self.resposta[:75] + '...'
         return self.resposta
-    
+
     @property
-    def list_siglas_orgaos_responsaveis(self):
-        return [orgao.sigla for orgao in self.orgaos_responsaveis.all()]
-    
-    @property
-    def str_siglas_orgaos_responsaveis(self):
-        return ', '.join(self.list_siglas_orgaos_responsaveis)
-    
-    def clean(self):
-        super().clean()
-        if self.pk and not self.orgaos_responsaveis.exists():
-            raise ValidationError("É necessário informar ao menos um Órgão responsável.")
+    def str_sigla_orgao(self):
+        return self.orgao.sigla
 
     class Meta:
         verbose_name = "Devolutiva"
         verbose_name_plural = "Devolutivas"
+        unique_together = ('contribuicao', 'tema', 'orgao', 'resposta')
 
     def __str__(self):
         return f'Devolutiva {self.id} para a Contribuição {self.contribuicao.id_contribuicao}'
