@@ -45,6 +45,7 @@ class Contribuicao(models.Model):
     titulo = models.CharField(max_length=600, blank=True, null=True)
     resumo = models.CharField(max_length=1000, blank=True, null=True)
     conteudo = models.TextField()
+    municipe =models.CharField(max_length=200, blank=True, null=True)
     qtd_apoios = models.IntegerField(blank=True, null=True)
     qtd_comentarios = models.IntegerField(blank=True, null=True)
     subprefeituras = models.ManyToManyField(
@@ -60,6 +61,10 @@ class Contribuicao(models.Model):
         if len(self.conteudo) > 75:
             return self.conteudo[:75] + '...'
         return self.conteudo
+    
+    @property
+    def temas_list(self):
+        return [devolutiva.tema.nome for devolutiva in self.devolutivas.all()]
 
     class Meta:
         verbose_name = "Contribuição"

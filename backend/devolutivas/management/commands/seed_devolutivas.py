@@ -47,8 +47,8 @@ class Command(BaseCommand):
                 conteudo=contrib['conteudo'],
                 resumo=contrib['resumo'],
                 qtd_apoios=contrib['qtd_apoios'],
-                qtd_comentarios=contrib['qtd_comentarios']
-    
+                qtd_comentarios=contrib['qtd_comentarios'],
+                municipe = contrib['municipe']
             )
 
             if created:
