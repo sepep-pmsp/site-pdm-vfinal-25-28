@@ -14,6 +14,28 @@
     },
     "subtitulo_box" : "Veja informações sobre as devolutivas",
     "texto_box" : "Esse é o Portal de Devolutivas, iniciativa da Prefeitura de São Paulo para responder às sugestões recebida durante o ciclo participativo do Programa de Metas (PDM) 2021-2024. Este canal tem op objetivo de ampliar a transparência e facilitar o controle social do planejamento público municipal.",
-    "imagem" : "bg-participacao.svg"
+    "imagem" : "bg-participacao.svg",
+    "links" : [
+        {
+            "tipo" : "listing",
+            "url" : "https://youtube.com/aaa"
+        },
+          {
+            "tipo" : "listing",
+            "url" : "https://youtube.com/aaa"
+        },
+          {
+            "tipo" : "listing",
+            "url" : "https://youtube.com/aaa"
+        },
+        {
+            "tipo" : "destaque",
+            "url" : "https://youtube.com/aaa"
+        },
+        {
+            "tipo" : "botao",
+            "url" : "https://youtube.com/aaa"
+        }
+    ]
 
 }

@@ -5,12 +5,13 @@ from devolutivas.models.canal import Canal
 from devolutivas.models.temas import Tema
 from devolutivas.models.contribuicao import Contribuicao, ContribuicaoSubPrefeitura
 from devolutivas.models.devolutiva import Devolutiva
-from devolutivas.models.secao import SecaoParticipacao, SubSecaoApresentacao, ParagrafoApresentacao
+from devolutivas.models.secao import SecaoParticipacao, SubSecaoApresentacao, ParagrafoApresentacao, LinkYoutubeAudiencia
 from cadastros_basicos.models.estrutura_administrativa import Orgao
 
 
 admin.site.register(Canal)
 admin.site.register(Tema)
+admin.site.register(LinkYoutubeAudiencia)
 
 class ContribuicaoSubPrefeituraInline(admin.TabularInline):
     model = ContribuicaoSubPrefeitura

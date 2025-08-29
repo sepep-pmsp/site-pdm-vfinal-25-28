@@ -48,4 +48,20 @@ class SecaoParticipacao(models.Model):
     )
     subtitulo_box = models.CharField(max_length=500, blank=True, null=True, verbose_name='Subtítulo do Box Devolutivas')
     texto_box = models.TextField(verbose_name='Texto do Box Devolutivas')
+
+class LinkYoutubeAudiencia(models.Model):
+
+    TIPO_LINK_CHOICES = [
+        ('listing', 'Links que ficam nos listings'),
+        ('destaque', 'Link que fica no destaque'),
+        ('botao', 'Link que vai para o botao')
+    ]
+
+    url = models.URLField(verbose_name='URL do Vídeo no YouTube')
+    tipo_link = models.CharField(max_length=20, choices=TIPO_LINK_CHOICES)
+    secao = models.ForeignKey(
+        SecaoParticipacao,
+        on_delete=models.CASCADE,
+        related_name='links_youtube'
+    )
     

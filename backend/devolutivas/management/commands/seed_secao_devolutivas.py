@@ -1,7 +1,7 @@
 from django.core.management.base import BaseCommand
 import os
 import json
-from devolutivas.models.secao import SecaoParticipacao, SubSecaoApresentacao, ParagrafoApresentacao
+from devolutivas.models.secao import SecaoParticipacao, SubSecaoApresentacao, ParagrafoApresentacao, LinkYoutubeAudiencia
 from cadastros_basicos.queries.superuser import get_superuser
 from django.core.files import File
 from static_files.models import Imagem
@@ -64,6 +64,18 @@ class Command(BaseCommand):
             self.stdout.write(self.style.SUCCESS(f'Secção de Participação {secao_obj.titulo} criada com sucesso.'))
         else:
             self.stdout.write(self.style.WARNING(f'Secção de Participação {secao_obj.titulo} já existe.'))
+
+        links = secao_data['links']
+        for link in links:
+            link_obj, created = LinkYoutubeAudiencia.objects.get_or_create(
+                url=link['url'],
+                tipo_link=link['tipo'],
+                secao=secao_obj
+            )
+            if created:
+                self.stdout.write(self.style.SUCCESS(f'Link do YouTube {link_obj.url} criado com sucesso.'))
+            else:
+                self.stdout.write(self.style.WARNING(f'Link do YouTube {link_obj.url} já existe.'))
 
 
         modal = secao_data['apresentacao']
