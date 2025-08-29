@@ -5,6 +5,7 @@ from devolutivas.models.canal import Canal
 from devolutivas.models.temas import Tema
 from devolutivas.models.contribuicao import Contribuicao, ContribuicaoSubPrefeitura
 from devolutivas.models.devolutiva import Devolutiva
+from devolutivas.models.secao import SecaoParticipacao, SubSecaoApresentacao, ParagrafoApresentacao
 from cadastros_basicos.models.estrutura_administrativa import Orgao
 
 
@@ -35,3 +36,29 @@ class ContribuicaoAdmin(admin.ModelAdmin):
 class DevolutivaAdmin(admin.ModelAdmin):
     list_display = ('id', 'contribuicao__id_contribuicao', 'tema__nome', 'str_sigla_orgao', 'resposta_truncated')
     search_fields = ('contribuicao__id_contribuicao', 'tema__nome', 'resposta')
+
+
+class ParagrafoApresentacaoInline(admin.TabularInline):
+    model = ParagrafoApresentacao
+    extra = 1
+    verbose_name = "Parágrafo de Apresentação"
+    verbose_name_plural = "Parágrafos de Apresentação"
+
+@admin.register(SubSecaoApresentacao)
+class SubSecaoApresentacaoAdmin(admin.ModelAdmin):
+    list_display = ('titulo', 'subtitulo')
+    inlines = [ParagrafoApresentacaoInline]
+
+class SubSecaoApresentacaoInline(admin.StackedInline):
+    model = SubSecaoApresentacao
+    extra = 0
+    max_num = 1
+    verbose_name = "Modal de Apresentação"
+    verbose_name_plural = "Modal de Apresentação"
+    inlines = [ParagrafoApresentacaoInline]
+
+@admin.register(SecaoParticipacao)
+class SecaoParticipacaoAdmin(admin.ModelAdmin):
+    list_display = ('titulo', 'subtitulo')
+    search_fields = ('titulo', 'subtitulo', 'texto', 'subtitulo_box', 'texto_box')
+    inlines = [SubSecaoApresentacaoInline]
