@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from .models.eixos import Eixo, Tema
-from .models.metas import Meta, MetaOrgao, MetaSubprefeitura, AcaoEstrategica, AcaoOrgao
+from .models.metas import Meta, MetaOrgao, MetaSubprefeitura, MetaZona, AcaoEstrategica, AcaoOrgao, MetaPlanoSetorial, MetaODS
 from .models.pdm import PDM, DocumentoPDM, TipoDocumentoPDM
 from cadastros_basicos.models.estrutura_administrativa import Orgao
 
@@ -52,11 +52,33 @@ class MetaSubprefeituraInline(admin.TabularInline):
     verbose_name = "Subprefeitura com Entregas"
     verbose_name_plural = "Subprefeituras com Entregas"
 
+class MetaZonaInline(admin.TabularInline):
+    model = MetaZona
+    extra = 1
+    verbose_name = "Zona com Entregas"
+    verbose_name_plural = "Zonas com Entregas"
+
+class MetaODSInline(admin.TabularInline):
+    model = MetaODS
+    extra = 1
+    verbose_name = "ODS relacionado à Meta"
+    verbose_name_plural = "ODS relacionados à Meta"
+
+class MetaPlanoSetorialInline(admin.TabularInline):
+    model = MetaPlanoSetorial
+    extra = 1
+    verbose_name = "Plano Setorial relacionado à Meta"
+    verbose_name_plural = "Planos Setoriais relacionados à Meta"
+
+
 @admin.register(Meta)
 class MetaAdmin(admin.ModelAdmin):
     list_display = ('numero', 'destaque', 'descricao')
     search_fields = ('numero', 'destaque')
-    inlines = [AcaoEstrategicaInline, MetaOrgaoInline, MetaSubprefeituraInline]
+    inlines = [AcaoEstrategicaInline, 
+                                            MetaOrgaoInline, 
+                                            MetaSubprefeituraInline, MetaZonaInline, 
+                                            MetaODSInline, MetaPlanoSetorialInline]
 
 
 @admin.register(TipoDocumentoPDM)

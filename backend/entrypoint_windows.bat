@@ -48,6 +48,8 @@ if errorlevel 1 exit /b %errorlevel%
 python manage.py seed_metas
 if errorlevel 1 exit /b %errorlevel%
 
+python manage.py seed_regionalizacao_metas
+if errorlevel 1 exit /b %errorlevel%
 
 python manage.py seed_acoes
 if errorlevel 1 exit /b %errorlevel%
@@ -62,6 +64,16 @@ python manage.py seed_historico
 if errorlevel 1 exit /b %errorlevel%
 
 python manage.py seed_transparencia
+if errorlevel 1 exit /b %errorlevel%
+
+python manage.py seed_regionalizacao
+if errorlevel 1 exit /b %errorlevel%
+
+
+python manage.py seed_devolutivas
+if errorlevel 1 exit /b %errorlevel%
+
+python manage.py seed_secao_devolutivas
 if errorlevel 1 exit /b %errorlevel%
 
 echo Iniciando servidor

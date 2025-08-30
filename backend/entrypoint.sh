@@ -22,12 +22,15 @@ python manage.py seed_news
 python manage.py seed_carta_prefeito
 python manage.py seed_about_pdm
 python manage.py seed_metas
+python manage.py seed_regionalizacao_metas
 python manage.py seed_acoes
 python manage.py seed_ods
 python manage.py seed_planos_setoriais
 python manage.py seed_historico
 python manage.py seed_transparencia
-
+python manage.py seed_regionalizacao
+python manage.py seed_devolutivas
+python manage.py seed_secao_devolutivas
 
 echo ">> Iniciando servidor"
 exec gunicorn site_pdm_admin.wsgi:application --bind 0.0.0.0:8000

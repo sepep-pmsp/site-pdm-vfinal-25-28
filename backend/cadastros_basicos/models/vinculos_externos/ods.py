@@ -42,6 +42,13 @@ class ODS(models.Model):
         validators=[hex_color_validator],
         verbose_name="Cor Principal do ODS"
     )
+
+    @property
+    def nome_titlecase(self):
+        """
+        Retorna o nome do ODS em formato title case.
+        """
+        return self.nome.title()
     
     class Meta:
         verbose_name = "ODS"

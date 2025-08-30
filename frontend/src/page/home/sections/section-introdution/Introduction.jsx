@@ -21,14 +21,14 @@ export default function Introduction() {
         </div>
         {/* Container principal com a logo */}
         <div className="absolute inset-0 flex flex-row flex-nowrap justify-evenly items-center z-10">
-          <div className="flex items-center bg-opacity-80 rounded-lg shadow-lg p-8">
+          <div className="flex items-center bg-opacity-80 rounded-lg p-8">
             <img
               src={logo_pdm_fbranco}
               alt="Logo"
               className="object-contain mr-8"
             />
           </div>
-          <div className="flex items-center bg-opacity-80 rounded-lg shadow-lg p-8">
+          <div className="flex items-center bg-opacity-80 rounded-lg p-8">
             <div className="bg-[var(--color-blue-light)] w-[40rem] h-[44rem] flex items-end justify-center flex-col flex-nowrap gap-16 p-4">
               <span className="text-white w-[28rem] text-3xl">
                 <p className="w-60">

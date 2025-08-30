@@ -35,6 +35,13 @@ class Eixo(models.Model):
         Retorna a descrição do eixo como uma lista de strings, separando por quebras de linha.
         """
         return self.descricao.splitlines() if self.descricao else []
+    
+    @property
+    def nome_titlecase(self):
+        """
+        Retorna o nome do eixo em formato title case.
+        """
+        return self.nome.title()
 
     logo_colorido = models.ForeignKey(
         Imagem,
@@ -59,6 +66,15 @@ class Eixo(models.Model):
         default="#000000",
         validators=[hex_color_validator],
         verbose_name="Cor Principal do Eixo"
+    )
+
+    cor_secundaria = models.CharField(
+        max_length=7,
+        default="#000000",
+        validators=[hex_color_validator],
+        verbose_name="Cor Secundária do Eixo",
+        blank=True,
+        null=True
     )
 
     orcamento = models.IntegerField(

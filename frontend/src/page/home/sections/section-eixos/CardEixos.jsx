@@ -61,7 +61,7 @@ export default function CardEixos({ eixo, onClose }) {
       className={`p-8 text-white ${
         isExiting ? animationSet.out : animationSet.in
       }`}
-      style={{ backgroundColor: eixo.cor_principal, ...style }}
+      style={{ backgroundColor: eixo.cor_principal, height: "38.5rem", borderRadius: "3rem", ...style }}
     >
       <button
         onClick={() => setIsExiting(true)}
