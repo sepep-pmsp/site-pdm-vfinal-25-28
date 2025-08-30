@@ -1,0 +1,150 @@
+[
+  {
+    "titulo": "participação social",
+    "subtitulo": null,
+    "apresentacao": {
+      "imagem": "/svg/logo_pdm_fundo_branco.svg",
+      "titulo": "Seja bem-vindo (a)!",
+      "subtitulo": "O que é este portal?",
+      "paragrafos": [
+        "Este é o Portal de Devolutivas, uma iniciativa da Prefeitura de São Paulo, para responder as sugestões recebidas durante o ciclo participativo do Programa de Metas (PdM) 2021-2024 da Cidade. Este canal tem o objetivo de ampliar a transparência e facilitar o controle social do ",
+        "Durante o ciclo participativo, a população pôde, por meio de 36 audiências gerais, regionais e temáticas e da plataforma de governo aberto municipal Participe+, construir coletivamente este importante instrumento junto ao poder público.",
+        "Por aqui, é possível aplicar diferentes filtros ou fazer uma busca livre para encontrar o retorno da Prefeitura para cada sugestão encaminhada pelas plataformas de participação."
+      ],
+      "texto": "Siga participando, discutindo e contribuindo!"
+    },
+    "devolutivas": {
+      "imagem_fundo": "/svg/bg-participacao.svg",
+      "subtitulo": "Veja informações sobre as devolutivas",
+      "paragrafos": "Este é o Portal de Devolutivas, iniciativa da Prefeitura de São Paulo para responder as sugestões recebidas durante o ciclo participativo do Programa de Metas (PdM) 2021-2024. Este canal tem o objetivo de ampliar a transparência e facilitar o controle social do planejamento público municipal."
+    },
+    "audiencia": {
+      "destaque": "https://www.youtube.com/embed/NA72Vx4HQ_A",
+      "lista": [
+        "https://www.youtube.com/embed/ZE641NDeXik",
+        "https://www.youtube.com/embed/xI7X14megCg",
+        "https://www.youtube.com/embed/Hlu9rDeirSo"
+      ],
+      "botao": "https://www.youtube.com/playlist?list=PLy7hhEiqAY2ulthRvHOu1L0KC-u8heawZ"
+    },
+    "filtro": {
+      "imagem_filtro": "/svg/Logo-pdm-letras-colorido.svg",
+      "canais": ["Online", "Presencial"],
+      "orgaos": [
+        "SGM - Secretaria do Governo Municipal",
+        "SMUL - Secretaria Municipal de Urbanismo e Licenciamento",
+        "SMADS - Secretaria Municipal de Assistência e Desenvolvimento Social",
+        "SMS - Secretaria Municipal da Saúde",
+        "SME - Secretaria Municipal de Educação",
+        "SEME - Secretaria Municipal de Esportes e Lazer",
+        "SMT - Secretaria Municipal de Transportes",
+        "SMMA - Secretaria Municipal do Meio Ambiente",
+        "SMF - Secretaria Municipal da Fazenda",
+        "SMIT - Secretaria Municipal de Inovação e Tecnologia",
+        "SMDHC - Secretaria Municipal de Direitos Humanos e Cidadania",
+        "SMC - Secretaria Municipal de Cultura",
+        "SMDET - Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
+        "SEHAB - Secretaria Municipal de Habitação",
+        "SMRI - Secretaria Municipal de Relações Internacionais"
+      ],
+      "subprefeituras": ["butantã", "aricanduva/formosa/carrão"],
+      "tema": [
+        "segurança",
+        "saúde e bem-estar",
+        "educação",
+        "proteção social",
+        "cultura, esporte e lazer",
+        "economia criativa",
+        "qualificação profissional, emprego e renda",
+        "tecnologia e inovação",
+        "sustentabilidade econômica",
+        "competitividade global"
+      ]
+    },
+    "results": [
+      {
+        "nome": "Maria da Silva",
+        "canal": "Audiência Regional - Butantã",
+        "subprefeituras": [
+          "Butantã",
+          "Pinheiros",
+          "Casa Verde - Cachoeirinha",
+          "Butantã",
+          "Pinheiros",
+          "Casa Verde - Cachoeirinha",
+          "Itaim Bibi"
+        ],
+        "temas": [
+          "Segurança",
+          "Saúde e Bem-Estar",
+          "Educação",
+          "Cultura, Esporte e Lazer"
+        ],
+        "detalhe": {
+          "tipo": "proposta",
+          "titulo": "TÍTULO DESSA CONRIBUIÇÃO PARA O PROGRAMA DE METAS",
+          "descricao": "Eu comungo de uma grande parte das opiniões que falaram sobre o tão acanhado que é esse plano de metas, que ele não dá conta de uma série de questões. E mais ainda no ponto de vista do atendimento do debate, que vai ser feito com os territórios.",
+          "conteudo": [
+            "Oi, boa tarde. Eu comungo de uma grande parte das opiniões que falaram sobre o tão acanhado que é esse plano de metas, que ele não dá conta de uma série de questões. E mais ainda no ponto de vista do atendimento do debate, que vai ser feito com os territórios. Aqui se coloca que vai se construir tantos equipamentos durante os quatro anos da gestão do prefeito Bruno Covas. Como isso vai se dar num território? Se são dez equipamentos, não são 32 subprefeituras? Como é que vai ser feito então, sorteio? Vai ter quem levar mais votos? De que forma que isso vai ser atendido. Porque não se coloca onde está a necessidade desses equipamentos. Coloca-se equipamento, mas de uma forma muito solta, você não identifique onde é.",
+            "E aqui uma opinião sobre algumas das metas, são tantas as metas que é difícil a gente opinar. Mas por exemplo, na questão de meta já número 1, Transferência de Renda, de onde nós partimos? Qual é o dado que a gente tem, para dizer que um milhão e meio é o suficiente e meio uma pandemia e meio extrema pobreza, que atingiu o Brasil e São Paulo especificamente.",
+            "Trinta UBSs, qual o território dessas trinta UBSs, essa é a meta 3. A meta 7, 6 CAPS é insuficiente, é um número muito insuficiente, em uma realidade onde vivenciamos de pandemia onde têm aumentado muito o número de pessoas em situação de depressão. Então considero que esses 6 CAPS são insuficientes. Outra meta, 40 equipes de saúde da família, quer dizer que hoje nós temos uma cobertura de 70% do território. Para cobrir todo o território na área da saúde com o pessoal da família, a gente precisaria, não de 40, mas mais de 400 equipes de saúde da família, para alcançar assim, 100% do território da cidade."
+          ],
+          "apoios": 15,
+          "comentarios": 7,
+          "respostas": [
+            {
+              "orgao": "SMS - Secretaria Municipal da Saúde",
+              "texto": "Trinta UBSs, qual o território dessas trinta UBSs, essa é a meta 3. A meta 7, 6 CAPS é insuficiente, é um número muito insuficiente, em uma realidade onde vivenciamos de pandemia onde têm aumentado muito o número de pessoas em situação de depressão. Então considero que esses 6 CAPS são insuficientes. Outra meta, 40 equipes de saúde da família, quer dizer que hoje nós temos uma cobertura de 70% do território. Para cobrir todo o território na área da saúde com o pessoal da família, a gente precisaria, não de 40, mas mais de 400 equipes de saúde da família, para alcançar assim, 100% do território da cidade."
+            },
+            {
+              "orgao": "SME - Secretaria Municipal de Educação",
+              "texto": "Essa proposta será avaliada em conjunto com os projetos em andamento..."
+            }
+          ]
+        }
+      },
+      {
+        "nome": "João Pereira",
+        "canal": "Audiência Regional - Ipiranga",
+        "subprefeituras": ["Ipiranga", "Vila Mariana"],
+        "temas": ["Saúde", "Habitação"],
+        "detalhe": {
+          "tipo": "fala_audiencia",
+          "conteudo": [
+            "Oi, boa tarde. Eu comungo de uma grande parte das opiniões que falaram sobre o tão acanhado que é esse plano de metas, que ele não dá conta de uma série de questões. E mais ainda no ponto de vista do atendimento do debate, que vai ser feito com os territórios. Aqui se coloca que vai se construir tantos equipamentos durante os quatro anos da gestão do prefeito Bruno Covas. Como isso vai se dar num território? Se são dez equipamentos, não são 32 subprefeituras? Como é que vai ser feito então, sorteio? Vai ter quem levar mais votos? De que forma que isso vai ser atendido. Porque não se coloca onde está a necessidade desses equipamentos. Coloca-s equipamento, mas de uma forma muito solta, você não identifique onde é.",
+            "E aqui uma opinião sobre algumas das metas, são tantas as metas que é difícil a gente opinar. Mas por exemplo, na questão de meta já número 1, Transferência de Renda, de onde nós partimos? Qual é o dado que a gente tem, para dizer que um milhão e meio é o suficiente e meio uma pandemia e meio extrema pobreza, que atingiu o Brasil e São Paulo especificamente.",
+            "Trinta UBSs, qual o território dessas trinta UBSs, essa é a meta 3. A meta 7, 6 CAPS é insuficiente, é um número muito insuficiente, em uma realidade onde vivenciamos de pandemia onde têm aumentado muito o número de pessoas em situação de depressão. Então considero que esses 6 CAPS são insuficientes. Outra meta, 40 equipes de saúde da família, quer dizer que hoje nós temos uma cobertura de 70% do território. Para cobrir todo o território na área da saúde com o pessoal da família, a gente precisaria, não de 40, mas mais de 400 equipes de saúde da família, para alcançar assim, 100% do território da cidade."
+          ],
+          "respostas": [
+            {
+              "orgao": "SEHAB - Secretaria Municipal de Habitação",
+              "texto": "A demanda por habitação na região do Ipiranga será incluída no diagnóstico para 2026..."
+            }
+          ]
+        }
+      },
+      {
+        "nome": "Ana Oliveira",
+        "canal": "Consulta Online",
+        "subprefeituras": ["Santana", "Tucuruvi"],
+        "temas": ["Educação"],
+        "detalhe": {
+          "tipo": "sugestao_alteracao",
+          "titulo": "Meta 01",
+          "descricao": "<strong>texto que vai fica negrito</strong>Ana sugere que o programa contemple melhorias na infraestrutura escolar...",
+          "conteudo": [
+            "Oi, boa tarde. Eu comungo de uma grande parte das opiniões que falaram sobre o tão acanhado que é esse plano de metas, que ele não dá conta de uma série de questões. E mais ainda no ponto de vista do atendimento do debate, que vai ser feito com os territórios. Aqui se coloca que vai se construir tantos equipamentos durante os quatro anos da gestão do prefeito Bruno Covas. Como isso vai se dar num território? Se são dez equipamentos, não são 32 subprefeituras? Como é que vai ser feito então, sorteio? Vai ter quem levar mais votos? De que forma que isso vai ser atendido. Porque não se coloca onde está a necessidade desses equipamentos. Coloca-s equipamento, mas de uma forma muito solta, você não identifique onde é.",
+            "E aqui uma opinião sobre algumas das metas, são tantas as metas que é difícil a gente opinar. Mas por exemplo, na questão de meta já número 1, Transferência de Renda, de onde nós partimos? Qual é o dado que a gente tem, para dizer que um milhão e meio é o suficiente e meio uma pandemia e meio extrema pobreza, que atingiu o Brasil e São Paulo especificamente.",
+            "Trinta UBSs, qual o território dessas trinta UBSs, essa é a meta 3. A meta 7, 6 CAPS é insuficiente, é um número muito insuficiente, em uma realidade onde vivenciamos de pandemia onde têm aumentado muito o número de pessoas em situação de depressão. Então considero que esses 6 CAPS são insuficientes. Outra meta, 40 equipes de saúde da família, quer dizer que hoje nós temos uma cobertura de 70% do território. Para cobrir todo o território na área da saúde com o pessoal da família, a gente precisaria, não de 40, mas mais de 400 equipes de saúde da família, para alcançar assim, 100% do território da cidade."
+          ],
+          "respostas": [
+            {
+              "orgao": "SME - Secretaria Municipal de Educação",
+              "texto": "A sugestão de alteração foi encaminhada para a equipe técnica responsável."
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

@@ -2,7 +2,7 @@
   "titulo": "Conheça o",
   "bgImage": "/svg/capa-pg-sobre.png",
   "bgImageAlt": "Capa da página Sobre revistas sobre o PDM",
-  "bgImageCarousel":"/svg/bg-fundo-sobre.svg",
+  "bgImageCarousel": "/svg/bg-fundo-sobre.svg",
   "logo": "/svg/Logo-pdm-letras.svg",
   "logoAlt": "Logo do PDM fundo branco",
   "descricao": "Um compromisso público do Prefeito de São Paulo com a gestão eficiente e de qualidade.",
@@ -78,7 +78,7 @@
       "etapa": ""
     }
   ],
-  "indicadores":[
+  "indicadores": [
     {
       "titulo_1": "indicadores",
       "texto_1": "O Programa de Metas está institucionalizado em São Paulo desde 2008, quando foi incorporado à Lei Orgânica do Município (LOM) por meio do Artigo 69-A. O Programa de Metas está institucionalizado em São Paulo desde 2008, quando foi incorporado à Lei Orgânica do Município por meio do Artigo 69-A."
@@ -91,21 +91,22 @@
       ]
     }
   ],
-  "participacaoSocial":[
+  "participacaoSocial": [
     {
-        "titulo" : "participação social",
-        "descricao": "O Programa de Metas está institucionalizado em São Paulo desde 2008, quando foi incorporado à Lei Orgânica do Município (LOM) por meio do Artigo 69-A. O Programa de Metas está institucionalizado em São Paulo desde 2008, quando foi incorporado à Lei Orgânica do Município (LOM) por meio do Artigo 69-A.",
-        "card":[
-            {
-                "titulo": "AUDIÊNCIAS PÚBLICAS",
-                "descricao": "O Programa de Metas está institucionalizado em São Paulo. Metas está institucionalizado.",
-                "link_youtube": "https://www.youtube.com/watch?v=example1"
-                },
-                {
-                "titulo": "DEVOLUTIVAS",
-                "descricao": "O Programa de Metas está institucionalizado em São Paulo. O Programa de Metas está institucionalizado em São Paulo.O Programa de Metas está institucionalizado em São Paulo."
-            }
-        ]
+      "titulo": "participação social",
+      "descricao": "O Programa de Metas está institucionalizado em São Paulo desde 2008, quando foi incorporado à Lei Orgânica do Município (LOM) por meio do Artigo 69-A. O Programa de Metas está institucionalizado em São Paulo desde 2008, quando foi incorporado à Lei Orgânica do Município (LOM) por meio do Artigo 69-A.",
+      "card": [
+        {
+          "titulo": "AUDIÊNCIAS PÚBLICAS",
+          "descricao": "O Programa de Metas está institucionalizado em São Paulo. Metas está institucionalizado.",
+          "link_youtube": "https://www.youtube.com/"
+        },
+        {
+          "titulo": "DEVOLUTIVAS",
+          "descricao": "O Programa de Metas está institucionalizado em São Paulo. O Programa de Metas está institucionalizado em São Paulo.O Programa de Metas está institucionalizado em São Paulo.",
+          "link_devolutivas": "https://devolutiva.pdm.prefeitura.sp.gov.br/"
+        }
+      ]
     }
   ]
 }

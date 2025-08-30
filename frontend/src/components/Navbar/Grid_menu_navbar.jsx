@@ -128,7 +128,7 @@ export default function Grid_menu_navbar({ onClose }) {
           </button>
         </div>
 
-        <div className="slide-top-in-3 w-full z-0">
+        <div onClick={() => goTo("/participacao-social")} className="slide-top-in-3 w-full z-0">
           <button className="text-white h-[12.6rem] w-[19rem] text-start bg-[var(--color-cyan-dark)] p-4 cursor-pointer text-2xl rounded-br-[2rem] flex justify-start items-end">
             <h2 className="w-8 slide-top-in-item-3">participação social</h2>
           </button>

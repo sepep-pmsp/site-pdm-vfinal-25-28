@@ -15,7 +15,7 @@ export default function SectionParticipacaoSocial({ sobre }) {
               <p className="text-xl">{item.descricao}</p>
             </div>
             <div className="flex flex-row flex-nowrap items-center justify-start">
-              <img className="relative right-24 z-10" src={NoteBook} alt="" />
+              <img className="relative right-24 z-10 pointer-events-none" src={NoteBook} alt="" />
               {item.card.map((card, i) => (
                 <div
                   key={i}
@@ -45,17 +45,19 @@ export default function SectionParticipacaoSocial({ sobre }) {
                         href={card.link_youtube}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-7xl shadow-[0px_0px_2px_gray] p-4 rounded-[2.5rem] cursor-pointer"
+                        className="relative z-30 text-7xl shadow-[0px_0px_2px_gray] p-4 rounded-[2.5rem] cursor-pointer"
                       >
                         <i className="fa-brands fa-youtube text-red-600"></i>
                       </a>
                     ) : (
-                      <button
-                        onClick={() => (window.location.href = "/outra-pagina")}
+                      <a
+                        href={card.link_devolutivas}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="w-50 h-full relative bottom-8 shadow-[0px_9px_20px_1px_#00000052] flex items-center justify-center flex-nowrap flex-col transition-all duration-[0.3s] ease-[ease-in-out] text-[var(--color-white)] cursor-pointer bg-[var(--color-cyan-medium)] p-2 py-6  rounded-2xl hover:-translate-y-2.5"
                       >
                         <p className="text-3xl">SAIBA +</p>
-                      </button>
+                      </a>
                     )}
                   </div>
                 </div>
