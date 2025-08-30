@@ -1,0 +1,32 @@
+# Define os provedores de configuração.
+# Estamos usando o provedor Docker (para os labels) e o File (para o dynamic.yml).
+providers:
+  docker:
+    exposedByDefault: false
+  file:
+    # Indica o caminho para o arquivo de configuração dinâmica
+    filename: /etc/traefik/dynamic.yml
+    watch: true
+
+# Define os pontos de entrada (portas) que o Traefik vai expor.
+entryPoints:
+  web:
+    address: ":80"
+    http:
+      redirections:
+        entryPoint:
+          to: websecure
+          scheme: https
+          permanent: true
+  websecure:
+    address: ":443"
+
+# Define os resolvedores de certificado (Let's Encrypt).
+certificatesResolvers:
+  certificadofront:
+    acme:
+      caServer: ${LE_ACME_URL}
+      email: ${LE_EMAIL}
+      storage: /letsencrypt/acme.json
+      httpChallenge:
+        entryPoint: web

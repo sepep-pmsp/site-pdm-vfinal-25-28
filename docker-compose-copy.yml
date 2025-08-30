@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    networks:
+      - traefik
+    environment:
+      - HOST_NAME=${HOST_NAME}
+      - LE_EMAIL=${LE_EMAIL}
+      - LE_ACME_URL=${LE_ACME_URL}
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:5173"
+    networks:
+      - traefik
+    depends_on:
+      - backend
+    environment:
+      - HOST_NAME=${HOST_NAME}
+
+networks:
+  traefik:
+    driver: bridge
