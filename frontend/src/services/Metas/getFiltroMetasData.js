@@ -7,13 +7,14 @@ async function expandirRegioesParaSubprefeituras(filtros) {
   try {
     const filtrosJson = (await import("@/mock/json/filtroEixos.json")).default;
 
-    const subprefeiturasDasRegioes = filtros.regioes.flatMap((regiao) => {
+    // CORREÇÃO: Adiciona uma verificação para garantir que filtros.regioes não seja undefined.
+    const subprefeiturasDasRegioes = filtros.regioes?.flatMap((regiao) => {
       const regiaoObj = filtrosJson.filtros.regioes.find((r) => r.nome === regiao);
       return regiaoObj ? regiaoObj.subprefeituras : [];
-    });
+    }) || [];
 
     const subprefeiturasFinal = Array.from(
-      new Set([...filtros.subprefeituras, ...subprefeiturasDasRegioes])
+      new Set([...(filtros.subprefeituras || []), ...subprefeiturasDasRegioes])
     );
 
     return {
@@ -38,7 +39,7 @@ function extrairSiglaOrgao(nomeCompleto) {
  */
 export async function getFiltroMetasData() {
   if (USE_API) {
-    const response = await fetch(`${API_BASE_URL}/FiltroMetas`);
+    const response = await fetch(`${API_BASE_URL}/filtro_metas/parametros_geral`);
     if (!response.ok) throw new Error("Erro ao carregar dados do Filtro Metas");
     return await response.json();
   } else {
@@ -54,7 +55,7 @@ export async function postFiltrosSelecionados(filtros) {
   const filtrosExpandido = await expandirRegioesParaSubprefeituras(filtros);
 
   if (USE_API) {
-    const response = await fetch(`${API_BASE_URL}/Filtros`, {
+    const response = await fetch(`${API_BASE_URL}/filtro_metas/search`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(filtrosExpandido)

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+// CORREÇÃO: Remova a importação da função que não existe.
 import { getFiltroMetasData, postFiltrosSelecionados } from "@/services/Metas/getFiltroMetasData";
 import FiltroODS from "./FiltroMeta/FiltroODS";
 import FiltroCentro from "./FiltroMeta/FiltroCentro";
 import FiltroEixos from "./FiltroMeta/FiltroEixos";
-import { getMetasData } from "@/services/Metas/getMetasData";
+// CORREÇÃO: A importação de `getMetasData` é desnecessária aqui.
 
 export default function FiltroMeta({ onCardsUpdate }) {
   const [data, setData] = useState(null);
@@ -18,11 +19,13 @@ export default function FiltroMeta({ onCardsUpdate }) {
   });
 
   useEffect(() => {
+    // Busca os dados de filtro da API real
     getFiltroMetasData().then(setData).catch(console.error);
   }, []);
 
   useEffect(() => {
     if (data) {
+      // POST com os filtros selecionados para atualizar os cards
       postFiltrosSelecionados(filtrosSelecionados)
         .then((res) => {
           onCardsUpdate(res);
@@ -33,7 +36,6 @@ export default function FiltroMeta({ onCardsUpdate }) {
 
   if (!data) return <p>Carregando filtros...</p>;
 
-  // Alterna seleção de filtros (genérico para todos os componentes)
   function toggleSelecionado(tipo, valor) {
     setFiltrosSelecionados((prev) => {
       const jaSelecionado = prev[tipo]?.includes(valor);
@@ -57,7 +59,13 @@ export default function FiltroMeta({ onCardsUpdate }) {
       subeixos: []
     };
     setFiltrosSelecionados(estadoInicial);
-    getMetasData().then(onCardsUpdate).catch(console.error);
+
+     // CORREÇÃO: Chama a função que faz o POST com o estado inicial
+    postFiltrosSelecionados(estadoInicial)
+        .then((res) => {
+            onCardsUpdate(res);
+        })
+        .catch(console.error);
   }
 
   return (
@@ -72,9 +80,9 @@ export default function FiltroMeta({ onCardsUpdate }) {
       {/* Painel central */}
       <FiltroCentro
         filtrosSelecionados={filtrosSelecionados}
-        regioes={data.filtros.regioes}
-        orgaos={data.filtros.orgaos}
-        planosVinculados={data.filtros.planos_vinculados}
+        regioes={data.regionalizacao}
+        orgaos={data.orgaos}
+        planosVinculados={data.planos_setoriais}
         toggleSelecionado={toggleSelecionado}
         onLimparFiltros={limparFiltros}
       />
@@ -84,7 +92,6 @@ export default function FiltroMeta({ onCardsUpdate }) {
         eixos={data.eixos}
         filtrosSelecionados={filtrosSelecionados}
         toggleSelecionado={toggleSelecionado}
-        onLimparFiltros={limparFiltros}
       />
     </div>
   );

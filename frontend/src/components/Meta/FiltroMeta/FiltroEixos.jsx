@@ -1,41 +1,38 @@
-import React, { useEffect, useState } from "react";
-import { getFiltroMetasData } from "@/services/Metas/getFiltroMetasData";
+import React, { useState } from "react";
+//import { getFiltroMetasData } from "@/services/Metas/getFiltroMetasData";
 
 export default function FiltroEixos({
+  eixos,
   filtrosSelecionados,
   toggleSelecionado,
 }) {
-  const [data, setData] = useState(null);
   const [eixosAbertos, setEixosAbertos] = useState([]);
+  if (!eixos) {
+    return <p>Carregando eixos...</p>;
+  }
 
-  useEffect(() => {
-    getFiltroMetasData().then(setData).catch(console.error);
-  }, []);
-
-  const toggleEixoAberto = (titulo) => {
-    const isAberto = eixosAbertos.includes(titulo);
+  const toggleEixoAberto = (id) => {
+    const isAberto = eixosAbertos.includes(id);
 
     setEixosAbertos((prev) =>
-      isAberto ? prev.filter((e) => e !== titulo) : [...prev, titulo]
+      isAberto ? prev.filter((e) => e !== id) : [...prev, id]
     );
 
-    if (!isAberto && !filtrosSelecionados.eixos.includes(titulo)) {
-      toggleSelecionado("eixos", titulo);
+    if (!isAberto && !filtrosSelecionados.eixos.includes(id)) {
+      toggleSelecionado("eixos", id);
     }
   };
 
-  if (!data) return <p>Carregando filtros...</p>;
-
   return (
     <div className="h-full flex flex-col items-start w-[19rem] relative bottom-10">
-      {data.eixos.map(({ titulo, cor, subeixos }) => {
-        const isAberto = eixosAbertos.includes(titulo);
+      {eixos.map(({ nome,id, cor, temas }) => {
+        const isAberto = eixosAbertos.includes(id);
 
         return (
-          <div key={titulo}>
+          <div key={id}>
             {/* Botão do eixo */}
             <div
-              onClick={() => toggleEixoAberto(titulo)}
+              onClick={() => toggleEixoAberto(id)}
               className="flex flex-col items-start justify-between flex-nowrap rounded-r-3xl overflow-hidden cursor-pointer transition-all duration-300"
               style={{
                 backgroundColor: cor,
@@ -52,14 +49,14 @@ export default function FiltroEixos({
                       : "rotate-270 text-4xl w-60 relative right-20 top-35"
                   }`}
                 >
-                  <h2 className="w-80 pt-4">{titulo.toUpperCase()}</h2>
+                  <h2 className="w-80 pt-4">{nome.toUpperCase()}</h2>
                 </div>
                 {isAberto && (
                   <button
                     className="text-white absolute left-85"
                     onClick={(e) => {
                       e.stopPropagation();
-                      toggleEixoAberto(titulo);
+                      toggleEixoAberto(id);
                     }}
                   >
                     <i
@@ -73,21 +70,21 @@ export default function FiltroEixos({
               {/* Lista de subeixos */}
               {isAberto && (
                 <div className="mt-2 ml-4 overflow-y-auto overflow-x-hidden scroll-smooth scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-gray-400 no-scrollbar-arrows h-60 w-[20rem]">
-                  {subeixos.map((sub) => (
+                  {temas.map((sub) => (
                     <label
-                      key={sub}
+                      key={sub.id}
                       className="mb-1 text-white text-xl flex flex-row-reverse justify-between items-center"
                       onClick={(e) => e.stopPropagation()}
                     >
                       <input
                         type="checkbox"
                         className="mr-2 bg-white m-0 custom-checkbox"
-                        checked={filtrosSelecionados.subeixos.includes(sub)}
-                        onChange={() => toggleSelecionado("subeixos", sub)}
+                        checked={filtrosSelecionados.subeixos.includes(sub.id)}
+                        onChange={() => toggleSelecionado("subeixos", sub.id)}
                       />
                       <span className="custom-checkbox-eixos"></span>
                       <div className="w-full py-1">
-                        <span className="w-70 capitalize">{sub}</span>
+                        <span className="w-70 capitalize">{sub.nome}</span>
                         <div style={{ backgroundColor: "white", height: "1px", width: "90%" }}></div>
                       </div>
                     </label>

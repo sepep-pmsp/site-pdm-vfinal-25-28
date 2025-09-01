@@ -2,6 +2,7 @@ import React from "react";
 import CustomButton from "@/components/Button/Button";
 
 export default function DocumentPanel({ itens, onClose }) {
+  // `itens` agora é `card.documentos`
   if (!itens || itens.length === 0) return null;
 
   return (
@@ -13,33 +14,21 @@ export default function DocumentPanel({ itens, onClose }) {
       </div>
 
       <div className="space-y-4 pr-1 flex flex-col items-start justify-start gap-8">
+        {/* CORREÇÃO: Mapeia sobre o array 'itens' (que é o 'documentos' da API) */}
         {itens.map((item, idx) => (
           <div key={idx} className="w-full">
-            {item.subitens ? (
-              <>
-                <p className="font-bold mb-1 text-lg">{item.texto}</p>
-                <div className="grid grid-cols-2 gap-x-4 text-lg">
-                  {item.subitens.map((sub, i) => (
-                    <CustomButton
-                      key={i}
-                      type="download"
-                      target={sub.link}
-                      className="text-white underline text-left w-full cursor-pointer"
-                    >
-                      {sub.texto}
-                    </CustomButton>
-                  ))}
-                </div>
-              </>
-            ) : item.link ? (
-              <CustomButton
-                type="download"
-                target={item.link}
-                className="text-white underline text-lg block cursor-pointer"
-              >
-                {item.texto}
-              </CustomButton>
-            ) : null}
+            {/* CORREÇÃO: A API não tem a propriedade 'subitens' */}
+            {/* O bloco de código abaixo é removido porque a estrutura não existe na API real */}
+            {/* item.subitens ? (...) : */}
+            
+            {/* CORREÇÃO: Acessa 'item.nome' e 'item.url' */}
+            <CustomButton
+              type="download"
+              target={item.url} // Usa a propriedade `url` da API
+              className="text-white underline text-lg block cursor-pointer"
+            >
+              {item.nome} {/* Usa a propriedade `nome` da API */}
+            </CustomButton>
           </div>
         ))}
       </div>

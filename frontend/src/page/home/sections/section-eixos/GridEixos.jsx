@@ -148,12 +148,7 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
         {selectedEixo && (
           <div
             className="absolute inset-0 z-10"
-            style={{
-              top: selectedEixo.origin?.y ?? "136rem",
-              left: selectedEixo.origin?.x ?? "22rem",
-              width: selectedEixo.origin?.width ?? "84.2rem",
-              height: selectedEixo.origin?.height ?? "38.5rem"
-            }}
+            
           >
             <CardEixos
               eixo={selectedEixo}
