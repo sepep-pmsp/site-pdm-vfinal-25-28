@@ -3,7 +3,7 @@
         "nome" : "Agenda 2012",
         "descricao" : "Primeiro PDM de São Paulo, elaborado na gestão Gilberto Kassab.",
         "capa" : "capa_2008_2012.svg",
-        "ano_inicio" : 2009,
+        "ano_inicio" : 2008,
         "ano_fim" : 2012,
         "nome_prefeito" : "Gilberto Kassab",
         "documentos" : [
@@ -162,16 +162,7 @@
         "ano_fim" : 2028,
         "nome_prefeito" : "Ricardo Nunes",
         "documentos" : [
-            {
-                "tipo": "relatorio",
-                "nome": "agenda 2012",
-                "url": "https://drive.prefeitura.sp.gov.br/cidade/secretarias/upload/gestao/arquivos/Balanco%20final%20de%20gestao%20-%20Haddad.pdf"
-            },
-            {
-                "tipo": "relatorio",
-                "nome": "relatório final",
-                "url": "https://drive.prefeitura.sp.gov.br/cidade/secretarias/upload/gestao/arquivos/Balanco%20final%20de%20gestao%20-%20Haddad.pdf"
-            }
+
         ]
     }
 ]
