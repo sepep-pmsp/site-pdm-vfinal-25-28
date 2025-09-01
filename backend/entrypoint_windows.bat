@@ -76,5 +76,8 @@ if errorlevel 1 exit /b %errorlevel%
 python manage.py seed_secao_devolutivas
 if errorlevel 1 exit /b %errorlevel%
 
+python manage.py seed_sobre
+if errorlevel 1 exit /b %errorlevel%
+
 echo Iniciando servidor
 python manage.py runserver 0.0.0.0:8000
