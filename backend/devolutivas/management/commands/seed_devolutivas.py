@@ -38,6 +38,18 @@ class Command(BaseCommand):
             if created:
                 self.stdout.write(self.style.SUCCESS(f"Canal '{canal.nome}' criado com sucesso."))
 
+            #converter para None
+            converter = ['titulo', 'resumo']
+            for atributo in converter:
+                if contrib[atributo]=='None' or contrib[atributo]=='':
+                    contrib[atributo]=None
+            
+            #converter para None ints
+            converter_ints=['qtd_apoios', 'qtd_comentarios']
+            for atributo in converter_ints:
+                if contrib[atributo]==0:
+                    contrib[atributo]=None
+
             contrib_obj, created = Contribuicao.objects.get_or_create(
                 id_contribuicao=contrib['id_contribuicao'],
                 id_participe_mais=contrib['id_participe_mais'],

@@ -5,23 +5,23 @@
     "cards" : [
         {
             "pdm_associado" : "PDM 2021/2024",
-            "cor_principal" : "#001F3F",
-            "cor_botao" : "#00AFB9"
+            "cor_principal" : "#272361",
+            "cor_botao" : "#0e7ba8"
         },
                 {
             "pdm_associado" : "PDM 2017/2020",
-            "cor_principal" : "#001F3F",
-            "cor_botao" : "#00AFB9"
+            "cor_principal" : "#272361",
+            "cor_botao" : "#0e7ba8"
         },
                 {
             "pdm_associado" : "PDM 2013/2016",
-            "cor_principal" : "#001F3F",
-            "cor_botao" : "#00AFB9"
+            "cor_principal" : "#272361",
+            "cor_botao" : "#0e7ba8"
         },
                 {
             "pdm_associado" : "PDM 2009/2012",
-            "cor_principal" : "#001F3F",
-            "cor_botao" : "#00AFB9"
+            "cor_principal" : "#272361",
+            "cor_botao" : "#0e7ba8"
         }
     ]
 
