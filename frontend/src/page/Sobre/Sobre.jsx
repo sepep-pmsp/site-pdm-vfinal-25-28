@@ -25,12 +25,13 @@ export default function Sobre() {
           selectedButton={selectedButton}
         />
       </div>
-      <div >
-        <SectionObjetivos sobre={sobre}/>
-        <SectionPlanejamento sobre={sobre}/>
-        <SectionIndicadores sobre={sobre}/>
-        <SectionParticipacaoSocial sobre={sobre}/>
+      <div>
+        <SectionObjetivos sobre={sobre} />
+        <SectionPlanejamento sobre={sobre} />
+        <SectionIndicadores sobre={sobre} />
+        <SectionParticipacaoSocial sobre={sobre} />
       </div>
     </div>
   );
 }
+

@@ -1,7 +1,24 @@
 import React from "react";
 import CarouselPlanejamento from "@/components/CarouselPlanejamento/CarouselPlanejamento";
+import bgImageCarousel from "/svg/bg-fundo-sobre.svg"
 
 export default function SectionPlanejamento({ sobre }) {
+  if (!sobre || !sobre.como_feito) {
+    return null;
+  }
+
+  const { como_feito } = sobre;
+  
+  // 1. Crie o objeto de descrição conforme a estrutura antiga.
+  const descricaoCard = {
+    // Usando a chave 'conteudo' para ser consistente com a nova API
+    // Já que o CarouselPlanejamento espera 'conteudo'
+    conteudo: "Veja o passo a passo para construção do Programa de Metas 2025 - 2028."
+  };
+  
+  // 2. Combine o card de descrição com o array de cards da API.
+  const combinedCards = [descricaoCard, ...como_feito.cards];
+
   return (
     <div className="relative pt-20 mx-24">
       <div className="h-1 w-[100rem] relative left-12 bg-[var(--color-navy)]"></div>
@@ -10,16 +27,17 @@ export default function SectionPlanejamento({ sobre }) {
       </div>
       <div>
         <div className="w-[100rem] flex justify-center items-start relative bottom-25">
-          <p className="px-60 text-4xl text-[var(--color-navy)]">{sobre.tituloPlanejamento}</p>
+          <p className="px-60 text-4xl text-[var(--color-navy)]">{como_feito.texto}</p>
         </div>
-        <section className="relative w-[119rem]  right-24 h-[45rem] overflow-hidden">
+        <section className="relative w-[119rem] right-24 h-[45rem] overflow-hidden">
           <div>
-            <img className="z-[-2]" src={sobre.bgImageCarousel} alt="" />
+            <img className="z-[-2]" src={bgImageCarousel} alt="" />
             <div className="absolute top-0 left-0 w-full h-full bg-[#6ACADB] opacity-40 pointer-events-none z-[-2]"></div>
           </div>
           <div className="absolute inset-0 flex flex-row flex-nowrap justify-evenly items-center z-10">
             <div>
-              <CarouselPlanejamento planejamento={sobre.planejamento} />
+              {/* 3. Passe o array combinado para o carrossel. */}
+              <CarouselPlanejamento como_feito={combinedCards} />
             </div>
           </div>
         </section>

@@ -14,20 +14,14 @@ export default function DocumentPanel({ itens, onClose }) {
       </div>
 
       <div className="space-y-4 pr-1 flex flex-col items-start justify-start gap-8">
-        {/* CORREÇÃO: Mapeia sobre o array 'itens' (que é o 'documentos' da API) */}
         {itens.map((item, idx) => (
           <div key={idx} className="w-full">
-            {/* CORREÇÃO: A API não tem a propriedade 'subitens' */}
-            {/* O bloco de código abaixo é removido porque a estrutura não existe na API real */}
-            {/* item.subitens ? (...) : */}
-            
-            {/* CORREÇÃO: Acessa 'item.nome' e 'item.url' */}
             <CustomButton
               type="download"
-              target={item.url} // Usa a propriedade `url` da API
+              target={item.url}
               className="text-white underline text-lg block cursor-pointer"
             >
-              {item.nome} {/* Usa a propriedade `nome` da API */}
+              {item.nome}
             </CustomButton>
           </div>
         ))}

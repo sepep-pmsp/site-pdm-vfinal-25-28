@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-export default function CarouselPlanejamento({ planejamento }) {
-  const slides = planejamento;
+export default function CarouselPlanejamento({ como_feito }) {
+  const slides = como_feito;
   const [currentIndex, setCurrentIndex] = useState(1);
 
   const prevSlide = () => {
@@ -31,18 +31,21 @@ export default function CarouselPlanejamento({ planejamento }) {
       >
         <i className="fa-solid fa-arrow-right text-lg text-[var(--color-navy)]"></i>
       </button>
+      
       <div className="relative flex justify-center items-center gap-6 h-[30rem] w-full overflow-hidden">
         {slides.map((slide, index) => {
           let position = index - currentIndex;
           if (position < -1) position += slides.length;
           if (position > 1) position -= slides.length;
+          
           let style = {
             transform: "translateX(0) scale(1)",
             opacity: 1,
             zIndex: 10
           };
+          
           if (position === 0) {
-            if (slide.id) {
+            if (slide.numero) {
               style = {
                 transform: "translateX(0) scale(1.1)",
                 opacity: 1,
@@ -77,21 +80,22 @@ export default function CarouselPlanejamento({ planejamento }) {
               color: "#6ACADB"
             };
           } else {
-            style = { opacity: 0, zIndex: 0 };
+            style = { opacity: 0, zIndex: 0, transform: "scale(0.8)" };
           }
+          
           return (
             <div
-              key={slide.id || "mensagem"}
+              key={index}
               className="card absolute transition-all duration-500 ease-in-out shadow-lg flex items-start justify-center flex-col flex-nowrap p-6 w-[30rem] h-[30rem]"
               style={{
                 ...style
               }}
             >
-              {!slide.id ? (
+              {!slide.numero ? (
                 <div className="flex flex-col items-start px-12 h-80 w-[27rem]">
                   <div className="h-0.5 w-full bg-white"></div>
                   <p className="text-3xl text-start pl-8 w-80 pt-2 text-white">
-                    {slide.descricao}
+                    {slide.conteudo}
                   </p>
                 </div>
               ) : (
@@ -105,7 +109,7 @@ export default function CarouselPlanejamento({ planejamento }) {
                     </div>
                     <div>
                       <p className="text-start w-85 text-xl">
-                        {slide.descricao}
+                        {slide.conteudo}
                       </p>
                     </div>
                   </div>
@@ -115,14 +119,14 @@ export default function CarouselPlanejamento({ planejamento }) {
           );
         })}
       </div>
-      {slides[currentIndex]?.etapa?.trim() !== "" && (
+      {slides[currentIndex]?.detalhe?.trim() !== "" && (
         <div className="mt-6">
           <div className="rotate-90 w-8">
             <i className="fa-solid fa-play"></i>
           </div>
           <div className="w-50">
             <h4 className="text-4xl font-bold uppercase text-[var(--color-navy)]">
-              {slides[currentIndex].etapa}
+              {slides[currentIndex].detalhe}
             </h4>
           </div>
         </div>
