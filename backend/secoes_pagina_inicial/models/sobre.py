@@ -82,6 +82,7 @@ class CardComoFeito(models.Model):
     class Meta:
         verbose_name = "Card Como É Feito"
         verbose_name_plural = "Cards Como É Feito"
+        ordering=['numero']
 
 
 class Objetivos(models.Model):
