@@ -5,6 +5,9 @@ from .models import (AboutPDM, ParagrafoAbout, CartaPrefeito, ParagrafoCartaPref
                      Historico, CardHistorico,
                      SecaoTransparencia, CardTransparencia,
                      SecaoRegionalizacao, ParagrafoSecaoRegionalizacao)
+from .models.sobre import (
+    SecaoSobre, Banner, Objetivos, CardComoFeito, ComoFeito, Indicadores, ParticipacaoSocial
+)
 
 from django.core.exceptions import ValidationError
 from django.forms.models import BaseInlineFormSet
@@ -221,6 +224,73 @@ class SecaoRegionalizacaoAdmin(admin.ModelAdmin):
                 self.message_user(
                     request,
                     "Outra seção Regionalização publicada já existe. Ela será despublicada automaticamente.",
+                    level=messages.WARNING
+                )
+                outras_publicadas.update(published=False)
+
+        super().save_model(request, obj, form, change)
+
+class BannerSobreInline(admin.TabularInline):
+    model = Banner
+    extra = 1
+    verbose_name = "Banner da Seção Sobre"
+    verbose_name_plural = "Banners da Seção Sobre"
+
+class ObjetivosSobreInline(admin.TabularInline):
+    model = Objetivos
+    extra = 1
+    verbose_name = "Subseção Objetivos do PDM da Seção Sobre"
+    verbose_name_plural = "Subseção Objetivos do PDM da Seção Sobre"
+
+admin.site.register(CardComoFeito)
+
+class CardComoFeitoSobreInline(admin.TabularInline):
+    model = CardComoFeito
+    extra = 1
+    verbose_name = "Subseção Como é Feito da Seção Sobre"
+    verbose_name_plural = "Subseção de Como é Feito da Seção Sobre"
+
+
+@admin.register(ComoFeito)
+class SubsecaoComoFeitoSobreAdmin(admin.ModelAdmin):
+
+    inlines = [CardComoFeitoSobreInline]
+
+class ComoFeitoSobreInline(admin.TabularInline):
+    model = ComoFeito
+    extra = 1
+    verbose_name = "Subseção Como é Feito da Seção Sobre"
+    verbose_name_plural = "Subseção de Como é Feito da Seção Sobre"
+
+
+class IndicadoresSobreInline(admin.TabularInline):
+    model = Indicadores
+    extra = 1
+    verbose_name = "Subseção Indicadores da Seção Sobre"
+    verbose_name_plural = "Subseção Indicadores da Seção Sobre"
+
+class ParticipacaoSobreInline(admin.TabularInline):
+    model= ParticipacaoSocial
+    extra=1
+    verbose_name="Subseção Participação Social da Seção Sobre"
+    verbose_name_plural="Subseção Participação Social da Seção Sobre"
+
+@admin.register(SecaoSobre)
+class SecaoSobreAdmin(admin.ModelAdmin):
+
+    inlines = [BannerSobreInline, ObjetivosSobreInline, ComoFeitoSobreInline, IndicadoresSobreInline, ParticipacaoSobreInline]
+
+    def save_model(self, request, obj, form, change):
+        if not obj.pk:
+            obj.criado_por = request.user
+        obj.modificado_por = request.user
+
+        if obj.published:
+            outras_publicadas = SecaoSobre.objects.filter(published=True).exclude(pk=obj.pk)
+            if outras_publicadas.exists():
+                self.message_user(
+                    request,
+                    "Outra seção Sobre publicada já existe. Ela será despublicada automaticamente.",
                     level=messages.WARNING
                 )
                 outras_publicadas.update(published=False)

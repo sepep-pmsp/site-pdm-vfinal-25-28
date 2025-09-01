@@ -1,0 +1,59 @@
+{
+    "banner" : {
+        "supertitulo" : "Conheça o",
+        "titulo" : "Programa de Metas 2025/2028",
+        "subtitulo" : "Um compromisso público do Prefeito de São Paulo com a gestão eficiente e de qualidade",
+        "link_pdf" : "https://prefeitura.sp.gov.br/documents/d/prefeitura-de-sao-paulo/pdm_25_28-pdf",
+        "what" : "O Programa de Metas está institucionalizado em São Paulo desde 2008, quando foi incorporado à Lei Orgânica do Município (LOM) por meio do Artigo 69-A. O Programa de Metas está institucionalizado em São Paulo desde 2008, quando foi incorporado à Lei Orgânica do Município (LOM) por meio do Artigo 69-A.",
+        "why" : "Aliás, é uma das obrigações iniciais do Mandatário, uam vez que a versão preliminar do Programa deve ser apresentada durante os primeiros 90 dias de sua gestão. Na verdade, as obrigações do governante eleito começam antes mesmo da posse, visto que o Decreto",
+        "whom" : "De qualquer forma, com a posse do prefeito e dos secretários, abre-se um ciclo de reuniões setoriais em que todas as pastas apresentam à Secretaria Executiva de Entregas Prioritárias os compromissos que pretendem assumir publicamente no Programa de Metas"
+    },
+    "objetivos" : {
+        "transparencia" : "O Porgrama de Metas está institucionalizado em São Paulo",
+        "visao_sistemica" : "O Porgrama de Metas está institucionalizado em São Paulo",
+        "otimizacao" : "O Porgrama de Metas está institucionalizado em São Paulo",
+        "execucao" : "O Porgrama de Metas está institucionalizado em São Paulo"
+    },
+    "como_feito" : {
+        "texto" : "O Programa de Metas está institucionalizado em São Paulo desde 2008, quando foi incorporado à Lei Orgânica do Município (LOM) por meio do Artigo 69-A. O Programa de Metas está institucionalizado em São Paulo desde 2008, quando foi incorporado à Lei Orgânica do Município (LOM) por meio do Artigo 69-A",
+        "cards" : [
+            {
+                "numero" : 1,
+                "titulo" : "Planejamento",
+                "conteudo" : "Apresentação da Versão Inicial do PDM 2025-2028 - 31/mar",
+                "detalhe" : "Antes do início da gestão"
+            },
+            {
+                "numero" : 2,
+                "titulo" : "Planejamento",
+                "conteudo" : "Apresentação da Versão Inicial do PDM 2025-2028 - 31/mar",
+                "detalhe" : "90 primeiros dias da gestão"
+            },
+            {
+                "numero" : 3,
+                "titulo" : "Planejamento",
+                "conteudo" : "Apresentação da Versão Inicial do PDM 2025-2028 - 31/mar",
+                "detalhe" : "Primeiro ano da gestão"
+            },
+                {
+                "numero" : 4,
+                "titulo" : "Planejamento",
+                "conteudo" : "Apresentação da Versão Inicial do PDM 2025-2028 - 31/mar",
+                "detalhe" : "Primeiro ano da gestão"
+            }
+        ]
+    },
+    "indicadores" : {
+        "texto" : "O Programa de Metas está institucionalizado em São Paulo desde 2008, quando foi incorporado à Lei Orgânica do Município (LOM) por meio do Artigo 69-A. O Programa de Metas está institucionalizado em São Paulo desde 2008, quando foi incorporado à Lei Orgânica do Município (LOM) por meio do Artigo 69-A.",
+        "subtitulo" : "Entrega e Resultado",
+        "chamada_subsecao" : "A construção dos indicadores é baseada em entrega e resultado.",
+        "conteudo_subsecao" : "O Programa de Metas está institucionalizado em São Paulo desde 2008, quando foi incorporado à Lei Orgânica do Município (LOM) por meio do Artigo 69-A. O Programa de Metas está institucionalizado em São Paulo desde 2008, quando foi incorporado à Lei Orgânica do Município (LOM) por meio do Artigo 69-A."
+    },
+    "participacao" : {
+        "texto" : "O Programa de Metas está institucionalizado em São Paulo desde 2008, quando foi incorporado à Lei Orgânica do Município (LOM) por meio do Artigo 69-A. O Programa de Metas está institucionalizado em São Paulo desde 2008, quando foi incorporado à Lei Orgânica do Município (LOM) por meio do Artigo 69-A.",
+        "conteudo_audiencias" : "O Programa de Metas está institucionalizado em São Paulo. Metas está institucionalizado",
+        "link_video_audiencias" : "https://www.youtube.com/playlist?list=PLy7hhEiqAY2ulthRvHOu1L0KC-u8heawZ",
+        "conteudo_devolutivas" : "O Programa de Metas está institucionalizado em São Paulo. O Programa de Metas está institucionalizado em São Paulo. O Programa de Metas está institucionalizado em São Paulo."
+    }
+
+}

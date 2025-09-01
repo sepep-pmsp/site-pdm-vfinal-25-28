@@ -6,12 +6,14 @@ from estrutura_pdm.queries.eixos import get_eixos
 from secoes_pagina_inicial.queries.transparencia import get_published_cards_transparencia, get_published_transparencia
 from secoes_pagina_inicial.queries.historico import get_published_historico
 from pdm_api.queries.secoes_pagina_inicial import get_secao_regionalizacao
+from secoes_pagina_inicial.queries.sobre import get_published_secao_sobre
 
 from pdm_api.schemas.secoes_pagina_inicial import AboutPDMSchema, NoticiaSchema
 from pdm_api.schemas.secoes_pagina_inicial import EixoSchema as EixoPaginaInicialSchema
 from pdm_api.schemas.secoes_pagina_inicial import SecaoTransparenciaSchema, CardSecaoTransparenciaSchema
 from pdm_api.schemas.secoes_pagina_inicial import HistoricoSchema, CardHistoricoSchema, DocumentoHistoricoSchema
 from pdm_api.schemas.secoes_pagina_inicial import SecaoRegionalizacaoSchema
+from pdm_api.schemas.secoes_pagina_inicial.sobre import (SecaoSobreSchema, BannerSchema, ObjetivosSchema, ComoFeitoSchema, ComoFeitoCardSchema, IndicadoresSchema, ParticipacaoSchema)      
 
 from typing import List
 
@@ -183,4 +185,74 @@ def regionalizacao_pagina_inicial(request) -> SecaoRegionalizacaoSchema:
     }
 
     return SecaoRegionalizacaoSchema(**regionalizacao_data)
+
+@router.get('/sobre', response=SecaoSobreSchema, tags=['Seções Página Inicial'])
+def sobre_pagina_inicial(request) -> SecaoSobreSchema:
+    """
+    Retrieve the "Sobre" section for the initial page.
+    """
+
+    sobre_obj = get_published_secao_sobre()
+    if not sobre_obj:
+        raise HttpError(404, "Seção 'Sobre' não encontrada")
+
+    banner_obj = sobre_obj.banner.first()
+    banner_parsed = BannerSchema(
+        supertitulo=banner_obj.supertitulo,
+        titulo=banner_obj.titulo,
+        subtitulo=banner_obj.subtitulo,
+        link_pdf=banner_obj.link_pdf,
+        o_que=banner_obj.what,
+        por_que=banner_obj.why,
+        para_quem=banner_obj.whom
+    )
+
+    objetivos_obj = sobre_obj.objetivos.first()
+    objetivos_parsed = ObjetivosSchema(
+        transparencia = objetivos_obj.transparencia,
+        visao_sistemica=objetivos_obj.visao_sistemica,
+        otimizacao=objetivos_obj.otimizacao,
+        execucao=objetivos_obj.execucao
+    )
+
+    como_feito_obj = sobre_obj.como_feito.first()
+    cards_parsed = []
+    for card_obj in como_feito_obj.cards.all():
+        card_parsed = ComoFeitoCardSchema(
+            numero=card_obj.numero_str,
+            titulo=card_obj.titulo,
+            conteudo=card_obj.conteudo,
+            detalhe=card_obj.detalhe
+        )
+
+        cards_parsed.append(card_parsed)
+    como_feito_parsed = ComoFeitoSchema(
+        cards=cards_parsed,
+        texto=como_feito_obj.texto
+    )
+
+    indicadores_obj = sobre_obj.indicadores.first()
+    indicadores_parsed = IndicadoresSchema(
+       texto=indicadores_obj.texto,
+       subtitulo=indicadores_obj.subtitulo,
+       chamada_subsecao=indicadores_obj.chamada_subsecao,
+       conteudo_subsecao=indicadores_obj.conteudo_subsecao
+    )
+
+    participacao_obj = sobre_obj.participacao_social.first()
+
+    participacao_parsed = ParticipacaoSchema(
+        texto=participacao_obj.texto,
+        conteudo_audiencias=participacao_obj.conteudo_audiencias,
+        link_video_audiencias=participacao_obj.link_video_audiencias,
+        conteudo_devolutivas=participacao_obj.conteudo_devolutivas
+    )
+
+    return SecaoSobreSchema(
+        banner=banner_parsed,
+        objetivos=objetivos_parsed,
+        como_feito=como_feito_parsed,
+        indicadores=indicadores_parsed,
+        participacao=participacao_parsed
+    )
 
