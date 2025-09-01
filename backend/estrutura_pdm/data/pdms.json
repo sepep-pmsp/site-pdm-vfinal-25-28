@@ -163,9 +163,14 @@
         "nome_prefeito" : "Ricardo Nunes",
         "documentos" : [
             {
-                "nome" : "Versão Final PdM 2009-2012",
-                "url" : "http://www.prefeitura.sp.gov.br/cidade/secretarias/upload/governo/arquivos/programa_de_metas/2009-2012-Programa_de_Metas-Agenda_2012.pdf",
-                "tipo" : "pdm"
+                "tipo": "relatorio",
+                "nome": "agenda 2012",
+                "url": "https://drive.prefeitura.sp.gov.br/cidade/secretarias/upload/gestao/arquivos/Balanco%20final%20de%20gestao%20-%20Haddad.pdf"
+            },
+            {
+                "tipo": "relatorio",
+                "nome": "relatório final",
+                "url": "https://drive.prefeitura.sp.gov.br/cidade/secretarias/upload/gestao/arquivos/Balanco%20final%20de%20gestao%20-%20Haddad.pdf"
             }
         ]
     }
