@@ -1,8 +1,8 @@
-const USE_API = false;
+const USE_API = true;
 
 export async function getHistoricoData() {
   if (USE_API) {
-    const response = await fetch("https://sua-api.com/api/home/historico");
+    const response = await fetch("https://projetos.codata.prefeitura.sp.gov.br/backend/api/secoes_pagina_inicial/historico");
     if (!response.ok) {
       throw new Error("Erro ao carregar dados do Historico");
     }

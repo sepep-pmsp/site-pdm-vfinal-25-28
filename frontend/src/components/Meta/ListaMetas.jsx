@@ -1,15 +1,27 @@
 import React from "react";
 
 export default function ListaMetas({ metas, onSelectMeta }) {
+  // CORREÇÃO: Verifica se 'metas' é válido antes de tentar usá-lo
+  if (!Array.isArray(metas)) {
+    return (
+      <div className="text-center p-8 text-lg font-semibold text-gray-600">
+        Carregando metas...
+      </div>
+    );
+  }
+  const metasOrdenadas = [...metas].sort(
+    (a, b) => Number(a.listing.numero) - Number(b.listing.numero)
+  );
+
   return (
     <div>
       <div className="flex flex-col flex-nowrap justify-center items-stretch w-[35rem]">
-        {metas.length === 0 ? (
+        {metasOrdenadas.length === 0 ? (
           <div className="text-center p-8 text-lg font-semibold text-gray-600">
             Não houve resultado para os filtros selecionados.
           </div>
         ) : (
-          metas.map((meta) => (
+          metasOrdenadas.map((meta) => (
             <div
               key={meta.id}
               className="cursor-pointer p-6 flex flex-row items-center gap-4 hover:scale-105 transition-transform"
@@ -21,15 +33,14 @@ export default function ListaMetas({ metas, onSelectMeta }) {
                   <span
                     className="text-8xl font-bebas-regular"
                     style={{
-                      color:
-                        meta.botao?.cor_secundaria_eixo || meta.cor_principal_eixo
+                      color: meta.listing.eixo_cor_principal 
                     }}
                   >
-                    {meta.numeroMeta}
+                    {meta.listing.numero}
                   </span>
                   <p
                     className="text-xl leading-snug"
-                    dangerouslySetInnerHTML={{ __html: meta.titulo_eixo }}
+                    dangerouslySetInnerHTML={{ __html: meta.listing.titulo }}
                   />
                 </div>
               </div>

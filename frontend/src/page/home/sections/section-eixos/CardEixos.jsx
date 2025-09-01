@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import CustomButton from "@/components/Button/Button";
 import SafeSVG from "@/components/SafeSVG/SafeSVG";
+import { corrigirUrlImagem } from "@/utils/imageUtils";
+import { useNavigate } from "react-router-dom";
 
 export default function CardEixos({ eixo, onClose }) {
   const animations = {
@@ -14,6 +16,11 @@ export default function CardEixos({ eixo, onClose }) {
   const animationSet = animations[eixo.nome.toLowerCase()] || {
     in: "",
     out: ""
+  };
+
+  const navigate = useNavigate();
+  const goTo = (path) => {
+    navigate(path);
   };
 
   useEffect(() => {
@@ -61,7 +68,12 @@ export default function CardEixos({ eixo, onClose }) {
       className={`p-8 text-white ${
         isExiting ? animationSet.out : animationSet.in
       }`}
-      style={{ backgroundColor: eixo.cor_principal, height: "38.5rem", borderRadius: "3rem", ...style }}
+      style={{
+        backgroundColor: eixo.cor_principal,
+        height: "38.5rem",
+        borderRadius: "3rem",
+        ...style
+      }}
     >
       <button
         onClick={() => setIsExiting(true)}
@@ -73,7 +85,10 @@ export default function CardEixos({ eixo, onClose }) {
       <div className="grid items-center grid-cols-[repeat(2,1fr)] justify-items-stretch p-4">
         <div className="p-4 w-[25rem] flex flex-col gap-4">
           <section>
-            <SafeSVG src={eixo.imagem} className="w-32 h-32" />
+            <SafeSVG
+              src={corrigirUrlImagem(eixo.imagem)}
+              className="w-32 h-32"
+            />
           </section>
           <section className="p-4">
             <ul className="listCard">
@@ -86,6 +101,8 @@ export default function CardEixos({ eixo, onClose }) {
           </section>
           <section>
             <CustomButton
+              onClick={() => goTo("/metas")}
+              target="#/metas"
               type="link"
               style={{ color: eixo.cor_principal }}
               className="buttons_metas bg-[var(--color-white)] h-28 text-3xl uppercase font-family cursor-pointer"

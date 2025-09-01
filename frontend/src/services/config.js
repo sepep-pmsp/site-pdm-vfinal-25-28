@@ -1,2 +1,2 @@
-export const USE_API = false;
-export const API_BASE_URL = "http://localhost:8000/api";
+export const USE_API = true;
+export const API_BASE_URL = "https://projetos.codata.prefeitura.sp.gov.br/backend/api";

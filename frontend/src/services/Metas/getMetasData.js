@@ -35,17 +35,35 @@ function extrairSiglaOrgao(nomeCompleto) {
 
 /**
  * GET padrão (lista inicial)
+ * Simula um GET inicial através de uma chamada POST com corpo vazio.
  */
-export async function getMetasData() {
+export async function getMetasIniciais() {
+  const filtrosVazios = {
+    ods: [],
+    planos_setoriais: [],
+    orgaos: [],
+    eixos: [],
+    temas: [],
+    subprefeituras: [],
+    zonas: [],
+    termo_busca: ""
+  };
+
   if (USE_API) {
-    const response = await fetch(`${API_BASE_URL}/Metas`);
-    if (!response.ok) throw new Error("Erro ao carregar dados das metas");
+    const response = await fetch(`${API_BASE_URL}/filtro_metas/search`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(filtrosVazios)
+    });
+    if (!response.ok) throw new Error("Erro ao buscar metas");
     return await response.json();
   } else {
+    // Retorna todos os dados do mock quando não usar a API
     const data = await import("@/mock/json/metas_card.json");
     return data.default;
   }
 }
+
 
 /**
  * POST com filtros selecionados
@@ -54,7 +72,7 @@ export async function postFiltrosSelecionados(filtros) {
   const filtrosExpandido = await expandirRegioesParaSubprefeituras(filtros);
 
   if (USE_API) {
-    const response = await fetch(`${API_BASE_URL}/Metas`, {
+    const response = await fetch(`${API_BASE_URL}/filtro_metas/search`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(filtrosExpandido)
@@ -68,8 +86,7 @@ export async function postFiltrosSelecionados(filtros) {
     return metas.filter((meta) => {
       const matchODS =
         filtrosExpandido.ods.length > 0
-          ? filtrosExpandido.ods.includes(meta.odsId) ||
-            meta.temaODS?.some((ods) => filtrosExpandido.ods.includes(ods))
+          ? meta.ods.some((ods) => filtrosExpandido.ods.includes(ods))
           : true;
 
       const matchSubprefeituras =

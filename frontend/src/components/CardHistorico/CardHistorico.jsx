@@ -4,21 +4,24 @@ import CardItem from "./CardItem";
 import NextButton from "./NextButton";
 
 export default function CarrosselHistorico() {
-  const [historico, setHistorico] = useState(null);
+  const [historico, setHistorico] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [openedCardId, setOpenedCardId] = useState(null);
 
   useEffect(() => {
-    getHistoricoData().then(setHistorico).catch(console.error);
+    // CORREÇÃO: Acessa a propriedade 'cards' diretamente dos dados da API
+    getHistoricoData()
+      .then((data) => setHistorico(data.cards))
+      .catch(console.error);
   }, []);
 
-  if (!historico) return <div>Carregando...</div>;
+  if (historico.length === 0) return <div>Carregando...</div>;
 
-  const cards = historico.cards;
-  const total = cards.length;
-  const card1 = cards[currentIndex];
-  const card2 = cards[(currentIndex + 1) % total];
+  // CORREÇÃO: 'historico' já é o array de cards, não é necessário 'historico.cards'
+  const total = historico.length;
+  const card1 = historico[currentIndex];
+  const card2 = historico[(currentIndex + 1) % total];
 
   const next = () => {
     if (animating) return;
@@ -51,13 +54,11 @@ export default function CarrosselHistorico() {
       <NextButton onClick={next} />
       <div className="relative left-8 top-4">
         <div className="transform -translate-x-1/2 flex space-x-3">
-          {cards.map((_, index) => (
+          {historico.map((_, index) => (
             <button
               key={index}
               className={`w-4 h-4 rounded-full transition-colors ${
-                index === currentIndex
-                  ? "bg-[var(--color-navy)]"
-                  : "bg-gray-300"
+                index === currentIndex ? "bg-[var(--color-navy)]" : "bg-gray-300"
               }`}
               aria-label={`Go to slide ${index + 1}`}
               onClick={() => {

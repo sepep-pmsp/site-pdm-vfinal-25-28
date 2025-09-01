@@ -1,53 +1,68 @@
-// src/components/FiltroParticipacao/FiltroParticipacao.jsx
 import { useState } from "react";
+import ImgFiltro from "@/assets/svg/Logo-pdm-letras-colorido.svg";
 
 export default function FiltroParticipacao({ filtros, onFiltrar }) {
   const [search, setSearch] = useState("");
-  const [canal, setCanal] = useState("");
-  const [orgao, setOrgao] = useState("");
-  const [subprefeitura, setSubprefeitura] = useState("");
-  const [tema, setTema] = useState("");
+  const [canaisSelecionados, setCanaisSelecionados] = useState([]);
+  const [orgaosSelecionados, setOrgaosSelecionados] = useState([]);
+  const [subprefeiturasSelecionadas, setSubprefeiturasSelecionadas] = useState(
+    []
+  );
+  const [temasSelecionados, setTemasSelecionados] = useState([]);
 
   const [openOrgao, setOpenOrgao] = useState(false);
   const [openSub, setOpenSub] = useState(false);
   const [openTema, setOpenTema] = useState(false);
+  const [openCanal, setOpenCanal] = useState(false);
 
   const {
     canais = [],
     orgaos = [],
     subprefeituras = [],
-    tema: temas = []
+    tema: temas = [],
   } = filtros ?? {};
 
   const aplicar = () => {
-    onFiltrar({ search, canal, orgao, subprefeitura, tema });
+    const filtrosAplicados = {
+      termo_busca: search.trim().toLowerCase(),
+      canais: canaisSelecionados,
+      orgaos: orgaosSelecionados,
+      subprefeituras: subprefeiturasSelecionadas,
+      temas: temasSelecionados
+    };
+    onFiltrar(filtrosAplicados);
   };
 
   const limpar = () => {
     setSearch("");
-    setCanal("");
-    setOrgao("");
-    setSubprefeitura("");
-    setTema("");
+    setCanaisSelecionados([]);
+    setOrgaosSelecionados([]);
+    setSubprefeiturasSelecionadas([]);
+    setTemasSelecionados([]);
   };
 
-  const algumFiltroAtivo =
-    search.trim() !== "" || canal || orgao || subprefeitura || tema;
-
   const toggleSelecionado = (tipo, valor) => {
-    const setState =
-      tipo === "orgao"
-        ? setOrgao
-        : tipo === "subprefeitura"
-        ? setSubprefeitura
-        : setTema;
-
-    const state =
-      tipo === "orgao"
-        ? orgao
-        : tipo === "subprefeitura"
-        ? subprefeitura
-        : tema;
+    let state, setState;
+    switch (tipo) {
+      case "canais":
+        state = canaisSelecionados;
+        setState = setCanaisSelecionados;
+        break;
+      case "orgaos":
+        state = orgaosSelecionados;
+        setState = setOrgaosSelecionados;
+        break;
+      case "subprefeituras":
+        state = subprefeiturasSelecionadas;
+        setState = setSubprefeiturasSelecionadas;
+        break;
+      case "temas":
+        state = temasSelecionados;
+        setState = setTemasSelecionados;
+        break;
+      default:
+        return;
+    }
 
     if (state.includes(valor)) {
       setState(state.filter((item) => item !== valor));
@@ -55,6 +70,14 @@ export default function FiltroParticipacao({ filtros, onFiltrar }) {
       setState([...state, valor]);
     }
   };
+ 
+
+  const algumFiltroAtivo =
+    search.trim() !== "" ||
+    canaisSelecionados.length > 0 ||
+    orgaosSelecionados.length > 0 ||
+    subprefeiturasSelecionadas.length > 0 ||
+    temasSelecionados.length > 0;
 
   const renderDropdownFiltro = (
     tipo,
@@ -65,7 +88,6 @@ export default function FiltroParticipacao({ filtros, onFiltrar }) {
     selecionados
   ) => (
     <div className="w-65 relative">
-      {/* botão dropdown */}
       <button
         onClick={() => setOpen(!open)}
         className="w-full border rounded-xl px-3 py-2 flex justify-between items-center font-semibold cursor-pointer"
@@ -88,9 +110,8 @@ export default function FiltroParticipacao({ filtros, onFiltrar }) {
         </svg>
       </button>
 
-      {/* opções dentro do dropdown */}
       {open && (
-        <div className="absolute mt-1 w-full bg-white border rounded-md shadow-lg p-2 space-y-1 max-h-50 overflow-y-auto">
+        <div className="absolute mt-1 w-full bg-white border rounded-md shadow-lg p-2 space-y-1 max-h-50 overflow-y-auto z-10">
           {lista.length === 0 ? (
             <div className="text-sm text-gray-500 p-2">
               Nenhum item disponível
@@ -124,8 +145,6 @@ export default function FiltroParticipacao({ filtros, onFiltrar }) {
           )}
         </div>
       )}
-
-      {/* opções selecionadas aparecendo embaixo */}
       {selecionados.length > 0 && (
         <div className="mt-2 space-y-1 max-h-40 overflow-y-auto">
           {selecionados.map((item) => (
@@ -160,7 +179,7 @@ export default function FiltroParticipacao({ filtros, onFiltrar }) {
   return (
     <div className="w-[90rem] h-[36rem] z-10 relative left-[17rem] bottom-[10rem] bg-white p-8 rounded-4xl shadow-md">
       <div className="flex flex-row flex-nowrap items-center justify-between mb-8 px-8 py-4">
-        <img src={filtros.imagem_filtro} alt="" />
+        <img src={ImgFiltro} />
         <div className="flex flex-row-reverse justify-around w-[30rem] items-center relative">
           <button
             onClick={aplicar}
@@ -169,7 +188,10 @@ export default function FiltroParticipacao({ filtros, onFiltrar }) {
             pesquisar
           </button>
           {algumFiltroAtivo && (
-            <button onClick={limpar} className="inline-flex items-center px-4 py-2 bg-red-600 transition ease-in-out delay-75 hover:bg-red-700 text-white text-sm font-medium rounded-md hover:-translate-y-1 hover:scale-110 cursor-pointer">
+            <button
+              onClick={limpar}
+              className="inline-flex items-center px-4 py-2 bg-red-600 transition ease-in-out delay-75 hover:bg-red-700 text-white text-sm font-medium rounded-md hover:-translate-y-1 hover:scale-110 cursor-pointer"
+            >
               Limpar
             </button>
           )}
@@ -189,73 +211,37 @@ export default function FiltroParticipacao({ filtros, onFiltrar }) {
       </div>
 
       <div className="flex flex-row justify-evenly items-start md:grid-cols-2 lg:grid-cols-5 gap-4">
-        {/* Canal de participação (fixo com checkbox) */}
-        <div>
-          <div
-            className="rounded-xl mb-2"
-            style={{ border: "1px solid", padding: ".5rem .5rem" }}
-          >
-            <p className="font-bold uppercase">canal de participação</p>
-          </div>
-          {canais.map((c) => (
-            <label key={c} className="flex items-center gap-2 cursor-pointer">
-              <input
-                type="checkbox"
-                name="canal"
-                value={c}
-                checked={canal.includes(c)}
-                onChange={() =>
-                  setCanal((prev) =>
-                    prev.includes(c)
-                      ? prev.filter((x) => x !== c)
-                      : [...prev, c]
-                  )
-                }
-                className="hidden"
-              />
-              <div>
-                <div className="flex flex-row-reverse gap-2 justify-between items-center w-50">
-                  <span
-                    className={`custom-checkbox ${
-                      canal.includes(c) ? "custom-checkbox--selected" : ""
-                    }`}
-                  ></span>
-                  <span className="capitalize roboto-regular">{c}</span>
-                </div>
-                <div
-                  style={{
-                    backgroundColor: "black",
-                    height: "1px",
-                    marginTop: "5px"
-                  }}
-                ></div>
-              </div>
-            </label>
-          ))}
-        </div>
         {renderDropdownFiltro(
-          "orgao",
+          "canais",
+          "Canal de participação",
+          canais,
+          openCanal,
+          setOpenCanal,
+          canaisSelecionados
+        )}
+        {renderDropdownFiltro(
+          "orgaos",
           "Órgão",
           orgaos,
           openOrgao,
           setOpenOrgao,
-          orgao
+          orgaosSelecionados
         )}
         {renderDropdownFiltro(
-          "subprefeitura",
+          "subprefeituras",
           "Subprefeitura",
           subprefeituras,
           openSub,
           setOpenSub,
-          subprefeitura
+          subprefeiturasSelecionadas
         )}
         {renderDropdownFiltro(
-          "tema",
+          "temas",
           "Tema",
           temas,
           openTema,
           setOpenTema,
-          tema
+          temasSelecionados
         )}
       </div>
     </div>

@@ -1,23 +1,13 @@
 import React, { useEffect, useState, useRef } from "react";
 import Agrupar2 from "@/assets/svg/agrupar_2.svg";
-import { getParticipacaoData } from "@/services/Participacao/getParticipacaoData";
 
-export default function Audiencia() {
-  const [audiencia, setAudiencia] = useState(null);
+// CORREÇÃO: Recebe 'audiencia' como uma prop
+export default function Audiencia({ audiencia }) {
   const [showOverlay, setShowOverlay] = useState(true);
   const playerRef = useRef(null);
 
   useEffect(() => {
-    getParticipacaoData()
-      .then((data) => {
-        if (Array.isArray(data) && data.length > 0) {
-          setAudiencia(data[0].audiencia);
-        }
-      })
-      .catch(console.error);
-  }, []);
-  useEffect(() => {
-    if (!audiencia) return
+    if (!audiencia) return;
     if (
       !document.querySelector(
         'script[src="https://www.youtube.com/iframe_api"]'
@@ -39,8 +29,8 @@ export default function Audiencia() {
       });
     };
   }, [audiencia]);
-
   if (!audiencia) return <div>Carregando...</div>;
+
   return (
     <div>
       <img className="relative bottom-[19rem]" src={Agrupar2} alt="" />
@@ -54,6 +44,7 @@ export default function Audiencia() {
       </div>
       <div className="mx-34">
         <div className="gap-24 flex items-center justify-center relative pl-20 bottom-28">
+          {/* O texto do subtítulo e parágrafo poderia vir da API, se houver */}
           <h2 className="text-5xl text-[var(--color-navy)]">
             Veja informações sobre as devolutivas.
           </h2>

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { getMetasData } from "@/services/Metas/getMetasData";
+import { getMetasIniciais } from "@/services/Metas/getMetasData";
 import logo from "@/assets/svg/logo-pdm.svg";
 import CarouselOrcamento from "@/components/CarouselOrcamento/CarouselOrcamento";
 import FiltroMeta from "@/components/Meta/FiltroMeta";
 import ListaMetas from "@/components/Meta/ListaMetas";
 import CardMetas from "@/components/Meta/CardMetas";
+import { postFiltrosSelecionados } from "@/services/Metas/getFiltroMetasData";
 
 export default function Metas() {
   const [metas, setMetas] = useState([]);
@@ -12,16 +13,38 @@ export default function Metas() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    getMetasData()
+    getMetasIniciais()
       .then((data) => {
-        setMetas(data);
+        // CORREÇÃO: Acessa a propriedade `resultados` que contém o array de metas
+        setMetas(data.resultados);
         setLoading(false);
       })
       .catch((err) => {
         console.error(err);
         setLoading(false);
       });
-  }, []);
+  const filtrosIniciais = {
+        ods: [],
+        planos_setoriais: [],
+        orgaos: [],
+        eixos: [],
+        temas: [],
+        subprefeituras: [],
+        zonas: [],
+        termo_busca: ""
+      };
+      
+      postFiltrosSelecionados(filtrosIniciais)
+        .then((res) => {
+          // CORREÇÃO: Acessa a propriedade `metas` da resposta
+          setMetas(res.metas); 
+          setLoading(false);
+        })
+        .catch((err) => {
+          console.error("Erro na busca inicial de metas:", err);
+          setLoading(false);
+        });
+    }, []);
 
   if (loading) return <div>Carregando...</div>;
 
@@ -53,7 +76,7 @@ export default function Metas() {
 
       <div className="flex items-center justify-center flex-row flex-nowrap gap-1 pt-10 h-[90rem]">
         <div className="relative h-full right-35 top-32">
-          <FiltroMeta onCardsUpdate={setMetas} /> {/* ← conexão feita aqui */}
+          <FiltroMeta onCardsUpdate={(res) => setMetas(res.metas)} /> {/* CORREÇÃO: Mapeia o resultado do POST para o array de metas */}
         </div>
 
         <div className="flex w-[35rem] h-[85em] flex-col flex-nowrap justify-start items-center px-0 py-8 shadow-[0px_5px_40px_grey] rounded-3xl relative top-7">

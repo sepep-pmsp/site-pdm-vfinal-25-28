@@ -11,6 +11,10 @@ import Capital_Futuro_colorido from "@/assets/svg/capital_futuro_colorido.svg";
 import Cidade_Empreendedora_colorido from "@/assets/svg/cidade_empreendedora_colorido.svg";
 
 export default function GridEixos({ eixoSelecionadoDoMenu }) {
+  const universoRef = useRef(null);
+  const cidadeRef = useRef(null);
+  const viverRef = useRef(null);
+  const capitalRef = useRef(null);
   const [selectedEixo, setSelectedEixo] = useState(null);
   const [hovered, setHovered] = useState("");
   const [eixosTematicos, setEixosTematicos] = useState([]);
@@ -24,17 +28,37 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
 
   useEffect(() => {
     if (!eixoSelecionadoDoMenu || eixosTematicos.length === 0) return;
-
-    const eixo = eixosTematicos.find((e) =>
+    const eixoEncontrado = eixosTematicos.find((e) =>
       e.nome.toLowerCase().includes(eixoSelecionadoDoMenu.toLowerCase())
     );
 
-    if (eixo) {
-      setSelectedEixo(eixo);
-      sectionRef.current?.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-      });
+    if (eixoEncontrado) {
+      const refs = {
+        universo: universoRef,
+        cidade: cidadeRef,
+        viver: viverRef,
+        capital: capitalRef
+      };
+      const refDoEixo = Object.keys(refs).find((key) =>
+        eixoEncontrado.nome.toLowerCase().includes(key)
+      );
+      const cardElement = refs[refDoEixo]?.current;
+      if (cardElement) {
+        sectionRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+        const rect = cardElement.getBoundingClientRect();
+        setSelectedEixo({
+          ...eixoEncontrado,
+          origin: {
+            x: rect.left,
+            y: rect.top,
+            width: rect.width,
+            height: rect.height
+          }
+        });
+      }
     }
   }, [eixoSelecionadoDoMenu, eixosTematicos]);
 
@@ -67,6 +91,7 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
           className="flex items-center justify-center bg-[var(--color-green)] transition-all duration-[0.3s] ease-in-out card-hover card-hover-green h-70 rounded-tl-[2.5rem] gap-38"
           onMouseEnter={() => setHovered("universo")}
           onMouseLeave={() => setHovered("")}
+          ref={universoRef}
           onClick={(e) => handleClick("universo", e)}
         >
           <img
@@ -86,6 +111,7 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
           className="flex items-center justify-center bg-[var(--color-blue)] card-hover card-hover-blue h-70 rounded-tr-[2.5rem] gap-38"
           onMouseEnter={() => setHovered("cidade")}
           onMouseLeave={() => setHovered("")}
+          ref={cidadeRef}
           onClick={(e) => handleClick("cidade", e)}
         >
           <img
@@ -109,6 +135,7 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
           className="flex items-center justify-center bg-[var(--color-orange-red)] card-hover card-hover-purple h-70 rounded-bl-[2.5rem] gap-38"
           onMouseEnter={() => setHovered("viver")}
           onMouseLeave={() => setHovered("")}
+          ref={viverRef}
           onClick={(e) => handleClick("viver", e)}
         >
           <img
@@ -128,6 +155,7 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
           className="flex items-center justify-center bg-[var(--color-purple-red)] card-hover card-hover-orange h-70 rounded-br-[2.5rem] gap-38"
           onMouseEnter={() => setHovered("capital")}
           onMouseLeave={() => setHovered("")}
+          ref={capitalRef}
           onClick={(e) => handleClick("capital", e)}
         >
           <img
@@ -146,15 +174,7 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
           </p>
         </div>
         {selectedEixo && (
-          <div
-            className="absolute inset-0 z-10"
-            style={{
-              top: selectedEixo.origin?.y ?? "136rem",
-              left: selectedEixo.origin?.x ?? "22rem",
-              width: selectedEixo.origin?.width ?? "84.2rem",
-              height: selectedEixo.origin?.height ?? "38.5rem"
-            }}
-          >
+          <div className="absolute inset-0 z-10">
             <CardEixos
               eixo={selectedEixo}
               onClose={() => setSelectedEixo(null)}

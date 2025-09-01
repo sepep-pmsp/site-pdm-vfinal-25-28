@@ -12,22 +12,16 @@ export default function FiltroCentro({
   const [openOrgao, setOpenOrgao] = useState(false);
   const [openPlanos, setOpenPlanos] = useState(false);
 
-  const subprefeituras = filtrosSelecionados.regioes.length
-    ? regioes
-        .filter((regiao) => filtrosSelecionados.regioes.includes(regiao.nome))
-        .flatMap((r) => r.subprefeituras)
-    : regioes.flatMap((r) => r.subprefeituras);
-
   const selecionarTudo = (tipo, lista) => {
     const allSelected = lista.every((item) =>
-      filtrosSelecionados[tipo].includes(item)
+      filtrosSelecionados[tipo].includes(item.id)
     );
     lista.forEach((item) => {
-      const jaSelecionado = filtrosSelecionados[tipo].includes(item);
+      const jaSelecionado = filtrosSelecionados[tipo].includes(item.id);
       if (allSelected && jaSelecionado) {
-        toggleSelecionado(tipo, item);
+        toggleSelecionado(tipo, item.id);
       } else if (!allSelected && !jaSelecionado) {
-        toggleSelecionado(tipo, item);
+        toggleSelecionado(tipo, item.id);
       }
     });
   };
@@ -74,24 +68,23 @@ export default function FiltroCentro({
           >
             SELECIONAR TUDO
           </button>
-
           {lista.length === 0 ? (
             <div className="text-sm text-white p-2">Nenhum item disponível</div>
           ) : (
             lista.map((option) => (
               <label
-                key={option}
+                key={option.id}
                 className="flex flex-row-reverse items-center justify-between py-1 cursor-pointer"
               >
                 <input
                   type="checkbox"
                   className="form-checkbox h-4 w-4 rounded input-centro-option"
-                  checked={filtrosSelecionados[tipo].includes(option)}
-                  onChange={() => toggleSelecionado(tipo, option)}
+                  checked={filtrosSelecionados[tipo].includes(option.id)}
+                  onChange={() => toggleSelecionado(tipo, option.id)}
                 />
                 <span className="custom-checkbox--selected"></span>
                 <div className="w-40 text-sm">
-                  <span className="capitalize font-bold">{option}</span>
+                  <span className="capitalize font-bold">{option.nome}</span>
                   <div style={{ backgroundColor: "black", height: "1px", width: "15rem", marginTop:"5px" }}></div>
                 </div>
               </label>
@@ -99,29 +92,32 @@ export default function FiltroCentro({
           )}
         </div>
       )}
-
       {filtrosSelecionados[tipo].length > 0 && (
         <div
           className={`mt-2 space-y-1 max-h-70 overflow-y-auto ${selecionadosClass}`}
         >
-          {filtrosSelecionados[tipo].map((item) => (
-            <label
-              key={item}
-              className="flex flex-row-reverse flex-nowrap items-center justify-between w-[90%] border-b pb-1"
-            >
-              <input
-                type="checkbox"
-                className="form-checkbox h-4 w-4 rounded input-centro"
-                checked
-                onChange={() => toggleSelecionado(tipo, item)}
-              />
-              <span className="custom-checkbox"></span>
-              <div className="w-40 text-sm">
-                <span className="capitalize">{item}</span>
-                <div style={{ backgroundColor: "black", height: "1px", width: "15rem", marginTop:"5px" }}></div>
-              </div>
-            </label>
-          ))}
+          {filtrosSelecionados[tipo].map((itemId) => {
+            const itemObj = lista.find(item => item.id === itemId);
+            if (!itemObj) return null;
+            return (
+              <label
+                key={itemObj.id}
+                className="flex flex-row-reverse flex-nowrap items-center justify-between w-[90%] border-b pb-1"
+              >
+                <input
+                  type="checkbox"
+                  className="form-checkbox h-4 w-4 rounded input-centro"
+                  checked
+                  onChange={() => toggleSelecionado(tipo, itemObj.id)}
+                />
+                <span className="custom-checkbox"></span>
+                <div className="w-40 text-sm">
+                  <span className="capitalize">{itemObj.nome}</span>
+                  <div style={{ backgroundColor: "black", height: "1px", width: "15rem", marginTop:"5px" }}></div>
+                </div>
+              </label>
+            );
+          })}
         </div>
       )}
     </div>
@@ -137,28 +133,26 @@ export default function FiltroCentro({
           </p>
           <div className="w-[28rem] h-px bg-black" />
         </span>
-
-        {/* Zonas */}
         <div>
           <p className="text-xl p-2 font-bold">
             Filtre a região e suas subprefeituras correspondentes
           </p>
           <div className="flex items-start justify-center gap-4">
             <div>
-              {regioes.map(({ nome }) => {
+              {regioes.map(({ nome, id }) => {
                 const zonaTemNome = nome.includes("zona");
                 const nomeCurto = zonaTemNome
                   ? nome.replace("zona ", "")
                   : null;
                 return (
-                  <div className="w-40" key={nome}>
+                  <div className="w-40" key={id}>
                     <div className="customCheckBoxHolder">
                       <input
                         className="customCheckBoxInput"
                         id={`cCB1-${nome}`}
                         type="checkbox"
-                        checked={filtrosSelecionados.regioes.includes(nome)}
-                        onChange={() => toggleSelecionado("regioes", nome)}
+                        checked={filtrosSelecionados.regioes.includes(id)}
+                        onChange={() => toggleSelecionado("regioes", id)}
                       />
                       <label
                         className="customCheckBoxWrapper"
@@ -167,7 +161,7 @@ export default function FiltroCentro({
                         <div className="customCheckBox">
                           <div
                             className={`inner border rounded text-xs transition-colors duration-200 capitalize ${filtrosSelecionados.regioes.includes(
-                              nome
+                              id
                             )}`}
                           >
                             {zonaTemNome ? (
@@ -187,21 +181,16 @@ export default function FiltroCentro({
                 );
               })}
             </div>
-
-            {/* Dropdown Subprefeitura */}
             {renderDropdownFiltro(
               "subprefeituras",
               "Subprefeitura",
-              subprefeituras,
+              regioes.flatMap((r) => r.subprefeituras),
               openSub,
               setOpenSub
             )}
           </div>
-
           <div className="w-[28rem] h-px bg-black mt-6" />
         </div>
-
-        {/* Dropdown Órgãos */}
         <div className="mt-3">
           <div className="flex flex-col gap-4 h-75">
             <p className="text-xl p-2 font-bold">
@@ -221,8 +210,6 @@ export default function FiltroCentro({
           </div>
           <div className="w-[28rem] h-px bg-black mt-6" />
         </div>
-
-        {/* Dropdown Planos Vinculados */}
         <div className="mt-3">
           <div className="flex flex-col gap-8 h-80">
             <p className="text-xl p-2 font-bold">
@@ -242,8 +229,6 @@ export default function FiltroCentro({
           </div>
           <div className="w-[28rem] h-px bg-black mt-6" />
         </div>
-
-        {/* Botão limpar */}
         <div className="flex items-center justify-center mt-4">
           <button
             onClick={onLimparFiltros}
