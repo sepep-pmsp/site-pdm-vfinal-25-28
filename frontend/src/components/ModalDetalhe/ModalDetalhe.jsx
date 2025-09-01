@@ -1,3 +1,4 @@
+import React from "react";
 import Like from "@/assets/svg/like.svg";
 import Commit from "@/assets/svg/commit.svg";
 import Agrupar2 from "@/assets/svg/agrupar_2.svg";
@@ -5,22 +6,23 @@ import Modal from "../Modal/Modal";
 
 export default function ModalDetalhe({ selecionado, onClose }) {
   if (!selecionado) return null;
-  if (!selecionado) return null;
 
   const detalhe = selecionado.detalhe || {};
+
   const tipoMap = {
     proposta: "Proposta",
     fala_audiencia: "Fala em\n audiência",
-    sugestao_alteracao: "Sugestão de\n alteração"
+    sugestao_alteracao: "Sugestão de\n alteração",
+    Participe_Mais: "Proposta\n no Participe+",
   };
 
   return (
-    <Modal isOpen={selecionado} onClose={onClose}>
+    <Modal isOpen={!!selecionado} onClose={onClose}>
       <div className="fixed inset-0 bg-black/40 flex justify-center items-center z-50">
         <div className="bg-white rounded-xl w-[90%] h-[80vh] overflow-y-auto">
           <button
             onClick={onClose}
-            className="fixed left-[111rem] top-24 cursor-pointer z-20"
+            className="fixed left-[110rem] top-24 cursor-pointer z-20"
           >
             <i className="fa-solid fa-xmark text-black text-2xl"></i>
           </button>
@@ -89,30 +91,30 @@ export default function ModalDetalhe({ selecionado, onClose }) {
             </h2>
             {detalhe.tipo && (
               <>
-                <div className="relative top-[-5.5rem] left-[76rem] w-80 bg-[var(--color-cyan-dark)] h-28 z-[1] flex items-center justify-center break-all rounded-b-4xl">
+                <div className="relative top-[-5.5rem] left-[72rem] w-[26rem] bg-[var(--color-cyan-dark)] z-[1] flex items-center justify-center break-all rounded-b-4xl h-auto">
                   <p
-                    className="BebasNeue text-6xl text-white"
-                    dangerouslySetInnerHTML={{
+                    className="BebasNeue text-6xl text-white px-8"
+                     dangerouslySetInnerHTML={{
                       __html: (tipoMap[detalhe.tipo] || detalhe.tipo).replace(
                         /\n/g,
                         "<br/>"
-                      )
-                    }}
+                      )}}
                   ></p>
                 </div>
                 <div className=" h-1 w-[90%] relative left-16 bottom-28 bg-[var(--color-navy)]"></div>
               </>
             )}
-            {detalhe.titulo && (
+            {detalhe.titulo && detalhe.titulo !== "None" && (
               <div className="flex items-center justify-start gap-8 relative left-[30rem] bottom-16 w-[60rem]">
                 <div className="bg-[var(--color-cyan-medium)] w-1 h-60"></div>
                 <div className="flex flex-col items-start justify-center gap-4 w-[57rem]">
                   <h2 className="text-4xl font-bold mb-2 text-[var(--color-cyan-medium)]">
                     {detalhe.titulo}
                   </h2>
-                  {detalhe.resumo && (
+                  {(detalhe.resumo || detalhe.descricao) && (
                     <p className="mb-4 text-2xl text-[var(--color-cyan-medium)]">
-                      <strong>Resumo:</strong> {detalhe.descricao}
+                      <strong>Resumo:</strong>{" "}
+                      {detalhe.resumo || detalhe.descricao}
                     </p>
                   )}
                 </div>
@@ -132,16 +134,17 @@ export default function ModalDetalhe({ selecionado, onClose }) {
                 </p>
               )}
             </div>
-            {detalhe.conteudo?.length > 0 && (
-              <div className="flex flex-col gap-4 relative left-[32rem] bottom-0 w-[60rem]">
-                {detalhe.conteudo.map((par, index) => (
-                  <p
-                    key={index}
-                    className="flex items-start justify-start gap-8 w-[60rem] text-xl"
-                  >
-                    {par}
-                  </p>
-                ))}
+            {Array.isArray(detalhe.conteudo) ? (
+              detalhe.conteudo.map((paragrafo, index) => (
+                <div className="flex flex-col gap-4 relative left-[35rem] bottom-0 w-[60rem]">
+                  <p key={index}>{paragrafo}</p>
+                </div>
+              ))
+            ) : (
+              <div className="flex flex-col gap-4 relative left-[35rem] bottom-0 w-[60rem] pb-10">
+                <p className="flex items-start justify-start gap-8 w-[45rem] text-xl">
+                  {detalhe.conteudo}
+                </p>
               </div>
             )}
             {detalhe.respostas?.length > 0 && (
@@ -168,8 +171,8 @@ export default function ModalDetalhe({ selecionado, onClose }) {
                 </ul>
               </>
             )}
+            <img src={Agrupar2} alt="" />
           </div>
-          <img src={Agrupar2} alt="" />
         </div>
       </div>
     </Modal>

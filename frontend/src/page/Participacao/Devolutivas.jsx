@@ -1,35 +1,17 @@
-import React, { useEffect, useState } from "react";
-import { getParticipacaoData } from "@/services/Participacao/getParticipacaoData";
+import React, { useState } from "react";
 import CustomButton from "@/components/Button/Button";
 import ModalParticipacaoSocial from "@/components/ModalParticipacaoSocial/ModalParticipacaoSocial";
+import { corrigirUrlImagem } from "@/utils/imageUtils";
+import SafeSVG from "@/components/SafeSVG/SafeSVG";
 
-export default function Devolutivas() {
-  const [devolutivas, setDevolutivas] = useState(null);
+
+export default function Devolutivas({ devolutivas, apresentacao }) {
   const [showModal, setShowModal] = useState(false);
-  const [apresentacao, setPpresentacao] = useState(null);
 
-  useEffect(() => {
-    getParticipacaoData()
-      .then((data) => {
-        if (Array.isArray(data) && data.length > 0) {
-          setDevolutivas(data[0].devolutivas);
-        }
-      })
-      .catch(console.error);
-  }, []);
+  if (!devolutivas) {
+    return <div>Carregando...</div>;
+  }
 
-  useEffect(() => {
-    getParticipacaoData()
-      .then((data) => {
-        if (Array.isArray(data) && data.length > 0) {
-          setPpresentacao(data[0].apresentacao);
-        }
-      })
-      .catch(console.error);
-  }, []);
-
-
-  if (!devolutivas) return <div>Carregando...</div>;
   return (
     <div className="py-8">
       <div className="bg-[var(--color-cyan-dark)] w-[40rem] h-44 right-[95rem] top-[55.3rem] rotate-[270deg] absolute flex items-center flex-col justify-end p-4 rounded-br-4xl rounded-bl-4xl shadow-[-4px_2px_20px_0px_gray] z-1">
@@ -40,7 +22,7 @@ export default function Devolutivas() {
       <section className="relative w-full overflow-hidden">
         {devolutivas.imagem_fundo && (
           <div>
-            <img src={devolutivas.imagem_fundo} alt="" />
+            <SafeSVG src={corrigirUrlImagem(devolutivas.imagem_fundo)}  />
             <div className="absolute top-0 left-0 w-full h-full bg-[var(--color-Filter-blue)] bg-opacity-40 z-0 pointer-events-none"></div>
           </div>
         )}
