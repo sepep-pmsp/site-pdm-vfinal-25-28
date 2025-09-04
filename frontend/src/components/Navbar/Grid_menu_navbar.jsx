@@ -29,10 +29,10 @@ export default function Grid_menu_navbar({ onClose }) {
           </button>
         </div>
         <div>
-          <button onClick={() => goTo("/historico")} className="slide-top-in text-white w-80 bg-[var(--color-navy)] h-60 flex flex-col items-start justify-end flex-nowrap text-2xl p-4 rounded-bl-[3rem] pb-4 cursor-pointer">
+          <button onClick={() => goTo("/historico")} className="slide-top-in text-white w-80 bg-[var(--color-navy)] h-60 flex flex-col-reverse items-start justify-center flex-nowrap px-6 py-4 text-2xl p-4 rounded-bl-[3rem] pb-4 cursor-pointer">
             <h2 className="z-2 slide-top-in-item">pdms anteriores</h2>
             <img
-              className="absolute w-[16.5rem] left-20 top-[28rem]"
+              className="relative w-[16.5rem] left-8 top-[-0.5rem]"
               src={Vector}
             />
           </button>

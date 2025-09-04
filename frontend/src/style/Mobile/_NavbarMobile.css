@@ -1,0 +1,336 @@
+/* Telas Maiores */
+@media screen and (min-width: 1885px) {
+    .navbar-desktop {
+        display: flex;
+    }
+
+    .navbar-mobile {
+        display: none;
+    }
+}
+
+/* Telas Menores*/
+
+/* Tablet */
+@media screen and (min-width: 427px) and (max-width: 768px) {
+    .navbar-desktop {
+        display: none;
+    }
+
+    .navbar-mobile {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .navbar_mobile {
+        display: flex;
+        align-items: center;
+        width: 55rem;
+        height: 100%;
+    }
+
+    .navbar_grid {
+        height: 33rem;
+        width: 36rem;
+        gap: 1rem;
+    }
+
+    .h2_centro_mobile {
+        top: 1rem;
+        left: 3rem;
+        font-size: 1rem;
+    }
+
+    .mobile-right-in-item-logo {
+        width: 4rem;
+    }
+
+    .mobile-bottom-in,
+    .mobile-top-in-2,
+    .mobile-top-in-3,
+    .mobile-top-in,
+    .mobile-top-in-mobile {
+        width: 10rem;
+        height: 20rem;
+    }
+
+    .mobile-bottom-in,
+    .mobile-top-in {
+        width: 15rem;
+    }
+
+    .btn-mobile-inicio,
+    .btn-mobile-sair {
+        width: 16rem;
+    }
+
+    .mobile-img-in-item {
+        display: none;
+    }
+
+    .navbar-mobile-tablets {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: nowrap;
+        position: relative;
+        right: 6rem;
+        gap: 3rem;
+
+    }
+
+    .div-mobile-tablets-imgs {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 4rem;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .div-mobile-tablets-noimgs {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+
+    .div-mobile-tablets-3itens {
+        position: absolute;
+        left: 37rem;
+        top: 6px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .navbar-desktop {
+        display: none;
+    }
+
+    .navbar-mobile {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .navbar_mobile {
+        display: flex;
+        align-items: center;
+        width: 55rem;
+        height: 100%;
+    }
+
+    .navbar_grid {
+        height: 49rem;
+        width: 49rem;
+        gap: 1rem;
+    }
+
+    .h2_centro_mobile {
+        top: 1rem;
+        left: 3rem;
+        font-size: 1rem;
+    }
+
+    .mobile-right-in-item-logo {
+        width: 4rem;
+    }
+
+    .mobile-bottom-in,
+    .mobile-top-in-2,
+    .mobile-top-in-3,
+    .mobile-top-in,
+    .mobile-top-in-mobile {
+        width: 12rem;
+        height: 27rem;
+    }
+
+    .mobile-top-in {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 3rem;
+    }
+
+    .mobile-bottom-in,
+    .mobile-top-in {
+        width: 18rem;
+    }
+
+    .btn-mobile-inicio,
+    .btn-mobile-sair {
+        width: 18rem;
+    }
+
+    .mobile-img-in-item {
+        display: none;
+    }
+
+    .navbar-mobile-tablets {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: nowrap;
+        position: relative;
+        right: 8rem;
+        gap: 3rem;
+
+    }
+
+    .div-mobile-tablets-imgs {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 8rem;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .div-mobile-tablets-noimgs {
+        display: flex;
+        gap: 8rem;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+
+    .div-mobile-tablets-3itens {
+        position: absolute;
+        left: 50rem;
+        top: 6px;
+    }
+}
+
+/* Celular */
+@media screen and (min-width: 319px) and (max-width: 426px) {
+    .navbar-desktop {
+        display: none;
+    }
+
+    .navbar-mobile {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar_span {
+        font-size: 20px;
+        width: 14rem;
+        display: flex;
+        position: relative;
+        left: 1rem;
+    }
+
+    .btn-menu-navbar {
+        right: 12rem;
+    }
+
+    .navbar_mobile {
+        display: flex;
+        align-items: center;
+        width: 55rem;
+        height: 100%;
+    }
+
+    .navbar_grid {
+        height: 23rem;
+        width: 22rem;
+        gap: 1rem;
+    }
+
+    .h2_centro_mobile {
+        top: 1rem;
+        left: 3rem;
+        font-size: 1rem;
+    }
+
+    .mobile-right-in-item-logo {
+        width: 4rem;
+    }
+
+    .mobile-bottom-in,
+    .mobile-top-in-2,
+    .mobile-top-in-3,
+    .mobile-top-in,
+    .mobile-top-in-mobile {
+        width: 7rem;
+        height: 6rem;
+        word-break: break-all;
+        font-size: 18px;
+    }
+
+    .mobile-top-in {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-left: 3rem;
+        padding: 2px;
+        padding-bottom: 2rem;
+    }
+
+    .mobile-bottom-in,
+    .mobile-top-in {
+        width: 5rem;
+    }
+
+    .btn-mobile-inicio,
+    .btn-mobile-sair {
+        width: 10rem;
+    }
+
+    .mobile-img-in-item {
+        display: none;
+    }
+
+    .navbar-mobile-tablets {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 1rem;
+        position: relative;
+        bottom: -1rem;
+        right: 4rem;
+
+    }
+
+    .div-mobile-tablets-3itens {
+        top: 23rem;
+        left: 15rem;
+    }
+
+    .div-mobile-tablets-imgs {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 1rem;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .div-mobile-tablets-noimgs {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .mobile-top-h2-item {
+        width: 100%;
+    }
+
+    .mobile-top-3 {
+        padding: 8px;
+
+        & .mobile-h2-item {
+            font-size: 18px;
+        }
+    }
+}
