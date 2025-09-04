@@ -5,11 +5,11 @@ import NavBarMobile from "./NavBarMobile";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [animacao, setAnimacao] = useState("");
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 1445);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1269);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 1445);
+      setIsMobile(window.innerWidth < 1269);
     };
 
     handleResize();
