@@ -29,10 +29,10 @@ export default function Grid_menu_navbar({ onClose }) {
           </button>
         </div>
         <div>
-          <button onClick={() => goTo("/historico")} className="slide-top-in text-white w-80 bg-[var(--color-navy)] h-60 flex flex-col items-start justify-end flex-nowrap text-2xl p-4 rounded-bl-[3rem] pb-4 cursor-pointer">
+          <button onClick={() => goTo("/historico")} className="slide-top-in text-white w-80 bg-[var(--color-navy)] h-60 flex flex-col-reverse items-start justify-center flex-nowrap px-6 py-4 text-2xl p-4 rounded-bl-[3rem] pb-4 cursor-pointer">
             <h2 className="z-2 slide-top-in-item">pdms anteriores</h2>
             <img
-              className="absolute w-[16.5rem] left-20 top-[28rem]"
+              className="relative w-[16.5rem] left-8 top-[-0.5rem]"
               src={Vector}
             />
           </button>
@@ -58,7 +58,7 @@ export default function Grid_menu_navbar({ onClose }) {
       {/* Grid Central (coluna central) */}
       <div>
         <div className="w-full h-screen flex items-center justify-center relative">
-          <div className="grid grid-cols-3 grid-rows-3 gap-8 content-center justify-center p-2 w-[75rem] h-[54rem]">
+          <div className="grid grid-cols-3 grid-rows-3 gap-8 content-center justify-center p-2 w-full h-[54rem]">
             <div onClick={() => goToEixo("universo")} className="slide-right-in-img flex items-start justify-start flex-row p-6 col-span-2 row-span-1 bg-[var(--color-green)] cursor-pointer rounded-tl-[2rem]">
               <img
                 className="w-48 slide-right-in-item-img"
