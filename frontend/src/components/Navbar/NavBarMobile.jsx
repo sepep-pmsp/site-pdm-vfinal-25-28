@@ -28,7 +28,7 @@ export default function NavBarMobile({ onClose }) {
             className="mobile-right-in-img flex items-start justify-start flex-row p-6 col-span-2 row-span-1 bg-[var(--color-green)] cursor-pointer rounded-tl-[2rem]"
           >
             <img
-              className="w-48 mobile-right-in-item-img"
+              className="w-48 mobile-right-in-item-img mobile-right-item-img"
               src={Universo_SP}
               alt=""
             />
@@ -39,7 +39,7 @@ export default function NavBarMobile({ onClose }) {
             className="mobile-bottom-in-img flex flex-col justify-start items-end p-6 col-span-1 row-span-2 bg-[var(--color-orange-red)] cursor-pointer rounded-tr-[2rem]"
           >
             <img
-              className="w-48 mobile-bottom-in-item-img"
+              className="w-48 mobile-bottom-in-item-img mobile-bottom-item-img"
               src={Viver_SP}
               alt=""
             />
@@ -50,7 +50,7 @@ export default function NavBarMobile({ onClose }) {
             className="mobile-top-in-img flex items-end justify-start p-6 col-span-1 row-span-2 bg-[var(--color-purple-red)] cursor-pointer rounded-bl-[2rem]"
           >
             <img
-              className="w-48 mobile-top-in-item-img"
+              className="w-48 mobile-top-in-item-img mobile-top-initem-img"
               src={Capital_Futuro}
               alt=""
             />
@@ -63,7 +63,7 @@ export default function NavBarMobile({ onClose }) {
             <button>
               <div>
                 <img
-                  className="w-20 p-4 invert-[1] mobile-right-in-item-logo"
+                  className="w-20 p-4 invert-[1] mobile-right-in-item-logo mobile-right-initem-logo"
                   src={Logo_PDM_fPreto}
                   alt=""
                 />
@@ -82,7 +82,7 @@ export default function NavBarMobile({ onClose }) {
             className="mobile-left-in-img flex justify-end items-end p-6 col-span-2 bg-[var(--color-blue)] cursor-pointer rounded-br-[2rem]"
           >
             <img
-              className="w-48 mobile-left-in-item-img"
+              className="w-48 mobile-left-in-item-img mobile-left-item-img"
               src={Cidade_Empreendedora}
               alt=""
             />
@@ -94,7 +94,7 @@ export default function NavBarMobile({ onClose }) {
         <div className="flex flex-row justify-start flex-nowrap items-start gap-4 navbar-mobile-tablets relative right-44">
           <div className="div-mobile-tablets-imgs flex items-start justify-start gap-8">
             <div onClick={() => goTo("/sobre")}>
-              <button className="mobile-bottom-in text-white w-80 bg-[var(--color-navy)] h-60 flex flex-col items-start justify-start flex-nowrap text-2xl  p-4 rounded-tr-[3rem] cursor-pointer">
+              <button className="mobile-bottom-in text-white w-80 bg-[var(--color-navy)] h-60 flex flex-col items-start justify-start flex-nowrap text-2xl p-4 rounded-tr-[3rem] cursor-pointer">
                 <h2 className="z-2 mobile-bottom-in-item">sobre o pdm</h2>
                 <img
                   className="relative left-6 top-[2.8rem] mobile-img-in-item"
@@ -109,7 +109,7 @@ export default function NavBarMobile({ onClose }) {
               >
                 <h2 className="z-2 mobile-top-in-item">pdms anteriores</h2>
                 <img
-                  className="relative w-[16.5rem] left-8 top-[-0.5rem] mobile-img-in-item"
+                  className="relative w-[16.5rem] left-8 top-[-0.5rem] mobile-img-item"
                   src={Vector}
                 />
               </button>
