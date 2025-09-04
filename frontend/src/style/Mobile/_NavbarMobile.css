@@ -1,5 +1,5 @@
 /* Telas Maiores */
-@media screen and (min-width: 1885px) {
+@media screen and (min-width: 1025px) {
     .navbar-desktop {
         display: flex;
     }
@@ -19,8 +19,20 @@
 
     .navbar-mobile {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         width: 100%;
+    }
+
+    .navbar_span {
+        font-size: 20px;
+        width: 14rem;
+        display: flex;
+        position: relative;
+        left: 1rem;
+    }
+
+    .btn-menu-navbar {
+        right: 12rem;
     }
 
     .navbar_mobile {
@@ -31,8 +43,8 @@
     }
 
     .navbar_grid {
-        height: 33rem;
-        width: 36rem;
+        height: 25rem;
+        width: 100%;
         gap: 1rem;
     }
 
@@ -51,69 +63,113 @@
     .mobile-top-in-3,
     .mobile-top-in,
     .mobile-top-in-mobile {
-        width: 10rem;
-        height: 20rem;
+        width: 25rem;
+        height: 12.2rem;
+        word-break: break-all;
+        font-size: 18px;
     }
 
-    .mobile-bottom-in,
+    .mobile-bottom-in {
+        height: 16rem;
+        width: 20rem;
+    }
+
     .mobile-top-in {
-        width: 15rem;
+        width: 20rem;
+        height: 13rem;
     }
 
     .btn-mobile-inicio,
     .btn-mobile-sair {
-        width: 16rem;
-    }
-
-    .mobile-img-in-item {
-        display: none;
+        width: 20rem;
+        height: 3.5rem;
     }
 
     .navbar-mobile-tablets {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        flex-wrap: nowrap;
-        position: relative;
-        right: 6rem;
-        gap: 3rem;
+        left: -13rem;
+    }
 
+    .div-mobile-tablets-3itens {
+        top: 25rem;
+        left: 22rem;
     }
 
     .div-mobile-tablets-imgs {
         display: flex;
-        flex-direction: row-reverse;
-        gap: 4rem;
+        flex-direction: column;
         align-items: flex-start;
         justify-content: center;
         flex-wrap: nowrap;
+        gap: 1rem;
     }
 
     .div-mobile-tablets-noimgs {
         display: flex;
-        gap: 2rem;
+        gap: 1rem;
         align-items: flex-start;
         justify-content: center;
         flex-wrap: nowrap;
-        flex-direction: row;
+        flex-direction: column;
+        width: 100%;
     }
 
-    .div-mobile-tablets-3itens {
-        position: absolute;
-        left: 37rem;
-        top: 6px;
+    .mobile-top-h2-item {
+        width: 100%;
     }
+
+    .mobile-top-3 {
+        padding: 8px;
+
+        & .mobile-h2-item {
+            font-size: 18px;
+        }
+    }
+
+    .mobile-img-in-item {
+        top: -0.5rem;
+        left: 5.8rem;
+        width: 13rem;
+    }
+
+    .mobile-img-item {
+        top: -1.1rem;
+        left: 5.5rem;
+        width: 13rem;
+    }
+
+    .mobile-right-item-img,
+    .mobile-bottom-item-img,
+    .mobile-top-initem-img,
+    .mobile-right-initem-logo,
+    .mobile-left-item-img {
+        width: 5rem;
+    }
+
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1270px) {
     .navbar-desktop {
         display: none;
     }
 
     .navbar-mobile {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         width: 100%;
+    }
+
+    .navbar_span {
+        font-size: 20px;
+        width: 14rem;
+        display: flex;
+        position: relative;
+        left: 1rem;
+    }
+
+    .btn-menu-navbar {
+        right: 12rem;
     }
 
     .navbar_mobile {
@@ -124,8 +180,8 @@
     }
 
     .navbar_grid {
-        height: 49rem;
-        width: 49rem;
+        height: 35rem;
+        width: 100%;
         gap: 1rem;
     }
 
@@ -144,64 +200,87 @@
     .mobile-top-in-3,
     .mobile-top-in,
     .mobile-top-in-mobile {
-        width: 12rem;
-        height: 27rem;
+        width: 34rem;
+        height: 16rem;
+        word-break: break-all;
+        font-size: 18px;
+    }
+
+    .mobile-bottom-in {
+        height: 23rem;
+        width: 26rem;
     }
 
     .mobile-top-in {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding-left: 3rem;
-    }
-
-    .mobile-bottom-in,
-    .mobile-top-in {
-        width: 18rem;
+        width: 26rem;
+        height: 17rem;
     }
 
     .btn-mobile-inicio,
     .btn-mobile-sair {
-        width: 18rem;
-    }
-
-    .mobile-img-in-item {
-        display: none;
+        width: 26rem;
+        height: 3.5rem;
     }
 
     .navbar-mobile-tablets {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        flex-wrap: nowrap;
-        position: relative;
-        right: 8rem;
-        gap: 3rem;
+        left: 0rem;
+    }
 
+    .div-mobile-tablets-3itens {
+        position: relative;
+        top: 0rem;
+        left: 0rem;
     }
 
     .div-mobile-tablets-imgs {
         display: flex;
-        flex-direction: row-reverse;
-        gap: 8rem;
+        flex-direction: column;
         align-items: flex-start;
         justify-content: center;
         flex-wrap: nowrap;
+        gap: 1rem;
     }
 
     .div-mobile-tablets-noimgs {
         display: flex;
-        gap: 8rem;
+        gap: 1rem;
         align-items: flex-start;
         justify-content: center;
         flex-wrap: nowrap;
-        flex-direction: row;
+        flex-direction: column;
+        width: 100%;
     }
 
-    .div-mobile-tablets-3itens {
-        position: absolute;
-        left: 50rem;
-        top: 6px;
+    .mobile-top-h2-item {
+        width: 100%;
+    }
+
+    .mobile-top-3 {
+        padding: 8px;
+
+        & .mobile-h2-item {
+            font-size: 18px;
+        }
+    }
+
+    .mobile-img-in-item {
+        top: 1.7rem;
+        left: 7.6rem;
+    }
+
+    .mobile-img-item {
+        top: -1.9rem;
+        left: 7.9rem;
+    }
+
+    .mobile-right-item-img,
+    .mobile-bottom-item-img,
+    .mobile-top-initem-img,
+    .mobile-right-initem-logo,
+    .mobile-left-item-img  {
+        width: 8rem;
     }
 }
 
@@ -237,14 +316,14 @@
     }
 
     .navbar_grid {
-        height: 23rem;
-        width: 22rem;
+        height: 20rem;
+        width: 26rem;
         gap: 1rem;
     }
 
     .h2_centro_mobile {
         top: 1rem;
-        left: 3rem;
+        left: 0rem;
         font-size: 1rem;
     }
 
@@ -257,59 +336,50 @@
     .mobile-top-in-3,
     .mobile-top-in,
     .mobile-top-in-mobile {
-        width: 7rem;
-        height: 6rem;
+        width: 12rem;
+        height: 9.7rem;
         word-break: break-all;
         font-size: 18px;
     }
 
-    .mobile-top-in {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding-left: 3rem;
-        padding: 2px;
-        padding-bottom: 2rem;
+    .mobile-right-item-img,
+    .mobile-bottom-item-img,
+    .mobile-top-initem-img,
+    .mobile-right-initem-logo,
+    .mobile-left-item-img  {
+        width: 3rem;
     }
 
     .mobile-bottom-in,
     .mobile-top-in {
-        width: 5rem;
+        width: 10rem;
+        height: 11rem;
     }
 
     .btn-mobile-inicio,
     .btn-mobile-sair {
         width: 10rem;
-    }
-
-    .mobile-img-in-item {
-        display: none;
+        height: 3rem;
     }
 
     .navbar-mobile-tablets {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        flex-wrap: nowrap;
-        gap: 1rem;
-        position: relative;
-        bottom: -1rem;
-        right: 4rem;
-
+        left: -7rem;
     }
 
     .div-mobile-tablets-3itens {
-        top: 23rem;
-        left: 15rem;
+        top: 20rem;
+        left: 12rem;
     }
 
     .div-mobile-tablets-imgs {
         display: flex;
-        flex-direction: row-reverse;
-        gap: 1rem;
+        flex-direction: column;
         align-items: flex-start;
         justify-content: center;
         flex-wrap: nowrap;
+        gap: 1rem;
     }
 
     .div-mobile-tablets-noimgs {
@@ -332,5 +402,15 @@
         & .mobile-h2-item {
             font-size: 18px;
         }
+    }
+
+    .mobile-img-in-item {
+        top: 0rem;
+        left: 1rem;
+    }
+
+    .mobile-img-item {
+        top: -2rem;
+        left: 1rem;
     }
 }
