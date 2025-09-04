@@ -1,0 +1,45 @@
+/* Telas Maiores */
+
+
+
+/* Telas Menores*/
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+    .box-imgs-footer-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 22rem;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 427px) and (max-width: 768px) {
+    .imgs-footer-mobile {
+        display: flex;
+        justify-content: flex-start;
+        gap: 16rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1270px) {
+    .imgs-footer-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 7rem;
+    }
+}
+
+/* Celular */
+@media screen and (min-width: 319px) and (max-width: 426px) {
+    .box-footer-mobile {
+        padding-left: 1rem;
+    }
+
+    .imgs-footer-mobile {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+}
