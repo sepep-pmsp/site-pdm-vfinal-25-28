@@ -6,7 +6,6 @@ export default function Introduction() {
   return (
     <div>
       <section className="relative w-full h-[44rem] overflow-hidden">
-        /* Video de fundo */
         <div>
           <video
             className="absolute top-0 left-0 w-full h-full object-cover z-0"
@@ -16,22 +15,20 @@ export default function Introduction() {
           >
             <source src={video} type="video/mp4" />
           </video>
-          {/* Filtro azul transparente */}
-          <div className="absolute top-0 left-0 w-full h-full bg-[var(--color-Filter-blue)] bg-opacity-40 z-0 pointer-events-none"></div>
         </div>
         {/* Container principal com a logo */}
-        <div className="absolute inset-0 flex flex-row flex-nowrap justify-evenly items-center z-10">
-          <div className="flex items-center bg-opacity-80 rounded-lg p-8">
+        <div className="absolute inset-0 flex flex-row flex-nowrap justify-evenly items-center z-10 introducao-mobile">
+          <div className="flex items-center bg-opacity-80 rounded-lg p-8 intro-mobile-banner-img">
             <img
               src={logo_pdm_fbranco}
               alt="Logo"
-              className="object-contain mr-8"
+              className="object-contain mr-8 introducao-mobile-banner-img"
             />
           </div>
-          <div className="flex items-center bg-opacity-80 rounded-lg p-8">
-            <div className="bg-[var(--color-blue-light)] w-[40rem] h-[44rem] flex items-end justify-center flex-col flex-nowrap gap-16 p-4">
+          <div className="flex items-center bg-opacity-80 rounded-lg p-8 introducao-mobile-banner">
+            <div className="bg-[var(--color-blue-light)] w-[40rem] h-[44rem] flex items-end justify-center flex-col flex-nowrap gap-16 p-4 introducao-mobile-banner-fundo">
               <span className="text-white w-[28rem] text-3xl">
-                <p className="w-60">
+                <p className="w-60 introducao-mobile-p">
                   Um compromisso público do prefeito com a <strong>gestão eficiente <br></br> e de qualidade</strong>.
                 </p>
               </span>
