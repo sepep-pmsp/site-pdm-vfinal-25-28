@@ -1,0 +1,99 @@
+/*Animações do hover do Menu*/
+
+.mobile-top-in-item {
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.mobile-top-in:hover .mobile-top-in-item {
+    transform: translateY(-150px);
+}
+
+/* mobile TOP IN 2 */
+.mobile-top-in-item-2 {
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.mobile-top-in-2:hover .mobile-top-in-item-2 {
+    transform: translateY(-350px);
+}
+
+/* mobile TOP IN 3 */
+.mobile-top-in-item-3 {
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.mobile-top-in-3:hover .mobile-top-in-item-3 {
+    transform: translateY(-90px);
+}
+
+/* mobile RIGHT IN */
+.mobile-right-in-item {
+    transition: transform 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+
+.mobile-right-in:hover .mobile-right-in-item {
+    transform: translateX(100px);
+}
+
+/* mobile RIGHT IN IMG */
+.mobile-right-in-item-img {
+    transition: transform 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+
+.mobile-right-in-img:hover .mobile-right-in-item-img {
+    transform: translateX(290px);
+}
+
+/* mobile BOTTOM IN */
+.mobile-bottom-in-item {
+    transition: transform 0.6s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.mobile-bottom-in:hover .mobile-bottom-in-item {
+    transform: translateY(300px);
+}
+
+/* mobile BOTTOM IN IMG */
+.mobile-bottom-in-item-img {
+    transition: transform 0.6s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+
+.mobile-bottom-in-img:hover .mobile-bottom-in-item-img {
+    transform: translateY(250px);
+}
+
+/* mobile TOP IN IMG */
+.mobile-top-in-item-img {
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.mobile-top-in-img:hover .mobile-top-in-item-img {
+    transform: translateY(-250px);
+}
+
+/* mobile LEFT IN */
+.mobile-left-in-item {
+    transition: transform 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+
+.mobile-left-in:hover .mobile-left-in-item {
+    transform: translateX(-100px);
+}
+
+/* mobile RIGHT IN LOGO */
+.mobile-right-in-item-logo {
+    transition: transform 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+
+.mobile-right-in-logo:hover .mobile-right-in-item-logo {
+    transform: translateX(185px);
+}
+
+/* mobile LEFT IN IMG */
+.mobile-left-in-item-img {
+    transition: transform 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+
+.mobile-left-in-img:hover .mobile-left-in-item-img {
+    transform: translateX(-290px);
+}

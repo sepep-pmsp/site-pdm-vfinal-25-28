@@ -86,7 +86,7 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
       id="eixos"
       className="flex items-center h-[42rem] justify-center pl-36"
     >
-      <div className=" grid grid-cols-[repeat(2,1fr)] items-center h-[40rem] content-center justify-center p-2 w-[85rem] gap-8">
+      <div className=" grid grid-cols-[repeat(2,1fr)] items-center h-[40rem] content-center justify-center p-2 w-[85rem] gap-8 grid-mobile-eixos">
         <div
           className="flex items-center justify-center bg-[var(--color-green)] transition-all duration-[0.3s] ease-in-out card-hover card-hover-green h-70 rounded-tl-[2.5rem] gap-38"
           onMouseEnter={() => setHovered("universo")}

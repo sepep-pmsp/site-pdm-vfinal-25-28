@@ -1,0 +1,367 @@
+/*
+******
+
+    Introdução
+
+******
+ */
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+    .news-mobile {
+        margin: 0 2rem;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 427px) and (max-width: 768px) {
+    .introducao-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: nowrap;
+        padding: 0;
+    }
+
+    .introducao-mobile-banner {
+        padding: 0;
+    }
+
+    .intro-mobile-banner-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .introducao-mobile-banner-img {
+        width: 20rem;
+    }
+
+    .introducao-mobile-banner-fundo {
+        width: 100%;
+        height: 15rem;
+    }
+
+    .news-mobile {
+        margin: 0 1rem;
+
+        & .news-mobile-carousel {
+            right: 7rem;
+        }
+
+        & .news_navbar_text {
+            gap: 8rem;
+        }
+
+        & .news-nabvar-text {
+            gap: 2rem
+        }
+
+        & .texto-carrosel {
+            left: 0;
+        }
+    }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .news-mobile {
+        margin: 0 1rem
+    }
+
+    .introducao-mobile-banner-fundo {
+        width: 30rem;
+
+        & .introducao-mobile-p {
+            position: relative;
+            left: 8rem;
+            text-align: left;
+        }
+    }
+}
+
+/* Celular */
+@media screen and (min-width: 319px) and (max-width: 426px) {
+    .introducao-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: nowrap;
+        padding: 0;
+    }
+
+    .introducao-mobile-banner {
+        padding: 0;
+    }
+
+    .news-mobile {
+        margin: 0 1rem;
+
+        & .news_navbar_text {
+            gap: 2rem;
+        }
+
+        & .news-nabvar-text {
+            gap: 5rem
+        }
+
+        & .texto-carrosel {
+            left: 0;
+        }
+
+        & .news-mobile-carousel {
+            right: 3rem;
+        }
+    }
+
+    .introducao-mobile-banner-fundo {
+        height: 15rem;
+        width: 100%;
+
+        & .introducao-mobile-p {
+            position: relative;
+            left: 9rem;
+        }
+    }
+}
+
+/*
+******
+
+    Sobre
+
+******
+ */
+
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+    .subtext-about-mobile {
+        font-size: 40px;
+    }
+
+    .text-about-mobile {
+        font-size: 25px;
+    }
+
+    .img-matarazzo {
+        font-size: 40px;
+    }
+
+    .box-carta-text-mobile {
+        left: 36rem;
+    }
+
+    .btn-saibaMais-mobile {
+        left: 50rem;
+    }
+
+    .btn-prefeito-mobile{
+        left: 36rem;
+    }
+
+    .box-open-carta-mobile {
+        height: auto;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 427px) and (max-width: 768px) {
+    .about-mobile {
+        margin: 0;
+    }
+
+    .about-mobile-imgs {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .div-about-img-mobile {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .img-matarazzo {
+        width: 100%;
+    }
+
+    .box-about-mobile {
+        width: 37rem;
+        position: relative;
+        bottom: 6rem;
+    }
+
+    .subtext-about-mobile {
+        font-size: 35px;
+
+        & .text-about-mobile {
+            font-size: 23px;
+        }
+    }
+
+    .btn-saibaMais-mobile {
+        left: 19rem;
+        bottom: 7rem;
+        width: 24%;
+    }
+
+    .btn-prefeito-mobile {
+        left: 2rem;
+        bottom: 12rem;
+        width: 24%;
+    }
+
+    .box-carta-text-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        max-height: 191rem;
+        overflow-y: auto;
+    }
+
+    .box-open-carta-mobile {
+        width: 45rem;
+        max-height: 80vh;
+        left: 0rem;
+        overflow-y: auto;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .about-mobile {
+        margin: 0;
+    }
+
+    .about-mobile-imgs {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .div-about-img-mobile {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .img-matarazzo {
+        width: 100%;
+    }
+
+    .box-about-mobile {
+        width: 45rem;
+        position: relative;
+        bottom: 6rem;
+    }
+
+    .subtext-about-mobile {
+        font-size: 35px;
+
+        & .text-about-mobile {
+            font-size: 23px;
+        }
+    }
+
+    .btn-saibaMais-mobile {
+        left: 23rem;
+        bottom: 7rem;
+        width: 20%;
+    }
+
+    .btn-prefeito-mobile {
+        left: 1rem;
+        bottom: 12rem;
+        width: 20%;
+    }
+
+    .box-carta-text-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        max-height: 191rem;
+        overflow-y: auto;
+    }
+
+    .box-open-carta-mobile {
+        width: 61rem;
+        max-height: 80vh;
+        left: 0rem;
+        overflow-y: auto;
+    }
+}
+
+/* Celular */
+@media screen and (min-width: 319px) and (max-width: 426px) {
+    .about-mobile {
+        margin: 0;
+    }
+
+    .about-mobile-imgs {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .div-about-img-mobile {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .img-matarazzo {
+        width: 100%;
+    }
+
+    .box-about-mobile {
+        width: 24rem;
+        position: relative;
+        bottom: 6rem;
+        padding: 1rem .5rem;
+    }
+
+    .subtext-about-mobile {
+        font-size: 35px;
+
+        & .text-about-mobile {
+            font-size: 23px;
+        }
+    }
+
+    .btn-saibaMais-mobile {
+        left: 13rem;
+        bottom: 7rem;
+        width: 30%;
+    }
+
+    .btn-prefeito-mobile {
+        left: 1rem;
+        bottom: 12rem;
+        width: 30%;
+    }
+
+    .box-carta-text-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        max-height: 191rem;
+        overflow-y: auto;
+    }
+
+    .box-open-carta-mobile {
+        width: 24rem;
+        max-height: 80vh;
+        left: -1rem;
+        overflow-y: auto;
+    }
+}

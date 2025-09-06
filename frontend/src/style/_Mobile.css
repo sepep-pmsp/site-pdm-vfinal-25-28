@@ -1,0 +1,5 @@
+@import "./Mobile/_NavbarMobile.css";
+@import "./Mobile/_animationMobile.css";
+@import "./Mobile/_Home.css";
+@import "./Mobile/_Footer.css";
+@import "../page/home/sections/section-eixos/_EixosMobile.css";
