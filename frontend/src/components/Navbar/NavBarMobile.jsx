@@ -21,7 +21,7 @@ export default function NavBarMobile({ onClose }) {
   return (
     <div className="flex flex-col items-center flex-nowrap overflow-y-auto">
       {/* Grid Central (coluna central) */}
-      <div className="w-full flex items-start justify-start flex-nowrap relative navbar-mobile">
+      <div className="w-full flex items-start justify-start flex-nowrap relative navbar-mobile overflow-y-auto">
         <div className="grid grid-cols-3 grid-rows-3 gap-4 content-center justify-center p-2 h-[40rem] w-[66rem] navbar_grid">
           <div
             onClick={() => goToEixo("universo")}
