@@ -20,7 +20,7 @@ export default function About() {
   if (!about) return <div>Carregando...</div>;
 
   return (
-    <div className="my-34 relative">
+    <div className="my-34 relative about-mobile">
       <section>
         <div>
           <div className="my-8">
@@ -30,18 +30,18 @@ export default function About() {
             <div className="linha"></div>
           </div>
 
-          <div className="my-4 flex items-center flex-nowrap relative top-8">
-            <div className="flex justify-end items-center">
-              <img className="w-[85%]" src={Matarazzo} alt="" />
+          <div className="my-4 flex items-center flex-nowrap relative top-8 about-mobile-imgs">
+            <div className="flex justify-end items-center div-about-img-mobile">
+              <img className="w-[85%] img-matarazzo" src={Matarazzo} alt="" />
             </div>
-            <div className="bg-[color:var(--color-navy)] h-[35rem] w-[45rem] py-4 px-10 rounded-tr-3xl rounded-br-3xl flex items-start flex-col justify-center gap-8">
-              <h3 className="text-white text-6xl">{about.subtitulo}</h3>
-              <p className="text-white text-3xl roboto-regular">{about.paragrafo}</p>
+            <div className="bg-[color:var(--color-navy)] h-[35rem] w-[45rem] py-4 px-10 rounded-tr-3xl rounded-br-3xl flex items-start flex-col justify-center gap-8 box-about-mobile">
+              <h3 className="text-white text-6xl subtext-about-mobile">{about.subtitulo}</h3>
+              <p className="text-white text-3xl roboto-regular text-about-mobile">{about.paragrafo}</p>
             </div>
           </div>
 
           {/* Botão Saiba+ */}
-          <div className="w-48 relative h-20 left-[75rem] bottom-[2.5rem]">
+          <div className="w-48 relative h-20 left-[75rem] bottom-[2.5rem] btn-saibaMais-mobile">
             <CustomButton
               type="link"
               className="all_buttons uppercase"
@@ -52,7 +52,7 @@ export default function About() {
           </div>
 
           {/* Botão que abre modal */}
-          <div className="w-48 relative h-20 left-[57rem] bottom-[7.5rem]">
+          <div className="w-48 relative h-20 left-[57rem] bottom-[7.5rem] btn-prefeito-mobile">
             <CustomButton
               type="modal"
               onClick={() => setShowModal(true)}

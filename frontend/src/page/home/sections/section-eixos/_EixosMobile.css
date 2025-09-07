@@ -1,0 +1,154 @@
+/*
+******
+*
+*
+* Eixos Mobile
+*
+*
+******
+*/
+.card-eixos {
+    position: absolute;
+    transition: all 0.8s ease;
+    border-radius: 3rem;
+    /* estilos default (desktop grande) */
+    left: 22rem;
+    top: 136rem;
+    width: 84.2rem;
+    height: 38.5rem;
+}
+
+/*Telas Menores*/
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+    .grid-mobile-eixos {
+        width: 70rem;
+
+        & img {
+            right: 4rem;
+        }
+
+        .text-hover-green {
+            top: 142rem;
+            left: 38rem;
+        }
+
+        .text-hover-blue {
+            top: 142rem;
+            left: 70rem;
+        }
+
+        .text-hover-orange {
+            top: 161rem;
+            left: 37.5rem;
+        }
+
+        .text-hover-purple {
+            top: 161rem;
+            left: 69.5rem;
+        }
+
+        .card-eixos {
+            height: 37.5rem;
+            border-radius: 3rem;
+            position: absolute;
+            left: 12rem;
+            top: 141rem;
+            width: 74.2rem
+        }
+    }
+}
+
+/*Tablet*/
+@media screen and (min-width: 427px) and (max-width: 768px) {
+    .header-eixos-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        margin: 1rem;
+        padding: 1rem 5rem;
+        gap: 3rem;
+    }
+
+    .eixos-mobile-header {
+        background-color: white;
+        transform: rotate(90deg);
+        position: relative;
+        top: 0;
+        left: 0;
+        box-shadow: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+    .eixos-mobile-header-text{
+        color: black;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .header-eixos-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        margin: 1rem;
+        padding: 1rem 5rem;
+        gap: 3rem;
+    }
+
+    .eixos-mobile-header {
+        background-color: white;
+        transform: rotate(90deg);
+        position: relative;
+        top: 0;
+        left: 0;
+        box-shadow: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+    .eixos-mobile-header-text{
+        color: black;
+    }
+}
+
+/*Celulares*/
+@media screen and (min-width: 319px) and (max-width: 426px) {
+    .header-eixos-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        margin: 1rem;
+        padding: 1rem 5rem;
+        gap: 3rem;
+    }
+
+    .eixos-mobile-header {
+        background-color: white;
+        transform: rotate(90deg);
+        position: relative;
+        top: 0;
+        left: 0;
+        box-shadow: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+    .eixos-mobile-header-text{
+        color: black;
+    }
+}
