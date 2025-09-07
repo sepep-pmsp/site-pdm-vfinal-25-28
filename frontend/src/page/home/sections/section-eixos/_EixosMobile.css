@@ -11,7 +11,6 @@
     position: absolute;
     transition: all 0.8s ease;
     border-radius: 3rem;
-    /* estilos default (desktop grande) */
     left: 22rem;
     top: 136rem;
     width: 84.2rem;
@@ -19,7 +18,7 @@
 }
 
 /*Telas Menores*/
-@media screen and (min-width: 768px) and (max-width: 1440px) {
+@media screen and (min-width: 1439px) {
     .grid-mobile-eixos {
         width: 70rem;
 
@@ -58,39 +57,104 @@
     }
 }
 
-/*Tablet*/
-@media screen and (min-width: 427px) and (max-width: 768px) {
-    .header-eixos-mobile {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: nowrap;
-        margin: 1rem;
-        padding: 1rem 5rem;
-        gap: 3rem;
-    }
+@media screen and (min-width: 1279px) and (max-width: 1438px) {
+    .grid-mobile-eixos {
+        width: 70rem;
 
-    .eixos-mobile-header {
-        background-color: white;
-        transform: rotate(90deg);
-        position: relative;
-        top: 0;
-        left: 0;
-        box-shadow: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: nowrap;
-        flex-direction: column;
-        padding: 1rem 0;
-    }
-    .eixos-mobile-header-text{
-        color: black;
+        & img {
+            right: 4rem;
+        }
+
+        .text-hover-green {
+            top: 142rem;
+            left: 34rem;
+        }
+
+        .text-hover-blue {
+            top: 142rem;
+            left: 66rem;
+        }
+
+        .text-hover-orange {
+            top: 161rem;
+            left: 32.5rem;
+        }
+
+        .text-hover-purple {
+            top: 161rem;
+            left: 65.5rem;
+        }
+
+        .card-eixos {
+            height: 37.5rem;
+            border-radius: 3rem;
+            position: absolute;
+            left: 12rem;
+            top: 141rem;
+            width: 74.2rem
+        }
+
+        .eixos-mobile-header {
+            height: 7rem;
+            right: 24rem;
+        }
+
+        .card-eixos {
+            height: 37.5rem;
+            border-radius: 3rem;
+            position: absolute;
+            left: 10rem;
+            top: 138rem;
+            width: 69.2rem;
+        }
+
     }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+/*Tablet*/
+@media screen and (min-width: 427px) and (max-width: 769px) {
+    .grid-mobile-eixos {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        width: 45rem;
+        height: 50rem;
+        position: relative;
+        right: 4rem;
+    }
+
+    #eixos {
+        height: 100%;
+    }
+
+    .card-eixos {
+        position: absolute;
+        transition: all 0.8s ease;
+        border-radius: 3rem;
+        left: -4rem;
+        top: -5rem;
+        width: 51.2rem;
+        height: 56.5rem;
+    }
+
+    .conteudo-eixos {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: nowrap;
+        padding: 0.5rem 1rem;
+        gap: 3rem;
+    }
+
+    .buttons-eixos {
+        position: absolute;
+        left: 30rem;
+        top: 16rem;
+        width: 68rem;
+    }
+
     .header-eixos-mobile {
         display: flex;
         flex-direction: column;
@@ -116,8 +180,113 @@
         flex-direction: column;
         padding: 1rem 0;
     }
-    .eixos-mobile-header-text{
+
+    .eixos-mobile-header-text {
         color: black;
+    }
+
+    .section-eixos-texts-mobile {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 2rem;
+        width: 39rem;
+        padding: 0;
+    }
+
+    .eixos-texts-mobile {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 770px) and (max-width: 1025px) {
+    .grid-mobile-eixos {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        width: 45rem;
+        height: 50rem;
+        position: relative;
+        right: 4rem;
+    }
+
+    #eixos {
+        height: 100%;
+    }
+
+    .card-eixos {
+        position: absolute;
+        transition: all 0.8s ease;
+        border-radius: 3rem;
+        left: -4rem;
+        top: -5rem;
+        width: 51.2rem;
+        height: 56.5rem;
+    }
+
+    .conteudo-eixos {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: nowrap;
+        padding: 0.5rem 1rem;
+        gap: 3rem;
+    }
+
+    .buttons-eixos {
+        position: absolute;
+        left: 30rem;
+        top: 16rem;
+        width: 68rem;
+    }
+
+    .header-eixos-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        margin: 1rem;
+        padding: 1rem 5rem;
+        gap: 3rem;
+    }
+
+    .eixos-mobile-header {
+        background-color: white;
+        transform: rotate(90deg);
+        position: relative;
+        top: 0;
+        left: 0;
+        box-shadow: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    .eixos-mobile-header-text {
+        color: black;
+    }
+
+    .section-eixos-texts-mobile {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 2rem;
+        width: 39rem;
+        padding: 0;
+    }
+
+    .eixos-texts-mobile {
+        width: 100%;
     }
 }
 
@@ -148,7 +317,113 @@
         flex-direction: column;
         padding: 1rem 0;
     }
-    .eixos-mobile-header-text{
+
+    .eixos-mobile-header-text {
         color: black;
+    }
+
+    .grid-mobile-eixos {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        width: 22rem;
+        height: 50rem;
+        position: relative;
+        right: 5rem;
+    }
+
+    .w-60 {
+        position: relative;
+        left: 0rem;
+    }
+
+    #eixos {
+        height: 100%;
+    }
+
+    .card-eixos {
+        position: absolute;
+        transition: all 0.8s ease;
+        border-radius: 3rem rem;
+        left: 0rem;
+        top: 0rem;
+        width: 23.2rem;
+        height: 51.5rem;
+    }
+
+    .eixos-textos-p-mobile {
+        overflow-y: auto;
+        max-height: 20rem;
+        padding-left: 1.5rem;
+    }
+
+    .conteudo-eixos {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: nowrap;
+        padding: 0.5rem 1rem;
+        gap: 3rem;
+    }
+
+    .buttons-eixos {
+        position: absolute;
+        left: 30rem;
+        top: 16rem;
+        width: 68rem;
+    }
+
+    .header-eixos-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        margin: 1rem;
+        padding: 1rem 5rem;
+        gap: 3rem;
+    }
+
+    .eixos-mobile-header {
+        background-color: white;
+        transform: rotate(90deg);
+        position: relative;
+        top: 0;
+        left: 0;
+        box-shadow: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    .eixos-mobile-header-text {
+        color: black;
+    }
+
+    .section-eixos-texts-mobile {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        gap: 2rem;
+        width: 14rem;
+        padding: 0;
+        position: relative;
+        right: 4rem;
+    }
+
+    .eixos-texts-mobile {
+        width: 100%;
+    }
+
+    .eixos-text-p-mobile {
+        width: 15rem;
+
     }
 }

@@ -97,7 +97,7 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
           <img
             src={hovered === "universo" ? Universo_SP_colorido : Universo_SP}
             alt=""
-            className="relative right-40"
+            className="relative right-40 w-60"
           />
           <p className="w-38 text-3xl uppercase text-white text-hover-green absolute left-[52rem] top-[138rem]">
             {
@@ -121,7 +121,7 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
                 : Cidade_Empreendedora
             }
             alt=""
-            className="relative right-31"
+            className="relative right-31 w-60"
           />
           <p className="w-45 text-3xl uppercase text-white text-hover-blue absolute left-[92rem] top-[138rem]">
             {
@@ -141,7 +141,7 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
           <img
             src={hovered === "viver" ? Viver_SP_colorido : Viver_SP}
             alt=""
-            className="relative right-40"
+            className="relative right-40 w-60"
           />
           <p className="w-40 text-3xl uppercase text-white text-hover-orange absolute left-[51rem] top-[158rem]">
             {
@@ -163,7 +163,7 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
               hovered === "capital" ? Capital_Futuro_colorido : Capital_Futuro
             }
             alt=""
-            className="relative right-35"
+            className="relative right-35 w-60"
           />
           <p className="w-38 text-3xl uppercase text-white absolute left-[92rem] top-[158rem] text-hover-purple ">
             {
