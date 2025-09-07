@@ -8,10 +8,10 @@ export default function Pdms() {
     navigate(path);
   };
   return (
-    <div className="py-12">
+    <div className="py-12 more_pdms_mobile">
       <section>
-        <div className="flex items-center justify-center flex-row flex-nowrap gap-28">
-          <div className="flex flex-row justify-center gap-4">
+        <div className="flex items-center justify-center flex-row flex-nowrap gap-28 mobile-pdms">
+          <div className="flex flex-row justify-center gap-4 texts-mobile-pdms">
             <p className="text-2xl uppercase text-[var(--color-navy)]">
               e mais:{" "}
             </p>
