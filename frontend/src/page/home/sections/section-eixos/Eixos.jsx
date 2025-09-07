@@ -11,11 +11,11 @@ export default function Eixos() {
         <h1 className="text-white text-7xl px-6 eixos-mobile-header-text">eixos estratégicos</h1>
       </div>
       <section className="my-34">
-        <div className="gap-24 flex items-center justify-center pl-28 relative bottom-12">
-          <h2 className="text-5xl text-[var(--color-navy)] w-60">
+        <div className="gap-24 flex items-center justify-center pl-28 relative bottom-12 section-eixos-texts-mobile">
+          <h2 className="text-5xl text-[var(--color-navy)] w-60 eixos-texts-mobile">
             a estrutura do programa de metas
           </h2>
-          <p className="text-3xl text-[var(--color-navy)] w-[60rem]">
+          <p className="text-3xl text-[var(--color-navy)] w-[60rem] eixos-text-p-mobile">
             Os compromissos do PdM 2025-2028 estão agrupados em quatro eixos
             estratégicos que facilitam a compreensão do impacto de cada política
             pública na vida da cidade.

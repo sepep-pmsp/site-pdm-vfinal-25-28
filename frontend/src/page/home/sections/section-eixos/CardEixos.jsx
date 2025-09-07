@@ -42,7 +42,7 @@ export default function CardEixos({ eixo, onClose }) {
         <i className="fa-solid fa-xmark text-6xl"></i>
       </button>
 
-      <div className="grid items-center grid-cols-[repeat(2,1fr)] justify-items-stretch p-4">
+      <div className="grid items-center grid-cols-[repeat(2,1fr)] justify-items-stretch p-4 conteudo-eixos">
         <div className="p-4 w-[25rem] flex flex-col gap-4">
           <section>
             <SafeSVG src={corrigirUrlImagem(eixo.imagem)} className="w-32 h-32" />
@@ -56,7 +56,7 @@ export default function CardEixos({ eixo, onClose }) {
               ))}
             </ul>
           </section>
-          <section>
+          <section className="buttons-eixos ">
             <CustomButton
               onClick={() => goTo("/metas")}
               type="link"
@@ -68,7 +68,7 @@ export default function CardEixos({ eixo, onClose }) {
           </section>
         </div>
         <div>
-          <section className="flex flex-col items-center relative right-8">
+          <section className="flex flex-col items-center relative right-8 eixos-textos-p-mobile">
             {eixo.texto.map((paragrafo, i) => (
               <p className="py-2" key={i}>
                 {paragrafo}

@@ -13,8 +13,8 @@ export default function All_section() {
       <NewsCarousel />
       <About />
       <Eixos />
-      {/*<More_Info />
-      <Pdms /> */}
+      <More_Info />
+      <Pdms /> 
     </>
   );
 }

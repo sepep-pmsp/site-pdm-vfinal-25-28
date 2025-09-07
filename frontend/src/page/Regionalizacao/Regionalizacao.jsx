@@ -12,17 +12,17 @@ export default function Regionalizacao() {
   if (!regionalizacao) return <div>Carregando...</div>;
 
   return (
-    <div className="pt-20 px-4 mx-34">
+    <div className="pt-20 px-4 mx-34 regionalização_mobile">
       <div className="flex items-start justify-center flex-col flex-nowrap w-[90%]">
-        <h1 className="text-[5rem] text-[var(--color-navy)]">
+        <h1 className="text-[5rem] text-[var(--color-navy)] title-mobile">
           {regionalizacao.titulo}
         </h1>
         <div className="h-1 w-[95rem] bg-[color:var(--color-navy)]"></div>
-        <div className="flex flex-row flex-nowrap items-center gap-8 w-[100rem]">
-          <div className="w-[35rem] flex flex-col items-start justify-center flex-nowrap gap-8 bg-[#EEF3F6] my-8 px-8 py-4">
+        <div className="flex flex-row flex-nowrap items-center gap-8 w-[100rem] conteudo-regionalizacao-mobile">
+          <div className="w-[35rem] flex flex-col items-start justify-center flex-nowrap gap-8 bg-[#EEF3F6] my-8 px-8 py-4 div-mobile-regionalizacao">
             <div className="flex flex-col pt-10 gap-8">
               <div className="flex flex-row gap-4">
-                <p className="text-5xl w-[23rem] pt-4 font-bold">{regionalizacao.subtitulo}</p>
+                <p className="text-5xl w-[23rem] pt-4 font-bold title-regionalizacao-mobile">{regionalizacao.subtitulo}</p>
               </div>
               <div className="flex flex-row gap-24">
                 <p>{regionalizacao.paragrafo}</p>
@@ -34,7 +34,7 @@ export default function Regionalizacao() {
                   {regionalizacao.texto}
                 </p>
               </div>
-              <div className="w-60 h-20 absolute top-[55rem]">
+              <div className="w-60 h-20 absolute top-[55rem] btn-regionalizacao-mobile">
                 <CustomButton
                   type="download"
                   target={regionalizacao.download_arquivo}
@@ -45,7 +45,7 @@ export default function Regionalizacao() {
               </div>
             </div>
           </div>
-          <div className="relative bg-white w-[70rem] h-[38rem] flex items-center justify-center shadow-[0px_0px_20px_0px_#00000080] rounded-[2rem] right-12 bottom-0">
+          <div className="relative bg-white w-[70rem] h-[38rem] flex items-center justify-center shadow-[0px_0px_20px_0px_#00000080] rounded-[2rem] right-12 bottom-0 ifram-div-regionalizacao-mobile">
             <iframe
               src={regionalizacao.link_dashboard}
               allowFullScreen
