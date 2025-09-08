@@ -30,7 +30,7 @@
 
 .buttons_metas {
     padding: .5rem;
-    width: 99%;
+    width: auto;
     height: 6rem;
     border-radius: 1rem;
     box-shadow: 0px 9px 20px 1px #00000052;
