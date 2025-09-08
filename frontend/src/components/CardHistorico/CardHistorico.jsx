@@ -8,17 +8,21 @@ export default function CarrosselHistorico() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [openedCardId, setOpenedCardId] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1025);
 
   useEffect(() => {
-    // CORREÇÃO: Acessa a propriedade 'cards' diretamente dos dados da API
     getHistoricoData()
       .then((data) => setHistorico(data.cards))
       .catch(console.error);
   }, []);
 
-  if (historico.length === 0) return <div>Carregando...</div>;
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 1025);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-  // CORREÇÃO: 'historico' já é o array de cards, não é necessário 'historico.cards'
+  if (historico.length === 0) return <div>Carregando...</div>;
   const total = historico.length;
   const card1 = historico[currentIndex];
   const card2 = historico[(currentIndex + 1) % total];
@@ -35,42 +39,43 @@ export default function CarrosselHistorico() {
 
   return (
     <div className="relative pt-8 flex flex-col items-center gap-4">
-      <div className="relative w-[60rem] h-[35rem] flex justify-center items-start gap-8 overflow-hidden">
-        <CardItem
-          card={card1}
-          animating={animating}
-          type="current"
-          openedCardId={openedCardId}
-          setOpenedCardId={setOpenedCardId}
-        />
-        <CardItem
-          card={card2}
-          animating={animating}
-          type="next"
-          openedCardId={openedCardId}
-          setOpenedCardId={setOpenedCardId}
-        />
-      </div>
-      <NextButton onClick={next} />
-      <div className="relative left-8 top-4">
-        <div className="transform -translate-x-1/2 flex space-x-3">
-          {historico.map((_, index) => (
-            <button
-              key={index}
-              className={`w-4 h-4 rounded-full transition-colors ${
-                index === currentIndex ? "bg-[var(--color-navy)]" : "bg-gray-300"
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-              onClick={() => {
-                if (!animating) {
-                  setOpenedCardId(null);
-                  setCurrentIndex(index);
-                }
-              }}
-            />
+      {isMobile ? (
+        <div className="carrossel-touch flex flex-col items-start justify-center flex-nowrap gap-12">
+          {historico.map((card) => (
+            <div
+              key={card.id}
+              className="flex flex-col items-start justify-center flex-nowrap gap-12"
+            >
+              <CardItem
+                card={card}
+                animating={false}
+                openedCardId={openedCardId}
+                setOpenedCardId={setOpenedCardId}
+              />
+            </div>
           ))}
         </div>
-      </div>
+      ) : (
+        <>
+          <div className="relative w-[60rem] h-[35rem] flex justify-center items-start gap-8 overflow-hidden">
+            <CardItem
+              card={card1}
+              animating={animating}
+              type="current"
+              openedCardId={openedCardId}
+              setOpenedCardId={setOpenedCardId}
+            />
+            <CardItem
+              card={card2}
+              animating={animating}
+              type="next"
+              openedCardId={openedCardId}
+              setOpenedCardId={setOpenedCardId}
+            />
+          </div>
+          <NextButton onClick={next} />
+        </>
+      )}
     </div>
   );
 }

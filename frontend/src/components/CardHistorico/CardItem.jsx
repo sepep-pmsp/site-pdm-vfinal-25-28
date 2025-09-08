@@ -31,12 +31,12 @@ export default function CardItem({
   return (
     <div
       key={`card-${card.id}`}
-      className={`relative w-96 h-[35rem] rounded-bl-[2rem] text-white p-4 flex flex-col justify-between ${animationClass}`}
+      className={`relative w-96 h-[35rem] rounded-bl-[2rem] text-white p-4 flex flex-col justify-between card-historico-mobile ${animationClass}`}
       style={{ backgroundColor: card.cor_principal }}
     >
       <div className={`${layerClass(!showDocs)} flex flex-col justify-between`}>
         <div className="flex flex-col items-center pt-12">
-          <SafeSVG src={corrigirUrlImagem(card.imagem)} className="w-80 h-32" />
+          <SafeSVG src={corrigirUrlImagem(card.imagem)} className="w-80 h-32 safe-image-mobile" />
         </div>
         <div className="flex flex-row-reverse items-center justify-center pb-4 gap-12">
           <h2 className="text-2xl font-bold">{card.id}</h2>
