@@ -25,15 +25,15 @@ export default function ModalResultados({
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <div className="fixed inset-0 bg-black/50 bg-opacity-50 flex justify-center items-center z-50">
-        <div className="bg-white rounded-2xl w-[82%] h-[80vh] overflow-y-auto scrollbar-thin no-scrollbar-arrows">
+        <div className="bg-white rounded-2xl w-[82%] h-[80vh] overflow-y-auto scrollbar-thin no-scrollbar-arrows container-resultados-mobile">
           <div>
             <button
               onClick={onClose}
-              className="fixed left-[105rem] top-24 cursor-pointer z-20"
+              className="fixed left-[105rem] top-24 cursor-pointer z-20 btn-close-resultados-mobile"
             >
               <i className="fa-solid fa-xmark text-black text-2xl"></i>
             </button>
-            <div className="bg-white rounded-t-2xl h-20 absolute w-[82.05%] left-[10.8rem] shadow-[0px_5px_20px_gray] top-20 z-10"></div>
+            <div className="bg-white rounded-t-2xl h-20 absolute w-[82.05%] left-[10.8rem] shadow-[0px_5px_20px_gray] top-20 z-10 ficha-fundo-branca-mobile"></div>
           </div>
 
           <div className="mx-5 py-16 pb-5">
@@ -52,7 +52,7 @@ export default function ModalResultados({
                       className="flex flex-col items-center justify-center flex-nowrap py-4"
                     >
                       <div
-                        className="flex flex-row justify-between gap-10 w-full px-4 py-2 rounded-t-2xl"
+                        className="div-conteudos-resultados-mobile flex flex-row justify-between gap-10 w-full px-4 py-2 rounded-t-2xl"
                         style={{ border: "2px solid var(--color-navy)" }}
                       >
                         <div>
@@ -105,7 +105,7 @@ export default function ModalResultados({
             })()}
           </div>
 
-          <div className="bg-white rounded-b-2xl h-20 absolute w-[82.05%] left-[10.8rem] shadow-[0px_5px_20px_gray] top-[47rem] z-10"></div>
+          <div className="bg-white rounded-b-2xl h-20 absolute w-[82.05%] left-[10.8rem] shadow-[0px_5px_20px_gray] top-[47rem] z-10 ficha-fundo-branca-mobile"></div>
         </div>
       </div>
     </Modal>

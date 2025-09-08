@@ -177,10 +177,10 @@ export default function FiltroParticipacao({ filtros, onFiltrar }) {
     </div>
   );
   return (
-    <div className="w-[90rem] h-[36rem] z-10 relative left-[17rem] bottom-[10rem] bg-white p-8 rounded-4xl shadow-md">
-      <div className="flex flex-row flex-nowrap items-center justify-between mb-8 px-8 py-4">
+    <div className="w-[90rem] h-[36rem] z-10 relative left-[17rem] bottom-[10rem] bg-white p-8 rounded-4xl shadow-md filtro-mobile-participacao">
+      <div className="flex flex-row flex-nowrap items-center justify-between mb-8 px-8 py-4 div-container-filtro-mobile">
         <img src={ImgFiltro} />
-        <div className="flex flex-row-reverse justify-around w-[30rem] items-center relative">
+        <div className="flex flex-row-reverse justify-around w-[30rem] items-center relative btn-filtro-mobile">
           <button
             onClick={aplicar}
             className="h-20 w-50 shadow-[0px_9px_20px_1px_#00000052] flex items-center justify-center flex-nowrap flex-col transition-all duration-[0.3s] ease-[ease-in-out] text-[var(--color-white)] cursor-pointer bg-[var(--color-cyan-medium)] p-8 rounded-2xl roboto-black uppercase text-2xl hover:-translate-y-2.5"
@@ -210,7 +210,7 @@ export default function FiltroParticipacao({ filtros, onFiltrar }) {
         />
       </div>
 
-      <div className="flex flex-row justify-evenly items-start md:grid-cols-2 lg:grid-cols-5 gap-4">
+      <div className="flex flex-row justify-evenly items-start filtro-opcoes-participacao-mobile  md:grid-cols-2 lg:grid-cols-5 gap-4">
         {renderDropdownFiltro(
           "canais",
           "Canal de participação",

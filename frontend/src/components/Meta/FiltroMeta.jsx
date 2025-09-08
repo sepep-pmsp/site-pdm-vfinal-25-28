@@ -11,7 +11,7 @@ import FiltroMetaMobile from "./FiltroMetaMobile";
 
 export default function FiltroMeta({ onCardsUpdate }) {
   const [data, setData] = useState(null);
-  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const isMobile = useMediaQuery({ maxWidth: 1025 });
   const [filtrosSelecionados, setFiltrosSelecionados] = useState({
     ods: [],
     regioes: [],
