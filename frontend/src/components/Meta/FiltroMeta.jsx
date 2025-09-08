@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
-// CORREÇÃO: Remova a importação da função que não existe.
-import { getFiltroMetasData, postFiltrosSelecionados } from "@/services/Metas/getFiltroMetasData";
+import {
+  getFiltroMetasData,
+  postFiltrosSelecionados
+} from "@/services/Metas/getFiltroMetasData";
 import FiltroODS from "./FiltroMeta/FiltroODS";
 import FiltroCentro from "./FiltroMeta/FiltroCentro";
 import FiltroEixos from "./FiltroMeta/FiltroEixos";
-// CORREÇÃO: A importação de `getMetasData` é desnecessária aqui.
+import { useMediaQuery } from "react-responsive";
+import FiltroMetaMobile from "./FiltroMetaMobile";
 
 export default function FiltroMeta({ onCardsUpdate }) {
   const [data, setData] = useState(null);
+  const isMobile = useMediaQuery({ maxWidth: 768 });
   const [filtrosSelecionados, setFiltrosSelecionados] = useState({
     ods: [],
     regioes: [],
@@ -19,13 +23,11 @@ export default function FiltroMeta({ onCardsUpdate }) {
   });
 
   useEffect(() => {
-    // Busca os dados de filtro da API real
     getFiltroMetasData().then(setData).catch(console.error);
   }, []);
 
   useEffect(() => {
     if (data) {
-      // POST com os filtros selecionados para atualizar os cards
       postFiltrosSelecionados(filtrosSelecionados)
         .then((res) => {
           onCardsUpdate(res);
@@ -59,40 +61,44 @@ export default function FiltroMeta({ onCardsUpdate }) {
       subeixos: []
     };
     setFiltrosSelecionados(estadoInicial);
-
-     // CORREÇÃO: Chama a função que faz o POST com o estado inicial
     postFiltrosSelecionados(estadoInicial)
-        .then((res) => {
-            onCardsUpdate(res);
-        })
-        .catch(console.error);
+      .then((res) => {
+        onCardsUpdate(res);
+      })
+      .catch(console.error);
   }
 
   return (
     <div className="flex items-start">
-      {/* Coluna esquerda - ODS */}
-      <FiltroODS
-        ods={data.ods}
-        filtrosSelecionados={filtrosSelecionados}
-        toggleSelecionado={toggleSelecionado}
-      />
+      {isMobile ? (
+        <FiltroMetaMobile onCardsUpdate={onCardsUpdate} />
+      ) : (
+        <div className="flex flex-row">
+          {/* Coluna esquerda - ODS */}
+          <FiltroODS
+            ods={data.ods}
+            filtrosSelecionados={filtrosSelecionados}
+            toggleSelecionado={toggleSelecionado}
+          />
 
-      {/* Painel central */}
-      <FiltroCentro
-        filtrosSelecionados={filtrosSelecionados}
-        regioes={data.regionalizacao}
-        orgaos={data.orgaos}
-        planosVinculados={data.planos_setoriais}
-        toggleSelecionado={toggleSelecionado}
-        onLimparFiltros={limparFiltros}
-      />
+          {/* Painel central */}
+          <FiltroCentro
+            filtrosSelecionados={filtrosSelecionados}
+            regioes={data.regionalizacao}
+            orgaos={data.orgaos}
+            planosVinculados={data.planos_setoriais}
+            toggleSelecionado={toggleSelecionado}
+            onLimparFiltros={limparFiltros}
+          />
 
-      {/* Coluna direita - Eixos */}
-      <FiltroEixos
-        eixos={data.eixos}
-        filtrosSelecionados={filtrosSelecionados}
-        toggleSelecionado={toggleSelecionado}
-      />
+          {/* Coluna direita - Eixos */}
+          <FiltroEixos
+            eixos={data.eixos}
+            filtrosSelecionados={filtrosSelecionados}
+            toggleSelecionado={toggleSelecionado}
+          />
+        </div>
+      )}
     </div>
   );
 }

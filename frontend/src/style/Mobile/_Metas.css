@@ -1,0 +1,599 @@
+@media screen and (min-width: 1279px) and (max-width: 1438px) {
+    .lista-metas-mobile {
+        position: relative;
+        left: -3rem;
+    }
+
+    .container-lista-metas-mobileee {
+        position: relative;
+        left: -7rem;
+    }
+}
+
+@media screen and (min-width: 427px) and (max-width: 769px) {
+    .container-lista-metas-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        padding: 1rem;
+        position: relative;
+        top: 47rem;
+        height: 200rem;
+    }
+
+    .lista-metas-mobile {
+        left: 0;
+        top: -44rem;
+        height: 35rem;
+    }
+
+    .carousel-ormacento-container-mobile {
+        left: 0;
+        bottom: 0;
+    }
+
+    .container-carousel-orcamento {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .container-carousel-orcamento-left-mobile {
+        width: 20rem;
+    }
+
+    .container-carousel-orcamento {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    .container-carousel-orcamento-left-mobile {
+        width: 33%;
+        height: 21rem;
+        padding: 1rem;
+    }
+
+    .container-carousel-orcamento-left-mobile h2 {
+        font-size: 1.5rem;
+    }
+
+    .container-carousel-orcamento-left-mobile .text-\[12rem\] {
+        font-size: 2rem;
+        right: 0;
+        bottom: 0;
+    }
+
+    .container-carousel-orcamento-left-mobile .w-31 {
+        width: auto;
+        font-size: 0.85rem;
+        text-align: center;
+    }
+
+    .container-carousel-orcamento-left-mobile .h-60 {
+        width: 100%;
+        height: auto;
+        gap: 1rem;
+    }
+
+    .container-carousel-orcamento-left-mobile .text-8xl {
+        font-size: 3rem;
+    }
+
+    .container-carousel-orcamento>div:nth-child(2) {
+        width: 33%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .container-carousel-orcamento>div:nth-child(2) h2 {
+        font-size: 1.5rem;
+    }
+
+    .container-carousel-orcamento>div:nth-child(2) .text-5xl {
+        font-size: 2rem;
+    }
+
+    .container-carousel-orcamento>div:nth-child(2) .text-xl {
+        font-size: 1rem;
+    }
+
+    .container-carousel-orcamento>div:nth-child(2) .mt-6 {
+        margin-top: 1rem;
+    }
+
+    .container-carousel-orcamento>div {
+        text-align: center;
+    }
+
+    .txt-meta-eixo-carousel-mobile {
+        left: 9rem;
+        top: -3rem;
+    }
+
+    .texto-inicio-metas-mobile {
+        width: 22rem;
+        padding: 1rem;
+    }
+
+    .lista-metas-container {
+        width: 60%;
+        padding: 0 1rem;
+    }
+
+    .lista-metas-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 1rem;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .lista-metas-numero {
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+    .lista-metas-titulo {
+        font-size: 1rem;
+        line-height: 1.4;
+        text-align: left;
+    }
+
+    .lista-metas-separador {
+        display: none;
+    }
+
+    .container-lista-metas-mobileee {
+        width: 23rem;
+        top: -45rem;
+    }
+
+    .card-open-mobile {
+        width: 27rem;
+        left: 0rem;
+    }
+
+    .div-txt-card-mobile {
+        padding: 0;
+    }
+
+    .div-txt-mobile {
+        width: 100%;
+    }
+
+    .div-cont-card-mobile {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: center;
+        width: 26rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    .div-cont-card-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        width: 20rem;
+    }
+
+    .div-cont-card-mobile p {
+        font-size: 1rem;
+        width: 20rem;
+    }
+
+    .footer-card-mobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .texto-footer-card-mobile {
+        font-size: 14px;
+        width: 9rem;
+        position: relative;
+        left: -3rem;
+    }
+
+    .btn-card-opem-mobile {
+        left: 0;
+    }
+}
+
+@media screen and (min-width: 770px) and (max-width: 1025px) {
+    .container-lista-metas-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        padding: 1rem;
+        position: relative;
+        top: 47rem;
+        height: 200rem;
+    }
+
+    .lista-metas-mobile {
+        left: 0;
+        top: -44rem;
+        height: 35rem;
+    }
+
+    .carousel-ormacento-container-mobile {
+        left: 0;
+        bottom: 0;
+    }
+
+    .container-carousel-orcamento {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .container-carousel-orcamento-left-mobile {
+        width: 20rem;
+    }
+
+    .container-carousel-orcamento {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    .container-carousel-orcamento-left-mobile {
+        width: 33%;
+        height: 21rem;
+        padding: 1rem;
+    }
+
+    .container-carousel-orcamento-left-mobile h2 {
+        font-size: 1.5rem;
+    }
+
+    .container-carousel-orcamento-left-mobile .text-\[12rem\] {
+        font-size: 2rem;
+        right: 0;
+        bottom: 0;
+    }
+
+    .container-carousel-orcamento-left-mobile .w-31 {
+        width: auto;
+        font-size: 0.85rem;
+        text-align: center;
+    }
+
+    .container-carousel-orcamento-left-mobile .h-60 {
+        width: 100%;
+        height: auto;
+        gap: 1rem;
+    }
+
+    .container-carousel-orcamento-left-mobile .text-8xl {
+        font-size: 3rem;
+    }
+
+    .container-carousel-orcamento>div:nth-child(2) {
+        width: 33%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .container-carousel-orcamento>div:nth-child(2) h2 {
+        font-size: 1.5rem;
+    }
+
+    .container-carousel-orcamento>div:nth-child(2) .text-5xl {
+        font-size: 2rem;
+    }
+
+    .container-carousel-orcamento>div:nth-child(2) .text-xl {
+        font-size: 1rem;
+    }
+
+    .container-carousel-orcamento>div:nth-child(2) .mt-6 {
+        margin-top: 1rem;
+    }
+
+    .container-carousel-orcamento>div {
+        text-align: center;
+    }
+
+    .txt-meta-eixo-carousel-mobile {
+        left: 9rem;
+        top: -3rem;
+    }
+
+    .texto-inicio-metas-mobile {
+        width: 22rem;
+        padding: 1rem;
+    }
+
+    .lista-metas-container {
+        width: 60%;
+        padding: 0 1rem;
+    }
+
+    .lista-metas-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 1rem;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .lista-metas-numero {
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+    .lista-metas-titulo {
+        font-size: 1rem;
+        line-height: 1.4;
+        text-align: left;
+    }
+
+    .lista-metas-separador {
+        display: none;
+    }
+
+    .container-lista-metas-mobileee {
+        width: 23rem;
+        top: -45rem;
+    }
+
+    .card-open-mobile {
+        width: 27rem;
+        left: 0rem;
+    }
+
+    .div-txt-card-mobile {
+        padding: 0;
+    }
+
+    .div-txt-mobile {
+        width: 100%;
+    }
+
+    .div-cont-card-mobile {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: center;
+        width: 26rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    .div-cont-card-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        width: 20rem;
+    }
+
+    .div-cont-card-mobile p {
+        font-size: 1rem;
+        width: 20rem;
+    }
+
+    .footer-card-mobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .texto-footer-card-mobile {
+        font-size: 14px;
+        width: 9rem;
+        position: relative;
+        left: -3rem;
+    }
+
+    .btn-card-opem-mobile {
+        left: 0;
+    }
+}
+
+@media screen and (min-width: 319px) and (max-width: 426px) {
+    .container-lista-metas-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        padding: 1rem;
+        position: relative;
+        top: 47rem;
+        height: 200rem;
+    }
+
+    .lista-metas-mobile {
+        left: 0;
+        top: -44rem;
+        height: 35rem;
+    }
+
+    .carousel-ormacento-container-mobile {
+        left: 0;
+        bottom: 0;
+    }
+
+    .container-carousel-orcamento {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .container-carousel-orcamento-left-mobile {
+        width: 20rem;
+    }
+
+    .container-carousel-orcamento {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    .container-carousel-orcamento-left-mobile {
+        width: 33%;
+        height: 21rem;
+        padding: 1rem;
+    }
+
+    .container-carousel-orcamento-left-mobile h2 {
+        font-size: 1.5rem;
+    }
+
+    .container-carousel-orcamento-left-mobile .text-\[12rem\] {
+        font-size: 2rem;
+        right: 0;
+        bottom: 0;
+    }
+
+    .container-carousel-orcamento-left-mobile .w-31 {
+        width: auto;
+        font-size: 0.85rem;
+        text-align: center;
+    }
+
+    .container-carousel-orcamento-left-mobile .h-60 {
+        width: 100%;
+        height: auto;
+        gap: 1rem;
+    }
+
+    .container-carousel-orcamento-left-mobile .text-8xl {
+        font-size: 3rem;
+    }
+
+    .container-carousel-orcamento>div:nth-child(2) {
+        width: 33%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .container-carousel-orcamento>div:nth-child(2) h2 {
+        font-size: 1.5rem;
+    }
+
+    .container-carousel-orcamento>div:nth-child(2) .text-5xl {
+        font-size: 2rem;
+    }
+
+    .container-carousel-orcamento>div:nth-child(2) .text-xl {
+        font-size: 1rem;
+    }
+
+    .container-carousel-orcamento>div:nth-child(2) .mt-6 {
+        margin-top: 1rem;
+    }
+
+    .container-carousel-orcamento>div {
+        text-align: center;
+    }
+
+    .txt-meta-eixo-carousel-mobile {
+        left: 9rem;
+        top: -3rem;
+    }
+
+    .texto-inicio-metas-mobile {
+        width: 22rem;
+        padding: 1rem;
+    }
+
+    .lista-metas-container {
+        width: 60%;
+        padding: 0 1rem;
+    }
+
+    .lista-metas-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 1rem;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .lista-metas-numero {
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+    .lista-metas-titulo {
+        font-size: 1rem;
+        line-height: 1.4;
+        text-align: left;
+    }
+
+    .lista-metas-separador {
+        display: none;
+    }
+
+    .container-lista-metas-mobileee {
+        width: 23rem;
+        top: -45rem;
+    }
+
+    .card-open-mobile {
+        width: 27rem;
+        left: 0rem;
+    }
+
+    .div-txt-card-mobile {
+        padding: 0;
+    }
+
+    .div-txt-mobile {
+        width: 100%;
+    }
+
+    .div-cont-card-mobile {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: center;
+        width: 26rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    .div-cont-card-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        width: 20rem;
+    }
+
+    .div-cont-card-mobile p {
+        font-size: 1rem;
+        width: 20rem;
+    }
+
+    .footer-card-mobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .texto-footer-card-mobile {
+        font-size: 14px;
+        width: 9rem;
+        position: relative;
+        left: -3rem;
+    }
+
+    .btn-card-opem-mobile {
+        left: 0;
+    }
+}

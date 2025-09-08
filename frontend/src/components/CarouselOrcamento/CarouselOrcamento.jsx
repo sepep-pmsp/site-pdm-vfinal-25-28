@@ -36,8 +36,8 @@ export default function CarouselOrcamento() {
   const eixo = data[currentIndex];
 
   return (
-    <div className="flex justify-center items-center gap-4 transition-all duration-500 ease-in-out">
-      <div className="bg-white rounded-xl shadow-md w-[40rem] h-95 px-6 py-10 relative">
+    <div className="flex justify-center items-center gap-4 transition-all duration-500 ease-in-out container-carousel-orcamento">
+      <div className="bg-white rounded-xl shadow-md w-[40rem] h-95 px-6 py-10 relative container-carousel-orcamento-left-mobile">
         <div className="flex justify-start items-end flex-nowrap flex-row gap-9">
           <h2 className="text-4xl font-semibold text-[var(--color-navy)] uppercase mb-2">
             visão geral
@@ -67,7 +67,7 @@ export default function CarouselOrcamento() {
                 className="bg-opacity-90 rounded-lg py-2 px-4 font-bold text-xl flex flex-col"
                 style={{ backgroundColor: eixo.corPrincipal }}
               >
-                <div className="absolute top-[-1.5rem] left-80 font-normal uppercase ">
+                <div className="absolute top-[-1.5rem] left-80 font-normal uppercase txt-meta-eixo-carousel-mobile">
                   <p className="text-[var(--color-navy)]">meta por eixo</p>
                 </div>
                 <div className="h-30 w-40 flex items-center justify-center">
