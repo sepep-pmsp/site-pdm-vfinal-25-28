@@ -17,17 +17,17 @@ export default function CarouselPlanejamento({ como_feito }) {
   };
 
   return (
-    <div className="relative w-[90rem] h-[38rem] flex flex-col items-center">
+    <div className="relative w-[90rem] h-[38rem] flex flex-col items-center container-carousel-mobile">
       <button
         onClick={prevSlide}
-        className="absolute right-[86rem] top-50 z-20 bg-white h-16 w-16 rounded-full "
+        className="absolute right-[86rem] top-50 z-20 bg-white h-16 w-16 rounded-full btn-left-mobile"
       >
         <i className="fa-solid fa-arrow-left text-lg text-[var(--color-navy)]"></i>
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute left-[86rem] top-50 z-20 bg-white h-16 w-16 rounded-full"
+        className="absolute left-[86rem] top-50 z-20 bg-white h-16 w-16 rounded-full btn-right-mobile"
       >
         <i className="fa-solid fa-arrow-right text-lg text-[var(--color-navy)]"></i>
       </button>
@@ -100,7 +100,7 @@ export default function CarouselPlanejamento({ como_feito }) {
                 </div>
               ) : (
                 <>
-                  <div className="flex flex-col flex-nowrap items-start justify-center gap-20 px-16">
+                  <div className="flex flex-col flex-nowrap items-start justify-center gap-20 px-16 conteudo-card-carousel-mobile">
                     <div className="flex flex-col flex-nowrap items-start justify-center gap-8">
                       <span className="text-9xl font-bold text-start">
                         {slide.numero}
