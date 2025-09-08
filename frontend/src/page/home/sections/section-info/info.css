@@ -42,9 +42,8 @@
     }
 
     .object-cover {
-        width: 17rem;
-        height: 17rem;
-    }
+    width: auto;
+    height: auto;
 
     .div-mobile-info {
         width: 19rem;
