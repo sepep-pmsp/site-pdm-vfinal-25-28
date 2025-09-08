@@ -41,25 +41,25 @@ export default function ModalParticipacaoSocial({ isOpen, onClose, apresentacao 
       {/* Modal */}
       <div className="fixed inset-0 flex items-center justify-center z-[10000]">
         <div
-          className={`bg-[#1281AA] rounded-4xl p-8 w-[99rem] h-[48rem] relative shadow-lg transition-all duration-400 ${
+          className={`bg-[#1281AA] rounded-4xl modal-participacao-mobile p-8 w-[99rem] h-[48rem] relative shadow-lg transition-all duration-400${
             closing ? "slide-out-bottom" : "animate-slide-up"
           }`}
           onClick={(e) => e.stopPropagation()}
         >
           <button
-            className="absolute top-10 right-20 cursor-pointer z-[10100]"
+            className="absolute top-10 right-20 cursor-pointer z-[10100] btn-close-modal-participacao-mobile"
             onClick={onClose}
           >
             <i className="fa-solid fa-xmark text-white text-6xl"></i>
           </button>
 
           <div className="flex items-center justify-center flex-row h-full gap-30">
-            <div className="flex flex-col items-start justify-center gap-3 p-8 w-180 z-[10100]">
-              <div className="pb-10">
-                <h2 className="text-8xl text-white">{apresentacao?.titulo}</h2>
+            <div className="flex flex-col items-start justify-center gap-3 p-8 w-180 z-[10100] container-conteudo-modal-participacao-mobile">
+              <div className="modal-header-mobile pb-10">
+                <h2 className="text-8xl text-white titulo-conteudo-modal-participacao-mobile">{apresentacao?.titulo}</h2>
                 <p className="text-white text-2xl pt-8 roboto-semibold">{apresentacao?.subtitulo}</p>
               </div>
-              <div className="flex flex-col gap-3">
+              <div className="modal-body-mobile flex flex-col gap-3">
                 {apresentacao?.paragrafos?.map((par, index) => (
                   <p className="text-white text-xl roboto-light" key={index}>
                     {par}

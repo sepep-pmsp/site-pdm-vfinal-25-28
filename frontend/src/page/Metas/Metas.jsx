@@ -15,7 +15,6 @@ export default function Metas() {
   useEffect(() => {
     getMetasIniciais()
       .then((data) => {
-        // CORREÇÃO: Acessa a propriedade `resultados` que contém o array de metas
         setMetas(data.resultados);
         setLoading(false);
       })
@@ -36,7 +35,6 @@ export default function Metas() {
       
       postFiltrosSelecionados(filtrosIniciais)
         .then((res) => {
-          // CORREÇÃO: Acessa a propriedade `metas` da resposta
           setMetas(res.metas); 
           setLoading(false);
         })
@@ -56,7 +54,7 @@ export default function Metas() {
       </div>
 
       <div className="bg-gray-50 h-90">
-        <div className="w-120 flex flex-col items-center gap-5 py-5 px-10 text-[1.3rem]">
+        <div className="w-120 flex flex-col items-center gap-5 py-5 px-10 text-[1.3rem] texto-inicio-metas-mobile">
           <p>
             <strong>
               Neste painel você pode conferir todas as metas deste Programa,
@@ -69,17 +67,17 @@ export default function Metas() {
             <strong>Clique na meta para ver suas informações completas</strong>.
           </p>
         </div>
-        <div className="relative w-[73rem] left-[40rem] bottom-[25rem]">
+        <div className="relative w-[73rem] left-[40rem] bottom-[25rem] carousel-ormacento-container-mobile">
           <CarouselOrcamento />
         </div>
       </div>
 
-      <div className="flex items-center justify-center flex-row flex-nowrap gap-1 pt-10 h-[90rem]">
-        <div className="relative h-full right-35 top-32">
-          <FiltroMeta onCardsUpdate={(res) => setMetas(res.metas)} /> {/* CORREÇÃO: Mapeia o resultado do POST para o array de metas */}
+      <div className="flex items-center justify-center flex-row flex-nowrap gap-1 pt-10 h-[90rem] container-lista-metas-mobile">
+        <div className="relative h-full right-35 top-32 lista-metas-mobile">
+          <FiltroMeta onCardsUpdate={(res) => setMetas(res.metas)} />
         </div>
 
-        <div className="flex w-[35rem] h-[85em] flex-col flex-nowrap justify-start items-center px-0 py-8 shadow-[0px_5px_40px_grey] rounded-3xl relative top-7">
+        <div className="flex w-[35rem] h-[85em] flex-col flex-nowrap justify-start items-center px-0 py-8 shadow-[0px_5px_40px_grey] rounded-3xl relative top-7 container-lista-metas-mobileee">
           <div className="overflow-y-auto overflow-x-hidden scroll-smooth scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-gray-400 no-scrollbar-arrows">
             <ListaMetas metas={metas} onSelectMeta={setSelectedMeta} />
           </div>

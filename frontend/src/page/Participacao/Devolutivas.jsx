@@ -14,20 +14,20 @@ export default function Devolutivas({ devolutivas, apresentacao }) {
 
   return (
     <div className="py-8">
-      <div className="bg-[var(--color-cyan-dark)] w-[40rem] h-44 right-[95rem] top-[55.3rem] rotate-[270deg] absolute flex items-center flex-col justify-end p-4 rounded-br-4xl rounded-bl-4xl shadow-[-4px_2px_20px_0px_gray] z-1">
+      <div className="bg-[var(--color-cyan-dark)] w-[40rem] h-44 right-[95rem] top-[55.3rem] rotate-[270deg] absolute flex items-center flex-col justify-end p-4 rounded-br-4xl rounded-bl-4xl shadow-[-4px_2px_20px_0px_gray] z-1 container-devolutivas-lateral-mobile">
         <h1 className="text-white text-7xl px-6 relative left-28 bottom-4">
           Devolutivas
         </h1>
       </div>
       <section className="relative w-full overflow-hidden">
         {devolutivas.imagem_fundo && (
-          <div>
+          <div className="container-devolutivas-imgs-mobile">
             <SafeSVG src={corrigirUrlImagem(devolutivas.imagem_fundo)}  />
             <div className="absolute top-0 left-0 w-full h-full bg-[var(--color-Filter-blue)] bg-opacity-40 z-0 pointer-events-none"></div>
           </div>
         )}
-        <div className="absolute inset-0 flex flex-row flex-nowrap justify-evenly items-center z-1">
-          <div className="flex flex-col items-start w-[60rem] justify-center gap-8 p-8 text-white">
+        <div className="absolute inset-0 flex flex-row flex-nowrap justify-evenly items-center z-1 container-devolutivas-mobile">
+          <div className="flex flex-col items-start w-[60rem] justify-center gap-8 p-8 text-white div-txts-devolutivas-mobile">
             <h2 className="text-6xl">{devolutivas.subtitulo}</h2>
             <p className="text-2xl">{devolutivas.paragrafos}</p>
           </div>

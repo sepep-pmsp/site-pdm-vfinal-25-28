@@ -30,7 +30,7 @@ export default function More_Info() {
               key={index}
               className="flex flex-col items-start justify-center gap-8 div-mobile-info"
             >
-              <div className="p-4 shadow-[0px_1px_20px_1px_#000000ab] rounded-[3rem] group relative w-fit overflow-hidden">
+              <div className="p-4 shadow-[0px_1px_20px_1px_#000000ab] rounded-[3rem] group groupy  relative w-fit overflow-hidden">
                 <div className="relative">
                   <img
                     src={`/${item.image}`}

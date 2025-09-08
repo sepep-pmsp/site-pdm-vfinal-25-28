@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import Agrupar2 from "@/assets/svg/agrupar_2.svg";
 
-// CORREÇÃO: Recebe 'audiencia' como uma prop
 export default function Audiencia({ audiencia }) {
   const [showOverlay, setShowOverlay] = useState(true);
   const playerRef = useRef(null);
@@ -42,9 +41,8 @@ export default function Audiencia({ audiencia }) {
           </h1>
         </div>
       </div>
-      <div className="mx-34">
-        <div className="gap-24 flex items-center justify-center relative pl-20 bottom-28">
-          {/* O texto do subtítulo e parágrafo poderia vir da API, se houver */}
+      <div className="mx-34 audiencia-mobile">
+        <div className="gap-24 flex items-center justify-center relative pl-20 bottom-28 container-audiencia-mobile">
           <h2 className="text-5xl text-[var(--color-navy)]">
             Veja informações sobre as devolutivas.
           </h2>
@@ -55,12 +53,12 @@ export default function Audiencia({ audiencia }) {
           </p>
         </div>
         <div className="flex items-center justify-center flex-col flex-nowrap gap-20">
-          <span className="w-[70rem] h-[40rem] shadow-[0px_0px_12px_grey] p-8 rounded-3xl">
+          <span className="w-[70rem] h-[40rem] shadow-[0px_0px_12px_grey] p-8 rounded-3xl span-video-mobile-1">
             <div>
               {showOverlay && (
                 <>
                   <div
-                    className="bg-[var(--color-cyan-light)] absolute w-44 top-[145rem] px-8 py-2 left-[24.9rem] z-20 text-white rounded-r-3xl cursor-pointer"
+                    className="bg-[var(--color-cyan-light)] absolute w-44 top-[145rem] px-8 py-2 left-[24.9rem] z-20 text-white rounded-r-3xl cursor-pointer banner-mobile-audiencia"
                     onClick={() => {
                       setShowOverlay(false);
                       playerRef.current?.playVideo();
@@ -82,11 +80,11 @@ export default function Audiencia({ audiencia }) {
               allowFullScreen
             />
           </span>
-          <div className="flex flex-row items-center justify-center gap-20">
+          <div className="flex flex-row items-center justify-center gap-20 div-videos-mobile">
             {audiencia.lista?.map((link, i) => (
               <span
                 key={i}
-                className="shadow-[0px_0px_12px_grey] p-8 rounded-3xl w-[30rem] h-80"
+                className="shadow-[0px_0px_12px_grey] p-8 rounded-3xl w-[30rem] span-video-mobile-1 h-80"
               >
                 <iframe
                   key={i}
@@ -102,8 +100,8 @@ export default function Audiencia({ audiencia }) {
         </div>
         <div className="py-8">
           <div className="h-1 w-full bg-[var(--color-neutral-400)]"></div>
-          <div className="gap-12 flex flex-row flex-nowrap items-center justify-center py-8">
-            <div className="flex gap-12 items-center justify-center w-[45rem]">
+          <div className="gap-12 flex flex-row flex-nowrap items-center justify-center py-8 mini-footer-audiencia-mobile">
+            <div className="flex gap-12 items-center justify-center w-[45rem] mini-footer-texto-audiencia-mobile">
               <h3 className="text-4xl text-[var(--color-navy)]">SAIBA MAIS:</h3>
               <h2 className="text-5xl text-[var(--color-navy)]">
                 Confira todas as Audiências Públicas desse PdM no nosso canal do

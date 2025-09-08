@@ -23,7 +23,6 @@ export default function ParticipacaoSocial() {
 
     postFiltroParticipacaoData(filtrosSelecionados)
       .then((res) => {
-        // CORREÇÃO: A API de busca retorna um array diretamente
         setResultados(res);
       })
       .catch((err) => {
@@ -71,9 +70,9 @@ export default function ParticipacaoSocial() {
 
   return (
     <div>
-      <div className="flex items-start justify-center flex-col w-[80%] pt-24 mx-34">
-        <h1 className="text-[5rem] text-[var(--color-navy)]">{data.titulo}</h1>
-        <div className="h-1 w-[95rem] bg-[color:var(--color-navy)]"></div>
+      <div className="flex items-start justify-center flex-col w-[80%] pt-24 mx-34 container-participacao-mobile">
+        <h1 className="text-[5rem] text-[var(--color-navy)] title-participacao-mobile">{data.titulo}</h1>
+        <div className="h-1 w-[95rem] bg-[color:var(--color-navy)] line-mobile"></div>
       </div>
       <Devolutivas
         devolutivas={data.devolutivas}

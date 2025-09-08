@@ -19,17 +19,17 @@ export default function ModalDetalhe({ selecionado, onClose }) {
   return (
     <Modal isOpen={!!selecionado} onClose={onClose}>
       <div className="fixed inset-0 bg-black/40 flex justify-center items-center z-50">
-        <div className="bg-white rounded-xl w-[90%] h-[80vh] overflow-y-auto">
+        <div className="bg-white rounded-xl w-[90%] h-[80vh] overflow-y-auto container-detalhes-mobile">
           <button
             onClick={onClose}
-            className="fixed left-[110rem] top-24 cursor-pointer z-20"
+            className="fixed left-[110rem] top-24 cursor-pointer z-20 btn-close-resultados-mobile"
           >
             <i className="fa-solid fa-xmark text-black text-2xl"></i>
           </button>
-          <div className="bg-white rounded-t-2xl h-20 absolute w-[90%] shadow-[0px_5px_20px_gray] left-24 top-20 z-10"></div>
+          <div className="bg-white rounded-t-2xl h-20 absolute w-[90%] shadow-[0px_5px_20px_gray] left-24 top-20 z-10 ficha-fundo-branca-mobile"></div>
           <div className="h-1 w-[90%] relative top-16 left-16 bg-[var(--color-navy)]"></div>
           <div className="mx-5 pt-20 pb-5 h-[27rem]">
-            <div className="flex justify-around items-center gap-4 mx-24">
+            <div className="flex justify-around items-center gap-4 mx-24 container-detalhe-participacao-mobile">
               <div className="flex flex-col items-center justify-around gap-8 w-full">
                 <div
                   className="flex flex-col-reverse items-center justify-center flex-wrap content-center gap-4 rounded-2xl w-full"
@@ -84,14 +84,14 @@ export default function ModalDetalhe({ selecionado, onClose }) {
               </div>
             </div>
           </div>
-          <div className=" h-1 w-[90%] relative left-16 bg-[var(--color-navy)]"></div>
-          <div className="mt-6">
+          <div className=" h-1 w-[90%] relative left-16 bg-[var(--color-navy)] linha-detalhe"></div>
+          <div className="mt-6 content-dethalhe-participacao-mobile">
             <h2 className="text-5xl text-[var(--color-navy)] pl-24 pb-4">
               contribuição
             </h2>
             {detalhe.tipo && (
               <>
-                <div className="relative top-[-5.5rem] left-[72rem] w-[26rem] bg-[var(--color-cyan-dark)] z-[1] flex items-center justify-center break-all rounded-b-4xl h-auto">
+                <div className="relative top-[-5.5rem] left-[72rem] w-[26rem] bg-[var(--color-cyan-dark)] z-[1] flex items-center justify-center break-all rounded-b-4xl h-auto content-descricao-dethalhe-participacao-mobile">
                   <p
                     className="BebasNeue text-6xl text-white px-8"
                      dangerouslySetInnerHTML={{
@@ -101,11 +101,11 @@ export default function ModalDetalhe({ selecionado, onClose }) {
                       )}}
                   ></p>
                 </div>
-                <div className=" h-1 w-[90%] relative left-16 bottom-28 bg-[var(--color-navy)]"></div>
+                <div className=" h-1 w-[90%] relative left-16 bottom-28 bg-[var(--color-navy)] linha-detalhe-2"></div>
               </>
             )}
             {detalhe.titulo && detalhe.titulo !== "None" && (
-              <div className="flex items-center justify-start gap-8 relative left-[30rem] bottom-16 w-[60rem]">
+              <div className="flex items-center justify-start gap-8 relative left-[30rem] bottom-16 w-[60rem] content-descricao-dethalhe-participacao-mobile">
                 <div className="bg-[var(--color-cyan-medium)] w-1 h-60"></div>
                 <div className="flex flex-col items-start justify-center gap-4 w-[57rem]">
                   <h2 className="text-4xl font-bold mb-2 text-[var(--color-cyan-medium)]">
@@ -120,7 +120,7 @@ export default function ModalDetalhe({ selecionado, onClose }) {
                 </div>
               </div>
             )}
-            <div className="w-40 flex flex-col flex-nowrap items-start justify-center gap-4 relative left-20 bottom-80">
+            <div className="w-40 flex flex-col flex-nowrap items-start justify-center gap-4 relative left-20 bottom-80 ">
               {detalhe.apoios > 0 && (
                 <p className="flex items-center gap-2 text-[var(--color-navy)] shadow-[0px_0px_2px_gray] p-2 rounded-3xl w-40">
                   <img src={Like} alt="Apoios" />
@@ -136,13 +136,13 @@ export default function ModalDetalhe({ selecionado, onClose }) {
             </div>
             {Array.isArray(detalhe.conteudo) ? (
               detalhe.conteudo.map((paragrafo, index) => (
-                <div className="flex flex-col gap-4 relative left-[35rem] bottom-0 w-[60rem]">
+                <div className="flex flex-col gap-4 relative left-[35rem] bottom-0 w-[60rem] content-descricao-dethalhe-participacao-mobile">
                   <p key={index}>{paragrafo}</p>
                 </div>
               ))
             ) : (
-              <div className="flex flex-col gap-4 relative left-[35rem] bottom-0 w-[60rem] pb-10">
-                <p className="flex items-start justify-start gap-8 w-[45rem] text-xl">
+              <div className="flex flex-col gap-4 relative left-[35rem] bottom-0 w-[60rem] pb-10 content-descricao-dethalhe-participacao-mobile">
+                <p className="flex items-start justify-start gap-8 w-[45rem] text-xl p-content-mobile">
                   {detalhe.conteudo}
                 </p>
               </div>
@@ -158,7 +158,7 @@ export default function ModalDetalhe({ selecionado, onClose }) {
                 </div>
                 <ul className="list-disc list-inside py-8 flex flex-col flex-nowrap items-start justify-center gap-8 w-full pb-24">
                   {detalhe.respostas.map((r, i) => (
-                    <li className="pl-24 w-ful" key={i}>
+                    <li className="pl-24 list-resposta-detalhes-mobile w-ful" key={i}>
                       <div className="flex justify-start items-center gap-64 p-4">
                         <strong className="text-xl text-[var(--color-cyan-dark)] shadow-[0px_0px_2px_gray] p-2 rounded-3xl w-60">
                           {r.orgao}

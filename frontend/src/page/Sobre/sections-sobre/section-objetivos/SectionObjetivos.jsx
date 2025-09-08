@@ -36,11 +36,11 @@ export default function SectionObjetivos({ sobre }) {
       <div className="absolute z-[-1] rotate-180 left-0">
         <img src={bgFundo1} alt="" />
       </div>
-      <div className="h-150">
-        <div className="bg-[color:var(--color-cyan-dark)] h-35 rotate-[270deg] relative flex items-center flex-col justify-end p-4 rounded-br-4xl rounded-bl-4xl w-[25rem] right-[15rem] top-[17rem] shadow-[-4px_2px_20px_0px_gray]">
+      <div className="h-150 div-conteudo-objetivos-mobile">
+        <div className="bg-[color:var(--color-cyan-dark)] h-35 rotate-[270deg] relative flex items-center flex-col justify-end p-4 rounded-br-4xl rounded-bl-4xl w-[25rem] right-[15rem] top-[17rem] shadow-[-4px_2px_20px_0px_gray] container-objetivos-mobile">
           <h1 className="text-white text-7xl px-6">objetivos</h1>
         </div>
-        <div className="flex flex-wrap justify-center gap-20">
+        <div className="flex flex-wrap justify-center gap-20 div-blocos-objetivos-mobile">
           {objetivosArray.map((obj, index) => (
             <div
               key={index}
