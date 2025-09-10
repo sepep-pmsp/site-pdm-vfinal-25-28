@@ -56,7 +56,7 @@ export default function CardMetas({ meta, onClose }) {
       onClick={handleClose}
     >
       <div
-        className={`relative flex flex-col justify-between overflow-y-auto h-screen w-[211vh] shadow-lg transition-all card-open-mobile
+        className={`relative flex flex-col justify-between overflow-y-auto h-screen w-full shadow-lg transition-all 
           ${closing ? "slide-out-bottom" : "animate-slide-up"}  ${scrollClass}`}
         onClick={(e) => e.stopPropagation()}
         style={{
@@ -81,7 +81,7 @@ export default function CardMetas({ meta, onClose }) {
           className="w-full h-auto"
         >
           <button
-            className="relative top-0 left-[115rem] text-4xl font-bold cursor-pointer btn-card-opem-mobile"
+            className="relative top-0 left-[110rem] text-4xl font-bold cursor-pointer btn-card-opem-mobile"
             onClick={handleClose}
           >
             <i className="fa-solid fa-xmark text-white"></i>

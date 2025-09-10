@@ -1,15 +1,3 @@
-@media screen and (min-width: 1279px) and (max-width: 1438px) {
-    .lista-metas-mobile {
-        position: relative;
-        left: -3rem;
-    }
-
-    .container-lista-metas-mobileee {
-        position: relative;
-        left: -7rem;
-    }
-}
-
 @media screen and (min-width: 427px) and (max-width: 769px) {
     .container-lista-metas-mobile {
         display: flex;

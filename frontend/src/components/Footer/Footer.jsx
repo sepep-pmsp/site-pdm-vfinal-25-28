@@ -1,33 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import logo_prefeitura from "@/assets/svg/logo_PrefSP_com_fundo_horizontal_preto_monocromatico.svg";
 import RedesSociaisFooter from "./RedesSociaisFooter";
 import ContatosFooter from "./ContatosFooter";
 import Footer_pdm from "./Footer_pdm";
 import FooterMobile from "./FooterMobile";
+import { useIsMobile } from "../../hooks/useIsMobile";
 
 export default function Footer() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 1441);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 1441);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isMobile = useIsMobile(768);
 
   if (isMobile) {
-    return (
-      <div>
-        <FooterMobile />
-      </div>
-    );
+    return <FooterMobile />;
   }
 
   return (
-    <div className="text-white h-full w-full flex items-center flex-nowrap flex-row">
+    <div className="text-white h-full w-full flex items-center flex-nowrap flex-row footer">
       <div className="pt-4 bg-[var(--color-navy)] h-[25rem]">
         <div className="relative w-[35rem] left-28">
           <img
