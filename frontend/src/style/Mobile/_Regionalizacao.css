@@ -1,17 +1,3 @@
-@media screen and (min-width: 1439px) {
-    .regionalização_mobile {
-        margin: 0;
-    }
-
-    .ifram-div-regionalizacao-mobile {
-        width: 52rem;
-    }
-
-    .btn-regionalizacao-mobile {
-        top: 52rem;
-    }
-}
-
 @media screen and (min-width: 1279px) and (max-width: 1438px) {
     .regionalização_mobile {
         margin: 0;

@@ -19,37 +19,28 @@ export default function Footer() {
   }, []);
 
   if (isMobile) {
-    return <div><FooterMobile/></div>; 
+    return (
+      <div>
+        <FooterMobile />
+      </div>
+    );
   }
 
   return (
-    <div className="pt-12">
-      <footer>
-        <div className="bg-[var(--color-navy)] text-white h-[25rem] w-full flex items-center flex-nowrap flex-row">
-          <div className="pt-4">
-            <div>
-              <div className="relative w-[35rem] left-28">
-                <img
-                  src={logo_prefeitura}
-                  alt="Logo oficial da prefeitura de São Paulo"
-                />
-              </div>
-
-              <div className="flex items-center justify-evenly w-[70rem]">
-                <div>
-                  <RedesSociaisFooter />
-                </div>
-                <div>
-                  <ContatosFooter />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <Footer_pdm />
-          </div>
+    <div className="text-white h-full w-full flex items-center flex-nowrap flex-row">
+      <div className="pt-4 bg-[var(--color-navy)] h-[25rem]">
+        <div className="relative w-[35rem] left-28">
+          <img
+            src={logo_prefeitura}
+            alt="Logo oficial da prefeitura de São Paulo"
+          />
         </div>
-      </footer>
+        <div className="flex items-center justify-evenly w-[70rem]">
+          <RedesSociaisFooter />
+          <ContatosFooter />
+        </div>
+      </div>
+      <Footer_pdm />
     </div>
   );
 }

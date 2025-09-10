@@ -57,7 +57,7 @@ export default function Grid_menu_navbar({ onClose }) {
       </div>
       {/* Grid Central (coluna central) */}
       <div>
-        <div className="w-full h-screen flex items-center justify-center relative">
+        <div className="w-[76rem] h-screen flex items-center justify-center relative">
           <div className="grid grid-cols-3 grid-rows-3 gap-8 content-center justify-center p-2 w-full h-[54rem]">
             <div onClick={() => goToEixo("universo")} className="slide-right-in-img flex items-start justify-start flex-row p-6 col-span-2 row-span-1 bg-[var(--color-green)] cursor-pointer rounded-tl-[2rem]">
               <img

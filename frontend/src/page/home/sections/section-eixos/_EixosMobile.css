@@ -18,44 +18,6 @@
 }
 
 /*Telas Menores*/
-@media screen and (min-width: 1439px) {
-    .grid-mobile-eixos {
-        width: 70rem;
-
-        & img {
-            right: 4rem;
-        }
-
-        .text-hover-green {
-            top: 142rem;
-            left: 38rem;
-        }
-
-        .text-hover-blue {
-            top: 142rem;
-            left: 70rem;
-        }
-
-        .text-hover-orange {
-            top: 161rem;
-            left: 37.5rem;
-        }
-
-        .text-hover-purple {
-            top: 161rem;
-            left: 69.5rem;
-        }
-
-        .card-eixos {
-            height: 37.5rem;
-            border-radius: 3rem;
-            position: absolute;
-            left: 12rem;
-            top: 141rem;
-            width: 74.2rem
-        }
-    }
-}
 
 @media screen and (min-width: 1279px) and (max-width: 1438px) {
     .grid-mobile-eixos {

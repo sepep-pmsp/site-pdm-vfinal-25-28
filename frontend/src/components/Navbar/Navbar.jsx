@@ -33,7 +33,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="fixed p-2 bg-white z-30 w-auto">
+    <div className="fixed p-2 bg-white z-30 w-full">
       <div className="flex flex-row justify-around gap-56 items-center p-2">
         <div>
           <span className="text-4xl roboto-light navbar_span">

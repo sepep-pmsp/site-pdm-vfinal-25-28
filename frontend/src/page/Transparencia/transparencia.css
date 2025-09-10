@@ -17,22 +17,6 @@ body.menu-aberto .img-fundo {
     transition: all .5s ease-in-out;
 }
 
-@media screen and (min-width: 1439px) {
-    .custom-btn-mobile {
-        width: 100%;
-    }
-
-    .p-custom-btn-mobile {
-        font-size: 19px;
-    }
-
-    .transparencia-monitoramento-container-mobile {
-        margin: 2rem;
-    }
-
-
-}
-
 @media screen and (min-width: 1279px) and (max-width: 1438px) {
     .custom-btn-mobile {
         width: 100%;
@@ -45,8 +29,6 @@ body.menu-aberto .img-fundo {
     .transparencia-monitoramento-container-mobile {
         margin: 2rem;
     }
-
-
 }
 
 @media screen and (min-width: 427px) and (max-width: 769px) {

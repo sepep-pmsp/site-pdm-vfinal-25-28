@@ -5,34 +5,6 @@
 
 ******
  */
-
-@media screen and (min-width: 1439px) {
-    .subtext-about-mobile {
-        font-size: 40px;
-    }
-
-    .text-about-mobile {
-        font-size: 25px;
-    }
-
-    .img-matarazzo {
-        font-size: 40px;
-    }
-
-    .box-carta-text-mobile {
-        left: 36rem;
-    }
-
-    .btn-saibaMais-mobile {
-        left: 50rem;
-    }
-
-    .btn-prefeito-mobile {
-        top: -7.5rem;
-        left: 36rem;
-    }
-}
-
 @media screen and (min-width: 1279px) and (max-width: 1438px) {
     .subtext-about-mobile {
         font-size: 40px;
@@ -261,7 +233,7 @@
     .box-open-carta-mobile {
         width: 24rem;
         max-height: 80vh;
-        left: -1rem;
+        left: -41rem;
         overflow-y: auto;
     }
 }

@@ -2,13 +2,15 @@ import React, { useEffect, useState } from "react";
 import { getHistoricoData } from "@/services/Historico/getHistoricoData";
 import CardItem from "./CardItem";
 import NextButton from "./NextButton";
+import PrevButton from "./PrevButton";
 
 export default function CarrosselHistorico() {
   const [historico, setHistorico] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [openedCardId, setOpenedCardId] = useState(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1025);
+  const [direction, setDirection] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 769);
 
   useEffect(() => {
     getHistoricoData()
@@ -17,7 +19,7 @@ export default function CarrosselHistorico() {
   }, []);
 
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 1025);
+    const handleResize = () => setIsMobile(window.innerWidth <= 769);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -30,10 +32,24 @@ export default function CarrosselHistorico() {
   const next = () => {
     if (animating) return;
     setAnimating(true);
+    setDirection("next");
     setTimeout(() => {
       setCurrentIndex((prev) => (prev + 1) % total);
       setOpenedCardId(null);
       setAnimating(false);
+      setDirection(null);
+    }, 500);
+  };
+
+  const prev = () => {
+    if (animating) return;
+    setAnimating(true);
+    setDirection("prev");
+    setTimeout(() => {
+      setCurrentIndex((prev) => (prev - 1 + total) % total);
+      setOpenedCardId(null);
+      setAnimating(false);
+      setDirection(null);
     }, 500);
   };
 
@@ -61,6 +77,7 @@ export default function CarrosselHistorico() {
             <CardItem
               card={card1}
               animating={animating}
+              direction={direction}
               type="current"
               openedCardId={openedCardId}
               setOpenedCardId={setOpenedCardId}
@@ -68,12 +85,14 @@ export default function CarrosselHistorico() {
             <CardItem
               card={card2}
               animating={animating}
+              direction={direction}
               type="next"
               openedCardId={openedCardId}
               setOpenedCardId={setOpenedCardId}
             />
           </div>
           <NextButton onClick={next} />
+          <PrevButton onClick={prev} />
         </>
       )}
     </div>

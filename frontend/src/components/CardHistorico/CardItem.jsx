@@ -8,18 +8,21 @@ export default function CardItem({
   animating,
   type = "current",
   openedCardId,
-  setOpenedCardId
+  setOpenedCardId,
+  direction
 }) {
   const showDocs = openedCardId === card.id;
 
   const animationClass =
-    type === "current"
-      ? animating
-        ? "fade-in-animation"
-        : ""
-      : animating
+  type === "current"
+    ? animating
+      ? "fade-in-animation"
+      : ""
+    : animating
+    ? direction === "next"
       ? "slide-left-card-animation"
-      : "";
+      : "slide-right-card-animation"
+    : "";
 
   const layerClass = (visible) =>
     `absolute inset-0 transition-opacity duration-500 ${

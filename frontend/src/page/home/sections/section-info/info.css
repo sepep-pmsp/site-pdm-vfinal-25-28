@@ -20,53 +20,6 @@
 
 
 /*Telas Menores*/
-@media screen and (min-width: 1439px) {
-    .info-section-mobile {
-        height: 100%;
-    }
-
-    .agrupar1,
-    .agrupar2 {
-        display: none;
-    }
-
-    .info-div-mobile {
-        gap: 1rem;
-        position: relative;
-        left: 4rem;
-    }
-
-    .groupy {
-        width: 19rem;
-        height: 19rem;
-    }
-
-    .object-cover {
-        width: auto;
-        height: auto;
-    }
-
-    .div-mobile-info {
-        width: 19rem;
-    }
-
-    .title-mobile-info {
-        font-size: 40px;
-        width: 13rem;
-    }
-
-    .text-mobile-info {
-        width: 14rem;
-        font-size: 18px;
-    }
-
-    .more_pdms_mobile {
-        position: relative;
-        top: 8rem;
-        height: 21rem;
-    }
-
-}
 
 @media screen and (min-width: 1279px) and (max-width: 1438px) {
     .info-section-mobile {
