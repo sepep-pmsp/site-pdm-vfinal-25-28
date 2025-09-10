@@ -98,6 +98,7 @@
 
     .news-mobile {
         margin: 0 1rem;
+        width: 20rem;
 
         & .news_navbar_text {
             gap: 2rem;

@@ -19,6 +19,7 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
   const [hovered, setHovered] = useState("");
   const [eixosTematicos, setEixosTematicos] = useState([]);
   const sectionRef = useRef(null);
+    const tituloVisivel = selectedEixo ? "hidden" : "none";
 
   React.useEffect(() => {
     getEixosData().then((data) => {
@@ -99,7 +100,7 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
             alt=""
             className="relative right-40 w-60"
           />
-          <p className="w-38 text-3xl uppercase text-white text-hover-green absolute left-[52rem] top-[138rem]">
+          <p className={`w-38 text-3xl uppercase text-white text-hover-green absolute left-[52rem] top-[138rem] ${tituloVisivel}`}>
             {
               eixosTematicos.find((eixo) =>
                 eixo.nome.toLowerCase().includes("universo")
@@ -123,7 +124,7 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
             alt=""
             className="relative right-31 w-60"
           />
-          <p className="w-45 text-3xl uppercase text-white text-hover-blue absolute left-[92rem] top-[138rem]">
+          <p className={`w-45 text-3xl uppercase text-white text-hover-blue absolute left-[92rem] top-[138rem] ${tituloVisivel}`}>
             {
               eixosTematicos.find((eixo) =>
                 eixo.nome.toLowerCase().includes("cidade")
@@ -143,7 +144,7 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
             alt=""
             className="relative right-40 w-60"
           />
-          <p className="w-40 text-3xl uppercase text-white text-hover-orange absolute left-[51rem] top-[158rem]">
+          <p className={`w-40 text-3xl uppercase text-white text-hover-orange absolute left-[51rem] top-[158rem] ${tituloVisivel}`}>
             {
               eixosTematicos.find((eixo) =>
                 eixo.nome.toLowerCase().includes("viver")
@@ -165,7 +166,7 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
             alt=""
             className="relative right-35 w-60"
           />
-          <p className="w-38 text-3xl uppercase text-white absolute left-[92rem] top-[158rem] text-hover-purple ">
+          <p className={`w-38 text-3xl uppercase text-white absolute left-[92rem] top-[158rem] text-hover-purple ${tituloVisivel}`}>
             {
               eixosTematicos.find((eixo) =>
                 eixo.nome.toLowerCase().includes("capital")

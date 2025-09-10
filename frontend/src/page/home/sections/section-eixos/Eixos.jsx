@@ -10,7 +10,7 @@ export default function Eixos() {
       <div className="bg-[color:var(--color-navy)] h-40 rotate-[270deg] relative flex items-end flex-col justify-end p-4 rounded-br-3xl rounded-bl-3xl w-[54rem] right-[22rem] top-[29rem] shadow-[-4px_2px_20px_0px_gray] eixos-mobile-header">
         <h1 className="text-white text-7xl px-6 eixos-mobile-header-text">eixos estratégicos</h1>
       </div>
-      <section className="my-34">
+      <section className="my-34 conatiner-textos-eixos-mobile">
         <div className="gap-24 flex items-center justify-center pl-28 relative bottom-12 section-eixos-texts-mobile">
           <h2 className="text-5xl text-[var(--color-navy)] w-60 eixos-texts-mobile">
             a estrutura do programa de metas

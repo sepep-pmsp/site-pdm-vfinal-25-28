@@ -279,6 +279,11 @@
         flex-wrap: nowrap;
         flex-direction: column;
         padding: 1rem 0;
+        width: 19rem;
+    }
+
+    .conatiner-textos-eixos-mobile {
+        margin: 0;
     }
 
     .eixos-mobile-header-text {
@@ -294,7 +299,10 @@
         width: 22rem;
         height: 50rem;
         position: relative;
-        right: 5rem;
+    }
+
+    .grid-mobile-eixos p {
+        display: none;
     }
 
     .w-60 {
@@ -304,16 +312,17 @@
 
     #eixos {
         height: 100%;
+        padding: 0;
     }
 
     .card-eixos {
         position: absolute;
         transition: all 0.8s ease;
-        border-radius: 3rem rem;
+        border-radius: 3rem;
         left: 0rem;
-        top: 0rem;
+        top: -3rem;
         width: 23.2rem;
-        height: 51.5rem;
+        height: 57.5rem;
     }
 
     .eixos-textos-p-mobile {
@@ -334,9 +343,9 @@
 
     .buttons-eixos {
         position: absolute;
-        left: 30rem;
-        top: 16rem;
-        width: 68rem;
+        left: 4rem;
+        top: 29rem;
+        width: 15rem;
     }
 
     .header-eixos-mobile {
@@ -388,6 +397,9 @@
 
     .eixos-text-p-mobile {
         width: 15rem;
+    }
 
+    .container-eixos-mobile {
+        width: auto;
     }
 }
