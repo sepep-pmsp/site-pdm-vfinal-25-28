@@ -301,7 +301,7 @@
         position: relative;
     }
 
-    .grid-mobile-eixos p {
+    .text-hover-green {
         display: none;
     }
 
@@ -338,13 +338,13 @@
         justify-content: center;
         flex-wrap: nowrap;
         padding: 0.5rem 1rem;
-        gap: 3rem;
+        gap: 8rem;
     }
 
     .buttons-eixos {
         position: absolute;
         left: 4rem;
-        top: 29rem;
+        top: 32rem;
         width: 15rem;
     }
 
