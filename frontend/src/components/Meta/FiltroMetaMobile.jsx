@@ -1,64 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { getFiltroMetasData, postFiltrosSelecionados } from "@/services/Metas/getFiltroMetasData";
+import React from "react";
 import { corrigirUrlImagem } from "@/utils/imageUtils";
+import { useFiltrosMetas } from "../../hooks/useFiltrosMetas";
 
 export default function FiltroMetaMobile({ onCardsUpdate }) {
-  const [data, setData] = useState(null);
-  const [filtrosSelecionados, setFiltrosSelecionados] = useState({
-    ods: [],
-    regioes: [],
-    subprefeituras: [],
-    planos_vinculados: [],
-    orgaos: [],
-    eixos: [],
-    subeixos: [],
-  });
-
-  useEffect(() => {
-    getFiltroMetasData().then(setData).catch(console.error);
-  }, []);
-
-  useEffect(() => {
-    if (data) {
-      postFiltrosSelecionados(filtrosSelecionados)
-        .then((res) => {
-          onCardsUpdate(res);
-        })
-        .catch(console.error);
-    }
-  }, [filtrosSelecionados, data, onCardsUpdate]);
+  const { data, filtrosSelecionados, toggleSelecionado, limparFiltros } =
+    useFiltrosMetas(onCardsUpdate);
 
   if (!data) return <p>Carregando filtros...</p>;
-
-  function toggleSelecionado(tipo, valor) {
-    setFiltrosSelecionados((prev) => {
-      const jaSelecionado = prev[tipo]?.includes(valor);
-      return {
-        ...prev,
-        [tipo]: jaSelecionado
-          ? prev[tipo].filter((v) => v !== valor)
-          : [...prev[tipo], valor],
-      };
-    });
-  }
-
-  function limparFiltros() {
-    const estadoInicial = {
-      ods: [],
-      regioes: [],
-      subprefeituras: [],
-      planos_vinculados: [],
-      orgaos: [],
-      eixos: [],
-      subeixos: [],
-    };
-    setFiltrosSelecionados(estadoInicial);
-    postFiltrosSelecionados(estadoInicial)
-      .then((res) => {
-        onCardsUpdate(res);
-      })
-      .catch(console.error);
-  }
 
   return (
     <div className="flex flex-col gap-4 p-4">
@@ -129,14 +77,20 @@ export default function FiltroMetaMobile({ onCardsUpdate }) {
 
       {/* Accordion: Planos Vinculados */}
       <details className="bg-white rounded-lg shadow p-3">
-        <summary className="font-bold cursor-pointer">Planos Vinculados</summary>
+        <summary className="font-bold cursor-pointer">
+          Planos Vinculados
+        </summary>
         <div className="flex flex-col gap-2 mt-2 max-h-40 overflow-y-auto">
           {data.planos_setoriais.map((plano) => (
             <label key={plano.id} className="flex items-center gap-2">
               <input
                 type="checkbox"
-                checked={filtrosSelecionados.planos_vinculados.includes(plano.id)}
-                onChange={() => toggleSelecionado("planos_vinculados", plano.id)}
+                checked={filtrosSelecionados.planos_vinculados.includes(
+                  plano.id
+                )}
+                onChange={() =>
+                  toggleSelecionado("planos_vinculados", plano.id)
+                }
               />
               <span>{plano.nome}</span>
             </label>

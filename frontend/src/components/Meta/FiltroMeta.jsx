@@ -1,73 +1,17 @@
-import React, { useEffect, useState } from "react";
-import {
-  getFiltroMetasData,
-  postFiltrosSelecionados
-} from "@/services/Metas/getFiltroMetasData";
+import React from "react";
 import FiltroODS from "./FiltroMeta/FiltroODS";
 import FiltroCentro from "./FiltroMeta/FiltroCentro";
 import FiltroEixos from "./FiltroMeta/FiltroEixos";
 import { useMediaQuery } from "react-responsive";
 import FiltroMetaMobile from "./FiltroMetaMobile";
+import { useFiltrosMetas } from "../../hooks/useFiltrosMetas";
 
 export default function FiltroMeta({ onCardsUpdate }) {
-  const [data, setData] = useState(null);
   const isMobile = useMediaQuery({ maxWidth: 1025 });
-  const [filtrosSelecionados, setFiltrosSelecionados] = useState({
-    ods: [],
-    regioes: [],
-    subprefeituras: [],
-    planos_vinculados: [],
-    orgaos: [],
-    eixos: [],
-    subeixos: []
-  });
-
-  useEffect(() => {
-    getFiltroMetasData().then(setData).catch(console.error);
-  }, []);
-
-  useEffect(() => {
-    if (data) {
-      postFiltrosSelecionados(filtrosSelecionados)
-        .then((res) => {
-          onCardsUpdate(res);
-        })
-        .catch(console.error);
-    }
-  }, [filtrosSelecionados, data, onCardsUpdate]);
+  const { data, filtrosSelecionados, toggleSelecionado, limparFiltros } =
+    useFiltrosMetas(onCardsUpdate);
 
   if (!data) return <p>Carregando filtros...</p>;
-
-  function toggleSelecionado(tipo, valor) {
-    setFiltrosSelecionados((prev) => {
-      const jaSelecionado = prev[tipo]?.includes(valor);
-      return {
-        ...prev,
-        [tipo]: jaSelecionado
-          ? prev[tipo].filter((v) => v !== valor)
-          : [...prev[tipo], valor]
-      };
-    });
-  }
-
-  function limparFiltros() {
-    const estadoInicial = {
-      ods: [],
-      regioes: [],
-      subprefeituras: [],
-      planos_vinculados: [],
-      orgaos: [],
-      eixos: [],
-      subeixos: []
-    };
-    setFiltrosSelecionados(estadoInicial);
-    postFiltrosSelecionados(estadoInicial)
-      .then((res) => {
-        onCardsUpdate(res);
-      })
-      .catch(console.error);
-  }
-
   return (
     <div className="flex items-start">
       {isMobile ? (
