@@ -1,70 +1,140 @@
+
+.card {
+  position: relative;
+  transition: transform 0.5s ease, opacity 0.5s ease, z-index 0.3s;
+  will-change: transform, opacity;
+}
+
+.card-logo {
+  width: 15rem;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  flex: 0 0 auto;
+  transform: none !important;
+  transition: none !important;
+}
+
+.card-title {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: clamp(1.25rem, 2.5vw, 1.875rem);
+  pointer-events: none;
+}
+
 .card-hover {
   border: 4px solid transparent;
   transition: background-color 0.3s, border-color 0.3s;
+}
+.card-hover:hover { transform: none !important; }
+.card-hover:hover img { transform: none !important; transition: none !important; }
 
-  & .text-hover-green,
-    text-hover-blue,
-    text-hover-purple,
-    text-hover-orange{
-    transition: all 0.3s ease-in-out;
-  }
+.card-hover .text-hover-green,
+.card-hover .text-hover-blue,
+.card-hover .text-hover-purple,
+.card-hover .text-hover-orange {
+  transition: color 0.3s ease-in-out;
 }
 
-.card-hover-green:hover {
-  background-color: white;
-  border-color: var(--color-green);
+.card-hover-green:hover { background:#fff; border-color: var(--color-green); }
+.card-hover-green:hover .text-hover-green { color: var(--color-green); }
 
-  & .text-hover-green{
-    color: var(--color-green);
-  }
+.card-hover-blue:hover { background:#fff; border-color: var(--color-blue); }
+.card-hover-blue:hover .text-hover-blue { color: var(--color-blue); }
+
+.card-hover-orange:hover { background:#fff; border-color: var(--color-orange-red); }
+.card-hover-orange:hover .text-hover-orange { color: var(--color-orange-red); }
+
+.card-hover-purple:hover { background:#fff; border-color: var(--color-purple-red); }
+.card-hover-purple:hover .text-hover-purple { color: var(--color-purple-red); }
+
+/* ================== UTIL ================== */
+.paragrafo { font-size: 1.3rem; line-height: 2rem; }
+.itemListCard { list-style-type: disc; }
+.itemListCard::marker { font-size: 15px; }
+.border-y { border-top: 2px solid; border-bottom: 2px solid; }
+
+/* ================== OVERLAY/MODAL ================== */
+/* Centraliza e cria profundidade para animação 3D */
+.cardeixos-overlay { perspective: 1200px; }
+
+/* Reset do CSS antigo do CardEixos (sem top/left gigantes) */
+.cardeixos-overlay .card-eixos {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  width: min(84.2rem, 100%) !important;
+  height: auto !important;
+  max-height: 90vh !important;
+  overflow: auto !important;
+  border-radius: 3rem !important;
+  transform: none !important;
+  opacity: 1 !important;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
 }
 
-.card-hover-blue:hover {
-  background-color: white;
-  border-color: var(--color-blue);
-
-  & .text-hover-blue {
-    color: var(--color-blue);
-  }
-}
-
-.card-hover-purple:hover {
-  background-color: white;
-  border-color: var(--color-orange-red);
-
-    & .text-hover-orange {
-        color: var(--color-orange-red);
-    }
-}
-
-.card-hover-orange:hover {
-  background-color: white;
-  border-color: var(--color-purple-red);
-
-  & .text-hover-purple{
-    color: var(--color-purple-red);
-  }
-}
-
-.paragrafo{
-    font-size: 1.3rem;
-    line-height: 2rem;
-}
-
-.itemListCard{
-    list-style-type: disc;
-
-    &::marker{
-        font-size: 15px;
-    }
-}
-
-.border-y{
-    border-top: 2px solid;
-    border-bottom: 2px solid;
-}
-
-.card {
-  transition: transform 0.5s ease, opacity 0.5s ease, z-index 0.3s;
+/* Wrapper que recebe a animação (evita conflitos no filho) */
+.cardeixos-animator {
+  display: inline-block;
+  transform-origin: center center;
   will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+/* ================== ANIMAÇÃO (RODINHA) ================== */
+/* Use APENAS esta animação. Removidas duplicatas e nomes conflitantes. */
+@keyframes cardOpenSpinZ {
+  0%   { transform: rotateZ(-18deg) scale(0.92); opacity: 0; }
+  60%  { transform: rotateZ(6deg)  scale(1.02); opacity: 1; }
+  100% { transform: rotateZ(0deg)  scale(1);    opacity: 1; }
+}
+.spinZ-in {
+  animation: cardOpenSpinZ 520ms cubic-bezier(.2,.8,.2,1) both;
+}
+
+/* Acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  .spinZ-in { animation: none; }
+}
+
+.eixo-title{
+  left: 11rem;
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.1;
+  z-index: 1;
+}
+@media (min-width:640px){ .eixo-title{ left:12rem; } }
+@media (min-width:768px){ .eixo-title{ left:14rem; } }
+@media (min-width:1024px){ .eixo-title{ left:16rem; } }
+
+/* Hover por card, sem usar text-hover-* */
+.card-hover-green:hover .eixo-title{ color: var(--color-green); }
+.card-hover-blue:hover  .eixo-title{ color: var(--color-blue); }
+.card-hover-orange:hover.eixo-title,
+.card-hover-orange:hover .eixo-title{ color: var(--color-orange-red); }
+.card-hover-purple:hover .eixo-title{ color: var(--color-purple-red); }
+
+/* Blindagem contra regras antigas que escondiam o título no mobile */
+.eixo-title{ display: block !important; }
+
+.cardeixos-overlay { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; padding:1rem; z-index:9999; }
+
+.cardeixos-overlay .card-eixos{
+  position:relative !important;
+  left:auto !important;
+  top:auto !important;
+  inset:auto !important;
+  margin:0 !important;
+  width:min(1100px, calc(100vw - 2rem)) !important;
+  height:auto !important;
+  max-height:calc(100vh - 2rem) !important;
+  overflow:auto !important;
+  border-radius:2rem !important;
+  transform:none !important;
+  opacity:1 !important;
 }
