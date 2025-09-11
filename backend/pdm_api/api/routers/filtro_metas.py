@@ -44,7 +44,7 @@ def get_parametros_regionalizacao(request)->list[ParametroZonaSchema]:
             zona_data = {
                 "id" : zona_obj.id,
                 "sigla" : zona_obj.sigla,
-                "nome" : zona_obj.nome,
+                "nome" : zona_obj.nome_com_destaque,
             }
 
             subprefeituras = [
