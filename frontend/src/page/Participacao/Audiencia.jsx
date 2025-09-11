@@ -41,7 +41,7 @@ export default function Audiencia({ audiencia }) {
           </h1>
         </div>
       </div>
-      <div className="mx-34 audiencia-mobile">
+      <div className="mx-60 audiencia-mobile">
         <div className="gap-24 flex items-center justify-center relative pl-20 bottom-28 container-audiencia-mobile">
           <h2 className="text-5xl text-[var(--color-navy)]">
             Veja informações sobre as devolutivas.
@@ -52,25 +52,23 @@ export default function Audiencia({ audiencia }) {
             complexidade do plano e orientar o olhar de quem lê.
           </p>
         </div>
-        <div className="flex items-center justify-center flex-col flex-nowrap gap-20">
+        <div className="flex items-center justify-center flex-col flex-nowrap gap-20 max-sm:relative top-40">
           <span className="w-[70rem] h-[40rem] shadow-[0px_0px_12px_grey] p-8 rounded-3xl span-video-mobile-1">
             <div>
               {showOverlay && (
                 <>
                   <div
-                    className="bg-[var(--color-cyan-light)] absolute w-44 top-[145rem] px-8 py-2 left-[24.9rem] z-20 text-white rounded-r-3xl cursor-pointer banner-mobile-audiencia"
+                    className="bg-[var(--color-cyan-light)] absolute w-44 top-[130rem] px-8 py-2 left-[24.5rem] z-20 text-white rounded-r-3xl cursor-pointer max-sm:top-[-8rem] max-sm:left-0 banner-mobile-audiencia"
                     onClick={() => {
                       setShowOverlay(false);
                       playerRef.current?.playVideo();
                     }}
                   >
-                    <div></div>
                     Audiência Geral <br /> 25/04/2025
                   </div>
                 </>
               )}
             </div>
-
             <iframe
               className="w-full h-full rounded-3xl"
               id="yt-player-destaque"
@@ -98,9 +96,9 @@ export default function Audiencia({ audiencia }) {
             ))}
           </div>
         </div>
-        <div className="py-8">
+        <div className="py-8 max-sm:relative top-40">
           <div className="h-1 w-full bg-[var(--color-neutral-400)]"></div>
-          <div className="gap-12 flex flex-row flex-nowrap items-center justify-center py-8 mini-footer-audiencia-mobile">
+          <div className="gap-12 flex flex-row justify-around items-center py-8 mini-footer-audiencia-mobile">
             <div className="flex gap-12 items-center justify-center w-[45rem] mini-footer-texto-audiencia-mobile">
               <h3 className="text-4xl text-[var(--color-navy)]">SAIBA MAIS:</h3>
               <h2 className="text-5xl text-[var(--color-navy)]">

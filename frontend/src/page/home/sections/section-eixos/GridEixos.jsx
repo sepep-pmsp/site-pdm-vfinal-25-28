@@ -85,7 +85,7 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
     <div
       ref={sectionRef}
       id="eixos"
-      className="flex items-center h-[42rem] justify-center pl-36"
+      className="flex items-center h-[42rem] justify-center"
     >
       <div className=" grid grid-cols-[repeat(2,1fr)] items-center h-[40rem] content-center justify-center p-2 w-[85rem] gap-8 grid-mobile-eixos">
         <div
@@ -98,9 +98,9 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
           <img
             src={hovered === "universo" ? Universo_SP_colorido : Universo_SP}
             alt=""
-            className="relative right-40 w-60"
+            className="relative right-40"
           />
-          <p className={`w-38 text-3xl uppercase text-white text-hover-green absolute left-[52rem] top-[138rem] ${tituloVisivel}`}>
+          <p className={`w-38 text-3xl uppercase text-white text-hover-green absolute left-[45rem] top-[138rem] ${tituloVisivel}`}>
             {
               eixosTematicos.find((eixo) =>
                 eixo.nome.toLowerCase().includes("universo")
@@ -122,9 +122,9 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
                 : Cidade_Empreendedora
             }
             alt=""
-            className="relative right-31 w-60"
+            className="relative right-31"
           />
-          <p className={`w-45 text-3xl uppercase text-white text-hover-blue absolute left-[92rem] top-[138rem] ${tituloVisivel}`}>
+          <p className={`w-45 text-3xl uppercase text-white text-hover-blue absolute left-[87rem] top-[138rem] ${tituloVisivel}`}>
             {
               eixosTematicos.find((eixo) =>
                 eixo.nome.toLowerCase().includes("cidade")
@@ -144,7 +144,7 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
             alt=""
             className="relative right-40 w-60"
           />
-          <p className={`w-40 text-3xl uppercase text-white text-hover-orange absolute left-[51rem] top-[158rem] ${tituloVisivel}`}>
+          <p className={`w-40 text-3xl uppercase text-white text-hover-orange absolute left-[45rem] top-[158rem] ${tituloVisivel}`}>
             {
               eixosTematicos.find((eixo) =>
                 eixo.nome.toLowerCase().includes("viver")
@@ -164,9 +164,9 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
               hovered === "capital" ? Capital_Futuro_colorido : Capital_Futuro
             }
             alt=""
-            className="relative right-35 w-60"
+            className="relative right-35"
           />
-          <p className={`w-38 text-3xl uppercase text-white absolute left-[92rem] top-[158rem] text-hover-purple ${tituloVisivel}`}>
+          <p className={`w-38 text-3xl uppercase text-white absolute left-[87rem] top-[158rem] text-hover-purple ${tituloVisivel}`}>
             {
               eixosTematicos.find((eixo) =>
                 eixo.nome.toLowerCase().includes("capital")

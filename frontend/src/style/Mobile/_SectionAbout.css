@@ -235,5 +235,6 @@
         max-height: 80vh;
         left: -41rem;
         overflow-y: auto;
+        top: -61rem;
     }
 }
