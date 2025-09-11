@@ -211,5 +211,4 @@ def search_metas(request, params: SearchParamSchema):
             retorno_final.append(meta_response)
         return SearchResponseSchema(total=resultados.count(), metas=retorno_final)
     except Exception as e:
-        raise(e)
         raise HttpError(500, f"Erro ao buscar metas: {str(e)}")
