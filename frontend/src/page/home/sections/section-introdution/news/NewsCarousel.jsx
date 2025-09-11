@@ -33,13 +33,13 @@ useEffect(() => {
 
 return (
     <div className="flex justify-center flex-nowrap">
-        <section className="relative bg-[color:var(--color-white)] shadow-[1px_1px_20px_#00000045] w-[100rem] h-32 rounded-[3rem] bottom-16 p-4 z-10 news-mobile">
+        <section className="relative bg-[color:var(--color-white)] shadow-[1px_1px_20px_#00000045] w-[90rem] h-32 rounded-[3rem] bottom-16 p-4 z-10 news-mobile">
             <div className="flex flex-row justify-center items-center flex-nowrap h-full news_navbar_text">
                 <div>
                     <h2 className="text-[var(--color-cyan-medium)] text-5xl">na mídia</h2>
                 </div>
                 <div className="w-[69%] flex flex-col justify-center items-center gap-8 h-full news-nabvar-text">
-                    <div className="text-2xl texto-carrosel relative w-full left-36 top-[0.6rem]">
+                    <div className="text-2xl texto-carrosel relative w-full flex justify-center top-[0.6rem]">
                         {news.map((news, index) => (
                             <a
                                 key={index}

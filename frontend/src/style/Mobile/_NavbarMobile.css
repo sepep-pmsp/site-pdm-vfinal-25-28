@@ -299,14 +299,14 @@
 /* Celular */
 @media screen and (min-width: 319px) and (max-width: 426px) {
     .navbar-container{
-        width: 100%;
+        width: 27rem;
     }
     
     .display-navbar {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        width: auto;
+        width: 20rem;
         gap: 2rem
     }
 

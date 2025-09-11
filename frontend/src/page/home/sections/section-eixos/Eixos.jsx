@@ -11,7 +11,7 @@ export default function Eixos() {
         <h1 className="text-white text-7xl px-6 eixos-mobile-header-text">eixos estratégicos</h1>
       </div>
       <section className="my-34 conatiner-textos-eixos-mobile">
-        <div className="gap-24 flex items-center justify-center pl-28 relative bottom-12 section-eixos-texts-mobile">
+        <div className="gap-24 flex items-center justify-center relative bottom-12 section-eixos-texts-mobile">
           <h2 className="text-5xl text-[var(--color-navy)] w-60 eixos-texts-mobile">
             a estrutura do programa de metas
           </h2>

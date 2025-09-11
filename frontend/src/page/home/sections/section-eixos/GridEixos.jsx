@@ -144,5 +144,4 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
     </div>
   </div>
 );
-
 }
