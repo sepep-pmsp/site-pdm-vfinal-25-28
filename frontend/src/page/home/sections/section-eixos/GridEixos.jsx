@@ -1,17 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import { createPortal } from "react-dom";
+
 import CardEixos from "./CardEixos";
 import { getEixosData } from "@/services/home/getEixosData";
 
-import Universo_SP from "@/assets/svg/universo_sp.svg";
-import Viver_SP from "@/assets/svg/viver_sao_paulo.svg";
-import Capital_Futuro from "@/assets/svg/capital_do_futuro.svg";
-import Cidade_Empreendedora from "@/assets/svg/cidade_empreendedora.svg";
 
-import Universo_SP_colorido from "@/assets/svg/universo_sp_colorido.svg";
-import Viver_SP_colorido from "@/assets/svg/viver_sp_colorido.svg";
-import Capital_Futuro_colorido from "@/assets/svg/capital_futuro_colorido.svg";
-import Cidade_Empreendedora_colorido from "@/assets/svg/cidade_empreendedora_colorido.svg";
 
 export default function GridEixos({ eixoSelecionadoDoMenu }) {
   const universoRef = useRef(null);
@@ -53,7 +45,7 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
   const titulo = (key) =>
     eixosTematicos.find((e) => e.nome.toLowerCase().includes(key))?.titulo ?? "";
 
-  // >>> quebra a linha após " E " (ou " e ")
+  
   const tituloQuebrado = (key) => {
     const t = titulo(key);
     if (!t) return "";
@@ -68,113 +60,89 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
     return t;
   };
 
-  return (
-    <div ref={sectionRef} id="eixos" className="flex items-center justify-center px-6 min-h-[42rem]">
-      <div className="grid grid-cols-1 md:grid-cols-2 items-stretch content-center justify-center gap-8 w-full max-w-[85rem] grid-mobile-eixos">
+ return (
+  <div ref={sectionRef} id="eixos" className="flex items-center justify-center px-6 min-h-[42rem]">
+    <div className="grid grid-cols-1 md:grid-cols-2 items-stretch content-center justify-center gap-8 w-full max-w-[85rem] grid-mobile-eixos">
 
-        {/* UNIVERSO */}
-        <div
-          ref={universoRef}
-          className="relative card card-hover card-hover-green flex items-center justify-start bg-[var(--color-green)] h-70 rounded-tl-[2.5rem] p-8"
-          onMouseEnter={() => setHovered("universo")}
-          onMouseLeave={() => setHovered("")}
-          onClick={(e) => handleClick("universo", e)}
-        >
-          <img
-            src={hovered === "universo" ? Universo_SP_colorido : Universo_SP}
-            alt="Universo SP"
-            className="card-logo w-60 h-60 object-contain shrink-0"
-          />
-          {!selectedEixo && (
-            <p
-  className={`eixo-title absolute top-4 right-6 text-right uppercase text-white text-2xl md:text-3xl leading-tight ${tituloVisivel}`}
->
-  {tituloQuebrado("universo")}
-</p>
-          )}
-        </div>
-
-        {/* CIDADE */}
-        <div
-          ref={cidadeRef}
-          className="relative card card-hover card-hover-blue flex items-center justify-start bg-[var(--color-blue)] h-70 rounded-tr-[2.5rem] p-8"
-          onMouseEnter={() => setHovered("cidade")}
-          onMouseLeave={() => setHovered("")}
-          onClick={(e) => handleClick("cidade", e)}
-        >
-          <img
-            src={hovered === "cidade" ? Cidade_Empreendedora_colorido : Cidade_Empreendedora}
-            alt="Cidade Empreendedora"
-            className="card-logo w-60 h-60 object-contain shrink-0"
-          />
-          {!selectedEixo && (
-            <p
-  className={`eixo-title absolute top-4 right-6 text-right uppercase text-white text-2xl md:text-3xl leading-tight ${tituloVisivel}`}
->
-  {tituloQuebrado("cidade")}
-</p>
-          )}
-        </div>
-
-        {/* VIVER */}
-        <div
-          ref={viverRef}
-          className="relative card card-hover card-hover-orange flex items-center justify-start bg-[var(--color-orange-red)] h-70 rounded-bl-[2.5rem] p-8"
-          onMouseEnter={() => setHovered("viver")}
-          onMouseLeave={() => setHovered("")}
-          onClick={(e) => handleClick("viver", e)}
-        >
-          <img
-            src={hovered === "viver" ? Viver_SP_colorido : Viver_SP}
-            alt="Viver São Paulo"
-            className="card-logo w-60 h-60 object-contain shrink-0"
-          />
-          {!selectedEixo && (
-            <p
-  className={`eixo-title absolute top-4 right-6 text-right uppercase text-white text-2xl md:text-3xl leading-tight ${tituloVisivel}`}
->
-  {tituloQuebrado("viver")}
-</p>
-          )}
-        </div>
-
-        {/* CAPITAL */}
-        <div
-          ref={capitalRef}
-          className="relative card card-hover card-hover-purple flex items-center justify-start bg-[var(--color-purple-red)] h-70 rounded-br-[2.5rem] p-8"
-          onMouseEnter={() => setHovered("capital")}
-          onMouseLeave={() => setHovered("")}
-          onClick={(e) => handleClick("capital", e)}
-        >
-          <img
-            src={hovered === "capital" ? Capital_Futuro_colorido : Capital_Futuro}
-            alt="Capital do Futuro"
-            className="card-logo w-60 h-60 object-contain shrink-0"
-          />
-          {!selectedEixo && (
-            <p
-  className={`eixo-title absolute top-4 right-6 text-right uppercase text-white text-2xl md:text-3xl leading-tight ${tituloVisivel}`}
->
-  {tituloQuebrado("capital")}
-</p>
-          )}
-        </div>
-
-        {selectedEixo && (
-  <div className="cardeixos-overlay fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/30">
-    <div
-      key={selectedEixo?.id || selectedEixo?.nome || "cardeixos"}
-      className="cardeixos-animator spinZ-in"
-    >
-      {/* wrapper com classe 'card-eixos' para aplicarmos o reset */}
-      <div className="card-eixos">
-        <CardEixos eixo={selectedEixo} onClose={() => setSelectedEixo(null)} />
+      {/* UNIVERSO */}
+      <div
+        ref={universoRef}
+        className="relative card card-hover card-hover-green flex items-center justify-start bg-[var(--color-green)] h-70 rounded-tl-[2.5rem] p-8"
+        onMouseEnter={() => setHovered("universo")}
+        onMouseLeave={() => setHovered("")}
+        onClick={(e) => handleClick("universo", e)}
+      >
+        <div className="logo-mask logo-universo" role="img" aria-label="Universo SP" />
+        {!selectedEixo && (
+          <p className={`eixo-title absolute top-4 right-6 text-right uppercase text-white text-2xl md:text-3xl leading-tight ${tituloVisivel}`}>
+            {tituloQuebrado("universo")}
+          </p>
+        )}
       </div>
+
+      {/* CIDADE */}
+      <div
+        ref={cidadeRef}
+        className="relative card card-hover card-hover-blue flex items-center justify-start bg-[var(--color-blue)] h-70 rounded-tr-[2.5rem] p-8"
+        onMouseEnter={() => setHovered("cidade")}
+        onMouseLeave={() => setHovered("")}
+        onClick={(e) => handleClick("cidade", e)}
+      >
+        <div className="logo-mask logo-cidade" role="img" aria-label="Cidade Empreendedora" />
+        {!selectedEixo && (
+          <p className={`eixo-title absolute top-4 right-6 text-right uppercase text-white text-2xl md:text-3xl leading-tight ${tituloVisivel}`}>
+            {tituloQuebrado("cidade")}
+          </p>
+        )}
+      </div>
+
+      {/* VIVER */}
+      <div
+        ref={viverRef}
+        className="relative card card-hover card-hover-orange flex items-center justify-start bg-[var(--color-orange-red)] h-70 rounded-bl-[2.5rem] p-8"
+        onMouseEnter={() => setHovered("viver")}
+        onMouseLeave={() => setHovered("")}
+        onClick={(e) => handleClick("viver", e)}
+      >
+        <div className="logo-mask logo-viver" role="img" aria-label="Viver São Paulo" />
+        {!selectedEixo && (
+          <p className={`eixo-title absolute top-4 right-6 text-right uppercase text-white text-2xl md:text-3xl leading-tight ${tituloVisivel}`}>
+            {tituloQuebrado("viver")}
+          </p>
+        )}
+      </div>
+
+      {/* CAPITAL */}
+      <div
+        ref={capitalRef}
+        className="relative card card-hover card-hover-purple flex items-center justify-start bg-[var(--color-purple-red)] h-70 rounded-br-[2.5rem] p-8"
+        onMouseEnter={() => setHovered("capital")}
+        onMouseLeave={() => setHovered("")}
+        onClick={(e) => handleClick("capital", e)}
+      >
+        <div className="logo-mask logo-capital" role="img" aria-label="Capital do Futuro" />
+        {!selectedEixo && (
+          <p className={`eixo-title absolute top-4 right-6 text-right uppercase text-white text-2xl md:text-3xl leading-tight ${tituloVisivel}`}>
+            {tituloQuebrado("capital")}
+          </p>
+        )}
+      </div>
+
+      {selectedEixo && (
+        <div className="cardeixos-overlay fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/30">
+          <div
+            key={selectedEixo?.id || selectedEixo?.nome || "cardeixos"}
+            className="cardeixos-animator spinZ-in"
+          >
+            <div className="card-eixos">
+              <CardEixos eixo={selectedEixo} onClose={() => setSelectedEixo(null)} />
+            </div>
+          </div>
+        </div>
+      )}
+
     </div>
   </div>
-)}
+);
 
-      </div>
-    </div>
-  );
 }
