@@ -44,7 +44,7 @@ def get_parametros_regionalizacao(request)->list[ParametroZonaSchema]:
             zona_data = {
                 "id" : zona_obj.id,
                 "sigla" : zona_obj.sigla,
-                "nome" : zona_obj.nome,
+                "nome" : zona_obj.nome_com_destaque,
             }
 
             subprefeituras = [
@@ -211,5 +211,4 @@ def search_metas(request, params: SearchParamSchema):
             retorno_final.append(meta_response)
         return SearchResponseSchema(total=resultados.count(), metas=retorno_final)
     except Exception as e:
-        raise(e)
         raise HttpError(500, f"Erro ao buscar metas: {str(e)}")
