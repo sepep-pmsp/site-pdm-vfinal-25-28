@@ -253,12 +253,19 @@ class Meta(models.Model):
     def acoes_estrategicas_as_list(self):
 
         return [acao.descricao for acao in self.acoes_estrategicas.all()]
+    
+    def checagem_destaque(self):
+
+        words_destaque =  set(self.destaque.lower().split())
+        words_descricao = set(self.descricao.lower().split())
+
+        return words_destaque.issubset(words_descricao)
 
     def clean(self):
         super().clean()
-        if not self.descricao.startswith(self.destaque):
+        if not self.checagem_destaque():
             raise ValidationError({
-                'descricao': 'A descrição deve começar com o conteúdo do campo destaque.'
+                'descricao': 'O conteúdo do campo destaque deve estar contido no campo descrição.'
             })
         
         if not self.tema in self.eixo.temas.all():
