@@ -129,17 +129,17 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
       </div>
 
       {selectedEixo && (
-        <div className="cardeixos-overlay fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/30">
-          <div
-            key={selectedEixo?.id || selectedEixo?.nome || "cardeixos"}
-            className="cardeixos-animator spinZ-in"
-          >
-            <div className="card-eixos">
-              <CardEixos eixo={selectedEixo} onClose={() => setSelectedEixo(null)} />
-            </div>
-          </div>
-        </div>
-      )}
+  <div className="cardeixos-overlay fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/30">
+    <div
+      key={selectedEixo?.id || selectedEixo?.nome || "cardeixos"}
+      className="cardeixos-animator spinZ-from-vertical"
+    >
+      <div className="card-eixos">
+        <CardEixos eixo={selectedEixo} onClose={() => setSelectedEixo(null)} />
+      </div>
+    </div>
+  </div>
+)}
 
     </div>
   </div>
