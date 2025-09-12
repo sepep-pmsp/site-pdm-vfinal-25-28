@@ -214,7 +214,7 @@ class Meta(models.Model):
     
     @property
     def numero_as_str(self):
-        return str(self.numero).zfill(3)
+        return str(self.numero).zfill(2)
 
     @property
     def id_eixo(self):
