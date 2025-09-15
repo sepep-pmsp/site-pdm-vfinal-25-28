@@ -80,10 +80,11 @@
         flex-direction: column;
         align-items: stretch;
         justify-content: center;
-        width: 45rem;
+        width: 80vw;
         height: 50rem;
         position: relative;
-        right: 4rem;
+        right: 0px;
+        left: 0px;
     }
 
     #eixos {
@@ -151,12 +152,13 @@
     .section-eixos-texts-mobile {
         display: flex;
         align-items: flex-start;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         flex-wrap: nowrap;
-        gap: 2rem;
-        width: 39rem;
-        padding: 0;
+        gap: 0px;
+        max-width: 90vw;
+        padding: 0px;
+        margin-bottom: 100px;
     }
 
     .eixos-texts-mobile {
