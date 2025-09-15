@@ -94,7 +94,7 @@ export default function Grid_menu_navbar({ onClose }) {
                 </div>
 
                 <div>
-                  <h2 className="text-2xl text-white w-32 relative pb-4 left-61">
+                  <h2 className="text-2xl text-white w-32 relative pb-4 left-61 text-start">
                     conheça as metas
                   </h2>
                 </div>

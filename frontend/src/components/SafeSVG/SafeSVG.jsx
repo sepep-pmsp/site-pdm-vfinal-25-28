@@ -1,15 +1,21 @@
 import { useEffect, useState } from "react";
 
-function SafeSVG({ src, ...props }) {
+function SafeSVG({ src, className = "", ...props }) {
   const [svgContent, setSvgContent] = useState(null);
 
   useEffect(() => {
     if (!src) return;
     fetch(src)
       .then((res) => res.text())
-      .then((text) => setSvgContent(text))
+      .then((text) => {
+        const updated = text.replace(
+          "<svg",
+          `<svg class="${className}"`
+        );
+        setSvgContent(updated);
+      })
       .catch(console.error);
-  }, [src]);
+  }, [src, className]);
 
   if (!svgContent) return null;
 
@@ -22,5 +28,6 @@ function SafeSVG({ src, ...props }) {
 }
 
 export default SafeSVG;
+
 //used like this to replace img tags for SVGs
 //<SafeSVG src={eixo.imagem} className="w-32 h-32" />

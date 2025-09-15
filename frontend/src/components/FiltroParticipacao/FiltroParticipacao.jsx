@@ -177,7 +177,7 @@ export default function FiltroParticipacao({ filtros, onFiltrar }) {
     </div>
   );
   return (
-    <div className="w-[90rem] h-[36rem] z-10 relative left-[17rem] bottom-[10rem] bg-white p-8 rounded-4xl shadow-md filtro-mobile-participacao">
+    <div className="w-full max-w-[90rem] h-auto max-h-[50rem] overflow-y-auto z-10 relative bottom-[10rem] bg-white p-8 rounded-4xl shadow-md mx-60 filtro-mobile-participacao">
       <div className="flex flex-row flex-nowrap items-center justify-between mb-8 px-8 py-4 div-container-filtro-mobile">
         <img src={ImgFiltro} />
         <div className="flex flex-row-reverse justify-around w-[30rem] items-center relative btn-filtro-mobile">

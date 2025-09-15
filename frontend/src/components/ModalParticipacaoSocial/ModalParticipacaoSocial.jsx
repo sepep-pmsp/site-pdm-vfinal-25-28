@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import bg_fundo from "@/assets/svg/isolamento_pag_participação.svg";
+import apresentacao_logo_pdm from "@/assets/svg/logo_pdm_fundo_branco.svg";
 
 export default function ModalParticipacaoSocial({ isOpen, onClose, apresentacao }) {
   const [visible, setVisible] = useState(isOpen);
@@ -41,36 +42,36 @@ export default function ModalParticipacaoSocial({ isOpen, onClose, apresentacao 
       {/* Modal */}
       <div className="fixed inset-0 flex items-center justify-center z-[10000]">
         <div
-          className={`bg-[#1281AA] rounded-4xl modal-participacao-mobile p-8 w-[99rem] h-[48rem] relative shadow-lg transition-all duration-400${
+          className={`bg-[#1281AA] rounded-4xl p-8 max-w-screen mx-60 max-h-screen h-auto relative shadow-lg transition-all duration-400${
             closing ? "slide-out-bottom" : "animate-slide-up"
           }`}
           onClick={(e) => e.stopPropagation()}
         >
           <button
-            className="absolute top-10 right-20 cursor-pointer z-[10100] btn-close-modal-participacao-mobile"
+            className="absolute top-10 right-20 cursor-pointer z-[10100]"
             onClick={onClose}
           >
             <i className="fa-solid fa-xmark text-white text-6xl"></i>
           </button>
 
-          <div className="flex items-center justify-center flex-row h-full gap-30">
-            <div className="flex flex-col items-start justify-center gap-3 p-8 w-180 z-[10100] container-conteudo-modal-participacao-mobile">
+          <div className="lg:flex items-center justify-center flex-row h-full gap-30">
+            <div className="max-sm:max-w-full  lg:flex flex-col items-start justify-center gap-3 p-8 w-180 z-[10100]">
               <div className="modal-header-mobile pb-10">
-                <h2 className="text-8xl text-white titulo-conteudo-modal-participacao-mobile">{apresentacao?.titulo}</h2>
-                <p className="text-white text-2xl pt-8 roboto-semibold">{apresentacao?.subtitulo}</p>
+                <h2 className="max-sm:text-4xl lg:text-8xl text-white font-bebas-regular">{apresentacao?.titulo}</h2>
+                <p className="max-sm:text-lg text-white lg:text-white text-2xl pt-8 roboto-medium">{apresentacao?.subtitulo}</p>
               </div>
               <div className="modal-body-mobile flex flex-col gap-3">
                 {apresentacao?.paragrafos?.map((par, index) => (
-                  <p className="text-white text-xl roboto-light" key={index}>
+                  <p className="max-sm:text-white max-sm:z-[10100] max-sm:text-sm lg:text-white text-xl roboto-light" key={index}>
                     {par}
                   </p>
                 ))}
-                <p className="text-white text-2xl pt-8 roboto-medium">{apresentacao?.texto}</p>
+                <p className="max-sm:text-lg text-white max-sm:z-[10100] lg:text-white text-2xl pt-8 roboto-medium">{apresentacao?.texto}</p>
               </div>
             </div>
             <div>
-              <img className="w-150 relative z-[10100]" src={apresentacao?.imagem} alt="" />
-              <img className="absolute right-8 top-0 w-[42.2rem]" src={bg_fundo} alt="" />
+              <img className="max-sm:w-80 lg:w-150 relative z-[10100]" src={apresentacao_logo_pdm} alt="" />
+              <img className="max-sm:absolute max-sm:left-36 max-sm:top-0 max-sm:max-w-screen max-sm:h-full lg:absolute right-8 top-0 w-full h-auto max-w-[42.6rem]" src={bg_fundo} alt="" />
             </div>
           </div>
         </div>

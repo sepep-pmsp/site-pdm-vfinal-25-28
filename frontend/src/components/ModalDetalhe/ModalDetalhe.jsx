@@ -13,106 +13,108 @@ export default function ModalDetalhe({ selecionado, onClose }) {
     proposta: "Proposta",
     fala_audiencia: "Fala em\n audiência",
     sugestao_alteracao: "Sugestão de\n alteração",
-    Participe_Mais: "Proposta\n no Participe+",
+    Participe_Mais: "Proposta\n no Participe+"
   };
 
   return (
     <Modal isOpen={!!selecionado} onClose={onClose}>
       <div className="fixed inset-0 bg-black/40 flex justify-center items-center z-50">
-        <div className="bg-white rounded-xl w-[90%] h-[80vh] overflow-y-auto container-detalhes-mobile">
+        <div className="max-md:bg-white max-md:rounded-none max-md:min-w-screen max-md:min-h-screen lg:bg-white rounded-xl w-[75%] h-[80vh] overflow-y-auto">
           <button
             onClick={onClose}
-            className="fixed left-[110rem] top-24 cursor-pointer z-20 btn-close-resultados-mobile"
+            className="max-md:fixed max-md:top-0 max-md:left-[25rem] lg:fixed left-[103rem] top-24 cursor-pointer z-20"
           >
             <i className="fa-solid fa-xmark text-black text-2xl"></i>
           </button>
-          <div className="bg-white rounded-t-2xl h-20 absolute w-[90%] shadow-[0px_5px_20px_gray] left-24 top-20 z-10 ficha-fundo-branca-mobile"></div>
+          <div className="max-md:bg-white max-md:fixed max-md:rounded-none max-md:left-0 max-md:top-0 max-md:w-full lg:bg-white rounded-t-2xl h-20 absolute w-[75%] shadow-[0px_5px_20px_gray] left-[14.9rem] top-20 z-10"></div>
           <div className="h-1 w-[90%] relative top-16 left-16 bg-[var(--color-navy)]"></div>
-          <div className="mx-5 pt-20 pb-5 h-[27rem]">
-            <div className="flex justify-around items-center gap-4 mx-24 container-detalhe-participacao-mobile">
-              <div className="flex flex-col items-center justify-around gap-8 w-full">
-                <div
-                  className="flex flex-col-reverse items-center justify-center flex-wrap content-center gap-4 rounded-2xl w-full"
-                  style={{ border: "2px solid var(--color-navy)" }}
-                >
-                  <h3 className="text-lg pb-4">canal</h3>
-                  <p className="text-lg font-semibold bg-[var(--color-navy)] w-full p-6 text-white rounded-t-xl text-center">
-                    {selecionado.canal}
-                  </p>
+          <div>
+            <div className="mx-md:min-h-full lg:mx-5 pt-20 pb-5 max-h-full">
+              <div className="max-md:flex max-md:flex-col max-md:my-8 tirar-margin lg:flex justify-around items-center gap-4 mx-24">
+                <div className="flex flex-col items-center justify-around gap-8 w-full">
+                  <div
+                    className="flex flex-col-reverse items-center justify-center flex-wrap content-center gap-4 rounded-2xl w-full"
+                    style={{ border: "2px solid var(--color-navy)" }}
+                  >
+                    <h3 className="text-lg pb-4">canal</h3>
+                    <p className="text-lg font-semibold bg-[var(--color-navy)] w-full p-6 text-white rounded-t-xl text-center">
+                      {selecionado.canal}
+                    </p>
+                  </div>
+                  <div
+                    className="flex flex-row flex-nowrap items-center justify-center gap-8 rounded-2xl w-full"
+                    style={{ border: "2px solid var(--color-navy)" }}
+                  >
+                    <h3 className="text-lg pl-8">nome</h3>
+                    <h2 className="text-xl font-semibold bg-[var(--color-navy)] w-full p-6 text-white rounded-r-xl text-center">
+                      {selecionado.nome}
+                    </h2>
+                  </div>
                 </div>
                 <div
-                  className="flex flex-row flex-nowrap items-center justify-center gap-8 rounded-2xl w-full"
+                  className="flex flex-col-reverse items-center justify-center h-full flex-nowrap content-center gap-4 rounded-2xl w-full"
                   style={{ border: "2px solid var(--color-navy)" }}
                 >
-                  <h3 className="text-lg pl-8">nome</h3>
-                  <h2 className="text-xl font-semibold bg-[var(--color-navy)] w-full p-6 text-white rounded-r-xl text-center">
-                    {selecionado.nome}
-                  </h2>
+                  <h3 className="text-lg pb-4">subprefeitura</h3>
+                  <div className="flex gap-4 h-full flex-wrap bg-[var(--color-navy)] p-6 rounded-t-xl w-full">
+                    {selecionado?.subprefeituras?.map((sub, index) => (
+                      <span
+                        key={index}
+                        className="p-1 bg-[var(--color-cyan-dark)] text-white rounded text-2xl"
+                      >
+                        {sub}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <div
-                className="flex flex-col-reverse items-center justify-center h-full flex-nowrap content-center gap-4 rounded-2xl w-full"
-                style={{ border: "2px solid var(--color-navy)" }}
-              >
-                <h3 className="text-lg pb-4">subprefeitura</h3>
-                <div className="flex gap-4 h-full flex-wrap bg-[var(--color-navy)] p-6 rounded-t-xl w-full">
-                  {selecionado?.subprefeituras?.map((sub, index) => (
-                    <span
-                      key={index}
-                      className="p-1 bg-[var(--color-cyan-dark)] text-white rounded text-2xl"
-                    >
-                      {sub}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div
-                className="flex flex-col-reverse items-center justify-center h-full flex-nowrap content-center gap-4 rounded-2xl w-full"
-                style={{ border: "2px solid var(--color-navy)" }}
-              >
-                <h3 className="text-lg pb-4">temas</h3>
-                <div className="flex gap-4 h-full flex-wrap bg-[var(--color-navy)] p-6 rounded-t-xl w-full">
-                  {selecionado?.temas?.map((tema, index) => (
-                    <span
-                      key={index}
-                      className="p-2 bg-[var(--color-cyan-dark)] text-white rounded text-2xl"
-                    >
-                      {tema}
-                    </span>
-                  ))}
+                <div
+                  className="flex flex-col-reverse items-center justify-center h-full flex-nowrap content-center gap-4 rounded-2xl w-full"
+                  style={{ border: "2px solid var(--color-navy)" }}
+                >
+                  <h3 className="text-lg pb-4">temas</h3>
+                  <div className="flex gap-4 h-full flex-wrap bg-[var(--color-navy)] p-6 rounded-t-xl w-full">
+                    {selecionado?.temas?.map((tema, index) => (
+                      <span
+                        key={index}
+                        className="p-2 bg-[var(--color-cyan-dark)] text-white rounded text-2xl"
+                      >
+                        {tema}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className=" h-1 w-[90%] relative left-16 bg-[var(--color-navy)] linha-detalhe"></div>
-          <div className="mt-6 content-dethalhe-participacao-mobile">
-            <h2 className="text-5xl text-[var(--color-navy)] pl-24 pb-4">
+            <div className="max-md:w-full max-md:h-1 max-md:left-0 lg:h-1 w-[90%] relative left-16 bg-[var(--color-navy)]"></div>
+            <div className="mt-6"></div>
+            <h2 className="max-md:text-2xl tirar-padding lg:text-5xl text-[var(--color-navy)] pl-24 pb-4">
               contribuição
             </h2>
             {detalhe.tipo && (
               <>
-                <div className="relative top-[-5.5rem] left-[72rem] w-[26rem] bg-[var(--color-cyan-dark)] z-[1] flex items-center justify-center break-all rounded-b-4xl h-auto content-descricao-dethalhe-participacao-mobile">
+                <div className="max-md:w-60 max-md:relative max-md:left-40 max-md:top-[-3.5rem] lg:relative top-[-5.5rem] left-[55rem] max-w-md bg-[var(--color-cyan-dark)] z-[1] flex items-center justify-center break-all rounded-b-4xl h-auto">
                   <p
-                    className="BebasNeue text-6xl text-white px-8"
-                     dangerouslySetInnerHTML={{
+                    className="BebasNeue max-md:text-3xl lg:text-6xl text-white px-8"
+                    dangerouslySetInnerHTML={{
                       __html: (tipoMap[detalhe.tipo] || detalhe.tipo).replace(
                         /\n/g,
                         "<br/>"
-                      )}}
+                      )
+                    }}
                   ></p>
                 </div>
-                <div className=" h-1 w-[90%] relative left-16 bottom-28 bg-[var(--color-navy)] linha-detalhe-2"></div>
+                <div className="max-md:w-full max-md:h-1 max-md:left-0 max-md:bottom-15 lg:h-1 w-[90%] relative left-16 bottom-28 bg-[var(--color-navy)]"></div>
               </>
             )}
             {detalhe.titulo && detalhe.titulo !== "None" && (
-              <div className="flex items-center justify-start gap-8 relative left-[30rem] bottom-16 w-[60rem] content-descricao-dethalhe-participacao-mobile">
-                <div className="bg-[var(--color-cyan-medium)] w-1 h-60"></div>
-                <div className="flex flex-col items-start justify-center gap-4 w-[57rem]">
-                  <h2 className="text-4xl font-bold mb-2 text-[var(--color-cyan-medium)]">
+              <div className="max-md:left-2 max-md:bottom-50 max-md:w-[20rem] lg:flex items-center justify-start gap-8 relative left-[30rem] bottom-16 w-[60rem]">
+                <div className="lg:bg-[var(--color-cyan-medium)] w-1 h-60"></div>
+                <div className="max-md:w-[20rem] lg:flex flex-col items-start justify-center gap-4 w-[57rem]">
+                  <h2 className="max-md:text-2xl max-md:break-all lg:text-4xl font-bold mb-2 text-[var(--color-cyan-medium)]">
                     {detalhe.titulo}
                   </h2>
                   {(detalhe.resumo || detalhe.descricao) && (
-                    <p className="mb-4 text-2xl text-[var(--color-cyan-medium)]">
+                    <p className="lg:mb-4 text-2xl text-[var(--color-cyan-medium)]">
                       <strong>Resumo:</strong>{" "}
                       {detalhe.resumo || detalhe.descricao}
                     </p>
@@ -120,7 +122,7 @@ export default function ModalDetalhe({ selecionado, onClose }) {
                 </div>
               </div>
             )}
-            <div className="w-40 flex flex-col flex-nowrap items-start justify-center gap-4 relative left-20 bottom-80 ">
+            <div className="flex flex-col flex-nowrap items-start justify-center gap-4 lg:relative lg:left-20 lg:bottom-80 lg:w-40 max-md:fixed max-md:bottom-3 max-md:left-4 max-md:w-[20rem] max-md:flex max-md:flex-row z-20">
               {detalhe.apoios > 0 && (
                 <p className="flex items-center gap-2 text-[var(--color-navy)] shadow-[0px_0px_2px_gray] p-2 rounded-3xl w-40">
                   <img src={Like} alt="Apoios" />
@@ -136,13 +138,13 @@ export default function ModalDetalhe({ selecionado, onClose }) {
             </div>
             {Array.isArray(detalhe.conteudo) ? (
               detalhe.conteudo.map((paragrafo, index) => (
-                <div className="flex flex-col gap-4 relative left-[35rem] bottom-0 w-[60rem] content-descricao-dethalhe-participacao-mobile">
+                <div className="max-md:left-0 max-md:w-full max-md:break-all lg:flex flex-col gap-4 relative left-[35rem] bottom-0 w-[60rem]">
                   <p key={index}>{paragrafo}</p>
                 </div>
               ))
             ) : (
-              <div className="flex flex-col gap-4 relative left-[35rem] bottom-0 w-[60rem] pb-10 content-descricao-dethalhe-participacao-mobile">
-                <p className="flex items-start justify-start gap-8 w-[45rem] text-xl p-content-mobile">
+              <div className="max-md:left-0 max-md:w-[20rem] lg:flex flex-col gap-4 relative left-[35rem] bottom-0 w-[60rem] pb-10">
+                <p className="max-md:w-full max-md:break-all max-md:relative max-md:top-[-10rem] lg:flex items-start justify-start gap-8 w-[45rem] text-xl">
                   {detalhe.conteudo}
                 </p>
               </div>
@@ -150,28 +152,31 @@ export default function ModalDetalhe({ selecionado, onClose }) {
             {detalhe.respostas?.length > 0 && (
               <>
                 <div>
-                  <div className=" h-1 w-[90%] relative left-16 bg-[var(--color-cyan-dark)]"></div>
+                  <div className="max-md:w-full max-md:h-1 max-md:left-0 lg:h-1 w-[90%] relative left-16 bg-[var(--color-cyan-dark)]"></div>
                   <h3 className="text-4xl text-[var(--color-cyan-dark)] pl-24 py-4">
                     Respostas:
                   </h3>
-                  <div className=" h-1 w-[90%] relative left-16 bg-[var(--color-cyan-dark)]"></div>
+                  <div className="max-md:w-full max-md:h-1 max-md:left-0 lg:h-1 w-[90%] relative left-16 bg-[var(--color-cyan-dark)]"></div>
                 </div>
                 <ul className="list-disc list-inside py-8 flex flex-col flex-nowrap items-start justify-center gap-8 w-full pb-24">
                   {detalhe.respostas.map((r, i) => (
-                    <li className="pl-24 list-resposta-detalhes-mobile w-ful" key={i}>
-                      <div className="flex justify-start items-center gap-64 p-4">
+                    <li className="lg:pl-24 w-full" key={i}>
+                      <div className="max-md:flex max-md:flex-col max-md:items-start max-md:gap-8 lg:flex justify-start items-center gap-64 p-4">
                         <strong className="text-xl text-[var(--color-cyan-dark)] shadow-[0px_0px_2px_gray] p-2 rounded-3xl w-60">
                           {r.orgao}
                         </strong>
-                        <p className="h-full w-[55rem] text-xl">{r.texto}</p>
+                        <p className="max-md:w-full max-md:break-all lg:h-full w-[55rem] text-xl">
+                          {r.texto}
+                        </p>
                       </div>
-                      <div className="h-0.5 w-[94rem] right-8 relative bg-[var(--color-cyan-dark)] my-4"></div>
+                      <div className="max-md:h-px max-md:max-w-full lg:h-0.5 w-[94rem] right-8 relative bg-[var(--color-cyan-dark)] my-4"></div>
                     </li>
                   ))}
                 </ul>
               </>
             )}
-            <img src={Agrupar2} alt="" />
+            <img className="max-md:hidden" src={Agrupar2} alt="" />
+            <div className="max-md:bg-white max-md:fixed max-md:rounded-none max-md:left-0 max-md:top-[48rem] max-md:w-full lg:bg-white rounded-b-2xl h-20 absolute w-[75%] left-[14.9rem] shadow-[0px_5px_20px_gray] top-[47rem] z-10"></div>
           </div>
         </div>
       </div>

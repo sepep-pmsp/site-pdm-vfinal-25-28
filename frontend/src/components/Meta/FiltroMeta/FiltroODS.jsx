@@ -1,5 +1,6 @@
 import React from "react";
 import { corrigirUrlImagem } from "@/utils/imageUtils";
+import SafeSVG from "../../SafeSVG/SafeSVG";
 
 
 export default function FiltroODS({
@@ -23,17 +24,12 @@ export default function FiltroODS({
             <button
               onClick={() => toggleSelecionado("ods", valor)}
               className={`flex items-center h-21 rounded-l-3xl overflow-hidden cursor-pointer transition-all duration-300
-                ${isSelected ? "w-45" : "w-16"}`}
+                ${isSelected ? "w-45" : "w-24"}`}
               style={{ backgroundColor: odsItem.cor }}
               title={odsItem.nome}
             >
               <div className="px-3 flex-shrink-0">
-                <img 
-                  className="w-10" 
-                  // Usa a função importada
-                  src={corrigirUrlImagem(odsItem.icone)} 
-                  alt={odsItem.nome} 
-                />
+                <SafeSVG src={corrigirUrlImagem(odsItem.icone)}  alt={odsItem.nome}  className="w-16" />
               </div>
               <div
                 className={`w-30 text-white capitalize text-xs font-semibold break-words transition-opacity duration-300

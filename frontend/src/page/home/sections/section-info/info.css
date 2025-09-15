@@ -1,12 +1,17 @@
 .agrupar1 {
     position: absolute;
-    top: 172.5rem;
+    top: 170.5rem;
     z-index: -1;
+}
+
+.text-mobile-info-1{
+    position: relative;
+    top: 4rem;
 }
 
 .agrupar2 {
     position: absolute;
-    top: 233rem;
+    top: 231rem;
     z-index: -1;
 }
 
