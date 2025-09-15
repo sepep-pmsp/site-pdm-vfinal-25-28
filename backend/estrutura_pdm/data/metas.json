@@ -65,7 +65,7 @@
         "indicador": "Quantidade de novos veículos de matriz energética limpa entregues.",
         "orgao_responsavel": [
             "SMT",
-            "SPTRANS"
+            "SPTrans"
         ],
         "eixo": "Universo SP"
     },
@@ -158,7 +158,7 @@
         "indicador": "Centro de Operações em funcionamento.",
         "orgao_responsavel": [
             "SMT",
-            "SPTRANS"
+            "SPTrans"
         ],
         "eixo": "Universo SP"
     },
@@ -170,9 +170,9 @@
         "indicador": "BRT em operação.",
         "orgao_responsavel": [
             "SIURB",
-            "SP OBRAS",
+            "SPObras",
             "SMT",
-            "SPTRANS"
+            "SPTrans"
         ],
         "eixo": "Universo SP"
     },
@@ -184,9 +184,9 @@
         "indicador": "BRT em operação.",
         "orgao_responsavel": [
             "SIURB",
-            "SP OBRAS",
+            "SPObras",
             "SMT",
-            "SPTRANS"
+            "SPTrans"
         ],
         "eixo": "Universo SP"
     },
@@ -198,7 +198,7 @@
         "indicador": "Obras do primeiro lote de requalificação concluídas.",
         "orgao_responsavel": [
             "SMT",
-            "SPTRANS"
+            "SPTrans"
         ],
         "eixo": "Universo SP"
     },
@@ -210,7 +210,7 @@
         "indicador": "Obra concluída.",
         "orgao_responsavel": [
             "SMT",
-            "SPTRANS"
+            "SPTrans"
         ],
         "eixo": "Universo SP"
     },
@@ -222,7 +222,7 @@
         "indicador": "Obra concluída.",
         "orgao_responsavel": [
             "SIURB",
-            "SP OBRAS"
+            "SPObras"
         ],
         "eixo": "Universo SP"
     },
@@ -234,7 +234,7 @@
         "indicador": "Obra concluída.",
         "orgao_responsavel": [
             "SIURB",
-            "SP OBRAS"
+            "SPObras"
         ],
         "eixo": "Universo SP"
     },
@@ -246,7 +246,7 @@
         "indicador": "Obra concluída.",
         "orgao_responsavel": [
             "SIURB",
-            "SP OBRAS"
+            "SPObras"
         ],
         "eixo": "Universo SP"
     },
@@ -258,7 +258,7 @@
         "indicador": "Obra concluída.",
         "orgao_responsavel": [
             "SIURB",
-            "SP OBRAS"
+            "SPObras"
         ],
         "eixo": "Universo SP"
     },
@@ -270,7 +270,7 @@
         "indicador": "Número de terminais requalificados.",
         "orgao_responsavel": [
             "SMT",
-            "SPTRANS",
+            "SPTrans",
             "SGM"
         ],
         "eixo": "Universo SP"
@@ -283,7 +283,7 @@
         "indicador": "Obra concluída.",
         "orgao_responsavel": [
             "SIURB",
-            "SP OBRAS"
+            "SPObras"
         ],
         "eixo": "Universo SP"
     },
@@ -295,7 +295,7 @@
         "indicador": "Ordem de serviço de obra emitida.",
         "orgao_responsavel": [
             "SIURB",
-            "SP OBRAS"
+            "SPObras"
         ],
         "eixo": "Universo SP"
     },
@@ -307,7 +307,7 @@
         "indicador": "Ordem de serviço de obra emitida.",
         "orgao_responsavel": [
             "SMT",
-            "SPTRANS"
+            "SPTrans"
         ],
         "eixo": "Universo SP"
     },
@@ -319,7 +319,7 @@
         "indicador": "Ordem de serviço de obra emitida.",
         "orgao_responsavel": [
             "SMT",
-            "SPTRANS"
+            "SPTrans"
         ],
         "eixo": "Universo SP"
     },
@@ -331,7 +331,7 @@
         "indicador": "Ordem de serviço de obra emitida.",
         "orgao_responsavel": [
             "SMT",
-            "SPTRANS"
+            "SPTrans"
         ],
         "eixo": "Universo SP"
     },
@@ -343,7 +343,7 @@
         "indicador": "Obras contratadas.",
         "orgao_responsavel": [
             "SMT",
-            "SPTRANS"
+            "SPTrans"
         ],
         "eixo": "Universo SP"
     },
@@ -355,7 +355,7 @@
         "indicador": "Estudos técnicos e ambientais concluídos.",
         "orgao_responsavel": [
             "SMT",
-            "SPTRANS"
+            "SPTrans"
         ],
         "eixo": "Universo SP"
     },
@@ -367,7 +367,7 @@
         "indicador": "Ordem de serviço de obra emitida.",
         "orgao_responsavel": [
             "SIURB",
-            "SP OBRAS"
+            "SPObras"
         ],
         "eixo": "Universo SP"
     },
@@ -379,7 +379,7 @@
         "indicador": "Obra concluída.",
         "orgao_responsavel": [
             "SIURB",
-            "SP OBRAS"
+            "SPObras"
         ],
         "eixo": "Universo SP"
     },
@@ -391,7 +391,7 @@
         "indicador": "Obra concluída.",
         "orgao_responsavel": [
             "SIURB",
-            "SP OBRAS"
+            "SPObras"
         ],
         "eixo": "Universo SP"
     },
@@ -403,7 +403,7 @@
         "indicador": "Obra concluída.",
         "orgao_responsavel": [
             "SIURB",
-            "SP OBRAS"
+            "SPObras"
         ],
         "eixo": "Universo SP"
     },
@@ -415,7 +415,7 @@
         "indicador": "Ordem de serviço de obra emitida.",
         "orgao_responsavel": [
             "SIURB",
-            "SP OBRAS"
+            "SPObras"
         ],
         "eixo": "Universo SP"
     },
@@ -427,9 +427,9 @@
         "indicador": "Obra concluída.",
         "orgao_responsavel": [
             "SIURB",
-            "SP OBRAS",
+            "SPObras",
             "SMUL",
-            "SP URBANISMO"
+            "SPUrbanismo"
         ],
         "eixo": "Universo SP"
     },
@@ -441,9 +441,9 @@
         "indicador": "Ordem de serviço de obra emitida.",
         "orgao_responsavel": [
             "SIURB",
-            "SP OBRAS",
+            "SPObras",
             "SMUL",
-            "SP URBANISMO"
+            "SPUrbanismo"
         ],
         "eixo": "Universo SP"
     },
@@ -455,7 +455,7 @@
         "indicador": "Obra concluída.",
         "orgao_responsavel": [
             "SIURB",
-            "SP OBRAS"
+            "SPObras"
         ],
         "eixo": "Universo SP"
     },
@@ -467,9 +467,9 @@
         "indicador": "Ordem de serviço de obra emitida.",
         "orgao_responsavel": [
             "SIURB",
-            "SP OBRAS",
+            "SPObras",
             "SMUL",
-            "SP URBANISMO"
+            "SPUrbanismo"
         ],
         "eixo": "Universo SP"
     },
@@ -481,9 +481,9 @@
         "indicador": "Ordem de serviço de obra emitida.",
         "orgao_responsavel": [
             "SIURB",
-            "SP OBRAS",
+            "SPObras",
             "SMUL",
-            "SP URBANISMO"
+            "SPUrbanismo"
         ],
         "eixo": "Universo SP"
     },
@@ -495,7 +495,7 @@
         "indicador": "Ordem de serviço de obra emitida.",
         "orgao_responsavel": [
             "SIURB",
-            "SP OBRAS"
+            "SPObras"
         ],
         "eixo": "Universo SP"
     },
@@ -507,7 +507,7 @@
         "indicador": "Ordem de serviço de obra emitida.",
         "orgao_responsavel": [
             "SIURB",
-            "SP OBRAS"
+            "SPObras"
         ],
         "eixo": "Universo SP"
     },
@@ -519,7 +519,7 @@
         "indicador": "Obra concluída.",
         "orgao_responsavel": [
             "SIURB",
-            "SP OBRAS"
+            "SPObras"
         ],
         "eixo": "Universo SP"
     },
@@ -531,9 +531,9 @@
         "indicador": "Ordem de serviço de obra emitida.",
         "orgao_responsavel": [
             "SIURB",
-            "SP OBRAS",
+            "SPObras",
             "SMUL",
-            "SP URBANISMO"
+            "SPUrbanismo"
         ],
         "eixo": "Universo SP"
     },
@@ -624,7 +624,7 @@
         "indicador": "Número de ações de requalificação urbana realizadas.",
         "orgao_responsavel": [
             "SMUL",
-            "SP URBANISMO"
+            "SPUrbanismo"
         ],
         "eixo": "Universo SP"
     },
@@ -637,8 +637,8 @@
         "orgao_responsavel": [
             "SMUL",
             "SIURB",
-            "SP URBANISMO",
-            "SP OBRAS",
+            "SPUrbanismo",
+            "SPObras",
             "SGM",
             "SMSUB"
         ],
@@ -652,9 +652,9 @@
         "indicador": "Ordem de serviço de obra emitida.",
         "orgao_responsavel": [
             "SMUL",
-            "SP URBANISMO",
+            "SPUrbanismo",
             "SMT",
-            "SPTRANS"
+            "SPTrans"
         ],
         "eixo": "Universo SP"
     },
@@ -926,7 +926,7 @@
         "indicador": "Programa em operação.",
         "orgao_responsavel": [
             "SMT",
-            "SPTRANS"
+            "SPTrans"
         ],
         "eixo": "Viver São Paulo"
     },
@@ -1169,7 +1169,7 @@
         "indicador": "Projeto executivo elaborado.",
         "orgao_responsavel": [
             "SMC",
-            "SP URBANISMO"
+            "SPUrbanismo"
         ],
         "eixo": "Cidade Empreendedora"
     },
@@ -1215,7 +1215,7 @@
         "indicador": "Número de certificados emitidos.",
         "orgao_responsavel": [
             "SGM",
-            "FUNDACAO PAULISTANA",
+            "FPD",
             "SMDET"
         ],
         "eixo": "Cidade Empreendedora"
@@ -1296,7 +1296,7 @@
         "indicador": "Obras iniciadas.",
         "orgao_responsavel": [
             "SGM",
-            "SPTURIS"
+            "SPTuris"
         ],
         "eixo": "Cidade Empreendedora"
     },
