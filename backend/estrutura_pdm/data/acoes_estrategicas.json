@@ -1774,17 +1774,9 @@
     {
         "numero_meta": 83,
         "numero_acao": 83.01,
-        "desc_acao": "Implantação de 10 novas unidades do Armazém Solidário.",
-        "orgao_acao": [
-            "SESANA"
-        ]
-    },
-    {
-        "numero_meta": 83,
-        "numero_acao": 83.01,
         "desc_acao": "Inauguração do CEU Ermelino Matarazzo.",
         "orgao_acao": [
-            "SESANA"
+            "SME"
         ]
     },
     {
@@ -1848,7 +1840,7 @@
         "numero_acao": 85.01,
         "desc_acao": "Implantação de 10 novas unidades do Armazém Solidário.",
         "orgao_acao": [
-            "SMADS"
+            "SESANA"
         ]
     },
     {
@@ -1856,7 +1848,7 @@
         "numero_acao": 85.02,
         "desc_acao": "Implantação de outros 15 equipamentos de Segurança Alimentar e Nutricional, como unidades do Bom Prato Paulistano e da Rede Cozinha Escola.",
         "orgao_acao": [
-            "SMADS"
+            "SESANA"
         ]
     },
     {
@@ -2021,7 +2013,7 @@
     },
     {
         "numero_meta": 99,
-        "numero_acao": 96.01,
+        "numero_acao": 99.01,
         "desc_acao": "Abertura da Escola Avança Tech Games com 500 vagas anuais para capacitação nas áreas de tecnologia e desenvolvimento de games.",
         "orgao_acao": [
             "SMDET"
@@ -2029,7 +2021,7 @@
     },
     {
         "numero_meta": 99,
-        "numero_acao": 96.02,
+        "numero_acao": 99.02,
         "desc_acao": "Aceleração de 100 empresas do setor de games com aporte financeiro, oficinas de capacitação, mentoria e oportunidades de networking internacional.",
         "orgao_acao": [
             "SMDET"
@@ -2915,7 +2907,7 @@
     },
     {
         "numero_meta": 129,
-        "numero_acao": 129.03,
+        "numero_acao": 129.04,
         "desc_acao": "Disponibilização de quatro modelos de minutas de editais e contratos padronizados, pela Procuradoria Geral do Município.",
         "orgao_acao": [
             "PGM"
