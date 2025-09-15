@@ -73,7 +73,7 @@ export default function Metas() {
       </div>
 
       <div className="flex items-center justify-center flex-row flex-nowrap gap-1 pt-10 h-[95rem] container-lista-metas-mobile">
-        <div className="relative h-full right-35 top-32 lista-metas-mobile">
+        <div className="relative w-full h-full right-35 top-32 lista-metas-mobile">
           <FiltroMeta onCardsUpdate={(res) => setMetas(res.metas)} />
         </div>
 
