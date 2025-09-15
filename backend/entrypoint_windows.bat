@@ -60,6 +60,9 @@ if errorlevel 1 exit /b %errorlevel%
 python manage.py seed_ods
 if errorlevel 1 exit /b %errorlevel%
 
+python manage.py seed_metas_ods
+if errorlevel 1 exit /b %errorlevel%
+
 python manage.py seed_historico
 if errorlevel 1 exit /b %errorlevel%
 
