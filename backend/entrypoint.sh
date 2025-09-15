@@ -26,6 +26,7 @@ python manage.py seed_regionalizacao_metas
 python manage.py seed_acoes
 python manage.py seed_ods
 python manage.py seed_metas_ods
+python manage.py seed_metas_temas
 python manage.py seed_planos_setoriais
 python manage.py seed_historico
 python manage.py seed_transparencia
