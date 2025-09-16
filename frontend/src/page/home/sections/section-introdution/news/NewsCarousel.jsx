@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getNewsData } from "@/services/home/getNewsData";
+import "./NewsCarousel.css";
 
 export default function NewsCarousel() {
 const [current, setCurrent] = useState(0);
@@ -33,20 +34,20 @@ useEffect(() => {
 
 return (
     <div className="flex justify-center flex-nowrap">
-        <section className="relative bg-[color:var(--color-white)] shadow-[1px_1px_20px_#00000045] w-[90rem] h-32 rounded-[3rem] bottom-16 p-4 z-10 news-mobile">
-            <div className="flex flex-row justify-center items-center flex-nowrap h-full news_navbar_text">
-                <div>
-                    <h2 className="text-[var(--color-cyan-medium)] text-5xl">na mídia</h2>
+        <section className="relative bg-[color:var(--color-white)] shadow-[1px_1px_20px_#00000045] w-[100rem] h-32 rounded-[3rem] bottom-16 p-4 z-10 news-mobile">
+            <div className="flex flex-row justify-center items-center flex-wrap h-full news_navbar_text">
+                <div className="w-4/12">
+                    <h2 className="text-[var(--color-cyan-medium)] text-5xl">na<br /> mídia</h2>
                 </div>
-                <div className="w-[69%] flex flex-col justify-center items-center gap-8 h-full news-nabvar-text">
-                    <div className="text-2xl texto-carrosel relative w-full flex justify-center top-[0.6rem]">
+                <div className="w-6/12 pt-5 flex flex-col items-center h-full news-nabvar-text">
+                    <div className="text-2xl texto-carrosel relative w-full">
                         {news.map((news, index) => (
                             <a
                                 key={index}
                                 href={news.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className={`absolute transition-all duration-700 ease-in-out underline roboto-regular ${
+                                className={`truncate-link absolute transition-all text-center duration-700 ease-in-out underline roboto-regular ${
                                     index === current
                                         ? "opacity-100 translate-y-0"
                                         : "opacity-0 translate-y-2 pointer-events-none"
@@ -55,8 +56,8 @@ return (
                                 {news.titulo}
                             </a>
                         ))}
-                    </div>
-                    <div className="relative top-[0.9rem] news-mobile-carousel">
+
+                    <div className="relative left-[47%] top-[1.6rem] news-mobile-carousel">
                         {news.map((_, index) => (
                             <button
                                 key={index}
@@ -67,6 +68,7 @@ return (
                                 aria-label={`Ir para notícia ${index + 1}`}
                             ></button>
                         ))}
+                    </div>
                     </div>
                 </div>
             </div>

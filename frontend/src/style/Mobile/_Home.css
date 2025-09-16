@@ -50,9 +50,6 @@
             right: 7rem;
         }
 
-        & .news_navbar_text {
-            gap: 8rem;
-        }
 
         & .news-nabvar-text {
             gap: 2rem
@@ -82,7 +79,7 @@
 }
 
 /* Celular */
-@media screen and (min-width: 319px) and (max-width: 426px) {
+@media screen and (min-width: 319px) and (max-width: 726px) {
     .introducao-mobile {
         display: flex;
         flex-direction: column;

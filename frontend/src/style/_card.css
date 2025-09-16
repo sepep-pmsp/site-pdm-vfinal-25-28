@@ -161,3 +161,16 @@
 
 @media (max-width:1024px){ .logo-mask{ width:14rem; height:14rem; } }
 @media (max-width:640px) { .logo-mask{ width:12rem; height:12rem; } }
+
+@keyframes cardOpenSpinZFromVertical {
+  0%   { transform: rotateZ(90deg)  scale(.92); opacity: 0; }
+  60%  { transform: rotateZ(-6deg)  scale(1.02); opacity: 1; }
+  100% { transform: rotateZ(0deg)   scale(1);    opacity: 1; }
+}
+.spinZ-from-vertical {
+  animation: cardOpenSpinZFromVertical 1200ms cubic-bezier(.2,.8,.2,1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinZ-from-vertical { animation: none; }
+}
