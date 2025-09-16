@@ -99,7 +99,7 @@
 @media screen and (min-width: 319px) and (max-width: 426px) {
     .regionalização_mobile {
         margin: 0;
-        height: 106rem;
+        height: 95rem;
     }
 
     .title-mobile {
@@ -128,7 +128,7 @@
         left: -2rem;
         width: 80%;
         position: absolute;
-        bottom: 76rem;
+        bottom: 72rem;
     }
 
     .div-mobile-regionalizacao {

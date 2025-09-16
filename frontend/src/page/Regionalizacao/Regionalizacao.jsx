@@ -17,7 +17,7 @@ export default function Regionalizacao() {
         <h1 className="text-[5rem] text-[var(--color-navy)] title-mobile">
           {regionalizacao.titulo}
         </h1>
-        <div className="h-1 w-[95rem] bg-[color:var(--color-navy)]"></div>
+        <div className="max-md:w-full lg:h-1 w-[95rem] bg-[color:var(--color-navy)]"></div>
         <div className="flex flex-row flex-nowrap items-center gap-8 w-[100rem] conteudo-regionalizacao-mobile">
           <div className="w-[30rem] flex flex-col items-start justify-center flex-nowrap gap-8 bg-[#EEF3F6] my-8 px-8 py-4 div-mobile-regionalizacao">
             <div className="flex flex-col pt-10 gap-8">
