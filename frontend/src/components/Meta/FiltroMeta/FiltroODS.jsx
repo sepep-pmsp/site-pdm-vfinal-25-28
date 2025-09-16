@@ -29,7 +29,7 @@ export default function FiltroODS({
               title={odsItem.nome}
             >
               <div className="px-3 flex-shrink-0">
-                <SafeSVG src={corrigirUrlImagem(odsItem.icone)}  alt={odsItem.nome}  className="w-16" />
+                <SafeSVG src={corrigirUrlImagem(odsItem.icone)}  alt={odsItem.nome}  className="w-16 h-12" />
               </div>
               <div
                 className={`w-30 text-white capitalize text-xs font-semibold break-words transition-opacity duration-300

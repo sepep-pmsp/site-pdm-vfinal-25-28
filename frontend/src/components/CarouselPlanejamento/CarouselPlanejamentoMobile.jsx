@@ -18,15 +18,12 @@ export default function CarouselPlanejamentoMobile({ como_feito = [] }) {
   return (
     <div className="flex flex-col items-center w-full max-w-sm mx-auto">
       <div className="relative w-full h-64 flex items-center justify-center">
-        {/* Botão esquerda */}
         <button
           onClick={prev}
           className="absolute left-2 z-30 h-10 w-10 flex items-center justify-center rounded-full bg-white shadow hover:scale-105 transition"
         >
           <i className="fa-solid fa-arrow-left text-[var(--color-navy)]"></i>
         </button>
-
-        {/* Cards */}
         {como_feito.map((slide, idx) => {
           let position = idx - currentIndex;
           if (position < -1) position += length;
@@ -36,7 +33,6 @@ export default function CarouselPlanejamentoMobile({ como_feito = [] }) {
             "absolute w-52 h-64 flex items-center justify-center text-center rounded-xl shadow-lg transition-all duration-500 ease-in-out p-4";
 
           if (position === 0) {
-            // card central
             return (
               <div
                 key={idx}
@@ -44,7 +40,6 @@ export default function CarouselPlanejamentoMobile({ como_feito = [] }) {
                 style={{ backgroundColor: "var(--color-cyan-dark)" }}
               >
                 <div className="flex flex-col gap-2 text-white">
-                  {/* Se for o card de detalhe, só mostra o conteudo */}
                   {slide.numero ? (
                     <span className="text-5xl font-bold">{slide.numero}</span>
                   ) : null}
@@ -64,7 +59,6 @@ export default function CarouselPlanejamentoMobile({ como_feito = [] }) {
           }
 
           if (position === -1) {
-            // card à esquerda
             return (
               <div
                 key={idx}
@@ -77,7 +71,6 @@ export default function CarouselPlanejamentoMobile({ como_feito = [] }) {
           }
 
           if (position === 1) {
-            // card à direita
             return (
               <div
                 key={idx}

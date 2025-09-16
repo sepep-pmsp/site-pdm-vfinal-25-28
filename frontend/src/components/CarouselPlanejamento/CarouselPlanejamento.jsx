@@ -91,7 +91,7 @@ export default function CarouselPlanejamento({ como_feito }) {
                 <div className="flex flex-col items-start px-12 h-80 w-[27rem]">
                   <div className="h-0.5 w-full bg-white"></div>
                   <p className="text-3xl text-start pl-8 w-80 pt-2 text-white">
-                    {slide.descricao}
+                    Veja o passo a passo para construção do Programa de Metas 2025 - 2028.
                   </p>
                 </div>
               ) : (
