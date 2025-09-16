@@ -22,11 +22,11 @@ export default function ModalDetalhe({ selecionado, onClose }) {
         <div className="max-md:bg-white max-md:rounded-none max-md:min-w-screen max-md:min-h-screen lg:bg-white rounded-xl w-[75%] h-[80vh] overflow-y-auto">
           <button
             onClick={onClose}
-            className="max-md:fixed max-md:top-0 max-md:left-[25rem] lg:fixed left-[103rem] top-24 cursor-pointer z-20"
+            className="max-md:fixed max-md:top-0 max-md:left-0 lg:fixed left-[103rem] top-24 cursor-pointer z-20"
           >
             <i className="fa-solid fa-xmark text-black text-2xl"></i>
           </button>
-          <div className="max-md:bg-white max-md:fixed max-md:rounded-none max-md:left-0 max-md:top-0 max-md:w-full lg:bg-white rounded-t-2xl h-20 absolute w-[75%] shadow-[0px_5px_20px_gray] left-[14.9rem] top-20 z-10"></div>
+          <div className="max-md:bg-white max-md:fixed max-md:rounded-none max-md:h-12 max-md:left-0 max-md:top-0 max-md:w-full lg:bg-white rounded-t-2xl h-20 absolute w-[75%] shadow-[0px_5px_20px_gray] left-[14.9rem] top-20 z-10"></div>
           <div className="h-1 w-[90%] relative top-16 left-16 bg-[var(--color-navy)]"></div>
           <div>
             <div className="mx-md:min-h-full lg:mx-5 pt-20 pb-5 max-h-full">
@@ -176,7 +176,7 @@ export default function ModalDetalhe({ selecionado, onClose }) {
               </>
             )}
             <img className="max-md:hidden" src={Agrupar2} alt="" />
-            <div className="max-md:bg-white max-md:fixed max-md:rounded-none max-md:left-0 max-md:top-[48rem] max-md:w-full lg:bg-white rounded-b-2xl h-20 absolute w-[75%] left-[14.9rem] shadow-[0px_5px_20px_gray] top-[47rem] z-10"></div>
+            <div className="max-md:bg-white max-md:fixed max-md:rounded-none max-md:left-0 max-md:top-[40rem] max-md:w-full lg:bg-white rounded-b-2xl h-20 absolute w-[75%] left-[14.9rem] shadow-[0px_5px_20px_gray] top-[47rem] z-10"></div>
           </div>
         </div>
       </div>
