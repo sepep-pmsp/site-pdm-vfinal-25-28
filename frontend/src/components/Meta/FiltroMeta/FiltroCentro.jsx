@@ -85,7 +85,14 @@ export default function FiltroCentro({
                 <span className="custom-checkbox--selected"></span>
                 <div className="w-40 text-sm">
                   <span className="capitalize font-bold">{option.nome}</span>
-                  <div style={{ backgroundColor: "black", height: "1px", width: "15rem", marginTop:"5px" }}></div>
+                  <div
+                    style={{
+                      backgroundColor: "black",
+                      height: "1px",
+                      width: "15rem",
+                      marginTop: "5px"
+                    }}
+                  ></div>
                 </div>
               </label>
             ))
@@ -97,7 +104,7 @@ export default function FiltroCentro({
           className={`mt-2 space-y-1 max-h-70 overflow-y-auto ${selecionadosClass}`}
         >
           {filtrosSelecionados[tipo].map((itemId) => {
-            const itemObj = lista.find(item => item.id === itemId);
+            const itemObj = lista.find((item) => item.id === itemId);
             if (!itemObj) return null;
             return (
               <label
@@ -113,7 +120,14 @@ export default function FiltroCentro({
                 <span className="custom-checkbox"></span>
                 <div className="w-40 text-sm">
                   <span className="capitalize">{itemObj.nome}</span>
-                  <div style={{ backgroundColor: "black", height: "1px", width: "15rem", marginTop:"5px" }}></div>
+                  <div
+                    style={{
+                      backgroundColor: "black",
+                      height: "1px",
+                      width: "15rem",
+                      marginTop: "5px"
+                    }}
+                  ></div>
                 </div>
               </label>
             );
@@ -160,18 +174,26 @@ export default function FiltroCentro({
                       >
                         <div className="customCheckBox">
                           <div
-                            className={`inner border rounded text-xs transition-colors duration-200 capitalize ${filtrosSelecionados.regioes.includes(
-                              id
-                            )}`}
+                            className={`inner border rounded text-xs transition-colors duration-200 capitalize ${
+                              filtrosSelecionados.regioes.includes(id)
+                                ? "bg-gray-200"
+                                : ""
+                            } whitespace-pre-line`}
                           >
                             {zonaTemNome ? (
-                              <>
-                                Zona
-                                <br />
-                                <b>{nomeCurto}</b>
-                              </>
+                              <span
+                                className="break-keep"
+                                dangerouslySetInnerHTML={{
+                                  __html: `Zona<br/><b>${nomeCurto}</b>`
+                                }}
+                              />
                             ) : (
-                              nome.toUpperCase()
+                              <span
+                              className="break-keep"
+                                dangerouslySetInnerHTML={{
+                                  __html: nome.toUpperCase()
+                                }}
+                              />
                             )}
                           </div>
                         </div>

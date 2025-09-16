@@ -1,0 +1,12 @@
+.truncate-link {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    text-decoration: none;
+    width: 100%;
+
+    a {
+        text-decoration: none;
+    }
+}

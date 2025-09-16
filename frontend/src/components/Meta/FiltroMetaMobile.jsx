@@ -9,11 +9,11 @@ export default function FiltroMetaMobile({ onCardsUpdate }) {
   if (!data) return <p>Carregando filtros...</p>;
 
   return (
-    <div className="flex flex-col gap-4 p-4">
+    <div className="flex flex-col gap-4 p-4 w-full">
       {/* Accordion: ODS */}
       <details className="bg-white rounded-lg shadow p-3">
         <summary className="font-bold cursor-pointer">ODS</summary>
-        <div className="grid grid-cols-2 gap-2 mt-2">
+        <div className="flex flex-col gap-2 mt-2">
           {data.ods.map((odsItem) => {
             const isSelected = filtrosSelecionados.ods.includes(odsItem.id);
             return (

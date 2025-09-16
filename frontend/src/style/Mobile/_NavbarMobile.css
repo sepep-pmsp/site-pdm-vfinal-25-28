@@ -14,7 +14,7 @@
 /* Tablet */
 @media screen and (min-width: 427px) and (max-width: 768px) {
     .navbar-container {
-        width: 20rem;
+        width: 100%;
     }
 
     .display-navbar {
@@ -385,7 +385,7 @@
     .navbar-mobile-tablets {
         display: flex;
         flex-direction: column;
-        left: -46.7rem;
+        left: -7rem;
     }
 
     .div-mobile-tablets-3itens {
