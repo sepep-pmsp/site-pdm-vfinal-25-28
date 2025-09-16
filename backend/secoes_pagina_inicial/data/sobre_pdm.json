@@ -4,18 +4,18 @@
         "titulo" : "Programa de Metas 2025/2028",
         "subtitulo" : "Um compromisso público do Prefeito de São Paulo com a gestão eficiente e de qualidade",
         "link_pdf" : "https://prefeitura.sp.gov.br/documents/d/prefeitura-de-sao-paulo/pdm_25_28-pdf",
-        "what" : "O Programa de Metas está institucionalizado em São Paulo desde 2008, quando foi incorporado à Lei Orgânica do Município (LOM) por meio do Artigo 69-A. O Programa de Metas está institucionalizado em São Paulo desde 2008, quando foi incorporado à Lei Orgânica do Município (LOM) por meio do Artigo 69-A.",
-        "why" : "Aliás, é uma das obrigações iniciais do Mandatário, uam vez que a versão preliminar do Programa deve ser apresentada durante os primeiros 90 dias de sua gestão. Na verdade, as obrigações do governante eleito começam antes mesmo da posse, visto que o Decreto",
-        "whom" : "De qualquer forma, com a posse do prefeito e dos secretários, abre-se um ciclo de reuniões setoriais em que todas as pastas apresentam à Secretaria Executiva de Entregas Prioritárias os compromissos que pretendem assumir publicamente no Programa de Metas"
+        "what" : "O Programa de Metas apresenta iniciativas que a gestão procurará realizar ao longo do mandato de quatro anos do prefeito e das quais prestará contas à sociedade.",
+        "why" : "O PdM dá transparência ao que será feito e permite às secretarias uma visão sistêmica da ges-tão, que evita a sobreposição de medidas, otimiza recursos e facilita execuções em conjunto, bem coordenadas",
+        "whom" : "Ao mesmo tempo em que envolve no processo de definição de metas toda a sociedade, é para a Prefeitura uma ferramenta de monitoramento de ações e de análise de desempenho."
     },
     "objetivos" : {
-        "transparencia" : "O Porgrama de Metas está institucionalizado em São Paulo",
-        "visao_sistemica" : "O Porgrama de Metas está institucionalizado em São Paulo",
-        "otimizacao" : "O Porgrama de Metas está institucionalizado em São Paulo",
-        "execucao" : "O Porgrama de Metas está institucionalizado em São Paulo"
+        "transparencia" : "A divulgação do progresso na execução das metas, com dados abertos para o cidadão, dos balanços semestrais, dos relatórios anuais e das atualizações programáticas permite à sociedade um monitoramento efetivo do trabalho da gestão.",
+        "visao_sistemica" : "O PdM permite um entendimento claro e abrangente do projeto do prefeito para a cidade, da cooperação necessária entre diferentes órgãos e das responsabilidades de cada um, evitando so-breposições de iniciativas.",
+        "otimizacao" : "O PdM é estruturado em harmonia com os instrumentos de planejamento orçamentário da gestão e é um dos balizadores da alocação das verbas municipais, contribuindo para o dimensionamento correto dos recursos necessários para o quadriênio e o uso mais eficiente dos meios financeiros",
+        "execucao" : "O PdM define prazos e estabelece cronogramas que permitem às secretarias alinhar seus fluxos de trabalho e atuar em sincronia, de modo a garantir que cada órgão realize as ações que lhe cabem em harmonia com os demais agentes responsáveis pela meta."
     },
     "como_feito" : {
-        "texto" : "O Programa de Metas está institucionalizado em São Paulo desde 2008, quando foi incorporado à Lei Orgânica do Município (LOM) por meio do Artigo 69-A. O Programa de Metas está institucionalizado em São Paulo desde 2008, quando foi incorporado à Lei Orgânica do Município (LOM) por meio do Artigo 69-A",
+        "texto" : "O PdM está institucionalizado em São Paulo e é elaborado de acordo com uma série de normas legais. Tem início com reuniões entre a secretarias, passa pela divulgação da versão inicial das metas, é levado a debate com a sociedade e chega à sua versão final, cuja execução é monitorada e eventualmente alterada nos prazos e formas definidos em lei.",
         "cards" : [
             {
                 "numero" : 1,
@@ -44,16 +44,16 @@
         ]
     },
     "indicadores" : {
-        "texto" : "O Programa de Metas está institucionalizado em São Paulo desde 2008, quando foi incorporado à Lei Orgânica do Município (LOM) por meio do Artigo 69-A. O Programa de Metas está institucionalizado em São Paulo desde 2008, quando foi incorporado à Lei Orgânica do Município (LOM) por meio do Artigo 69-A.",
+        "texto" : "Ao articular finalidades de longo prazo, metas quadrienais e indicadores verificáveis, o PdM oferece à gestão instrumentos para corrigir rumos e ampliar eficiência.",
         "subtitulo" : "Entrega e Resultado",
         "chamada_subsecao" : "A construção dos indicadores é baseada em entrega e resultado.",
-        "conteudo_subsecao" : "O Programa de Metas está institucionalizado em São Paulo desde 2008, quando foi incorporado à Lei Orgânica do Município (LOM) por meio do Artigo 69-A. O Programa de Metas está institucionalizado em São Paulo desde 2008, quando foi incorporado à Lei Orgânica do Município (LOM) por meio do Artigo 69-A."
+        "conteudo_subsecao" : "Os indicadores dão a medida do avanço da gestão na execução do PdM, sinalizando, conforme o tipo de meta, os recursos empregados nela, a entrega final feita à população, os resultados mais imediatos dessa entrega ou o impacto da meta cumprida na vida da cidade."
     },
     "participacao" : {
-        "texto" : "O Programa de Metas está institucionalizado em São Paulo desde 2008, quando foi incorporado à Lei Orgânica do Município (LOM) por meio do Artigo 69-A. O Programa de Metas está institucionalizado em São Paulo desde 2008, quando foi incorporado à Lei Orgânica do Município (LOM) por meio do Artigo 69-A.",
-        "conteudo_audiencias" : "O Programa de Metas está institucionalizado em São Paulo. Metas está institucionalizado",
+        "texto" : "O diálogo com a sociedade é uma etapa essencial do PdM. O ciclo participativo envolve a realiza-ção de audiências públicas e o envio de sugestões e opiniões pelos cidadãos por meio da plataforma digi-tal Participe+. Todas as contribuições são sistematizadas e avaliadas tecnicamente pelas equipes da Prefeitura.",
+        "conteudo_audiencias" : "O ciclo participativo referente ao PdM 2025-2028, realizado em conjunto com o Plano Plurianual 2026-2029, os Planos de Ação das Subprefeituras e o Orçamento Cidadão, foi aberto em 7 de abril de 2025. Durante o mês de abril, as quatro audiências gerais e temáticas, com a presença de se-cretários municipais, vereadores e sociedade civil, receberam contribuições dos cidadãos. O mesmo ocor-reu nas 32 subprefeituras até 7 de maio, quando foram ouvidas as aspirações e necessidades locais",
         "link_video_audiencias" : "https://www.youtube.com/playlist?list=PLy7hhEiqAY2ulthRvHOu1L0KC-u8heawZ",
-        "conteudo_devolutivas" : "O Programa de Metas está institucionalizado em São Paulo. O Programa de Metas está institucionalizado em São Paulo. O Programa de Metas está institucionalizado em São Paulo."
+        "conteudo_devolutivas" : " Nas audiências, 2.243 pessoas participaram presencialmente ou online. A interação pela plataforma Participe+ teve 31.245 interações, sendo 24.711 apoios às propostas do PdM. O resultado do processo de diálogo foi a incorporação de 3 novas metas ao Programa e de 100 propostas a iniciativas já contempladas em sua versão inicial."
     }
 
 }
