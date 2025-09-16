@@ -28,8 +28,8 @@ export default function Regionalizacao() {
                 <p>{regionalizacao.paragrafo}</p>
               </div>
             </div>
-            <div className="flex flex-col items-center justify-center flex-nowrap gap-8">
-              <div className="pb-12">
+            <div className="max-md:w-80 lg:flex flex-col items-center justify-center flex-nowrap gap-8">
+              <div className="max-md:tirar-padding lg:pb-12">
                 <p className="text-2xl font-black w-[27rem]">
                   {regionalizacao.texto}
                 </p>
