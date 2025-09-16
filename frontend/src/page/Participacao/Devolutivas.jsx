@@ -20,10 +20,10 @@ export default function Devolutivas({ devolutivas, apresentacao }) {
       </div>
       <section className="relative w-full overflow-hidden max-md:min-h-screen max-md:bottom-28">
         {devolutivas.imagem_fundo && (
-          <div className="relative w-full h-full">
+          <div className="relative w-full max-h-screen">
             <SafeSVG
               src={corrigirUrlImagem(devolutivas.imagem_fundo)}
-              className="max-md:min-h-[91vh] max-md:w-full lg:w-full h-full object-cover"
+              className="max-md:min-h-[91vh] max-md:w-full lg:w-full min-h-[73vh] object-cover"
             />
             <div className="absolute top-0 left-0 w-full h-full bg-[var(--color-blue-light)] bg-opacity-40 z-0 pointer-events-none"></div>
           </div>

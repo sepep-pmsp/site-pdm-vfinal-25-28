@@ -22,11 +22,11 @@ export default function ModalDetalhe({ selecionado, onClose }) {
         <div className="max-md:bg-white max-md:rounded-none max-md:min-w-screen max-md:min-h-screen lg:bg-white rounded-xl w-[75%] h-[80vh] overflow-y-auto">
           <button
             onClick={onClose}
-            className="max-md:fixed max-md:top-0 max-md:left-0 lg:fixed left-[103rem] top-24 cursor-pointer z-20"
+            className="max-md:fixed max-md:top-0 max-md:left-0 lg:relative flex items-start justify-center flex-nowrap flex-row top-0 left-[80rem] cursor-pointer z-20 w-16 bg-white"
           >
             <i className="fa-solid fa-xmark text-black text-2xl"></i>
           </button>
-          <div className="max-md:bg-white max-md:fixed max-md:rounded-none max-md:h-12 max-md:left-0 max-md:top-0 max-md:w-full lg:bg-white rounded-t-2xl h-20 absolute w-[75%] shadow-[0px_5px_20px_gray] left-[14.9rem] top-20 z-10"></div>
+          <div className="max-md:bg-white max-md:fixed max-md:rounded-none max-md:h-12 max-md:left-0 max-md:top-0 max-md:w-full lg:hidden"></div>
           <div className="h-1 w-[90%] relative top-16 left-16 bg-[var(--color-navy)]"></div>
           <div>
             <div className="mx-md:min-h-full lg:mx-5 pt-20 pb-5 max-h-full">
@@ -107,7 +107,7 @@ export default function ModalDetalhe({ selecionado, onClose }) {
               </>
             )}
             {detalhe.titulo && detalhe.titulo !== "None" && (
-              <div className="max-md:left-2 max-md:bottom-50 max-md:w-[20rem] lg:flex items-center justify-start gap-8 relative left-[30rem] bottom-16 w-[60rem]">
+              <div className="max-md:left-2 max-md:bottom-50 max-md:w-[20rem] lg:flex items-center justify-start gap-8 relative left-[30rem] bottom-16 w-[55rem]">
                 <div className="lg:bg-[var(--color-cyan-medium)] w-1 h-60"></div>
                 <div className="max-md:w-[20rem] lg:flex flex-col items-start justify-center gap-4 w-[57rem]">
                   <h2 className="max-md:text-2xl max-md:break-all lg:text-4xl font-bold mb-2 text-[var(--color-cyan-medium)]">
@@ -138,12 +138,12 @@ export default function ModalDetalhe({ selecionado, onClose }) {
             </div>
             {Array.isArray(detalhe.conteudo) ? (
               detalhe.conteudo.map((paragrafo, index) => (
-                <div className="max-md:left-0 max-md:w-full max-md:break-all lg:flex flex-col gap-4 relative left-[35rem] bottom-0 w-[60rem]">
+                <div className="max-md:left-0 max-md:w-full max-md:break-all lg:flex flex-col gap-4 relative left-[35rem] bottom-0 w-[54rem]">
                   <p key={index}>{paragrafo}</p>
                 </div>
               ))
             ) : (
-              <div className="max-md:left-0 max-md:w-[20rem] lg:flex flex-col gap-4 relative left-[35rem] bottom-0 w-[60rem] pb-10">
+              <div className="max-md:left-0 max-md:w-[20rem] lg:flex flex-col gap-4 relative left-[35rem] bottom-0 w-[54rem] pb-10">
                 <p className="max-md:w-full max-md:break-all max-md:relative max-md:top-[-10rem] lg:flex items-start justify-start gap-8 w-[45rem] text-xl">
                   {detalhe.conteudo}
                 </p>
@@ -169,14 +169,14 @@ export default function ModalDetalhe({ selecionado, onClose }) {
                           {r.texto}
                         </p>
                       </div>
-                      <div className="max-md:h-px max-md:max-w-full lg:h-0.5 w-[94rem] right-8 relative bg-[var(--color-cyan-dark)] my-4"></div>
+                      <div className="max-md:h-px max-md:max-w-full lg:h-0.5 w-full right-8 relative bg-[var(--color-cyan-dark)] my-4"></div>
                     </li>
                   ))}
                 </ul>
               </>
             )}
             <img className="max-md:hidden" src={Agrupar2} alt="" />
-            <div className="max-md:bg-white max-md:fixed max-md:rounded-none max-md:left-0 max-md:top-[40rem] max-md:w-full lg:bg-white rounded-b-2xl h-20 absolute w-[75%] left-[14.9rem] shadow-[0px_5px_20px_gray] top-[47rem] z-10"></div>
+            <div className="max-md:bg-white max-md:fixed max-md:rounded-none max-md:left-0 max-md:top-[40rem] max-md:w-full lg:hidden"></div>
           </div>
         </div>
       </div>
