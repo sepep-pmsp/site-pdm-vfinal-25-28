@@ -47,7 +47,7 @@ class CardTransparencia(models.Model):
     conteudo = models.TextField(verbose_name="Conteúdo do Card")
     ordem = models.PositiveIntegerField(verbose_name="Ordem do Card")
     botao_txt = models.CharField(max_length=100, verbose_name="Texto do Botão", blank=True, null=True)
-    botao_url = models.URLField(verbose_name="URL do Botão")
+    botao_url = models.URLField(verbose_name="URL do Botão", blank=True, null=True)
     published = models.BooleanField(default=False, verbose_name="Publicado")
 
     secao_transparencia: models.ForeignKey[SecaoTransparencia] = models.ForeignKey(SecaoTransparencia, related_name='cards', on_delete=models.CASCADE)
