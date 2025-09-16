@@ -4,6 +4,8 @@
     }
 
     .tirar-padding, .modal-header-mobile {
+        padding: 0;
+    }
 
     .tirar-margin {
         margin: 0;
@@ -11,7 +13,7 @@
 
     .filtro-mobile-participacao {
         left: 0;
-        top: 10rem;
+        top: 0;
         bottom: 0;
         width: 100%;
         height: auto;
@@ -69,7 +71,7 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        bottom: -8rem;
+        bottom: 0;
         padding: 1rem;
         gap: 2rem;
         padding-bottom: 1rem;
