@@ -124,13 +124,13 @@ export default function ModalDetalhe({ selecionado, onClose }) {
             )}
             <div className="flex flex-col flex-nowrap items-start justify-center gap-4 lg:relative lg:left-20 lg:bottom-80 lg:w-40 max-md:fixed max-md:bottom-3 max-md:left-4 max-md:w-[20rem] max-md:flex max-md:flex-row z-20">
               {detalhe.apoios > 0 && (
-                <p className="flex items-center gap-2 text-[var(--color-navy)] shadow-[0px_0px_2px_gray] p-2 rounded-3xl w-40">
+                <p className="flex items-center gap-2 text-[var(--color-navy)] shadow-[0px_0px_2px_gray] p-2 rounded-3xl w-40 max-md:hidden">
                   <img src={Like} alt="Apoios" />
                   <strong>{detalhe.apoios}</strong> Apoios
                 </p>
               )}
               {detalhe.comentarios > 0 && (
-                <p className="flex items-center gap-2 text-[var(--color-navy)] shadow-[0px_0px_2px_gray] p-2 rounded-3xl w-40">
+                <p className="flex items-center gap-2 text-[var(--color-navy)] shadow-[0px_0px_2px_gray] p-2 rounded-3xl w-40 max-md:hidden">
                   <img src={Commit} alt="Comentários" />
                   <strong>{detalhe.comentarios}</strong> Comentários
                 </p>
@@ -176,7 +176,6 @@ export default function ModalDetalhe({ selecionado, onClose }) {
               </>
             )}
             <img className="max-md:hidden" src={Agrupar2} alt="" />
-            <div className="max-md:bg-white max-md:fixed max-md:rounded-none max-md:left-0 max-md:top-[40rem] max-md:w-full lg:hidden"></div>
           </div>
         </div>
       </div>
