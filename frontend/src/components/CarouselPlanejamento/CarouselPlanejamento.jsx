@@ -17,33 +17,30 @@ export default function CarouselPlanejamento({ como_feito }) {
   };
 
   return (
-    <div className="relative w-[90rem] h-[38rem] flex flex-col items-center container-carousel-mobile">
+    <div className="relative w-[90rem] h-[38rem] flex flex-col items-center carousel-container">
       <button
         onClick={prevSlide}
-        className="absolute right-[86rem] top-50 z-20 bg-white h-16 w-16 rounded-full btn-left-mobile"
+        className="absolute right-[86rem] top-50 z-20 bg-white h-16 w-16 rounded-full carousel-button left"
       >
         <i className="fa-solid fa-arrow-left text-lg text-[var(--color-navy)]"></i>
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute left-[86rem] top-50 z-20 bg-white h-16 w-16 rounded-full btn-right-mobile"
+        className="absolute left-[86rem] top-50 z-20 bg-white h-16 w-16 rounded-full carousel-button right"
       >
         <i className="fa-solid fa-arrow-right text-lg text-[var(--color-navy)]"></i>
       </button>
-      
       <div className="relative flex justify-center items-center gap-6 h-[30rem] w-full overflow-hidden">
         {slides.map((slide, index) => {
           let position = index - currentIndex;
           if (position < -1) position += slides.length;
           if (position > 1) position -= slides.length;
-          
           let style = {
             transform: "translateX(0) scale(1)",
             opacity: 1,
             zIndex: 10
           };
-          
           if (position === 0) {
             if (slide.numero) {
               style = {
@@ -82,11 +79,10 @@ export default function CarouselPlanejamento({ como_feito }) {
           } else {
             style = { opacity: 0, zIndex: 0, transform: "scale(0.8)" };
           }
-          
           return (
             <div
-              key={index}
-              className="card absolute transition-all duration-500 ease-in-out shadow-lg flex items-start justify-center flex-col flex-nowrap p-6 w-[30rem] h-[30rem]"
+              key={slide.id || "mensagem"}
+              className="card carousel-card absolute transition-all duration-500 ease-in-out shadow-lg flex items-start justify-center flex-col flex-nowrap p-6 w-[30rem] h-[30rem]"
               style={{
                 ...style
               }}
@@ -95,12 +91,12 @@ export default function CarouselPlanejamento({ como_feito }) {
                 <div className="flex flex-col items-start px-12 h-80 w-[27rem]">
                   <div className="h-0.5 w-full bg-white"></div>
                   <p className="text-3xl text-start pl-8 w-80 pt-2 text-white">
-                    {slide.conteudo}
+                    {slide.descricao}
                   </p>
                 </div>
               ) : (
                 <>
-                  <div className="flex flex-col flex-nowrap items-start justify-center gap-20 px-16 conteudo-card-carousel-mobile">
+                  <div className="flex flex-col flex-nowrap items-start justify-center gap-20 px-16">
                     <div className="flex flex-col flex-nowrap items-start justify-center gap-8">
                       <span className="text-9xl font-bold text-start">
                         {slide.numero}

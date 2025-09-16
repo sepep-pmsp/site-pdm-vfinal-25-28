@@ -18,20 +18,15 @@ export default function Sobre() {
 
   return (
     <div className="pt-20">
-      <div>
-        <SectionIntroSobre
-          sobre={sobre}
-          setSelectedButton={setSelectedButton}
-          selectedButton={selectedButton}
-        />
-      </div>
-      <div>
-        <SectionObjetivos sobre={sobre} />
-        <SectionPlanejamento sobre={sobre} />
-        <SectionIndicadores sobre={sobre} />
-        <SectionParticipacaoSocial sobre={sobre} />
-      </div>
+      <SectionIntroSobre
+        sobre={sobre}
+        setSelectedButton={setSelectedButton}
+        selectedButton={selectedButton}
+      />
+      <SectionObjetivos sobre={sobre} />
+      <SectionPlanejamento sobre={sobre} />
+      <SectionIndicadores sobre={sobre} />
+      <SectionParticipacaoSocial sobre={sobre} />
     </div>
   );
 }
-
