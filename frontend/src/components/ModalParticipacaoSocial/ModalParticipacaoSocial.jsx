@@ -57,8 +57,8 @@ export default function ModalParticipacaoSocial({ isOpen, onClose, apresentacao 
           <div className="lg:flex items-center justify-center flex-row h-full gap-30">
             <div className="max-sm:max-w-full  lg:flex flex-col items-start justify-center gap-3 p-8 w-180 z-[10100]">
               <div className="modal-header-mobile pb-10">
-                <h2 className="max-sm:text-4xl lg:text-8xl text-white font-bebas-regular">{apresentacao?.titulo}</h2>
-                <p className="max-sm:text-lg text-white lg:text-white text-2xl pt-8 roboto-medium">{apresentacao?.subtitulo}</p>
+                <h2 className="max-md:text-4xl lg:text-8xl text-white font-bebas-regular">{apresentacao?.titulo}</h2>
+                <p className="max-md:pt-0 max-md:text-lg text-white lg:text-white text-2xl pt-8 roboto-medium">{apresentacao?.subtitulo}</p>
               </div>
               <div className="modal-body-mobile flex flex-col gap-3">
                 {apresentacao?.paragrafos?.map((par, index) => (
@@ -70,7 +70,7 @@ export default function ModalParticipacaoSocial({ isOpen, onClose, apresentacao 
               </div>
             </div>
             <div>
-              <img className="max-sm:w-80 lg:w-150 relative z-[10100]" src={apresentacao_logo_pdm} alt="" />
+              <img className="max-md:w-36 max-md:relative max-md:left-1/4 lg:w-150 relative z-[10100]" src={apresentacao_logo_pdm} alt="" />
               <img className="max-sm:absolute max-sm:left-36 max-sm:top-0 max-sm:max-w-screen max-sm:h-full lg:absolute right-8 top-0 w-full h-auto max-w-[42.6rem]" src={bg_fundo} alt="" />
             </div>
           </div>
