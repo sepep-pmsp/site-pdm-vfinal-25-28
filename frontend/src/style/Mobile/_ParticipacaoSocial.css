@@ -3,9 +3,7 @@
         margin: 0;
     }
 
-    .tirar-padding {
-        padding: 0;
-    }
+    .tirar-padding, .modal-header-mobile {
 
     .tirar-margin {
         margin: 0;
@@ -74,7 +72,7 @@
         bottom: -8rem;
         padding: 1rem;
         gap: 2rem;
-        padding-bottom: 8rem;
+        padding-bottom: 1rem;
     }
 
     .span-video-mobile-1 {
@@ -87,7 +85,7 @@
         left: -1rem;
         position: relative;
         width: 20rem;
-        top: 49rem;
+        top: 42rem;
         height: 7rem;
         border-bottom-right-radius: 3rem;
         border-bottom-left-radius: 0;

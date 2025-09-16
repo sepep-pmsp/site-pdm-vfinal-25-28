@@ -89,7 +89,7 @@ body.menu-aberto .img-fundo {
         top: 0rem;
         z-index: 40;
         pointer-events: none;
-        left: 4rem;
+        left: 0rem;
         transition: all .5s ease-in-out;
     }
 }
