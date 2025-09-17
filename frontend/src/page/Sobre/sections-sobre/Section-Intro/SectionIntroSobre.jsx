@@ -16,7 +16,7 @@ export default function SectionIntroSobre({sobre, setSelectedButton, selectedBut
       <section className="relative w-full h-[98vh] overflow-hidden intro-sobre-mobile">
         <div>
           <img
-            className="absolute top-[-10rem]"
+            className="max-md:top-0 max-md:hidden lg:absolute top-[-10rem]"
             src={bgImage}
           />
           <div className="absolute top-0 left-0 w-full h-full bg-[#120e49d9] z-0 pointer-events-none"></div>

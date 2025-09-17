@@ -110,7 +110,7 @@ export default function Audiencia({ audiencia }) {
               href={audiencia.botao}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative z-30 text-7xl shadow-[0px_0px_2px_gray] p-4 rounded-[2.5rem] cursor-pointer"
+              className="max-md:z-0 lg:relative z-30 text-7xl shadow-[0px_0px_2px_gray] p-4 rounded-[2.5rem] cursor-pointer"
             >
               <i className="fa-brands fa-youtube text-red-600"></i>
             </a>

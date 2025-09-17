@@ -2,7 +2,6 @@ import React from "react";
 import CustomButton from "@/components/Button/Button";
 
 export default function DocumentPanel({ itens, onClose }) {
-  // `itens` agora é `card.documentos`
   if (!itens || itens.length === 0) return null;
 
   return (
