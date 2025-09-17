@@ -1,5 +1,4 @@
 .card {
-  position: relative;
   transition: transform 0.5s ease, opacity 0.5s ease, z-index 0.3s;
   will-change: transform, opacity;
 }

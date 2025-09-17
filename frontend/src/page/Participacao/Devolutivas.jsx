@@ -18,18 +18,18 @@ export default function Devolutivas({ devolutivas, apresentacao }) {
           Devolutivas
         </h1>
       </div>
-      <section className="relative w-full overflow-hidden max-sm:max-h-full">
+      <section className="relative w-full overflow-hidden max-md:min-h-screen max-md:bottom-28">
         {devolutivas.imagem_fundo && (
-          <div className="relative w-full h-full">
+          <div className="relative w-full max-h-screen">
             <SafeSVG
               src={corrigirUrlImagem(devolutivas.imagem_fundo)}
-              className="w-full h-full object-cover"
+              className="max-md:min-h-[91vh] max-md:w-full lg:w-full min-h-[73vh] object-cover"
             />
             <div className="absolute top-0 left-0 w-full h-full bg-[var(--color-blue-light)] bg-opacity-40 z-0 pointer-events-none"></div>
           </div>
         )}
         <div className="absolute inset-0 z-1 mx-0 flex flex-col items-start justify-start flex-nowrap md:flex-row md:justify-evenly md:items-center">
-          <div className="max-sm:w-80 lg:flex flex-col items-start w-[60rem] justify-center gap-8 p-8 text-white relative left-12">
+          <div className="max-md:w-80 lg:flex flex-col items-start w-[60rem] justify-center gap-8 p-8 text-white relative left-12">
             <h2 className="max-md:text-3xl lg:text-6xl">{devolutivas.subtitulo}</h2>
             <p className="max-md:text-xl lg:text-2xl">{devolutivas.paragrafos}</p>
           </div>
