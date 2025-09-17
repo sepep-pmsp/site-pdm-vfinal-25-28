@@ -45,7 +45,7 @@ export default function CardEixos({ eixo, onClose }) {
       <div className="grid items-center grid-cols-[repeat(2,1fr)] justify-items-stretch p-4 conteudo-eixos">
         <div className="p-4 w-[25rem] flex flex-col gap-4 container-eixos-mobile">
           <section>
-            <SafeSVG src={corrigirUrlImagem(eixo.imagem)} className="w-32 h-32" />
+            <SafeSVG src={corrigirUrlImagem(eixo.imagem)} className="w-auto h-38" />
           </section>
           <section className="p-4">
             <ul className="listCard">

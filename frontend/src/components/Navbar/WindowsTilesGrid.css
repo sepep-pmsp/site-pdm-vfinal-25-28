@@ -37,6 +37,8 @@
   z-index: -1;
   /* Fica atrás do conteúdo da tile */
 }
+
 .menu-tile-right {
   width: calc(200% - 8px);
+  margin-left: calc(-100% + 8px);
 }
