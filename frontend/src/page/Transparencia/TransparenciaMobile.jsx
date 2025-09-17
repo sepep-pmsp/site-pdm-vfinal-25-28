@@ -9,9 +9,8 @@ export default function TransparenciaMobile({ transparencia }) {
           <h1 className="text-[5rem] text-[var(--color-navy)] title-mobile">
             {transparencia.titulo}
           </h1>
-          <div className="h-1 w-[95rem] bg-[color:var(--color-navy)]"></div>
+          <div className="max-md:w-auto h-1 bg-[color:var(--color-navy)]"></div>
         </div>
-
         <div className="flex flex-col pt-10 gap-8">
           {transparencia.recursos.map((item, index) => (
             <div key={index} className="flex flex-col gap-4">

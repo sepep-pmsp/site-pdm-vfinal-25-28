@@ -26,17 +26,13 @@ export default function ModalResultados({
     <Modal isOpen={isOpen} onClose={onClose}>
       <div className="fixed inset-0 bg-black/50 bg-opacity-50 flex justify-center items-center z-50">
         <div className="max-md:bg-white max-md:rounded-none max-md:min-w-screen max-md:min-h-screen lg:bg-white rounded-2xl lg:w-[75%] lg:h-[80vh] overflow-y-auto scrollbar-thin no-scrollbar-arrows">
-          <div>
+          <div className="mx-5 py-16 pb-5">
             <button
               onClick={onClose}
-              className="max-md:fixed max-md:top-0 max-md:left-[25rem] lg:fixed left-[103rem] top-24 cursor-pointer z-20"
+              className="max-md:fixed max-md:top-0 max-md:left-0 lg:relative flex items-start justify-center flex-nowrap flex-row top-[-2rem] left-[80rem] cursor-pointer z-20 w-16 bg-white"
             >
               <i className="fa-solid fa-xmark text-black text-2xl"></i>
-            </button>
-            <div className="max-md:bg-white max-md:fixed max-md:rounded-none max-md:left-0 max-md:top-0 max-md:w-full lg:bg-white rounded-t-2xl h-20 absolute w-[75%] left-[14.9rem] shadow-[0px_5px_20px_gray] top-20 z-10"></div>
-          </div>
-
-          <div className="mx-5 py-16 pb-5">
+            </button> 
             {(() => {
               if (!Array.isArray(resultados)) {
                 return <p>Nenhum resultado disponível.</p>;
@@ -104,7 +100,6 @@ export default function ModalResultados({
               );
             })()}
           </div>
-          <div className="max-md:bg-white max-md:fixed max-md:rounded-none max-md:left-0 max-md:top-[48rem] max-md:w-full lg:bg-white rounded-b-2xl h-20 absolute w-[75%] left-[14.9rem] shadow-[0px_5px_20px_gray] top-[47rem] z-10"></div>
         </div>
       </div>
     </Modal>

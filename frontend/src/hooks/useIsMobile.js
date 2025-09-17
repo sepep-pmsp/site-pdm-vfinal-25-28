@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 
 /**
  * Hook para detectar se a tela está em modo "mobile"
- * @param {number} breakpoint - largura máxima em px (padrão: 1024)
+ * @param {number} breakpoint - largura máxima em px (padrão: 725)
  * @returns {boolean} isMobile
  **/
-export function useIsMobile(breakpoint = 1024) {
+export function useIsMobile(breakpoint = 725) {
   const [isMobile, setIsMobile] = useState(() => {
     if (typeof window !== "undefined") {
       return window.innerWidth <= breakpoint;
