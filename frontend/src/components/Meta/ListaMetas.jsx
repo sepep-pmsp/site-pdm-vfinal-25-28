@@ -8,31 +8,33 @@ export default function ListaMetas({ metas, onSelectMeta }) {
       </div>
     );
   }
+
   const metasOrdenadas = [...metas].sort(
     (a, b) => Number(a.listing.numero) - Number(b.listing.numero)
   );
 
   return (
-    <div>
-      <div className="flex flex-col flex-nowrap justify-center items-stretch w-[35rem] lista-metas-container">
+    // Contêiner para alinhar a lista à direita no desktop
+    <div className="w-full flex justify-end">
+      <div className="flex flex-col flex-nowrap justify-center items-stretch w-[35rem] max-w-full md:ml-auto lista-metas-container">
         {metasOrdenadas.map((meta) => (
           <div
             key={meta.id}
             className="cursor-pointer p-6 flex flex-row items-center gap-4 hover:scale-105 transition-transform lista-metas-item"
-            onClick={() => onSelectMeta(meta)}
+            onClick={() => onSelectMeta && onSelectMeta(meta)}
           >
-            <div>
-              <div className="h-[0.5px] bg-[black] w-full lista-metas-separador"></div>
+            <div className="w-full">
+              <div className="h-[0.5px] bg-[black] w-full lista-metas-separador" />
               <div className="flex items-center justify-start flex-row flex-nowrap gap-12">
                 <span
                   className="text-8xl font-bebas-regular lista-metas-numero"
-                  style={{ color: meta.listing.eixo_cor_principal }}
+                  style={{ color: meta?.listing?.eixo_cor_principal }}
                 >
-                  {meta.listing.numero}
+                  {meta?.listing?.numero}
                 </span>
                 <p
                   className="text-xl leading-snug lista-metas-titulo"
-                  dangerouslySetInnerHTML={{ __html: meta.listing.titulo }}
+                  dangerouslySetInnerHTML={{ __html: meta?.listing?.titulo }}
                 />
               </div>
             </div>
