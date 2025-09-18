@@ -1,8 +1,8 @@
 @import "tailwindcss";
 @import "./style/_global.css";
-@import 'tailwindcss/preflight.css' layer(base);
-@import 'tailwindcss/utilities.css' layer(utilities);
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 .rotate-\[270deg\] {
   --tw-rotate: 0 !important;

@@ -20,21 +20,16 @@ export default function CardEixos({ eixo, onClose }) {
 
   useEffect(() => {
     if (isExiting) {
-      const timeout = setTimeout(() => {
-        onClose();
-      }, 500);
-      return () => clearTimeout(timeout);
+      const t = setTimeout(() => onClose(), 500);
+      return () => clearTimeout(t);
     }
   }, [isExiting, onClose]);
 
   return (
     <div
-      className={`p-8 text-white card-eixos ${
-        isExiting ? animationSet.out : animationSet.in
-      }`}
+      className={`p-8 text-white card-eixos ${isExiting ? animationSet.out : animationSet.in}`}
       style={{ backgroundColor: eixo.cor_principal }}
     >
-      {/* Botão fechar */}
       <button
         onClick={() => setIsExiting(true)}
         className="absolute top-4 right-4 text-white text-2xl"
@@ -42,8 +37,8 @@ export default function CardEixos({ eixo, onClose }) {
         <i className="fa-solid fa-xmark text-6xl"></i>
       </button>
 
-      <div className="grid items-center grid-cols-[repeat(2,1fr)] justify-items-stretch p-4 conteudo-eixos">
-        <div className="p-4 w-[25rem] flex flex-col gap-4 container-eixos-mobile">
+      <div className="grid gap-4 items-start p-4 conteudo-eixos grid-cols-1 md:grid-cols-2">
+        <div className="p-4 w-full md:w-[25rem] flex flex-col gap-4 container-eixos-mobile order-1 md:order-none">
           <section>
             <SafeSVG src={corrigirUrlImagem(eixo.imagem)} className="w-auto h-38" />
           </section>
@@ -56,19 +51,10 @@ export default function CardEixos({ eixo, onClose }) {
               ))}
             </ul>
           </section>
-          <section className="buttons-eixos ">
-            <CustomButton
-              onClick={() => goTo("/metas")}
-              type="link"
-              style={{ color: eixo.cor_principal }}
-              className="buttons_metas bg-[var(--color-white)] h-28 text-3xl uppercase font-family cursor-pointer"
-            >
-              veja as metas
-            </CustomButton>
-          </section>
         </div>
-        <div>
-          <section className="flex flex-col items-center relative right-8 eixos-textos-p-mobile">
+
+        <div className="order-2 md:order-none md:col-start-2 md:row-start-1">
+          <section className="flex flex-col items-center md:items-start relative md:right-8 eixos-textos-p-mobile">
             {eixo.texto.map((paragrafo, i) => (
               <p className="py-2" key={i}>
                 {paragrafo}
@@ -76,6 +62,17 @@ export default function CardEixos({ eixo, onClose }) {
             ))}
           </section>
         </div>
+
+        <section className="order-3 md:order-none md:col-start-1 md:row-start-2">
+          <CustomButton
+            onClick={() => goTo("/metas")}
+            type="link"
+            style={{ color: eixo.cor_principal }}
+            className="buttons_metas bg-[var(--color-white)] h-28 text-3xl uppercase font-family cursor-pointer w-full md:w-auto"
+          >
+            veja as metas
+          </CustomButton>
+        </section>
       </div>
     </div>
   );
