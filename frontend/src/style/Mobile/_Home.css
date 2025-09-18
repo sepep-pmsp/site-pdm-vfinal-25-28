@@ -111,6 +111,7 @@
         }
 
         & .news-mobile-carousel {
+            width: 5rem;
             right: 3rem;
         }
     }
