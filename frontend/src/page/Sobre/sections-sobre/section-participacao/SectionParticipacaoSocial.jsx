@@ -1,19 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import NoteBook from "@/assets/svg/Free_MacBook_Pro.svg";
 import { Link } from "react-router-dom";
+import { useIsMobile } from "../../../../hooks/useIsMobile";
 
 export default function SectionParticipacaoSocial({ sobre }) {
   const { participacao } = sobre;
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1439);
-
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 1439);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isMobile = useIsMobile(768);
 
   return (
-    <div className="mt-45 bg-[#F0EFEE] h-[120vh] py-10 px-24 z-[-3] container-cards-participacao-mobilee">
+    <div className="lg:mt-45 bg-[#F0EFEE] h-[120vh] py-10 px-24 z-[-3] container-cards-participacao-mobilee">
       <div className="bg-[var(--color-navy)] h-1 w-full mt-8"></div>
       <div>
         <div className="mb-10">

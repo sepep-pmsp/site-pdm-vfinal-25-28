@@ -24,7 +24,11 @@ export default function FiltroMetaMobile({
 
   const panelRef = useRef(null);
 
-  // >>> Hooks que disparam atualização do pai (PRECISAM ficar antes de qualquer return)
+  const stripHtml = (s = "") => s.toString().replace(/<[^>]*>/g, "").trim();
+  const norm = (s = "") =>
+    stripHtml(s).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase().trim();
+
+  // Atualização do pai (debounce) — sempre antes de qualquer return
   const debounceRef = useRef(null);
   const buildPayload = () => ({
     eixos: filtrosSelecionados?.eixos ?? [],
@@ -50,7 +54,6 @@ export default function FiltroMetaMobile({
     JSON.stringify(filtrosSelecionados?.subprefeituras || []),
     JSON.stringify(filtrosSelecionados?.ods || []),
   ]);
-  // <<<
 
   useEffect(() => {
     const prev = document.body.style.overflow;
@@ -59,10 +62,6 @@ export default function FiltroMetaMobile({
       document.body.style.overflow = prev;
     };
   }, [open]);
-
-  const stripHtml = (s = "") => s.toString().replace(/<[^>]*>/g, "").trim();
-  const norm = (s = "") =>
-    stripHtml(s).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase().trim();
 
   const regionalizacaoArr = Array.isArray(regionalizacao)
     ? regionalizacao
