@@ -1,14 +1,15 @@
 import React from "react";
 
 export default function ListaMetas({ metas, onSelectMeta }) {
-  if (!Array.isArray(metas)) {
+  if (!Array.isArray(metas) || metas.length === 0) {
     return (
-      <div className="text-center p-8 text-lg font-semibold text-gray-600">
-        Carregando metas...
+      <div className="w-full flex justify-center items-center h-full">
+        <p className="text-center p-8 text-lg font-semibold text-gray-600">
+          Não há resultados para esta pesquisa.
+        </p>
       </div>
     );
   }
-
   const metasOrdenadas = [...metas].sort(
     (a, b) => Number(a.listing.numero) - Number(b.listing.numero)
   );

@@ -49,6 +49,7 @@ export default function FiltroMeta({ onCardsUpdate }) {
             filtrosSelecionados={filtrosSelecionados}
             regioes={data.regionalizacao}
             orgaos={data.orgaos}
+            selecionados={filtrosSelecionados.zonas}
             planosVinculados={data.planos_setoriais}
             toggleSelecionado={toggleSelecionado}
             onLimparFiltros={limparFiltros}

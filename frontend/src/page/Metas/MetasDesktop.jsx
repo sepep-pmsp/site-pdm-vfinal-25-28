@@ -22,27 +22,28 @@ export default function MetasDesktop() {
         console.error(err);
         setLoading(false);
       });
-  const filtrosIniciais = {
-        ods: [],
-        planos_setoriais: [],
-        orgaos: [],
-        eixos: [],
-        temas: [],
-        subprefeituras: [],
-        zonas: [],
-        termo_busca: ""
-      };
-      
-      postFiltrosSelecionados(filtrosIniciais)
-        .then((res) => {
-          setMetas(res.metas); 
-          setLoading(false);
-        })
-        .catch((err) => {
-          console.error("Erro na busca inicial de metas:", err);
-          setLoading(false);
-        });
-    }, []);
+
+    const filtrosIniciais = {
+      ods: [],
+      planos_setoriais: [],
+      orgaos: [],
+      eixos: [],
+      temas: [],
+      subprefeituras: [],
+      zonas: [],
+      termo_busca: ""
+    };
+
+    postFiltrosSelecionados(filtrosIniciais)
+      .then((res) => {
+        setMetas(res.metas);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Erro na busca inicial de metas:", err);
+        setLoading(false);
+      });
+  }, []);
 
   if (loading) return <div>Carregando...</div>;
 

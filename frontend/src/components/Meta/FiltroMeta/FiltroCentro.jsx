@@ -11,7 +11,6 @@ export default function FiltroCentro({
   const [openSub, setOpenSub] = useState(false);
   const [openOrgao, setOpenOrgao] = useState(false);
   const [openPlanos, setOpenPlanos] = useState(false);
-
   const selecionarTudo = (tipo, lista) => {
     const allSelected = lista.every((item) =>
       filtrosSelecionados[tipo].includes(item.id)
@@ -25,6 +24,11 @@ export default function FiltroCentro({
       }
     });
   };
+  const subprefeiturasFiltradas = filtrosSelecionados.zonas?.length > 0
+    ? regioes
+        .filter((r) => filtrosSelecionados.zonas.includes(r.id))
+        .flatMap((r) => r.subprefeituras || [])
+    : regioes.flatMap((r) => r.subprefeituras || []);
 
   const renderDropdownFiltro = (
     tipo,
@@ -79,7 +83,9 @@ export default function FiltroCentro({
                 <input
                   type="checkbox"
                   className="form-checkbox h-4 w-4 rounded input-centro-option"
-                  checked={filtrosSelecionados[tipo].includes(option.id)}
+                  checked={
+                    filtrosSelecionados[tipo]?.includes(option.id) ?? false
+                  }
                   onChange={() => toggleSelecionado(tipo, option.id)}
                 />
                 <span className="custom-checkbox--selected"></span>
@@ -103,7 +109,7 @@ export default function FiltroCentro({
         <div
           className={`mt-2 space-y-1 max-h-70 overflow-y-auto ${selecionadosClass}`}
         >
-          {filtrosSelecionados[tipo].map((itemId) => {
+          {(filtrosSelecionados[tipo] ?? []).map((itemId) => {
             const itemObj = lista.find((item) => item.id === itemId);
             if (!itemObj) return null;
             return (
@@ -153,7 +159,7 @@ export default function FiltroCentro({
           </p>
           <div className="flex items-start justify-center gap-4">
             <div>
-              {regioes.map(({ nome, id }) => {
+              {regioes.map(({ nome, id, sigla }) => {
                 const zonaTemNome = nome.includes("zona");
                 const nomeCurto = zonaTemNome
                   ? nome.replace("zona ", "")
@@ -163,20 +169,28 @@ export default function FiltroCentro({
                     <div className="customCheckBoxHolder">
                       <input
                         className="customCheckBoxInput"
-                        id={`cCB1-${nome}`}
+                        id={`cCB1-${id}`}
                         type="checkbox"
-                        checked={filtrosSelecionados.regioes.includes(id)}
-                        onChange={() => toggleSelecionado("regioes", id)}
+                        checked={
+                          filtrosSelecionados.zonas?.includes(id) ?? false
+                        }
+                        onChange={() => {
+                          console.log(`=== CLICK NA ZONA === ${sigla}`);
+                          console.log("id clicado:", id);
+                          console.log("antes:", filtrosSelecionados);
+                          toggleSelecionado("zonas", id);
+                        }}
                       />
                       <label
                         className="customCheckBoxWrapper"
-                        htmlFor={`cCB1-${nome}`}
+                        htmlFor={`cCB1-${id}`}
+                        onClick={() => toggleSelecionado("zonas", id)}
                       >
                         <div className="customCheckBox">
                           <div
                             className={`inner border rounded text-xs transition-colors duration-200 capitalize ${
-                              filtrosSelecionados.regioes.includes(id)
-                                ? "bg-gray-200"
+                              filtrosSelecionados.zonas?.includes(id)
+                                ? "bg-blue-500"
                                 : ""
                             } whitespace-pre-line`}
                           >
@@ -189,7 +203,7 @@ export default function FiltroCentro({
                               />
                             ) : (
                               <span
-                              className="break-keep"
+                                className="break-keep"
                                 dangerouslySetInnerHTML={{
                                   __html: nome.toUpperCase()
                                 }}
@@ -206,7 +220,7 @@ export default function FiltroCentro({
             {renderDropdownFiltro(
               "subprefeituras",
               "Subprefeitura",
-              regioes.flatMap((r) => r.subprefeituras),
+              subprefeiturasFiltradas,
               openSub,
               setOpenSub
             )}

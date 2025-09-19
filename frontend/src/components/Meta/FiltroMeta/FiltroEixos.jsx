@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-//import { getFiltroMetasData } from "@/services/Metas/getFiltroMetasData";
 
 export default function FiltroEixos({
   eixos,
@@ -10,29 +9,25 @@ export default function FiltroEixos({
   if (!eixos) {
     return <p>Carregando eixos...</p>;
   }
-
-  const toggleEixoAberto = (id) => {
-    const isAberto = eixosAbertos.includes(id);
-
+  const toggleDropdown = (id) => {
     setEixosAbertos((prev) =>
-      isAberto ? prev.filter((e) => e !== id) : [...prev, id]
+      prev.includes(id) ? prev.filter((e) => e !== id) : [...prev, id]
     );
-
-    if (!isAberto && !filtrosSelecionados.eixos.includes(id)) {
-      toggleSelecionado("eixos", id);
-    }
   };
 
   return (
     <div className="h-full flex flex-col items-start w-[19rem] relative bottom-10">
-      {eixos.map(({ nome,id, cor, temas }) => {
+      {eixos.map(({ nome, id, cor, temas }) => {
         const isAberto = eixosAbertos.includes(id);
 
         return (
           <div key={id}>
             {/* Botão do eixo */}
             <div
-              onClick={() => toggleEixoAberto(id)}
+              onClick={() => {
+                toggleSelecionado("eixos", id);
+                toggleDropdown(id);
+              }}
               className="flex flex-col items-start justify-between flex-nowrap rounded-r-3xl overflow-hidden cursor-pointer transition-all duration-300"
               style={{
                 backgroundColor: cor,
@@ -56,7 +51,7 @@ export default function FiltroEixos({
                     className="text-white absolute left-85"
                     onClick={(e) => {
                       e.stopPropagation();
-                      toggleEixoAberto(id);
+                      toggleDropdown(id);
                     }}
                   >
                     <i
