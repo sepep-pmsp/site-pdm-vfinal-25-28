@@ -49,27 +49,33 @@ export default function MetasDesktop() {
 
   return (
     <div className="pt-20">
-      <div className="bg-[var(--color-navy)] h-35 p-4 flex items-center gap-7">
-        <img className="w-25" src={logo} alt="Logo" />
-        <h2 className="text-white text-4xl">conheça as metas</h2>
-      </div>
-
-      <div className="bg-gray-50 h-90">
-        <div className="w-120 flex flex-col items-center gap-5 py-5 px-10 text-[1.3rem] texto-inicio-metas-mobile">
-          <p>
-            <strong>
-              Neste painel você pode conferir todas as metas deste Programa,
-            </strong>{" "}
-            ou filtrá-las como preferir.
-          </p>
-          <p>
-            Escolha também se deseja visualizar a lista completa ou as metas de
-            cada eixo e ainda dividi-las em seus subtemas.{" "}
-            <strong>Clique na meta para ver suas informações completas</strong>.
-          </p>
+      <div className="flex flex-col items-stretch flex-nowrap">
+        <div className="bg-[var(--color-navy)] h-full flex flex-row items-center px-4 py-8">
+          <div className="flex flex-row flex-nowrap items-center justify-start gap-8 relative left-60">
+            <img className="w-32" src={logo} alt="Logo" />
+            <h2 className="text-white text-4xl">conheça as metas</h2>
+          </div>
         </div>
-        <div className="relative w-[73rem] left-[40rem] bottom-[25rem] carousel-ormacento-container-mobile">
-          <CarouselOrcamento />
+        <div className="bg-gray-50 h-full flex flex-row items-center justify-center gap-40">
+          <div className="flex flex-col items-start gap-5 py-5 px-10 text-[1.3rem] texto-inicio-metas-mobile">
+            <p className="w-84">
+              <strong>
+                Neste painel você pode conferir todas as metas deste Programa,
+              </strong>{" "}
+              ou filtrá-las como preferir.
+            </p>
+            <p className="w-80">
+              Escolha também se deseja visualizar a lista completa ou as metas
+              de cada eixo e ainda dividi-las em seus subtemas.{" "}
+              <strong>
+                Clique na meta para ver suas informações completas
+              </strong>
+              .
+            </p>
+          </div>
+          <div className="flex relative left-[-11rem] bottom-24 carousel-ormacento-container-mobile">
+            <CarouselOrcamento />
+          </div>
         </div>
       </div>
 
