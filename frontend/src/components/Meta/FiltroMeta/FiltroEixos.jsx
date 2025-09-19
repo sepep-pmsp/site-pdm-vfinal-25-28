@@ -31,9 +31,9 @@ export default function FiltroEixos({
               className="flex flex-col items-start justify-between flex-nowrap rounded-r-3xl overflow-hidden cursor-pointer transition-all duration-300"
               style={{
                 backgroundColor: cor,
-                width: isAberto ? "24rem" : "6rem",
+                width: isAberto ? "21.5rem" : "6rem",
                 height: "21rem",
-                marginBottom: "-20px"
+                marginBottom: isAberto ?"-12px": "-20px"
               }}
             >
               <div className="flex justify-between items-center flex-row flex-nowrap">
@@ -48,7 +48,7 @@ export default function FiltroEixos({
                 </div>
                 {isAberto && (
                   <button
-                    className="text-white absolute left-85"
+                    className="text-white absolute left-[19rem]"
                     onClick={(e) => {
                       e.stopPropagation();
                       toggleDropdown(id);
@@ -68,7 +68,7 @@ export default function FiltroEixos({
                   {temas.map((sub) => (
                     <label
                       key={sub.id}
-                      className="mb-1 text-white text-xl flex flex-row-reverse justify-between items-center"
+                      className="mb-1 text-white text-xl flex flex-row-reverse justify-between items-center pr-8"
                       onClick={(e) => e.stopPropagation()}
                     >
                       <input
@@ -78,7 +78,7 @@ export default function FiltroEixos({
                         onChange={() => toggleSelecionado("subeixos", sub.id)}
                       />
                       <span className="custom-checkbox-eixos"></span>
-                      <div className="w-full py-1">
+                      <div className="w-60 py-1">
                         <span className="w-70 capitalize">{sub.nome}</span>
                         <div style={{ backgroundColor: "white", height: "1px", width: "90%" }}></div>
                       </div>

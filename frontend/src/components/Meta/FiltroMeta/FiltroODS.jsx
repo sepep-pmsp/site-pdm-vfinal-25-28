@@ -24,7 +24,7 @@ export default function FiltroODS({
             <button
               onClick={() => toggleSelecionado("ods", valor)}
               className={`flex items-center h-21 rounded-l-3xl overflow-hidden cursor-pointer transition-all duration-300
-                ${isSelected ? "w-45" : "w-24"}`}
+                ${isSelected ? "w-45" : "w-20"}`}
               style={{ backgroundColor: odsItem.cor }}
               title={odsItem.nome}
             >
