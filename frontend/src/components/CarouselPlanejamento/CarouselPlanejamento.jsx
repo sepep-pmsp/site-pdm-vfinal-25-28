@@ -24,7 +24,6 @@ export default function CarouselPlanejamento({ como_feito }) {
       >
         <i className="fa-solid fa-arrow-left text-lg text-[var(--color-navy)]"></i>
       </button>
-
       <button
         onClick={nextSlide}
         className="absolute left-[86rem] top-50 z-20 bg-white h-16 w-16 rounded-full carousel-button right"
@@ -115,18 +114,6 @@ export default function CarouselPlanejamento({ como_feito }) {
           );
         })}
       </div>
-      {slides[currentIndex]?.detalhe?.trim() !== "" && (
-        <div className="mt-6">
-          <div className="rotate-90 w-8">
-            <i className="fa-solid fa-play"></i>
-          </div>
-          <div className="w-50">
-            <h4 className="text-4xl font-bold uppercase text-[var(--color-navy)]">
-              {slides[currentIndex].detalhe}
-            </h4>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

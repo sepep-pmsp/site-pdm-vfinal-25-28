@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 export default function CarouselPlanejamentoMobile({ como_feito = [] }) {
-  // 👉 se o primeiro card for o de detalhe, já começa nele
   const [currentIndex, setCurrentIndex] = useState(0);
   const length = como_feito.length;
 
@@ -28,10 +27,8 @@ export default function CarouselPlanejamentoMobile({ como_feito = [] }) {
           let position = idx - currentIndex;
           if (position < -1) position += length;
           if (position > 1) position -= length;
-
           let baseClasses =
             "absolute w-52 h-64 flex items-center justify-center text-center rounded-xl shadow-lg transition-all duration-500 ease-in-out p-4";
-
           if (position === 0) {
             return (
               <div
@@ -57,7 +54,6 @@ export default function CarouselPlanejamentoMobile({ como_feito = [] }) {
               </div>
             );
           }
-
           if (position === -1) {
             return (
               <div
@@ -69,7 +65,6 @@ export default function CarouselPlanejamentoMobile({ como_feito = [] }) {
               </div>
             );
           }
-
           if (position === 1) {
             return (
               <div
@@ -81,10 +76,8 @@ export default function CarouselPlanejamentoMobile({ como_feito = [] }) {
               </div>
             );
           }
-
           return null;
         })}
-
         {/* Botão direita */}
         <button
           onClick={next}
@@ -93,15 +86,6 @@ export default function CarouselPlanejamentoMobile({ como_feito = [] }) {
           <i className="fa-solid fa-arrow-right text-[var(--color-navy)]"></i>
         </button>
       </div>
-
-      {/* detalhe opcional abaixo do card */}
-      {como_feito[currentIndex]?.detalhe?.trim() && (
-        <div className="mt-4 text-center">
-          <h4 className="text-base font-bold uppercase text-[var(--color-navy)]">
-            {como_feito[currentIndex].detalhe}
-          </h4>
-        </div>
-      )}
     </div>
   );
 }
