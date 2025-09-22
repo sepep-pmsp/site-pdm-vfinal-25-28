@@ -6,11 +6,14 @@ import FiltroMeta from "@/components/Meta/FiltroMeta";
 import ListaMetas from "@/components/Meta/ListaMetas";
 import CardMetas from "@/components/Meta/CardMetas";
 import { postFiltrosSelecionados } from "@/services/Metas/getFiltroMetasData";
+import { useIsMobile } from "@/hooks/useIsMobile";
+import CardMetasMobile from "@/components/Meta/CardMetasMobile";
 
 export default function MetasDesktop() {
   const [metas, setMetas] = useState([]);
   const [selectedMeta, setSelectedMeta] = useState(null);
   const [loading, setLoading] = useState(true);
+  const isMobile = useIsMobile(725);
 
   useEffect(() => {
     getMetasIniciais()
@@ -44,7 +47,6 @@ export default function MetasDesktop() {
         setLoading(false);
       });
   }, []);
-
   if (loading) return <div>Carregando...</div>;
 
   return (
@@ -91,9 +93,18 @@ export default function MetasDesktop() {
         </div>
       </div>
 
-      {selectedMeta && (
-        <CardMetas meta={selectedMeta} onClose={() => setSelectedMeta(null)} />
-      )}
+      {selectedMeta &&
+        (isMobile ? (
+          <CardMetasMobile
+            meta={selectedMeta}
+            onClose={() => setSelectedMeta(null)}
+          />
+        ) : (
+          <CardMetas
+            meta={selectedMeta}
+            onClose={() => setSelectedMeta(null)}
+          />
+        ))}
     </div>
   );
 }

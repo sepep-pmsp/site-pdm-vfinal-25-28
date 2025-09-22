@@ -584,4 +584,9 @@
     .btn-card-opem-mobile {
         left: 0;
     }
+
+    .div-conteudo-mobile{
+       display: flex;
+        flex-direction: column;
+    }
 }
