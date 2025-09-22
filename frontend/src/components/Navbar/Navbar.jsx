@@ -59,7 +59,7 @@ export default function Navbar() {
         content: () => (
           <div className="text-white w-full h-full flex flex-col items-start justify-start text-2xl p-4 cursor-pointer slide-bottom-in">
             <h2 className="z-2 slide-bottom-in-item">sobre o pdm</h2>
-            <img className="absolute left-4 bottom-0" src={Vector_Sobre} />
+            <img className="absolute left-2 bottom-0" src={Vector_Sobre} />
           </div>
         ),
         action: () => goTo("/sobre"),
@@ -182,7 +182,7 @@ export default function Navbar() {
           height: '1/4',
           content: () => (
               <div className="text-white text-start p-4 cursor-pointer flex justify-start items-end h-full w-full slide-top-in-3">
-                  <h2 className="w-10 slide-top-in-item-3">participação social</h2>
+                  <h2 className="w-10 slide-top-in-item-3 md:text-2xl">participação social</h2>
               </div>
           ),
           action: () => goTo("/participacao-social"),
