@@ -17,16 +17,16 @@ export default function CarouselPlanejamento({ como_feito }) {
   };
 
   return (
-    <div className="relative w-[90rem] h-[38rem] flex flex-col items-center carousel-container">
+    <div className="max-xl: lg:relative w-[90rem] max-h-xl flex flex-col items-center">
       <button
         onClick={prevSlide}
-        className="absolute right-[86rem] top-50 z-20 bg-white h-16 w-16 rounded-full carousel-button left"
+        className="absolute right-[86rem] top-50 z-20 bg-white h-16 w-16 rounded-full"
       >
         <i className="fa-solid fa-arrow-left text-lg text-[var(--color-navy)]"></i>
       </button>
       <button
         onClick={nextSlide}
-        className="absolute left-[86rem] top-50 z-20 bg-white h-16 w-16 rounded-full carousel-button right"
+        className="absolute left-[86rem] top-50 z-20 bg-white h-16 w-16 rounded-full"
       >
         <i className="fa-solid fa-arrow-right text-lg text-[var(--color-navy)]"></i>
       </button>
@@ -80,7 +80,7 @@ export default function CarouselPlanejamento({ como_feito }) {
           }
           return (
             <div
-              key={slide.id || "mensagem"}
+              key={slide.id}
               className="card carousel-card absolute transition-all duration-500 ease-in-out shadow-lg flex items-start justify-center flex-col flex-nowrap p-6 w-[30rem] h-[30rem]"
               style={{
                 ...style
