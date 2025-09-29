@@ -11,7 +11,6 @@ export default function FiltroCentro({
   const [openSub, setOpenSub] = useState(false);
   const [openOrgao, setOpenOrgao] = useState(false);
   const [openPlanos, setOpenPlanos] = useState(false);
-
   const selecionarTudo = (tipo, lista) => {
     const allSelected = lista.every((item) =>
       filtrosSelecionados[tipo].includes(item.id)
@@ -25,6 +24,11 @@ export default function FiltroCentro({
       }
     });
   };
+  const subprefeiturasFiltradas = filtrosSelecionados.zonas?.length > 0
+    ? regioes
+        .filter((r) => filtrosSelecionados.zonas.includes(r.id))
+        .flatMap((r) => r.subprefeituras || [])
+    : regioes.flatMap((r) => r.subprefeituras || []);
 
   const renderDropdownFiltro = (
     tipo,
@@ -35,7 +39,7 @@ export default function FiltroCentro({
     dropdownClass = "",
     selecionadosClass = ""
   ) => (
-    <div className="w-72 relative">
+    <div className="w-80 relative">
       <button
         onClick={() => setOpen(!open)}
         className="w-full border rounded-md px-3 py-2 flex justify-between items-center font-semibold cursor-pointer"
@@ -79,7 +83,9 @@ export default function FiltroCentro({
                 <input
                   type="checkbox"
                   className="form-checkbox h-4 w-4 rounded input-centro-option"
-                  checked={filtrosSelecionados[tipo].includes(option.id)}
+                  checked={
+                    filtrosSelecionados[tipo]?.includes(option.id) ?? false
+                  }
                   onChange={() => toggleSelecionado(tipo, option.id)}
                 />
                 <span className="custom-checkbox--selected"></span>
@@ -103,7 +109,7 @@ export default function FiltroCentro({
         <div
           className={`mt-2 space-y-1 max-h-70 overflow-y-auto ${selecionadosClass}`}
         >
-          {filtrosSelecionados[tipo].map((itemId) => {
+          {(filtrosSelecionados[tipo] ?? []).map((itemId) => {
             const itemObj = lista.find((item) => item.id === itemId);
             if (!itemObj) return null;
             return (
@@ -138,22 +144,21 @@ export default function FiltroCentro({
   );
 
   return (
-    <div className="h-[85rem] relative bottom-20">
-      <div className="bg-white w-[32rem] h-full rounded-[2rem] shadow-[0px_0px_11px_#00000085] p-8">
+    <div className="h-[87rem] relative bottom-20">
+      <div className="bg-white max-w-sm h-full rounded-[2rem] shadow-[0px_0px_11px_#00000085] p-8">
         <span>
           <p className="text-xl pb-8">
-            Nas abas a direita filtre por <b>Eixos do Programa</b> e na esquerda
-            de acordo com as <b>17 ODS</b>.
+            Nas abas à direita filtre por eixos e na esquerda de acordo com os <b>17 ODS</b>s.
           </p>
-          <div className="w-[28rem] h-px bg-black" />
+          <div className="w-80 h-px bg-black" />
         </span>
         <div>
-          <p className="text-xl p-2 font-bold">
-            Filtre a região e suas subprefeituras correspondentes
+          <p className="text-lg p-2 font-bold">
+            Selecione a região desejada e as subprefeituras que fazem parte dela.
           </p>
           <div className="flex items-start justify-center gap-4">
-            <div>
-              {regioes.map(({ nome, id }) => {
+            <div className="w-24">
+              {regioes.map(({ nome, id}) => {
                 const zonaTemNome = nome.includes("zona");
                 const nomeCurto = zonaTemNome
                   ? nome.replace("zona ", "")
@@ -163,22 +168,22 @@ export default function FiltroCentro({
                     <div className="customCheckBoxHolder">
                       <input
                         className="customCheckBoxInput"
-                        id={`cCB1-${nome}`}
+                        id={`cCB1-${id}`}
                         type="checkbox"
-                        checked={filtrosSelecionados.regioes.includes(id)}
-                        onChange={() => toggleSelecionado("regioes", id)}
+                        checked={
+                          filtrosSelecionados.zonas?.includes(id) ?? false
+                        }
+                        onChange={() => {toggleSelecionado("zonas", id)}}
                       />
                       <label
                         className="customCheckBoxWrapper"
-                        htmlFor={`cCB1-${nome}`}
+                        htmlFor={`cCB1-${id}`}
+                        onClick={() => toggleSelecionado("zonas", id)}
                       >
                         <div className="customCheckBox">
                           <div
                             className={`inner border rounded text-xs transition-colors duration-200 capitalize ${
-                              filtrosSelecionados.regioes.includes(id)
-                                ? "bg-gray-200"
-                                : ""
-                            } whitespace-pre-line`}
+                              filtrosSelecionados.zonas?.includes(id)} whitespace-pre-line`}
                           >
                             {zonaTemNome ? (
                               <span
@@ -189,7 +194,7 @@ export default function FiltroCentro({
                               />
                             ) : (
                               <span
-                              className="break-keep"
+                                className="break-keep"
                                 dangerouslySetInnerHTML={{
                                   __html: nome.toUpperCase()
                                 }}
@@ -206,19 +211,19 @@ export default function FiltroCentro({
             {renderDropdownFiltro(
               "subprefeituras",
               "Subprefeitura",
-              regioes.flatMap((r) => r.subprefeituras),
+              subprefeiturasFiltradas,
               openSub,
               setOpenSub
             )}
           </div>
-          <div className="w-[28rem] h-px bg-black mt-6" />
+          <div className="w-80 h-px bg-black mt-6" />
         </div>
         <div className="mt-3">
           <div className="flex flex-col gap-4 h-75">
             <p className="text-xl p-2 font-bold">
-              Filtre por órgão responsável
+              Pesquise por órgão responsável!
             </p>
-            <div className="flex items-center justify-center w-[25rem]">
+            <div className="flex items-center justify-start w-[25rem]">
               {renderDropdownFiltro(
                 "orgaos",
                 "Órgão",
@@ -230,14 +235,14 @@ export default function FiltroCentro({
               )}
             </div>
           </div>
-          <div className="w-[28rem] h-px bg-black mt-6" />
+          <div className="w-80 h-px bg-black mt-6" />
         </div>
         <div className="mt-3">
           <div className="flex flex-col gap-8 h-80">
             <p className="text-xl p-2 font-bold">
-              Filtre de acordo com articulações com outros planos
+              Pesquise pela relação com outros planos municipais!
             </p>
-            <div className="flex items-center justify-center w-[25rem]">
+            <div className="flex items-center justify-start w-[25rem]">
               {renderDropdownFiltro(
                 "planos_vinculados",
                 "Planos Vinculados",
@@ -249,12 +254,12 @@ export default function FiltroCentro({
               )}
             </div>
           </div>
-          <div className="w-[28rem] h-px bg-black mt-6" />
+          <div className="w-80 h-px bg-black mt-6" />
         </div>
         <div className="flex items-center justify-center mt-4">
           <button
             onClick={onLimparFiltros}
-            className="mt-4 w-40 text-center font-bold border-2 rounded-md px-3 py-2 cursor-pointer"
+            className="w-40 text-center font-bold border-2 rounded-md px-3 py-2 cursor-pointer"
           >
             Limpar filtros
           </button>

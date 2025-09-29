@@ -37,11 +37,11 @@ export default function Audiencia({ audiencia }) {
       <div>
         <div className="bg-[var(--color-cyan-dark)] w-[40rem] h-44 right-[95rem] top-[115rem] rotate-[270deg] absolute flex items-center flex-col justify-end p-4 rounded-br-4xl rounded-bl-4xl shadow-[-4px_2px_20px_0px_gray] z-1">
           <h1 className="text-white text-7xl px-6 relative left-28 bottom-4">
-            Audiencias
+            Audiências
           </h1>
         </div>
       </div>
-      <div className="mx-60 audiencia-mobile">
+      <div className="mx-38 audiencia-mobile">
         <div className="gap-24 flex items-center justify-center relative pl-20 bottom-28 container-audiencia-mobile">
           <h2 className="text-5xl text-[var(--color-navy)]">
             Veja informações sobre as devolutivas.

@@ -2,7 +2,6 @@ import React from "react";
 import { corrigirUrlImagem } from "@/utils/imageUtils";
 import SafeSVG from "../../SafeSVG/SafeSVG";
 
-
 export default function FiltroODS({
   ods,
   filtrosSelecionados,
@@ -10,7 +9,7 @@ export default function FiltroODS({
 })
 {
   return (
-    <div className="flex flex-col items-center relative bottom-10">
+    <div className="flex flex-col items-center relative bottom-4">
       {ods.map((odsItem) => {
         const valor = odsItem.id;
         const isSelected = filtrosSelecionados.ods.includes(valor);
@@ -24,7 +23,7 @@ export default function FiltroODS({
             <button
               onClick={() => toggleSelecionado("ods", valor)}
               className={`flex items-center h-21 rounded-l-3xl overflow-hidden cursor-pointer transition-all duration-300
-                ${isSelected ? "w-45" : "w-24"}`}
+                ${isSelected ? "w-45" : "w-20"}`}
               style={{ backgroundColor: odsItem.cor }}
               title={odsItem.nome}
             >

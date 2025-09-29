@@ -1,24 +1,3 @@
-/*
-******
-*
-*
-* Eixos Mobile
-*
-*
-******
-*/
-.card-eixos {
-    position: absolute;
-    transition: all 0.8s ease;
-    border-radius: 3rem;
-    left: 22rem;
-    top: 136rem;
-    width: 84.2rem;
-    height: 38.5rem;
-}
-
-/*Telas Menores*/
-
 @media screen and (min-width: 1279px) and (max-width: 1438px) {
     .grid-mobile-eixos {
         width: 70rem;
@@ -47,32 +26,29 @@
             left: 65.5rem;
         }
 
-        .card-eixos {
-            height: 37.5rem;
-            border-radius: 3rem;
-            position: absolute;
-            left: 12rem;
-            top: 141rem;
-            width: 74.2rem
-        }
-
         .eixos-mobile-header {
             height: 7rem;
             right: 24rem;
         }
 
-        .card-eixos {
-            height: 37.5rem;
-            border-radius: 3rem;
-            position: absolute;
-            left: 10rem;
-            top: 138rem;
-            width: 69.2rem;
+        .cardeixos-overlay .card-eixos {
+            position: relative !important;
+            left: auto !important;
+            top: auto !important;
+            width: min(84.2rem, 100%) !important;
+            height: auto !important;
+            max-height: 90vh !important;
+            overflow: auto !important;
+            border-radius: 3rem !important;
+            opacity: 1 !important;
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
         }
-
     }
-}
 
+    .cardeixos-overlay { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; padding:1rem; z-index:2; left: 0;
+    top: 0;}
+}
 /*Tablet*/
 @media screen and (min-width: 427px) and (max-width: 769px) {
     .grid-mobile-eixos {
@@ -87,18 +63,11 @@
         left: 0px;
     }
 
+    .cardeixos-overlay { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; padding:1rem; z-index:2; left: 0;
+    top: 0;}
+
     #eixos {
         height: 100%;
-    }
-
-    .card-eixos {
-        position: absolute;
-        transition: all 0.8s ease;
-        border-radius: 3rem;
-        left: -4rem;
-        top: -5rem;
-        width: 51.2rem;
-        height: 56.5rem;
     }
 
     .conteudo-eixos {
@@ -164,8 +133,21 @@
     .eixos-texts-mobile {
         width: 100%;
     }
-}
 
+    .cardeixos-overlay .card-eixos {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        width: min(84.2rem, 100%) !important;
+        height: auto !important;
+        max-height: 90vh !important;
+        overflow: auto !important;
+        border-radius: 3rem !important;
+        opacity: 1 !important;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+    }
+}
 @media screen and (min-width: 770px) and (max-width: 1025px) {
     .grid-mobile-eixos {
         display: flex;
@@ -178,18 +160,22 @@
         right: 4rem;
     }
 
-    #eixos {
-        height: 100%;
+    .cardeixos-overlay .card-eixos {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        width: min(84.2rem, 100%) !important;
+        height: auto !important;
+        max-height: 90vh !important;
+        overflow: auto !important;
+        border-radius: 3rem !important;
+        opacity: 1 !important;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
     }
 
-    .card-eixos {
-        position: absolute;
-        transition: all 0.8s ease;
-        border-radius: 3rem;
-        left: -4rem;
-        top: -5rem;
-        width: 51.2rem;
-        height: 56.5rem;
+    #eixos {
+        height: 100%;
     }
 
     .conteudo-eixos {
@@ -250,11 +236,13 @@
         padding: 0;
     }
 
+    .cardeixos-overlay { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; padding:1rem; z-index:2; left: 0;
+    top: 0;}
+
     .eixos-texts-mobile {
         width: 100%;
     }
 }
-
 /*Celulares*/
 @media screen and (min-width: 319px) and (max-width: 426px) {
     .header-eixos-mobile {
@@ -270,7 +258,21 @@
         padding: 0;
         margin: 0;
     }
-
+    .cardeixos-overlay { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; padding:1rem; z-index:2; left: 0;
+    top: 5rem;}
+    .cardeixos-overlay .card-eixos {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        width: min(84.2rem, 100%) !important;
+        height: auto !important;
+        max-height: 90vh !important;
+        overflow: auto !important;
+        border-radius: 3rem !important;
+        opacity: 1 !important;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+    }
     .eixos-mobile-header {
         background-color: white;
         transform: rotate(90deg);
@@ -286,18 +288,15 @@
         padding: 1rem 0;
         width: 19rem;
     }
-
     .conatiner-textos-eixos-mobile {
         margin: 0;
         position: relative;
-        bottom: 7rem;
+        bottom: 3rem;
     }
-
     .eixos-mobile-header-text {
         color: black;
         font-size: 60px;
     }
-
     .grid-mobile-eixos {
         display: flex;
         flex-direction: column;
@@ -307,37 +306,22 @@
         height: 50rem;
         position: relative;
     }
-
     .text-hover-green {
         display: none;
     }
-
     .w-60 {
         position: relative;
         left: 0rem;
     }
-
     #eixos {
         height: 100%;
         padding: 0;
     }
-
-    .card-eixos {
-        position: absolute;
-        transition: all 0.8s ease;
-        border-radius: 3rem;
-        left: 0rem;
-        top: -3rem;
-        width: 23.2rem;
-        height: 57.5rem;
-    }
-
     .eixos-textos-p-mobile {
         overflow-y: auto;
         max-height: 20rem;
         padding-left: 1.5rem;
     }
-
     .conteudo-eixos {
         display: flex;
         flex-direction: column;
@@ -347,14 +331,12 @@
         padding: 0.5rem 1rem;
         gap: 0rem;
     }
-
     .buttons-eixos {
         position: relative;
         left: 0rem;
         top: 0rem;
         width: 15rem;
     }
-
     .header-eixos-mobile {
         display: flex;
         flex-direction: column;
@@ -365,11 +347,9 @@
         padding: 1rem 5rem;
         gap: 3rem;
     }
-
     .eixos-mobile-header-text {
         color: black;
     }
-
     .section-eixos-texts-mobile {
         display: flex;
         align-items: flex-start;
@@ -382,15 +362,12 @@
         position: relative;
         right: 4rem;
     }
-
     .eixos-texts-mobile {
         width: 100%;
     }
-
     .eixos-text-p-mobile {
         width: 15rem;
     }
-
     .container-eixos-mobile {
         width: auto;
     }

@@ -1,19 +1,19 @@
 import React from "react";
 import NoteBook from "@/assets/svg/Free_MacBook_Pro.svg";
 import { Link } from "react-router-dom";
-import { useIsMobile } from "../../../../hooks/useIsMobile";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 export default function SectionParticipacaoSocial({ sobre }) {
   const { participacao } = sobre;
-  const isMobile = useIsMobile(768);
+  const isMobile = useIsMobile(1441);
 
   return (
-    <div className="lg:mt-45 bg-[#F0EFEE] h-[120vh] py-10 px-24 z-[-3] container-cards-participacao-mobilee">
-      <div className="bg-[var(--color-navy)] h-1 w-full mt-8"></div>
+    <div className="max-lg:h-[130vh] lg:mt-45 bg-[#F0EFEE] h-[120vh] py-10 px-24 z-[-3] tirar-padding">
+      <div className="max-md:w-full h-1 max-md:left-0 max-2xl:left-2 max-2xl:hidden lg:h-1 w-[89rem] left-35 relative bg-[var(--color-navy)]"></div>
       <div>
         <div className="mb-10">
-          <div className="flex flex-col flex-nowrap items-start justify-center">
-            <h2 className="text-8xl font-bold pt-10 mb-4 text-[var(--color-navy)] titulo-ind-mobile">
+          <div className="max-2xl:relative max-2xl:left-0 lg:flex flex-col flex-nowrap items-start justify-center max-w-4xl relative left-40">
+            <h2 className="max-lg:text-5xl lg:text-8xl font-bold pt-10 mb-4 text-[var(--color-navy)]">
               participação social
             </h2>
             <p className="text-xl">{participacao.texto}</p>
@@ -44,40 +44,39 @@ export default function SectionParticipacaoSocial({ sobre }) {
                 <p className="text-lg text-center">
                   {participacao.conteudo_devolutivas}
                 </p>
-                <a
-                  href="https://devolutiva.pdm.prefeitura.sp.gov.br/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-[var(--color-cyan-medium)] text-white px-6 py-3 rounded-xl text-lg font-bold shadow hover:-translate-y-1 transition"
-                >
-                  SAIBA +
-                </a>
+                <Link
+                    to="/participacao-social"
+                    rel="noopener noreferrer"
+                    className="bg-[var(--color-cyan-medium)] text-white px-6 py-3 rounded-xl text-lg font-bold shadow hover:-translate-y-1 transition"
+                  >
+                    <p className="text-3xl">SAIBA +</p>
+                  </Link>
               </div>
             </div>
           ) : (
             <div className="flex flex-row flex-nowrap items-center justify-start">
               <img
-                className="relative right-24 z-10 pointer-events-none img-ind-mobile-notbook"
+                className="relative right-24 z-10 pointer-events-none"
                 src={NoteBook}
                 alt=""
               />
               <div
                 className={
-                  "relative z-2 block p-8 flex-col justify-between shadow-[0px_0px_2px_gray] right-[45rem] top-8 pl-16 bg-white rounded-r-4xl min-w-[32rem] h-[30rem] -cards-participacao-mobilee"
+                  "relative z-2 block p-8 flex-col justify-between shadow-[0px_0px_2px_gray] right-[45rem] top-8 pl-1 bg-white rounded-r-4xl min-w-[28rem] h-[30rem]"
                 }
               >
-                <div className="flex flex-col flex-nowrap items-center justify-start pt-10 h-full gap-12 w-[25rem]">
+                <div className="flex flex-col flex-nowrap items-start justify-start pt-10 h-full gap-12 w-[25rem] relative left-20">
                   <h3 className="text-4xl font-bold mb-2 p-2 text-[var(--color-navy)] border-y">
                     AUDIÊNCIAS PÚBLICAS
                   </h3>
-                  <p className="text-xl mb-3 w-80 text-center">
+                  <p className="text-xl mb-3 w-80 text-start">
                     {participacao.conteudo_audiencias}
                   </p>
                   <a
                     href={participacao.link_video_audiencias}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="relative z-30 text-7xl shadow-[0px_0px_2px_gray] p-4 rounded-[2.5rem] cursor-pointer"
+                    className="relative z-30 text-7xl shadow-[0px_0px_2px_gray] p-4 rounded-[2.5rem] cursor-pointer left-15"
                   >
                     <i className="fa-brands fa-youtube text-red-600"></i>
                   </a>
@@ -85,7 +84,7 @@ export default function SectionParticipacaoSocial({ sobre }) {
               </div>
               <div
                 className={
-                  "relative z-2 block p-8 flex-col justify-between shadow-[0px_0px_2px_gray] right-[40rem] top-8 pl-16 bg-white rounded-4xl min-w-[32rem] h-[30rem]"
+                  "relative z-2 block p-8 flex-col justify-between shadow-[0px_0px_2px_gray] right-[40rem] top-8 pl-12 bg-white rounded-4xl min-w-[30rem] h-[30rem]"
                 }
               >
                 <div className="flex flex-col flex-nowrap items-center justify-start pt-10 h-full gap-12 w-[25rem]">

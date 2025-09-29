@@ -1,37 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { getMetasIniciais } from "@/services/Metas/getMetasData";
-import { postFiltrosSelecionados } from "@/services/Metas/getFiltroMetasData";
 import CardMetas from "@/components/Meta/CardMetas";
 import MetasDesktop from "./MetasDesktop";
 import MetasMobile from "./MetasMobile";
+import { useIsMobile } from "@/hooks/useIsMobile";
+import CardMetasMobile from "@/components/Meta/CardMetasMobile";
 
 export default function Metas() {
   const [metas, setMetas] = useState([]);
   const [selectedMeta, setSelectedMeta] = useState(null);
   const [loading, setLoading] = useState(true);
+  const isMobile = useIsMobile(1024);
 
   useEffect(() => {
     getMetasIniciais()
       .then((data) => {
         setMetas(data.resultados);
-        setLoading(false);
-      })
-      .catch(() => setLoading(false));
-
-    const filtrosIniciais = {
-      ods: [],
-      planos_setoriais: [],
-      orgaos: [],
-      eixos: [],
-      temas: [],
-      subprefeituras: [],
-      zonas: [],
-      termo_busca: "",
-    };
-
-    postFiltrosSelecionados(filtrosIniciais)
-      .then((res) => {
-        setMetas(res.metas);
         setLoading(false);
       })
       .catch(() => setLoading(false));
@@ -59,9 +43,18 @@ export default function Metas() {
         />
       </div>
 
-      {selectedMeta && (
-        <CardMetas meta={selectedMeta} onClose={() => setSelectedMeta(null)} />
-      )}
+      {selectedMeta &&
+        (isMobile ? (
+          <CardMetasMobile
+            meta={selectedMeta}
+            onClose={() => setSelectedMeta(null)}
+          />
+        ) : (
+          <CardMetas
+            meta={selectedMeta}
+            onClose={() => setSelectedMeta(null)}
+          />
+        ))}
     </>
   );
 }
