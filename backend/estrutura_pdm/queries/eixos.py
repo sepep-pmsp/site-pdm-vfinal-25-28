@@ -1,7 +1,8 @@
 from estrutura_pdm.models.eixos import Eixo
+from estrutura_pdm.models.eixos import Tema
 from django.db import models
 
-def get_eixo_by_nome(nome:str, raise_error:bool=True)->Eixo:
+def get_eixo_by_nome(nome:str, raise_error:bool=True)->Eixo|None:
 
     if raise_error:
         return Eixo.objects.get(nome=nome)
@@ -10,7 +11,18 @@ def get_eixo_by_nome(nome:str, raise_error:bool=True)->Eixo:
             return Eixo.objects.get(nome=nome)
         except Eixo.DoesNotExist:
             return None
-        
+
+
+def get_tema_by_nome(nome:str, raise_error:bool=True)->Tema|None:
+
+    if raise_error:
+        return Tema.objects.get(nome=nome)
+    else:
+        try:
+            return Tema.objects.get(nome=nome)
+        except Tema.DoesNotExist:
+            return None
+
 def get_eixos()->list[Eixo]:
     return list(Eixo.objects.all())
 

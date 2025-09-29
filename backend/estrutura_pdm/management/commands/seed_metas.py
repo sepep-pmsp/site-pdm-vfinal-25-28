@@ -3,6 +3,7 @@ import os
 from django.core.management.base import BaseCommand
 from estrutura_pdm.models.eixos import Eixo
 from estrutura_pdm.models.metas import Meta, MetaOrgao
+from estrutura_pdm.queries.metas import get_meta_by_numero
 from estrutura_pdm.queries.eixos import get_eixo_by_nome
 from cadastros_basicos.queries.orgaos import get_orgao_by_sigla
 from cadastros_basicos.models.estrutura_administrativa import Orgao
@@ -20,6 +21,12 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         data = self.__load_json()
         for item in data:
+
+            m = get_meta_by_numero(item['numero'], raise_error=False)
+            if m:
+                self.stdout.write(self.style.WARNING(f'Meta {item["numero"]} já existe. Pulando...'))
+                continue
+
             eixo = get_eixo_by_nome(item["eixo"])
             
             meta, created =Meta.objects.get_or_create(

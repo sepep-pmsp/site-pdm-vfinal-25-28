@@ -57,7 +57,16 @@ if errorlevel 1 exit /b %errorlevel%
 python manage.py seed_planos_setoriais
 if errorlevel 1 exit /b %errorlevel%
 
+python manage.py seed_metas_planos
+if errorlevel 1 exit /b %errorlevel%
+
 python manage.py seed_ods
+if errorlevel 1 exit /b %errorlevel%
+
+python manage.py seed_metas_ods
+if errorlevel 1 exit /b %errorlevel%
+
+python manage.py seed_metas_temas
 if errorlevel 1 exit /b %errorlevel%
 
 python manage.py seed_historico

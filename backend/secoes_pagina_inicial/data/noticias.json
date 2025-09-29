@@ -1,23 +1,23 @@
 [
     {
-        "titulo" : "Notícia de Exemplo 1",
-        "link" : "https://prefeitura.sp.gov.br/web/planejamento",
-        "data" : "2025-01-01",
+        "titulo" : "Programa de Metas prevê recorde de R$ 48 bilhões em investimentos",
+        "link" : "https://prefeitura.sp.gov.br/w/programa-de-metas-prev%C3%AA-recorde-de-r-48-bilh%C3%B5es-em-investimentos?p_l_back_url=%2Fbusca%3Fq%3D%2522metas%2522%26sort%3DcreateDate-%26start%3D1%26news%3D79914%26title%3D%2522metas%2522%26news%3D79914&p_l_back_url_title=Busca",
+        "data" : "2025-03-31",
         "colocar_no_topo" : true,
         "published" : true
     },
         {
-        "titulo" : "Notícia de Exemplo 2",
-        "link" : "https://prefeitura.sp.gov.br/web/planejamento",
-        "data" : "2025-02-01",
+        "titulo" : "Audiências para Programa de Metas 2025-2028, Plano Plurianual 2026-2029, Orçamento Cidadão e Planos de Ação das Subprefeituras começam na segunda (7)",
+        "link" : "https://prefeitura.sp.gov.br/w/audi%C3%AAncias-para-programa-de-metas-2025-2028-plano-plurianual-2026-2029-or%C3%A7amento-cidad%C3%A3o-e-planos-de-a%C3%A7%C3%A3o-das-subprefeituras-come%C3%A7am-na-segunda-7-?p_l_back_url=%2Fbusca%3Fq%3D%2522metas%2522%26sort%3DcreateDate-%26start%3D1%26news%3D79914%26title%3D%2522metas%2522%26news%3D79914&p_l_back_url_title=Busca",
+        "data" : "2025-04-04",
         "colocar_no_topo" : true,
         "published" : true
 
     },
         {
-        "titulo" : "Notícia de Exemplo 3",
-        "link" : "https://prefeitura.sp.gov.br/web/planejamento",
-        "data" : "2025-03-01",
+        "titulo" : "Prazo de contribuição para o Programa de Metas termina domingo (11)",
+        "link" : "https://prefeitura.sp.gov.br/w/prazo-de-contribui%C3%A7%C3%A3o-para-o-programa-de-metas-vai-at%C3%A9-domingo-11-?p_l_back_url=%2Fbusca%3Fq%3D%2522metas%2522%26sort%3DcreateDate-%26start%3D1%26news%3D79914%26title%3D%2522metas%2522%26news%3D79914&p_l_back_url_title=Busca",
+        "data" : "2025-05-07",
         "colocar_no_topo" : true,
         "published" : true
     }

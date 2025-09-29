@@ -80,6 +80,7 @@ class Command(BaseCommand):
             "logo_colorido": logo_colorido,
             "logo_branco": logo_branco,
             "cor_principal": eixo_obj["hex_cor_principal"],
+            "cor_secundaria" : eixo_obj['hex_cor_secundaria'],
             "ordem": int(eixo_obj["ordem"]),
             "orcamento" : int(eixo_obj['orcamento']),
             "pdm" : get_pdm_atual()

@@ -3,21 +3,21 @@
     "cards": [
         {
             "titulo": "Dados Abertos, com índices sobre metas, ações e indicadores da Prefeitura.",
-            "conteudo": "O pilar da estrutura de monitoramento do Programa de Metas é a atuação em rede. Por meio da Rede de Planejamento e Entregas Prioritárias, instituída pela Portaria SGM 358/2021, cada Secretaria é acompanhada por um responsável em SEPLAN e deve indicar representantes para atuar na rotina padrão de prestação de informações. Dessa forma, os pontos focais têm a responsabilidade de facilitar a coordenação intersetorial e a articulação institucional dos órgãos da administração direta e indireta com SEPLAN, fornecendo diretrizes, metodologias, instrumentais, além do apoio técnico e institucional.  Acesse os dados abertos do PDM em formato em formato aberto para download no portal da Secretaria Municipal de Planejamento e Eficiência:",
+            "conteudo": "Os dados abertos do PdM tornam públicos os índices que mostram o andamento das metas, das ações e dos indicadores da Prefeitura, com atualizações no próprio portal. Ao abrir essas informações, a gestão aproxima a população do processo de decisão e permite acompanhar, com clareza, o que está sendo entregue e o ritmo das políticas públicas. É um convite permanente à participação informada e ao controle social.",
             "botao_txt": "Dados Abertos",
-            "botao_url": "https://dadosabertos.prefeitura.sp.gov.br/dataset/programa-de-metas"
+            "botao_url": "https://prefeitura.sp.gov.br/web/planejamento/w/programa_de_metas_20212024/310683"
         },
         {
             "titulo": "Painel de Monitoramento, com dados atualizados regularmente sobre o status das metas.",
-            "conteudo": "O Sistema de Monitoramento e Acompanhamento Estratégico - SMAE, é o sistema oficial de registro de dados e informações para o monitoramento interno do Programa de Metas, definido pelo Art. 5º do Decreto 63.336/2024. O SMAE é um software livre e de código aberto, que permite a coleta estruturada dos dados e viabiliza o consumo analítico dos dados coletados, seja por meio de extrações em formato de relatórios, ou por meio de painéis gerenciais (dashboards) interativos que têm por objetivo subsidiar a alta gestão da Prefeitura de São Paulo com informações estratégicas.",
+            "conteudo": "A fonte das informações para a população é a mesma que subsidia o trabalho do prefeito e das secretarias:  o Sistema de Monitoramento e Acompanhamento Estratégico (SMAE), software de código aberto desenvolvido em 2023 a partir de uma parceria entre a Prefeitura e a Fundação Getúlio Vargas (FGV). O SMAE permite uma coleta mais segura e estruturada dos dados, que possibilita aos cidadãos o acompanhamento contínuo da execução do PdM.",
             "botao_txt": "painel de monitoramentos",
-            "botao_url": "https://smae.prefeitura.sp.gov.br/"
+            "botao_url": ""
         },
         {
             "titulo": "Relatório de Execução, com os resultados consolidados do PdM.",
-            "conteudo": "A fim de garantir que as ações do Prefeitura sejam transparentes e acessíveis à sociedade, a Lei Orgânica do Município determina que sejam publicados Relatórios Anuais e Balanços Semestrais de Execução do Programa de Metas, promovendo a prestação de contas de forma ativa, não apenas aos órgãos de controle, mas também à população em geral. Essa clareza na condução das políticas públicas é essencial para que os cidadãos, a mídia e as organizações da sociedade civil possam acompanhar o andamento e execução das metas.",
+            "conteudo": "A prestação de contas à sociedade e a órgãos de controle segue um calendário pré-definido, com balanços semestrais ao final de junho e relatórios de execução anuais ao fim de dezembro, com exceção do primeiro semestre do ciclo do PdM, dedicado à própria elaboração do Programa e para o qual não faz sentido, por consequência, um balanço completo de execução.",
             "botao_txt": "relatório de execução anual (dez/25)",
-            "botao_url": "https://smae.prefeitura.sp.gov.br/"
+            "botao_url": ""
         }
     ]
 }
