@@ -269,7 +269,8 @@
         "numero_acao": 11.01,
         "desc_acao": "Revitalização de 20 empreendimentos habitacionais sob responsabilidade da SEHAB/COHAB.",
         "orgao_acao": [
-            "SEHAB"
+            "SEHAB",
+            "COHAB"
         ]
     },
     {
@@ -277,7 +278,8 @@
         "numero_acao": 11.02,
         "desc_acao": "Melhorias em infraestrutura, acessibilidade e salubridade das áreas compartilhadas.",
         "orgao_acao": [
-            "SEHAB"
+            "SEHAB",
+            "COHAB"
         ]
     },
     {
@@ -354,7 +356,9 @@
         "desc_acao": "Finalização de obras do Trecho I do BRT Radial Leste.",
         "orgao_acao": [
             "SIURB",
-            "SPObras"
+            "SPObras",
+            "SMT",
+            "SPTrans"
         ]
     },
     {
@@ -363,7 +367,9 @@
         "desc_acao": "Elaboração de projeto básico, obtenção de licenciamento ambiental e contratação de projeto executivo para início das obras do Trecho II do BRT Radial Leste.",
         "orgao_acao": [
             "SIURB",
-            "SPObras"
+            "SPObras",
+            "SMT",
+            "SPTrans"
         ]
     },
     {
@@ -506,7 +512,7 @@
     {
         "numero_meta": 28,
         "numero_acao": 28.02,
-        "desc_acao": "Contratação de projetos técnicos.",
+        "desc_acao": "Contratação e elaboração de projetos técnicos.",
         "orgao_acao": [
             "SMT",
             "SPTrans"
@@ -515,15 +521,6 @@
     {
         "numero_meta": 28,
         "numero_acao": 28.03,
-        "desc_acao": "Elaboração dos projetos técnicos.",
-        "orgao_acao": [
-            "SMT",
-            "SPTrans"
-        ]
-    },
-    {
-        "numero_meta": 28,
-        "numero_acao": 28.04,
         "desc_acao": "Contratação das obras do novo Terminal Cocaia.",
         "orgao_acao": [
             "SMT",
@@ -532,7 +529,7 @@
     },
     {
         "numero_meta": 28,
-        "numero_acao": 28.05,
+        "numero_acao": 28.04,
         "desc_acao": "Início das obras.",
         "orgao_acao": [
             "SMT",
@@ -635,7 +632,9 @@
         "desc_acao": "Elaboração dos projetos técnicos e estudos preliminares.",
         "orgao_acao": [
             "SPObras",
-            "SPUrbanismo"
+            "SPUrbanismo",
+            "SIURB",
+            "SMUL"
         ]
     },
     {
@@ -644,7 +643,9 @@
         "desc_acao": "Contratação dos projetos executivos e das obras do viário, incluindo o parque linear e as melhorias no sistema de drenagem.",
         "orgao_acao": [
             "SPObras",
-            "SPUrbanismo"
+            "SPUrbanismo",
+            "SIURB",
+            "SMUL"
         ]
     },
     {
@@ -653,7 +654,9 @@
         "desc_acao": "Elaboração dos projetos executivos.",
         "orgao_acao": [
             "SPObras",
-            "SPUrbanismo"
+            "SPUrbanismo",
+            "SIURB",
+            "SMUL"
         ]
     },
     {
@@ -662,7 +665,9 @@
         "desc_acao": "Início das obras.",
         "orgao_acao": [
             "SPObras",
-            "SPUrbanismo"
+            "SPUrbanismo",
+            "SIURB",
+            "SMUL"
         ]
     },
     {
@@ -671,7 +676,9 @@
         "desc_acao": "Elaboração dos estudos técnicos preliminares.",
         "orgao_acao": [
             "SPObras",
-            "SPUrbanismo"
+            "SPUrbanismo",
+            "SIURB",
+            "SMUL"
         ]
     },
     {
@@ -680,7 +687,9 @@
         "desc_acao": "Contratação e elaboração dos projetos técnicos e estudos ambientais.",
         "orgao_acao": [
             "SPObras",
-            "SPUrbanismo"
+            "SPUrbanismo",
+            "SIURB",
+            "SMUL"
         ]
     },
     {
@@ -689,7 +698,9 @@
         "desc_acao": "Contratação das obras de implantação do novo boulevard, incluindo a reconfiguração viária e as melhorias de desenho urbano.",
         "orgao_acao": [
             "SPObras",
-            "SPUrbanismo"
+            "SPUrbanismo",
+            "SIURB",
+            "SMUL"
         ]
     },
     {
@@ -698,7 +709,9 @@
         "desc_acao": "Início das obras.",
         "orgao_acao": [
             "SPObras",
-            "SPUrbanismo"
+            "SPUrbanismo",
+            "SIURB",
+            "SMUL"
         ]
     },
     {
@@ -707,7 +720,9 @@
         "desc_acao": "Elaboração dos estudos técnicos preliminares.",
         "orgao_acao": [
             "SPObras",
-            "SPUrbanismo"
+            "SPUrbanismo",
+            "SIURB",
+            "SMUL"
         ]
     },
     {
@@ -716,7 +731,9 @@
         "desc_acao": "Contratação de projetos básicos e executivos.",
         "orgao_acao": [
             "SPObras",
-            "SPUrbanismo"
+            "SPUrbanismo",
+            "SIURB",
+            "SMUL"
         ]
     },
     {
@@ -725,7 +742,9 @@
         "desc_acao": "Contratação das obras de alargamento.",
         "orgao_acao": [
             "SPObras",
-            "SPUrbanismo"
+            "SPUrbanismo",
+            "SIURB",
+            "SMUL"
         ]
     },
     {
@@ -734,7 +753,9 @@
         "desc_acao": "Início das obras.",
         "orgao_acao": [
             "SPObras",
-            "SPUrbanismo"
+            "SPUrbanismo",
+            "SIURB",
+            "SMUL"
         ]
     },
     {
@@ -835,7 +856,8 @@
         "numero_acao": 45.01,
         "desc_acao": "Instalação de 233 quilômetros de malha cicloviária.",
         "orgao_acao": [
-            "SMT"
+            "SMT",
+            "CET"
         ]
     },
     {
@@ -843,7 +865,8 @@
         "numero_acao": 45.02,
         "desc_acao": "Manutenção de 150 quilômetros de ciclovias.",
         "orgao_acao": [
-            "SMT"
+            "SMT",
+            "CET"
         ]
     },
     {
@@ -851,7 +874,8 @@
         "numero_acao": 45.03,
         "desc_acao": "Planejamento da configuração adicional prevista no Plano Cicloviário.",
         "orgao_acao": [
-            "SMT"
+            "SMT",
+            "CET"
         ]
     },
     {
@@ -911,8 +935,7 @@
             "SIURB",
             "SPUrbanismo",
             "SPObras",
-            "SEDP",
-            "SMSUB"
+            "SEDP"
         ]
     },
     {
@@ -924,8 +947,7 @@
             "SIURB",
             "SPUrbanismo",
             "SPObras",
-            "SEDP",
-            "SMSUB"
+            "SEDP"
         ]
     },
     {
@@ -937,8 +959,7 @@
             "SIURB",
             "SPUrbanismo",
             "SPObras",
-            "SEDP",
-            "SMSUB"
+            "SEDP"
         ]
     },
     {
@@ -950,8 +971,7 @@
             "SIURB",
             "SPUrbanismo",
             "SPObras",
-            "SEDP",
-            "SMSUB"
+            "SEDP"
         ]
     },
     {
@@ -963,8 +983,7 @@
             "SIURB",
             "SPUrbanismo",
             "SPObras",
-            "SEDP",
-            "SMSUB"
+            "SEDP"
         ]
     },
     {
@@ -1520,7 +1539,7 @@
         "numero_acao": 76.01,
         "desc_acao": "Abertura de novo Hospital Veterinário na Zona Leste.",
         "orgao_acao": [
-            "SME"
+            "SMS"
         ]
     },
     {
@@ -1528,7 +1547,7 @@
         "numero_acao": 76.02,
         "desc_acao": "Ampliação do horário de atendimento de um Hospital Veterinário para 24 horas.",
         "orgao_acao": [
-            "SME"
+            "SMS"
         ]
     },
     {
@@ -1536,7 +1555,7 @@
         "numero_acao": 76.03,
         "desc_acao": "Ampliação em 20% do número de castrações de cães e gatos.",
         "orgao_acao": [
-            "SME"
+            "SMS"
         ]
     },
     {
@@ -1544,7 +1563,7 @@
         "numero_acao": 76.04,
         "desc_acao": "Instituição do Programa Protetor Animal Paulistano, com apoio a até 200 projetos ou atividades de organizações da sociedade civil.",
         "orgao_acao": [
-            "SME"
+            "SMS"
         ]
     },
     {
@@ -1567,6 +1586,14 @@
         "numero_meta": 79,
         "numero_acao": 79.01,
         "desc_acao": "Regulamentação da possibilidade de jornada de trabalho de 40 horas para professores. Reformulação do Programa São Paulo Integral, com publicação de nova normativa.",
+        "orgao_acao": [
+            "SME"
+        ]
+    },
+    {
+        "numero_meta": 79,
+        "numero_acao": 79.02,
+        "desc_acao": "Reformulação do Programa São Paulo Integral, com publicação de nova normativa.",
         "orgao_acao": [
             "SME"
         ]
@@ -1872,7 +1899,7 @@
         "numero_acao": 89.01,
         "desc_acao": "Instalação de 3 novos crematórios públicos.",
         "orgao_acao": [
-            "SEME"
+            "SPRegula"
         ]
     },
     {
@@ -1880,7 +1907,7 @@
         "numero_acao": 89.02,
         "desc_acao": "Reforma do Crematório Vila Alpina.",
         "orgao_acao": [
-            "SEME"
+            "SPRegula"
         ]
     },
     {
@@ -1888,7 +1915,7 @@
         "numero_acao": 89.03,
         "desc_acao": "Reforma de 21 cemitérios municipais.",
         "orgao_acao": [
-            "SEME"
+            "SPRegula"
         ]
     },
     {
@@ -1918,7 +1945,7 @@
     {
         "numero_meta": 91,
         "numero_acao": 91.02,
-        "desc_acao": "Implementação do Programa Rede Olímpica.",
+        "desc_acao": "Implementação do Programa de Formação para o Esporte de Alto Rendimento Paralímpico.",
         "orgao_acao": [
             "SEME"
         ]
@@ -2016,7 +2043,8 @@
         "numero_acao": 99.01,
         "desc_acao": "Abertura da Escola Avança Tech Games com 500 vagas anuais para capacitação nas áreas de tecnologia e desenvolvimento de games.",
         "orgao_acao": [
-            "SMDET"
+            "SMDET",
+            "ADESAMPA"
         ]
     },
     {
@@ -2024,7 +2052,8 @@
         "numero_acao": 99.02,
         "desc_acao": "Aceleração de 100 empresas do setor de games com aporte financeiro, oficinas de capacitação, mentoria e oportunidades de networking internacional.",
         "orgao_acao": [
-            "SMDET"
+            "SMDET",
+            "ADESAMPA"
         ]
     },
     {
@@ -2163,7 +2192,8 @@
         "numero_acao": 107.01,
         "desc_acao": "Realização de 50 mil capacitações para empreendedores, voltadas ao desenvolvimento do próprio negócio.",
         "orgao_acao": [
-            "SMDET"
+            "SMDET",
+            "ADESAMPA"
         ]
     },
     {
@@ -2171,7 +2201,8 @@
         "numero_acao": 107.02,
         "desc_acao": "Atingir 100 mil utilizações dos espaços de trabalho compartilhados.",
         "orgao_acao": [
-            "SMDET"
+            "SMDET",
+            "ADESAMPA"
         ]
     },
     {
@@ -2179,7 +2210,8 @@
         "numero_acao": 107.03,
         "desc_acao": "Incentivo ao empreendedorismo feminino, com cursos, oficinas, orientação, capacitação, acesso a eventos e apresentação de linhas de crédito, entre outras medidas.",
         "orgao_acao": [
-            "SMDET"
+            "SMDET",
+            "ADESAMPA"
         ]
     },
     {
@@ -2187,7 +2219,8 @@
         "numero_acao": 108.01,
         "desc_acao": "Oferta de serviços de formalização e regularização para microempreendedores.",
         "orgao_acao": [
-            "SMDET"
+            "SMDET",
+            "ADESAMPA"
         ]
     },
     {
@@ -2195,7 +2228,8 @@
         "numero_acao": 108.02,
         "desc_acao": "Realização de capacitações e consultorias voltadas ao público 60+.",
         "orgao_acao": [
-            "SMDET"
+            "SMDET",
+            "ADESAMPA"
         ]
     },
     {
@@ -2203,7 +2237,8 @@
         "numero_acao": 108.03,
         "desc_acao": "Disponibilização de espaços de trabalho compartilhados.",
         "orgao_acao": [
-            "SMDET"
+            "SMDET",
+            "ADESAMPA"
         ]
     },
     {
@@ -2211,7 +2246,8 @@
         "numero_acao": 109.01,
         "desc_acao": "10 mil atendimentos de assistência técnica rural.",
         "orgao_acao": [
-            "SMDET"
+            "SMDET",
+            "ADESAMPA"
         ]
     },
     {
@@ -2219,7 +2255,8 @@
         "numero_acao": 109.02,
         "desc_acao": "Abertura de 10 escolas-estufa.",
         "orgao_acao": [
-            "SMDET"
+            "SMDET",
+            "ADESAMPA"
         ]
     },
     {
@@ -2227,7 +2264,8 @@
         "numero_acao": 109.03,
         "desc_acao": "1.000 vagas para beneficiários do Programa Operação Trabalho – POT Agricultura.",
         "orgao_acao": [
-            "SMDET"
+            "SMDET",
+            "ADESAMPA"
         ]
     },
     {
@@ -2235,7 +2273,8 @@
         "numero_acao": 109.04,
         "desc_acao": "5 mil atendimentos em capacitação técnica de cultivo sustentável, agroecologia e compostagem.",
         "orgao_acao": [
-            "SMDET"
+            "SMDET",
+            "ADESAMPA"
         ]
     },
     {
@@ -2243,7 +2282,8 @@
         "numero_acao": 109.05,
         "desc_acao": "Aceleração de 100 negócios rurais inovadores com apoio financeiro e técnico.",
         "orgao_acao": [
-            "SMDET"
+            "SMDET",
+            "ADESAMPA"
         ]
     },
     {
@@ -2251,7 +2291,8 @@
         "numero_acao": 109.06,
         "desc_acao": "Projeto Rolê Agroecológico: atendimento a 120 mil crianças e fomento de 80 locais de agricultura com vivências rurais.",
         "orgao_acao": [
-            "SMDET"
+            "SMDET",
+            "ADESAMPA"
         ]
     },
     {
@@ -2259,7 +2300,8 @@
         "numero_acao": 109.07,
         "desc_acao": "Destinação de R$ 10 milhões para aquisição de insumos e equipamentos agrícolas.",
         "orgao_acao": [
-            "SMDET"
+            "SMDET",
+            "ADESAMPA"
         ]
     },
     {
@@ -2267,7 +2309,8 @@
         "numero_acao": 109.08,
         "desc_acao": "Orientação a 100 agricultores sobre crédito rural.",
         "orgao_acao": [
-            "SMDET"
+            "SMDET",
+            "ADESAMPA"
         ]
     },
     {
@@ -2275,7 +2318,8 @@
         "numero_acao": 109.09,
         "desc_acao": "Ampliação do turismo rural: 10.000 vagas em roteiros guiados, especialmente nos Polos de Ecoturismo de Parelheiros e da Cantareira.",
         "orgao_acao": [
-            "SMDET"
+            "SMDET",
+            "ADESAMPA"
         ]
     },
     {
@@ -2347,7 +2391,9 @@
         "numero_acao": 114.01,
         "desc_acao": "Levantamento de boas práticas em orçamento climático.",
         "orgao_acao": [
-            "SMIT"
+            "SGM",
+            "SECLIMA",
+            "SEPLAN"
         ]
     },
     {
@@ -2355,7 +2401,9 @@
         "numero_acao": 114.02,
         "desc_acao": "Realização de workshop técnico sobre planejamento climático-orçamentário.",
         "orgao_acao": [
-            "SMIT"
+            "SGM",
+            "SECLIMA",
+            "SEPLAN"
         ]
     },
     {
@@ -2363,7 +2411,9 @@
         "numero_acao": 114.03,
         "desc_acao": "Implementação piloto do orçamento climático.",
         "orgao_acao": [
-            "SMIT"
+            "SGM",
+            "SECLIMA",
+            "SEPLAN"
         ]
     },
     {
@@ -2371,7 +2421,9 @@
         "numero_acao": 114.04,
         "desc_acao": "Propor legislação específica para o orçamento climático.",
         "orgao_acao": [
-            "SMIT"
+            "SGM",
+            "SECLIMA",
+            "SEPLAN"
         ]
     },
     {
@@ -2379,7 +2431,9 @@
         "numero_acao": 114.05,
         "desc_acao": "Instalação de Painel da Sustentabilidade em locais estratégicos.",
         "orgao_acao": [
-            "SMIT"
+            "SGM",
+            "SECLIMA",
+            "SEPLAN"
         ]
     },
     {
@@ -2444,7 +2498,7 @@
         "numero_acao": 118.01,
         "desc_acao": "Revisão e atualização das Cartas de Serviços.",
         "orgao_acao": [
-            "CGM"
+            "SMIT"
         ]
     },
     {
@@ -2452,7 +2506,7 @@
         "numero_acao": 118.02,
         "desc_acao": "Expansão dos serviços ofertados pelo Portal 156 e Chat SP156, com a digitalização de 100 serviços adicionais com foco em saúde, educação e zeladoria.",
         "orgao_acao": [
-            "CGM"
+            "SMIT"
         ]
     },
     {
@@ -2460,7 +2514,7 @@
         "numero_acao": 118.03,
         "desc_acao": "Lançamento de nova versão do aplicativo SP156 com atendimento por IA, visual renovado e integração com mais serviços.",
         "orgao_acao": [
-            "CGM"
+            "SMIT"
         ]
     },
     {
@@ -2468,7 +2522,7 @@
         "numero_acao": 118.04,
         "desc_acao": "Integração de todos os canais de atendimento, com histórico unificado do cidadão.",
         "orgao_acao": [
-            "CGM"
+            "SMIT"
         ]
     },
     {
@@ -2476,7 +2530,7 @@
         "numero_acao": 118.05,
         "desc_acao": "Atingir no mínimo 90% de satisfação dos usuários nos canais digitais do SP156.",
         "orgao_acao": [
-            "CGM"
+            "SMIT"
         ]
     },
     {
@@ -2484,7 +2538,9 @@
         "numero_acao": 119.01,
         "desc_acao": "Criação da Unidade Avançada com equipe técnica formada e início de operação com pelo menos uma solução-piloto implantada",
         "orgao_acao": [
-            "CGM"
+            "SMIT",
+            "SMDET",
+            "ADESAMPA"
         ]
     },
     {
@@ -2492,7 +2548,9 @@
         "numero_acao": 119.02,
         "desc_acao": "Desenvolvimento de plataforma com catálogo de soluções de IA e apoio aos órgãos municipais na implementação de IA em serviços públicos.",
         "orgao_acao": [
-            "CGM"
+            "SMIT",
+            "SMDET",
+            "ADESAMPA"
         ]
     },
     {
@@ -2500,7 +2558,9 @@
         "numero_acao": 119.03,
         "desc_acao": "Criação do 1º Desafio de IA para Serviços Públicos, com premiação.",
         "orgao_acao": [
-            "CGM"
+            "SMIT",
+            "SMDET",
+            "ADESAMPA"
         ]
     },
     {
@@ -2508,7 +2568,9 @@
         "numero_acao": 119.04,
         "desc_acao": "Formação de 500 servidores em cursos de IA, com certificação.",
         "orgao_acao": [
-            "CGM"
+            "SMIT",
+            "SMDET",
+            "ADESAMPA"
         ]
     },
     {
@@ -2516,7 +2578,9 @@
         "numero_acao": 119.05,
         "desc_acao": "Apoio a startups especializadas em IA.",
         "orgao_acao": [
-            "CGM"
+            "SMIT",
+            "SMDET",
+            "ADESAMPA"
         ]
     },
     {
@@ -2524,7 +2588,9 @@
         "numero_acao": 120.01,
         "desc_acao": "Inauguração do Centro de Inovação em local estratégico com coworking gratuito e agenda de eventos.",
         "orgao_acao": [
-            "SMIT"
+            "SMIT",
+            "SMDET",
+            "ADESAMPA"
         ]
     },
     {
@@ -2532,7 +2598,9 @@
         "numero_acao": 120.02,
         "desc_acao": "Implantação de três laboratórios temáticos: GovTech, Cidades Sustentáveis e Mobilidade Inteligente.",
         "orgao_acao": [
-            "SMIT"
+            "SMIT",
+            "SMDET",
+            "ADESAMPA"
         ]
     },
     {
@@ -2540,7 +2608,9 @@
         "numero_acao": 120.03,
         "desc_acao": "Lançamento de edital para incubação de 10 startups, com acompanhamento técnico.",
         "orgao_acao": [
-            "SMIT"
+            "SMIT",
+            "SMDET",
+            "ADESAMPA"
         ]
     },
     {
@@ -2548,7 +2618,9 @@
         "numero_acao": 120.04,
         "desc_acao": "Expansão para três polos regionais em subprefeituras, com estrutura de atendimento e formação.",
         "orgao_acao": [
-            "SMIT"
+            "SMIT",
+            "SMDET",
+            "ADESAMPA"
         ]
     },
     {
@@ -2588,8 +2660,7 @@
         "numero_acao": 122.01,
         "desc_acao": "Alcançar nota mínima 9,5 no Indicador de Transparência Ativa.",
         "orgao_acao": [
-            "SF",
-            "IPREM"
+            "CGM"
         ]
     },
     {
@@ -2597,8 +2668,7 @@
         "numero_acao": 122.02,
         "desc_acao": "Alcançar nota mínima 9,5 no Indicador de Transparência Passiva.",
         "orgao_acao": [
-            "SF",
-            "IPREM"
+            "CGM"
         ]
     },
     {
@@ -2606,8 +2676,7 @@
         "numero_acao": 122.03,
         "desc_acao": "Alcançar nota mínima 4,0 no Indicador de Dados Abertos.",
         "orgao_acao": [
-            "SF",
-            "IPREM"
+            "CGM"
         ]
     },
     {
@@ -2615,8 +2684,7 @@
         "numero_acao": 122.04,
         "desc_acao": "Criação do Conselho de Usuários de Serviços Públicos (CONDEUSP) na plataforma Participe+.",
         "orgao_acao": [
-            "SF",
-            "IPREM"
+            "CGM"
         ]
     },
     {
@@ -2624,8 +2692,7 @@
         "numero_acao": 122.05,
         "desc_acao": "Desenvolver o Programa de Acreditação da Rede de Ouvidoria SUS, certificando ao menos 40% das unidades.",
         "orgao_acao": [
-            "SF",
-            "IPREM"
+            "CGM"
         ]
     },
     {
@@ -2633,8 +2700,7 @@
         "numero_acao": 122.06,
         "desc_acao": "Realização da campanha “ParticipaSP: Conheça e Transforme!”, incentivando participação social e acesso à informação.",
         "orgao_acao": [
-            "SF",
-            "IPREM"
+            "CGM"
         ]
     },
     {
@@ -2642,8 +2708,7 @@
         "numero_acao": 122.07,
         "desc_acao": "Promoção de 20 eventos formativos sobre governança pública e controle interno com escolas e universidades (Projeto Conhecendo a CGM).",
         "orgao_acao": [
-            "SF",
-            "IPREM"
+            "CGM"
         ]
     },
     {
@@ -2651,8 +2716,7 @@
         "numero_acao": 122.08,
         "desc_acao": "Divulgação de informações semestrais sobre execução de obras públicas municipais no portal Obras Abertas.",
         "orgao_acao": [
-            "SF",
-            "IPREM"
+            "CGM"
         ]
     },
     {
@@ -2660,7 +2724,7 @@
         "numero_acao": 123.01,
         "desc_acao": "Elaboração da Política de Gestão de Riscos para Administração Direta.",
         "orgao_acao": [
-            "SEGES"
+            "CGM"
         ]
     },
     {
@@ -2668,7 +2732,7 @@
         "numero_acao": 123.02,
         "desc_acao": "Alcançar nota mínima 9,0 no Indicador de Reclamações.",
         "orgao_acao": [
-            "SEGES"
+            "CGM"
         ]
     },
     {
@@ -2676,7 +2740,7 @@
         "numero_acao": 123.03,
         "desc_acao": "Alcançar nota mínima 7,0 no Indicador de Denúncias.",
         "orgao_acao": [
-            "SEGES"
+            "CGM"
         ]
     },
     {
@@ -2684,7 +2748,7 @@
         "numero_acao": 123.04,
         "desc_acao": "Alcançar nota mínima 9,0 no Indicador de Contratos Emergenciais.",
         "orgao_acao": [
-            "SEGES"
+            "CGM"
         ]
     },
     {
@@ -2692,7 +2756,7 @@
         "numero_acao": 123.05,
         "desc_acao": "Desenvolvimento e implementação do Indicador de Maturidade do Programa de Integridade e Boas Práticas (IM-PIBP).",
         "orgao_acao": [
-            "SEGES"
+            "CGM"
         ]
     },
     {
@@ -2700,7 +2764,7 @@
         "numero_acao": 123.06,
         "desc_acao": "Implementação do Programa de Integridade e Boas Práticas (PIBP) nas fundações e autarquias municipais.",
         "orgao_acao": [
-            "SEGES"
+            "CGM"
         ]
     },
     {
@@ -2708,7 +2772,7 @@
         "numero_acao": 123.07,
         "desc_acao": "Desenvolvimento e implementação do Programa de Integridade e Governança Estatal (PIGE) nas empresas municipais, baseada nos princípios ESG (Sustentabilidade Ambiental, Social e de Governança).",
         "orgao_acao": [
-            "SEGES"
+            "CGM"
         ]
     },
     {
@@ -2716,7 +2780,7 @@
         "numero_acao": 123.08,
         "desc_acao": "Promover eventos de orientação e treinamento para viabilizar a implementação dos programas (PIBP e PIGE) nas fundações, autarquias e empresas municipais.",
         "orgao_acao": [
-            "SEGES"
+            "CGM"
         ]
     },
     {
@@ -2724,7 +2788,7 @@
         "numero_acao": 124.01,
         "desc_acao": "Lançamento de Metodologia de Diagnóstico de Maturidade em Privacidade e Proteção de Dados Pessoais.",
         "orgao_acao": [
-            "SEGES"
+            "CGM"
         ]
     },
     {
@@ -2732,7 +2796,7 @@
         "numero_acao": 124.02,
         "desc_acao": "Implementação de painel para divulgação dos resultados do Diagnóstico de Maturidade.",
         "orgao_acao": [
-            "SEGES"
+            "CGM"
         ]
     },
     {
@@ -2740,7 +2804,7 @@
         "numero_acao": 124.03,
         "desc_acao": "Promover 8 ações de capacitação sobre o Diagnóstico de Maturidade e a implementação do Programa de Governança.",
         "orgao_acao": [
-            "SEGES"
+            "CGM"
         ]
     },
     {
@@ -2748,7 +2812,7 @@
         "numero_acao": 124.04,
         "desc_acao": "Publicar 4 guias orientativos sobre o Diagnóstico de Maturidade em Proteção de Dados Pessoais.",
         "orgao_acao": [
-            "SEGES"
+            "CGM"
         ]
     },
     {
@@ -2756,7 +2820,7 @@
         "numero_acao": 124.05,
         "desc_acao": "Condução, junto aos órgãos, de ciclos anuais de autoavaliação do Diagnóstico de Maturidade.",
         "orgao_acao": [
-            "SEGES"
+            "CGM"
         ]
     },
     {
@@ -2764,7 +2828,7 @@
         "numero_acao": 124.06,
         "desc_acao": "Realização de análise sobre as autoavaliações de 4 órgãos estrategicamente definidos, considerando a criticidade do tratamento de dados pessoais no âmbito do Diagnóstico de Maturidade.",
         "orgao_acao": [
-            "SEGES"
+            "CGM"
         ]
     },
     {
@@ -2772,7 +2836,7 @@
         "numero_acao": 124.07,
         "desc_acao": "Alcançar nota mínima 4,0 no Indicador de Ações Preliminares em Privacidade e Proteção de Dados Pessoais.",
         "orgao_acao": [
-            "SEGES"
+            "CGM"
         ]
     },
     {
@@ -2780,7 +2844,7 @@
         "numero_acao": 125.01,
         "desc_acao": "Implementação da ferramenta OPTIMUS (assistente jurídico).",
         "orgao_acao": [
-            "SEGES"
+            "SF"
         ]
     },
     {
@@ -2788,7 +2852,7 @@
         "numero_acao": 125.02,
         "desc_acao": "Desenvolvimento e implementação de mais uma ferramenta de IA na Fazenda.",
         "orgao_acao": [
-            "SEGES"
+            "SF"
         ]
     },
     {
@@ -2796,7 +2860,7 @@
         "numero_acao": 126.01,
         "desc_acao": "Instituição de um Fundo Especial Imobiliário.",
         "orgao_acao": [
-            "SEGES",
+            "SF",
             "IPREM"
         ]
     },
@@ -2805,7 +2869,7 @@
         "numero_acao": 126.02,
         "desc_acao": "Instituição de um Fundo Imobiliário Regular.",
         "orgao_acao": [
-            "SEGES",
+            "SF",
             "IPREM"
         ]
     },
@@ -2836,7 +2900,7 @@
     {
         "numero_meta": 128,
         "numero_acao": 128.01,
-        "desc_acao": "Realização de investimentos no Sistema da Dívida Ativa (SDA) para a criação de ferramentas de controle de legalidade dos débitos disponibilizados para inscrição em dívida ativa e a otimização das rotinas de cobrança e de ajuizamento de execuções fiscais.",
+        "desc_acao": "Modernização do Sistema da Dívida Ativa, com foco na otimização das rotinas de cobrança e de ajuizamento de execuções fiscais.",
         "orgao_acao": [
             "PGM"
         ]
@@ -2844,7 +2908,7 @@
     {
         "numero_meta": 128,
         "numero_acao": 128.02,
-        "desc_acao": "Desenvolvimento de projeto de IA e gestão e análise de dados para o aprimoramento da gestão da dívida ativa municipal, com maior efetividade e eficiência na recuperação de créditos.",
+        "desc_acao": "Desenvolvimento de projeto de Inteligência Artificial e gestão e análise de dados para o aprimoramento da gestão da dívida ativa municipal.",
         "orgao_acao": [
             "PGM"
         ]
@@ -2852,7 +2916,7 @@
     {
         "numero_meta": 128,
         "numero_acao": 128.03,
-        "desc_acao": "Ampliação de iniciativas de transação tributária e de automatização de propostas de adesão ao programa pelos contribuintes, com identificação via sistema das dívidas elegíveis para acordo.",
+        "desc_acao": "Ampliação de iniciativas de transação tributária e automatizar as propostas de adesão ao programa pelos contribuintes, com o intuito de escalonar os resultados.",
         "orgao_acao": [
             "PGM"
         ]
@@ -2860,7 +2924,7 @@
     {
         "numero_meta": 128,
         "numero_acao": 128.04,
-        "desc_acao": "Adoção de medidas de saneamento das execuções fiscais de regularização da dívida ativa, para redução do tempo médio de tramitação e do congestionamento do Poder Judiciário, aumentando a eficiência nas cobranças.",
+        "desc_acao": "Aumento da eficiência na cobrança judicial, visando reduzir a taxa de congestionamento do Poder Judiciário e o tempo médio de tramitação das execuções fiscais.",
         "orgao_acao": [
             "PGM"
         ]
@@ -2868,7 +2932,7 @@
     {
         "numero_meta": 128,
         "numero_acao": 128.05,
-        "desc_acao": "Execução de projeto de ampliação, diversificação e racionalização de instrumentos de cobrança extrajudicial da dívida ativa.",
+        "desc_acao": "Execução de projeto de ampliação, diversificação e racionalização de instrumentos de cobrança extrajudicial da Dívida Ativa.",
         "orgao_acao": [
             "PGM"
         ]
@@ -2876,7 +2940,7 @@
     {
         "numero_meta": 128,
         "numero_acao": 128.06,
-        "desc_acao": "Investimentos para adaptações decorrentes da Reforma Tributária e da criação do IBS (Imposto sobre Bens e Serviços).",
+        "desc_acao": "Realização de investimentos para adaptação às mudanças decorrentes da Reforma Tributária e da criação do IBS - Imposto sobre Bens e Serviços.",
         "orgao_acao": [
             "PGM"
         ]
@@ -2907,7 +2971,7 @@
     },
     {
         "numero_meta": 129,
-        "numero_acao": 129.04,
+        "numero_acao": 129.03,
         "desc_acao": "Disponibilização de quatro modelos de minutas de editais e contratos padronizados, pela Procuradoria Geral do Município.",
         "orgao_acao": [
             "PGM"
@@ -2983,7 +3047,7 @@
     {
         "numero_meta": 132,
         "numero_acao": 132.03,
-        "desc_acao": "Aplicação de licenciamento autodeclaratório para Alvarás de Autorização, abrangendo a instalação de gruas, tapumes e estandes de vendas, entre outras estruturas.",
+        "desc_acao": "Aplicação de licenciamento autodeclaratório para Alvarás de Autorização, abarcando, entre outros gruas, tapumes e estandes de vendas.",
         "orgao_acao": [
             "SMUL"
         ]
