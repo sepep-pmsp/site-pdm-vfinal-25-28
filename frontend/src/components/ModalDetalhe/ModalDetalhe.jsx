@@ -144,7 +144,7 @@ export default function ModalDetalhe({ selecionado, onClose }) {
               ))
             ) : (
               <div className="max-md:left-0 max-md:w-[20rem] lg:flex flex-col gap-4 relative left-[35rem] bottom-0 w-[54rem] pb-10">
-                <p className="max-md:w-full max-md:break-all max-md:relative max-md:top-[-10rem] lg:flex items-start justify-start gap-8 w-[45rem] text-xl">
+                <p className="max-md:w-full max-md:break-all max-md:relative max-md:top-0 lg:flex items-start justify-start gap-8 w-[45rem] text-xl">
                   {detalhe.conteudo}
                 </p>
               </div>
