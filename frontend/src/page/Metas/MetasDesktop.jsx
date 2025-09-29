@@ -79,17 +79,12 @@ export default function MetasDesktop() {
           <div className="flex flex-col items-start gap-5 py-5 px-10 text-[1.3rem] texto-inicio-metas-mobile">
             <p className="w-84">
               <strong>
-                Neste painel você pode conferir todas as metas deste Programa,
+                Neste painel você pode ver a lista completa de metas,
               </strong>{" "}
-              ou filtrá-las como preferir.
+              visualizá-las por eixo estratégico ou pelos subtemas a que se referem.
             </p>
             <p className="w-80">
-              Escolha também se deseja visualizar a lista completa ou as metas
-              de cada eixo e ainda dividi-las em seus subtemas.{" "}
-              <strong>
-                Clique na meta para ver suas informações completas
-              </strong>
-              .
+             Clique na meta para ver suas informações completas!
             </p>
           </div>
           <div className="flex relative left-[-11rem] bottom-24 carousel-ormacento-container-mobile">

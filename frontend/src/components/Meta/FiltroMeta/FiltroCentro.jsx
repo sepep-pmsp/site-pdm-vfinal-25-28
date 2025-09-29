@@ -144,18 +144,17 @@ export default function FiltroCentro({
   );
 
   return (
-    <div className="h-[85rem] relative bottom-20">
+    <div className="h-[87rem] relative bottom-20">
       <div className="bg-white max-w-sm h-full rounded-[2rem] shadow-[0px_0px_11px_#00000085] p-8">
         <span>
           <p className="text-xl pb-8">
-            Nas abas a direita filtre por <b>Eixos do Programa</b> e na esquerda
-            de acordo com as <b>17 ODS</b>.
+            Nas abas à direita filtre por eixos e na esquerda de acordo com os <b>17 ODS</b>s.
           </p>
           <div className="w-80 h-px bg-black" />
         </span>
         <div>
-          <p className="text-xl p-2 font-bold">
-            Filtre a região e suas subprefeituras correspondentes
+          <p className="text-lg p-2 font-bold">
+            Selecione a região desejada e as subprefeituras que fazem parte dela.
           </p>
           <div className="flex items-start justify-center gap-4">
             <div className="w-24">
@@ -222,7 +221,7 @@ export default function FiltroCentro({
         <div className="mt-3">
           <div className="flex flex-col gap-4 h-75">
             <p className="text-xl p-2 font-bold">
-              Filtre por órgão responsável
+              Pesquise por órgão responsável!
             </p>
             <div className="flex items-center justify-start w-[25rem]">
               {renderDropdownFiltro(
@@ -241,7 +240,7 @@ export default function FiltroCentro({
         <div className="mt-3">
           <div className="flex flex-col gap-8 h-80">
             <p className="text-xl p-2 font-bold">
-              Filtre de acordo com articulações com outros planos
+              Pesquise pela relação com outros planos municipais!
             </p>
             <div className="flex items-center justify-start w-[25rem]">
               {renderDropdownFiltro(

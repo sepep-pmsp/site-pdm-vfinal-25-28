@@ -9,7 +9,7 @@ export default function FiltroODS({
 })
 {
   return (
-    <div className="flex flex-col items-center relative bottom-10">
+    <div className="flex flex-col items-center relative bottom-4">
       {ods.map((odsItem) => {
         const valor = odsItem.id;
         const isSelected = filtrosSelecionados.ods.includes(valor);

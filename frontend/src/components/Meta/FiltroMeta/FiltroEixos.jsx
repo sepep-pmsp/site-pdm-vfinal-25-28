@@ -29,7 +29,7 @@ export default function FiltroEixos({
   }, [eixoIdFromNav, initialFilterApplied, filtrosSelecionados.eixos, toggleSelecionado]);
 
   return (
-    <div className="h-full flex flex-col items-start w-[19rem] relative bottom-10">
+    <div className="h-full flex flex-col items-start w-[19rem] relative bottom-4">
       {eixos.map(({ nome, id, cor, temas }) => {
         const isAberto = eixosAbertos.includes(id);
 
