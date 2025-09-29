@@ -1,31 +1,26 @@
-// src/hooks/useFiltrosMetas.js
 import { useState, useEffect, useRef } from "react";
 import { useDebounce } from "use-debounce";
-import { getFiltroMetasData, postFiltrosSelecionados, } from "@/services/Metas/getFiltroMetasData";
+import { getFiltroMetasData, postFiltrosSelecionados } from "@/services/Metas/getFiltroMetasData";
 
 export function useFiltrosMetas(onCardsUpdate) {
   const [data, setData] = useState(null);
-
-  // estado inicial vindo do localStorage
   const [filtrosSelecionados, setFiltrosSelecionados] = useState(() => {
     const salvo = localStorage.getItem("filtrosSelecionados");
     return salvo
       ? JSON.parse(salvo)
       : {
           ods: [],
-          regioes: [],
+          zonas: [],
           subprefeituras: [],
           planos_vinculados: [],
           orgaos: [],
           eixos: [],
           subeixos: [],
+          termo_busca: "",
         };
   });
 
-  // debounce (400ms)
   const [filtrosDebounced] = useDebounce(filtrosSelecionados, 400);
-
-  // cache para evitar flood
   const ultimoPayload = useRef(null);
 
   // GET inicial (com cache localStorage)
@@ -43,58 +38,52 @@ export function useFiltrosMetas(onCardsUpdate) {
     }
   }, []);
 
-  // POST só quando filtros mudam de verdade
+  // POST só quando filtros mudam e dados já carregaram
   useEffect(() => {
     if (!data) return;
-
     const payload = JSON.stringify(filtrosDebounced);
-
-    // evita envio duplicado
     if (payload === ultimoPayload.current) return;
-    ultimoPayload.current = payload;
 
+    ultimoPayload.current = payload;
     localStorage.setItem("filtrosSelecionados", payload);
 
-    postFiltrosSelecionados(filtrosDebounced)
-      .then((res) => {
-        onCardsUpdate?.(res);
-      })
+    postFiltrosSelecionados(filtrosDebounced, data.regionalizacao)
+      .then((res) => onCardsUpdate?.(res))
       .catch(console.error);
   }, [filtrosDebounced, data, onCardsUpdate]);
-
   // ---- helpers ----
   function toggleSelecionado(tipo, valor) {
+    const key = tipo === "regioes" ? "zonas" : tipo;
     setFiltrosSelecionados((prev) => {
-      const jaSelecionado = prev[tipo]?.includes(valor);
+      const arr = prev[key] || [];
+      const jaSelecionado = arr.includes(valor);
+
       return {
         ...prev,
-        [tipo]: jaSelecionado
-          ? prev[tipo].filter((v) => v !== valor)
-          : [...prev[tipo], valor],
+        [key]: jaSelecionado ? arr.filter((v) => v !== valor) : [...arr, valor],
       };
     });
   }
-
   function limparFiltros() {
     const estadoInicial = {
       ods: [],
-      regioes: [],
+      zonas: [],
       subprefeituras: [],
       planos_vinculados: [],
       orgaos: [],
       eixos: [],
       subeixos: [],
+      termo_busca: "",
     };
     setFiltrosSelecionados(estadoInicial);
     localStorage.removeItem("filtrosSelecionados");
-
     ultimoPayload.current = JSON.stringify(estadoInicial);
-
-    postFiltrosSelecionados(estadoInicial)
-      .then((res) => onCardsUpdate?.(res))
-      .catch(console.error);
+    if (data) {
+      postFiltrosSelecionados(estadoInicial, data.regionalizacao)
+        .then((res) => onCardsUpdate?.(res))
+        .catch(console.error);
+    }
   }
-
   return {
     data,
     filtrosSelecionados,

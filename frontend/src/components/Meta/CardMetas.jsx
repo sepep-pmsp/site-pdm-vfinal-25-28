@@ -88,8 +88,8 @@ export default function CardMetas({ meta, onClose }) {
           </button>
         </div>
 
-        <div className="flex flex-col items-center gap-12 px-20 h-[510vh] div-txt-card-mobile">
-          <div className="flex justify-center items-start flex-col py-10 px-20">
+        <div className="max-md:max-h-full lg:flex flex-col items-center gap-12 py-8 px-20 min-h-full ">
+          <div className="flex justify-center items-start flex-col py-10 px-20 div-txt-card-mobile">
             <div className="w-[59rem] div-txt-mobile">
               <span
                 className="text-5xl BebasNeue"
@@ -108,7 +108,7 @@ export default function CardMetas({ meta, onClose }) {
 
           <div>
             <div className="px-20 flex flex-col gap-10 my-20 div-cont-card-mobile">
-              <div>
+              <div className="div-conteudo-mobile">
                 {meta.card.projecao && (
                   <div className="flex flex-row justify-start items-start flex-nowrap gap-12 container-content-mobile-card">
                     <h3
@@ -123,26 +123,28 @@ export default function CardMetas({ meta, onClose }) {
                   </div>
                 )}
               </div>
-              <div>
-                {meta.card.acoes_estrategicas && (
-                  <div className="flex flex-row justify-start items-start flex-nowrap gap-16 container-content-mobile-card">
-                    <h3
-                      style={{ color: meta.card.eixo_cor_principal }}
-                      className="text-4xl text-end w-40"
-                    >
-                      {meta.card.acoes_estrategicas.titulo}
-                    </h3>
-                    <ul className="list-disc list-inside listCard w-[45rem] roboto-regular">
-                      {meta.card.acoes_estrategicas.valor.map((acao, idx) => (
-                        <li className="text-xl itemListCard pb-2" key={idx}>
-                          {acao}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
+              <div className="div-conteudo-mobile">
+                {meta.card.acoes_estrategicas &&
+                  meta.card.acoes_estrategicas.valor &&
+                  meta.card.acoes_estrategicas.valor.length > 0 && (
+                    <div className="flex flex-row justify-start items-start flex-nowrap gap-16 container-content-mobile-card">
+                      <h3
+                        style={{ color: meta.card.eixo_cor_principal }}
+                        className="text-4xl text-end w-40"
+                      >
+                        {meta.card.acoes_estrategicas.titulo}
+                      </h3>
+                      <ul className="list-disc list-inside listCard w-[45rem] roboto-regular">
+                        {meta.card.acoes_estrategicas.valor.map((acao, idx) => (
+                          <li className="text-xl itemListCard pb-2" key={idx}>
+                            {acao}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
               </div>
-              <div>
+              <div className="div-conteudo-mobile">
                 {meta.card.indicador && (
                   <div className="flex items-end gap-12 flex-row justify-start flex-nowrap container-content-mobile-card">
                     <h3
@@ -157,7 +159,7 @@ export default function CardMetas({ meta, onClose }) {
                   </div>
                 )}
               </div>
-              <div>
+              <div className="div-conteudo-mobile">
                 {meta.card.orgaos_responsaveis && (
                   <div className="flex items-end gap-12 flex-row justify-start flex-nowrap container-content-mobile-card">
                     <h3
@@ -226,7 +228,7 @@ export default function CardMetas({ meta, onClose }) {
           </div>
         </div>
         <div
-          className="h-[11.44rem] py-8"
+          className="min-h-45 py-8"
           style={{ backgroundColor: meta.card.eixo_cor_principal }}
         >
           {meta.card.eixo_frase && (

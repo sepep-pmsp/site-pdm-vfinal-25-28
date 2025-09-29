@@ -6,7 +6,7 @@ import { useMediaQuery } from "react-responsive";
 import FiltroMetaMobile from "./FiltroMetaMobile";
 import { useFiltrosMetas } from "../../hooks/useFiltrosMetas";
 
-export default function FiltroMeta({ onCardsUpdate }) {
+export default function FiltroMeta({ onCardsUpdate, eixoIdFromNav }) {
   const isMobile = useMediaQuery({ maxWidth: 1025 });
 
   const {
@@ -14,7 +14,7 @@ export default function FiltroMeta({ onCardsUpdate }) {
     filtrosSelecionados,
     toggleSelecionado,
     limparFiltros,
-  } = useFiltrosMetas(onCardsUpdate);
+  } = useFiltrosMetas(onCardsUpdate, eixoIdFromNav);
 
   if (!data) return <p>Carregando filtros...</p>;
 
@@ -49,6 +49,7 @@ export default function FiltroMeta({ onCardsUpdate }) {
             filtrosSelecionados={filtrosSelecionados}
             regioes={data.regionalizacao}
             orgaos={data.orgaos}
+            selecionados={filtrosSelecionados.zonas}
             planosVinculados={data.planos_setoriais}
             toggleSelecionado={toggleSelecionado}
             onLimparFiltros={limparFiltros}
@@ -59,6 +60,8 @@ export default function FiltroMeta({ onCardsUpdate }) {
             eixos={data.eixos}
             filtrosSelecionados={filtrosSelecionados}
             toggleSelecionado={toggleSelecionado}
+            eixoIdFromNav={eixoIdFromNav}
+            onLimparFiltros={limparFiltros}
           />
         </div>
       )}

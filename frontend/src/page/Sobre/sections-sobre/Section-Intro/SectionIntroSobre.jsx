@@ -13,7 +13,7 @@ export default function SectionIntroSobre({sobre, setSelectedButton, selectedBut
 
   return (
     <div>
-      <section className="relative w-full h-[98vh] overflow-hidden intro-sobre-mobile">
+      <section className="relative w-full flex max-md:min-h-[155vh] max-lg:h-[140vh] xl:h-[87vh] lg:h-[140vh] overflow-hidden">
         <div>
           <img
             className="max-md:top-0 max-md:hidden lg:absolute top-[-10rem]"
@@ -21,19 +21,19 @@ export default function SectionIntroSobre({sobre, setSelectedButton, selectedBut
           />
           <div className="absolute top-0 left-0 w-full h-full bg-[#120e49d9] z-0 pointer-events-none"></div>
         </div>
-        <div className="absolute inset-0 flex items-start justify-between flex-nowrap z-10 px-20 top-50 mx-24 container-section-intro-mobile">
+        <div className="absolute inset-0 z-10 top-20 flex flex-row justify-center items-start gap-[30rem] max-md:flex-col max-md:items-start  max-lg:flex-row max-lg:items-center max-xl:items-center max-xl:justify-start max-xl:gap-2 max-xl:top-2 max-md:left-16">
           <div className="flex flex-col flex-nowrap items-start justify-center gap-20">
             <div className="flex flex-col items-start text-white gap-8">
               <p className="text-4xl">{banner.supertitulo}</p>
-              <img className='logo-mobile' src={logo} />
-              <p className="text-3xl break-all w-150 p-text-mobile">{banner.subtitulo}</p>
+              <img className='max-md:w-60 max-xl:w-full max-xl:max-w-[25rem] max-xl:h-auto' src={logo} />
+              <p className="text-3xl break-all w-150 max-xl:text-lg max-xl:w-full max-xl:max-w-xs max-xl:leading-normal max-xl:text-left">{banner.subtitulo}</p>
             </div>
-            <div className="flex flex-col items-start justify-center gap-12 discover-section-mobile">
+            <div className="flex flex-col items-start justify-center gap-12 max-xl:flex max-xl:flex-col max-xl:gap-6 max-xl:items-start max-xl:flex-wrap max-xl:mt-12">
               <div className="text-white">
                 <h3 className="text-4xl">descubra o pdm:</h3>
               </div>
-              <div className="flex flex-row gap-11 discover-buttons-mobile">
-                <div className="flex gap-6 butons-mobile">
+              <div className="flex flex-row gap-11 max-xl:flex max-xl:flex-col max-xl:gap-4 max-xl:w-[62%] max-xl:items-center">
+                <div className="flex gap-6 max-xl:flex max-xl:flex-col max-xl:flex-wrap max-xl:items-center max-xl:justify-center">
                   {buttonsData.map((btn, index) => {
                     const isSelected = selectedButton === index;
                     return (
@@ -56,7 +56,7 @@ export default function SectionIntroSobre({sobre, setSelectedButton, selectedBut
                     );
                   })}
                 </div>
-                <div className="w-[45rem] text-white absolute text-2xl left-[55rem] top-[25rem] text-bot-mobile">
+                <div className="w-[45rem] text-white absolute text-2xl left-[59rem] top-[25rem] max-xl:relative max-xl:w-80 max-xl:left-12 max-xl:top-0 max-2xl:left-[44rem]">
                   {selectedButton !== null && (
                     <p
                       key={selectedButton}
@@ -69,7 +69,7 @@ export default function SectionIntroSobre({sobre, setSelectedButton, selectedBut
               </div>
             </div>
           </div>
-          <div className="download-button-mobile">
+          <div className="max-xl:w-full max-xl:max-w-xs max-xl:h-auto max-xl:text-xl max-xl:relative max-xl:px-8 max-xl:py-6 max-xl:top-0">
             <CustomButton
               type="download"
               target={banner.link_pdf}

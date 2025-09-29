@@ -16,7 +16,11 @@ export default function CardEixos({ eixo, onClose }) {
   const animationSet = animations[eixo.nome.toLowerCase()] || { in: "", out: "" };
 
   const navigate = useNavigate();
-  const goTo = (path) => navigate(path);
+  // ALTERAÇÃO: Modificamos a função goTo para aceitar o ID do eixo
+  const goToMetas = (eixoId) => {
+    // Usamos o 'state' do navigate para passar o ID para a próxima página
+    navigate("/metas", { state: { eixoIdFiltro: eixoId } });
+  };
 
   useEffect(() => {
     if (isExiting) {
@@ -64,8 +68,9 @@ export default function CardEixos({ eixo, onClose }) {
         </div>
 
         <section className="order-3 md:order-none md:col-start-1 md:row-start-2">
+          {/* ALTERAÇÃO: O onClick agora chama a nova função com o ID do eixo */}
           <CustomButton
-            onClick={() => goTo("/metas")}
+            onClick={() => goToMetas(eixo.id)}
             type="link"
             style={{ color: eixo.cor_principal }}
             className="buttons_metas bg-[var(--color-white)] h-28 text-3xl uppercase font-family cursor-pointer w-full md:w-auto"

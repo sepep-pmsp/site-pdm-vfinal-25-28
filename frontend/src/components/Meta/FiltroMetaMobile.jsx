@@ -37,7 +37,9 @@ export default function FiltroMetaMobile({
     planos_vinculados: filtrosSelecionados?.planos_vinculados ?? [],
     subprefeituras: filtrosSelecionados?.subprefeituras ?? [],
     ods: filtrosSelecionados?.ods ?? [],
-    zona: zonaSelecionada ? [norm(zonaSelecionada)] : [],
+    zona: regionalizacaoArr
+      .filter(r => filtrosSelecionados.zonas.includes(r.id))
+      .map(r => norm(r.nome))
   });
   useEffect(() => {
     if (!onCardsUpdate) return;
@@ -190,24 +192,22 @@ export default function FiltroMetaMobile({
     </svg>
   );
 
-  const subprefsFiltradas =
-    zonaSelecionada
-      ? subprefListAll
-          .filter(
-            (sp) =>
-              sp.zona === norm(zonaSelecionada) ||
-              norm(zonaSelecionada).includes(sp.zona) ||
-              sp.zona.includes(norm(zonaSelecionada))
-          )
-          .sort((a, b) => a.nome.localeCompare(b.nome, "pt", { sensitivity: "base" }))
-      : subprefListAll.sort((a, b) => a.nome.localeCompare(b.nome, "pt", { sensitivity: "base" }));
+  const subprefsFiltradas = zonaSelecionada
+  ? (regionalizacaoArr.find((r) => r.id === zonaSelecionada)?.subprefeituras || [])
+      .map((sp) => ({
+        id: sp?.id ?? sp?.codigo ?? sp?.value,
+        nome: stripHtml(sp?.nome ?? sp?.label ?? sp?.title ?? ""),
+      }))
+      .sort((a, b) => a.nome.localeCompare(b.nome, "pt", { sensitivity: "base" }))
+  : subprefListAll.sort((a, b) => a.nome.localeCompare(b.nome, "pt", { sensitivity: "base" }));
+
 
   const isLoading = !data;
 
   return (
     <>
       <div className="md:hidden bg-[var(--color-navy,#0A2540)] text-white">
-        <div className="w-screen">
+        <div className="max-md:min-w-sm md:w-screen">
           <button type="button" onClick={toggleOpen} aria-expanded={open} className="w-full">
             <div
               className="bg-[#46C0CC] text-white font-extrabold uppercase tracking-wide px-6 flex items-center justify-center text-center min-h-[140px]"
@@ -284,7 +284,10 @@ export default function FiltroMetaMobile({
                               <button
                                 key={e.id}
                                 type="button"
-                                onClick={() => setEixoAberto(e.id)}
+                                onClick={() => {
+                                  toggleSelecionado("eixos", e.id);
+                                  setEixoAberto(e.id);
+                                }}
                                 className={`rounded-2xl px-3 py-4 text-left shadow ${
                                   active ? "ring-2 ring-offset-2 ring-slate-900 ring-offset-white" : ""
                                 }`}
@@ -377,11 +380,17 @@ export default function FiltroMetaMobile({
                           <button
                             key={name}
                             onClick={() => {
-                              setZonaSelecionada((prev) =>
-                                prev && norm(prev) === norm(name) ? null : name
-                              );
-                              setSubprefOpen(true);
-                            }}
+                                const zonaObj = regionalizacaoArr.find(
+                                    (r) => norm(r?.nome) === norm(name)
+                                );
+
+                                if (zonaObj?.id) {
+                                    toggleSelecionado("zonas", zonaObj.id); // cards
+                                    setZonaSelecionada(zonaObj.id);         // agora salva o ID
+                                }
+
+                                setSubprefOpen(true);
+                                }}
                             className={[
                               "h-16 w-full grid place-items-center rounded-xl border-2 transition",
                               isActive ? "bg-black text-white border-black" : "bg-white text-slate-900 border-black",

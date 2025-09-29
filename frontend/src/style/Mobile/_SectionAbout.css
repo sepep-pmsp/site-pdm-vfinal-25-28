@@ -233,8 +233,8 @@
     .box-open-carta-mobile {
         width: 24rem;
         max-height: 80vh;
-        left: -41rem;
+        left: 0;
         overflow-y: auto;
-        top: -61rem;
+        top:0;
     }
 }
