@@ -17,7 +17,7 @@ export default function Introduction() {
           </video>
         </div>
         {/* Container principal com a logo */}
-        <div className="absolute inset-0 flex flex-row flex-nowrap justify-evenly items-center z-10 mx-60 introducao-mobile">
+        <div className="absolute inset-0 flex flex-row flex-nowrap justify-evenly items-center z-10 mx-38 introducao-mobile">
           <div className="flex items-center bg-opacity-80 rounded-lg p-8 intro-mobile-banner-img">
             <img
               src={logo_pdm_fbranco}

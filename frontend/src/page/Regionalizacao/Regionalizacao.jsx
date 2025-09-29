@@ -12,7 +12,7 @@ export default function Regionalizacao() {
   if (!regionalizacao) return <div>Carregando...</div>;
 
   return (
-    <div className="pt-20 px-4 mx-60 h-[63rem] regionalização_mobile">
+    <div className="pt-20 px-4 mx-38 h-[63rem] regionalização_mobile">
       <div className="flex items-start justify-center flex-col flex-nowrap w-[90%]">
         <h1 className="text-[5rem] text-[var(--color-navy)] title-mobile">
           {regionalizacao.titulo}

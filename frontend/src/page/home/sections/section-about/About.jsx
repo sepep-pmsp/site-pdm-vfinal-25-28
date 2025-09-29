@@ -20,7 +20,7 @@ export default function About() {
   if (!about) return <div>Carregando...</div>;
 
   return (
-    <div className=" mx-60 relative bottom-16 about-mobile">
+    <div className=" mx-38 relative bottom-16 about-mobile">
       <section>
         <div>
           <div className="my-8">

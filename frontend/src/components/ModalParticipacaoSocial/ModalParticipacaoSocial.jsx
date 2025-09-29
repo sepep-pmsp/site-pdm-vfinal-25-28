@@ -42,7 +42,7 @@ export default function ModalParticipacaoSocial({ isOpen, onClose, apresentacao 
       {/* Modal */}
       <div className="fixed inset-0 flex items-center justify-center z-[10000]">
         <div
-          className={`bg-[#1281AA] rounded-4xl p-8 max-w-screen mx-60 max-h-screen h-auto relative shadow-lg transition-all duration-400${
+          className={`bg-[#1281AA] rounded-4xl p-8 max-w-screen mx-38 max-h-screen h-auto relative shadow-lg transition-all duration-400${
             closing ? "slide-out-bottom" : "animate-slide-up"
           }`}
           onClick={(e) => e.stopPropagation()}
