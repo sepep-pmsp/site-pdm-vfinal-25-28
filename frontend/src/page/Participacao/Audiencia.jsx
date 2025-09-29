@@ -44,12 +44,12 @@ export default function Audiencia({ audiencia }) {
       <div className="mx-38 audiencia-mobile">
         <div className="gap-24 flex items-center justify-center relative pl-20 bottom-28 container-audiencia-mobile">
           <h2 className="text-5xl text-[var(--color-navy)]">
-            Veja informações sobre as devolutivas.
+            "São Paulo quer ouvir você"
           </h2>
           <p className="text-3xl text-[var(--color-navy)]">
-            O PdM é composto por um conjunto de compromissos organizados em
-            quatro eixos estratégicos. Essa divisão ajuda a dar forma à
-            complexidade do plano e orientar o olhar de quem lê.
+            Veja como foram as audiências públicas realizadas – setoriais e em
+            cada uma das 32 subprefeituras – ao longo do ciclo participativo do
+            PdM 2025-2028.
           </p>
         </div>
         <div className="flex items-center justify-center flex-col flex-nowrap gap-20 max-sm:relative top-40">
