@@ -8,14 +8,33 @@ import { useFiltrosMetas } from "../../hooks/useFiltrosMetas";
 
 export default function FiltroMeta({ onCardsUpdate }) {
   const isMobile = useMediaQuery({ maxWidth: 1025 });
-  const { data, filtrosSelecionados, toggleSelecionado, limparFiltros } =
-    useFiltrosMetas(onCardsUpdate);
+
+  const {
+    data,
+    filtrosSelecionados,
+    toggleSelecionado,
+    limparFiltros,
+  } = useFiltrosMetas(onCardsUpdate);
 
   if (!data) return <p>Carregando filtros...</p>;
+
   return (
     <div className="flex items-start">
       {isMobile ? (
-        <FiltroMetaMobile onCardsUpdate={onCardsUpdate} />
+        <FiltroMetaMobile
+          onCardsUpdate={onCardsUpdate}
+          // === dados (iguais ao desktop) ===
+          regionalizacao={data.regionalizacao}
+          zonas={data.zonas || data.regioes_zona}
+          orgaos={data.orgaos}
+          planosSetoriais={data.planos_setoriais}
+          eixos={data.eixos}
+          ods={data.ods}
+          // === estado/ações compartilhados ===
+          filtrosSelecionados={filtrosSelecionados}
+          toggleSelecionado={toggleSelecionado}
+          limparFiltros={limparFiltros}
+        />
       ) : (
         <div className="flex flex-row">
           {/* Coluna esquerda - ODS */}

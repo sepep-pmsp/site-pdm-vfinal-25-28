@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from "react";
-import Grid_menu_navbar from "./Grid_menu_navbar";
-import NavBarMobile from "./NavBarMobile";
+import { useNavigate } from "react-router-dom";
+import WindowsTilesGrid from "./WindowsTilesGrid";
+import Vector_Sobre from "/src/assets/svg/Vector-sobre.svg";
+import Vector from "/src/assets/svg/Vector.svg";
+import Universo_SP from "/src/assets/svg/universo_sp.svg";
+import Viver_SP from "/src/assets/svg/viver_sao_paulo.svg";
+import Capital_Futuro from "/src/assets/svg/capital_do_futuro.svg";
+import Logo_PDM_fPreto from "/src/assets/svg/logo-pdm-black.svg";
+import Cidade_Empreendedora from "/src/assets/svg/cidade_empreendedora.svg";
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,6 +40,156 @@ export default function Navbar() {
     }, 500);
   };
 
+  const navigate = useNavigate();
+  const goToEixo = (nomeEixo) => {
+    navigate("/", { state: { eixo: nomeEixo } });
+    closeMenu();
+  };
+  const goTo = (path) => {
+    navigate(path);
+    closeMenu();
+  };
+
+  const columnsConfig = [
+    // Coluna 1: Mapped from left column of Grid_menu_navbar
+    [
+      { // 1.1 sobre o pdm
+        height: '1/2', // from original config
+        bgColor: 'bg-[var(--color-navy)] rounded-tr-[3rem] overflow-auto',
+        content: () => (
+          <div className="text-white w-full h-full flex flex-col items-start justify-start text-2xl p-4 cursor-pointer slide-bottom-in">
+            <h2 className="z-2 slide-bottom-in-item">sobre o pdm</h2>
+            <img className="absolute left-4 bottom-0" src={Vector_Sobre} />
+          </div>
+        ),
+        action: () => goTo("/sobre"),
+      },
+      { // 1.2 pdms anteriores
+        height: '1/3', // from original config
+        bgColor: 'bg-[var(--color-navy)] rounded-bl-[3rem] overflow-auto',
+        content: () => (
+          <div className="text-white w-full h-full flex flex-col-reverse items-start justify-center px-6 py-4 text-2xl cursor-pointer slide-top-in overflow-auto">
+            <h2 className="absolute bottom-4 z-2 slide-top-in-item">pdms anteriores</h2>
+            <img className="absolute w-[16.5rem] left-4 top-0" src={Vector} />
+          </div>
+        ),
+        action: () => goTo("/historico"),
+      },
+      { // 1.3 inicio e sair
+        height: '1/6', // from original config
+        bgColor: '',
+        content: () => (
+          <div className="flex flex-col w-full h-full text-white text-2xl gap-1 md:gap-3">
+            <div onClick={(e) => { e.stopPropagation(); goTo('/'); }} className="h-[45%] flex items-center p-4 rounded-tr-[2rem] cursor-pointer slide-right-in bg-[var(--color-cyan-medium)]">
+              <h2 className="slide-right-in-item relative">início</h2>
+            </div>
+            <div onClick={(e) => { e.stopPropagation(); closeMenu(); }} className="h-[45%] flex items-center p-4 rounded-bl-[2rem] cursor-pointer slide-right-in bg-[var(--color-cyan-medium)]">
+              <h2 className="slide-right-in-item relative">sair</h2>
+            </div>
+          </div>
+        ),
+        action: () => {},
+      },
+    ],
+    // Coluna 2: universo sp, capital do futuro
+    [
+      { // 2.1 universo sp
+        height: '1/3', // from original config
+        bgColor: 'bg-[var(--color-green)] rounded-tl-[2rem] menu-tile-before',
+        content: () => (
+          <div className="flex items-start justify-start flex-row p-6 w-full h-full cursor-pointer slide-right-in-img">
+            <img className="w-36 slide-right-in-item-img" src={Universo_SP} alt="" />
+          </div>
+        ),
+        action: () => goToEixo("universo"),
+      },
+      { // 2.2 capital do futuro
+        height: '2/3', // from original config
+        bgColor: 'bg-[var(--color-purple-red)] rounded-br-[0rem] md:rounded-br-[2rem]',
+        content: () => (
+          <div className="flex items-end justify-start p-6 w-full h-full cursor-pointer slide-top-in-img">
+            <img className="w-36 slide-top-in-item-img" src={Capital_Futuro} alt="" />
+          </div>
+        ),
+        action: () => goToEixo("capital"),
+      },
+    ],
+    // Coluna 3: conheca as metas
+    [
+      { height: '[33.3333%]', bgColor: 'bg-[var(--color-green)] ', content:  () => (<span></span>), leakColor: '#ef4444' },
+      { // 3.2 conheca as metas
+        height: '[31.5%]',
+        bgColor: 'bg-indigo-950',
+        content: () => (
+          <div className="cursor-pointer flex flex-col flex-nowrap justify-between items-start slide-right-in-logo h-full w-full">
+              <img className="w-20 md:w-32 p-4 invert-[1] slide-right-in-item-logo" src={Logo_PDM_fPreto} alt="" />
+              <h2 className="text-2xl text-white w-32 absolute bottom-4 right-2 text-start invisible md:visible">
+                conheça as metas
+              </h2>
+          </div>
+        ),
+        action: () => goTo("/metas"),
+      },
+      { height: '[33.3333%]', bgColor: 'bg-[var(--color-blue)] menu-tile-before-blue', content:  () => (<span></span>), leakColor: '#b91c1b' },
+    ],
+    // Coluna 4: viver sp, cidade empreendedora
+    [
+      { // 4.1 viver sao paulo
+        height: '[66.6666%]', // approx 69%
+        bgColor: 'bg-[var(--color-orange-red)] rounded-tr-[2rem]',
+        content: () => (
+          <div className="flex flex-col justify-start items-end p-6 w-full h-full slide-bottom-in-img cursor-pointer">
+            <img className="w-36 slide-bottom-in-item-img" src={Viver_SP} alt="" />
+          </div>
+        ),
+        action: () => goToEixo("viver"),
+      },
+      { // 4.3 cidade empreendedora
+        height: '[33.3333%]',
+        bgColor: 'bg-[var(--color-blue)] rounded-br-[0rem] md:rounded-br-[2rem] slide-left-in-img menu-tile-right',
+        content: () => (
+          <div className="flex justify-end items-end p-6 w-full h-full cursor-pointer">
+            <img className="w-32 slide-left-in-item-img" src={Cidade_Empreendedora} alt="" />
+          </div>
+        ),
+        action: () => goToEixo("cidade"),
+      },
+    ],
+    // Coluna 5 (unmapped items from Grid_menu_navbar)
+    [
+        { // regionalização
+          height: '1/2',
+          bgColor: 'bg-[var(--color-cyan-dark)] rounded-tl-[2rem]',
+          content: () => (
+              <div className="text-white p-4 flex items-end justify-center cursor-pointer h-full w-full slide-top-in-2">
+                  <h2 className="text-start w-full cursor-pointer text-1xl md:text-2xl slide-top-in-item-2">regionalização</h2>
+              </div>
+          ),
+          action: () => goTo("/regionalizacao"),
+        },
+        { // transparência e monitoramento
+          bgColor: 'bg-[var(--color-cyan-dark)]',
+          height: '1/4',
+          content: () => (
+              <div className="text-white p-4 flex items-end cursor-pointer h-full w-full slide-top-in-3">
+                  <h2 className="text-start w-full cursor-pointer text-1xl md:text-2xl slide-top-in-item-3">transparência e monitoramento</h2>
+              </div>
+          ),
+          action: () => goTo("/transparencia"),
+        },
+        { // participação social
+          bgColor: 'bg-[var(--color-cyan-dark)] rounded-br-[2rem]',
+          height: '1/4',
+          content: () => (
+              <div className="text-white text-start p-4 cursor-pointer flex justify-start items-end h-full w-full slide-top-in-3">
+                  <h2 className="w-10 slide-top-in-item-3">participação social</h2>
+              </div>
+          ),
+          action: () => goTo("/participacao-social"),
+        }
+    ],
+  ];
+
   return (
     <div className="fixed p-2 bg-white z-30 w-full navbar-container">
       <div className="flex flex-row justify-around gap-56 items-center p-2 display-navbar">
@@ -62,11 +220,7 @@ export default function Navbar() {
           role="dialog"
           className={`${animacao} fixed inset-0 bg-white z-50`}
         >
-          {isMobile ? (
-            <NavBarMobile onClose={closeMenu} className="overflow-y-auto" />
-          ) : (
-            <Grid_menu_navbar onClose={closeMenu} />
-          )}
+          <WindowsTilesGrid columnsConfig={columnsConfig} onClose={closeMenu} />
         </div>
       )}
     </div>
