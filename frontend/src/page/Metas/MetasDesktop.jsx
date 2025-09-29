@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { getMetasIniciais } from "@/services/Metas/getMetasData";
 import logo from "@/assets/svg/logo-pdm.svg";
 import CarouselOrcamento from "@/components/CarouselOrcamento/CarouselOrcamento";
@@ -8,12 +8,36 @@ import CardMetas from "@/components/Meta/CardMetas";
 import { postFiltrosSelecionados } from "@/services/Metas/getFiltroMetasData";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import CardMetasMobile from "@/components/Meta/CardMetasMobile";
+import { useLocation } from "react-router-dom";
 
 export default function MetasDesktop() {
   const [metas, setMetas] = useState([]);
   const [selectedMeta, setSelectedMeta] = useState(null);
   const [loading, setLoading] = useState(true);
   const isMobile = useIsMobile(725);
+  const location = useLocation();
+  const eixoIdFiltro = location.state?.eixoIdFiltro;
+  const filtroRef = useRef(null);
+
+  useEffect(() => {
+    // Lógica inicial para carregar metas (mantida)
+    const filtrosIniciais = {
+      ods: [], planos_setoriais: [], orgaos: [], eixos: [], temas: [],
+      subprefeituras: [], zonas: [], termo_busca: ""
+    };
+    postFiltrosSelecionados(filtrosIniciais)
+      .then((res) => setMetas(res.metas))
+      .catch((err) => console.error("Erro na busca inicial de metas:", err))
+      .finally(() => setLoading(false));
+
+    // ALTERAÇÃO: Lógica para fazer o scroll
+    if (eixoIdFiltro && filtroRef.current) {
+      setTimeout(() => { // Usamos um timeout para dar tempo da página renderizar
+        filtroRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  }, [eixoIdFiltro]);
+
 
   useEffect(() => {
     getMetasIniciais()
@@ -82,8 +106,8 @@ export default function MetasDesktop() {
       </div>
 
       <div className="flex items-center justify-center flex-row flex-nowrap gap-1 pt-10 h-[95rem] container-lista-metas-mobile">
-        <div className="relative w-full h-full left-12 top-32 lista-metas-mobile">
-          <FiltroMeta onCardsUpdate={(res) => setMetas(res.metas)} />
+        <div ref={filtroRef} className="relative w-full h-full left-12 top-32 lista-metas-mobile">
+          <FiltroMeta onCardsUpdate={(res) => setMetas(res.metas)} eixoIdFromNav={eixoIdFiltro} />
         </div>
 
         <div className="flex min-w-lg h-[1360px] flex-col flex-nowrap justify-start items-center px-0 py-8 rounded-3xl relative right-60 top-7 container-lista-metas-mobileee">

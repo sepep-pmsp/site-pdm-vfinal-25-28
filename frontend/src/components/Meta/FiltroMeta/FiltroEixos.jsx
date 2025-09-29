@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function FiltroEixos({
   eixos,
   filtrosSelecionados,
   toggleSelecionado,
+  eixoIdFromNav,
+  onLimparFiltros,
 }) {
   const [eixosAbertos, setEixosAbertos] = useState([]);
+  const [initialFilterApplied, setInitialFilterApplied] = useState(false);
   if (!eixos) {
     return <p>Carregando eixos...</p>;
   }
@@ -14,6 +17,16 @@ export default function FiltroEixos({
       prev.includes(id) ? prev.filter((e) => e !== id) : [...prev, id]
     );
   };
+  useEffect(() => {
+    if (eixoIdFromNav && !initialFilterApplied) {
+      setEixosAbertos([eixoIdFromNav]);
+      
+      if (!filtrosSelecionados.eixos.includes(eixoIdFromNav)) {
+        toggleSelecionado("eixos", eixoIdFromNav);
+      }
+      setInitialFilterApplied(true);
+    }
+  }, [eixoIdFromNav, initialFilterApplied, filtrosSelecionados.eixos, toggleSelecionado]);
 
   return (
     <div className="h-full flex flex-col items-start w-[19rem] relative bottom-10">
@@ -22,7 +35,6 @@ export default function FiltroEixos({
 
         return (
           <div key={id}>
-            {/* Botão do eixo */}
             <div
               onClick={() => {
                 toggleSelecionado("eixos", id);
@@ -33,7 +45,7 @@ export default function FiltroEixos({
                 backgroundColor: cor,
                 width: isAberto ? "21.5rem" : "6rem",
                 height: "21rem",
-                marginBottom: isAberto ?"-12px": "-20px"
+                marginBottom: isAberto ? "-12px" : "-20px",
               }}
             >
               <div className="flex justify-between items-center flex-row flex-nowrap">
@@ -52,6 +64,9 @@ export default function FiltroEixos({
                     onClick={(e) => {
                       e.stopPropagation();
                       toggleDropdown(id);
+                      if (onLimparFiltros) {
+                        onLimparFiltros();
+                      }
                     }}
                   >
                     <i
@@ -62,7 +77,6 @@ export default function FiltroEixos({
                 )}
               </div>
 
-              {/* Lista de subeixos */}
               {isAberto && (
                 <div className="mt-2 ml-4 overflow-y-auto overflow-x-hidden scroll-smooth scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-gray-400 no-scrollbar-arrows h-60 w-[20rem]">
                   {temas.map((sub) => (
