@@ -63,9 +63,7 @@
   width: min(84.2rem, 100%) !important;
   height: auto !important;
   max-height: 90vh !important;
-  overflow: auto !important;
   border-radius: 3rem !important;
-  transform: none !important;
   opacity: 1 !important;
   backface-visibility: hidden;
   transform-style: preserve-3d;
@@ -110,7 +108,7 @@
 
 .eixo-title{ display: block !important; }
 
-.cardeixos-overlay { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; padding:1rem; z-index:9999; }
+.cardeixos-overlay { position:relative; inset:0; display:flex; align-items:center; justify-content:center; padding:1rem; z-index:2;}
 
 .cardeixos-overlay .card-eixos{
   position:relative !important;
@@ -121,9 +119,7 @@
   width:min(1100px, calc(100vw - 2rem)) !important;
   height:auto !important;
   max-height:calc(100vh - 2rem) !important;
-  overflow:auto !important;
   border-radius:2rem !important;
-  transform:none !important;
   opacity:1 !important;
 }
 
