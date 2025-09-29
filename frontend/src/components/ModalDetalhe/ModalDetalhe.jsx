@@ -144,7 +144,7 @@ export default function ModalDetalhe({ selecionado, onClose }) {
               ))
             ) : (
               <div className="max-md:left-0 max-md:w-[20rem] lg:flex flex-col gap-4 relative left-[35rem] bottom-0 w-[54rem] pb-10">
-                <p className="max-md:w-full max-md:break-all max-md:relative max-md:top-0 lg:flex items-start justify-start gap-8 w-[45rem] text-xl">
+                <p className="max-md:w-95 max-md:text-sm max-md:left-6 max-md:break-all max-md:relative max-md:top-0 lg:flex items-start justify-start gap-8 w-[45rem] text-xl">
                   {detalhe.conteudo}
                 </p>
               </div>
@@ -165,7 +165,7 @@ export default function ModalDetalhe({ selecionado, onClose }) {
                         <strong className="text-xl text-[var(--color-cyan-dark)] shadow-[0px_0px_2px_gray] p-2 rounded-3xl w-60">
                           {r.orgao}
                         </strong>
-                        <p className="max-md:w-full max-md:break-all lg:h-full w-[55rem] text-xl">
+                        <p className="max-md:w-full max-md:text-sm  max-md:break-all lg:h-full w-[55rem] text-xl">
                           {r.texto}
                         </p>
                       </div>
