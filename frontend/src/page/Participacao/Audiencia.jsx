@@ -37,7 +37,7 @@ export default function Audiencia({ audiencia }) {
       <div>
         <div className="bg-[var(--color-cyan-dark)] w-[40rem] h-44 right-[95rem] top-[115rem] rotate-[270deg] absolute flex items-center flex-col justify-end p-4 rounded-br-4xl rounded-bl-4xl shadow-[-4px_2px_20px_0px_gray] z-1">
           <h1 className="text-white text-7xl px-6 relative left-28 bottom-4">
-            Audiencias
+            Audiências
           </h1>
         </div>
       </div>
