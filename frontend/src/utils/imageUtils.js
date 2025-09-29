@@ -1,11 +1,3 @@
-// src/utils/urlUtils.js
-
-/**
- * Corrige uma URL de imagem da API, garantindo o protocolo HTTPS
- * e o caminho correto para o backend.
- * @param {string} url A URL da imagem a ser corrigida.
- * @returns {string} A URL corrigida.
- */
 export const corrigirUrlImagem = (url) => {
   if (!url) {
     return "";

@@ -2,7 +2,6 @@ import React from "react";
 import { corrigirUrlImagem } from "@/utils/imageUtils";
 import SafeSVG from "../../SafeSVG/SafeSVG";
 
-
 export default function FiltroODS({
   ods,
   filtrosSelecionados,
