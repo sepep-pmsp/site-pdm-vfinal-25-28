@@ -87,7 +87,8 @@
         "projecao": "A questão do déficit habitacional nas grandes cidades quase sempre diz respeito a outros déficits: econômicos, sociais, de serviços públicos. Tendo isso em vista, a política de moradia popular de São Paulo está hoje inserida no contexto da renovação urbana da cidade, com iniciativas que consideram as características e a realidade de cada região para promover, além da oferta da habitação – preferencialmente com Soluções Baseadas na Natureza (SBN) –, a melhoria da infraestrutura local.",
         "indicador": "Número de unidades habitacionais entregues.",
         "orgao_responsavel": [
-            "SEHAB"
+            "SEHAB",
+            "COHAB"
         ],
         "eixo": "Universo SP"
     },
@@ -98,7 +99,8 @@
         "projecao": "A titulação, que dá ao morador a segurança de posse ou o direito de propriedade, contribui para o planejamento urbano da cidade. As ações consideram a realidade de cada assentamento e serão conduzidas de forma articulada entre SEHAB e COHAB.",
         "indicador": "Número de títulos de garantia de posse ou propriedade entregues.",
         "orgao_responsavel": [
-            "SEHAB"
+            "SEHAB",
+            "COHAB"
         ],
         "eixo": "Universo SP"
     },
@@ -109,7 +111,9 @@
         "projecao": "As obras, que vão de simples intervenções de complementação de infraestrutura até a urbanização integral, transformarão a realidade de assentamentos precários, eliminando riscos, promovendo a recuperação ambiental e incorporando, preferencialmente, Soluções Baseadas na Natureza (SBN).",
         "indicador": "Número de famílias beneficiadas com obras de urbanização.",
         "orgao_responsavel": [
-            "SEHAB"
+            "SEHAB",
+            "SMSUB",
+            "SIURB"
         ],
         "eixo": "Universo SP"
     },
@@ -120,7 +124,8 @@
         "projecao": "As obras vão recuperar as condições físicas, ambientais e de uso dos empreendimentos, melhorando áreas de uso compartilhado, prolongando a vida útil das edificações e qualificando o entorno em conformidade com as políticas municipais de zeladoria.",
         "indicador": "Número de empreendimentos habitacionais revitalizados.",
         "orgao_responsavel": [
-            "SEHAB"
+            "SEHAB",
+            "COHAB"
         ],
         "eixo": "Universo SP"
     },
@@ -154,7 +159,7 @@
         "numero": 14,
         "destaque": "Entregar o novo Centro de Operações da SPTrans",
         "descricao": "Entregar o novo Centro de Operações da SPTrans, para melhorar o monitoramento da frota de ônibus municipal e a qualidade do serviço prestado.",
-        "projecao": "O novo Centro de Operações, com o Sistema de Monitoramento e Gestão Operacional do Transporte Coletivo Público da cidade de São Paulo (SMGO), permitirá uma gestão muito mais eficiente da rede de transportes, que oferecerá mais segurança, previsibilidade, rapidez e comodidade a 7,3 milhões de passageiros.",
+        "projecao": "O novo Centro de Operações, com o Sistema de Monitoramento e Gestão Operacional do Transporte Coletivo Público da cidade de São Paulo (SMGO), permitirá uma gestão muito mais eficiente da rede de transportes, que oferecerá mais segurança, previsibilidade, rapidez e comodidade a cerca de 7 milhões de passageiros.",
         "indicador": "Centro de Operações em funcionamento.",
         "orgao_responsavel": [
             "SMT",
@@ -271,7 +276,8 @@
         "orgao_responsavel": [
             "SMT",
             "SPTrans",
-            "SGM"
+            "SGM",
+            "SEDP"
         ],
         "eixo": "Universo SP"
     },
@@ -339,7 +345,7 @@
         "numero": 29,
         "destaque": "Contratar as obras de dois novos atracadouros na Represa Billings",
         "descricao": "Contratar as obras de dois novos atracadouros na Represa Billings para expandir o Aquático SP e proporcionar à população da Zona Sul uma mobilidade mais sustentável e integrada.",
-        "projecao": "Serão acomodadas no terminal as linhas de ônibus municipais e intermunicipais que trafegam nos eixos da Avenida Marechal Tito e da Estrada Dom José Nery.",
+        "projecao": "A abertura de novas paradas (Pedreira e Cocaia) deverá beneficiar diretamente a conexão entre o modal hidroviário e a rede de ônibus.",
         "indicador": "Obras contratadas.",
         "orgao_responsavel": [
             "SMT",
@@ -451,7 +457,7 @@
         "numero": 38,
         "destaque": "Entregar a segunda e a terceira fase da requalificação da Avenida Santo Amaro",
         "descricao": "Entregar a segunda e a terceira fase da requalificação da Avenida Santo Amaro, para melhorar a segurança e a mobilidade na região.",
-        "projecao": "As intervenções incluem calçadas ampliadas, novo pavimento, iluminação, drenagem e enterramento de redes, beneficiando também os passageiros do transporte público e os pedestres que circulam pela região.",
+        "projecao": "As intervenções entre a Rua Afonso Braz e a Avenida Banderiantes incluem calçadas ampliadas, novo pavimento, iluminação, drenagem e enterramento de redes, beneficiando também os passageiros do transporte público e os pedestres que circulam pela região.",
         "indicador": "Obra concluída.",
         "orgao_responsavel": [
             "SIURB",
@@ -503,11 +509,10 @@
         "numero": 42,
         "destaque": "Iniciar o prolongamento da Avenida Imperador até a Avenida José Aristodemo Pinotti",
         "descricao": "Iniciar o prolongamento da Avenida Imperador até a Avenida José Aristodemo Pinotti, promovendo requalificação urbana e garantindo melhor articulação da malha viária na Zona Leste.",
-        "projecao": "A obra é essencial para a melhoria do tráfego em São Miguel Paulista.",
+        "projecao": "O prolongamento da Avenida Deputado José Aristodemo Pinotti até a Avenida Imperador configura-se como uma intervenção estratégica, destinada a facilitar os deslocamentos intrarregionais. Essa conexão atuará como via de apoio ao eixo São Miguel e áreas adjacentes, além de oferecer alternativa adicional de acesso ao centro de São Miguel, contribuindo para a redistribuição do fluxo viário e a redução de congestionamentos.",
         "indicador": "Ordem de serviço de obra emitida.",
         "orgao_responsavel": [
-            "SIURB",
-            "SPObras"
+            "SIURB"
         ],
         "eixo": "Universo SP"
     },
@@ -623,8 +628,7 @@
         "projecao": "A qualificação de praças, ruas e calçadas favorece o convívio entre as pessoas e a formação de vínculos comunitários, além de valorizar comércios e serviços locais.",
         "indicador": "Número de ações de requalificação urbana realizadas.",
         "orgao_responsavel": [
-            "SMUL",
-            "SPUrbanismo"
+            "SMUL"
         ],
         "eixo": "Universo SP"
     },
@@ -640,7 +644,7 @@
             "SPUrbanismo",
             "SPObras",
             "SGM",
-            "SMSUB"
+            "SEDP"
         ],
         "eixo": "Universo SP"
     },
@@ -704,8 +708,8 @@
     },
     {
         "numero": 59,
-        "destaque": "Ampliar o Programa de Proteção Escolar com a presença de guardas em 200 escolas",
-        "descricao": "Ampliar o Programa de Proteção Escolar com a presença de guardas em 200 escolas, para prevenir ocorrências de violência no entorno das unidades e fortalecer vínculos comunitários.",
+        "destaque": "Ampliar o Programa de Proteção Escolar, com a criação da Diária Especial de Segurança Escolar (DESE) e a presença de guardas em 200 escolas",
+        "descricao": "Ampliar o Programa de Proteção Escolar, com a criação da Diária Especial de Segurança Escolar (DESE) e a presença de guardas em 200 escolas, para prevenir ocorrências e fortalecer vínculos comunitários.",
         "projecao": "A ampliação, aliada à atualização dos protocolos de atendimento e à integração de videomonitoramento em todas as escolas municipais, resultará em uma cobertura de segurança muito mais eficaz e integrada.",
         "indicador": "Número de escolas com guardas.",
         "orgao_responsavel": [
@@ -721,7 +725,8 @@
         "projecao": "O acompanhamento das condições dos parques poderá ser feito em tempo real, com respostas mais ágeis a ocorrências e acionamento imediato das equipes de segurança e da Guarda Civil Metropolitana quando necessário.",
         "indicador": "Centro de Monitoramento integrado ao Smart Sampa.",
         "orgao_responsavel": [
-            "SVMA"
+            "SVMA",
+            "SMSU"
         ],
         "eixo": "Viver São Paulo"
     },
@@ -748,7 +753,8 @@
             "SMDHC",
             "SMDET",
             "SMADS",
-            "SGM"
+            "SGM",
+            "SEPE"
         ],
         "eixo": "Viver São Paulo"
     },
@@ -945,7 +951,7 @@
         "numero": 80,
         "destaque": "Alcançar 70% de alfabetização ao final do segundo ano do Ensino Fundamental",
         "descricao": "Alcançar 70% de alfabetização ao final do segundo ano do ensino fundamental, cumprindo a meta do MEC/iNEP e assegurando que as crianças adquiram desde cedo competências essenciais para seu desenvolvimento posterior.",
-        "projecao": "A meta reitera o compromisso com o aperfeiçoamento das políticas educacionais da cidade de modo a garantir a alfabetização na idade certa, alicerce de toda a formação escolar.",
+        "projecao": "A meta reitera o compromisso de alfabetizar todas as crianças até o 2º ano, por meio do aperfeiçoamento das políticas educacionais do município ou de sua reformulação, caso necessário.",
         "indicador": "Percentual de crianças no 2º ano consideradas alfabetizadas pelo Indicador Criança Alfabetizada (INEP).",
         "orgao_responsavel": [
             "SME"
@@ -989,7 +995,7 @@
         "numero": 84,
         "destaque": "Criar a Escola Municipal de Formação de Profissionais da Educação do Futuro",
         "descricao": "Criar a Escola Municipal de Formação de Profissionais da Educação do Futuro, para favorecer a qualificação permanente e valorizar os profissionais. ",
-        "projecao": "A iniciativa inovadora vai preparar os servidores da rede de ensino para os desafios contemporâneos e as perspectivas futuras da educação pública. Representa um avanço para a consolidação em São Paulo de uma gestão educacional estratégica e moderna.",
+        "projecao": "A criação da Escola Municipal de Formação de Profissionais da Educação do Futuro representa um avanço significativo na valorização dos educadores e no fortalecimento da rede pública municipal de ensino. Essa iniciativa tem como propósito fomentar o desenvolvimento contínuo dos profissionais da educação, por meio de espaços formativos que promovam o diálogo crítico com os desafios contemporâneos e as transformações sociais, culturais e tecnológicas que trespassam o cotidiano escolar.",
         "indicador": "Escola criada.",
         "orgao_responsavel": [
             "SME"
@@ -1036,7 +1042,9 @@
         "projecao": "A política reconhece a necessidade de auxílio financeiro à pessoa em situação de rua para que ela inicie um processo de reinserção social e busca da autonomia.",
         "indicador": "Número de benefícios concedidos.",
         "orgao_responsavel": [
-            "SMADS"
+            "SMADS",
+            "SGM",
+            "SEPE"
         ],
         "eixo": "Viver São Paulo"
     },
@@ -1135,7 +1143,8 @@
         "projecao": "O fundo de aval facilitará aos empreendedores o acesso a financiamentos essenciais para a manutenção e o investimento na expansão de seus negócios, que geram oportunidades locais e contribuem para o desenvolvimento econômico das regiões em que se encontram.",
         "indicador": "Fundo de aval criado.",
         "orgao_responsavel": [
-            "SMDET"
+            "SMDET",
+            "ADESAMPA"
         ],
         "eixo": "Cidade Empreendedora"
     },
@@ -1146,7 +1155,8 @@
         "projecao": "Cada startup acelerada receberá aporte financeiro e acompanhamento técnico por 6 meses. O resultado esperado é o desenvolvimento local, com geração de empregos e renda.",
         "indicador": "Número de empresas contempladas.",
         "orgao_responsavel": [
-            "SMDET"
+            "SMDET",
+            "ADESAMPA"
         ],
         "eixo": "Cidade Empreendedora"
     },
@@ -1157,7 +1167,8 @@
         "projecao": "O novo espaço contará com Arena Gamer, espaços de coworking e sala de podcast, enquanto as empresas aceleradas receberão aportes financeiros e acompanhamento especializado.",
         "indicador": "Polo Sampa Games entregue.",
         "orgao_responsavel": [
-            "SMDET"
+            "SMDET",
+            "ADESAMPA"
         ],
         "eixo": "Cidade Empreendedora"
     },
@@ -1249,7 +1260,8 @@
         "projecao": "A iniciativa vai fortalecer o apoio à atividade empreendedora em territórios com maior vulnerabilidade social, promovendo a autonomia econômica. O programa reúne ações voltadas à qualificação profissional, ao uso compartilhado de infraestrutura e ao estímulo à criação de negócios próprios, com atenção especial ao empreendedorismo feminino.",
         "indicador": "Percentual de ações estratégicas implementadas.",
         "orgao_responsavel": [
-            "SMDET"
+            "SMDET",
+            "ADESAMPA"
         ],
         "eixo": "Cidade Empreendedora"
     },
@@ -1260,7 +1272,8 @@
         "projecao": "A iniciativa ficará a cargo do Programa de Apoio ao Empreendedor (PAE), da Adesampa. Estima-se que São Paulo tenha hoje 417 mil idosos economicamente ativos, número que deve ultrapassar 450 mil até 2028. Entre eles, mais de 97 mil já são formalizados como MEIs.",
         "indicador": "Número de atendimentos realizados.",
         "orgao_responsavel": [
-            "SMDET"
+            "SMDET",
+            "ADESAMPA"
         ],
         "eixo": "Cidade Empreendedora"
     },
@@ -1271,7 +1284,8 @@
         "projecao": "Serão realizados atendimentos técnicos, capacitações e investimentos estratégicos na produção local sustentável, com práticas inovadoras. A medida vai beneficiar o setor agrícola urbano e periurbano, promover a segurança alimentar e fortalecer a proteção ambiental.",
         "indicador": "Número de locais beneficiados com ao menos uma das ações do Programa Sampa+Rural",
         "orgao_responsavel": [
-            "SMDET"
+            "SMDET",
+            "ADESAMPA"
         ],
         "eixo": "Cidade Empreendedora"
     },
@@ -1339,10 +1353,11 @@
         "numero": 115,
         "destaque": "Viabilizar 10 novos projetos com o Plano Municipal de Desestatização",
         "descricao": "Viabilizar 10 novos projetos com o Plano Municipal de Desestatização, que atrai investimento privado para qualificar serviços públicos sem comprometer as finanças da cidade. ",
-        "projecao": "Dos 24 projetos mapeados, 14 são prioritários e têm grande potencial de gerar parcerias com a iniciativa privada. A concessão desses serviços irá garantir que sejam melhorados sem custo para a Prefeitura, que poderá destinar seus recursos a novos investimentos fundamentais para o desenvolvimento da cidade e a melhoria da qualidade de vida da população.",
+        "projecao": "A Prefeitura de São Paulo já mapeou e priorizou projetos que têm grande potencial de gerar parcerias com a iniciativa privada. A concessão desses serviços irá garantir que sejam melhorados sem custo para a Prefeitura, que poderá destinar seus recursos a novos investimentos fundamentais para o desenvolvimento da cidade e a melhoria da qualidade de vida da população.",
         "indicador": "Número de editais de licitação publicados no âmbito do Plano Municipal de Desestatização.",
         "orgao_responsavel": [
-            "SGM"
+            "SGM",
+            "SEDP"
         ],
         "eixo": "Capital Do Futuro"
     },
@@ -1353,6 +1368,7 @@
         "projecao": "A iniciativa fortalece a governança regional ao alinhar a atuação em conjunto das diversas secretarias na solução dos problemas locais. Também aproxima a gestão do cidadão, na medida em que é um espaço de diálogo contínuo com as lideranças dos bairros.",
         "indicador": "Número de comitês instituídos.",
         "orgao_responsavel": [
+            "SMSUB",
             "SMSUB"
         ],
         "eixo": "Capital Do Futuro"
@@ -1386,7 +1402,9 @@
         "projecao": "A unidade desenvolverá soluções inovadoras em IA para desafios específicos da gestão pública e dará suporte ao ecossistema de empreendedorismo digital na cidade.",
         "indicador": "Unidade Avançada de IA em operação.",
         "orgao_responsavel": [
-            "SMIT"
+            "SMIT",
+            "SMDET",
+            "ADESAMPA"
         ],
         "eixo": "Capital Do Futuro"
     },
@@ -1397,7 +1415,9 @@
         "projecao": "O Centro promoverá um ecossistema de inovação aberto, inclusivo e distribuído territorialmente, focado tanto no ambiente de negócios da cidade quanto na capacitação de pessoas em situação de desemprego, subemprego e vulnerabilidade.",
         "indicador": "Centro de Inovação em operação.",
         "orgao_responsavel": [
-            "SMIT"
+            "SMIT",
+            "SMDET",
+            "ADESAMPA"
         ],
         "eixo": "Capital Do Futuro"
     },
