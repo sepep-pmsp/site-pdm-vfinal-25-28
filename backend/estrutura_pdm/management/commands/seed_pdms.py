@@ -70,7 +70,8 @@ class Command(BaseCommand):
             if tipo_doc is None:
                 self.stdout.write(self.style.WARNING(f'Tipo de documento {doc["tipo"]} não encontrado. Criando novo tipo.'))
                 TipoDocumentoPDM.objects.create(nome=doc['tipo'], descricao=doc.get('descricao'))
-                continue
+                tipo_doc: TipoDocumentoPDM | None = get_tipo_doc_pdm_by_nome(doc['tipo'], raise_error=True)
+
 
             doc_data = {
                 'nome': doc['nome'],
