@@ -25,7 +25,7 @@ export default function ModalResultados({
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <div className="fixed inset-0 bg-black/50 bg-opacity-50 flex justify-center items-center z-50">
-        <div className="max-md:bg-white max-md:rounded-none max-md:min-w-screen max-md:min-h-screen lg:bg-white rounded-2xl lg:w-[75%] lg:h-[80vh] overflow-y-auto scrollbar-thin no-scrollbar-arrows">
+        <div className="max-md:bg-white max-md:rounded-none max-md:w-screen max-md:h-screen lg:bg-white rounded-2xl lg:w-[75%] lg:h-[80vh] overflow-y-auto scrollbar-thin no-scrollbar-arrows">
           <div className="mx-5 py-16 pb-5">
             <button
               onClick={onClose}
