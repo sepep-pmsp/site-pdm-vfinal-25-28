@@ -48,7 +48,6 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
 
 
   }, [eixoSelecionadoDoMenu, eixoRefs, eixosTematicos]);
-
   const handleClick = (nomeChave) => {
     const eixo = eixosTematicos.find((e) =>
       e.nome.toLowerCase().includes(nomeChave)
@@ -56,11 +55,8 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
     if (!eixo) return;
     setSelectedEixo({ ...eixo, origin: { x: 0, y: 0, width: 0, height: 0 } });
   };
-
   const titulo = (key) =>
-    eixosTematicos.find((e) => e.nome.toLowerCase().includes(key))?.titulo ??
-    "";
-
+    eixosTematicos.find((e) => e.nome.toLowerCase().includes(key))?.titulo ??"";
   const tituloQuebrado = (key) => {
     const t = titulo(key);
     if (!t) return "";
