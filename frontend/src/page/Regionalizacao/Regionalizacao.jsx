@@ -20,11 +20,11 @@ export default function Regionalizacao() {
         <div className="max-md:w-full lg:h-1 w-[95rem] bg-[color:var(--color-navy)]"></div>
         <div className="flex flex-row flex-nowrap items-center gap-8 w-[100rem] conteudo-regionalizacao-mobile">
           <div className="w-[30rem] flex flex-col items-start justify-center flex-nowrap gap-8 bg-[#EEF3F6] my-8 px-8 py-4 div-mobile-regionalizacao">
-            <div className="max-md:w-80 lg:flex flex-col pt-10 gap-8">
+            <div className="max-md:w-75 lg:flex flex-col pt-10 gap-8">
               <div className="lg:flex flex-row gap-4">
-                <p className="max-md:text-2xl max-md:w-80 lg:text-5xl w-[23rem] pt-4 font-bold title-regionalizacao-mobile">{regionalizacao.subtitulo}</p>
+                <p className="max-md:text-2xl max-md:w-70 lg:text-5xl w-[23rem] pt-4 font-bold title-regionalizacao-mobile">{regionalizacao.subtitulo}</p>
               </div>
-              <div className="flex flex-row gap-24">
+              <div className="max-md:w-70 lg:flex flex-row gap-24">
                 <p>{regionalizacao.paragrafo}</p>
               </div>
             </div>

@@ -16,8 +16,5 @@ export async function postFiltroParticipacaoData(filtros) {
       throw new Error("Erro ao aplicar os filtros de participação.");
     }
     return await response.json();
-  } else {
-    const data = await import("@/mock/json/participacaoSocial.json");
-    return data.default;
   }
 }

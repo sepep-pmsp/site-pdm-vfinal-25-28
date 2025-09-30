@@ -30,6 +30,7 @@ export default function FiltroMeta({ onCardsUpdate, eixoIdFromNav }) {
           planosSetoriais={data.planos_setoriais}
           eixos={data.eixos}
           ods={data.ods}
+          eixoIdFromNav={eixoIdFromNav}
           // === estado/ações compartilhados ===
           filtrosSelecionados={filtrosSelecionados}
           toggleSelecionado={toggleSelecionado}

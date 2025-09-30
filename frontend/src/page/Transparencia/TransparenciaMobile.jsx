@@ -6,17 +6,17 @@ export default function TransparenciaMobile({ transparencia }) {
     <div>
       <div className="pt-20 px-4 mx-34 transparencia-monitoramento-container-mobile bg-white pb-12">
         <div className="flex items-start justify-center flex-col flex-nowrap w-[90%]">
-          <h1 className="text-[5rem] text-[var(--color-navy)] title-mobile">
+          <h1 className="text-[5rem] text-[var(--color-navy)] title-mobile relative left-10">
             {transparencia.titulo}
           </h1>
           <div className="max-md:w-auto h-1 bg-[color:var(--color-navy)]"></div>
         </div>
-        <div className="flex flex-col pt-10 gap-8">
+        <div className="flex flex-col items-center pt-10 gap-8">
           {transparencia.recursos.map((item, index) => (
             <div key={index} className="flex flex-col gap-4">
-              <h3 className="text-2xl">{item.subtitulo}</h3>
+              <h3 className="text-2xl w-75">{item.subtitulo}</h3>
               <p
-                className="text-sm text-[17px]"
+                className="text-sm w-75"
                 dangerouslySetInnerHTML={{ __html: item.paragrafo }}
               />
               {item.link && item.link.trim() !== "" && (

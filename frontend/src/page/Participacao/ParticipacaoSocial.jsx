@@ -71,7 +71,7 @@ export default function ParticipacaoSocial() {
   return (
     <div>
       <div className="flex items-start justify-center flex-col w-[80%] pt-24 mx-38 container-participacao-mobile">
-        <h1 className="max-md:text-5xl max-md:px-6 lg:text-7xl text-[var(--color-navy)]">Participação Social</h1>
+        <h1 className="max-md:text-5xl max-md:relative max-md:left-6 lg:text-7xl text-[var(--color-navy)]">Participação Social</h1>
         <div className="max-md:w-full lg:h-1 w-[88rem] bg-[color:var(--color-navy)]"></div>
       </div>
       <Devolutivas

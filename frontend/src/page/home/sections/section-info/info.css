@@ -4,7 +4,7 @@
     z-index: -1;
 }
 
-.text-mobile-info-1{
+.text-mobile-info-1 {
     position: relative;
     top: 4rem;
 }
@@ -186,6 +186,20 @@
     .info-section-mobile {
         height: 100%;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .div-mobile-info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        width: 100%;
     }
 
     .agrupar1,
@@ -218,7 +232,7 @@
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        align-items: flex-start;
+        align-items: flex-center;
         justify-content: center;
         width: 100%;
         position: relative;

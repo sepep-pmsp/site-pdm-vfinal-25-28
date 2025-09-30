@@ -113,11 +113,6 @@
         padding: 1rem 0;
     }
 
-    .eixos-mobile-header-text {
-        color: black;
-        font-size: 61px;
-    }
-
     .section-eixos-texts-mobile {
         display: flex;
         align-items: flex-start;
@@ -274,28 +269,25 @@
         transform-style: preserve-3d;
     }
     .eixos-mobile-header {
-        background-color: white;
+        background-color: transparent;
         transform: rotate(90deg);
         position: relative;
         top: -11rem;
-        left: 0;
+        left: -1rem;
         box-shadow: none;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-wrap: nowrap;
         flex-direction: column;
-        padding: 1rem 0;
+        padding: 2rem 0;
         width: 19rem;
+        height: auto;
     }
     .conatiner-textos-eixos-mobile {
         margin: 0;
         position: relative;
         bottom: 3rem;
-    }
-    .eixos-mobile-header-text {
-        color: black;
-        font-size: 60px;
     }
     .grid-mobile-eixos {
         display: flex;
@@ -346,9 +338,6 @@
         margin: 1rem;
         padding: 1rem 5rem;
         gap: 3rem;
-    }
-    .eixos-mobile-header-text {
-        color: black;
     }
     .section-eixos-texts-mobile {
         display: flex;

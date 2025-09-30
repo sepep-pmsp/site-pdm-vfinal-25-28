@@ -37,16 +37,11 @@ export default function CardMetas({ meta, onClose }) {
     const b = parseInt(hex.slice(5, 7), 16);
     return `rgba(${r}, ${g}, ${b}, ${alpha})`;
   }
-
   const tituloHtml = meta.listing.titulo;
-
-  // extrai o conteúdo do <strong>
   const regex = /<strong>(.*?)<\/strong>(.*)/;
   const match = tituloHtml.match(regex);
-
   const strongText = match ? match[1] : tituloHtml;
   const normalText = match ? match[2] : "";
-
   if (!visible || !meta) return null;
   const scrollClass = needsScroll ? "overflow-y-auto" : "";
 
@@ -81,16 +76,16 @@ export default function CardMetas({ meta, onClose }) {
           className="w-full h-auto"
         >
           <button
-            className="relative top-0 left-[110rem] text-4xl font-bold cursor-pointer btn-card-opem-mobile"
+            className="relative top-0 left-[110rem] text-4xl font-bold cursor-pointer"
             onClick={handleClose}
           >
             <i className="fa-solid fa-xmark text-white"></i>
           </button>
         </div>
 
-        <div className="max-md:max-h-full lg:flex flex-col items-center gap-12 py-8 px-20 min-h-full ">
-          <div className="flex justify-center items-start flex-col py-10 px-20 div-txt-card-mobile">
-            <div className="w-[59rem] div-txt-mobile">
+        <div className="flex flex-col items-center gap-12 py-8 px-20 ">
+          <div className="flex justify-center items-start flex-col py-10 px-20">
+            <div className="w-[59rem]">
               <span
                 className="text-5xl BebasNeue"
                 style={{ color: meta.listing.eixo_cor_principal }}
@@ -107,10 +102,10 @@ export default function CardMetas({ meta, onClose }) {
           </div>
 
           <div>
-            <div className="px-20 flex flex-col gap-10 my-20 div-cont-card-mobile">
+            <div className="px-20 flex flex-col gap-10 my-20">
               <div className="div-conteudo-mobile">
                 {meta.card.projecao && (
-                  <div className="flex flex-row justify-start items-start flex-nowrap gap-12 container-content-mobile-card">
+                  <div className="flex flex-row justify-start items-start flex-nowrap gap-12">
                     <h3
                       style={{ color: meta.card.eixo_cor_principal }}
                       className="text-4xl text-end w-40"
@@ -127,7 +122,7 @@ export default function CardMetas({ meta, onClose }) {
                 {meta.card.acoes_estrategicas &&
                   meta.card.acoes_estrategicas.valor &&
                   meta.card.acoes_estrategicas.valor.length > 0 && (
-                    <div className="flex flex-row justify-start items-start flex-nowrap gap-16 container-content-mobile-card">
+                    <div className="flex flex-row justify-start items-start flex-nowrap gap-16">
                       <h3
                         style={{ color: meta.card.eixo_cor_principal }}
                         className="text-4xl text-end w-40"
@@ -146,7 +141,7 @@ export default function CardMetas({ meta, onClose }) {
               </div>
               <div className="div-conteudo-mobile">
                 {meta.card.indicador && (
-                  <div className="flex items-end gap-12 flex-row justify-start flex-nowrap container-content-mobile-card">
+                  <div className="flex items-end gap-12 flex-row justify-start flex-nowrap">
                     <h3
                       style={{ color: meta.card.eixo_cor_principal }}
                       className="text-4xl font-semibold text-end w-40"
@@ -161,7 +156,7 @@ export default function CardMetas({ meta, onClose }) {
               </div>
               <div className="div-conteudo-mobile">
                 {meta.card.orgaos_responsaveis && (
-                  <div className="flex items-end gap-12 flex-row justify-start flex-nowrap container-content-mobile-card">
+                  <div className="flex items-end gap-12 flex-row justify-start flex-nowrap">
                     <h3
                       style={{ color: meta.card.eixo_cor_principal }}
                       className="text-4xl font-bebas-bold text-end w-40"
@@ -228,11 +223,11 @@ export default function CardMetas({ meta, onClose }) {
           </div>
         </div>
         <div
-          className="min-h-45 py-8"
+          className="min-h-80 py-8"
           style={{ backgroundColor: meta.card.eixo_cor_principal }}
         >
           {meta.card.eixo_frase && (
-            <div className="pt-2 flex flex-nowrap items-center justify-evenly footer-card-mobile">
+            <div className="pt-2 flex flex-nowrap items-center justify-evenly">
               <div
                 style={{ backgroundColor: meta.card.eixo_cor_secundaria }}
                 className="buttom_meta w-60 h-25 text-white"
@@ -240,10 +235,10 @@ export default function CardMetas({ meta, onClose }) {
                 <h4 className="text-3xl">{meta.card.eixo_nome}</h4>
               </div>
               <div>
-                <h3 className="text-4xl roboto-bold text-white texto-footer-card-mobile">
+                <h3 className="text-4xl roboto-bold text-white">
                   {meta.card.eixo_frase[0]}
                 </h3>
-                <p className="text-xl w-130 roboto-regular text-white texto-footer-card-mobile">
+                <p className="text-xl w-130 roboto-regular text-white">
                   {meta.card.eixo_frase[1]}
                 </p>
               </div>

@@ -7,8 +7,5 @@ export async function getTransparenciaData() {
       throw new Error("Erro ao carregar dados do Transparencia");
     }
     return await response.json();
-  } else {
-    const data = await import("@/mock/json/transparencia.json");
-    return data.default;
   }
 }
