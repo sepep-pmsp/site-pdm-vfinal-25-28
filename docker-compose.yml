@@ -7,6 +7,8 @@ services:
       - "8000:8000"
     networks:
       - traefik
+    environment:        # 👈 dentro do serviço!
+      - SECRET_KEY=MinhaFraseSecret@!1234
  
   frontend:
     build: ./frontend
@@ -15,8 +17,8 @@ services:
     networks:
       - traefik
     depends_on:
-          - backend
+      - backend
  
 networks:
   traefik:
-    driver: bridge  
+    driver: bridge      # 👈 indentado corretamente
