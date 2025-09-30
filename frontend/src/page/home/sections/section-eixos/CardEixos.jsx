@@ -16,9 +16,7 @@ export default function CardEixos({ eixo, onClose }) {
   const animationSet = animations[eixo.nome.toLowerCase()] || { in: "", out: "" };
 
   const navigate = useNavigate();
-  // ALTERAÇÃO: Modificamos a função goTo para aceitar o ID do eixo
   const goToMetas = (eixoId) => {
-    // Usamos o 'state' do navigate para passar o ID para a próxima página
     navigate("/metas", { state: { eixoIdFiltro: eixoId } });
   };
 
