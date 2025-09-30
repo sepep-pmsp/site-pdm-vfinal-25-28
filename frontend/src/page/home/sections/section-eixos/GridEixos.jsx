@@ -87,7 +87,7 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
         >
           <div className="logo-mask logo-universo" role="img" aria-label="Universo SP" />
           {!selectedEixo && (
-            <p className={`eixo-title absolute top-4 right-6 text-right uppercase text-white text-2xl md:text-3xl leading-tight ${tituloVisivel}`}>
+            <p className={`eixo-title absolute top-4 right-6 text-right uppercase text-white text-xl md:text-3xl leading-tight ${tituloVisivel}`}>
               {tituloQuebrado("universo")}
             </p>
           )}
@@ -100,7 +100,7 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
         >
           <div className="logo-mask logo-cidade" role="img" aria-label="Cidade Empreendedora" />
           {!selectedEixo && (
-            <p className={`eixo-title absolute top-4 right-6 text-right uppercase text-white text-2xl md:text-3xl leading-tight ${tituloVisivel}`}>
+            <p className={`eixo-title absolute top-4 right-6 text-right uppercase text-white text-xl md:text-3xl leading-tight ${tituloVisivel}`}>
               {tituloQuebrado("cidade")}
             </p>
           )}
@@ -113,7 +113,7 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
         >
           <div className="logo-mask logo-viver" role="img" aria-label="Viver São Paulo" />
           {!selectedEixo && (
-            <p className={`eixo-title absolute top-4 right-6 text-right uppercase text-white text-2xl md:text-3xl leading-tight ${tituloVisivel}`}>
+            <p className={`eixo-title absolute top-4 right-6 text-right uppercase text-white text-xl md:text-3xl leading-tight ${tituloVisivel}`}>
               {tituloQuebrado("viver")}
             </p>
           )}
@@ -126,7 +126,7 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
         >
           <div className="logo-mask logo-capital" role="img" aria-label="Capital do Futuro" />
           {!selectedEixo && (
-            <p className={`eixo-title absolute top-4 right-6 text-right uppercase text-white text-2xl md:text-3xl leading-tight ${tituloVisivel}`}>
+            <p className={`eixo-title absolute top-4 right-6 text-right uppercase text-white text-xl md:text-3xl leading-tight ${tituloVisivel}`}>
               {tituloQuebrado("capital")}
             </p>
           )}
