@@ -22,13 +22,27 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = "MinhaFraseSecreta!!!@"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["0.0.0.0", "localhost", '127.0.0.1']
+ALLOWED_HOSTS = ["0.0.0.0", "localhost", '127.0.0.1', 
+                 "projetos.codata.prefeitura.sp.gov.br", 
+                 "programademetas.prefeitura.sp.gov.br",
+                 "www.programademetas.prefeitura.sp.gov.br"]
 
+CSRF_TRUSTED_ORIGINS = [
+
+    'https://projetos.codata.prefeitura.sp.gov.br',
+    'http://projetos.codata.prefeitura.sp.gov.br',
+    'https://www.projetos.codata.prefeitura.sp.gov.br',
+    'http://programademetas.prefeitura.sp.gov.br',
+    'https://programademetas.prefeitura.sp.gov.br',
+    'http://www.programademetas.prefeitura.sp.gov.br',
+    'https://www.programademetas.prefeitura.sp.gov.br'
+
+]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
@@ -143,6 +157,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
+    "http://localhost:5173",
+    "http://10.80.14.21:8000",
+    "http://10.80.14.21:5173",
+    "https://projetos.codata.prefeitura.sp.gov.br",
+    "http://projetos.codata.prefeitura.sp.gov.br",
+    "https://programademetas.prefeitura.sp.gov.br",
+    "http://programademetas.prefeitura.sp.gov.br",
+    "https://www.programademetas.prefeitura.sp.gov.br",
+    "http://www.programademetas.prefeitura.sp.gov.br",
 ]
 
 
