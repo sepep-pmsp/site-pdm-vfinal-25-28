@@ -3,8 +3,8 @@ rm docker-compose.yml
 ln -s docker-compose-prod.yml docker-compose.yml
 
 #configs traefik
-ln -s traefik/traefik_prod.yml traefik.yml
-ln -s traefik/dynamic_prod.yml dynamic.yml
+cp traefik/traefik_prod.yml traefik/traefik.yml
+cp traefik/dynamic_prod.yml traefik/dynamic.yml
 
 #env do backend
 cp backend/.env.example backend/.env
