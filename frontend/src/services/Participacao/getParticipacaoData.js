@@ -7,8 +7,5 @@ export async function getParticipacaoData() {
       throw new Error("Erro ao carregar dados do Participação social ");
     }
     return await response.json();
-  } else {
-    const data = await import("@/mock/json/participacaoSocial.json");
-    return data.default;
   }
 }

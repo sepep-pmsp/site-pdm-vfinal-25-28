@@ -7,8 +7,5 @@ export async function getOrcamentoData() {
       throw new Error("Erro ao carregar dados do getOrcamentoData");
     }
     return await response.json();
-  } else {
-    const data = await import("@/mock/json/orcamento_eixo.json");
-    return data.default;
   }
 }

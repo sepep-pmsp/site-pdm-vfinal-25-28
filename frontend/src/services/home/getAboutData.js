@@ -7,8 +7,5 @@ export async function getAboutData() {
       throw new Error("Erro ao carregar dados do About");
     }
     return await response.json();
-  } else {
-    const data = await import("@/mock/json/about.json");
-    return data.default;
   }
 }

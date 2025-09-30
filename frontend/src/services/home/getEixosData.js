@@ -7,8 +7,5 @@ export async function getEixosData() {
       throw new Error("Erro ao carregar dados do Eixos");
     }
     return await response.json();
-  } else {
-    const data = await import("@/mock/json/eixos.json");
-    return data.default;
   }
 }

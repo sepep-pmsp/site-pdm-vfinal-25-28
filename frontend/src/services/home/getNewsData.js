@@ -7,8 +7,5 @@ export async function getNewsData() {
       throw new Error("Erro ao carregar dados do News");
     }
     return await response.json();
-  } else {
-    const data = await import("@/mock/json/news.json");
-    return data.default;
   }
 }

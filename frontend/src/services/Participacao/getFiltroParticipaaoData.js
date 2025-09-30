@@ -7,8 +7,5 @@ export async function getFiltroParticipacaoData() {
       throw new Error("Erro ao carregar dados do filtro de participação.");
     }
     return await response.json();
-  } else {
-    const data = await import("@/mock/json/participacaoSocial.json");
-    return data.default[0]?.filtro || {};
   }
 }
