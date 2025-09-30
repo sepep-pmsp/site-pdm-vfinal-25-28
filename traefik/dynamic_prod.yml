@@ -1,0 +1,42 @@
+http:
+  routers:
+    # Roteador para o serviço 'frontend'
+    frontend:
+      rule: "Host(`${HOST_NAME}`)"
+      entryPoints:
+        - websecure
+      service: frontend-service
+      tls:
+        certResolver: certificadofront
+      middlewares:
+        - frontend-ratelimit
+
+    # Roteador para o serviço 'backend'
+    backend:
+      rule: "Host(`${HOST_NAME}/backend`)"
+      entryPoints:
+        - websecure
+      service: backend-service
+      tls:
+        certResolver: certificadofront
+
+  services:
+    # Define o serviço de balanceamento para o front-end, apontando para o container 'frontend'
+    frontend-service:
+      loadBalancer:
+        servers:
+          - url: http://frontend:80
+
+    # Define o serviço de balanceamento para o back-end, apontando para o container 'backend'
+    backend-service:
+      loadBalancer:
+        servers:
+          - url: http://backend:8000
+
+  middlewares:
+    # Define o middleware de limite de taxa para o front-end
+    frontend-ratelimit:
+      rateLimit:
+        average: 1000
+        period: 10s
+        burst: 500
