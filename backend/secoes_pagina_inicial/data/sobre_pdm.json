@@ -18,68 +18,68 @@
         "texto" : "O PdM está institucionalizado em São Paulo e é elaborado de acordo com uma série de normas legais. Tem início com reuniões entre a secretarias, passa pela divulgação da versão inicial das metas, é levado a debate com a sociedade e chega à sua versão final, cuja execução é monitorada e eventualmente alterada nos prazos e formas definidos em lei.",
         "cards" : [
             {
-                "numero" : 2025,
-                "titulo" : "Abril/Maio",
+                "numero" : 1,
+                "titulo" : "Abril/Maio - 2025",
                 "conteudo" : "Audiências públicas integradas sobre Instrumentos e Planejamento (PdM 2025-2028, PPA 2026-2029, Plano de Ação das Subprefeituras e Orçamento Cidadão 2026). – Consulta Pública (Participe Mais).",
                 "detalhe" : ""
             },
             {
-                "numero" : 2025,
-                "titulo" : "Setembro",
+                "numero" : 2,
+                "titulo" : "Setembro - 2025",
                 "conteudo" : "Publicação da Versão Final do PdM 2025-2028",
                 "detalhe" : ""
             },
             {
-                "numero" : 2026,
-                "titulo" : "Março",
+                "numero" : 3,
+                "titulo" : "Março - 2026",
                 "conteudo" : "1° Relatório de Execução Anual do PdM 2025-2028 (Exercício 2025).",
                 "detalhe" : ""
             },
                 {
-                "numero" : 2026,
-                "titulo" : "Setembro",
+                "numero" : 4,
+                "titulo" : "Setembro - 2026",
                 "conteudo" : "Relatório semestral (1° sem./26) do PdM 2025-2028.",
                 "detalhe" : ""
             },
             {
-                "numero" : 2027,
-                "titulo" : "Março",
+                "numero" : 5,
+                "titulo" : "Março - 2027",
                 "conteudo" : "2° Relatório de Execução Anual do PdM 2025-2028 (resultados acumulados até o final do exercício 2026).",
                 "detalhe" : ""
             },
             {
-                "numero" : 2027,
-                "titulo" : "Junho",
+                "numero" : 6,
+                "titulo" : "Junho - 2027",
                 "conteudo" : "Alteração Programática, se necessário.",
                 "detalhe" : ""
             },
             {
-                "numero" : 2027,
-                "titulo" : "Setembro",
+                "numero" : 7,
+                "titulo" : "Setembro - 2027",
                 "conteudo" : "Relatório semestral (1° sem./27) do PdM 2025-2028.",
                 "detalhe" : ""
             },
             {
-                "numero" : 2028,
-                "titulo" : "Março",
+                "numero" : 8,
+                "titulo" : "Março - 2028",
                 "conteudo" : "3° Relatório de Execução Anual do PdM 2025-2028 (resultados acumulados até o final do exercício 2027).",
                 "detalhe" : ""
             },
             {
-                "numero" : 2028,
-                "titulo" : "Setembro",
+                "numero" : 9,
+                "titulo" : "Setembro - 2028",
                 "conteudo" : "Relatório semestral (1° sem./28) do PdM 2025-2028.",
                 "detalhe" : ""
             },
             {
-                "numero" : 2028,
-                "titulo" : "Dezembro",
+                "numero" : 10,
+                "titulo" : "Dezembro - 2028",
                 "conteudo" : "Relatório Final de Execução do PdM 2025-2028 (resultados acumulados até o final do exercício 2028).",
                 "detalhe" : ""
             },
             {
-                "numero" : 2029,
-                "titulo" : "Março",
+                "numero" : 11,
+                "titulo" : "Março - 2029",
                 "conteudo" : "Complementações ao Relatório Final de Execução do PdM 2025-2028.",
                 "detalhe" : ""
             }
