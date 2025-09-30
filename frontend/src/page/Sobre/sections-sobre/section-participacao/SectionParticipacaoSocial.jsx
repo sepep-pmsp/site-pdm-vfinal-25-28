@@ -16,7 +16,7 @@ export default function SectionParticipacaoSocial({ sobre }) {
             <h2 className="max-lg:text-5xl lg:text-8xl font-bold pt-10 mb-4 text-[var(--color-navy)]">
               participação social
             </h2>
-            <p className="text-xl w-80">{participacao.texto}</p>
+            <p className="max-md:w-80 lg:text-xl ">{participacao.texto}</p>
           </div>
           {isMobile ? (
             <div className="flex flex-col items-center justify-center gap-8 mt-8">

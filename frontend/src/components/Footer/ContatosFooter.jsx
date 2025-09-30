@@ -15,7 +15,7 @@ export default function ContatosFooter() {
         </div>
         <div className='flex items-center gap-4 w-80'>
             <img src={TelefoneIcon} alt="" />
-            <p>0800-123456</p>
+            <p>(11) 3113-8000</p>
         </div>
       </div>
     </div>
