@@ -5,12 +5,22 @@ import agrupar2 from "@/assets/svg/agrupar_2.svg";
 
 export default function More_Info() {
   const [info, setInfo] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    getInfoData().then(setInfo).catch(console.error);
+   useEffect(() => {
+    getInfoData()
+      .then((data) => {
+        setInfo(Array.isArray(data) ? data : []);
+      })
+      .catch((err) => {
+        console.error("Erro ao buscar info:", err);
+        setInfo([]);
+      })
+      .finally(() => setLoading(false));
   }, []);
 
-  if (!info.length) return <div>Carregando...</div>;
+  if (loading) return <div>Carregando...</div>;
+  if (!info.length) return <div>Nenhuma informação encontrada.</div>;
 
   return (
     <div className="py-20 h-[74rem] info-section-mobile">
@@ -35,9 +45,9 @@ export default function More_Info() {
                   <img
                     src={`/${item.image}`}
                     alt={item.title}
-                    className="h-[22rem] w-full object-cover transform transition-transform duration-300 group-hover:scale-[0.93]"
+                    className="h-[22rem] w-full object-cover transform transition-transform rounded-4xl duration-300 group-hover:scale-[0.93]"
                   />
-                  <div className="rounded-3xl absolute top-0 left-0 w-full h-full bg-[var(--color-Filter-blue-shadowns)] bg-opacity-40 mix-blend-multiply pointer-events-none transform transition-transform duration-300 group-hover:scale-[0.93]"></div>
+                  <div className="rounded-3xl absolute top-0 left-0 w-full h-full bg-[var(--color-Filter-blue-shadowns)] bg-opacity-40 mix-blend-multiply pointer-events-none transform transition-transform z-20 duration-300 group-hover:scale-[0.93]"></div>
                 </div>
               </div>
 

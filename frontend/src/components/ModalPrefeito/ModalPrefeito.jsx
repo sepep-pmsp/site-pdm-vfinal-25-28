@@ -41,10 +41,10 @@ export default function ModalPrefeito({ isOpen, onClose, carta }) {
       >
         {/* Botão X */}
         <button
-          className="absolute top-5 right-20 cursor-pointer"
+          className="max-md:absolute max-md:right-10 lg:absolute top-5 right-20 cursor-pointer"
           onClick={onClose}
         >
-          <i className="fa-solid fa-xmark text-white text-6xl"></i>
+          <i className="fa-solid fa-xmark text-white text-4xl lg:text-6xl"></i>
         </button>
 
         <div className="flex flex-col flex-nowrap items-start gap-8 p-10">
@@ -58,7 +58,7 @@ export default function ModalPrefeito({ isOpen, onClose, carta }) {
           </div>
           <div className="flex flex-row flex-nowrap items-center justify-start gap-8 box-carta-text-mobile">
             {carta?.paragrafos?.map((par, index) => (
-              <p className="text-white text-lg font-light" key={index}>{par}</p>
+              <p className="text-white text-lg font-light" key={index} dangerouslySetInnerHTML={{ __html: par}}/>
             ))}
           </div>
         </div>

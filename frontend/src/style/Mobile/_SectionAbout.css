@@ -201,14 +201,6 @@
         padding: 1rem .5rem;
     }
 
-    .subtext-about-mobile {
-        font-size: 35px;
-
-        & .text-about-mobile {
-            font-size: 23px;
-        }
-    }
-
     .btn-saibaMais-mobile {
         left: 13rem;
         bottom: 7rem;
@@ -226,7 +218,7 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        max-height: 191rem;
+        max-height: auto;
         overflow-y: auto;
     }
 

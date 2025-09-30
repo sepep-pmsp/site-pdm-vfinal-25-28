@@ -9,9 +9,6 @@ export default function FiltroEixos({
 }) {
   const [eixosAbertos, setEixosAbertos] = useState([]);
   const [initialFilterApplied, setInitialFilterApplied] = useState(false);
-  if (!eixos) {
-    return <p>Carregando eixos...</p>;
-  }
   const toggleDropdown = (id) => {
     setEixosAbertos((prev) =>
       prev.includes(id) ? prev.filter((e) => e !== id) : [...prev, id]
@@ -27,6 +24,9 @@ export default function FiltroEixos({
       setInitialFilterApplied(true);
     }
   }, [eixoIdFromNav, initialFilterApplied, filtrosSelecionados.eixos, toggleSelecionado]);
+  if (!eixos) {
+    return <p>Carregando eixos...</p>;
+  }
 
   return (
     <div className="h-full flex flex-col items-start w-[19rem] relative bottom-4">

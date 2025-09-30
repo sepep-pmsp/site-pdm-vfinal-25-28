@@ -60,15 +60,15 @@ export default function CardMetas({ meta, onClose }) {
         onClick={(e) => e.stopPropagation()}
         style={{
           scrollbarColor: `${meta.card.eixo_cor_principal} transparent`,
-          height: isMobile ? '105vh' : 'auto'
+          height: isMobile ? '100vh' : 'auto'
         }}
       >
         {/* Número gigante no fundo (visível apenas em desktop) */}
         <div
           className="md:block absolute font-bebas-bold select-none pointer-events-none"
           style={{
-            fontSize: "30rem",
-            bottom: "19.5rem",
+            fontSize: "22rem",
+            bottom: "25rem",
             left: 0,
             zIndex: -1,
             color: `${hexToRgba(meta.card.eixo_cor_principal, 0.15)}`,
@@ -101,7 +101,7 @@ export default function CardMetas({ meta, onClose }) {
               {strongText}
             </h1>
             <p
-              className="text-2xl md:text-5xl font-bebas-book uppercase font-light"
+              className="text-3xl md:text-5xl font-bebas-book uppercase font-light"
               style={{ color: meta.listing.eixo_cor_principal }}
             >
               {normalText}
@@ -119,7 +119,7 @@ export default function CardMetas({ meta, onClose }) {
                 >
                   {meta.card.projecao.titulo}
                 </h3>
-                <p className="text-lg md:text-xl roboto-regular w-full md:w-[50rem]">
+                <p className="text-sm md:text-xl roboto-regular w-full md:w-[50rem]">
                   {meta.card.projecao.valor}
                 </p>
               </div>
@@ -136,7 +136,7 @@ export default function CardMetas({ meta, onClose }) {
                 </h3>
                 <ul className="list-disc list-inside w-full md:w-[45rem] roboto-regular">
                   {meta.card.acoes_estrategicas.valor.map((acao, idx) => (
-                    <li className="text-lg md:text-xl pb-2" key={idx}>
+                    <li className="text-sm md:text-sm pb-2" key={idx}>
                       {acao}
                     </li>
                   ))}
@@ -153,7 +153,7 @@ export default function CardMetas({ meta, onClose }) {
                 >
                   {meta.card.indicador.titulo}
                 </h3>
-                <p className="text-lg md:text-xl roboto-regular">
+                <p className="text-sm md:text-xl roboto-regular">
                   {meta.card.indicador.valor}
                 </p>
               </div>

@@ -66,7 +66,6 @@ export default function CardEixos({ eixo, onClose }) {
         </div>
 
         <section className="order-3 md:order-none md:col-start-1 md:row-start-2">
-          {/* ALTERAÇÃO: O onClick agora chama a nova função com o ID do eixo */}
           <CustomButton
             onClick={() => goToMetas(eixo.id)}
             type="link"

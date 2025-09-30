@@ -5,6 +5,26 @@ export default function Audiencia({ audiencia }) {
   const [showOverlay, setShowOverlay] = useState(true);
   const playerRef = useRef(null);
 
+  const messageData = [
+    <>
+      AUDIÊNCIA TEMÁTICA
+      <br />
+      <b>EIXO UNIVERSO</b>
+    </>,
+    <>
+      AUDIÊNCIA TEMÁTICA
+      <br />
+      <b>EIXO VIVER SÃO PAULO</b>
+    </>,
+    <>
+      AUDIÊNCIA TEMÁTICA
+      <br />
+      <b>
+        EIXO CIDADE EMPREENDEDORA
+        <br /> E CAPITAL DO FUTURO
+      </b>
+    </>
+  ];
   useEffect(() => {
     if (!audiencia) return;
     if (
@@ -78,25 +98,32 @@ export default function Audiencia({ audiencia }) {
               allowFullScreen
             />
           </span>
-          <div className="flex flex-row items-center justify-center gap-20 div-videos-mobile">
-            {audiencia.lista?.map((link, i) => (
-              <span
-                key={i}
-                className="shadow-[0px_0px_12px_grey] p-8 rounded-3xl w-[30rem] span-video-mobile-1 h-80"
-              >
-                <iframe
+          <div className="md:flex flex-col items-center flex-nowrap gap-8">
+            <div className="flex flex-row items-center justify-center gap-20 div-videos-mobile">
+              {audiencia.lista?.map((link, i) => (
+                <span
                   key={i}
-                  className="w-full h-full rounded-lg"
-                  src={`${link}?enablejsapi=1`}
-                  frameBorder="0"
-                  allow="autoplay; encrypted-media"
-                  allowFullScreen
-                />
-              </span>
-            ))}
+                  className="shadow-[0px_0px_12px_grey] p-8 rounded-3xl w-[30rem] span-video-mobile-1 h-80"
+                >
+                  <iframe
+                    key={i}
+                    className="w-full h-full rounded-lg"
+                    src={`${link}?enablejsapi=1`}
+                    frameBorder="0"
+                    allow="autoplay; encrypted-media"
+                    allowFullScreen
+                  />
+                </span>
+              ))}
+            </div>
+            <span className="max-md:hidden md:flex flex-row justify-start w-full items-start gap-96 px-8">
+              {messageData.map((mensagem, index) => (
+                <p className="text-[var(--color-navy)]" key={index}>{mensagem}</p>
+              ))}
+            </span>
           </div>
         </div>
-        <div className="py-8 max-sm:relative top-40">
+        <div className="py-8 max-md:relative top-40">
           <div className="h-1 w-full bg-[var(--color-neutral-400)]"></div>
           <div className="gap-12 flex flex-row justify-around items-center py-8 mini-footer-audiencia-mobile">
             <div className="flex gap-12 items-center justify-center w-[45rem] mini-footer-texto-audiencia-mobile">
