@@ -9,77 +9,77 @@
         "whom" : "Ao mesmo tempo em que envolve no processo de definição de metas toda a sociedade, é para a Prefeitura uma ferramenta de monitoramento de ações e de análise de desempenho."
     },
     "objetivos" : {
-        "transparencia" : "A divulgação do progresso na execução das metas, com dados abertos para o cidadão, dos balanços semestrais, dos relatórios anuais e das atualizações programáticas permite à sociedade um monitoramento efetivo do trabalho da gestão.",
-        "visao_sistemica" : "O PdM permite um entendimento claro e abrangente do projeto do prefeito para a cidade, da cooperação necessária entre diferentes órgãos e das responsabilidades de cada um, evitando sobreposições de iniciativas.",
-        "otimizacao" : "O PdM é estruturado em harmonia com os instrumentos de planejamento orçamentário da gestão e é um dos balizadores da alocação das verbas municipais, contribuindo para o dimensionamento correto dos recursos necessários para o quadriênio e o uso mais eficiente dos meios financeiros",
-        "execucao" : "O PdM define prazos e estabelece cronogramas que permitem às secretarias alinhar seus fluxos de trabalho e atuar em sincronia, de modo a garantir que cada órgão realize as ações que lhe cabem em harmonia com os demais agentes responsáveis pela meta."
+        "transparencia" : "Divulgação de dados e balanços periódicos para a sociedade monitorar o trabalho da gestão.",
+        "visao_sistemica" : "Uma tradução do projeto do prefeito para a cidade, que fomenta a cooperação entre órgãos e evita sobreposições de iniciativas.",
+        "otimizacao" : "Articulação com o planejamento orçamentário para o direcionamento correto e eficiente dos recursos financeiros.",
+        "execucao" : "Alinhamento de cronogramas a fim de garantir que secretarias e demais agentes executem suas ações em harmonia."
     },
     "como_feito" : {
         "texto" : "O PdM está institucionalizado em São Paulo e é elaborado de acordo com uma série de normas legais. Tem início com reuniões entre a secretarias, passa pela divulgação da versão inicial das metas, é levado a debate com a sociedade e chega à sua versão final, cuja execução é monitorada e eventualmente alterada nos prazos e formas definidos em lei.",
         "cards" : [
             {
                 "numero" : 1,
-                "titulo" : "Abril/Maio - 2025",
+                "titulo" : "2025: Abril e Maio",
                 "conteudo" : "Audiências públicas integradas sobre Instrumentos e Planejamento (PdM 2025-2028, PPA 2026-2029, Plano de Ação das Subprefeituras e Orçamento Cidadão 2026). – Consulta Pública (Participe Mais).",
                 "detalhe" : ""
             },
             {
                 "numero" : 2,
-                "titulo" : "Setembro - 2025",
+                "titulo" : "2025: Setembro",
                 "conteudo" : "Publicação da Versão Final do PdM 2025-2028",
                 "detalhe" : ""
             },
             {
                 "numero" : 3,
-                "titulo" : "Março - 2026",
+                "titulo" : "2026: Março",
                 "conteudo" : "1° Relatório de Execução Anual do PdM 2025-2028 (Exercício 2025).",
                 "detalhe" : ""
             },
                 {
                 "numero" : 4,
-                "titulo" : "Setembro - 2026",
+                "titulo" : "2026: Setembro",
                 "conteudo" : "Relatório semestral (1° sem./26) do PdM 2025-2028.",
                 "detalhe" : ""
             },
             {
                 "numero" : 5,
-                "titulo" : "Março - 2027",
+                "titulo" : "2027: Março",
                 "conteudo" : "2° Relatório de Execução Anual do PdM 2025-2028 (resultados acumulados até o final do exercício 2026).",
                 "detalhe" : ""
             },
             {
                 "numero" : 6,
-                "titulo" : "Junho - 2027",
+                "titulo" : "2027: Junho",
                 "conteudo" : "Alteração Programática, se necessário.",
                 "detalhe" : ""
             },
             {
                 "numero" : 7,
-                "titulo" : "Setembro - 2027",
+                "titulo" : "2027: Setembro",
                 "conteudo" : "Relatório semestral (1° sem./27) do PdM 2025-2028.",
                 "detalhe" : ""
             },
             {
                 "numero" : 8,
-                "titulo" : "Março - 2028",
+                "titulo" : "2028: Março",
                 "conteudo" : "3° Relatório de Execução Anual do PdM 2025-2028 (resultados acumulados até o final do exercício 2027).",
                 "detalhe" : ""
             },
             {
                 "numero" : 9,
-                "titulo" : "Setembro - 2028",
+                "titulo" : "2028: Setembro",
                 "conteudo" : "Relatório semestral (1° sem./28) do PdM 2025-2028.",
                 "detalhe" : ""
             },
             {
                 "numero" : 10,
-                "titulo" : "Dezembro - 2028",
+                "titulo" : "2028: Dezembro",
                 "conteudo" : "Relatório Final de Execução do PdM 2025-2028 (resultados acumulados até o final do exercício 2028).",
                 "detalhe" : ""
             },
             {
                 "numero" : 11,
-                "titulo" : "Março - 2029",
+                "titulo" : "2029: Março",
                 "conteudo" : "Complementações ao Relatório Final de Execução do PdM 2025-2028.",
                 "detalhe" : ""
             }
@@ -93,9 +93,9 @@
     },
     "participacao" : {
         "texto" : "O diálogo com a sociedade é uma etapa essencial do PdM. O ciclo participativo envolve a realização de audiências públicas e o envio de sugestões e opiniões pelos cidadãos por meio da plataforma digital Participe+. Todas as contribuições são sistematizadas e avaliadas tecnicamente pelas equipes da Prefeitura.",
-        "conteudo_audiencias" : "O ciclo participativo referente ao PdM 2025-2028, realizado em conjunto com o Plano Plurianual 2026-2029, os Planos de Ação das Subprefeituras e o Orçamento Cidadão, foi aberto em 7 de abril de 2025. Durante o mês de abril, as quatro audiências gerais e temáticas, com a presença de se-cretários municipais, vereadores e sociedade civil, receberam contribuições dos cidadãos. O mesmo ocor-reu nas 32 subprefeituras até 7 de maio, quando foram ouvidas as aspirações e necessidades locais",
+        "conteudo_audiencias" : "O ciclo participativo do PdM 2025-2028 começou em 7 de abril de 2025, junto ao PPA 2026-2029, Planos de Ação das Subprefeituras e Orçamento Cidadão. Em abril, houve uma audiências geral e 3 temáticas, e até 7 de maio ocorreram encontros nas 32 subprefeituras para receber contribuições da população.",
         "link_video_audiencias" : "https://www.youtube.com/playlist?list=PLy7hhEiqAY2ulthRvHOu1L0KC-u8heawZ",
-        "conteudo_devolutivas" : " Nas audiências, 2.243 pessoas participaram presencialmente ou online. A interação pela plataforma Participe+ teve 31.245 interações, sendo 24.711 apoios às propostas do PdM. O resultado do processo de diálogo foi a incorporação de 3 novas metas ao Programa e de 100 propostas a iniciativas já contempladas em sua versão inicial."
+        "conteudo_devolutivas" : "2.243 pessoas participaram presencialmente ou online. 31.245 colaborações da sociedade foram registradas na plataforma Participe+. Conheça as contribuições e as respostas dos órgãos no nosso portal de devolutivas."
     }
 
 }
