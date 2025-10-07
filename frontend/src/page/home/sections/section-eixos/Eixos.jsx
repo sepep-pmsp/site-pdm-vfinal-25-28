@@ -6,24 +6,29 @@ export default function Eixos() {
   const location = useLocation();
   const eixoSelecionadoDoMenu = location.state?.eixo || null;
   return (
-    <div className="header-eixos-mobile xl:max-h-[55rem]">
-      <div className="bg-[color:var(--color-navy)] h-40 rotate-[270deg] relative flex items-end flex-col justify-end p-4 rounded-br-3xl rounded-bl-3xl w-[54rem] right-[22rem] top-[20rem] shadow-[-4px_2px_20px_0px_gray] eixos-mobile-header">
-        <h1 className="max-md:text-black  md:text-white text-7xl px-6">eixos estratégicos</h1>
-      </div>
-      <section className="conatiner-textos-eixos-mobile" style={{maxWidth: '1280px', margin: '0 auto'}}>
-        <div className="gap-24 flex items-center justify-center relative bottom-45 section-eixos-texts-mobile">
-          <h2 className="text-5xl text-[var(--color-navy)] eixos-texts-mobile">
-            a estrutura do programa de metas
-          </h2>
-          <p className="text-3xl text-[var(--color-navy)] eixos-text-p-mobile">
-            Os compromissos do PdM 2025-2028 estão agrupados em quatro eixos
-            estratégicos que facilitam a compreensão do impacto de cada política
-            pública na vida da cidade.
-          </p>
+    <div className="h-full max-lg:h-[145vh] max-xl:h-[145vh]" style={{ padding: "3rem 0" }}>
+      <div
+        className="flex items-start flex-col max-md:flex max-md:items-center max-md:justify-center max-md:text-center md:items-center"
+        style={{ maxWidth: "1458px", margin: "0 auto" }}
+      >
+        <div className="flex items-start flex-col justify-start text-5xl w-full xl:bg-[color:var(--color-navy)] md:items-center xl:h-40 xl:rotate-[270deg] xl:absolute xl:flex xl:items-end xl:flex-col xl:justify-end xl:p-4 xl:rounded-br-3xl xl:rounded-bl-3xl xl:w-[54rem] xl:-left-96 xl:top-[124rem] xl:shadow-[-4px_2px_20px_0px_gray] max-xl:items-center">
+          <h1 className="mt-4 relative xl:text-white xl:text-7xl xl:relative xl:right-15 xl:bottom-4">eixos estratégicos</h1>
         </div>
-      </section>
-      <section className="relative bottom-45 max-md:relative max-md:bottom-16">
-        <GridEixos eixoSelecionadoDoMenu={eixoSelecionadoDoMenu}/>
+        <section className="w-80 flex flex-col items-start justify-start gap-4 mt-4 mb-4 md:items-center xl:w-full">
+          <div className="w-80 text-[var(--color-navy)] mt-6 md:w-full xl:w-full xl:flex xl:flex-row xl:items-center xl:justify-center xl:gap-8">
+            <h2 className="w-80 text-2xl mb-4 xl:text-5xl">
+              a estrutura do programa de metas
+            </h2>
+            <p className="w-full text-start xl:w-4xl xl:text-3xl">
+              Os compromissos do PdM 2025-2028 estão agrupados em quatro eixos
+              estratégicos que facilitam a compreensão do impacto de cada
+              política pública na vida da cidade.
+            </p>
+          </div>
+        </section>
+      </div>
+      <section className="max-lg:h-[145vh] max-xl:h-[145vh] 2xl:h-[40rem] 2xl:relative 2xl:top-16" >
+        <GridEixos eixoSelecionadoDoMenu={eixoSelecionadoDoMenu} />
       </section>
     </div>
   );

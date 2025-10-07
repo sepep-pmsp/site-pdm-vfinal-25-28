@@ -20,57 +20,63 @@ export default function About() {
   if (!about) return <div>Carregando...</div>;
 
   return (
-    <div className=" mx-38 relative bottom-16 about-mobile">
-      <section>
-        <div>
-          <div className="my-8">
-            <h2 className="text-8xl text-[var(--color-navy)]">
-              {about.titulo}
-            </h2>
-            <div className="linha"></div>
-          </div>
+    <div className="px-4" style={{ maxWidth: "1458px", margin: "0 auto" }}>
+      <div className="flex flex-col items-start justify-start gap-6 my-2 w-full">
+        <div className="w-full flex flex-col items-start">
+          <h2 className="text-4xl text-[var(--color-navy)] lg:w-full lg:text-8xl lg:relative lg:left-8">
+            {about.titulo}
+          </h2>
+          <div className="h-1 w-full bg-[var(--color-navy)] my-2"></div>
+        </div>
+        <div className="flex flex-col items-start justify-start w-full md:flex md:flex-row md:items-center md:justify-center md:flex-nowrap">
+          <img
+            className="w-xs md:w-sm lg:w-lg xl:w-xl"
+            src={Matarazzo}
+            alt=""
+          />
+          <div
+            className="bg-[color:var(--color-navy)] text-white w-sm rounded-e-3xl max-sm:w-xs max-sm:relative max-sm:-top-16 lg:w-md xl:w-xl xl:h-126"
+          >
+            <h3 className="py-2 px-6 text-xl w-xs md:text-3xl xl:text-4xl lg:w-md xl:w-xlw-lg">
+              {about.subtitulo}
+            </h3>
+            <p className="py-2 roboto-regular text-sm w-xs px-6 lg:text-xl lg:w-md xl:w-xlw-lg xl:text-2xl">
+              {about.paragrafo}
+            </p>
+            <div className="flex flex-row items-start justify-start gap-4 w-full max-sm:justify-start max-sm:gap-8 max-sm:relative max-sm:top-10 md:justify-center md:relative md:top-10 xl:top-20">
+              <div className="w-28 h-20 md:w-38 lg:w-48">
+                <CustomButton
+                  type="link"
+                  className="all_buttons uppercase"
+                  onClick={() => goTo("/sobre")}
+                >
+                  <p className="btn-about">saiba +</p>
+                </CustomButton>
+              </div>
 
-          <div className="my-4 flex items-center flex-nowrap relative top-8 about-mobile-imgs">
-            <div className="flex justify-end items-center div-about-img-mobile">
-              <img className="w-[85%] img-matarazzo" src={Matarazzo} alt="" />
+              {/* Botão que abre modal */}
+              <div className="w-28 h-20 md:w-38 lg:w-48">
+                <CustomButton
+                  type="modal"
+                  onClick={() => setShowModal(true)}
+                  className="all_buttons uppercase"
+                >
+                  <p className="roboto-regular">
+                    palavra do prefeito <br />{" "}
+                    <strong className="roboto-black">leia aqui!</strong>
+                  </p>
+                </CustomButton>
+              </div>
             </div>
-            <div className="bg-[color:var(--color-navy)] h-[35rem] w-[45rem] py-4 px-10 rounded-tr-3xl rounded-br-3xl flex items-start flex-col justify-center gap-8 box-about-mobile">
-              <h3 className="max-md:text-3xl max-md:w-80 max-md:text-white md:text-white text-6xl subtext-about-mobile">{about.subtitulo}</h3>
-              <p className="max-md:text-lg max-md:w-80 max-md:text-white md:text-white text-3xl roboto-regular">{about.paragrafo}</p>
-            </div>
-          </div>
-
-          {/* Botão Saiba+ */}
-          <div className="w-48 relative h-20 left-[75rem] bottom-[2.5rem] btn-saibaMais-mobile">
-            <CustomButton
-              type="link"
-              className="all_buttons uppercase"
-              onClick={() => goTo("/sobre")}
-            >
-              <p className="btn-about">saiba +</p>
-            </CustomButton>
-          </div>
-
-          {/* Botão que abre modal */}
-          <div className="w-48 relative h-20 left-[57rem] bottom-[7.5rem] btn-prefeito-mobile">
-            <CustomButton
-              type="modal"
-              onClick={() => setShowModal(true)}
-              className="all_buttons uppercase"
-            >
-              <p className="roboto-regular">
-                palavra do prefeito <br /> <strong className="roboto-black">leia aqui!</strong>
-              </p>
-            </CustomButton>
           </div>
         </div>
-        <div className="linha"></div>
-      </section>
-      <ModalPrefeito
-        isOpen={showModal}
-        onClose={() => setShowModal(false)}
-        carta={about.carta_prefeito}
-      />
+        <ModalPrefeito
+          isOpen={showModal}
+          onClose={() => setShowModal(false)}
+          carta={about.carta_prefeito}
+        />
+        <div className="h-1 w-full bg-[var(--color-navy)] my-2 md:relative md:top-5"></div>
+      </div>
     </div>
   );
 }
