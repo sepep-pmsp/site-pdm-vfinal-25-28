@@ -8,7 +8,7 @@ export default function SectionIntroSobre({sobre, setSelectedButton, selectedBut
   const buttonsData = [
     { label: "o que é?", message: banner.o_que },
     { label: "por quê?", message: banner.por_que },
-    { label: "para quem ?", message: banner.para_quem },
+    { label: "para quem?", message: banner.para_quem },
   ];
 
   return (
