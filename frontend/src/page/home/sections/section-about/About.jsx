@@ -35,7 +35,7 @@ export default function About() {
             alt=""
           />
           <div
-            className="bg-[color:var(--color-navy)] text-white w-sm rounded-e-3xl max-sm:w-xs max-sm:relative max-sm:-top-16 lg:w-md xl:w-xl xl:h-126"
+            className="bg-[color:var(--color-navy)] text-white w-sm rounded-e-3xl max-sm:w-xs max-sm:relative max-sm:-top-16 lg:w-md xl:w-xl xl:h-126 2xl:flex 2xl:flex-col 2xl:items-center 2xl:justify-center"
           >
             <h3 className="py-2 px-6 text-xl w-xs md:text-3xl xl:text-4xl lg:w-md xl:w-xlw-lg">
               {about.subtitulo}
@@ -43,7 +43,7 @@ export default function About() {
             <p className="py-2 roboto-regular text-sm w-xs px-6 lg:text-xl lg:w-md xl:w-xlw-lg xl:text-2xl">
               {about.paragrafo}
             </p>
-            <div className="flex flex-row items-start justify-start gap-4 w-full max-sm:justify-start max-sm:gap-8 max-sm:relative max-sm:top-10 md:justify-center md:relative md:top-10 xl:top-20">
+            <div className="flex flex-row items-start justify-start gap-4 w-full max-sm:justify-start max-sm:gap-8 max-sm:relative max-sm:top-10 md:justify-center md:relative md:top-10 xl:top-15">
               <div className="w-28 h-20 md:w-38 lg:w-48">
                 <CustomButton
                   type="link"
