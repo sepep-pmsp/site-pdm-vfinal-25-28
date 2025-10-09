@@ -1,5 +1,5 @@
 import React from "react";
-import NoteBook from "@/assets/svg/Free_MacBook_Pro.svg";
+import NoteBook from "@/assets/svg/Free_MacBook_Pro.png";
 import { Link } from "react-router-dom";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
@@ -8,7 +8,7 @@ export default function SectionParticipacaoSocial({ sobre }) {
   const isMobile = useIsMobile(1441);
 
   return (
-    <div className="max-lg:h-full lg:mt-45 bg-[#F0EFEE] h-[120vh] py-10 px-24 z-[-3] tirar-padding">
+    <div className="max-lg:h-full lg:mt-45 bg-[#F0EFEE] h-auto py-10 px-24 z-[-3] tirar-padding">
       <div className="max-md:w-full h-1 max-md:left-0 max-2xl:left-2 max-2xl:hidden lg:h-1 w-[89rem] left-35 relative bg-[var(--color-navy)]"></div>
       <div>
         <div className="mb-10">
@@ -56,20 +56,20 @@ export default function SectionParticipacaoSocial({ sobre }) {
           ) : (
             <div className="flex flex-row flex-nowrap items-center justify-start">
               <img
-                className="relative right-24 z-10 pointer-events-none"
+                className="relative right-26 z-10 pointer-events-none w-6xl"
                 src={NoteBook}
                 alt=""
               />
               <div
                 className={
-                  "relative z-2 block p-8 flex-col justify-between shadow-[0px_0px_2px_gray] right-[45rem] top-8 pl-1 bg-white rounded-r-4xl min-w-[28rem] h-[30rem]"
+                  "relative z-2 block p-8 flex-col justify-between shadow-[0px_0px_2px_gray] right-[38rem] top-8 pl-1 bg-white rounded-r-4xl min-w-[28rem] h-[30rem]"
                 }
               >
-                <div className="flex flex-col flex-nowrap items-start justify-start pt-10 h-full gap-12 w-[25rem] relative left-20">
+                <div className="flex flex-col flex-nowrap items-start justify-start h-full gap-5 w-[25rem] relative left-15">
                   <h3 className="text-4xl font-bold mb-2 p-2 text-[var(--color-navy)] border-y">
                     AUDIÊNCIAS PÚBLICAS
                   </h3>
-                  <p className="text-xl mb-3 w-80 text-start">
+                  <p className="mb-3 w-80 text-start">
                     {participacao.conteudo_audiencias}
                   </p>
                   <a
@@ -84,24 +84,19 @@ export default function SectionParticipacaoSocial({ sobre }) {
               </div>
               <div
                 className={
-                  "relative z-2 block p-8 flex-col justify-between shadow-[0px_0px_2px_gray] right-[40rem] top-8 pl-12 bg-white rounded-4xl min-w-[30rem] h-[30rem]"
+                  "relative z-2 block p-8 flex-col justify-between shadow-[0px_0px_2px_gray] right-[33rem] top-8 bg-white rounded-4xl min-w-[25rem] h-[30rem]"
                 }
               >
-                <div className="flex flex-col flex-nowrap items-center justify-start pt-10 h-full gap-12 w-[25rem]">
+                <div className="flex flex-col flex-nowrap items-center justify-start h-full gap-5 w-[25rem] relative right-5">
                   <h3 className="text-4xl font-bold mb-2 p-2 text-[var(--color-navy)] border-y">
                     DEVOLUTIVAS
                   </h3>
-                  <p className="text-xl mb-3 w-80 text-center">
+                  <p className="text-lg mb-3 w-80 text-start">
                     {participacao.conteudo_devolutivas}
                   </p>
                   <Link
                     to="/participacao-social"
-                    className="w-50 h-full relative bottom-8 shadow-[0px_9px_20px_1px_#00000052] 
-             flex items-center justify-center flex-nowrap flex-col 
-             transition-all duration-[0.3s] ease-[ease-in-out] 
-             text-[var(--color-white)] cursor-pointer 
-             bg-[var(--color-cyan-medium)] p-2 py-6 rounded-2xl 
-             hover:-translate-y-2.5"
+                    className="w-50 h-full relative shadow-[0px_9px_20px_1px_#00000052] flex items-center justify-center flex-nowrap flex-col transition-all duration-[0.3s] ease-[ease-in-out] text-white rounded-3xl cursor-pointer bg-[var(--color-cyan-medium)] hover:-translate-y-2.5"
                   >
                     <p className="text-3xl">SAIBA +</p>
                   </Link>

@@ -13,13 +13,13 @@ export default function SectionIntroSobre({sobre, setSelectedButton, selectedBut
 
   return (
     <div>
-      <section className="relative w-full flex max-md:min-h-[155vh] max-lg:h-[140vh] xl:h-[87vh] lg:h-[140vh] overflow-hidden">
+      <section className="relative w-full flex min-h-full max-lg:h-[140vh] xl:h-[87vh] lg:h-[140vh] overflow-hidden">
         <div>
           <img
-            className="max-md:top-0 max-md:hidden lg:absolute top-[-10rem]"
+            className="max-md:hidden lg:absolute top-[-10rem] object-cover object-top"
             src={bgImage}
           />
-          <div className="absolute top-0 left-0 w-full h-full bg-[#120e49d9] z-0 pointer-events-none"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-[#120e49d0] z-0 pointer-events-none"></div>
         </div>
         <div className="absolute inset-0 z-10 top-20 flex flex-row justify-center items-start gap-[30rem] max-md:flex-col max-md:items-start  max-lg:flex-row max-lg:items-center max-xl:items-center max-xl:justify-start max-xl:gap-2 max-xl:top-2 max-md:left-16">
           <div className="flex flex-col flex-nowrap items-start justify-center gap-20">

@@ -22,7 +22,7 @@ export default function SectionPlanejamento({ sobre }) {
       </div>
       <div className="flex flex-col items-center justify-center flex-nowrap w-full gap-8 py-8">
         <div className="max-md:w-80 max-xl:w-180 max-2xl:max-w-7xl lg:w-[100rem] flex justify-center items-start">
-          <p className="max-md:max-w-80 max-md:text-lg max-lg:w-full max-xl:w-180 max-2xl:w-[60rem] lg:max-w-7xl px-60 text-4xl text-[var(--color-navy)] tirar-padding">{como_feito.texto}</p>
+          <p className="max-md:max-w-80 max-md:text-lg max-lg:w-full max-xl:w-180 max-2xl:w-[60rem] lg:w-auto px-60 text-2xl text-[var(--color-navy)] tirar-padding roboto-regular">{como_feito.texto}</p>
         </div>
         <section className="max-lg:w-[45rem] max-lg:h-80 max-md:w-80 max-md:h-80 max-md:left-0 lg:relative min-w-min h-[40rem] overflow-hidden">
           <div className="max-lg:hidden min-w-min">

@@ -95,7 +95,7 @@ export default function CarouselPlanejamento({ como_feito }) {
                 </div>
               ) : (
                 <>
-                  <div className="flex flex-col flex-nowrap items-start justify-center gap-20 px-16">
+                  <div className="flex flex-col flex-nowrap items-start justify-center gap-10 px-16">
                     <div className="flex flex-col flex-nowrap items-start justify-center gap-8">
                       <span className="text-9xl font-bold text-start">
                         {slide.numero}
