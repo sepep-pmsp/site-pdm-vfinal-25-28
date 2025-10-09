@@ -76,7 +76,7 @@ export default function GridEixos({ eixoSelecionadoDoMenu }) {
     <div
       ref={sectionRef}
       id="eixos"
-      className="flex items-center justify-center px-6 min-h-[55rem]"
+      className="flex items-start justify-center px-6 min-h-[55rem] max-xl:items-center"
     >
       <div className={`grid-cols-1 md:grid-cols-2 items-stretch content-center justify-center gap-8 w-full max-w-[85rem] grid-mobile-eixos ${selectedEixo ? 'hidden' : 'grid'}`}>
         {/* UNIVERSO */}

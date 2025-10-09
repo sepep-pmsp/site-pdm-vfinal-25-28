@@ -6,10 +6,10 @@ import { useNavigate } from "react-router-dom";
 
 export default function CardEixos({ eixo, onClose }) {
   const animations = {
-    "viver são paulo": { in: "tilt-in-bl", out: "tilt-out-tr" },
-    "universo sp": { in: "tilt-in-tl", out: "tilt-out-bl" },
-    "cidade empreendedora": { in: "tilt-in-tr", out: "tilt-out-tl" },
-    "capital do futuro": { in: "tilt-in-br", out: "tilt-out-br" },
+    "viver são paulo": { in: "scale-in-bl", out: "scale-out-bl"},
+    "universo sp": { in: "scale-in-tl", out: "scale-out-tl"},
+    "cidade empreendedora": { in: "scale-in-tr", out: "scale-out-tr"},
+    "capital do futuro": { in: "scale-in-br", out: "scale-out-br"},
   };
 
   const [isExiting, setIsExiting] = useState(false);
@@ -38,7 +38,6 @@ export default function CardEixos({ eixo, onClose }) {
       >
         <i className="fa-solid fa-xmark text-6xl"></i>
       </button>
-
       <div className="grid gap-4 items-start p-4 conteudo-eixos grid-cols-1 md:grid-cols-2">
         <div className="p-4 w-full md:w-[25rem] flex flex-col gap-4 container-eixos-mobile order-1 md:order-none">
           <section>
@@ -54,9 +53,8 @@ export default function CardEixos({ eixo, onClose }) {
             </ul>
           </section>
         </div>
-
         <div className="order-2 md:order-none md:col-start-2 md:row-start-1">
-          <section className="flex flex-col items-center md:items-start relative md:right-8 eixos-textos-p-mobile">
+          <section className="flex flex-col items-center md:items-start relative md:right-8 max-md:text-sm 2xl:min-h-full 2xl:flex 2xl:items-center 2xl:justify-center 2xl:gap-12">
             {eixo.texto.map((paragrafo, i) => (
               <p className="py-2" key={i}>
                 {paragrafo}
@@ -64,7 +62,6 @@ export default function CardEixos({ eixo, onClose }) {
             ))}
           </section>
         </div>
-
         <section className="order-3 md:order-none md:col-start-1 md:row-start-2">
           <CustomButton
             onClick={() => goToMetas(eixo.id)}

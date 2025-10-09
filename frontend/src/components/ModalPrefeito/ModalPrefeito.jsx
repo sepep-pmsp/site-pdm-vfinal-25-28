@@ -35,7 +35,7 @@ export default function ModalPrefeito({ isOpen, onClose, carta }) {
       onClick={onClose}
     >
       <div
-        className={`bg-[var(--color-navy)] rounded-4xl p-8 w-full h-[48rem] relative shadow-lg transition-all duration-400 box-open-carta-mobile
+        className={`bg-[var(--color-navy)] w-full max-h-full max-xl:overflow-y-auto left-0 top-0 rounded-4xl xl:p-8 xl:w-full xl:h-[48rem] xl:relative xl:shadow-lg transition-all duration-400
           ${closing ? "slide-out-bottom" : "animate-slide-up"}`}
         onClick={(e) => e.stopPropagation()}
       >
@@ -56,9 +56,9 @@ export default function ModalPrefeito({ isOpen, onClose, carta }) {
           <div>
             <p className="text-white text-2xl"> {carta?.nome_prefeito || "Nome não disponível"} </p>
           </div>
-          <div className="flex flex-row flex-nowrap items-center justify-start gap-8 box-carta-text-mobile">
+          <div className="w-96 max-h-full max-xl:overflow-y-auto left-0 top-0 xl:h-auto xl:w-auto xl:flex xl:flex-row xl:flex-nowrap xl:items-center xl:justify-start xl:gap-8 ">
             {carta?.paragrafos?.map((par, index) => (
-              <p className="text-white text-lg font-light" key={index} dangerouslySetInnerHTML={{ __html: par}}/>
+              <p className="text-white text-sm w-80 xl:text-lg xl:font-light xl:w-full" key={index} dangerouslySetInnerHTML={{ __html: par}}/>
             ))}
           </div>
         </div>

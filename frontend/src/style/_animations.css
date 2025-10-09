@@ -624,3 +624,31 @@
 .slide-right-card-animation {
   animation: slide-right-card 0.5s ease forwards;
 }
+
+/* Animações de Entrada */
+
+.scale-in-tr{-webkit-animation:scale-in-tr .5s cubic-bezier(.25,.46,.45,.94) both;animation:scale-in-tr .5s cubic-bezier(.25,.46,.45,.94) both}
+@-webkit-keyframes scale-in-tr{0%{-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:100% 0;transform-origin:100% 0;opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:100% 0;transform-origin:100% 0;opacity:1}}@keyframes scale-in-tr{0%{-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:100% 0;transform-origin:100% 0;opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:100% 0;transform-origin:100% 0;opacity:1}}
+
+.scale-in-br{-webkit-animation:scale-in-br .5s cubic-bezier(.25,.46,.45,.94) both;animation:scale-in-br .5s cubic-bezier(.25,.46,.45,.94) both}
+@-webkit-keyframes scale-in-br{0%{-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:100% 100%;transform-origin:100% 100%;opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:100% 100%;transform-origin:100% 100%;opacity:1}}@keyframes scale-in-br{0%{-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:100% 100%;transform-origin:100% 100%;opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:100% 100%;transform-origin:100% 100%;opacity:1}}
+
+.scale-in-bl{-webkit-animation:scale-in-bl .5s cubic-bezier(.25,.46,.45,.94) both;animation:scale-in-bl .5s cubic-bezier(.25,.46,.45,.94) both}
+@-webkit-keyframes scale-in-bl{0%{-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:0 100%;transform-origin:0 100%;opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:0 100%;transform-origin:0 100%;opacity:1}}@keyframes scale-in-bl{0%{-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:0 100%;transform-origin:0 100%;opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:0 100%;transform-origin:0 100%;opacity:1}}
+
+.scale-in-tl{-webkit-animation:scale-in-tl .5s cubic-bezier(.25,.46,.45,.94) both;animation:scale-in-tl .5s cubic-bezier(.25,.46,.45,.94) both}
+@-webkit-keyframes scale-in-tl{0%{-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:0 0;transform-origin:0 0;opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:0 0;transform-origin:0 0;opacity:1}}@keyframes scale-in-tl{0%{-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:0 0;transform-origin:0 0;opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:0 0;transform-origin:0 0;opacity:1}}
+
+/* Animações de Saida*/
+
+.scale-out-tr{-webkit-animation:scale-out-tr .5s cubic-bezier(.55,.085,.68,.53) both;animation:scale-out-tr .5s cubic-bezier(.55,.085,.68,.53) both}
+@-webkit-keyframes scale-out-tr{0%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:100% 0;transform-origin:100% 0;opacity:1}100%{-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:100% 0;transform-origin:100% 0;opacity:1}}@keyframes scale-out-tr{0%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:100% 0;transform-origin:100% 0;opacity:1}100%{-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:100% 0;transform-origin:100% 0;opacity:1}}
+
+.scale-out-br{-webkit-animation:scale-out-br .5s cubic-bezier(.55,.085,.68,.53) both;animation:scale-out-br .5s cubic-bezier(.55,.085,.68,.53) both}
+@-webkit-keyframes scale-out-br{0%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:100% 100%;transform-origin:100% 100%;opacity:1}100%{-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:100% 100%;transform-origin:100% 100%;opacity:1}}@keyframes scale-out-br{0%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:100% 100%;transform-origin:100% 100%;opacity:1}100%{-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:100% 100%;transform-origin:100% 100%;opacity:1}}
+
+.scale-out-bl{-webkit-animation:scale-out-bl .5s cubic-bezier(.55,.085,.68,.53) both;animation:scale-out-bl .5s cubic-bezier(.55,.085,.68,.53) both}
+@-webkit-keyframes scale-out-bl{0%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:0 100%;transform-origin:0 100%;opacity:1}100%{-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:0 100%;transform-origin:0 100%;opacity:1}}@keyframes scale-out-bl{0%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:0 100%;transform-origin:0 100%;opacity:1}100%{-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:0 100%;transform-origin:0 100%;opacity:1}}
+
+.scale-out-tl{-webkit-animation:scale-out-tl .5s cubic-bezier(.55,.085,.68,.53) both;animation:scale-out-tl .5s cubic-bezier(.55,.085,.68,.53) both}
+@-webkit-keyframes scale-out-tl{0%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:0 0;transform-origin:0 0;opacity:1}100%{-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:0 0;transform-origin:0 0;opacity:1}}@keyframes scale-out-tl{0%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:0 0;transform-origin:0 0;opacity:1}100%{-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:0 0;transform-origin:0 0;opacity:1}}

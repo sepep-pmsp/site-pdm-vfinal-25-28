@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { getInfoData } from "@/services/home/getInfoData";
-import agrupar1 from "@/assets/svg/agrupar_1.svg";
+import agrupar1 from "@/assets/svg/agrupar_1.png";
 import agrupar2 from "@/assets/svg/agrupar_2.svg";
 
 export default function More_Info() {
   const [info, setInfo] = useState([]);
   const [loading, setLoading] = useState(true);
 
-   useEffect(() => {
+  useEffect(() => {
     getInfoData()
       .then((data) => {
         setInfo(Array.isArray(data) ? data : []);
@@ -23,22 +23,26 @@ export default function More_Info() {
   if (!info.length) return <div>Nenhuma informação encontrada.</div>;
 
   return (
-    <div className="py-20 h-[74rem] info-section-mobile">
-      <div className="agrupar1">
-        <img src={agrupar1} alt="" />
-      </div>
-      <div className="w-full bg-[var(--color-navy)] h-2"></div>
-      <div className="bg-[color:var(--color-cyan-dark)] h-40 rotate-[270deg] relative flex items-end flex-col justify-end p-4 rounded-br-3xl rounded-bl-3xl w-[54rem] right-[22rem] top-[29rem] shadow-[-4px_2px_20px_0px_gray] info-mobile-header">
-        <h1 className="text-white text-7xl px-6 info-mobile-header-text">
-          mais informações
-        </h1>
-      </div>
-      <section>
-        <div className="flex items-start justify-center flex-row flex-nowrap gap-40 h-full relative w-[89rem] left-64 pt-20 info-div-mobile">
+    <div className="h-full info-section-mobile">
+        <div className="w-full bg-[var(--color-navy)] h-2 xl:relative xl:hidden"></div>
+      <span className="flex flex-col justify-start items-center flex-nowrap">
+        <div className="relative z-[-1] w-full">
+          <img className="w-full" src={agrupar1} alt="" />
+        </div>
+        <div className="w-full bg-[var(--color-navy)] h-2 xl:relative xl:bottom-[13.5rem] max-xl:hidden"></div>
+      </span>
+
+      <div className="flex flex-col items-center justify-center flex-nowrap gap-20 h-full pb-10">
+        <div className="xl:bg-[color:var(--color-cyan-dark)] xl:h-40 xl:rotate-[270deg] xl:absolute xl:flex xl:items-end xl:flex-col xl:justify-end xl:p-4 xl:rounded-br-3xl xl:rounded-bl-3xl xl:w-[54rem] xl:-left-96 xl:top-[195rem] xl:shadow-[-4px_2px_20px_0px_gray]">
+          <h1 className="uppercase text-4xl xl:text-white xl:text-7xl xl:px-6 xl:relative xl:right-12 xl:bottom-4">
+            mais informações
+          </h1>
+        </div>
+        <div className="flex flex-col flex-nowrap items-center justify-center gap-16 xl:flex xl:items-start xl:justify-center xl:flex-row xl:flex-nowrap xl:gap-40 xl:h-full xl:relative xl:w-full xl:pt-20">
           {info.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-start justify-center gap-8 div-mobile-info"
+              className="flex items-center justify-center flex-col gap-8 xl:flex xl:items-start xl:justify-center xl:gap-8"
             >
               <div className="p-4 shadow-[0px_1px_20px_1px_#000000ab] rounded-[3rem] group groupy relative w-fit overflow-hidden">
                 <div className="relative">
@@ -66,11 +70,15 @@ export default function More_Info() {
             </div>
           ))}
         </div>
-      </section>
-      <div className="agrupar2">
-        <img src={agrupar2} alt="" />
       </div>
-      <div className="w-full bg-[var(--color-navy)] h-2 relative top-[12.7rem]"></div>
+
+      <span className="flex flex-col justify-start items-center flex-nowrap xl:relative xl:bottom-20">
+        <div className="relative z-[-1] w-full">
+          <img className="w-full" src={agrupar2} alt="" />
+        </div>
+        <div className="w-full bg-[var(--color-navy)] h-2"></div>
+      </span>
     </div>
   );
 }
+

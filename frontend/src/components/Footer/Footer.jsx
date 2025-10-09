@@ -7,7 +7,7 @@ import FooterMobile from "./FooterMobile";
 import { useIsMobile } from "../../hooks/useIsMobile";
 
 export default function Footer() {
-  const isMobile = useIsMobile(768);
+  const isMobile = useIsMobile(1279);
 
   if (isMobile) {
     return <FooterMobile />;

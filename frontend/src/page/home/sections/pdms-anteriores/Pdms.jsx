@@ -8,14 +8,14 @@ export default function Pdms() {
     navigate(path);
   };
   return (
-    <div className="py-12 more_pdms_mobile">
+    <div className="py-12">
       <section>
-        <div className="flex items-center justify-center flex-row flex-nowrap gap-28 mobile-pdms">
-          <div className="flex flex-row justify-center gap-4 texts-mobile-pdms">
+        <div className="flex flex-col items-center justify-center gap-4 xl:flex xl:items-center xl:justify-center xl:flex-row xl:flex-nowrap xl:gap-28">
+          <div className="flex flex-col items-center justify-center gap-4 xl:flex xl:flex-row xl:justify-center xl:gap-4">
             <p className="text-2xl uppercase text-[var(--color-navy)]">
               e mais:{" "}
             </p>
-            <h2 className="text-4xl w-[28rem] text-[var(--color-navy)]">
+            <h2 className="text-2xl text-[var(--color-navy)] max-xl:w-3xs max-xl:text-center xl:text-4xl xl:w-[28rem]">
               Conheça todos os outros Programas de Metas já criados para São
               Paulo!
             </h2>
@@ -27,7 +27,7 @@ export default function Pdms() {
               target="#/historico"
               className="all_buttons uppercase"
             >
-              <p className="btn-about p-2">
+              <p className="p-2">
                 histórico <strong>pdm</strong>
               </p>
             </CustomButton>
