@@ -11,7 +11,7 @@ export default function Eixos() {
         className="flex items-start flex-col max-md:flex max-md:items-center max-md:justify-center max-md:text-center md:items-center"
         style={{ maxWidth: "1458px", margin: "0 auto" }}
       >
-        <div className="flex items-start flex-col justify-start text-5xl w-full xl:bg-[color:var(--color-navy)] md:items-center xl:h-40 xl:rotate-[270deg] xl:absolute xl:flex xl:items-end xl:flex-col xl:justify-end xl:p-4 xl:rounded-br-3xl xl:rounded-bl-3xl xl:w-[54rem] xl:-left-96 xl:top-[124rem] xl:shadow-[-4px_2px_20px_0px_gray] max-xl:items-center">
+        <div className="flex items-start flex-col justify-start text-5xl w-full xl:bg-[color:var(--color-navy)] md:items-center xl:h-40 xl:rotate-[270deg] xl:absolute xl:flex xl:items-end xl:flex-col xl:justify-end xl:p-4 xl:rounded-br-3xl xl:rounded-bl-3xl xl:w-[54rem] xl:-left-96 xl:top-[126rem] xl:shadow-[-4px_2px_20px_0px_gray] max-xl:items-center">
           <h1 className="mt-4 relative xl:text-white xl:text-7xl xl:relative xl:right-15 xl:bottom-4">eixos estratégicos</h1>
         </div>
         <section className="w-80 flex flex-col items-start justify-start gap-4 mt-4 mb-4 md:items-center xl:w-full">
