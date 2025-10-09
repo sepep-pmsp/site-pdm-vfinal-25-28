@@ -12,17 +12,17 @@ export default function Regionalizacao() {
   if (!regionalizacao) return <div>Carregando...</div>;
 
   return (
-    <div className="pt-20 px-4 mx-38 h-[63rem] regionalização_mobile">
-      <div className="flex items-start justify-center flex-col flex-nowrap w-[90%]">
-        <h1 className="text-[5rem] text-[var(--color-navy)] title-mobile">
+    <div className="pt-20 px-4 h-full lg:h-[63rem]" style={{ maxWidth: "1458px", height:"auto", margin: "0 auto" }}>
+      <div className="lg:flex lg:items-start lg:justify-center lg:flex-col lg:flex-nowrap lg:w-[90%]">
+        <h1 className="text-7xl lg:text-5xl text-[var(--color-navy)] ">
           {regionalizacao.titulo}
         </h1>
-        <div className="max-md:w-full lg:h-1 w-[95rem] bg-[color:var(--color-navy)]"></div>
-        <div className="flex flex-row flex-nowrap items-center gap-8 w-[100rem] conteudo-regionalizacao-mobile">
-          <div className="w-[30rem] flex flex-col items-start justify-center flex-nowrap gap-8 bg-[#EEF3F6] my-8 px-8 py-4 div-mobile-regionalizacao">
+        <div className="max-md:w-full lg:h-1 lg:w-full lg:bg-[color:var(--color-navy)] mb-8"></div>
+        <div className="flex flex-col-reverse flex-nowrap justify-center items-center gap-8 lg:flex lg:flex-row lg:flex-nowrap lg:items-center lg:gap-8 lg:w-full max-md:relative max-md:top-10 max-sm:h-250">
+          <div className="bg-[#EEF3F6] my-8 px-8 py-4 max-sm:w-80 max-sm:h-auto lg:w-[30rem] lg:flex lg:flex-col lg:items-start lg:justify-center lg:flex-nowrap lg:gap-8">
             <div className="max-md:w-75 lg:flex flex-col pt-10 gap-8">
               <div className="lg:flex flex-row gap-4">
-                <p className="max-md:text-2xl max-md:w-70 lg:text-5xl w-[23rem] pt-4 font-bold title-regionalizacao-mobile">{regionalizacao.subtitulo}</p>
+                <p className="font-black pb-5 max-md:text-3lg max-md:w-70 lg:text-5xl w-[23rem] pt-4 ">{regionalizacao.subtitulo}</p>
               </div>
               <div className="max-md:w-70 lg:flex flex-row gap-24">
                 <p>{regionalizacao.paragrafo}</p>
@@ -30,27 +30,27 @@ export default function Regionalizacao() {
             </div>
             <div className="max-md:w-80 lg:flex flex-col items-center justify-center flex-nowrap gap-8">
               <div className="max-md:tirar-padding lg:pb-12">
-                <p className="text-2xl font-black w-[27rem]">
+                <p className="text-2lg font-black w-[27rem]">
                   {regionalizacao.texto}
                 </p>
               </div>
-              <div className="w-60 h-20 absolute top-[55rem] btn-regionalizacao-mobile">
+              <div className="w-60 h-20 absolute top-[55rem]">
                 {/* <CustomButton
                   type="download"
                   target={regionalizacao.link_arquivo}
                   className="all_buttons capitalize"
                 >
-                  <p className="text-xl font-black">DOWNLOAD</p>
+                  <p className="text-lg font-black">DOWNLOAD</p>
                 </CustomButton> */}
               </div>
             </div>
           </div>
-          <div className="relative bg-white w-[60rem] h-[38rem] flex items-center justify-center shadow-[0px_0px_20px_0px_#00000080] rounded-[2rem] right-12 bottom-0 ifram-div-regionalizacao-mobile">
+          <div className="pt-8 bg-white shadow-[0px_0px_20px_0px_#00000080] rounded-4xl lg:relative lg:bg-white lg:w-[60rem] lg:h-[38rem] lg:flex lg:items-center lg:justify-center lg:shadow-[0px_0px_20px_0px_#00000080] lg:rounded-4xl  lg:right-12 lg:bottom-0 mb-8">
             <iframe
               src={regionalizacao.link_dashboard}
               allowFullScreen
               loading="lazy"
-              className="w-[95%] h-[95%] rounded-2xl"
+              className="rounded-4xl lg:w-[95%] lg:h-[95%] lg:rounded-2xl"
             ></iframe>
           </div>
         </div>
