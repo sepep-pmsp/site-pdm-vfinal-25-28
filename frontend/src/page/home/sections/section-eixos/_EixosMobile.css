@@ -238,6 +238,16 @@
         width: 100%;
     }
 }
+
+@media screen and (min-width: 1439px) and (max-width: 1620px){
+    .grid-mobile-eixos{
+        width: 70rem
+    }
+    .textos-eixos-mobile-content{
+        position: relative;
+        left: 5rem;
+    }
+}
 /*Celulares*/
 @media screen and (min-width: 319px) and (max-width: 426px) {
     .header-eixos-mobile {
@@ -359,5 +369,17 @@
     }
     .container-eixos-mobile {
         width: auto;
+    }
+}
+
+@media screen and (max-width: 361px){
+    .grid-eixos-mobile-content{
+        height: 180vh;
+    }
+}
+
+@media screen and (min-width: 1022px) and (max-width: 1024px){
+    .grid-eixos-mobile-content{
+        height: 110vh;
     }
 }
