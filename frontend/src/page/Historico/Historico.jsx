@@ -5,7 +5,7 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 import CarrosselHistoricoMobile from "@/components/CardHistorico/CarrosselHistoricoMobile";
 
 export default function Historico() {
-    const isMobile = useIsMobile(768);
+    const isMobile = useIsMobile(850);
   const [historico, setHistorico] = useState(null);
 
   useEffect(() => {
@@ -14,9 +14,9 @@ export default function Historico() {
 
   if (!historico) return <div>Carregando...</div>;
   return (
-    <div className="pt-20 px-4 mx-34 historico-container h-[54rem] bg-white">
-      <div className="max-md:w-80 max-md:flex max-md:items-center lg:flex items-start justify-center flex-col flex-nowrap w-[90%]">
-        <h1 className="text-[5rem] text-[var(--color-navy)]">{historico.titulo}</h1>
+    <div className="max-lg:h-auto max-xl:h-[75vh] xl:pt-20 px-4 historico-container h-[54rem] bg-white" style={{ maxWidth: "1458px", height:"auto", margin: "0 auto" }}>
+      <div className="max-md:w-80 max-md:flex max-md:items-center lg:flex items-start justify-center flex-col flex-nowrap w-[90%] pt-20">
+        <h1 className="max-xl:text-4xl xl:text-[5rem] text-[var(--color-navy)]">{historico.titulo}</h1>
         <div className="lg:h-1 w-[95rem] bg-[color:var(--color-navy)]"></div>
       </div>
 
@@ -25,7 +25,7 @@ export default function Historico() {
           <h2 className="text-4xl w-96">{historico.descricao}</h2>
           <p className="text-xl w-[25rem] p-div-historico-mobile">{historico.paragrafo}</p>
         </div>
-        <div>
+        <div className="mb-16 h-auto">
             {isMobile ? (<CarrosselHistoricoMobile/>):(<CardHistorico />) }
         </div>
       </div>

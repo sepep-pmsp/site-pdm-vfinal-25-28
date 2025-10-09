@@ -56,7 +56,7 @@ export default function CarrosselHistorico() {
   return (
     <div className="relative pt-8 flex flex-col items-center gap-4">
       {isMobile ? (
-        <div className="carrossel-touch flex flex-col items-start justify-center flex-nowrap gap-12">
+        <div className="carrossel-touch flex flex-col items-start justify-center flex-nowrap gap-12 h-full">
           {historico.map((card) => (
             <div
               key={card.id}
