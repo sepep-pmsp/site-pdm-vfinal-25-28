@@ -6,7 +6,8 @@ from cadastros_basicos.models.estrutura_administrativa import Orgao
 from cadastros_basicos.models.regionalizacao import SubPrefeitura, Zona
 from cadastros_basicos.models.vinculos_externos import ODS, PlanoSetorial
 
-from .relacionamentos_meta import MetaOrgao, MetaSubprefeitura, MetaZona, MetaODS, MetaPlanoSetorial
+from .relacionamentos_meta import MetaOrgao, MetaSubprefeitura, MetaZona, MetaODS, MetaPlanoSetorial, StatusRegionalizacao
+
 
 class Meta(models.Model):
 
@@ -15,6 +16,13 @@ class Meta(models.Model):
     descricao = models.TextField(blank=False, null=False, verbose_name="Descrição da Meta")
     indicador = models.CharField(max_length=500, blank=False, null=False, verbose_name="Indicador da Meta")
     projecao = models.CharField(max_length=500, blank=False, null=False, verbose_name="Projeção da Meta")
+
+    status_regionalizacao = models.CharField(
+        max_length=50,
+        choices=StatusRegionalizacao.choices,
+        default=StatusRegionalizacao.NAO_REGIONALIZAVEL,
+        verbose_name="Status de Regionalização"
+    )
 
     eixo = models.ForeignKey(
         Eixo,
@@ -157,6 +165,9 @@ class Meta(models.Model):
             raise ValidationError({
                 'tema': 'O tema selecionado não pertence ao eixo relacionado.'
             })
+        
+        if self.status_regionalizacao == StatusRegionalizacao.NAO_REGIONALIZAVEL and self.mapa.exists():
+            raise ValidationError("Não é possível associar um mapa a uma meta que não é regionalizável.")
 
     class Meta:
         verbose_name = "Meta"

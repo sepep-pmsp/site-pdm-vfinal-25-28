@@ -5,6 +5,12 @@ from cadastros_basicos.models.estrutura_administrativa import Orgao
 from cadastros_basicos.models.regionalizacao import SubPrefeitura, Zona
 from cadastros_basicos.models.vinculos_externos import ODS, PlanoSetorial
 
+class StatusRegionalizacao(models.TextChoices):
+
+    NAO_REGIONALIZAVEL = "não regionalizável"
+    REGIONALIZAVEL = "regionalizável"
+    REGIONALIZADA = "regionalizada"
+
 class MetaOrgao(models.Model):
     orgao = models.ForeignKey(
         Orgao,
