@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from .models.eixos import Eixo, Tema
-from .models.metas import Meta, MetaOrgao, MetaSubprefeitura, MetaZona, AcaoEstrategica, AcaoOrgao, MetaPlanoSetorial, MetaODS
+from .models.metas import Meta, MetaOrgao, MetaSubprefeitura, MetaZona, AcaoEstrategica, AcaoOrgao, MetaPlanoSetorial, MetaODS, MapaMeta
 from .models.pdm import PDM, DocumentoPDM, TipoDocumentoPDM
 from cadastros_basicos.models.estrutura_administrativa import Orgao
 
@@ -69,6 +69,11 @@ class MetaPlanoSetorialInline(admin.TabularInline):
     extra = 1
     verbose_name = "Plano Setorial relacionado à Meta"
     verbose_name_plural = "Planos Setoriais relacionados à Meta"
+
+@admin.register(MapaMeta)
+class MapaMetaAdmin(admin.ModelAdmin):
+    list_display = ('meta__numero', 'indicador_legenda', 'nota_rodape', 'frase_regionalizacao')
+    search_fields = ('meta__numero', 'indicador_legenda', 'nota_rodape', 'frase_regionalizacao')
 
 
 @admin.register(Meta)
