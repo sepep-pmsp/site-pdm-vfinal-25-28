@@ -1,32 +1,47 @@
-import React from 'react'
+import React from "react";
 import CustomButton from "@/components/Button/Button";
 import bgImage from "@/assets/svg/capa-pg-sobre.png";
-import logo from "/svg/Logo-pdm-letras.svg"
+import logo from "/svg/Logo-pdm-letras.svg";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
-export default function SectionIntroSobre({sobre, setSelectedButton, selectedButton}) {
+export default function SectionIntroSobre({
+  sobre,
+  setSelectedButton,
+  selectedButton
+}) {
+  const isMobile = useIsMobile(1026);
   const { banner } = sobre;
   const buttonsData = [
     { label: "o que é?", message: banner.o_que },
     { label: "por quê?", message: banner.por_que },
-    { label: "para quem?", message: banner.para_quem },
+    { label: "para quem?", message: banner.para_quem }
   ];
 
   return (
     <div>
-      <section className="relative w-full flex min-h-full max-lg:h-[140vh] xl:h-[87vh] lg:h-[140vh] overflow-hidden">
+      <section className="relative w-full flex min-h-full max-lg:h-[140vh] xl:h-[87vh] lg:h-[75vh] overflow-hidden">
         <div>
           <img
-            className="max-md:hidden lg:absolute top-[-10rem] object-cover object-top"
+            className="max-xl:hidden xl:absolute top-[-10rem] object-cover object-top"
             src={bgImage}
           />
-          <div className="absolute top-0 left-0 w-full h-full bg-[#120e49d0] z-0 pointer-events-none"></div>
+          {isMobile ? (
+            <div className="absolute top-0 left-0 w-full h-full bg-[#292561] z-0 pointer-events-none"></div>
+          ) : (
+            <div className="absolute top-0 left-0 w-full h-full bg-[#04003bda] z-0 pointer-events-none"></div>
+          )}
         </div>
         <div className="absolute inset-0 z-10 top-20 flex flex-row justify-center items-start gap-[30rem] max-md:flex-col max-md:items-start  max-lg:flex-row max-lg:items-center max-xl:items-center max-xl:justify-start max-xl:gap-2 max-xl:top-2 max-md:left-16">
           <div className="flex flex-col flex-nowrap items-start justify-center gap-20">
             <div className="flex flex-col items-start text-white gap-8">
               <p className="text-4xl">{banner.supertitulo}</p>
-              <img className='max-md:w-60 max-xl:w-full max-xl:max-w-[25rem] max-xl:h-auto' src={logo} />
-              <p className="text-3xl break-all w-150 max-xl:text-lg max-xl:w-full max-xl:max-w-xs max-xl:leading-normal max-xl:text-left">{banner.subtitulo}</p>
+              <img
+                className="max-md:w-60 max-xl:w-full max-xl:max-w-[25rem] max-xl:h-auto"
+                src={logo}
+              />
+              <p className="text-3xl break-all w-150 max-xl:text-lg max-xl:w-full max-xl:max-w-xs max-xl:leading-normal max-xl:text-left">
+                {banner.subtitulo}
+              </p>
             </div>
             <div className="flex flex-col items-start justify-center gap-12 max-xl:flex max-xl:flex-col max-xl:gap-6 max-xl:items-start max-xl:flex-wrap max-xl:mt-12">
               <div className="text-white">
@@ -85,5 +100,5 @@ export default function SectionIntroSobre({sobre, setSelectedButton, selectedBut
         </div>
       </section>
     </div>
-  )
+  );
 }
