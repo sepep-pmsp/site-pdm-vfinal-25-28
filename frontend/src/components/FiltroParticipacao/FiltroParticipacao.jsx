@@ -177,10 +177,10 @@ export default function FiltroParticipacao({ filtros, onFiltrar }) {
     </div>
   );
   return (
-    <div className="w-full max-w-[90rem] h-[30rem] overflow-y-auto z-10 relative bottom-[10rem] bg-white p-8 rounded-4xl shadow-md mx-38 filtro-mobile-participacao">
-      <div className="flex flex-row flex-nowrap items-center justify-between mb-8 px-8 py-4 div-container-filtro-mobile">
+    <div className="flex flex-col items-start justify-center flex-nowrap w-full max-xl:h-auto relative left-0 p-6 gap-12 max-xl:bg-[#f7f7f7] max-lg:top-0 max-md:-top-30 max-xl:top-0 xl:max-w-[90rem] xl:h-[40rem] xl:overflow-y-auto xl:z-10 xl:relative xl:justify-start xl:bottom-[10rem] xl:bg-white xl:p-8 xl:rounded-4xl xl:shadow-md" style={{ maxWidth: "1427px", margin: "0 auto" }}>
+      <div className="flex flex-col flex-nowrap items-start justify-center gap-8 md:flex md:flex-row md:flex-nowrap md:items-center md:justify-between md:w-full xl:flex xl:flex-row xl:flex-nowrap xl:items-center xl:justify-between xl:mb-8 xl:px-8 xl:py-4">
         <img src={ImgFiltro} />
-        <div className="flex flex-row-reverse justify-around w-[30rem] items-center relative btn-filtro-mobile">
+        <div className="flex flex-col items-start gap-8 w-72 pt-8 xl:flex xl:flex-row-reverse xl:justify-around xl:w-[30rem] xl:items-center xl:relative">
           <button
             onClick={aplicar}
             className="h-20 w-50 shadow-[0px_9px_20px_1px_#00000052] flex items-center justify-center flex-nowrap flex-col transition-all duration-[0.3s] ease-[ease-in-out] text-[var(--color-white)] cursor-pointer bg-[var(--color-cyan-medium)] p-8 rounded-2xl roboto-black uppercase text-2xl hover:-translate-y-2.5"
@@ -197,7 +197,7 @@ export default function FiltroParticipacao({ filtros, onFiltrar }) {
           )}
         </div>
       </div>
-      <div className="flex items-start justify-center flex-col flex-nowrap gap-4 mx-4 my-2">
+      <div className="flex items-start justify-center flex-col flex-nowrap gap-4 mx-4 my-2 xl:w-[97%]">
         <p className="roboto-semibold uppercase text-lg">
           digite o que deseja encontrar
         </p>
@@ -210,7 +210,7 @@ export default function FiltroParticipacao({ filtros, onFiltrar }) {
         />
       </div>
 
-      <div className="flex flex-row justify-evenly items-start filtro-opcoes-participacao-mobile  md:grid-cols-2 lg:grid-cols-5 gap-4">
+      <div className="flex flex-wrap flex-col items-start justify-center py-8 max-md:flex md:flex-row md:justify-evenly xl:flex xl:flex-row xl:justify-evenly xl:items-start xl:w-full max-lg:grid max-lg:grid-cols-2 max-xl:grid max-xl:grid-cols-2 max-xl:w-full gap-4">
         {renderDropdownFiltro(
           "canais",
           "Canal de participação",

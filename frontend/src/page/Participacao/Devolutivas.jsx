@@ -13,22 +13,22 @@ export default function Devolutivas({ devolutivas, apresentacao }) {
 
   return (
     <div className="py-8">
-      <div className="bg-[var(--color-cyan-dark)] w-[27rem] h-44 right-[104rem] top-[55.3rem] rotate-[270deg] absolute flex items-center flex-col justify-end p-4 rounded-br-4xl rounded-bl-4xl shadow-[-4px_2px_20px_0px_gray] z-1 banner-participacao-mobile">
-        <h1 className="max-md:text-white max-md:left-2 max-md:bottom-0 lg:text-white text-7xl px-6 relative left-5 bottom-4">
+      <div className="rotate-[0deg] bg-[var(--color-cyan-dark)] text-white left-[-1rem] relative w-80 h-28 rounded-tr-4xl rounded-br-4xl max-md:top-[40rem] max-lg:top-[30rem] max-xl:top-[41rem] xl:w-[27rem] xl:h-44 xl:-left-40 xl:top-[55.3rem] xl:rotate-[270deg] xl:absolute xl:flex xl:items-center xl:flex-col xl:justify-end xl:rounded-br-4xl xl:rounded-bl-4xl xl:shadow-[-4px_2px_20px_0px_gray] xl:z-1">
+        <h1 className="max-md:text-white max-md:left-0 max-md:top-5 max-xl:top-5 max-xl:left-0 lg:text-white text-7xl px-6 relative left-5 bottom-4">
           Devolutivas
         </h1>
       </div>
-      <section className="relative w-full overflow-hidden max-md:min-h-screen max-md:bottom-28">
+      <section className="relative w-full overflow-hidden bottom-32 max-md:min-h-screen xl:relative xl:bottom-0">
         {devolutivas.imagem_fundo && (
           <div className="relative w-full max-h-screen">
             <SafeSVG
               src={corrigirUrlImagem(devolutivas.imagem_fundo)}
-              className="max-md:min-h-[91vh] max-md:w-full lg:w-full min-h-[73vh] object-cover"
+              className="max-md:min-h-[70vh] max-md:w-full max-xl:min-h-[47vh] lg:w-full min-h-[70vh] object-cover"
             />
             <div className="absolute top-0 left-0 w-full h-full bg-[var(--color-blue-light)] bg-opacity-40 z-0 pointer-events-none"></div>
           </div>
         )}
-        <div className="absolute inset-0 z-1 mx-0 flex flex-col items-start justify-start flex-nowrap md:flex-row md:justify-evenly md:items-center">
+        <div className="absolute inset-0 z-1 mx-0 flex flex-col items-start justify-start flex-nowrap md:flex-row md:justify-evenly md:items-center" style={{ maxWidth: "1427px", height:"auto", margin: "0 auto" }}>
           <div className="max-md:w-80 lg:flex flex-col items-start w-[60rem] justify-center gap-8 p-8 text-white relative left-12">
             <h2 className="max-md:text-3xl lg:text-6xl">{devolutivas.subtitulo}</h2>
             <p className="max-md:text-xl lg:text-2xl">{devolutivas.paragrafos}</p>
