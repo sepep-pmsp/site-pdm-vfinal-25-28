@@ -5,7 +5,7 @@ import TransparenciaMonitoramento from "./TransparenciaMonitoramento";
 
 export default function TransparenciaContainer() {
   const [transparencia, setTransparencia] = useState(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 550);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1026);
 
   useEffect(() => {
     getTransparenciaData().then(setTransparencia).catch(console.error);

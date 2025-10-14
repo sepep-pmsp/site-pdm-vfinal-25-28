@@ -4,7 +4,7 @@ import logo_pdm from "@/assets/svg/logo_pdm_fundo_branco.svg";
 export default function Footer_pdm() {
   return (
     <div className="bg-[var(--color-cyan-dark)] h-[25rem] w-full z-20">
-      <div className="flex flex-col flex-nowrap items-start justify-center gap-8 p-6 w-[42rem] relative left-28 top-4">
+      <div className="max-lg:left-0 lg:flex flex-col flex-nowrap items-start justify-center gap-8 p-6 w-[42rem] relative left-28 top-4">
         <div>
           <img className=" w-[17rem]" src={logo_pdm} alt="" />
         </div>

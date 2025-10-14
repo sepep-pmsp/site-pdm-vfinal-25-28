@@ -23,7 +23,7 @@ export default function About() {
     <div className="px-4" style={{ maxWidth: "1458px", margin: "0 auto" }}>
       <div className="flex flex-col items-start justify-start gap-6 my-2 w-full">
         <div className="w-full flex flex-col items-start">
-          <h2 className="text-4xl text-[var(--color-navy)] lg:w-full lg:text-8xl lg:relative lg:left-8">
+          <h2 className="text-4xl w-80 text-[var(--color-navy)] lg:w-full lg:text-8xl lg:relative lg:left-8">
             {about.titulo}
           </h2>
           <div className="h-1 w-full bg-[var(--color-navy)] my-2"></div>

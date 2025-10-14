@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useIsMobile } from "@/hooks/useIsMobile";
+import ImgRegionalizacao from "@/assets/svg/teste-regionalizacao.svg";
 
 export default function CardMetas({ meta, onClose }) {
   const [visible, setVisible] = useState(true);
@@ -46,7 +47,15 @@ export default function CardMetas({ meta, onClose }) {
   const strongText = match ? match[1] : tituloHtml;
   const normalText = match ? match[2] : "";
   const scrollClass = needsScroll ? "overflow-y-auto" : "";
-
+  if (!meta.card.regionalizacao) {
+    meta.card.regionalizacao = {
+      titulo: "REGIONALIZAÇÃO",
+      subtitulo: "Subtítulo de teste",
+      descricao: "Descrição de teste",
+      nota: "Nota de teste",
+      imagem: ImgRegionalizacao
+    };
+  }
   return (
     <div
       className="bg-white fixed inset-0 flex items-start md:items-center justify-center z-50 md:p-0"

@@ -42,7 +42,7 @@ export default function ModalParticipacaoSocial({ isOpen, onClose, apresentacao 
       {/* Modal */}
       <div className="fixed inset-0 flex items-center justify-center z-[10000]">
         <div
-          className={`bg-[#1281AA] rounded-4xl p-8 max-w-screen mx-38 max-h-screen h-auto relative shadow-lg transition-all duration-400${
+          className={`bg-[#1281AA] rounded-4xl p-8 max-w-screen max-lg:max-h-screen relative shadow-lg transition-all duration-400 xl:max-w-[1427px] xl:h-[50rem] ${
             closing ? "slide-out-bottom" : "animate-slide-up"
           }`}
           onClick={(e) => e.stopPropagation()}
@@ -60,18 +60,18 @@ export default function ModalParticipacaoSocial({ isOpen, onClose, apresentacao 
                 <h2 className="max-md:text-4xl lg:text-8xl text-white font-bebas-regular">{apresentacao?.titulo}</h2>
                 <p className="max-md:pt-0 max-md:text-lg text-white lg:text-white text-2xl pt-8 roboto-medium">{apresentacao?.subtitulo}</p>
               </div>
-              <div className="modal-body-mobile flex flex-col gap-3">
+              <div className="flex flex-col gap-3 overflow-y-auto pr-4 hide-scroll xl:max-h-[25rem] lg:max-h-[20rem] md:max-h-[15rem] max-h-[25rem]">
                 {apresentacao?.paragrafos?.map((par, index) => (
                   <p className="max-sm:text-white max-sm:z-[10100] max-sm:text-sm lg:text-white text-xl roboto-light" key={index}>
                     {par}
                   </p>
                 ))}
-                <p className="max-sm:text-lg text-white max-sm:z-[10100] lg:text-white text-2xl pt-8 roboto-medium">{apresentacao?.texto}</p>
               </div>
+              <p className="max-sm:text-lg text-white max-sm:z-[10100] lg:text-white text-2xl pt-8 roboto-medium">{apresentacao?.texto}</p>
             </div>
             <div>
               <img className="max-md:w-36 max-md:relative max-md:left-1/4 lg:w-150 relative z-[10100]" src={apresentacao_logo_pdm} alt="" />
-              <img className="max-sm:absolute max-sm:left-36 max-sm:top-0 max-sm:max-w-screen max-sm:h-full lg:absolute right-8 top-0 w-full h-auto max-w-[42.6rem]" src={bg_fundo} alt="" />
+              <img className="w-full h-full max-sm:absolute max-sm:left-30 max-sm:top-0 max-sm:max-w-screen max-sm:h-full lg:absolute right-8 top-0  max-lg:w-full  max-lg:h-auto max-w-[43.9rem]" src={bg_fundo} alt="" />
             </div>
           </div>
         </div>

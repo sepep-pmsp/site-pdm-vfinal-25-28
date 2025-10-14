@@ -52,8 +52,8 @@ export default function Audiencia({ audiencia }) {
 
   return (
     <div>
-      <img className="relative bottom-[19rem]" src={Agrupar2} alt="" />
-      <div className="h-1 w-full bg-[var(--color-navy)] relative bottom-[19.1rem]"></div>
+      <img className="xl:relative xl:bottom-[19rem]" src={Agrupar2} alt="" />
+      <div className="h-1 w-full bg-[var(--color-navy)] xl:relative xl:bottom-[19.1rem]"></div>
       <div>
         <div className="bg-[var(--color-cyan-dark)] w-[40rem] h-44 right-[95rem] top-[115rem] rotate-[270deg] absolute flex items-center flex-col justify-end p-4 rounded-br-4xl rounded-bl-4xl shadow-[-4px_2px_20px_0px_gray] z-1">
           <h1 className="text-white text-7xl px-6 relative left-28 bottom-4">
@@ -61,24 +61,24 @@ export default function Audiencia({ audiencia }) {
           </h1>
         </div>
       </div>
-      <div className="mx-38 audiencia-mobile">
-        <div className="gap-24 flex items-center justify-center relative pl-20 bottom-28 container-audiencia-mobile">
+      <div className="xl:relative xl:bottom-50">
+        <div className="flex flex-col items-start justify-center gap-8 p-4 bottom-0 xl:gap-24 xl:flex xl:flex-row xl:items-center xl:flex-nowrap xl:justify-center xl:relative xl:pl-20 xl:bottom-20" style={{ maxWidth: "1427px", height:"auto", margin: "0 auto" }}>
           <h2 className="text-5xl text-[var(--color-navy)]">
             "São Paulo quer ouvir você"
           </h2>
-          <p className="text-3xl text-[var(--color-navy)]">
+          <p className="text-3xl text-[var(--color-navy)] xl:w-[85rem]">
             Veja como foram as audiências públicas realizadas – setoriais e em
             cada uma das 32 subprefeituras – ao longo do ciclo participativo do
             PdM 2025-2028.
           </p>
         </div>
-        <div className="flex items-center justify-center flex-col flex-nowrap gap-20 max-sm:relative top-40">
-          <span className="w-[70rem] h-[40rem] shadow-[0px_0px_12px_grey] p-8 rounded-3xl span-video-mobile-1">
+        <div className="flex items-center justify-center flex-col flex-nowrap gap-20 max-sm:relative max-sm:top-40">
+          <span className="w-auto shadow-[0px_0px_12px_grey] p-8 rounded-3xl max-lg:h-auto xl:w-[70rem] xl:h-[40rem]">
             <div>
               {showOverlay && (
                 <>
                   <div
-                    className="bg-[var(--color-cyan-light)] absolute w-44 top-[130rem] px-8 py-2 left-[24.5rem] z-20 text-white rounded-r-3xl cursor-pointer max-sm:top-[-8rem] max-sm:left-0 banner-mobile-audiencia"
+                    className="bg-[var(--color-cyan-light)] absolute w-44 top-[30rem] px-8 py-2 left-[24.5rem] z-20 text-white rounded-r-3xl cursor-pointer max-xl:top-[122rem] max-xl:left-0 max-md:top-[-8rem] max-md:left-0"
                     onClick={() => {
                       setShowOverlay(false);
                       playerRef.current?.playVideo();
@@ -99,11 +99,11 @@ export default function Audiencia({ audiencia }) {
             />
           </span>
           <div className="md:flex flex-col items-center flex-nowrap gap-8">
-            <div className="flex flex-row items-center justify-center gap-20 div-videos-mobile">
+            <div className="flex flex-col flex-wrap items-center justify-center w-auto px-8 py-0 max-xl:h-auto xl:flex xl:flex-row xl:items-center xl:justify-center gap-15" style={{ maxWidth: "1427px", height:"auto", margin: "0 auto" }}>
               {audiencia.lista?.map((link, i) => (
                 <span
                   key={i}
-                  className="shadow-[0px_0px_12px_grey] p-8 rounded-3xl w-[30rem] span-video-mobile-1 h-80"
+                  className="w-auto shadow-[0px_0px_12px_grey] p-8 rounded-3xl max-xl:h-auto xl:w-[25rem] xl:h-60"
                 >
                   <iframe
                     key={i}
@@ -116,17 +116,17 @@ export default function Audiencia({ audiencia }) {
                 </span>
               ))}
             </div>
-            <span className="max-md:hidden md:flex flex-row justify-start w-full items-start gap-96 px-8">
+            <span className="max-xl:hidden md:flex flex-row justify-start w-full items-start gap-80 px-10">
               {messageData.map((mensagem, index) => (
-                <p className="text-[var(--color-navy)]" key={index}>{mensagem}</p>
+                <p className="max-xl:hidden xl:text-[var(--color-navy)]" key={index}>{mensagem}</p>
               ))}
             </span>
           </div>
         </div>
         <div className="py-8 max-md:relative top-40">
-          <div className="h-1 w-full bg-[var(--color-neutral-400)]"></div>
-          <div className="gap-12 flex flex-row justify-around items-center py-8 mini-footer-audiencia-mobile">
-            <div className="flex gap-12 items-center justify-center w-[45rem] mini-footer-texto-audiencia-mobile">
+          <div className="h-1 w-full bg-[var(--color-neutral-400)] mb-8"></div>
+          <div className="flex flex-col flex-wrap items-center justify-center w-auto px-8 py-0 gap-12 max-md:h-[50rem] max-xl:h-auto xl:flex xl:flex-row xl:justify-center xl:items-center xl:py-8 xl:relative xl:top-25">
+            <div className="flex flex-col flex-wrap items-center justify-center w-auto px-8 py-0 h-auto xl:flex xl:flex-row gap-12 xl:items-center xl:flex-nowrap xl:justify-center xl:w-[45rem]">
               <h3 className="text-4xl text-[var(--color-navy)]">SAIBA MAIS:</h3>
               <h2 className="text-5xl text-[var(--color-navy)]">
                 Confira todas as Audiências Públicas desse PdM no nosso canal do
