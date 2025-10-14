@@ -70,9 +70,9 @@ export default function ParticipacaoSocial() {
 
   return (
     <div>
-      <div className="flex items-start justify-center flex-col w-[80%] pt-24 mx-38 container-participacao-mobile">
-        <h1 className="max-md:text-5xl max-md:relative max-md:left-6 lg:text-7xl text-[var(--color-navy)]">Participação Social</h1>
-        <div className="max-md:w-full lg:h-1 w-[88rem] bg-[color:var(--color-navy)]"></div>
+      <div className="flex items-start justify-center flex-col w-[80%] pt-24" style={{ maxWidth: "1427px", height:"auto", margin: "0 auto" }}>
+        <h1 className="max-xl:text-5xl max-xl:relative max-xl:left-15 lg:text-7xl text-[var(--color-navy)]">Participação Social</h1>
+        <div className="max-md:w-full xl:h-1 w-[88rem] bg-[color:var(--color-navy)]"></div>
       </div>
       <Devolutivas
         devolutivas={data.devolutivas}
