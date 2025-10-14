@@ -34,11 +34,12 @@ export default function Regionalizacao() {
                   {regionalizacao.texto}
                 </p>
               </div>
-              <div className="w-60 h-20 absolute top-[55rem]">
+              <div className="hidden">
                 {/* <CustomButton
                   type="download"
                   target={regionalizacao.link_arquivo}
                   className="all_buttons capitalize"
+                  className="w-60 h-20 absolute top-[55rem] aqui é da div a cima"
                 >
                   <p className="text-lg font-black">DOWNLOAD</p>
                 </CustomButton> */}

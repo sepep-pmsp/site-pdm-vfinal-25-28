@@ -8,11 +8,11 @@ export default function SectionParticipacaoSocial({ sobre }) {
   const isMobile = useIsMobile(1441);
 
   return (
-    <div className="max-lg:h-full lg:mt-45 bg-[#F0EFEE] h-auto py-10 px-24 z-[-3] tirar-padding">
-      <div className="max-md:w-full h-1 max-md:left-0 max-2xl:left-2 max-2xl:hidden lg:h-1 w-[89rem] left-35 relative bg-[var(--color-navy)]"></div>
+    <div className="max-lg:h-full lg:mt-45 bg-[#F0EFEE] h-auto py-10 z-[-3] tirar-padding">
+      <div className="max-md:hidden lg:h-1 lg:w-full lg:bg-[var(--color-navy)]" style={{ maxWidth: "1305px", margin: "0 auto" }}></div>
       <div>
         <div className="mb-10">
-          <div className="max-2xl:relative max-2xl:w-70 max-2xl:left-15 lg:flex flex-col flex-nowrap items-start justify-center max-w-4xl relative left-40">
+          <div className="max-2xl:w-70 lg:flex flex-col flex-nowrap items-start justify-center max-w-4xl" style={{ maxWidth: "1305px", height:"auto", margin: "0 auto" }}>
             <h2 className="max-lg:text-5xl lg:text-8xl font-bold pt-10 mb-4 text-[var(--color-navy)]">
               participação social
             </h2>
