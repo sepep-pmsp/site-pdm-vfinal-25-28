@@ -4,9 +4,9 @@ import CustomButton from "@/components/Button/Button";
 export default function TransparenciaMobile({ transparencia }) {
   return (
     <div>
-      <div className="pt-20 px-4 mx-34 transparencia-monitoramento-container-mobile bg-white pb-12">
-        <div className="flex items-start justify-center flex-col flex-nowrap w-[90%]">
-          <h1 className="text-[5rem] text-[var(--color-navy)] title-mobile relative left-10">
+      <div className="pt-20 px-4 bg-white pb-12">
+        <div className="max-lg:flex max-lg:items-center max-lg:justify-center max-lg:flex-col lg:flex items-start justify-center flex-col flex-nowrap w-[90%]">
+          <h1 className="max-md:text-5xl md:text-7xl text-[var(--color-navy)] relative left-10 ">
             {transparencia.titulo}
           </h1>
           <div className="max-md:w-auto h-1 bg-[color:var(--color-navy)]"></div>
@@ -20,13 +20,13 @@ export default function TransparenciaMobile({ transparencia }) {
                 dangerouslySetInnerHTML={{ __html: item.paragrafo }}
               />
               {item.link && item.link.trim() !== "" && (
-                <section className="h-20 w-[17rem] custom-btn-mobile">
+                <section className="max-xl:flex max-xl:flex-col max-xl:w-full md:h-20 w-[17rem]">
                   <CustomButton
                     onClick={() => window.open(item.link, "_blank")}
                     type="link"
                     className="all_buttons capitalize"
                   >
-                    <p className="text-xl font-black p-custom-btn-mobile">
+                    <p className="text-xl font-black">
                       {item.nome_btn}
                     </p>
                   </CustomButton>
@@ -35,7 +35,7 @@ export default function TransparenciaMobile({ transparencia }) {
             </div>
           ))}
         </div>
-        <div className="absolute text-transparent img-fundo"></div>
+        <div className="lg:absolute text-transparent img-fundo"></div>
       </div>
     </div>
   );
