@@ -23,7 +23,7 @@ export default function More_Info() {
   if (!info.length) return <div>Nenhuma informação encontrada.</div>;
 
   return (
-    <div className="h-full info-section-mobile">
+    <div className="h-full">
         <div className="w-full bg-[var(--color-navy)] h-2 xl:relative xl:hidden"></div>
       <span className="flex flex-col justify-start items-center flex-nowrap">
         <div className="relative z-[-1] w-full">
@@ -32,7 +32,7 @@ export default function More_Info() {
         <div className="w-full bg-[var(--color-navy)] h-2 xl:relative xl:bottom-[13.5rem] max-xl:hidden"></div>
       </span>
 
-      <div className="flex flex-col items-center justify-center flex-nowrap gap-20 h-full pb-10">
+      <div className="flex flex-col items-center justify-center flex-nowrap gap-20 h-full pb-10" style={{ maxWidth: "1435px", margin: "0 auto" }}>
         <div className="xl:bg-[color:var(--color-cyan-dark)] xl:h-40 xl:rotate-[270deg] xl:absolute xl:flex xl:items-end xl:flex-col xl:justify-end xl:p-4 xl:rounded-br-3xl xl:rounded-bl-3xl xl:w-[54rem] xl:-left-96 xl:top-[195rem] xl:shadow-[-4px_2px_20px_0px_gray]">
           <h1 className="uppercase text-4xl xl:text-white xl:text-7xl xl:px-6 xl:relative xl:right-12 xl:bottom-4">
             mais informações
