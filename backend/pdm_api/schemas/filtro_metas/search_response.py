@@ -32,6 +32,15 @@ class AtributoListCardSchema(BaseModel):
         if not self.tipo== 'list':
             raise ValueError('Invalid tipo for AtributoListCardSchema')
         return self
+    
+class MetaMapSchema(BaseModel):
+
+    status_regionalizacao: Literal["não regionalizável", "regionalizável", "regionalizada"]
+    nota_regionalizacao: Optional[str]=None
+    map_image: Optional[str]=None
+    map_legenda: Optional[str]=None
+    map_rodape: Optional[str]=None
+
 
 class MetaCardSchema(BaseModel):
 
@@ -44,6 +53,7 @@ class MetaCardSchema(BaseModel):
     eixo_cor_principal: str
     eixo_cor_secundaria: str
     eixo_frase: list[str]=[]
+    regionalizacao: MetaMapSchema
 
 class MetaResponseSchema(BaseModel):
 

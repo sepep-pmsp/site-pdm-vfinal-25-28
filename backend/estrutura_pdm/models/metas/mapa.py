@@ -37,8 +37,8 @@ class MapaMeta(models.Model):
     )
 
     frase_regionalizacao = models.TextField(
-        null=False,
-        blank=False,
+        null=True,
+        blank=True,
         verbose_name='Frase para quando a meta é regionalizável'
     )
 
