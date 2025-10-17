@@ -2,14 +2,8 @@ from pdm_api.schemas.filtro_metas.search_response import MetaMapSchema
 from estrutura_pdm.models.metas import Meta
 from estrutura_pdm.models.metas.mapa import MapaMeta
 from pdm_api.utils.static_files.images import get_abs_link
+from estrutura_pdm.queries.metas import get_mapa
 
-
-def get_mapa(meta:Meta)->MapaMeta|None:
-    
-    try:
-        return meta.mapa
-    except MapaMeta.DoesNotExist:
-        return None
 
 def solve_mapa_meta(request, meta:Meta)->MetaMapSchema:
     try:
@@ -19,7 +13,7 @@ def solve_mapa_meta(request, meta:Meta)->MetaMapSchema:
             )
         
         elif meta.status_regionalizacao=="regionalizável":
-            mapa = get_mapa(meta)
+            mapa = get_mapa(meta, raise_error=False)
             if mapa and mapa.frase_regionalizacao:
                 return MetaMapSchema(
                     status_regionalizacao=meta.status_regionalizacao,
@@ -29,7 +23,7 @@ def solve_mapa_meta(request, meta:Meta)->MetaMapSchema:
                 raise ValueError("Meta marcada como 'regionalizável' mas não possui nota sobre regionalização associada.")
             
         elif meta.status_regionalizacao=="regionalizada":
-            mapa = get_mapa(meta)
+            mapa = get_mapa(meta, raise_error=False)
             if mapa and mapa.map_image is not None:
                 return MetaMapSchema(
                     status_regionalizacao=meta.status_regionalizacao,
