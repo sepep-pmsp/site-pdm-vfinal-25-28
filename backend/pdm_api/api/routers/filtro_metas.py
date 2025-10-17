@@ -22,9 +22,11 @@ from pdm_api.schemas.filtro_metas.search_response import (
                                                             MetaListingSchema,
                                                             AtributoStrCardSchema,
                                                             AtributoListCardSchema,
+                                                            MetaMapSchema
                                                             )
 
 from pdm_api.utils.static_files.images import get_abs_link
+from pdm_api.utils.mapa_meta import solve_mapa_meta
 
 
 router = Router(tags=["Filtro de Metas"])
@@ -190,6 +192,8 @@ def search_metas(request, params: SearchParamSchema):
                 eixo_cor_principal=meta.cor_principal_eixo
             )
 
+            regionalizacao = solve_mapa_meta(request, meta)
+
             card = MetaCardSchema(
                 numero=meta.numero_as_str,
                 eixo_nome=meta.eixo.nome.upper(),
@@ -199,7 +203,8 @@ def search_metas(request, params: SearchParamSchema):
                 projecao=AtributoStrCardSchema(titulo="PROJEÇÃO", valor=meta.projecao), 
                 acoes_estrategicas=AtributoListCardSchema(titulo="AÇÕES ESTRATÉGICAS", valor=meta.acoes_estrategicas_as_list),
                 indicador=AtributoStrCardSchema(titulo="INDICADOR", valor=meta.indicador),
-                orgaos_responsaveis=AtributoListCardSchema(titulo="ÓRGÃOS RESPONSÁVEIS", valor=meta.orgaos_responsaveis_list)
+                orgaos_responsaveis=AtributoListCardSchema(titulo="ÓRGÃOS RESPONSÁVEIS", valor=meta.orgaos_responsaveis_list),
+                regionalizacao=regionalizacao
             )
 
             meta_response = MetaResponseSchema(

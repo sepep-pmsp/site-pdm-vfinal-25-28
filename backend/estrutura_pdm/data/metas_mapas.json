@@ -1,0 +1,1190 @@
+[
+    {
+        "meta_numero": 1,
+        "meta_descricao": "Entregar 8 novos parques, para ampliar a oferta de áreas de lazer e fortalecer a cultura de convivência harmoniosa entre as pessoas e a natureza.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": "Número de novos parques por área.",
+        "nota_rodape": "O número de parques previsto por área de subprefeitura pode ainda ser alterado ao longo da execução do Programa de Metas 2025-2028.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Coropletico) - Meta 1.svg"
+    },
+    {
+        "meta_numero": 2,
+        "meta_descricao": "Requalificar ou ampliar 25 parques, com a melhoria das instalações e para maior segurança dos frequentadores.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": "Número de parques requalificados por área.",
+        "nota_rodape": "O mapa apresenta a regionalização parcial das intervenções. O número de parques requalificados por área de subprefeitura pode ainda ser alterado e a regionalização completa será apresentada ao longo da execução do Programa de Metas 2025-2028.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Coropletico) - Meta 2.svg"
+    },
+    {
+        "meta_numero": 3,
+        "meta_descricao": "Realizar o projeto São Paulo + Verde, que vai promover o plantio de 200 mil árvores e ampliar e diversificar a cobertura vegetal da cidade.",
+        "status_regionalizacao": "regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": "A regionalização do plantio será apresentada ao longo da execução do Programa de Metas 2025-2028.",
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 4,
+        "meta_descricao": "Alcançar 11,4% de tratamento de materiais recicláveis, colocando São Paulo em um novo patamar de sustentabilidade.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 5,
+        "meta_descricao": "Levar atividades de conscientização e educação ambiental a 240 mil pessoas, para ampliar o engajamento da população em práticas sustentáveis.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 6,
+        "meta_descricao": "Substituir 2.200 ônibus movidos a diesel por veículos de matriz energética mais limpa, reforçando o compromisso da cidade com a preservação ambiental.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 7,
+        "meta_descricao": "Substituir toda a frota de caminhões da coleta domiciliar de lixo por modelos movidos a biometano ou GNV, para reduzir em mais de 1,5 milhão de litros o consumo médio mensal de óleo diesel.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 8,
+        "meta_descricao": "Entregar 100 mil títulos de posse ou propriedade por meio do Pode Entrar - Regularização Fundiária, garantindo a famílias de baixa renda moradia estável, com segurança jurídica.",
+        "status_regionalizacao": "regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": "A regionalização dos títulos de posse ou propriedade será apresentada ao longo da execução do Programa de Metas 2025-2028.",
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 9,
+        "meta_descricao": "Entregar 40 mil habitações de interesse social a famílias de baixa renda, para que tenham lar digno e definitivo.",
+        "status_regionalizacao": "regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": "A regionalização das habitações será apresentada ao longo da execução do Programa de Metas 2025-2028.",
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 10,
+        "meta_descricao": "Beneficiar 50 mil famílias com a urbanização das áreas em que residem, promovendo infraestrutura adequada e melhorias no espaço público.",
+        "status_regionalizacao": "regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": "A regionalização das famílias beneficiadas será apresentada ao longo da execução do Programa de Metas 2025-2028.",
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 11,
+        "meta_descricao": "Revitalizar 20 empreendimentos habitacionais sob responsabilidade da SEHAB/COHAB, gerando benefícios para 4 mil famílias e favorecendo o convívio e a integração comunitária.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": "Número de empreendimentos habitacionais requalificados por área.",
+        "nota_rodape": "O número de empreendimentos revitalizados por área de subprefeitura pode ainda ser alterado ao longo da execução do Programa de Metas 2025-2028.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Coropletico) - Meta 11.svg"
+    },
+    {
+        "meta_numero": 12,
+        "meta_descricao": "Realizar obras de canalização de córregos e contenção de encostas em 14 áreas prioritárias do Plano Municipal de Redução de Riscos, protegendo famílias que residem em áreas de alto risco.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": "Número de áreas prioritárias com obras de canalização e contenção.",
+        "nota_rodape": "O número de obras por área e por subprefeitura pode ainda ser alterado ao longo da execução do Programa de Metas 2025-2028.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Coropletico) - Meta 12.svg"
+    },
+    {
+        "meta_numero": 13,
+        "meta_descricao": "Entregar 8 piscinões e iniciar a construção de outros 6 para reduzir alagamentos e dar mais segurança à população.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": "Número de reservatórios por área.",
+        "nota_rodape": "O mapa apresenta a regionalização parcial das construções. o número de piscinões por área de subprefeitura pode ainda ser alterado e a regionalização completa será apresentada ao longo da execução do Programa de Metas 2025-2028.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Coropletico) - Meta 13.svg"
+    },
+    {
+        "meta_numero": 14,
+        "meta_descricao": "Entregar o novo Centro de Operações da SPTrans, para melhorar o monitoramento da frota de ônibus municipal e a qualidade do serviço prestado.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 15,
+        "meta_descricao": "Iniciar a operação do BRT Aricanduva, para reduzir o tempo de deslocamento entre a Radial Leste, a partir da altura da Estação Carrão do Metrô, e o Terminal São Mateus.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "Este mapa apresenta toda a extensão prevista do BRT Aricanduva, podendo haver, ao longo do quadriênio, alterações em alguns trechos.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 15.svg"
+    },
+    {
+        "meta_numero": 16,
+        "meta_descricao": "Iniciar a operação do trecho I do novo BRT Radial Leste e as obras do trecho II, para reduzir o tempo de deslocamento entre a região e o Centro.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "Este mapa apresenta a extensão prevista do BRT Radial Leste, podendo haver, ao longo do quadriênio, alterações em alguns trechos.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 16.svg"
+    },
+    {
+        "meta_numero": 17,
+        "meta_descricao": "Requalificar 8,3 quilômetros da Avenida Celso Garcia, para facilitar os deslocamentos entre o Terminal Parque Dom Pedro II e a estação Bresser-Mooca do Metrô.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "O mapa apresenta a extensão total de 8.3 km da Avenida Celso Garcia a serem requalificados, abrangendo os Lotes 1, 2 e 3.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 17.svg"
+    },
+    {
+        "meta_numero": 18,
+        "meta_descricao": "Entregar o Corredor Itaquera-Líder, com 9,3 quilômetros de extensão nos dois sentidos, para facilitar a circulação de ônibus em vias essenciais para a mobilidade na Zona Leste.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "Este mapa apresenta toda a extensão prevista para o Corredor Itaquera-Líder, incluindo o trecho já em operação, podendo haver, ao longo do quadriênio, alterações em alguns trechos.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 18.svg"
+    },
+    {
+        "meta_numero": 19,
+        "meta_descricao": "Requalificar a faixa exclusiva da avenida Amador Bueno, na Zona Leste, proporcionando mais segurança, conforto e agilidade para os passageiros.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "Este mapa apresenta toda a extensão prevista da respectiva Avenida Amador Bueno.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 19.svg"
+    },
+    {
+        "meta_numero": 20,
+        "meta_descricao": "Requalificar a faixa exclusiva da avenida Imirim para oferecer mais segurança, conforto e agilidade aos passageiros da Zona Norte.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "Este mapa apresenta toda a extensão prevista da faixa exclusiva da Avenida Imirim.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 20.svg"
+    },
+    {
+        "meta_numero": 21,
+        "meta_descricao": "Requalificar o Corredor Itapecerica, para oferecer mais segurança, conforto e agilidade aos passageiros que se deslocam entre os terminais João Dias e Capelinha.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "Este mapa apresenta toda a extensão do Corredor Itapecerica.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 21.svg"
+    },
+    {
+        "meta_numero": 22,
+        "meta_descricao": "Requalificar a faixa exclusiva da avenida Interlagos, proporcionando mais segurança, conforto e agilidade para os passageiros.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "Este mapa apresenta a extensão da faixa exclusiva da Avenida Interlagos.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 22.svg"
+    },
+    {
+        "meta_numero": 23,
+        "meta_descricao": "Entregar 14 requalificações de terminais urbanos, para maior conforto, segurança e acessibilidade dos passageiros.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": "Número de terminais urbanos por área.",
+        "nota_rodape": "O número de terminais urbanos por área de subprefeitura pode ainda ser alterado ao longo da execução do Programa de Metas 2025-2028.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Coropletico) - Meta 23.svg"
+    },
+    {
+        "meta_numero": 24,
+        "meta_descricao": "Entregar o novo Terminal Itaquera, para que a região possa contar com mais linhas de ônibus e seja facilitada a integração com o Metrô e a CPTM.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 24.svg"
+    },
+    {
+        "meta_numero": 25,
+        "meta_descricao": "Iniciar as obras do novo Terminal Itaim Paulista, que oferecerá integração com a Estação Itaim Paulista da Linha 12-Safira da CPTM.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "As possíveis áreas para instalação do terminal estão em estudo.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Coropletico) - Meta 25.svg"
+    },
+    {
+        "meta_numero": 26,
+        "meta_descricao": "Iniciar as obras do novo Terminal Perus, junto à Estação Perus da Linha 7-Rubi da CPTM, para reestruturar a circulação de ônibus dos dois lados da linha férrea.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "As possíveis áreas para instalação do terminal estão em estudo.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Coropletico) - Meta 26.svg"
+    },
+    {
+        "meta_numero": 27,
+        "meta_descricao": "Iniciar a construção do Terminal Pedreira/Mar Paulista para integrar linhas de ônibus e transporte hidroviário na Zona Sul.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 27.svg"
+    },
+    {
+        "meta_numero": 28,
+        "meta_descricao": "Iniciar a construção do Terminal Cocaia para integrar linhas de ônibus e transporte hidroviário na Zona Sul.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 28.svg"
+    },
+    {
+        "meta_numero": 29,
+        "meta_descricao": "Contratar as obras de dois novos atracadouros na Represa Billings para expandir o Aquático SP e proporcionar à população da Zona Sul uma mobilidade mais sustentável e integrada.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 29.svg"
+    },
+    {
+        "meta_numero": 30,
+        "meta_descricao": "Elaborar os estudos necessários para viabilização do Aquático Guarapiranga, que vai ampliar o uso do modal hidroviário na região sul.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 31,
+        "meta_descricao": "Iniciar o prolongamento da Avenida Carlos Caldeira Filho, ligando-a à Estrada do M’Boi Mirim e beneficiando diretamente cerca de 870 mil moradores.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "Este mapa apresenta o prolongamento previsto da Avenida Carlos Caldeira, podendo haver, ao longo do quadriênio, alterações em alguns trechos.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 31.svg"
+    },
+    {
+        "meta_numero": 32,
+        "meta_descricao": "Concluir a duplicação da Avenida Senador Teotônio Vilela, para melhorar a mobilidade na região da Cidade Dutra.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "Este mapa apresenta a porção da Avenida Teotônio Vilela com duplicação prevista, podendo haver, ao longo do quadriênio, alterações em alguns trechos.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 32.svg"
+    },
+    {
+        "meta_numero": 33,
+        "meta_descricao": "Realizar a duplicação da Ponte Jurubatuba, para maior fluidez no trânsito local e segurança nos deslocamentos.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 33.svg"
+    },
+    {
+        "meta_numero": 34,
+        "meta_descricao": "Realizar as obras do Complexo Viário João Beiçola, para maior fluidez no trânsito local e segurança nos deslocamentos.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 34.svg"
+    },
+    {
+        "meta_numero": 35,
+        "meta_descricao": "Iniciar as obras da Ponte Graúna-Gaivotas, que estabelecerá nova conexão viária sobre a Represa Billings.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "Este mapa apresenta a extensão da Ponte Graúna-Gaivotas, podendo haver, ao longo do quadriênio, alterações em trechos.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 35.svg"
+    },
+    {
+        "meta_numero": 36,
+        "meta_descricao": "Entregar o Túnel Cecília Lottenberg, integrando importantes eixos viários e garantindo conexões cicloviárias estratégicas.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "Este mapa apresenta o Túnel Cecília Lottenberg, podendo haver, ao longo do quadriênio, alterações em alguns trechos.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 36.svg"
+    },
+    {
+        "meta_numero": 37,
+        "meta_descricao": "Iniciar as obras de prolongamento da Avenida Jornalista Roberto Marinho até a Rodovia dos Imigrantes, criando um parque linear, aumentando a área verde e melhorando as condições de mobilidade.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "Este mapa apresenta a extensão prevista da Avenida Jornalista Roberto Marinho, podendo haver, ao longo do quadriênio, alterações em alguns trechos.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 37.svg"
+    },
+    {
+        "meta_numero": 38,
+        "meta_descricao": "Entregar a segunda e a terceira fase da requalificação da Avenida Santo Amaro, para melhorar a segurança e a mobilidade na região.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "Este mapa apresenta o trecho da Avenida Santo Amaro a ser requalificado.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 38.svg"
+    },
+    {
+        "meta_numero": 39,
+        "meta_descricao": "Iniciar as obras de requalificação da Avenida Presidente Juscelino Kubitschek (Boulevard JK), aumentando a arborização e a permeabilidade do solo, tornando-a mais segura e convidativa para pedestres e ciclistas.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "Este mapa apresenta o trecho da Avenida Presidente Juscelino Kubitschek a ser requalificado.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 39.svg"
+    },
+    {
+        "meta_numero": 40,
+        "meta_descricao": "Iniciar o alargamento da Rua Ribeirão Claro, redistribuindo o tráfego local e beneficiando importantes polos econômicos como Vila Olímpia, Itaim Bibi, Moema e Jardins.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "Este mapa apresenta a extensão total da Rua Ribeirão Claro.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 40.svg"
+    },
+    {
+        "meta_numero": 41,
+        "meta_descricao": "Iniciar a construção do novo Túnel Sena Madureira, que irá melhorar a mobilidade na região da Vila Mariana e facilitar o acesso a diversos bairros.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "Este mapa apresenta a extensão prevista do Túnel Sena Madureira, podendo haver, ao longo do quadriênio, alterações em alguns trechos.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 41.svg"
+    },
+    {
+        "meta_numero": 42,
+        "meta_descricao": "Iniciar o prolongamento da Avenida Imperador até a Avenida José Aristodemo Pinotti, promovendo requalificação urbana e garantindo melhor articulação da malha viária na Zona Leste.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "Este mapa apresenta o prolongamento da Avenida Imperador, podendo haver, ao longo do quadriênio, alterações em alguns trechos.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 42.svg"
+    },
+    {
+        "meta_numero": 43,
+        "meta_descricao": "Entregar a Ponte Pirituba-Lapa, que vai melhorar a fluidez do trânsito na região.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 43.svg"
+    },
+    {
+        "meta_numero": 44,
+        "meta_descricao": "Iniciar as obras de prolongamento da Avenida Marquês de São Vicente (novo Boulevard Marquês de São Vicente), melhorando a mobilidade no centro expandido e conectando-o à Zona Leste.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "Este mapa apresenta a extensão total do Novo Boulevard Marquês de São Vicente.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 44.svg"
+    },
+    {
+        "meta_numero": 45,
+        "meta_descricao": "Atingir 1.000 quilômetros de malha cicloviária, estimulando uma mobilidade que contribui para a preservação ambiental e promove qualidade de vida.",
+        "status_regionalizacao": "regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": "A regionalização das ciclovias será apresentada ao longo da execução.",
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 46,
+        "meta_descricao": "Instalar mais 200 quilômetros de Faixa Azul, duplicando a extensão de vias exclusivas para motociclistas, de modo a reduzir acidentes com motos na cidade.",
+        "status_regionalizacao": "regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": "A regionalização das Faixas Azuis será apresentada ao longo da execução.",
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 47,
+        "meta_descricao": "Modernizar o sistema semafórico em 1.700 cruzamentos, melhorando a fluidez e a segurança no trânsito.",
+        "status_regionalizacao": "regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": "A regionalização dos cruzamentos será apresentada ao longo da execução do Programa de Metas 2025-2028.",
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 48,
+        "meta_descricao": "Entregar um heliponto na Marginal Tietê para atendimento a situações de emergência.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 48.svg"
+    },
+    {
+        "meta_numero": 49,
+        "meta_descricao": "Recuperar 10 milhões de metros quadrados de vias públicas com asfalto novo, para aumentar a segurança viária e a fluidez do trânsito.",
+        "status_regionalizacao": "regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": "A regionalização das vias recapeadas será apresentada ao longo da execução.",
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 50,
+        "meta_descricao": "Pavimentar 400.000 metros quadrados de vias de terra para melhorar a infraestrutura urbana e as condições de mobilidade na cidade.",
+        "status_regionalizacao": "regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": "A regionalização das vias pavimentadas será apresentada ao longo da execução.",
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 51,
+        "meta_descricao": "Renovar um milhão de metros quadrados de calçadas para melhorar a acessibilidade e oferecer mais segurança aos pedestres.",
+        "status_regionalizacao": "regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": "A regionalização das calçadas renovadas será apresentada ao longo da execução.",
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 52,
+        "meta_descricao": "Realizar 10 ações de requalificação urbana para tornar os espaços públicos mais acessíveis, seguros e adequados à convivência.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": "Número de requalificações urbanas por área.",
+        "nota_rodape": "O número de requalificações urbanas por área de subprefeitura pode ainda ser alterado ao longo da execução do Programa de Metas 2025-2028.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Coropletico) - Meta 52.svg"
+    },
+    {
+        "meta_numero": 53,
+        "meta_descricao": "Entregar o calçadão do Triângulo Histórico, iniciar as obras do Quadrilátero da República e da Esplanada da Liberdade e viabilizar a PPP do Novo Parque Dom Pedro II, para impulsionar a transformação da região.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": "1. Quadrilátero da República\n2. Triângulo Histórico\n3. Parque Dom Pedro II\n4. Esplanada da Liberdade",
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 53.svg"
+    },
+    {
+        "meta_numero": 54,
+        "meta_descricao": "Iniciar as obras do Bonde São Paulo, Veículo Leve Elétrico (VLE) no Centro, para promover a requalificação urbana da região aliando transporte eficiente e preservação ambiental.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "Este mapa apresenta o percurso planejado do Bonde São Paulo, podendo haver, ao longo do quadriênio, alterações em alguns trechos.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 54.svg"
+    },
+    {
+        "meta_numero": 55,
+        "meta_descricao": "Atingir 40 mil câmeras integradas à plataforma de monitoramento do programa Smart Sampa, para ampliar a capacidade de vigilância inteligente, apoiar o trabalho das polícias, prevenir delitos e identificar criminosos e infratores em todas as regiões da cidade.",
+        "status_regionalizacao": "regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": "A regionalização de câmeras será apresentada ao longo da execução.",
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 56,
+        "meta_descricao": "Abrir 2 mil novas vagas para Guardas Civis Metropolitanos e modernizar o sistema de comunicação da corporação, para aumentar sua presença no território e capacidade de proteger o patrimônio público e a população.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 57,
+        "meta_descricao": "Revitalizar 20 estruturas operacionais da GCM, da Defesa Civil e das Juntas do Serviço Militar, para fortalecer a capacidade de atuação das equipes municipais em diversas situações e qualificar o atendimento ao cidadão.",
+        "status_regionalizacao": "regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": "A regionalização será apresentada ao longo da execução do PdM 2025-2028.",
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 58,
+        "meta_descricao": "Incorporar 500 armas não letais ao equipamento da Guarda Civil Metropolitana, ampliando sua capacidade de atuação com base em protocolos de uso proporcional da força.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 59,
+        "meta_descricao": "Ampliar o Programa de Proteção Escolar, com a criação da Diária Especial de Segurança Escolar (DESE) e a presença de guardas em 200 escolas, para prevenir ocorrências e fortalecer vínculos comunitários.",
+        "status_regionalizacao": "regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": "A regionalização será apresentada ao longo da execução do PdM 2025-2028.",
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 60,
+        "meta_descricao": "Instalar o Centro de Monitoramento dos Parques Municipais Integrado ao Smart Sampa para reforçar a segurança, melhorar a gestão e garantir tranquilidade aos frequentadores.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 61,
+        "meta_descricao": "Promover 3 ações estratégicas, com incremento tecnológico e integração ao Smart Sampa, para fortalecer a Política Municipal de Pessoas Desaparecidas, Localização Familiar e Atenção a Familiares.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 62,
+        "meta_descricao": "Assegurar o atendimento do Programa Guardiã Maria da Penha a 100% das mulheres em medidas protetivas encaminhadas pelo MP e desenvolver 8 ações estratégicas para fortalecer as políticas de prevenção e enfrentamento à violência contra a mulher.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 63,
+        "meta_descricao": "Ampliar o acesso à saúde com a entrega de 48 novos equipamentos, entre os quais 15 UPAs e 25 UBSs.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": "Número de equipamentos previstos",
+        "nota_rodape": "O mapa apresenta a regionalização parcial. O número de equipamentos de saúde por área de subprefeitura pode ainda ser alterado e a regionalização completa será apresentada ao longo da execução do Programa de Metas 2025-2028.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Coropletico) - Meta 63.svg"
+    },
+    {
+        "meta_numero": 64,
+        "meta_descricao": "Entregar 4 unidades do novo Paulistão da Saúde, para facilitar o acesso a um conjunto de serviços no mesmo espaço.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "O mapa apresenta a regionalização parcial. A regionalização completa será apresentada ao longo da execução do Programa de Metas 2025-2028.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Coropletico) - Meta 64.svg"
+    },
+    {
+        "meta_numero": 65,
+        "meta_descricao": "Reformar 8 hospitais, viabilizar melhorias em outros 4 e entregar o novo Hospital Sorocabana, oferecendo ambientes mais modernos e adequados ao cuidado com a população.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "Pode haver alteração do quantitativo de hospitais por subprefeitura ao longo do quadriênio.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Coropletico) - Meta 65.svg"
+    },
+    {
+        "meta_numero": 66,
+        "meta_descricao": "Fortalecer o Serviço de Atendimento Móvel de Urgência (SAMU), com 34 novos veículos e a habilitação de 60 motolâncias, além da integração ao sistema Smart Sampa, para qualificar o atendimento emergencial da cidade.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 67,
+        "meta_descricao": "Ampliar a cobertura da Estratégia Saúde da Família com a criação de 100 novas equipes, para fortalecer a atuação da Prefeitura na atenção integral à saúde.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 68,
+        "meta_descricao": "Estabelecer a Estratégia de Saúde Digital em todas as regiões da cidade, para ampliar o acesso da população aos serviços por meio da telessaúde.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 69,
+        "meta_descricao": "Implantar prontuário eletrônico integrado em 100% dos Hospitais Dia, AMAs Especialidades, Ambulatórios de Especialidades e CAPS, para melhor articulação da rede de atendimento e maior agilidade.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 70,
+        "meta_descricao": "Atingir ou manter a cobertura vacinal preconizada (95%) para quatro vacinas indicadas a crianças de até 1 ano: poliomielite, pneumocócica 10-valente, pentavalente e SCR (tríplice viral, contra sarampo, caxumba e rubéola), reafirmando o compromisso com a saúde na primeira infância.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 71,
+        "meta_descricao": "Constituir 30 novas equipes do Programa Acompanhante de Idosos e atualizar as diretrizes técnicas para a atenção à saúde dessa população, com foco em longevidade e qualidade de vida.",
+        "status_regionalizacao": "regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": "A regionalização das equipes será apresentada ao longo da execução.",
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 72,
+        "meta_descricao": "Entregar 3 Centros TEA nas regiões Leste, Sul e Oeste, garantindo atendimento especializado a crianças, jovens e adultos e aos seus familiares.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "O mapa apresenta a regionalização parcial dos Centros TEA. A regionalização completa será apresentada ao longo da execução do Programa de Metas 2025-2028.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Coropletico) - Meta 72.svg"
+    },
+    {
+        "meta_numero": 73,
+        "meta_descricao": "Abrir ou requalificar 15 equipamentos e serviços de atendimento a pessoas com deficiência e TEA, para ampliar e melhorar a atenção especializada em saúde.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "O mapa apresenta a regionalização parcial. o número de equipamentos e serviços por área de subprefeitura pode ainda ser alterado e a regionalização completa será apresentada ao longo da execução do Programa de Metas 2025-2028.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Coropletico) - Meta 73.svg"
+    },
+    {
+        "meta_numero": 74,
+        "meta_descricao": "Entregar 4 unidades da Casa Mãe Paulistana - Pessoa com Deficiência, para atendimento especializado e multiprofissional a mães e cuidadoras de pessoas com deficiência.",
+        "status_regionalizacao": "regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": "a regionalização das unidades será apresentada ao longo da execução.",
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 75,
+        "meta_descricao": "Incentivar, por meio de solução digital, a prática de exercícios físicos e o engajamento da população em atividades coletivas, para promover saúde e bem-estar.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 76,
+        "meta_descricao": "Entregar um novo Hospital Veterinário, oferecer atendimento 24 horas em alguma das unidades existentes e ampliar o acesso à castração gratuita de cães e gatos, promovendo a saúde animal e facilitando o cuidado responsável.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Coropletico) - Meta 76.svg"
+    },
+    {
+        "meta_numero": 77,
+        "meta_descricao": "Manter a fila da creche zerada, criando todas as vagas necessárias na Educação Infantil para garantir às crianças o cuidado e o desenvolvimento integral desde os primeiros anos de vida.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 78,
+        "meta_descricao": "Criar o Programa Mamãe Tarifa Zero no sistema municipal de ônibus, oferecendo 2 passagens por dia para pais e mães levarem seus filhos às creches.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 79,
+        "meta_descricao": "Atender 600 mil alunos no ensino em tempo integral, para que tenham mais oportunidades de dedicação à formação acadêmica e ao desenvolvimento pleno como pessoas.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 80,
+        "meta_descricao": "Alcançar 70% de alfabetização ao final do segundo ano do ensino fundamental, cumprindo a meta do MEC/INEP e assegurando que as crianças adquiram desde cedo competências essenciais para seu desenvolvimento posterior.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 81,
+        "meta_descricao": "Atingir o resultado de 6,0 no IDEB para os anos iniciais do Ensino Fundamental, avançando no compromisso com o aprendizado efetivo e a evolução constante.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 82,
+        "meta_descricao": "Atingir o resultado de 5,0 no IDEB para os anos finais do Ensino Fundamental, avançando no compromisso com o aprendizado efetivo e a evolução constante.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 83,
+        "meta_descricao": "Inaugurar 12 novos CEUs e viabilizar mais 10, ampliando o acesso a espaços de educação, cultura, esporte e convivência nas regiões que mais precisam de equipamentos públicos integrados.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": "Número de CEUs por área",
+        "nota_rodape": "O mapa apresenta a regionalização parcial. o número de CEUs por área de subprefeitura pode ainda ser alterado e a regionalização completa será apresentada ao longo da execução do Programa de Metas 2025-2028.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Coropletico) - Meta 83.svg"
+    },
+    {
+        "meta_numero": 84,
+        "meta_descricao": "Criar a Escola Municipal de Formação de Profissionais da Educação do Futuro, para favorecer a qualificação permanente e valorizar os profissionais.",
+        "status_regionalizacao": "regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": "A regionalização das unidades será apresentada ao longo da execução.",
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 85,
+        "meta_descricao": "Entregar 25 novos equipamentos de Segurança Alimentar e Nutricional, para garantir refeições de qualidade à população em situação de vulnerabilidade.",
+        "status_regionalizacao": "regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": "A regionalização das unidades será apresentada ao longo da execução.",
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 86,
+        "meta_descricao": "Entregar 10 Vilas Reencontro, dobrando o número de vagas nas vilas e ampliando as oportunidades de reinserção social para a população em situação de rua.",
+        "status_regionalizacao": "regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": "A regionalização das unidades será apresentada ao longo da execução.",
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 87,
+        "meta_descricao": "Fortalecer e publicizar o Programa Família Acolhedora, com 6 novos serviços para proteção integral a crianças e adolescentes afastados da família por medida imposta pelo Sistema de Garantia de Direitos (SGD).",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 88,
+        "meta_descricao": "Apoiar 3 mil pessoas com os auxílios Reencontro Moradia e Reencontro Família, para saída qualificada da situação de rua.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 89,
+        "meta_descricao": "Priorizar 25 obras, novas ou de reforma, nos cemitérios públicos, para a melhoria dos serviços prestados às famílias.",
+        "status_regionalizacao": "regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": "A regionalização das unidades será apresentada ao longo da execução.",
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 90,
+        "meta_descricao": "Requalificar 65 equipamentos esportivos com estruturas mais adequadas para uso da população em suas atividades.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "O mapa apresenta a regionalização parcial. O número de equipamentos esportivos requalificados por área de subprefeitura pode ainda ser alterado e a regionalização completa será apresentada ao longo da execução do Programa de Metas 2025-2028.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Coropletico) - Meta 90.svg"
+    },
+    {
+        "meta_numero": 91,
+        "meta_descricao": "Expandir o Programa Rede Olímpica, valorizando a formação de atletas e o esporte de alto rendimento.",
+        "status_regionalizacao": "regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": "A regionalização das unidades será apresentada ao longo da execução.",
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 92,
+        "meta_descricao": "Ampliar em 50% o programa Bolsa Atleta Rei Pelé, concedendo 1.800 novas bolsas no quadriênio para a valorização de atletas e paratletas.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 93,
+        "meta_descricao": "Criar o Programa de Requalificação de Equipamentos Culturais “SP+Cultura - Requalifica” e revitalizar 25 espaços culturais, para que sejam mais adequados às atividades desenvolvidas e confortáveis para o público.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "O mapa apresenta a regionalização parcial. O número de equipamentos culturais requalificados por área de subprefeitura pode ainda ser alterado e a regionalização completa será apresentada ao longo da execução do Programa de Metas 2025-2028.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Coropletico) - Meta 93.svg"
+    },
+    {
+        "meta_numero": 94,
+        "meta_descricao": "Abrir 2 novas unidades da Escola Municipal de Iniciação Artística (EMIA), ampliando o acesso à formação cultural de qualidade para crianças e adolescentes e fortalecendo o surgimento de vocações.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": "Pode haver alteração do quantitativo de equipamentos por subprefeitura ao longo do quadriênio.",
+        "mapa_file": "PdM Publicação (Coropletico) - Meta 94.svg"
+    },
+    {
+        "meta_numero": 95,
+        "meta_descricao": "Inaugurar o Memorial dos Aflitos, em honra ao legado da população negra escravizada na cidade e para a promoção de uma cultura antirracista.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 95.svg"
+    },
+    {
+        "meta_numero": 96,
+        "meta_descricao": "Desenvolver 2 ações estratégicas para promover a segurança jurídica e oferecer maior previsibilidade aos empreendedores.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 97,
+        "meta_descricao": "Criar o CredSampa, para oferecer R$ 20 milhões em garantias e alavancar até R$ 80 milhões de crédito para empreendedores e pequenos negócios.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 98,
+        "meta_descricao": "Acelerar 200 startups por meio do Programa de Valorização de Iniciativas Tecnológicas (Vai Tec), para impulsionar o ambiente de inovação na cidade.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 99,
+        "meta_descricao": "Inaugurar o Polo Sampa Games e acelerar o desenvolvimento de 100 empresas do setor, consolidando São Paulo como polo inovador na indústria de jogos eletrônicos.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 100,
+        "meta_descricao": "Viabilizar um centro de economia criativa na Casa das Retortas, com foco nas indústrias da moda, gastronomia e madeira.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 100.svg"
+    },
+    {
+        "meta_numero": 101,
+        "meta_descricao": "Abrir 5 novos equipamentos de economia criativa voltados especialmente aos jovens das periferias.",
+        "status_regionalizacao": "regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": "A regionalização das unidades será apresentada ao longo da execução.",
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 102,
+        "meta_descricao": "Ampliar o programa Meu Trampo e beneficiar 10 mil jovens com projetos gratuitos de capacitação profissional e geração de renda.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 103,
+        "meta_descricao": "Dobrar o número de vagas oferecidas pelo Educavest, cursinho pré-vestibulinho municipal gratuito, para ampliar as oportunidades de acesso ao Ensino Técnico.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 104,
+        "meta_descricao": "Oferecer 100 mil vagas em cursos de qualificação profissional, para facilitar o acesso da população a oportunidades de emprego e renda.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 105,
+        "meta_descricao": "Modernizar o Portal Cate, oferecendo novos cursos e aperfeiçoando a ferramenta de ensino à distância voltada à qualificação profissional.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 106,
+        "meta_descricao": "Ampliar os serviços digitais de atendimento ao trabalhador e eliminar processos manuais, para facilitar acesso a oportunidades.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 107,
+        "meta_descricao": "Criar o Empreende SP, para ampliar o acesso a capacitações, espaços de trabalho e oportunidades de geração de renda por meio do empreendedorismo.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 108,
+        "meta_descricao": "Criar o Programa de Longevidade Ativa, com 50 mil atendimentos a microempreendedores individuais com mais de 60 anos, oferecendo serviços de formalização, capacitação, consultoria e acesso a espaços de trabalho compartilhados.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 109,
+        "meta_descricao": "Fortalecer o Programa Sampa+Rural, ampliando o apoio para 1.000 locais de agricultura.",
+        "status_regionalizacao": "regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": "A regionalização das unidades será apresentada ao longo da execução.",
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 110,
+        "meta_descricao": "Criar o SP CityPass, cartão de venda combinada de atrativos e experiências, para o crescimento do turismo integrado na cidade.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 111,
+        "meta_descricao": "Iniciar a construção da Arena Multiuso do Anhembi, fortalecendo a vocação da cidade para receber eventos de diversos tipos.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Zoom) - Meta 111.svg"
+    },
+    {
+        "meta_numero": 112,
+        "meta_descricao": "Dobrar o número de roteiros do Programa Vai de Roteiro, que promove o turismo local e valoriza a diversidade cultural e histórica dos bairros.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 113,
+        "meta_descricao": "Realizar 296 ações internacionais que consolidem São Paulo como cidade global junto às 25 maiores economias mundiais.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 114,
+        "meta_descricao": "Instituir o Orçamento Climático Municipal para que os investimentos estejam alinhados às ações previstas no Plano de Ação Climática.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 115,
+        "meta_descricao": "Viabilizar 10 novos projetos com o Plano Municipal de Desestatização, que atrai investimento privado para qualificar serviços públicos sem comprometer as finanças da cidade.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 116,
+        "meta_descricao": "Instituir o Comitê de Governo Local nos 32 territórios, para ampliar o diálogo entre as secretarias e promover ações locais mais integradas.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 117,
+        "meta_descricao": "Elaborar o Plano Municipal de Cidade Inteligente, Resiliente e Sustentável para nortear a transformação digital e tecnológica de São Paulo.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 118,
+        "meta_descricao": "Chegar a 95% de serviços disponíveis online no SP156, para facilitar o acesso dos cidadãos e dar mais rapidez às solicitações.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 119,
+        "meta_descricao": "Criar uma Unidade Avançada de Inteligência Artificial para a melhoria de serviços públicos e impulsionamento de startups.",
+        "status_regionalizacao": "regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": "A regionalização das unidades será apresentada ao longo da execução.",
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 120,
+        "meta_descricao": "Estabelecer um Centro de Inovação para ampliar o acesso de empresas, startups e da população em geral às oportunidades do mercado de tecnologia.",
+        "status_regionalizacao": "regionalizada",
+        "indicador_legenda": null,
+        "nota_rodape": "Pode haver alteração do quantitativo de equipamentos por subprefeitura ao longo do quadriênio.",
+        "nota_regionalizacao": null,
+        "mapa_file": "PdM Publicação (Coropletico) - Meta 120.svg"
+    },
+    {
+        "meta_numero": 121,
+        "meta_descricao": "Renovar anualmente as certificações internacionais ISO 37120, 37122 e 37123, garantindo o reconhecimento permanente de São Paulo como cidade inteligente, resiliente e sustentável.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 122,
+        "meta_descricao": "Facilitar o acesso à informação pública, ampliar a transparência ativa e passiva e fortalecer a participação cidadã por meio de 8 ações estratégicas.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 123,
+        "meta_descricao": "Aprimorar o compliance da Prefeitura com o novo Programa de Integridade e Boas Práticas (PIBP), alcançando nota mínima 8,0 no Indicador de Maturidade.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 124,
+        "meta_descricao": "Realizar 7 ações estratégicas para promover a proteção de dados pessoais e fomentar a cultura de privacidade na administração municipal.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 125,
+        "meta_descricao": "Desenvolver na Secretaria Municipal da Fazenda 2 ferramentas de inteligência artificial para aumentar a produtividade e combater fraudes.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 126,
+        "meta_descricao": "Constituir 2 fundos imobiliários com propriedades da Prefeitura, para reduzir o déficit previdenciário municipal.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 127,
+        "meta_descricao": "Aprimorar o Sistema de Gestão Patrimonial de modo a tornar a administração dos imóveis públicos mais eficiente, maximizando os benefícios para a administração pública, inclusive com a redução de despesas com aluguéis.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 128,
+        "meta_descricao": "Atingir a arrecadação de R$ 9 bilhões entre 2025 e 2028, com a adoção, entre outras, de medidas que modernizem e tornem mais eficiente a gestão da dívida ativa municipal.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 129,
+        "meta_descricao": "Padronizar processos de compras públicas com a realização de 4 ações estratégicas focadas em transparência, eficiência e sustentabilidade nas aquisições.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 130,
+        "meta_descricao": "Ampliar e fortalecer as ações da Escola Municipal de Administração Pública de São Paulo (EMASP), para qualificar a atuação dos servidores.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 131,
+        "meta_descricao": "Oferecer o Recadastramento e a Prova de Vida Digital para os servidores ativos, aposentados e pensionistas da administração direta, proporcionando maior comodidade e segurança aos beneficiários durante o procedimento.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    },
+    {
+        "meta_numero": 132,
+        "meta_descricao": "Desburocratizar os processos de licenciamento edilício, tornando-os mais simples e rápidos.",
+        "status_regionalizacao": "não regionalizável",
+        "indicador_legenda": null,
+        "nota_rodape": null,
+        "nota_regionalizacao": null,
+        "mapa_file": null
+    }
+]
