@@ -25,14 +25,14 @@ class MapaMeta(models.Model):
     )
 
     indicador_legenda = models.TextField(
-        null=False,
-        blank=False,
+        null=True,
+        blank=True,
         verbose_name='Indicador da Legenda do Mapa'
     )
 
     nota_rodape = models.TextField(
-        null=False,
-        blank=False,
+        null=True,
+        blank=True,
         verbose_name='Nota de rodapé do mapa'
     )
 
