@@ -1,109 +1,125 @@
 import React, { useState, useEffect } from "react";
 
 export default function FiltroEixos({
-  eixos,
-  filtrosSelecionados,
-  toggleSelecionado,
-  eixoIdFromNav,
-  onLimparFiltros,
+    eixos,
+    filtrosSelecionados,
+    toggleSelecionado,
+    eixoIdFromNav,
+    onLimparFiltros,
 }) {
-  const [eixosAbertos, setEixosAbertos] = useState([]);
-  const [initialFilterApplied, setInitialFilterApplied] = useState(false);
-  const toggleDropdown = (id) => {
-    setEixosAbertos((prev) =>
-      prev.includes(id) ? prev.filter((e) => e !== id) : [...prev, id]
-    );
-  };
-  useEffect(() => {
-    if (eixoIdFromNav && !initialFilterApplied) {
-      setEixosAbertos([eixoIdFromNav]);
-      
-      if (!filtrosSelecionados.eixos.includes(eixoIdFromNav)) {
-        toggleSelecionado("eixos", eixoIdFromNav);
-      }
-      setInitialFilterApplied(true);
-    }
-  }, [eixoIdFromNav, initialFilterApplied, filtrosSelecionados.eixos, toggleSelecionado]);
-  if (!eixos) {
-    return <p>Carregando eixos...</p>;
-  }
-
-  return (
-    <div className="h-full flex flex-col items-start w-[19rem] relative bottom-4">
-      {eixos.map(({ nome, id, cor, temas }) => {
-        const isAberto = eixosAbertos.includes(id);
-
-        return (
-          <div key={id}>
-            <div
-              onClick={() => {
-                toggleSelecionado("eixos", id);
-                toggleDropdown(id);
-              }}
-              className="flex flex-col items-start justify-between flex-nowrap rounded-r-3xl overflow-hidden cursor-pointer transition-all duration-300"
-              style={{
-                backgroundColor: cor,
-                width: isAberto ? "21.5rem" : "6rem",
-                height: "21rem",
-                marginBottom: isAberto ? "-12px" : "-20px",
-              }}
-            >
-              <div className="flex justify-between items-center flex-row flex-nowrap">
-                <div
-                  className={`text-white transition-all duration-300 p-2 ${
-                    isAberto
-                      ? "rotate-0 text-4xl flex flex-col"
-                      : "rotate-270 text-4xl w-60 relative right-20 top-35"
-                  }`}
-                >
-                  <h2 className="w-80 pt-4">{nome.toUpperCase()}</h2>
-                </div>
-                {isAberto && (
-                  <button
-                    className="text-white absolute left-[19rem]"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      toggleDropdown(id);
-                      if (onLimparFiltros) {
-                        onLimparFiltros();
-                      }
-                    }}
-                  >
-                    <i
-                      className="fa-solid fa-xmark"
-                      style={{ fontSize: "2rem" }}
-                    ></i>
-                  </button>
-                )}
-              </div>
-
-              {isAberto && (
-                <div className="mt-2 ml-4 overflow-y-auto overflow-x-hidden scroll-smooth scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-gray-400 no-scrollbar-arrows h-60 w-[20rem]">
-                  {temas.map((sub) => (
-                    <label
-                      key={sub.id}
-                      className="mb-1 text-white text-xl flex flex-row-reverse justify-between items-center pr-8"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <input
-                        type="checkbox"
-                        className="mr-2 bg-white m-0 custom-checkbox"
-                        checked={filtrosSelecionados.subeixos.includes(sub.id)}
-                        onChange={() => toggleSelecionado("subeixos", sub.id)}
-                      />
-                      <span className="custom-checkbox-eixos"></span>
-                      <div className="w-60 py-1">
-                        <span className="w-70 capitalize">{sub.nome}</span>
-                        <div style={{ backgroundColor: "white", height: "1px", width: "90%" }}></div>
-                      </div>
-                    </label>
-                  ))}
-                </div>
-              )}
-            </div>
-          </div>
+    const [eixosAbertos, setEixosAbertos] = useState([]);
+    const [initialFilterApplied, setInitialFilterApplied] = useState(false);
+    const toggleDropdown = (id) => {
+        setEixosAbertos((prev) =>
+            prev.includes(id) ? prev.filter((e) => e !== id) : [...prev, id]
         );
-      })}
-    </div>
-  );
+    };
+    const colorBackground = {
+        "universo sp": { backgroundColor: "var(--color-green)" },
+        "viver sao paulo": { backgroundColor: "#F16622" },
+        "cidade empreendedora": { backgroundColor: "#0000AB" },
+        "capital do futuro": { backgroundColor: "#792D49" },
+    };
+    
+    const normalize = (s) =>
+        (s || "")
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase()
+            .trim();
+
+    useEffect(() => {
+        if (eixoIdFromNav && !initialFilterApplied) {
+            setEixosAbertos([eixoIdFromNav]);
+
+            if (!filtrosSelecionados.eixos.includes(eixoIdFromNav)) {
+                toggleSelecionado("eixos", eixoIdFromNav);
+            }
+            setInitialFilterApplied(true);
+        }
+    }, [eixoIdFromNav, initialFilterApplied, filtrosSelecionados.eixos, toggleSelecionado]);
+    if (!eixos) {
+        return <p>Carregando eixos...</p>;
+    }
+
+    return (
+        <div className="h-full flex flex-col items-start w-[19rem] relative bottom-4">
+            {eixos.map(({ nome, id, temas }) => {
+                const isAberto = eixosAbertos.includes(id);
+                const normalizedNome = normalize(nome);
+                const bgStyle = colorBackground[normalizedNome] || {
+                    backgroundColor: "transparent",
+                };
+                return (
+                    <div key={id} >
+                        <div
+                            onClick={() => {
+                                toggleSelecionado("eixos", id);
+                                toggleDropdown(id);
+                            }}
+                            className="flex flex-col items-start justify-between flex-nowrap rounded-r-3xl overflow-hidden cursor-pointer transition-all duration-300"
+                            style={{
+                                bgStyle: colorBackground, ...bgStyle,
+                                width: isAberto ? "21.5rem" : "6rem",
+                                height: "21rem",
+                                marginBottom: isAberto ? "-12px" : "-20px",
+                            }}
+                        >
+                            <div className="flex justify-between items-center flex-row flex-nowrap">
+                                <div
+                                    className={`text-white transition-all duration-300 p-2 ${isAberto
+                                        ? "rotate-0 text-4xl flex flex-col"
+                                        : "rotate-270 text-4xl w-60 relative right-20 top-35"
+                                        }`}
+                                >
+                                    <h2 className="w-80 pt-4">{nome.toUpperCase()}</h2>
+                                </div>
+                                {isAberto && (
+                                    <button
+                                        className="text-white absolute left-[19rem]"
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            toggleDropdown(id);
+                                            if (onLimparFiltros) {
+                                                onLimparFiltros();
+                                            }
+                                        }}
+                                    >
+                                        <i
+                                            className="fa-solid fa-xmark"
+                                            style={{ fontSize: "2rem" }}
+                                        ></i>
+                                    </button>
+                                )}
+                            </div>
+
+                            {isAberto && (
+                                <div className="mt-2 ml-4 overflow-y-auto overflow-x-hidden scroll-smooth scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-gray-400 no-scrollbar-arrows h-60 w-[20rem]">
+                                    {temas.map((sub) => (
+                                        <label
+                                            key={sub.id}
+                                            className="mb-1 text-white text-xl flex flex-row-reverse justify-between items-center pr-8"
+                                            onClick={(e) => e.stopPropagation()}
+                                        >
+                                            <input
+                                                type="checkbox"
+                                                className="mr-2 bg-white m-0 custom-checkbox"
+                                                checked={filtrosSelecionados.subeixos.includes(sub.id)}
+                                                onChange={() => toggleSelecionado("subeixos", sub.id)}
+                                            />
+                                            <span className="custom-checkbox-eixos"></span>
+                                            <div className="w-60 py-1">
+                                                <span className="w-70 capitalize">{sub.nome}</span>
+                                                <div style={{ backgroundColor: "white", height: "1px", width: "90%" }}></div>
+                                            </div>
+                                        </label>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                );
+            })}
+        </div >
+    );
 }
