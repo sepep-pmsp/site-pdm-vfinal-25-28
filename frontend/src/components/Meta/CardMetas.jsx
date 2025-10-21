@@ -67,7 +67,7 @@ export default function CardMetas({ meta, onClose }) {
             bottom: "-1.5rem",
             left: 0,
             zIndex: -1,
-            color: `${hexToRgba(meta.card.eixo_cor_principal, 0.15)}`,
+            color: `${hexToRgba(meta.card.eixo_cor_principal, 0.25)}`,
             lineHeight: 1
           }}
         >
