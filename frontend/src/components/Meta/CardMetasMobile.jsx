@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useIsMobile } from "@/hooks/useIsMobile";
-import ImgRegionalizacao from "@/assets/svg/teste-regionalizacao.svg";
+import { corrigirUrlImagem } from "@/utils/imageUtils";
+import SafeSVG from "../SafeSVG/SafeSVG";
 
 export default function CardMetas({ meta, onClose }) {
   const [visible, setVisible] = useState(true);
@@ -47,15 +48,7 @@ export default function CardMetas({ meta, onClose }) {
   const strongText = match ? match[1] : tituloHtml;
   const normalText = match ? match[2] : "";
   const scrollClass = needsScroll ? "overflow-y-auto" : "";
-  if (!meta.card.regionalizacao) {
-    meta.card.regionalizacao = {
-      titulo: "REGIONALIZAÇÃO",
-      subtitulo: "Subtítulo de teste",
-      descricao: "Descrição de teste",
-      nota: "Nota de teste",
-      imagem: ImgRegionalizacao
-    };
-  }
+
   return (
     <div
       className="bg-white fixed inset-0 flex items-start md:items-center justify-center z-50 md:p-0"
@@ -64,12 +57,14 @@ export default function CardMetas({ meta, onClose }) {
       <div
         ref={contentRef}
         className={`relative flex flex-col h-screen md:h-auto w-full md:w-[60rem] lg:w-[80rem] xl:w-[90rem] 
-        shadow-lg transition-all ${closing ? "slide-out-bottom" : "animate-slide-up"} ${scrollClass} 
+        shadow-lg transition-all ${
+          closing ? "slide-out-bottom" : "animate-slide-up"
+        } ${scrollClass} 
         md:rounded-3xl overflow-hidden`}
         onClick={(e) => e.stopPropagation()}
         style={{
           scrollbarColor: `${meta.card.eixo_cor_principal} transparent`,
-          height: isMobile ? '100vh' : 'auto'
+          height: isMobile ? "100vh" : "auto"
         }}
       >
         {/* Número gigante no fundo (visível apenas em desktop) */}
@@ -86,7 +81,7 @@ export default function CardMetas({ meta, onClose }) {
         >
           {meta.card.numero}
         </div>
-        
+
         {/* Header */}
         <div
           style={{ backgroundColor: meta.card.eixo_cor_principal }}
@@ -133,7 +128,7 @@ export default function CardMetas({ meta, onClose }) {
                 </p>
               </div>
             )}
-            
+
             {/* Ações Estratégicas */}
             {meta.card.acoes_estrategicas?.valor?.length > 0 && (
               <div className="flex flex-col md:flex-row gap-2 md:gap-16">
@@ -167,7 +162,7 @@ export default function CardMetas({ meta, onClose }) {
                 </p>
               </div>
             )}
-            
+
             {/* Órgãos Responsáveis */}
             {meta.card.orgaos_responsaveis && (
               <div className="flex flex-col md:flex-row gap-2 md:gap-12">
@@ -177,7 +172,10 @@ export default function CardMetas({ meta, onClose }) {
                 >
                   Órgãos Responsáveis
                 </h3>
-                <p className="text-5xl md:text-8xl font-bebas-book" style={{ color: meta.card.eixo_cor_principal }}>
+                <p
+                  className="text-5xl md:text-8xl font-bebas-book"
+                  style={{ color: meta.card.eixo_cor_principal }}
+                >
                   {meta.card.orgaos_responsaveis.valor.join(" • ")}
                 </p>
               </div>
@@ -185,49 +183,79 @@ export default function CardMetas({ meta, onClose }) {
           </div>
 
           {/* Regionalização */}
-          {meta.card.regionalizacao && (
-            <div className="flex flex-col w-full items-center justify-center mt-8">
-              <div className="w-full md:w-[100rem] h-2" style={{ backgroundColor: meta.card.eixo_cor_principal }}></div>
-              <div className="flex flex-col md:flex-row items-center md:items-start justify-around gap-4 md:gap-60 py-4 md:py-12 shadow-[1px_8px_20px_#00000080] m-4 md:m-8 p-4 md:p-8 rounded-[2rem] border-solid w-full md:w-[75rem] bg-white">
-                <div className="flex flex-col items-start justify-center gap-4 md:gap-12">
-                  <h3 style={{ color: meta.card.eixo_cor_principal }} className="text-2xl md:text-4xl font-bold">
-                    {meta.card.regionalizacao.titulo}
-                  </h3>
-                  <p className="text-base md:text-lg font-bold">
-                    {meta.card.regionalizacao.subtitulo}
-                  </p>
-                  <p className="text-sm md:text-lg">
-                    {meta.card.regionalizacao.descricao}
-                  </p>
-                  <p className="text-sm md:text-lg font-bold">
-                    {meta.card.regionalizacao.nota}
-                  </p>
-                </div>
-                {meta.card.regionalizacao.imagem && (
+          {meta.card.regionalizacao &&
+            (() => {
+              const reg = meta.card.regionalizacao;
+              const normalize = (s) =>
+                (s || "")
+                  .normalize("NFD")
+                  .replace(/[\u0300-\u036f]/g, "")
+                  .toLowerCase()
+                  .trim();
+
+              const status = normalize(reg.status_regionalizacao);
+              const isNaoRegionalizavel =
+                status === "nao regionalizavel" ||
+                status === "nao regionalizavel" ||
+                status === "nao regionalizavel";
+              const imagemUrl =
+                reg.imagem ||
+                reg.mapa_file ||
+                reg.map_image ||
+                reg.mapa_file ||
+                null;
+
+              return (
+                <div className="flex flex-col w-full items-center justify-center mt-8 h-full">
                   <div
-                    style={{
-                      border: `3px solid ${meta.card.eixo_cor_principal}`,
-                      padding: `1rem`,
-                      borderRadius: `2rem`,
-                      width: `100%`,
-                      maxWidth: `20rem`,
-                      height: `auto`,
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                    }}
-                    className="flex items-center justify-center"
-                  >
-                    <img
-                      src={meta.card.regionalizacao.imagem}
-                      alt="Mapa da regionalização"
-                      className="rounded-lg w-full"
-                    />
+                    className="w-full md:w-full h-1"
+                    style={{ backgroundColor: meta.card.eixo_cor_principal }}
+                  />
+                  <div className="flex flex-col md:flex-row items-center md:items-start justify-around gap-4 md:gap-60 py-4 md:py-12 shadow-[1px_8px_20px_#00000080] m-4 md:m-8 p-4 md:p-8 rounded-[2rem] border-solid w-full md:w-[75rem] bg-white">
+                    <div className="flex flex-col items-start justify-center gap-4 md:gap-12">
+                      <h3
+                        style={{ color: meta.card.eixo_cor_principal }}
+                        className="text-3xl md:text-4xl font-bold"
+                      >
+                        Regionalização
+                      </h3>
+                      {isNaoRegionalizavel && (
+                        <p className="font-bold text-lg capitalize">
+                          {meta.card.regionalizacao.status_regionalizacao}
+                        </p>
+                      )}
+                      {meta.card.regionalizacao.nota_regionalizacao && (
+                        <p className="font-bold text-lg">
+                          {meta.card.regionalizacao.nota_regionalizacao}
+                        </p>
+                      )}
+                    </div>
+                    {imagemUrl && (
+                      <div
+                        style={{
+                          border: `3px solid ${meta.card.eixo_cor_principal}`,
+                          padding: `1rem`,
+                          borderRadius: `2rem`,
+                          width: `100%`,
+                          maxWidth: `20rem`,
+                          height: `auto`,
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center"
+                        }}
+                        className="flex items-center justify-center"
+                      >
+                        <SafeSVG
+                          src={corrigirUrlImagem(imagemUrl)}
+                          alt="Mapa da regionalização"
+                          className="mt-4 rounded-xl"
+                        />
+                      </div>
+                    )}
                   </div>
-                )}
-              </div>
-            </div>
-          )}
+                </div>
+              );
+            })()}
         </div>
 
         {/* Footer */}
@@ -240,10 +268,14 @@ export default function CardMetas({ meta, onClose }) {
               style={{ backgroundColor: meta.card.eixo_cor_secundaria }}
               className="px-4 py-2 rounded-md text-white text-lg md:text-3xl"
             >
-              <h4 className="text-white text-sm md:text-lg">{meta.card.eixo_nome}</h4>
+              <h4 className="text-white text-sm md:text-lg">
+                {meta.card.eixo_nome}
+              </h4>
             </div>
             <div className="flex flex-col text-white max-md:w-90">
-              <h3 className="text-xl md:text-4xl font-bold">{meta.card.eixo_frase[0]}</h3>
+              <h3 className="text-xl md:text-4xl font-bold">
+                {meta.card.eixo_frase[0]}
+              </h3>
               <p className="text-sm md:text-xl">{meta.card.eixo_frase[1]}</p>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import ImgRegionalizacao from "@/assets/svg/teste-regionalizacao.svg";
+import { corrigirUrlImagem } from "@/utils/imageUtils";
+import SafeSVG from "../SafeSVG/SafeSVG";
 
 export default function CardMetas({ meta, onClose }) {
   const [visible, setVisible] = useState(true);
@@ -45,16 +46,6 @@ export default function CardMetas({ meta, onClose }) {
   const normalText = match ? match[2] : "";
   if (!visible || !meta) return null;
   const scrollClass = needsScroll ? "overflow-y-auto" : "";
-
-  if (!meta.card.regionalizacao) {
-  meta.card.regionalizacao = {
-    titulo: "REGIONALIZAÇÃO",
-    subtitulo: "Subtítulo de teste",
-    descricao: "Descrição de teste",
-    nota: "Nota de teste",
-    imagem: ImgRegionalizacao
-  };
-}
 
   return (
     <div
@@ -186,51 +177,79 @@ export default function CardMetas({ meta, onClose }) {
             </div>
           </div>
           <div className="flex flex-col items-center justify-center">
-            {meta.card.regionalizacao && (
-              <div className="flex flex-col items-center justify-center ">
-                <div
-                  className="w-[100rem] h-2 "
-                  style={{ backgroundColor: meta.card.eixo_cor_principal }}
-                ></div>
-                <div className="flex flex-row flex-nowrap items-start justify-around gap-60 py-12 shadow-[1px_8px_20px_#00000080] m-8 p-8 rounded-[2rem] border-solid w-[75rem] bg-white">
-                  <div className="flex flex-col flex-nowrap items-start justify-center gap-12">
-                    <h3
-                      style={{ color: meta.card.eixo_cor_principal }}
-                      className="text-4xl font-semibold"
-                    >
-                      {meta.card.regionalizacao.titulo}
-                    </h3>
-                    <p className="font-bold text-lg">
-                      {meta.card.regionalizacao.subtitulo}
-                    </p>
-                    <p className="text-lg">
-                      {meta.card.regionalizacao.descricao}
-                    </p>
-                    <p className="font-bold text-lg">
-                      {meta.card.regionalizacao.nota}
-                    </p>
+            {meta.card.regionalizacao &&
+              (() => {
+                const reg = meta.card.regionalizacao;
+                const normalize = (s) =>
+                  (s || "")
+                    .normalize("NFD")
+                    .replace(/[\u0300-\u036f]/g, "")
+                    .toLowerCase()
+                    .trim();
+
+                const status = normalize(reg.status_regionalizacao);
+                const isNaoRegionalizavel =
+                  status === "nao regionalizavel" ||
+                  status === "nao regionalizavel" ||
+                  status === "nao regionalizavel";
+                const imagemUrl =
+                  reg.imagem ||
+                  reg.mapa_file ||
+                  reg.map_image ||
+                  reg.mapa_file ||
+                  null;
+
+                return (
+                  <div className="flex flex-col items-center justify-center ">
+                    <div
+                      className="w-[100rem] h-2 "
+                      style={{ backgroundColor: meta.card.eixo_cor_principal }}
+                    />
+                    <div className="flex flex-row flex-nowrap items-start justify-around gap-60 py-12 shadow-[1px_8px_20px_#00000080] m-8 p-8 rounded-[2rem] border-solid w-[75rem] bg-white">
+                      <div className="flex flex-col flex-nowrap items-start justify-center gap-12">
+                        <h3
+                          style={{ color: meta.card.eixo_cor_principal }}
+                          className="text-4xl font-semibold"
+                        >
+                          Regionalização
+                        </h3>
+                        {isNaoRegionalizavel && (
+                          <p className="font-bold text-lg capitalize">
+                            {meta.card.regionalizacao.status_regionalizacao}
+                          </p>
+                        )}
+                        {meta.card.regionalizacao.nota_regionalizacao && (
+                          <p className="font-bold text-lg">
+                            {meta.card.regionalizacao.nota_regionalizacao}
+                          </p>
+                        )}
+                      </div>
+                      {imagemUrl && (
+                        <div
+                          style={{
+                            border: `3px solid ${meta.card.eixo_cor_principal}`,
+                            padding: `1rem`,
+                            borderRadius: `2rem`,
+                            width: `100%`,
+                            maxWidth: `20rem`,
+                            height: `auto`,
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center"
+                          }}
+                          className="flex items-center justify-center"
+                        >
+                          <SafeSVG
+                            src={corrigirUrlImagem(imagemUrl)}
+                            alt="Mapa da regionalização"
+                            className="mt-4 rounded-xl"
+                          />
+                        </div>
+                      )}
+                    </div>
                   </div>
-                  <div
-                    style={{
-                      border: `3px solid ${meta.card.eixo_cor_principal}`,
-                      padding: `2rem 1rem`,
-                      borderRadius: `2rem`,
-                      width: `auto`,
-                      height: `auto`
-                    }}
-                    className="flex items-center justify-center"
-                  >
-                    {meta.card.regionalizacao.imagem && (
-                      <img
-                        src={meta.card.regionalizacao.imagem}
-                        alt="Mapa da regionalização"
-                        className="mt-4 rounded-xl"
-                      />
-                    )}
-                  </div>
-                </div>
-              </div>
-            )}
+                );
+              })()}
           </div>
         </div>
         <div
