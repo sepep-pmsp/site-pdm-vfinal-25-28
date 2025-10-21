@@ -37,10 +37,10 @@ return (
         <section className="relative bg-[color:var(--color-white)] shadow-[1px_1px_20px_#00000045] w-[90rem] h-32 rounded-[3rem] bottom-16 p-4 z-10 news-mobile">
             <div className="flex flex-row justify-center items-center flex-wrap h-full news_navbar_text">
                 <div className="w-4/12">
-                    <h2 className="text-[var(--color-cyan-medium)] text-5xl">na<br /> mídia</h2>
+                    <h2 className="text-[var(--color-cyan-medium)] xl:text-5xl">na<br /> mídia</h2>
                 </div>
-                <div className="w-6/12 pt-5 flex flex-col items-center h-full news-nabvar-text">
-                    <div className="text-2xl texto-carrosel relative w-full">
+                <div className="w-6/12 pt-5 flex flex-col items-center h-full news-nabvar-text max-md:relative max-md:-left-10">
+                    <div className="xl:text-2xl texto-carrosel relative w-full text-sm">
                         {news.map((news, index) => (
                             <a
                                 key={index}
