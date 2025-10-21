@@ -35,7 +35,7 @@ export default function ModalPrefeito({ isOpen, onClose, carta }) {
       onClick={onClose}
     >
       <div
-        className={`bg-[var(--color-navy)] w-full max-h-full max-xl:overflow-y-auto left-0 top-0 rounded-4xl xl:p-8 xl:w-full xl:h-[48rem] xl:relative xl:shadow-lg transition-all duration-400
+        className={`bg-[var(--color-navy)] w-full max-h-full overflow-y-auto hide-scroll max-xl:left-0 max-xl:top-0 max-xl:rounded-4xl xl:p-8 xl:w-full xl:relative xl:shadow-lg xl:transition-all xl:duration-400 xl:max-h-[50rem] xl:max-w-[90rem] xl:rounded-4xl 
           ${closing ? "slide-out-bottom" : "animate-slide-up"}`}
         onClick={(e) => e.stopPropagation()}
       >
