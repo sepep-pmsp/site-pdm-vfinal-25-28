@@ -177,7 +177,7 @@ export default function FiltroParticipacao({ filtros, onFiltrar }) {
     </div>
   );
   return (
-    <div className="flex flex-col items-start justify-center flex-nowrap w-full max-xl:h-auto relative left-0 p-6 gap-12 max-xl:bg-[#f7f7f7] max-lg:top-0 max-md:-top-30 max-xl:top-0 xl:max-w-[90rem] xl:h-[40rem] xl:overflow-y-auto xl:z-10 xl:relative xl:justify-start xl:bottom-[10rem] xl:bg-white xl:p-8 xl:rounded-4xl xl:shadow-md" style={{ maxWidth: "1427px", margin: "0 auto" }}>
+    <div className="flex flex-col items-start justify-center flex-nowrap w-full max-xl:h-auto relative left-0 p-6 gap-12 max-xl:bg-[#f7f7f7] max-lg:top-0 max-md:-top-30 max-xl:top-0 xl:max-w-[90rem] xl:h-[40rem] max-xl:overflow-y-auto xl:z-10 xl:relative xl:justify-start xl:bottom-[10rem] xl:bg-white xl:p-8 xl:rounded-4xl xl:shadow-md" style={{ maxWidth: "1427px", margin: "0 auto" }}>
       <div className="flex flex-col flex-nowrap items-start justify-center gap-8 md:flex md:flex-row md:flex-nowrap md:items-center md:justify-between md:w-full xl:flex xl:flex-row xl:flex-nowrap xl:items-center xl:justify-between xl:mb-8 xl:px-8 xl:py-4">
         <img src={ImgFiltro} />
         <div className="flex flex-col items-start gap-8 w-72 pt-8 xl:flex xl:flex-row-reverse xl:justify-around xl:w-[30rem] xl:items-center xl:relative">
