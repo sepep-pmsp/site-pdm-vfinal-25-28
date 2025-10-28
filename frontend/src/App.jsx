@@ -5,6 +5,7 @@ import AppRoutes from "./routes/AppRoutes";
 import CookiesBanner from "./content/CookiesBanner";
 import { useEffect } from "react";
 import { enhanceAccessibility, enhanceTextSemantics } from "./utils/accessibilityEnhancer";
+import VLibras from "./components/VLibras/VLibras";
 
 function App() {
     useEffect(() => {
@@ -17,6 +18,7 @@ function App() {
                 <Navbar />
                 <CookiesBanner />
                 <AppRoutes />
+                <VLibras requireCookieConsent={false} />
                 <Footer />
             </>
         </div>
