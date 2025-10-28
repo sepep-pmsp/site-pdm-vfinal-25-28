@@ -78,9 +78,8 @@ if errorlevel 1 exit /b %errorlevel%
 python manage.py seed_transparencia
 if errorlevel 1 exit /b %errorlevel%
 
-python manage.py seed_regionalizacao
+python manage.py seed_mapas_meta
 if errorlevel 1 exit /b %errorlevel%
-
 
 python manage.py seed_devolutivas
 if errorlevel 1 exit /b %errorlevel%
