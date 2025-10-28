@@ -25,7 +25,7 @@ export default function CardItem({
     : "";
 
   const layerClass = (visible) =>
-    `absolute inset-0 transition-opacity duration-500 ${
+    `absolute inset-0 transition-opacity duration-500 xl:items-center xl:flex ${
       visible
         ? "opacity-100 pointer-events-auto"
         : "opacity-0 pointer-events-none"
