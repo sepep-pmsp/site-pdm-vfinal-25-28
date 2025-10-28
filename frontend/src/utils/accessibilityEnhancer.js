@@ -1,7 +1,3 @@
-// src/utils/accessibilityEnhancer.js
-// Funções para aplicar melhorias automáticas de acessibilidade no DOM.
-// IMPORTANTE: roda no cliente (browser). Teste em homolog antes de PROD.
-
 export function enhanceAccessibility(root = document, options = {}) {
   const doc = root instanceof Document ? root : root.ownerDocument || document;
   const cfg = {
@@ -11,35 +7,23 @@ export function enhanceAccessibility(root = document, options = {}) {
   };
 
   try {
-    // 1) definir lang no <html> se não definido
     if (!doc.documentElement.getAttribute("lang")) {
       doc.documentElement.setAttribute("lang", cfg.lang);
     }
 
-    // 2) injetar estilos de foco visível (evita duplicados)
     if (!doc.getElementById(cfg.focusStyleId)) {
       const style = doc.createElement("style");
       style.id = cfg.focusStyleId;
       doc.head.appendChild(style);
     }
 
-    // 3) criar região aria-live global para anúncios (se não existir)
     if (!doc.getElementById(cfg.liveRegionId)) {
       const live = doc.createElement("div");
       live.id = cfg.liveRegionId;
       live.setAttribute("role", "status");
       live.setAttribute("aria-live", "polite");
       live.setAttribute("aria-atomic", "true");
-      Object.assign(live.style, {
-        position: "absolute",
-        width: "1px",
-        height: "1px",
-        overflow: "hidden",
-        clip: "rect(0 0 0 0)",
-      });
       doc.body.appendChild(live);
-
-      // helper global para anunciar mensagens
       if (typeof window !== "undefined") {
         window.__a11yAnnounce = (msg) => {
           try {
@@ -52,30 +36,16 @@ export function enhanceAccessibility(root = document, options = {}) {
         };
       }
     }
-
-    // 4) adicionar skip link se não existe
     if (!doc.getElementById("__a11y-skiplink")) {
       const skip = doc.createElement("a");
       skip.href = "#__a11y-main";
       skip.id = "__a11y-skiplink";
       skip.textContent = "Ir para o conteúdo (pressione Enter)";
       skip.className = "sr-only";
-      // estilos mínimos (mostra quando focado)
-      Object.assign(skip.style, {
-        position: "absolute",
-        top: "0",
-        left: "0",
-        padding: "8px",
-        background: "white",
-        zIndex: "9999",
-        color: "black",
-      });
       skip.addEventListener("focus", () => skip.classList.remove("sr-only"));
       skip.addEventListener("blur", () => skip.classList.add("sr-only"));
       doc.body.insertBefore(skip, doc.body.firstChild);
     }
-
-    console.info("✅ Acessibilidade base aplicada");
     if (typeof window !== "undefined" && window.__a11yAnnounce) {
       window.__a11yAnnounce("Melhorias de acessibilidade aplicadas.");
     }
@@ -195,7 +165,6 @@ export function enhanceTextSemantics(root = document, options = {}) {
     if (window.__a11yAnnounce) {
       window.__a11yAnnounce(`Hierarquia de títulos ajustada. ${applied} alterações aplicadas.`);
     }
-    console.info("%cA11Y Text Semantics:", "font-weight:bold;color:teal", `Alterações aplicadas: ${applied}`);
     return { applied, candidates: allCandidates.length };
   } catch (err) {
     console.error("Erro em enhanceTextSemantics:", err);
