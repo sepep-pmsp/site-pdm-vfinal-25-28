@@ -32,9 +32,9 @@ class ContribuicaoSubPrefeitura(models.Model):
 class Contribuicao(models.Model):
 
     ORIGEM_CHOICES = [
-        ('fala', 'Fala em Audiência Pública'),
-        ('revisao', 'Sugestão de Revisão/Alteração no Participe+'),
-        ('proposta', 'Proposta no Participe+')
+        ('fala', 'Fala em\n Audiência Pública'),
+        ('revisao', 'Sugestão de Revisão/\nAlteração no Participe+'),
+        ('proposta', 'Proposta no\n Participe+')
     ]
 
 
