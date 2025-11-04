@@ -5,7 +5,7 @@
     width: 26%;
     position: absolute;
     top: 0rem;
-    z-index: 40;
+    /* z-index: 40; */
     pointer-events: none;
     left: 88rem;
     transition: all .5s ease-in-out;
@@ -24,7 +24,6 @@ body.menu-aberto .img-fundo {
         width: 77%;
         position: absolute;
         top: 5.5rem;
-        z-index: 40;
         pointer-events: none;
         left: 15rem;
         transition: all .5s ease-in-out;
@@ -38,7 +37,6 @@ body.menu-aberto .img-fundo {
         width: 100%;
         position: absolute;
         top: 4rem;
-        z-index: 40;
         pointer-events: none;
         left: 0rem;
         transition: all .5s ease-in-out;

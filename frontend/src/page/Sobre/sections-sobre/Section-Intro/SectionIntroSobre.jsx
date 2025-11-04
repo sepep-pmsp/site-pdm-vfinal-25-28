@@ -39,7 +39,7 @@ export default function SectionIntroSobre({
                 className="max-md:w-60 max-xl:w-full max-xl:max-w-[25rem] max-xl:h-auto"
                 src={logo}
               />
-              <p className="text-3xl break-all w-150 max-xl:text-lg max-xl:w-full max-xl:max-w-xs max-xl:leading-normal max-xl:text-left">
+              <p className="text-3xl break-all pr-10 max-xl:text-lg max-xl:w-full max-xl:max-w-xs max-xl:leading-normal max-xl:text-left">
                 {banner.subtitulo}
               </p>
             </div>

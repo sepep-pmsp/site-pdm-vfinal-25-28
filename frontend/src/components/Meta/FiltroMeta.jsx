@@ -16,6 +16,8 @@ export default function FiltroMeta({ onCardsUpdate, eixoIdFromNav }) {
     limparFiltros,
   } = useFiltrosMetas(onCardsUpdate, eixoIdFromNav);
 
+  
+
   if (!data) return <p>Carregando filtros...</p>;
 
   return (
@@ -57,7 +59,7 @@ export default function FiltroMeta({ onCardsUpdate, eixoIdFromNav }) {
           />
 
           {/* Coluna direita - Eixos */}
-          <FiltroEixos
+          <FiltroEixos 
             eixos={data.eixos}
             filtrosSelecionados={filtrosSelecionados}
             toggleSelecionado={toggleSelecionado}

@@ -193,14 +193,16 @@ export default function Navbar() {
   return (
     <div className="fixed p-2 bg-white z-30 w-full navbar-container">
       <div className="flex flex-row justify-around gap-56 items-center p-2 display-navbar">
-        <div>
-          <span className="text-4xl roboto-light navbar_span">
-            PREFEITURA DE SÃO PAULO |{" "}
-            <span>
-              <strong className="font-bebas-regular">PROGRAMA DE METAS</strong>
-            </span>
-          </span>
-        </div>
+        <a href="/">
+            <div>
+                <span className="text-4xl roboto-light navbar_span">
+                    PREFEITURA DE SÃO PAULO |{" "}
+                    <span>
+                    <strong className="font-bebas-regular">PROGRAMA DE METAS</strong>
+                    </span>
+                </span>
+            </div>
+        </a>
         <div className="z-50 relative btn-menu-navbar">
           <button
             className="z-50 relative"
