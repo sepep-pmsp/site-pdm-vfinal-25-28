@@ -48,16 +48,16 @@ export default function ModalParticipacaoSocial({ isOpen, onClose, apresentacao 
           onClick={(e) => e.stopPropagation()}
         >
           <button
-            className="absolute top-10 right-20 cursor-pointer z-[10100]"
+            className="absolute top-10 right-20 cursor-pointer z-[10100] max-lg:right-0 pr-8"
             onClick={onClose}
           >
             <i className="fa-solid fa-xmark text-white text-6xl"></i>
           </button>
 
           <div className="lg:flex items-center justify-center flex-row h-full gap-30">
-            <div className="max-sm:max-w-full  lg:flex flex-col items-start justify-center gap-3 p-8 w-180 z-[10100]">
-              <div className="modal-header-mobile pb-10">
-                <h2 className="max-md:text-4xl lg:text-8xl text-white font-bebas-regular">{apresentacao?.titulo}</h2>
+            <div className="max-sm:max-w-full  lg:flex flex-col items-start justify-center gap-3 p-8 w-180 z-[10101]">
+              <div className="modal-header-mobile pb-10 relative z-20">
+                <h2 className="max-md:text-4xl lg:text-8xl text-white font-bebas-regular z-50">{apresentacao?.titulo}</h2>
                 <p className="max-md:pt-0 max-md:text-lg text-white lg:text-white text-2xl pt-8 roboto-medium">{apresentacao?.subtitulo}</p>
               </div>
               <div className="flex flex-col gap-3 overflow-y-auto pr-4 hide-scroll xl:max-h-[25rem] lg:max-h-[20rem] md:max-h-[15rem] max-h-[25rem]">
@@ -71,7 +71,7 @@ export default function ModalParticipacaoSocial({ isOpen, onClose, apresentacao 
             </div>
             <div>
               <img className="max-md:w-36 max-md:relative max-md:left-1/4 lg:w-150 relative z-[10100]" src={apresentacao_logo_pdm} alt="" />
-              <img className="w-full h-full max-sm:absolute max-sm:left-30 max-sm:top-0 max-sm:max-w-screen max-sm:h-full lg:absolute right-8 top-0  max-lg:w-full  max-lg:h-auto max-w-[43.9rem]" src={bg_fundo} alt="" />
+              <img className="w-full h-full max-sm:absolute max-sm:left-30 max-sm:top-0 max-sm:max-w-screen max-sm:h-full lg:absolute right-8 top-0  max-lg:w-full  max-lg:h-auto max-w-[43.9rem] z-10" src={bg_fundo} alt="" />
             </div>
           </div>
         </div>

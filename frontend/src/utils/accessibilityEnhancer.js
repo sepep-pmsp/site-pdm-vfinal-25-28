@@ -47,7 +47,7 @@ export function enhanceAccessibility(root = document, options = {}) {
       doc.body.insertBefore(skip, doc.body.firstChild);
     }
     if (typeof window !== "undefined" && window.__a11yAnnounce) {
-      window.__a11yAnnounce("Melhorias de acessibilidade aplicadas.");
+    //   
     }
     return { ok: true };
   } catch (err) {
@@ -163,7 +163,7 @@ export function enhanceTextSemantics(root = document, options = {}) {
     }
 
     if (window.__a11yAnnounce) {
-      window.__a11yAnnounce(`Hierarquia de títulos ajustada. ${applied} alterações aplicadas.`);
+    //   
     }
     return { applied, candidates: allCandidates.length };
   } catch (err) {

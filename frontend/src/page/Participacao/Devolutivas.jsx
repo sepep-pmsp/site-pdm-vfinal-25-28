@@ -23,7 +23,7 @@ export default function Devolutivas({ devolutivas, apresentacao }) {
           <div className="relative w-full max-h-screen">
             <SafeSVG
               src={corrigirUrlImagem(devolutivas.imagem_fundo)}
-              className="max-md:min-h-[70vh] max-md:w-full max-xl:min-h-[47vh] lg:w-full min-h-[70vh] object-cover"
+              className="max-md:min-h-[70vh] max-md:w-full max-xl:min-h-[47vh] lg:w-full min-h-[70vh] object-cover max-md:hidden"
             />
             <div className="absolute top-0 left-0 w-full h-full bg-[var(--color-blue-light)] bg-opacity-40 z-0 pointer-events-none"></div>
           </div>

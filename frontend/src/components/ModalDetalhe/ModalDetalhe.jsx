@@ -13,7 +13,7 @@ export default function ModalDetalhe({ selecionado, onClose }) {
     proposta: "Proposta",
     fala_audiencia: "Fala em\n audiência",
     sugestao_alteracao: "Sugestão de\n alteração",
-    Participe_Mais: "Proposta\n no Participe+"
+    Participe_Mais: "Proposta no\n Participe+"
   };
 
   return (
@@ -94,14 +94,11 @@ export default function ModalDetalhe({ selecionado, onClose }) {
               <>
                 <div className="max-xl:w-60 max-xl:relative max-xl:left-0 max-xl:top-0 max-lg:min-w-full max-xl:max-w-full lg:relative top-[-5.5rem] left-[55rem] max-w-md bg-[var(--color-cyan-dark)] z-[1] flex items-center justify-center break-all rounded-b-4xl h-auto">
                   <p
-                    className="BebasNeue max-xl:text-3xl lg:text-6xl text-white px-8"
+                    className="BebasNeue max-xl:text-3xl lg:text-6xl text-white px-8 whitespace-normal"
                     dangerouslySetInnerHTML={{
-                      __html: (tipoMap[detalhe.tipo] || detalhe.tipo).replace(
-                        /\n/g,
-                        "<br/>"
-                      )
+                        __html: (tipoMap[detalhe.tipo] || detalhe.tipo).replace(/\n/g, "<br />")
                     }}
-                  ></p>
+                    ></p>
                 </div>
                 <div className="max-xl:w-full max-xl:h-1 max-xl:left-0 max-xl:bottom-15 lg:h-1 w-[90%] relative left-16 bottom-28 bg-[var(--color-navy)]"></div>
               </>
