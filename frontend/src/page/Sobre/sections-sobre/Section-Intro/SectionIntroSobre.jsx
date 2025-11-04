@@ -31,7 +31,7 @@ export default function SectionIntroSobre({
             <div className="absolute top-0 left-0 w-full h-full bg-[#04003bda] z-0 pointer-events-none"></div>
           )}
         </div>
-        <div className="absolute inset-0 z-10 top-20 flex flex-row justify-center items-start gap-[30rem] max-md:flex-col max-md:items-start  max-lg:flex-row max-lg:items-center max-xl:items-center max-xl:justify-start max-xl:gap-2 max-xl:top-2 max-md:left-16">
+        <div className="absolute inset-0 z-10 top-20 flex flex-row justify-center items-start gap-[30rem] max-md:flex-col max-md:items-start  max-lg:flex-row max-lg:items-center max-xl:items-center max-xl:justify-start max-xl:gap-2 max-xl:top-2 max-md:left-16" style={{ maxWidth: "1415px", height:"auto", margin: "0 auto" }}>
           <div className="flex flex-col flex-nowrap items-start justify-center gap-20">
             <div className="flex flex-col items-start text-white gap-8">
               <p className="text-4xl">{banner.supertitulo}</p>
