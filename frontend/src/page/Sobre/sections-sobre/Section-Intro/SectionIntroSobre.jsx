@@ -19,7 +19,7 @@ export default function SectionIntroSobre({
 
   return (
     <div>
-      <section className="relative w-full flex min-h-full max-lg:h-[140vh] xl:h-[87vh] lg:h-[75vh] overflow-hidden">
+      <section className={`relative w-full flex min-h-full overflow-hidden transition-all duration-500 ${selectedButton !== null ? "max-lg:h-[175vh]" : "max-lg:h-[140vh]"} xl:h-[87vh] lg:h-[75vh]`}>
         <div>
           <img
             className="max-xl:hidden xl:absolute top-[-10rem] object-cover object-top"
@@ -31,7 +31,7 @@ export default function SectionIntroSobre({
             <div className="absolute top-0 left-0 w-full h-full bg-[#04003bda] z-0 pointer-events-none"></div>
           )}
         </div>
-        <div className="absolute inset-0 z-10 top-20 flex flex-row justify-center items-start gap-[30rem] max-md:flex-col max-md:items-start  max-lg:flex-row max-lg:items-center max-xl:items-center max-xl:justify-start max-xl:gap-2 max-xl:top-2 max-md:left-16" style={{ maxWidth: "1415px", height:"auto", margin: "0 auto" }}>
+        <div className="absolute inset-0 z-10 top-20 flex flex-row justify-center items-start gap-8 max-md:flex-col max-md:items-center max-md:justify-evenly max-lg:flex-row max-lg:items-center max-xl:items-center max-xl:justify-start max-xl:gap-2 max-xl:top-2 max-md:left-8" style={{ maxWidth: "1415px", height:"auto", margin: "0 auto" }}>
           <div className="flex flex-col flex-nowrap items-start justify-center gap-20">
             <div className="flex flex-col items-start text-white gap-8">
               <p className="text-4xl">{banner.supertitulo}</p>
@@ -39,7 +39,7 @@ export default function SectionIntroSobre({
                 className="max-md:w-60 max-xl:w-full max-xl:max-w-[25rem] max-xl:h-auto"
                 src={logo}
               />
-              <p className="text-3xl break-all pr-10 max-xl:text-lg max-xl:w-full max-xl:max-w-xs max-xl:leading-normal max-xl:text-left">
+              <p className="text-3xl break-all pr-10 max-xl:text-lg max-xl:w-full max-xl:max-w-xs max-xl:leading-normal max-xl:text-left xl:w-[57rem]">
                 {banner.subtitulo}
               </p>
             </div>
@@ -75,7 +75,7 @@ export default function SectionIntroSobre({
                   {selectedButton !== null && (
                     <p
                       key={selectedButton}
-                      className="transition-opacity duration-500 ease-in-out opacity-100"
+                      className="transition-opacity duration-500 ease-in-out opacity-100 xl:w-[30rem]"
                     >
                       {buttonsData[selectedButton].message}
                     </p>
@@ -89,9 +89,9 @@ export default function SectionIntroSobre({
               type="download"
               target={banner.link_pdf}
               onClick={() => window.open(banner.link_pdf, "_blank")}
-              className="h-44 w-72 shadow-[0px_9px_20px_1px_#00000052] flex items-center justify-center flex-nowrap flex-col transition-all duration-[0.3s] ease-[ease-in-out] text-[color:var(--color-white)] cursor-pointer bg-[color:var(--color-cyan-medium)] p-8 rounded-2xl hover:-translate-y-2.5"
+              className="h-24 w-42 shadow-[0px_9px_20px_1px_#00000052] flex items-center justify-center flex-nowrap flex-col transition-all duration-[0.3s] ease-[ease-in-out] text-[color:var(--color-white)] cursor-pointer bg-[color:var(--color-cyan-medium)] p-8 rounded-2xl hover:-translate-y-2.5 md:h-44 md:w-72"
             >
-              <p className="text-2xl uppercase text-white">
+              <p className="text-sm uppercase text-white md:text-2xl ">
                 <b>baixar o pdf</b>
                 <br></br> do Programa<br></br>de metas
               </p>
