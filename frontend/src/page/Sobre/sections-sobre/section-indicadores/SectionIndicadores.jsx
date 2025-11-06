@@ -13,7 +13,7 @@ export default function SectionIndicadores({ sobre }) {
       <div className="max-lg:w-80 max-lg:relative max-lg:left-0 lg:flex flex-col items-start justify-center gap-40 w-[60rem] relative left-24">
         <div className="max-lg:w-80 max-lg:relative max-lg:left-0 max-md:left-6 max-md:gap-8 lg:mb-10 flex flex-col items-start justify-center flex-nowrap gap-15 relative left-40">
           <div className="max-lg:w-80 max-2xl:max-w-3xl lg:flex flex-col flex-nowrap items-start justify-center w-[61rem] mt-10 div-titulo-ind-mobile">
-            <h2 className="text-8xl font-bold mb-4 text-[var(--color-navy)] titulo-ind-mobile">indicadores</h2>
+            <h2 className="text-7xl font-bold mb-4 text-[var(--color-navy)] titulo-ind-mobile">indicadores</h2>
             <p className="max-lg:w-80 lg:text-xl">{indicadores.texto}</p>
           </div>
           <div className="max-md:w-80 max-lg:w-80 max-2xl:max-w-lg max-xl:w-80 lg:flex flex-col flex-nowrap items-start justify-center max-w-5xl mt-10">
