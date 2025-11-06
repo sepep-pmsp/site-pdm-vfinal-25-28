@@ -37,7 +37,7 @@ export default function ModalDetalhe({ selecionado, onClose }) {
                     style={{ border: "2px solid var(--color-navy)" }}
                   >
                     <h3 className="text-lg pb-4">canal</h3>
-                    <p className="text-lg font-semibold bg-[var(--color-navy)] w-full p-6 text-white rounded-t-xl text-center">
+                    <p className="text-sm font-semibold bg-[var(--color-navy)] w-full p-6 text-white rounded-t-xl text-center">
                       {selecionado.canal}
                     </p>
                   </div>
@@ -45,8 +45,8 @@ export default function ModalDetalhe({ selecionado, onClose }) {
                     className="flex flex-row flex-nowrap items-center justify-center gap-8 rounded-2xl w-full"
                     style={{ border: "2px solid var(--color-navy)" }}
                   >
-                    <h3 className="text-lg pl-8">nome</h3>
-                    <h2 className="text-xl font-semibold bg-[var(--color-navy)] w-full p-6 text-white rounded-r-xl text-center">
+                    <h3 className="text-sm pl-2">nome</h3>
+                    <h2 className="text-sm font-semibold bg-[var(--color-navy)] w-full py-5 px-2 text-white rounded-r-xl text-center">
                       {selecionado.nome}
                     </h2>
                   </div>
@@ -56,11 +56,11 @@ export default function ModalDetalhe({ selecionado, onClose }) {
                   style={{ border: "2px solid var(--color-navy)" }}
                 >
                   <h3 className="text-lg pb-4">subprefeitura</h3>
-                  <div className="flex gap-4 h-full flex-wrap bg-[var(--color-navy)] p-6 rounded-t-xl w-full">
+                  <div className="flex gap-4 h-full flex-wrap bg-[var(--color-navy)] py-5 px-2 rounded-t-xl w-full">
                     {selecionado?.subprefeituras?.map((sub, index) => (
                       <span
                         key={index}
-                        className="p-1 bg-[var(--color-cyan-dark)] text-white rounded text-2xl"
+                        className="p-1 bg-[var(--color-cyan-dark)] text-white rounded text-sm"
                       >
                         {sub}
                       </span>
@@ -76,7 +76,7 @@ export default function ModalDetalhe({ selecionado, onClose }) {
                     {selecionado?.temas?.map((tema, index) => (
                       <span
                         key={index}
-                        className="p-2 bg-[var(--color-cyan-dark)] text-white rounded text-2xl"
+                        className="text-lg p-2 bg-[var(--color-cyan-dark)] text-white rounded text-2xl"
                       >
                         {tema}
                       </span>
@@ -141,7 +141,7 @@ export default function ModalDetalhe({ selecionado, onClose }) {
               ))
             ) : (
               <div className="max-xl:left-0 max-xl:w-[20rem] max-xl:top-8 lg:flex flex-col gap-4 relative left-[35rem] bottom-0 w-[54rem] pb-10">
-                <p className="max-xl:w-95 max-xl:text-sm max-xl:left-6 max-xl:break-all max-xl:relative max-xl:top-0 lg:flex items-start justify-start gap-8 w-[45rem] text-xl">
+                <p className="max-xl:w-80 max-xl:text-sm max-xl:left-6 max-xl:break-all max-xl:relative max-xl:top-0 lg:flex items-start justify-start gap-8 w-[45rem] text-xl">
                   {detalhe.conteudo}
                 </p>
               </div>
