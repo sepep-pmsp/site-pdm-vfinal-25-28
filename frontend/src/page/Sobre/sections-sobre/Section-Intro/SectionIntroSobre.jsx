@@ -19,7 +19,7 @@ export default function SectionIntroSobre({
 
   return (
     <div>
-      <section className={`relative w-full flex min-h-full overflow-hidden transition-all duration-500 ${selectedButton !== null ? "max-lg:h-[175vh]" : "max-lg:h-[140vh]"} xl:h-[87vh] lg:h-[75vh]`}>
+      <section className={`relative w-full flex min-h-full overflow-hidden transition-all duration-500 section-mobile-about ${selectedButton !== null ? "max-lg:h-[175vh]" : "max-lg:h-[140vh]"} xl:h-[87vh] lg:h-[75vh]`}>
         <div>
           <img
             className="max-xl:hidden xl:absolute top-[-10rem] object-cover object-top"

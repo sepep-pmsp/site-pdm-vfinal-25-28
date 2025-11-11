@@ -1,0 +1,5 @@
+@media screen and (max-width: 321px) {
+    .section-mobile-about{
+        height: 240vh;
+    }
+}

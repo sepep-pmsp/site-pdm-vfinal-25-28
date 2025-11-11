@@ -374,7 +374,10 @@
 
 @media screen and (max-width: 361px){
     .grid-eixos-mobile-content{
-        height: 180vh;
+        height: 200vh;
+    }
+    .textos-eixos-mobile-content{
+        margin-bottom: 7rem;
     }
 }
 
