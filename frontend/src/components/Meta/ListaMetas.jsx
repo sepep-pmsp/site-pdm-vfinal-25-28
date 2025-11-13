@@ -17,7 +17,7 @@ export default function ListaMetas({ metas, onSelectMeta }) {
   return (
     // Contêiner para alinhar a lista à direita no desktop
     <div className="w-full flex justify-end">
-      <div className="flex flex-col flex-nowrap justify-center items-stretch max-w-lg md:ml-auto lista-metas-container">
+      <div className="flex flex-col flex-nowrap justify-center items-stretch max-w-lg md:ml-auto">
         {metasOrdenadas.map((meta) => (
           <div
             key={meta.id}

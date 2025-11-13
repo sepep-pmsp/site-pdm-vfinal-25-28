@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
  * @param {number} breakpoint - largura máxima em px (padrão: 725)
  * @returns {boolean} isMobile
  **/
-export function useIsMobile(breakpoint = 1279) {
+export function useIsMobile(breakpoint = 1281) {
   const [isMobile, setIsMobile] = useState(() => {
     if (typeof window !== "undefined") {
       return window.innerWidth <= breakpoint;

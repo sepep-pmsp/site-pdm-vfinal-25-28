@@ -10,7 +10,7 @@ export default function Metas() {
   const [metas, setMetas] = useState([]);
   const [selectedMeta, setSelectedMeta] = useState(null);
   const [loading, setLoading] = useState(true);
-  const isMobile = useIsMobile(1024);
+  const isMobile = useIsMobile(1281);
 
   useEffect(() => {
     getMetasIniciais()
@@ -26,7 +26,7 @@ export default function Metas() {
   return (
     <>
       {/* Mobile */}
-      <div className="md:hidden">
+      <div className="md:hidden metas-mobile-wrapper">
         <MetasMobile
           metas={metas}
           setMetas={setMetas}
@@ -35,7 +35,7 @@ export default function Metas() {
       </div>
 
       {/* Desktop */}
-      <div className="hidden md:block">
+      <div className="hidden md:block metas-mobile-wrapper-desktop">
         <MetasDesktop
           metas={metas}
           setMetas={setMetas}

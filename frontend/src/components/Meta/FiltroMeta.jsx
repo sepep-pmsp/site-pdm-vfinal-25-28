@@ -7,7 +7,7 @@ import FiltroMetaMobile from "./FiltroMetaMobile";
 import { useFiltrosMetas } from "../../hooks/useFiltrosMetas";
 
 export default function FiltroMeta({ onCardsUpdate, eixoIdFromNav }) {
-  const isMobile = useMediaQuery({ maxWidth: 1025 });
+  const isMobile = useMediaQuery({ maxWidth: 1281 });
 
   const {
     data,

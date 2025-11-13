@@ -25,7 +25,7 @@ export default function VLibras({ enabled = true, requireCookieConsent = true })
         const wrapper = document.createElement("div");
         wrapper.className = "vw-wrapper";
         wrapper.innerHTML = `
-            <div vw class="enabled">
+            <div vw class="enabled vLibras-mobile">
                 <div vw-access-button class="active"></div>
                 <div vw-plugin-wrapper>
                 <div class="vw-plugin-top-wrapper"></div>

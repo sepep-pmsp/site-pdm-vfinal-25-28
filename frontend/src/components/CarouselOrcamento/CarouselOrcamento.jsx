@@ -35,7 +35,7 @@ export default function CarouselOrcamento() {
 
   return (
     // largura fixa em desktop para bater com o mock; o pai alinha à direita
-    <div className="w-full md:w-[860px]">
+    <div className="w-full md:w-[860px] Wrapper-Mobile">
       {/* ================= MOBILE ================= */}
       <div className="block md:hidden">
         <div className="relative bg-white rounded-[1.25rem] shadow-xl px-5 py-6 max-w-md mx-auto overflow-hidden box-border">
@@ -164,7 +164,7 @@ export default function CarouselOrcamento() {
       {/* ================= DESKTOP ================= */}
       <div className="hidden md:block">
         {/* Wrapper que empurra o conjunto para a direita */}
-        <div className="md:ml-auto md:w-[1040px] lg:w-[1160px] xl:w-[1045px]">
+        <div className="md:ml-auto md:w-[1040px] lg:w-[1160px] xl:w-[1045px] wrapper-container-mobile">
           <div className="grid grid-cols-2 gap-6 items-stretch">
             {/* VISÃO GERAL (card maior) */}
             <div className="bg-white rounded-[20px] shadow-[0_12px_30px_rgba(0,0,0,.12)] px-8 py-7 min-h-[260px] flex flex-col gap-4">
@@ -205,7 +205,7 @@ export default function CarouselOrcamento() {
                     Metas por eixo
                   </div>
 
-                  <div className="relative left-4 mt-2 w-[165px] max-w-full">
+                  <div className="relative left-4 mt-2 w-[165px] max-w-full carousel-mobile-orçamento">
                     <div
                       className="rounded-xl px-7 py-3 text-center w-full"
                       style={{ backgroundColor: eixo.corPrincipal }}
@@ -245,7 +245,7 @@ export default function CarouselOrcamento() {
                     </button>
                   </div>
 
-                  <div className="mt-3 w-[210px]">
+                  <div className="mt-3 w-[210px] legenda-mobile-orçamento">
                     <div
                       className="h-[2px]"
                       style={{ backgroundColor: eixo.corPrincipal }}

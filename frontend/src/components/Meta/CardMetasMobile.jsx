@@ -8,7 +8,7 @@ export default function CardMetas({ meta, onClose }) {
     const [closing, setClosing] = useState(false);
     const contentRef = useRef(null);
     const [needsScroll, setNeedsScroll] = useState(false);
-    const isMobile = useIsMobile(768);
+    const isMobile = useIsMobile(1281);
 
     useEffect(() => {
         document.body.style.overflow = "hidden";
@@ -59,7 +59,7 @@ export default function CardMetas({ meta, onClose }) {
                 className={`relative flex flex-col h-screen md:h-auto w-full md:w-[60rem] lg:w-[80rem] xl:w-[90rem] 
         shadow-lg transition-all ${closing ? "slide-out-bottom" : "animate-slide-up"
                     } ${scrollClass} 
-        md:rounded-3xl overflow-hidden`}
+        md: overflow-hidden`}
                 onClick={(e) => e.stopPropagation()}
                 style={{
                     scrollbarColor: `${meta.card.eixo_cor_principal} transparent`,

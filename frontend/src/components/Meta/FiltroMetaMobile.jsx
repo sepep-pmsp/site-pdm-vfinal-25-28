@@ -270,8 +270,8 @@ export default function FiltroMetaMobile({
 
   return (
     <>
-      <div className="md:hidden bg-[var(--color-navy,#0A2540)] text-white">
-        <div className="max-md:min-w-sm md:w-screen">
+      <div className="xxl:hidden bg-[var(--color-navy,#0A2540)] text-white">
+        <div className="max-xxl:min-w-sm xxl:w-screen">
           <button
             type="button"
             onClick={toggleOpen}
@@ -297,7 +297,7 @@ export default function FiltroMetaMobile({
         <div
           role="dialog"
           aria-modal="true"
-          className="fixed inset-0 z-[1000] md:hidden"
+          className="fixed inset-0 z-[1000] xxl:hidden"
         >
           <div className="absolute inset-0 bg-white" />
           <div

@@ -1,5 +1,45 @@
 @media screen and (max-width: 321px) {
-    .section-mobile-about{
+    .section-mobile-about {
         height: 240vh;
+    }
+}
+
+@media screen and (min-width: 1279px) and (max-width: 1281px) {
+    .Wrapper-Mobile {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 871px;
+        gap: 2rem;
+        left: 0;
+    }
+
+    .wrapper-container-mobile {
+        width: 871px;
+    }
+
+    .carousel-mobile-orçamento {
+        left: -5px;
+    }
+
+    .legenda-mobile-orçamento {
+        width: 7rem;
+    }
+
+    .list-metas-mobile {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .metas-mobile-wrapper{
+        display: block;
+    }
+
+    .metas-mobile-wrapper-desktop{
+        display: none;
     }
 }
