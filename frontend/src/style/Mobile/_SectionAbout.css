@@ -102,4 +102,8 @@
         flex-wrap: wrap;
         flex-direction: row;
     }
+
+    .img-fundo{
+        left: 59rem !important;
+    }
 }
