@@ -68,11 +68,38 @@
         position: relative;
         left: 9rem;
     }
-    .card-eixos{
+
+    .card-eixos {
         left: 2rem !important;
         top: 5rem !important;
     }
-    .more-info-mobile-section{
+
+    .more-info-mobile-section {
         flex-wrap: wrap;
+    }
+
+    .btn-download {
+        left: -5rem;
+        position: relative;
+    }
+
+    .intro-section-about-mobile {
+        position: relative;
+        left: 5rem;
+    }
+
+    .resposta-sobre-mobile {
+        position: relative;
+        left: -2rem;
+    }
+
+    .texto-como-e-feito-mobile {
+        width: 60rem;
+    }
+
+    .mobile-section-about {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
     }
 }

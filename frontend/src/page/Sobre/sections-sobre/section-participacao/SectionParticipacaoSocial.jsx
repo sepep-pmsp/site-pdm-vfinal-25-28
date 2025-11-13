@@ -12,14 +12,14 @@ export default function SectionParticipacaoSocial({ sobre }) {
       <div className="max-md:hidden lg:h-1 lg:w-full lg:bg-[var(--color-navy)]" style={{ maxWidth: "1305px", margin: "0 auto" }}></div>
       <div>
         <div className="mb-10">
-          <div className="max-2xl:w-70 lg:flex flex-col flex-nowrap items-start justify-center max-w-4xl" style={{ maxWidth: "1305px", height:"auto", margin: "0 auto" }}>
+          <div className="max-2xl:w-70 lg:flex flex-col flex-nowrap items-start justify-center max-w-4xl" style={{ maxWidth: "1605px", height:"auto", margin: "0 auto" }}>
             <h2 className="max-lg:text-5xl lg:text-8xl font-bold pt-10 mb-4 text-[var(--color-navy)]">
               participação social
             </h2>
-            <p className="max-md:w-80 lg:text-xl ">{participacao.texto}</p>
+            <p className="max-md:w-150 lg:text-xl ">{participacao.texto}</p>
           </div>
           {isMobile ? (
-            <div className="flex flex-col items-center justify-center gap-8 mt-8">
+            <div className="flex flex-col items-center justify-center gap-8 mt-8 mobile-section-about">
               <div className="w-full max-w-[30rem] bg-white shadow p-6 rounded-2xl flex flex-col items-center gap-6">
                 <h3 className="text-2xl font-bold text-[var(--color-navy)] border-y">
                   AUDIÊNCIAS PÚBLICAS

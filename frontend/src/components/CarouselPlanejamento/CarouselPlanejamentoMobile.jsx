@@ -19,7 +19,7 @@ export default function CarouselPlanejamentoMobile({ como_feito = [] }) {
       <div className="relative w-full h-64 flex items-center justify-center">
         <button
           onClick={prev}
-          className="absolute left-2 z-30 h-10 w-10 flex items-center justify-center rounded-full bg-white shadow hover:scale-105 transition"
+          className="absolute left-0 z-30 h-10 w-10 flex items-center justify-center rounded-full bg-white shadow hover:scale-105 transition"
         >
           <i className="fa-solid fa-arrow-left text-[var(--color-navy)]"></i>
         </button>
@@ -28,7 +28,7 @@ export default function CarouselPlanejamentoMobile({ como_feito = [] }) {
           if (position < -1) position += length;
           if (position > 1) position -= length;
           let baseClasses =
-            "absolute w-52 h-64 flex items-center justify-center text-center rounded-xl shadow-lg transition-all duration-500 ease-in-out p-4";
+            "absolute w-85 h-94 flex items-center justify-center text-center rounded-xl shadow-lg transition-all duration-500 ease-in-out p-4";
           if (position === 0) {
             return (
               <div
@@ -42,13 +42,13 @@ export default function CarouselPlanejamentoMobile({ como_feito = [] }) {
                   ) : null}
 
                   {slide.titulo && (
-                    <h3 className="text-lg font-semibold">{slide.titulo}</h3>
+                    <h3 className="text-lg font-semibold max-md:text-sm">{slide.titulo}</h3>
                   )}
                   {slide.conteudo && (
-                    <p className="text-sm leading-snug">{slide.conteudo}</p>
+                    <p className="text-lg leading-snug max-md:text-sm">{slide.conteudo}</p>
                   )}
                   {slide.descricao && (
-                    <p className="text-sm leading-snug">{slide.descricao}</p>
+                    <p className="text-lg leading-snug max-md:text-sm">{slide.descricao}</p>
                   )}
                 </div>
               </div>
@@ -81,7 +81,7 @@ export default function CarouselPlanejamentoMobile({ como_feito = [] }) {
         {/* Botão direita */}
         <button
           onClick={next}
-          className="absolute right-2 z-30 h-10 w-10 flex items-center justify-center rounded-full bg-white shadow hover:scale-105 transition"
+          className="absolute right-0 z-30 h-10 w-10 flex items-center justify-center rounded-full bg-white shadow hover:scale-105 transition"
         >
           <i className="fa-solid fa-arrow-right text-[var(--color-navy)]"></i>
         </button>
