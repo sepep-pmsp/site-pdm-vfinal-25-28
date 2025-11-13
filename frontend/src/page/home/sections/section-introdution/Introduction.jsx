@@ -17,7 +17,7 @@ export default function Introduction() {
           </video>
         </div>
         {/* Container principal com a logo */}
-        <div className="absolute inset-0 flex flex-row flex-nowrap justify-evenly items-center z-10 mx-38 introducao-mobile">
+        <div className="absolute inset-0 flex flex-row flex-nowrap justify-evenly items-center z-10 introducao-mobile" style={{ maxWidth: "1458px", margin: "0 auto" }}>
           <div className="flex items-center bg-opacity-80 rounded-lg p-8 intro-mobile-banner-img">
             <img
               src={logo_pdm_fbranco}
@@ -26,8 +26,8 @@ export default function Introduction() {
             />
           </div>
           <div className="flex items-center bg-opacity-80 rounded-lg p-8 introducao-mobile-banner">
-            <div className="bg-[var(--color-blue-light)] w-[40rem] h-[44rem] flex items-end justify-center flex-col flex-nowrap gap-16 p-4 introducao-mobile-banner-fundo">
-              <span className="text-white w-[28rem] text-3xl">
+            <div className="bg-[var(--color-blue-light)] xl:w-[40rem] h-[44rem] flex items-end justify-center flex-col flex-nowrap gap-16 p-4 introducao-mobile-banner-fundo">
+              <span className="text-white w-[25rem] text-3xl">
                 <p className="w-60 introducao-mobile-p">
                   Um compromisso público do prefeito com a <strong>gestão eficiente <br></br> e de qualidade</strong>.
                 </p>

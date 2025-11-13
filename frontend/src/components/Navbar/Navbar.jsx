@@ -13,7 +13,7 @@ import Cidade_Empreendedora from "/src/assets/svg/cidade_empreendedora.svg";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [animacao, setAnimacao] = useState("");
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 1269);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1281);
 
   useEffect(() => {
     const handleResize = () => {
@@ -59,7 +59,7 @@ export default function Navbar() {
         content: () => (
           <div className="text-white w-full h-full flex flex-col items-start justify-start text-2xl p-4 cursor-pointer slide-bottom-in">
             <h2 className="z-2 slide-bottom-in-item">sobre o pdm</h2>
-            <img className="max-md:absolute max-md:left-[2.7rem] max-md:w-36 md:absolute left-2 bottom-0" src={Vector_Sobre} />
+            <img className="max-md:absolute max-md:left-[2.7rem] max-md:w-36 md:absolute left-0 bottom-0" src={Vector_Sobre} />
           </div>
         ),
         action: () => goTo("/sobre"),
@@ -70,7 +70,7 @@ export default function Navbar() {
         content: () => (
           <div className="text-white w-full h-full flex flex-col-reverse items-start justify-center px-6 py-4 text-2xl cursor-pointer slide-top-in overflow-auto">
             <h2 className="absolute bottom-4 z-2 slide-top-in-item">pdms anteriores</h2>
-            <img className="max-md:absolute max-md:left-[2.7rem] max-md:w-36 md:absolute w-[16.5rem] left-4 top-0" src={Vector} />
+            <img className="max-md:absolute max-md:left-[2.7rem] max-md:w-36 md:absolute w-[16.5rem] left-0 top-0" src={Vector} />
           </div>
         ),
         action: () => goTo("/historico"),

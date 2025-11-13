@@ -35,11 +35,44 @@
         flex-direction: column;
     }
 
-    .metas-mobile-wrapper{
+    .metas-mobile-wrapper {
         display: block;
     }
 
-    .metas-mobile-wrapper-desktop{
+    .metas-mobile-wrapper-desktop {
         display: none;
+    }
+
+    .introducao-mobile-banner-fundo {
+        width: 25rem;
+
+        .introducao-mobile-p {
+            position: relative;
+            left: 5rem;
+        }
+    }
+
+    .introducao-mobile {
+        margin: 0 5rem !important;
+    }
+
+    .textos-eixos-mobile-content {
+        margin: 0 5rem;
+        width: 55rem;
+        position: relative;
+        left: 2rem;
+    }
+
+    .grid-eixos-mobile-content {
+        width: 67rem;
+        position: relative;
+        left: 9rem;
+    }
+    .card-eixos{
+        left: 2rem !important;
+        top: 5rem !important;
+    }
+    .more-info-mobile-section{
+        flex-wrap: wrap;
     }
 }

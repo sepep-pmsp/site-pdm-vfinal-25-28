@@ -23,7 +23,7 @@ export default function Grid_menu_navbar({ onClose }) {
       {/* Grid lateral (coluna esquerda) */}
       <div className="flex flex-col flex-nowrap items-start gap-4 ">
         <div onClick={() => goTo("/sobre")}>
-          <button className="slide-bottom-in text-white w-80 bg-[var(--color-navy)] h-[25rem] flex flex-col items-start justify-start flex-nowrap text-2xl  p-4 rounded-tr-[3rem] cursor-pointer">
+          <button className="slide-bottom-in text-white w-80 bg-[var(--color-navy)] h-[25rem] flex flex-col items-start justify-start flex-nowrap text-2xl  p-4 rounded-tr-[3rem] cursor-pointer hide-scroll">
             <h2 className="z-2 slide-bottom-in-item">sobre o pdm</h2>
             <img className="relative left-2 top-[2.8rem]" src={Vector_Sobre} />
           </button>

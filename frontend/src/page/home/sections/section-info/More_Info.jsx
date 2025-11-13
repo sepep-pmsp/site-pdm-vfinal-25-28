@@ -38,7 +38,7 @@ export default function More_Info() {
             mais informações
           </h1>
         </div>
-        <div className="flex flex-col flex-nowrap items-center justify-center gap-16 xl:flex xl:items-start xl:justify-center xl:flex-row xl:flex-nowrap xl:gap-40 xl:h-full xl:relative xl:w-full xl:pt-20">
+        <div className="flex flex-col flex-nowrap items-center justify-center gap-16 xl:flex xl:items-start xl:justify-center xl:flex-row xl:flex-nowrap xl:gap-40 xl:h-full xl:relative xl:w-full xl:pt-20 more-info-mobile-section">
           {info.map((item, index) => (
             <div
               key={index}

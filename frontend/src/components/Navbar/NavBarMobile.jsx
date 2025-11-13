@@ -94,7 +94,7 @@ export default function NavBarMobile({ onClose }) {
         <div className="flex flex-row justify-start flex-nowrap items-start gap-4 navbar-mobile-tablets relative right-44">
           <div className="div-mobile-tablets-imgs flex items-start justify-start gap-8">
             <div onClick={() => goTo("/sobre")}>
-              <button className="mobile-bottom-in text-white w-80 bg-[var(--color-navy)] h-60 flex flex-col items-start justify-start flex-nowrap text-2xl p-4 rounded-tr-[3rem] cursor-pointer">
+              <button className="mobile-bottom-in text-white w-80 bg-[var(--color-navy)] h-60 flex flex-col items-start justify-start flex-nowrap text-2xl p-4 rounded-tr-[3rem] cursor-pointer hide-scroll">
                 <h2 className="z-2 mobile-bottom-in-item">sobre o pdm</h2>
                 <img
                   className="relative left-6 top-[2.8rem] mobile-img-in-item"
