@@ -373,18 +373,13 @@
 }
 
 @media screen and (max-width: 361px){
-    .grid-eixos-mobile-content{
-        height: 200vh;
-    }
-    .textos-eixos-mobile-content{
-        margin-bottom: 7rem;
-    }
     .eixo-mobile-content{
         height: 27rem;
     }
 }
 
-@media screen and (max-width: 415px) and (min-height: 900px) and (-webkit-device-pixel-ratio: 2.75) {
+@media screen and (min-width: 410px) and (max-width: 420px)
+  and (min-height: 910px) and (max-height: 930px) {
   .grid-eixos-mobile-content {
     height: 200vh;
   }
