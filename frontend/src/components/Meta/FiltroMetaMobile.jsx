@@ -30,12 +30,14 @@ export default function FiltroMetaMobile({
       .toString()
       .replace(/<[^>]*>/g, "")
       .trim();
-  const norm = (s = "") =>
-    stripHtml(s)
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .toUpperCase()
-      .trim();
+  const norm = (s) => {
+    if (typeof s !== "string") return "";
+    return s
+        .replace(/<[^>]*>/g, "")
+        .replace(/\s+/g, " ")
+        .trim()
+        .toUpperCase();
+    };
 
   // Atualização do pai (debounce) — sempre antes de qualquer return
   const debounceRef = useRef(null);
@@ -504,64 +506,46 @@ export default function FiltroMetaMobile({
                       Selecione a região desejada e as subprefeituras que fazem
                       parte dela.
                     </h3>
-
                     <div className="mt-2 grid grid-cols-3 gap-3">
-                      {zonasOrdenadas.map((name) => {
+                    {zonasOrdenadas.map((name) => {
                         const isCentro = name === "CENTRO";
-                        const isActive =
-                          zonaSelecionada &&
-                          norm(zonaSelecionada) === norm(name);
+                        const zonaObj = regionalizacaoArr.find(
+                        (r) => norm(r?.nome) === norm(name)
+                        );
+                        const isActive = zonaSelecionada === zonaObj?.id;
                         return (
-                          <button
+                        <button
                             key={name}
                             onClick={() => {
-                              const zonaObj = regionalizacaoArr.find(
-                                (r) => norm(r?.nome) === norm(name)
-                              );
-
-                              if (zonaObj?.id) {
-                                toggleSelecionado("zonas", zonaObj.id); // cards
-                                setZonaSelecionada(zonaObj.id); // agora salva o ID
-                              }
-
-                              setSubprefOpen(true);
+                            if (!zonaObj?.id) return;
+                            const isSame = zonaSelecionada === zonaObj.id;
+                            toggleSelecionado("zonas", zonaObj.id);
+                            setZonaSelecionada(isSame ? null : zonaObj.id);
+                            setSubprefOpen(true);
                             }}
                             className={[
-                              "h-16 w-full grid place-items-center rounded-xl border-2 transition",
-                              isActive
-                                ? "bg-black text-white border-black"
+                            "h-16 w-full grid place-items-center rounded-xl border-2 font-bold uppercase tracking-wide transition-all duration-200",
+                            isActive
+                                ? "bg-black text-white border-black scale-[1.02] shadow-md"
                                 : "bg-white text-slate-900 border-black"
                             ].join(" ")}
-                          >
+                            style={{
+                            fontFamily: '"Bebas Neue", sans-serif',
+                            }}>
                             {isCentro ? (
-                              <span
-                                className="text-[13px] font-bold uppercase tracking-wide"
-                                style={{
-                                  fontFamily: '"Bebas Neue", sans-serif'
-                                }}
-                              >
-                                CENTRO
-                              </span>
+                            <span className="text-[13px]">CENTRO</span>
                             ) : (
-                              <span className="leading-tight text-center">
-                                <span className="block text-[10px] uppercase tracking-wide opacity-70">
-                                  ZONA
+                            <span className="leading-tight text-center">
+                                <span className="block text-[10px] opacity-70">ZONA</span>
+                                <span className="block text-[13px]">
+                                {name.split(" ").pop()}
                                 </span>
-                                <span
-                                  className="block text-[13px] font-bold uppercase tracking-wide"
-                                  style={{
-                                    fontFamily: '"Bebas Neue", sans-serif'
-                                  }}
-                                >
-                                  {name.split(" ").pop()}
-                                </span>
-                              </span>
+                            </span>
                             )}
-                          </button>
+                        </button>
                         );
-                      })}
+                        })}
                     </div>
-
                     <div className="mt-6 text-left">
                       <button
                         type="button"
