@@ -5,7 +5,7 @@ import { getFiltroMetasData, postFiltrosSelecionados } from "@/services/Metas/ge
 export function useFiltrosMetas(onCardsUpdate) {
   const [data, setData] = useState(null);
   const [filtrosSelecionados, setFiltrosSelecionados] = useState(() => {
-    const salvo = localStorage.getItem("filtrosSelecionados");
+    const salvo = sessionStorage.getItem("filtrosSelecionados");
     return salvo
       ? JSON.parse(salvo)
       : {
@@ -23,16 +23,16 @@ export function useFiltrosMetas(onCardsUpdate) {
   const [filtrosDebounced] = useDebounce(filtrosSelecionados, 400);
   const ultimoPayload = useRef(null);
 
-  // GET inicial (com cache localStorage)
+  // GET inicial (com cache sessionStorage)
   useEffect(() => {
-    const cache = localStorage.getItem("filtroMetaData");
+    const cache = sessionStorage.getItem("filtroMetaData");
     if (cache) {
       setData(JSON.parse(cache));
     } else {
       getFiltroMetasData()
         .then((res) => {
           setData(res);
-          localStorage.setItem("filtroMetaData", JSON.stringify(res));
+          sessionStorage.setItem("filtroMetaData", JSON.stringify(res));
         })
         .catch(console.error);
     }
@@ -45,7 +45,7 @@ export function useFiltrosMetas(onCardsUpdate) {
     if (payload === ultimoPayload.current) return;
 
     ultimoPayload.current = payload;
-    localStorage.setItem("filtrosSelecionados", payload);
+    sessionStorage.setItem("filtrosSelecionados", payload);
 
     postFiltrosSelecionados(filtrosDebounced, data.regionalizacao)
       .then((res) => onCardsUpdate?.(res))
@@ -76,7 +76,7 @@ export function useFiltrosMetas(onCardsUpdate) {
       termo_busca: "",
     };
     setFiltrosSelecionados(estadoInicial);
-    localStorage.removeItem("filtrosSelecionados");
+    sessionStorage.removeItem("filtrosSelecionados");
     ultimoPayload.current = JSON.stringify(estadoInicial);
     if (data) {
       postFiltrosSelecionados(estadoInicial, data.regionalizacao)
