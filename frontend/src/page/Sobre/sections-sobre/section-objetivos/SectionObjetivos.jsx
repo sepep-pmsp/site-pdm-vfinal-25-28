@@ -40,7 +40,7 @@ export default function SectionObjetivos({ sobre }) {
         <div className="max-2xl:rotate-0 max-2xl:left-[-1rem] max-2xl:w-80 max-2xl:h-auto max-2xl:rounded-tr-[3rem] max-2xl:rounded-br-[3rem] max-2xl:rounded-bl-none max-2xl:bg-[color:var(--color-cyan-dark)] max-2xl:relative max-2xl:top-12 xl:bg-[color:var(--color-cyan-dark)] h-35 rotate-[270deg] relative flex items-center flex-col justify-end p-4 rounded-br-4xl rounded-bl-4xl w-[25rem] right-[9rem] top-[17rem] shadow-[-4px_2px_20px_0px_gray] container-objetivos-mobile">
           <h1 className="text-white text-7xl px-6">objetivos</h1>
         </div>
-        <div className="max-2xl:relative max-2xl:top-15 max-lg:flex max-lg:gap-8 max-lg:relative max-lg:top-12 lg:flex flex-wrap justify-center gap-8">
+        <div className="max-2xl:relative max-2xl:top-15 max-lg:flex max-lg:gap-8 max-lg:relative max-lg:top-12 lg:flex flex-wrap justify-center gap-8 py-8">
           {objetivosArray.map((obj, index) => (
             <div
               key={index}
