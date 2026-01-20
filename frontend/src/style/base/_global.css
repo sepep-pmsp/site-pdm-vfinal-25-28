@@ -1,0 +1,9 @@
+@import "../components/_animations.css";
+@import "../components/_button.css";
+@import "../components/_card.css";
+@import "./_typography.css";
+@import "./_reset.css";
+@import "../utils/_Mobile.css";
+@import "../variables/_colors.css";
+@import "../pages/newscarosel.css";
+@import "../pages/transparencia.css";

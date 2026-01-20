@@ -1,0 +1,398 @@
+@media screen and (min-width: 1279px) and (max-width: 1438px) {
+    .grid-mobile-eixos {
+        width: 70rem;
+
+        & img {
+            right: 4rem;
+        }
+
+        .text-hover-green {
+            top: 142rem;
+            left: 34rem;
+        }
+
+        .text-hover-blue {
+            top: 142rem;
+            left: 66rem;
+        }
+
+        .text-hover-orange {
+            top: 161rem;
+            left: 32.5rem;
+        }
+
+        .text-hover-purple {
+            top: 161rem;
+            left: 65.5rem;
+        }
+
+        .eixos-mobile-header {
+            height: 7rem;
+            right: 24rem;
+        }
+
+        .cardeixos-overlay .card-eixos {
+            position: relative !important;
+            left: auto !important;
+            top: auto !important;
+            width: min(84.2rem, 100%) !important;
+            height: auto !important;
+            max-height: 90vh !important;
+            overflow: auto !important;
+            border-radius: 3rem !important;
+            opacity: 1 !important;
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+        }
+    }
+
+    .cardeixos-overlay { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; padding:1rem; z-index:2; left: 0;
+    top: 0;}
+}
+/*Tablet*/
+@media screen and (min-width: 427px) and (max-width: 769px) {
+    .grid-mobile-eixos {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        width: 80vw;
+        height: 50rem;
+        position: relative;
+        right: 0px;
+        left: 0px;
+    }
+
+    .cardeixos-overlay { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; padding:1rem; z-index:2; left: 0;
+    top: 0;}
+
+    #eixos {
+        height: 100%;
+    }
+
+    .conteudo-eixos {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: nowrap;
+        padding: 0.5rem 1rem;
+        gap: 3rem;
+    }
+
+    .buttons-eixos {
+        position: absolute;
+        left: 30rem;
+        top: 16rem;
+        width: 68rem;
+    }
+
+    .header-eixos-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        margin: 1rem;
+        padding: 1rem 5rem;
+        gap: 3rem;
+    }
+
+    .eixos-mobile-header {
+        background-color: white;
+        transform: rotate(90deg);
+        position: relative;
+        top: 0;
+        left: 0;
+        box-shadow: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    .section-eixos-texts-mobile {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 0px;
+        max-width: 90vw;
+        padding: 0px;
+        margin-bottom: 100px;
+    }
+
+    .eixos-texts-mobile {
+        width: 100%;
+    }
+
+    .cardeixos-overlay .card-eixos {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        width: min(84.2rem, 100%) !important;
+        height: auto !important;
+        max-height: 90vh !important;
+        overflow: auto !important;
+        border-radius: 3rem !important;
+        opacity: 1 !important;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+    }
+}
+@media screen and (min-width: 770px) and (max-width: 1025px) {
+    .grid-mobile-eixos {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        width: 45rem;
+        height: 50rem;
+        position: relative;
+        right: 4rem;
+    }
+
+    .cardeixos-overlay .card-eixos {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        width: min(84.2rem, 100%) !important;
+        height: auto !important;
+        max-height: 90vh !important;
+        overflow: auto !important;
+        border-radius: 3rem !important;
+        opacity: 1 !important;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+    }
+
+    #eixos {
+        height: 100%;
+    }
+
+    .conteudo-eixos {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: nowrap;
+        padding: 0.5rem 1rem;
+        gap: 3rem;
+    }
+
+    .buttons-eixos {
+        position: absolute;
+        left: 30rem;
+        top: 16rem;
+        width: 68rem;
+    }
+
+    .header-eixos-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        margin: 1rem;
+        padding: 1rem 5rem;
+        gap: 3rem;
+    }
+
+    .eixos-mobile-header {
+        background-color: white;
+        transform: rotate(90deg);
+        position: relative;
+        top: 0;
+        left: 0;
+        box-shadow: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    .eixos-mobile-header-text {
+        color: black;
+    }
+
+    .section-eixos-texts-mobile {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 2rem;
+        width: 39rem;
+        padding: 0;
+    }
+
+    .cardeixos-overlay { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; padding:1rem; z-index:2; left: 0;
+    top: 0;}
+
+    .eixos-texts-mobile {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1439px) and (max-width: 1620px){
+    .grid-mobile-eixos{
+        width: 70rem
+    }
+    .textos-eixos-mobile-content{
+        position: relative;
+        left: 5rem;
+    }
+}
+/*Celulares*/
+@media screen and (min-width: 319px) and (max-width: 426px) {
+    .header-eixos-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        margin: 1rem;
+        padding: 1rem 5rem;
+        gap: 3rem;
+        height: 233vh;
+        padding: 0;
+        margin: 0;
+    }
+    .cardeixos-overlay { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; padding:1rem; z-index:2; left: 0;
+    top: 5rem;}
+    .cardeixos-overlay .card-eixos {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        width: min(84.2rem, 100%) !important;
+        height: auto !important;
+        max-height: 90vh !important;
+        overflow: auto !important;
+        border-radius: 3rem !important;
+        opacity: 1 !important;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+    }
+    .eixos-mobile-header {
+        background-color: transparent;
+        transform: rotate(90deg);
+        position: relative;
+        top: -11rem;
+        left: -1rem;
+        box-shadow: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        padding: 2rem 0;
+        width: 19rem;
+        height: auto;
+    }
+    .conatiner-textos-eixos-mobile {
+        margin: 0;
+        position: relative;
+        bottom: 3rem;
+    }
+    .grid-mobile-eixos {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        width: 22rem;
+        height: 50rem;
+        position: relative;
+    }
+    .text-hover-green {
+        display: none;
+    }
+    .w-60 {
+        position: relative;
+        left: 0rem;
+    }
+    #eixos {
+        height: 100%;
+        padding: 0;
+    }
+    .eixos-textos-p-mobile {
+        overflow-y: auto;
+        max-height: 20rem;
+        padding-left: 1.5rem;
+    }
+    .conteudo-eixos {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: nowrap;
+        padding: 0.5rem 1rem;
+        gap: 0rem;
+    }
+    .buttons-eixos {
+        position: relative;
+        left: 0rem;
+        top: 0rem;
+        width: 15rem;
+    }
+    .header-eixos-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        margin: 1rem;
+        padding: 1rem 5rem;
+        gap: 3rem;
+    }
+    .section-eixos-texts-mobile {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        gap: 2rem;
+        width: 14rem;
+        padding: 0;
+        position: relative;
+        right: 4rem;
+    }
+    .eixos-texts-mobile {
+        width: 100%;
+    }
+    .eixos-text-p-mobile {
+        width: 15rem;
+    }
+    .container-eixos-mobile {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 384px){
+    .eixo-mobile-content{
+        height: 100rem;
+        justify-content: flex-start !important;
+    }
+}
+
+@media screen and (min-width: 410px) and (max-width: 420px)
+  and (min-height: 910px) and (max-height: 930px) {
+  .grid-eixos-mobile-content {
+    height: 200vh;
+  }
+
+  .textos-eixos-mobile-content {
+    margin-bottom: 7rem;
+  }
+}
+
+
+@media screen and (min-width: 1022px) and (max-width: 1024px){
+    .grid-eixos-mobile-content{
+        height: 110vh;
+    }
+}

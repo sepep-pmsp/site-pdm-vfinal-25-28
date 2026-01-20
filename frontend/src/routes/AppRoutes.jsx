@@ -1,13 +1,12 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "@/page/home/Home";
-//import TransparenciaMonitoramento from "@/page/Transparencia/TransparenciaMonitoramento";
-import Historico from "@/page/Historico/Historico";
-import Regionalizacao from "@/page/Regionalizacao/Regionalizacao";
-import Metas from "@/page/Metas/Metas";
-import Sobre from "@/page/Sobre/Sobre";
-import ParticipacaoSocial from "@/page/Participacao/ParticipacaoSocial";
-import TransparenciaContainer from "../page/Transparencia/TransparenciaContainer";
+import Home from "@/features/home/pages/Home";
+import Historico from "@/features/Historico/pages/Historico";
+import Regionalizacao from "@/features/Regionalizacao/pages/Regionalizacao";
+import Metas from "@/features/Metas/pages/Metas";
+import Sobre from "@/features/Sobre/pages/Sobre";
+import ParticipacaoSocial from "@/features/Participacao/pages/ParticipacaoSocial";
+import TransparenciaContainer from "@/features/Transparencia/pages/TransparenciaContainer";
 
 
 export default function AppRoutes() {

@@ -1,0 +1,11 @@
+import { API_BASE_URL, USE_API } from "@/services/api/config";
+
+export async function getParticipacaoData() {
+  if (USE_API) {
+    const response = await fetch(`${API_BASE_URL}/devolutivas/secao_participacao`);
+    if (!response.ok) {
+      throw new Error("Erro ao carregar dados do Participação social ");
+    }
+    return await response.json();
+  }
+}
