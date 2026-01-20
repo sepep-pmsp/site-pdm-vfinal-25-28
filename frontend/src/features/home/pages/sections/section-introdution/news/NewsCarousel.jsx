@@ -1,0 +1,78 @@
+import React, { useEffect, useState } from "react";
+import { getNewsData } from "../../../../services/getNewsData";
+import "@/style/pages/NewsCarousel.css";
+
+export default function NewsCarousel() {
+const [current, setCurrent] = useState(0);
+const [news, setNews] = useState([]);
+
+useEffect(() => {
+    getNewsData()
+        .then((newsData) => {
+            const sorted = newsData.sort((a, b) => {
+                if (a.priority !== b.priority) {
+                    return a.priority === 1 ? -1 : 1;
+                }
+                return new Date(b.date) - new Date(a.date);
+            });
+            setNews(sorted);
+        })
+        .catch(console.error);
+}, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % news.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [news.length]);
+
+  const handleSelect = (index) => {
+    setCurrent(index);
+  };
+
+return (
+    <div className="flex justify-center flex-nowrap">
+        <section className="relative bg-[color:var(--color-white)] shadow-[1px_1px_20px_#00000045] w-[90rem] h-32 rounded-[3rem] bottom-16 p-4 z-10 news-mobile">
+            <div className="flex flex-row justify-center items-center flex-wrap h-full news_navbar_text">
+                <div className="w-4/12">
+                    <h2 className="text-[var(--color-cyan-medium)] text-3xl xl:text-5xl">na<br /> mídia</h2>
+                </div>
+                <div className="w-6/12 pt-5 flex flex-col items-center h-full news-nabvar-text max-md:relative max-md:-left-10">
+                    <div className="xl:text-2xl texto-carrosel relative w-full text-sm">
+                        {news.map((news, index) => (
+                            <a
+                                key={index}
+                                href={news.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`truncate-link absolute transition-all text-center duration-700 ease-in-out underline roboto-regular ${
+                                    index === current
+                                        ? "opacity-100 translate-y-0"
+                                        : "opacity-0 translate-y-2 pointer-events-none"
+                                }`}
+                            >
+                                {news.titulo}
+                            </a>
+                        ))}
+
+                    <div className="relative left-[47%] top-[1.6rem] w-80 news-mobile-carousel">
+                        {news.map((_, index) => (
+                            <button
+                                key={index}
+                                onClick={() => handleSelect(index)}
+                                className={`m-1_2 w-2 h-2 rounded-full ${
+                                    index === current ? "bg-black" : "bg-gray-400"
+                                } focus:outline-none`}
+                                aria-label={`Ir para notícia ${index + 1}`}
+                            ></button>
+                        ))}
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+);
+}

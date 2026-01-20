@@ -1,11 +1,11 @@
 import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
 import AppRoutes from "./routes/AppRoutes";
-import CookiesBanner from "./content/CookiesBanner";
 import { useEffect } from "react";
-import { enhanceAccessibility, enhanceTextSemantics } from "./utils/accessibilityEnhancer";
-import VLibras from "./components/VLibras/VLibras";
+import { enhanceAccessibility, enhanceTextSemantics } from "./shared/utils/accessibilityEnhancer";
+import CookiesBanner from "@/shared/components/feedback/CookiesBanner";
+import VLibras from "@/shared/components/ui/VLibras";
+import Navbar from "@/shared/components/layout/Navbar/Navbar";
+import Footer from "@/shared/components/layout/Footer/Footer";
 
 function App() {
     useEffect(() => {
