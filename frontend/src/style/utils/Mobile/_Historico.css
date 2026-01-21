@@ -80,4 +80,11 @@
         flex-wrap: nowrap;
         padding: 2rem 0;
     }
+
+    @media screen and (max-width: 412px) {
+        .container-historico-mobile{
+            height: auto;
+        }
+        
+    }
 }
