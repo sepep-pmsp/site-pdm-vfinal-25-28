@@ -16,56 +16,56 @@ export default function MetasDesktop() {
   const [selectedMeta, setSelectedMeta] = useState(null);
   const [loading, setLoading] = useState(true);
   const isMobile = useIsMobile(725);
+  
   const location = useLocation();
   const eixoIdFiltro = location.state?.eixoIdFiltro;
-  const filtroRef = useRef(null);
+  
+  const scrollRef = useRef(null);
 
   useEffect(() => {
-    const filtrosIniciais = {
-      ods: [], planos_setoriais: [], orgaos: [], eixos: [], temas: [],
-      subprefeituras: [], zonas: [], termo_busca: ""
+    setLoading(true);
+
+    const carregarMetas = async () => {
+      try {
+        if (eixoIdFiltro) {
+          const filtrosIniciais = {
+            ods: [],
+            planos_setoriais: [],
+            orgaos: [],
+            eixos: [Number(eixoIdFiltro)], 
+            temas: [],
+            subprefeituras: [],
+            zonas: [],
+            termo_busca: "",
+          };
+          const res = await postFiltrosSelecionados(filtrosIniciais);
+          setMetas(res.metas);
+        } else {
+          // Se entrou direto na página, carrega tudo
+          const data = await getMetasIniciais();
+          setMetas(data.resultados);
+        }
+      } catch (err) {
+        console.error("Erro ao carregar metas:", err);
+      } finally {
+        setLoading(false);
+      }
     };
-    postFiltrosSelecionados(filtrosIniciais)
-      .then((res) => setMetas(res.metas))
-      .catch((err) => console.error("Erro na busca inicial de metas:", err))
-      .finally(() => setLoading(false));
-    if (eixoIdFiltro && filtroRef.current) {
-      setTimeout(() => {filtroRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 100);
-    }
+
+    carregarMetas();
   }, [eixoIdFiltro]);
-
   useEffect(() => {
-    getMetasIniciais()
-      .then((data) => {
-        setMetas(data.resultados);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error(err);
-        setLoading(false);
-      });
-    const filtrosIniciais = {
-      ods: [],
-      planos_setoriais: [],
-      orgaos: [],
-      eixos: [],
-      temas: [],
-      subprefeituras: [],
-      zonas: [],
-      termo_busca: ""
-    };
-    postFiltrosSelecionados(filtrosIniciais)
-      .then((res) => {
-        setMetas(res.metas);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Erro na busca inicial de metas:", err);
-        setLoading(false);
-      });
-  }, []);
-  if (loading) return <div>Carregando...</div>;
+    if (!loading && eixoIdFiltro && scrollRef.current) {
+      setTimeout(() => {
+        scrollRef.current.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }, 300); 
+    }
+  }, [loading, eixoIdFiltro]);
+
+  if (loading) return <div className="p-10 text-center">Carregando...</div>;
 
   return (
     <div className="pt-20">
@@ -82,10 +82,11 @@ export default function MetasDesktop() {
               <strong>
                 Neste painel você pode ver a lista completa de metas,
               </strong>{" "}
-              visualizá-las por eixo estratégico ou pelos subtemas a que se referem.
+              visualizá-las por eixo estratégico ou pelos subtemas a que se
+              referem.
             </p>
             <p className="w-80">
-             Clique na meta para ver suas informações completas!
+              Clique na meta para ver suas informações completas!
             </p>
           </div>
           <div className="flex relative left-[-11rem] bottom-24 carousel-ormacento-container-mobile">
@@ -93,16 +94,24 @@ export default function MetasDesktop() {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-center flex-row flex-nowrap gap-1 pt-10 h-[95rem] container-lista-metas-mobile" >
-        <div ref={filtroRef} className="relative w-full h-full top-32 lista-metas-mobile lg:w-6/12">
-          <FiltroMeta onCardsUpdate={(res) => setMetas(res.metas)} eixoIdFromNav={eixoIdFiltro} />
+      <div 
+        ref={scrollRef}
+        className="flex items-center justify-center flex-row flex-nowrap gap-1 pt-10 h-[95rem] container-lista-metas-mobile scroll-mt-24"
+      >
+        <div className="relative w-full h-full top-32 lista-metas-mobile lg:w-6/12">
+          <FiltroMeta
+            onCardsUpdate={(res) => setMetas(res.metas)}
+            eixoIdFromNav={eixoIdFiltro}
+          />
         </div>
+
         <div className="flex min-w-lg h-[1360px] flex-col flex-nowrap justify-start items-center px-0 py-8 rounded-3xl relative top-7 container-lista-metas-mobileee">
           <div className="overflow-y-auto overflow-x-hidden scroll-smooth scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-gray-400 no-scrollbar-arrows">
             <ListaMetas metas={metas} onSelectMeta={setSelectedMeta} />
           </div>
         </div>
       </div>
+
       {selectedMeta &&
         (isMobile ? (
           <CardMetasMobile
