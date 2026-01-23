@@ -20,17 +20,14 @@ export default function MetasDesktop() {
   const location = useLocation();
   const eixoIdFiltro = location.state?.eixoIdFiltro;
   
-  // Criamos a referência para o scroll
   const scrollRef = useRef(null);
 
-  // 1. Carregamento dos dados
   useEffect(() => {
     setLoading(true);
 
     const carregarMetas = async () => {
       try {
         if (eixoIdFiltro) {
-          // Se veio pelo botão "Veja as Metas", filtra pelo eixo
           const filtrosIniciais = {
             ods: [],
             planos_setoriais: [],
@@ -57,16 +54,12 @@ export default function MetasDesktop() {
 
     carregarMetas();
   }, [eixoIdFiltro]);
-
-  // 2. NOVO: Efeito exclusivo para o Scroll
-  // Ele só roda quando o 'loading' mudar para false
   useEffect(() => {
     if (!loading && eixoIdFiltro && scrollRef.current) {
-      // Pequeno delay para garantir que o DOM renderizou o tamanho correto
       setTimeout(() => {
         scrollRef.current.scrollIntoView({
           behavior: "smooth",
-          block: "start", // Alinha o topo do elemento com o topo da tela
+          block: "start",
         });
       }, 300); 
     }
@@ -101,12 +94,6 @@ export default function MetasDesktop() {
           </div>
         </div>
       </div>
-      
-      {/* 3. APLICAÇÃO DO REF AQUI 
-         Coloquei o ref={scrollRef} nesta div container.
-         Assim o scroll desce até onde começam os filtros e a lista.
-         Adicionei 'scroll-mt-24' (classe do Tailwind) para dar um respiro no topo se tiver header fixo.
-      */}
       <div 
         ref={scrollRef}
         className="flex items-center justify-center flex-row flex-nowrap gap-1 pt-10 h-[95rem] container-lista-metas-mobile scroll-mt-24"
