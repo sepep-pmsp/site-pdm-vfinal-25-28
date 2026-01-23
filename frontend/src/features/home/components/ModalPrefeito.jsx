@@ -45,9 +45,11 @@ export default function ModalPrefeito({ isOpen, onClose, carta }) {
                             <p className="text-white text-2xl"> {carta?.nome_prefeito || "Nome não disponível"} </p>
                         </div>
                         <div className="flex flex-col gap-8 lg:flex-row">
-                            {carta?.paragrafos?.map((par, index) => (
-                                <p className="text-white text-sm xl:text-lg xl:font-light" key={index} dangerouslySetInnerHTML={{ __html: par }} />
-                            ))}
+                            {carta?.paragrafos?.map((par, index) => {const textoFormatado = par ? par.replace(/\n/g, '<span style="display:block; margin-bottom: 15px;"></span>') : "";
+                                return (
+                                <p className="text-white text-sm xl:text-base xl:font-light leading-relaxed" key={index} dangerouslySetInnerHTML={{ __html: textoFormatado }}/>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>

@@ -82,16 +82,13 @@ export default function CardMetas({ meta, onClose }) {
                 </div>
 
                 {/* Header */}
-                <div
-                    style={{ backgroundColor: meta.card.eixo_cor_principal }}
-                    className="w-full flex justify-end p-4 md:py-6 md:px-8"
-                >
-                    <button
-                        className="text-4xl md:text-3xl font-bold cursor-pointer text-white"
-                        onClick={handleClose}
-                    >
-                        <i className="fa-solid fa-xmark"></i>
-                    </button>
+                <div style={{ backgroundColor: meta.card.eixo_cor_principal }} className="w-full h-auto">
+                    <div className="flex flex-row">
+                        <button className="relative top-0 text-4xl font-bold cursor-pointer flex flex-row p-3 gap-3" onClick={handleClose}>
+                            <i className="fa-solid fa-arrow-left text-white"></i>
+                            <p className="text-white">Voltar</p>
+                        </button>
+                    </div>
                 </div>
 
                 {/* Conteúdo */}

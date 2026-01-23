@@ -7,7 +7,7 @@ class CardSecaoTransparenciaSchema(BaseModel):
     paragrafo:str
     ordem:int
     nome_btn:str
-    link:str
+    link: Optional[str] = None
 
 
 
