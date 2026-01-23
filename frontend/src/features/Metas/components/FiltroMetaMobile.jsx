@@ -210,6 +210,7 @@ export default function FiltroMetaMobile({
     "ZONA SUL",
     "ZONA LESTE"
   ];
+
   const setZ = new Set(zonasLabelsBase);
   const zonasOrdenadas = [
     ...ordemPreferida.filter((z) => setZ.has(z)),
@@ -356,7 +357,7 @@ export default function FiltroMetaMobile({
                           );
                           const order = [
                             "UNIVERSO SP",
-                            "VIVER SAO PAULO",
+                            "VIVER SÃO PAULO",
                             "CIDADE EMPREENDEDORA",
                             "CAPITAL DO FUTURO"
                           ];

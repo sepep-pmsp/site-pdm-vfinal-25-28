@@ -93,11 +93,11 @@ export default function MetasDesktop() {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-center flex-row flex-nowrap gap-1 pt-10 h-[95rem] container-lista-metas-mobile">
-        <div ref={filtroRef} className="relative w-full h-full left-12 top-32 lista-metas-mobile">
+      <div className="flex items-center justify-center flex-row flex-nowrap gap-1 pt-10 h-[95rem] container-lista-metas-mobile" >
+        <div ref={filtroRef} className="relative w-full h-full top-32 lista-metas-mobile lg:w-6/12">
           <FiltroMeta onCardsUpdate={(res) => setMetas(res.metas)} eixoIdFromNav={eixoIdFiltro} />
         </div>
-        <div className="flex min-w-lg h-[1360px] flex-col flex-nowrap justify-start items-center px-0 py-8 rounded-3xl relative right-60 top-7 container-lista-metas-mobileee">
+        <div className="flex min-w-lg h-[1360px] flex-col flex-nowrap justify-start items-center px-0 py-8 rounded-3xl relative top-7 container-lista-metas-mobileee">
           <div className="overflow-y-auto overflow-x-hidden scroll-smooth scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-gray-400 no-scrollbar-arrows">
             <ListaMetas metas={metas} onSelectMeta={setSelectedMeta} />
           </div>

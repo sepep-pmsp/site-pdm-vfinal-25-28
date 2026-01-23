@@ -73,16 +73,13 @@ export default function CardMetas({ meta, onClose }) {
                 >
                     {meta.card.numero}
                 </div>
-                <div
-                    style={{ backgroundColor: meta.card.eixo_cor_principal }}
-                    className="w-full h-auto"
-                >
-                    <button
-                        className="relative top-0 left-[110rem] text-4xl font-bold cursor-pointer"
-                        onClick={handleClose}
-                    >
-                        <i className="fa-solid fa-xmark text-white"></i>
-                    </button>
+                <div style={{ backgroundColor: meta.card.eixo_cor_principal }} className="w-full h-auto">
+                    <div className="flex flex-row">
+                        <button className="relative top-0 text-4xl font-bold cursor-pointer flex flex-row p-3 gap-3" onClick={handleClose}>
+                            <i className="fa-solid fa-arrow-left text-white"></i>
+                            <p className="text-white">Voltar</p>
+                        </button>
+                    </div>
                 </div>
 
                 <div className="flex flex-col items-center gap-12 py-8 px-15 ">
@@ -176,7 +173,7 @@ export default function CardMetas({ meta, onClose }) {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col items-center justify-center">
+                    <div className="flex flex-col items-center justify-center w-full">
                         {meta.card.regionalizacao &&
                             (() => {
                                 const reg = meta.card.regionalizacao;
@@ -195,9 +192,9 @@ export default function CardMetas({ meta, onClose }) {
                                 const rodape = reg.map_rodape || reg.nota_rodape || null;
 
                                 return (
-                                    <div className="flex flex-col items-center justify-center ">
+                                    <div className="flex flex-col items-center justify-center w-full">
                                         <div
-                                            className="w-[100rem] h-2 "
+                                            className="w-full h-2 "
                                             style={{ backgroundColor: meta.card.eixo_cor_principal }}
                                         />
                                         <div className="flex flex-col flex-nowrap items-start justify-around gap-8 py-12 shadow-[1px_8px_20px_#00000080] m-8 p-8 rounded-[2rem] border-solid w-[75rem] bg-white">

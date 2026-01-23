@@ -34,23 +34,21 @@ export default function MetasMobile({ metas, setMetas, onSelectMeta }) {
                                     <strong>Clique na meta para ver suas informações completas</strong>.
                                 </p>
                             </div>
-
-                            {/* Filtro (agora acima do card) */}
-                            <div className="mt-1">
-                                <FiltroMeta onCardsUpdate={(res) => setMetas(res.metas)} />
-                            </div>
                         </div>
-
                         {/* Carousel (card) */}
                         <div className="w-full relative z-[1] -mt-2">
                             <CarouselOrcamento />
+                        </div>
+                        {/* Filtro (agora acima do card) */}
+                        <div className="mt-1 flex flex-nowrap items-center justify-center">
+                            <FiltroMeta onCardsUpdate={(res) => setMetas(res.metas)} />
                         </div>
                     </div>
                 </div>
             </div>
 
             {/* Lista (sem filtro aqui) */}
-            <section className="max-w-[1200px] mx-auto px-4 mt-2 list-metas-mobile">
+            <section className="max-w-[1200px] mx-auto px-4 mt-2 list-metas-mobile mb-8">
                 <div className="rounded-3xl shadow-[0px_5px_40px_rgba(128,128,128,0.4)] overflow-hidden">
                     <div className="max-h-[70vh] overflow-y-auto overflow-x-hidden scroll-smooth scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-gray-400 no-scrollbar-arrows">
                         <ListaMetas metas={metas} onSelectMeta={onSelectMeta} />
