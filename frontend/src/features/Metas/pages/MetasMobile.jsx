@@ -75,11 +75,6 @@ export default function MetasMobile({ metas, setMetas, onSelectMeta }) {
                 </p>
               </div>
             </div>
-            
-            {/* Carousel (card) */}
-            <div className="w-full relative z-[1] -mt-2">
-              <CarouselOrcamento />
-            </div>
             {/* Texto + Filtro + Carousel (nessa ordem) */}
             <div className="bg-white">
                 <div className="max-w-[1200px] mx-auto px-4 py-4" >
