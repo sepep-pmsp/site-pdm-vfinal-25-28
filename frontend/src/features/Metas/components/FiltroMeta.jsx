@@ -21,7 +21,7 @@ export default function FiltroMeta({ onCardsUpdate, eixoIdFromNav }) {
   if (!data) return <p>Carregando filtros...</p>;
 
   return (
-    <div className="flex items-start relative right-63">
+    <div className="flex items-start relative">
       {isMobile ? (
         <FiltroMetaMobile
           onCardsUpdate={onCardsUpdate}
