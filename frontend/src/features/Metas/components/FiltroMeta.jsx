@@ -39,7 +39,7 @@ export default function FiltroMeta({ onCardsUpdate, eixoIdFromNav }) {
           limparFiltros={limparFiltros}
         />
       ) : (
-        <div className="flex flex-row">
+        <div className="flex flex-row 2xl:relative 2xl:-left-39">
           {/* Coluna esquerda - ODS */}
           <FiltroODS
             ods={data.ods}

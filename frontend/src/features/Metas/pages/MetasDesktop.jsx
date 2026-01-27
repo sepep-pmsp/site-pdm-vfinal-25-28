@@ -19,9 +19,7 @@ export default function MetasDesktop() {
   
   const location = useLocation();
   const eixoIdFiltro = location.state?.eixoIdFiltro;
-  
   const scrollRef = useRef(null);
-
   useEffect(() => {
     setLoading(true);
 

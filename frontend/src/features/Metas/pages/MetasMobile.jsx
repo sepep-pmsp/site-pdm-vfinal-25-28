@@ -80,18 +80,34 @@ export default function MetasMobile({ metas, setMetas, onSelectMeta }) {
             <div className="w-full relative z-[1] -mt-2">
               <CarouselOrcamento />
             </div>
-
-            {/* Filtro (agora acima do card) 
-               Adicionei o scrollRef aqui para que o usuário veja o filtro aberto/selecionado 
-            */}
-            <div 
-              ref={scrollRef} // <--- REFERÊNCIA DE SCROLL AQUI
-              className="mt-1 flex flex-nowrap items-center justify-center scroll-mt-24"
-            >
-              <FiltroMeta 
-                onCardsUpdate={(res) => setMetas(res.metas)} 
-                eixoIdFromNav={eixoIdFiltro} // Passamos o ID para abrir o acordeão
-              />
+            {/* Texto + Filtro + Carousel (nessa ordem) */}
+            <div className="bg-white">
+                <div className="max-w-[1200px] mx-auto px-4 py-4" >
+                    <div className="grid grid-cols-1 gap-4">
+                        {/* Texto */}
+                        <div className="Wrapper-Mobile">
+                            <div className="text-base leading-relaxed">
+                                <p>
+                                    <strong>Neste painel você pode conferir todas as metas deste Programa,</strong>{" "}
+                                    ou filtrá-las como preferir.
+                                </p>
+                                <p className="mt-3">
+                                    Escolha também se deseja visualizar a lista completa ou as metas
+                                    de cada eixo e ainda dividi-las em seus subtemas.{" "}
+                                    <strong>Clique na meta para ver suas informações completas</strong>.
+                                </p>
+                            </div>
+                        </div>
+                        {/* Carousel (card) */}
+                        <div className="w-full relative z-[1] -mt-2">
+                            <CarouselOrcamento />
+                        </div>
+                        {/* Filtro (agora acima do card) */}
+                        <div className="mt-1 flex flex-nowrap items-center justify-center">
+                            <FiltroMeta onCardsUpdate={(res) => setMetas(res.metas)} />
+                        </div>
+                    </div>
+                </div>
             </div>
           </div>
         </div>

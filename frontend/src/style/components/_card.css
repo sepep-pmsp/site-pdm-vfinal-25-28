@@ -95,6 +95,10 @@
   word-break: break-word;
   line-height: 1.1;
   z-index: 1;
+  @media screen and (max-width: 640px) {
+    left: -1rem;
+    width: 100%;
+  }
 }
 @media (min-width:640px){ .eixo-title{ left:12rem; } }
 @media (min-width:768px){ .eixo-title{ left:14rem; } }
