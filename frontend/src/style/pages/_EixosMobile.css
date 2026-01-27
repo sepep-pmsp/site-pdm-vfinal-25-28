@@ -372,7 +372,7 @@
     }
 }
 
-@media screen and (max-width: 384px){
+@media screen and (max-width: 640px){
     .eixo-mobile-content{
         height: 100rem;
         justify-content: flex-start !important;

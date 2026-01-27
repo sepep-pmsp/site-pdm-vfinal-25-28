@@ -7,12 +7,7 @@ export default function Introduction() {
     <div>
       <section className="relative w-full h-[44rem] overflow-hidden">
         <div>
-          <video
-            className="absolute top-0 left-0 w-full h-full object-cover z-0 select-none pointer-events-none"
-            autoPlay
-            loop
-            muted
-          >
+          <video className="absolute top-0 left-0 w-full h-full object-cover z-0 select-none pointer-events-none" autoPlay loop muted playsInline webkit-playsinline="true" preload="auto" controls={false} poster="/fallback.jpg" tabIndex={-1} aria-hidden="true">
             <source src={video} type="video/mp4" />
           </video>
         </div>
