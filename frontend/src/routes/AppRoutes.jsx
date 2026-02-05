@@ -16,7 +16,9 @@ export default function AppRoutes() {
       <Route path="/transparencia" element={<TransparenciaContainer />} />
       <Route path="/historico" element={<Historico />} />
       <Route path="/regionalizacao" element={<Regionalizacao />} />
-      <Route path="/metas" element={<Metas/>} />
+      <Route path="/metas" element={<Metas />}>
+        <Route path=":slug" element={<Metas />} /> 
+      </Route>
       <Route path="/sobre" element={<Sobre/>} />
       <Route path="/participacao-social" element={<ParticipacaoSocial/>} />
     </Routes>

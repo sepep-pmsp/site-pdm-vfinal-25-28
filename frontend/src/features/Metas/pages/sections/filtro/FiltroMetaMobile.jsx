@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { corrigirUrlImagem } from "@/shared/utils/imageUtils";
-import { useFiltrosMetas } from "../hooks/useFiltrosMetas";
+import { useFiltrosMetas } from "../../../hooks/useFiltrosMetas";
 import SafeSVG from "@/shared/components/ui/SafeSVG";
 
 export default function FiltroMetaMobile({
