@@ -40,31 +40,22 @@ export default function More_Info() {
         </div>
         <div className="flex flex-col flex-nowrap items-center justify-center gap-16 xl:flex xl:items-start xl:justify-center xl:flex-row xl:flex-nowrap xl:gap-40 xl:h-full xl:relative xl:w-full xl:pt-20 more-info-mobile-section">
           {info.map((item, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-center flex-col gap-8 xl:flex xl:items-start xl:justify-center xl:gap-8"
-            >
+            <div key={index} className="flex items-center justify-center flex-col gap-8 xl:flex xl:items-start xl:justify-center xl:gap-8">
               <div className="p-4 shadow-[0px_1px_20px_1px_#000000ab] rounded-[3rem] group groupy relative w-fit overflow-hidden">
                 <div className="relative">
-                  <img
-                    src={`/${item.image}`}
-                    alt={item.title}
-                    className="h-[22rem] w-full object-cover transform transition-transform rounded-4xl duration-300 group-hover:scale-[0.93]"
-                  />
+                  <img src={`/${item.image}`} alt={item.title} className="h-60 lg:h-[22rem] w-full object-cover transform transition-transform rounded-4xl duration-300 group-hover:scale-[0.93]"/>
                   <div className="rounded-3xl absolute top-0 left-0 w-full h-full bg-[var(--color-Filter-blue-shadowns)] bg-opacity-40 mix-blend-multiply pointer-events-none transform transition-transform z-20 duration-300 group-hover:scale-[0.93]"></div>
                 </div>
               </div>
 
               <a href={item.link_page} className="hover:underline">
-                <h2 className="title-mobile-info flex flex-col items-center justify-center text-6xl w-[21rem]">
+                <h2 className="title-mobile-info flex flex-col items-center justify-center text-2xl lg:text-6xl w-60 lg:w-[21rem]">
                   {item.title}
                 </h2>
               </a>
 
               {/* classe dinâmica para cada descrição */}
-              <p
-                className={`text-mobile-info text-mobile-info-${index} flex flex-col items-center justify-center w-[23rem] text-xl`}
-              >
+              <p className={`text-mobile-info text-mobile-info-${index} flex flex-col items-center justify-center w-60 lg:w-[23rem] text-xl`}>
                 {item.description}
               </p>
             </div>

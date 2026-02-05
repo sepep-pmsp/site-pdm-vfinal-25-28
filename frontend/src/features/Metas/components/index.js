@@ -1,9 +1,0 @@
-export {default as CardMetas } from './CardMetas';
-export {default as CardMetasMobile } from './CardMetasMobile';
-export {default as CarouselOrcamento } from './CarouselOrcamento';
-export {default as FiltroCentro } from './FiltroCentro';
-export {default as FiltroEixos } from './FiltroEixos';
-export {default as FiltroMeta } from './FiltroMeta';
-export {default as FiltroMetaMobile } from './FiltroMetaMobile';
-export {default as FiltroODS } from './FiltroODS';
-export {default as ListaMetas } from './ListaMetas';

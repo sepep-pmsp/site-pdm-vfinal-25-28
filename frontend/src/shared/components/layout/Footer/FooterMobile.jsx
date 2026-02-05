@@ -12,12 +12,11 @@ export default function FooterMobile() {
   return (
     <div className="bg-[var(--color-navy)] h-full w-full py-8 px-4 text-white">
       <footer className="flex justify-center pl-20 box-footer-mobile">
-        <div className="imgs-footer-mobile flex items-center flex-row flex-nowrap justify-start gap-20 w-full">
-          <img className="w-36" src={logo_pdm} alt="" />
-          <img className="w-36" src={logo_prefeitura} alt="" />
+        <div className="flex gap-10 justify-around items-start flex-col md:flex-row">
+          <img className="w-76" src={logo_pdm} alt="" />
+          <img className="w-76" src={logo_prefeitura} alt="" />
         </div>
-        <div className="box-imgs-footer-mobile">
-          <div className="p-2 flex flex-col items-start gap-4 relative top-8">
+        <div className="p-2 flex flex-col items-start gap-4 relative top-8">
             <div className="flex flex-col items-start gap-4 w-full">
               <p className="text-[23px] text-start w-60">
                 Siga a Prefeitura de SP nas redes sociais:{" "}
@@ -59,21 +58,20 @@ export default function FooterMobile() {
               <p className="text-[23px]">Contatos:</p>
             </div>
             <div className="flex flex-col gap-4">
-              <div className="flex items-center gap-4 w-80">
+              <div className="flex items-center gap-4 w-60 md:w-full">
                 <img src={LocalizacaoIcon} alt="" />
-                <p>
+                <p className="break-all">
                   Viaduto do Chá, 15 - Centro Histórico de São Paulo - SP,
                   01007-040
                 </p>
               </div>
-              <div className="flex items-center gap-4 w-80">
+              <div className="flex items-center gap-4 w-60">
                 <img src={TelefoneIcon} alt="" />
                 <p>0800-123456</p>
               </div>
             </div>
           </div>
-        </div>
-        <div className="flex flex-row justify-start items-center pt-12">
+        <div className="flex flex-col md:flex-row gap-8 justify-start items-center pt-12">
           <h2 className="text-xl">
             O Programa de Metas é uma elaboração da Secretaria de Informações e
             Monitoramento Estratégicos | SIME.

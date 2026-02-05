@@ -4,7 +4,7 @@ import FiltroCentro from "./FiltroCentro";
 import FiltroEixos from "./FiltroEixos";
 import { useMediaQuery } from "react-responsive";
 import FiltroMetaMobile from "./FiltroMetaMobile";
-import { useFiltrosMetas } from "../hooks/useFiltrosMetas";
+import { useFiltrosMetas } from "../../../hooks/useFiltrosMetas";
 
 export default function FiltroMeta({ onCardsUpdate, eixoIdFromNav }) {
   const isMobile = useMediaQuery({ maxWidth: 1281 });
@@ -39,7 +39,7 @@ export default function FiltroMeta({ onCardsUpdate, eixoIdFromNav }) {
           limparFiltros={limparFiltros}
         />
       ) : (
-        <div className="flex flex-row 2xl:relative 2xl:-left-39">
+        <div className="flex flex-row xl:relative xl:top-20 xl:right-50">
           {/* Coluna esquerda - ODS */}
           <FiltroODS
             ods={data.ods}

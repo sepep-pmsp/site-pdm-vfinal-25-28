@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { getOrcamentoData } from "../services/getOrcamentoData";
+import { getOrcamentoData } from "../../../services/getOrcamentoData";
 
 export default function CarouselOrcamento() {
   const [data, setData] = useState([]);
@@ -49,10 +49,9 @@ export default function CarouselOrcamento() {
             <div className="h-[2px] flex-1 bg-slate-300" />
           </div>
 
-          <div className="mt-3 grid grid-cols-[1fr_auto] gap-4 items-start">
+          <div className="flex flex-col lg:flex-row items-start justify-around w-full">
             <div>
-              <div
-                className="text-[var(--color-navy)] leading-none"
+              <div className="text-[var(--color-navy)] leading-none"
                 style={{
                   fontFamily: '"Bebas Neue", sans-serif',
                   fontSize: 96,
@@ -137,7 +136,7 @@ export default function CarouselOrcamento() {
 
             <div className="mt-4 text-center">
               <div
-                className="leading-none"
+                className="leading-none max-md:!text-2xl"
                 style={{
                   fontFamily: '"Bebas Neue", sans-serif',
                   fontSize: 40,
@@ -163,156 +162,82 @@ export default function CarouselOrcamento() {
       {/* ================= DESKTOP ================= */}
       <div className="hidden md:block">
         {/* Wrapper que empurra o conjunto para a direita */}
-        <div className="md:ml-auto md:w-[1040px] lg:w-[1160px] xl:w-[1045px] wrapper-container-mobile">
-          <div className="grid grid-cols-2 gap-6 items-stretch">
+        <div className="md:ml-auto md:w-[1040px] lg:w-[1160px] xl:w-[962px] wrapper-container-mobile">
+          <div className="grid grid-cols-2 gap-6 items-stretch ">
             {/* VISÃO GERAL (card maior) */}
-            <div className="bg-white rounded-[20px] shadow-[0_12px_30px_rgba(0,0,0,.12)] px-8 py-7 min-h-[260px] flex flex-col gap-4">
+            <div className="bg-white rounded-[20px] shadow-[0_12px_30px_rgba(0,0,0,.12)] px-8 py-7 min-h-[260px] flex flex-col gap-4 xl:w-[29rem]">
               <div className="flex items-end gap-3 pl-1">
-                <h3
-                  className="uppercase text-[var(--color-navy)] tracking-wide"
-                  style={{
-                    fontFamily: '"Bebas Neue", sans-serif',
-                    fontSize: 18
-                  }}
-                >
+                <h3 className="uppercase text-[var(--color-navy)] tracking-wide text-lg" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
                   Visão geral
                 </h3>
                 <div className="h-[2px] flex-1 bg-slate-200" />
               </div>
 
-              <div className="mt-5 grid grid-cols-[190px_minmax(0,1fr)] gap-12 items-center">
+              <div className="mt-5 grid grid-cols-[190px_minmax(0,1fr)] gap-2 items-center">
                 {/* número total (maior) */}
                 <div>
-                  <div
-                    className="text-[var(--color-navy)] leading-none relative right-4"
-                    style={{
-                      fontFamily: '"Bebas Neue", sans-serif',
-                      fontSize: 170,
-                      lineHeight: 0.88
-                    }}
-                  >
+                  <div className="text-[var(--color-navy)] leading-none text-9xl" style={{ fontFamily: '"Bebas Neue", sans-serif',lineHeight: 0.88}}>
                     {eixo.totalMetas}
                   </div>
-                  <div className="text-[15px] text-slate-500 mt-1">
+                  <div className="text-[13px] text-slate-500 mt-1">
                     Total de metas deste Programa
                   </div>
                 </div>
 
                 {/* badge + setas */}
-                <div className="min-w-0">
-                  <div className="text-[14px] uppercase relative left-4">
+                <div className="min-w-0 flex flex-col items-center justify-center gap-2">
+                  <div className="text-[13px] uppercase relative left-5 flex justify-start flex-row items-center w-full text-[var(--color-navy)]">
                     Metas por eixo
                   </div>
-
-                  <div className="relative left-4 mt-2 w-[165px] max-w-full carousel-mobile-orçamento">
-                    <div
-                      className="rounded-xl px-7 py-3 text-center w-full"
-                      style={{ backgroundColor: eixo.corPrincipal }}
-                    >
-                      <div
-                        className="leading-none text-white"
-                        style={{
-                          fontFamily: '"Bebas Neue", sans-serif',
-                          fontSize: 80
-                        }}
-                      >
-                        {eixo.metasPorEixo}
-                      </div>
+                    <div className="flex flex-row items-center w-full gap-2">
+                        <button onClick={handlePrev} aria-label="Anterior" className="relative top-3 right-3 -translate-y-1/2 h-8 w-2 grid place-items-center" style={{ borderColor: eixo.corPrincipal, color: eixo.corPrincipal }}>
+                            <ChevronLeft size={18} />
+                        </button>
+                        <div className="rounded-xl px-7 py-3 text-center w-full"style={{ backgroundColor: eixo.corPrincipal }}>
+                            <div className="leading-none text-white" style={{ fontFamily: '"Bebas Neue", sans-serif',fontSize: 80}}>
+                                {eixo.metasPorEixo}
+                            </div>
+                        </div>
+                        <button onClick={handleNext} aria-label="Próximo" className="relative top-3 -translate-y-1/2 h-8 w-2 grid place-items-center" style={{ borderColor: eixo.corPrincipal,color: eixo.corPrincipal }}>
+                            <ChevronRight size={18} />
+                        </button>
                     </div>
 
-                    <button
-                      onClick={handlePrev}
-                      aria-label="Anterior"
-                      className="absolute -left-9 top-1/2 -translate-y-1/2 h-8 w-8 grid place-items-center rounded-full bg-white shadow hover:bg-slate-50 transition"
-                      style={{
-                        borderColor: eixo.corPrincipal,
-                        color: eixo.corPrincipal
-                      }}
-                    >
-                      <ChevronLeft size={18} />
-                    </button>
-                    <button
-                      onClick={handleNext}
-                      aria-label="Próximo"
-                      className="absolute -right-9 top-1/2 -translate-y-1/2 h-8 w-8 grid place-items-center rounded-full bg-white shadow hover:bg-slate-50 transition"
-                      style={{
-                        borderColor: eixo.corPrincipal,
-                        color: eixo.corPrincipal
-                      }}
-                    >
-                      <ChevronRight size={18} />
-                    </button>
-                  </div>
-
-                  <div className="mt-3 w-[210px] legenda-mobile-orçamento">
-                    <div
-                      className="h-[2px]"
-                      style={{ backgroundColor: eixo.corPrincipal }}
-                    />
-                    <div
-                      className="text-center uppercase font-semibold text-[22px] py-1"
-                      style={{ color: eixo.corPrincipal }}
-                    >
+                  <div className="mt-3 w-40">
+                    <div className="h-[2px]" style={{ backgroundColor: eixo.corPrincipal }}/>
+                    <div className="text-center uppercase font-semibold text-[18px] py-1" style={{ color: eixo.corPrincipal }}>
                       {eixo.titulo}
                     </div>
-                    <div
-                      className="h-[2px]"
-                      style={{ backgroundColor: eixo.corPrincipal }}
-                    />
+                    <div className="h-[2px]" style={{ backgroundColor: eixo.corPrincipal }}/>
                   </div>
                 </div>
               </div>
             </div>
+
             {/* ORÇAMENTO POR EIXO (card maior) */}
-            <div className="bg-white rounded-[20px] shadow-[0_12px_30px_rgba(0,0,0,.12)] px-8 py-7 min-h-[300px] flex flex-col gap-4">
+            <div className="bg-white rounded-[20px] shadow-[0_12px_30px_rgba(0,0,0,.12)] px-8 py-7 min-h-[300px] w-full xl:w-[29rem] flex flex-col gap-4">
               <div className="flex items-end gap-3 pl-1">
-                <h3
-                  className="uppercase text-[var(--color-navy)] tracking-wide"
-                  style={{
-                    fontFamily: '"Bebas Neue", sans-serif',
-                    fontSize: 18
-                  }}
-                >
+                <h3 className="uppercase text-[var(--color-navy)] tracking-wide text-lg" style={{ fontFamily: '"Bebas Neue", sans-serif'}}>
                   Orçamento por eixo
                 </h3>
                 <div className="h-[2px] flex-1 bg-slate-200" />
               </div>
               <div className="mt-6 flex flex-col items-center gap-4">
-                <div
-                  className="leading-none text-center"
-                  style={{
-                    fontFamily: '"Bebas Neue", sans-serif',
-                    fontSize: 70,
-                    color: eixo.corPrincipal
-                  }}
-                >
+                <div className="leading-none text-center" style={{ fontFamily: '"Bebas Neue", sans-serif', fontSize: 60, color: eixo.corPrincipal}}>
                   {fmtMoney(eixo.orcamento)}
                 </div>
                 <div className="w-[260px]">
-                  <div
-                    className="h-[2px]"
-                    style={{ backgroundColor: eixo.corPrincipal }}
-                  />
-                  <div
-                    className="text-center uppercase font-semibold text-3xl py-1"
-                    style={{ color: eixo.corPrincipal }}
-                  >
+                  <div className="h-[2px]" style={{ backgroundColor: eixo.corPrincipal }}/>
+                  <div className="text-center uppercase font-semibold text-3xl py-1" style={{ color: eixo.corPrincipal }}>
                     {eixo.titulo}
                   </div>
-                  <div
-                    className="h-[2px]"
-                    style={{ backgroundColor: eixo.corPrincipal }}
-                  />
+                  <div className="h-[2px]" style={{ backgroundColor: eixo.corPrincipal }}/>
                 </div>
               </div>
-              <div className="mt-auto pt-3 text-xl font-bold tracking-wide uppercase text-[var(--color-navy)] text-center flex flex-col justify-center mx-4">
-                <div
-                  className="h-[2px] bg-[var(--color-navy)]"
-                />
-                Orçamento total: {fmtMoney(eixo.orcamentoTotal)}
-                <div
-                  className="h-[2px] bg-[var(--color-navy)]"
-                />
+              <div className="mt-auto pt-3 text-base font-bold tracking-wide uppercase text-[var(--color-navy)] text-center flex flex-col justify-center mx-4">
+                <div className="h-[2px] bg-[var(--color-navy)]"/>
+                    Orçamento total: {fmtMoney(eixo.orcamentoTotal)}
+                <div className="h-[2px] bg-[var(--color-navy)]"/>
               </div>
             </div>
           </div>
