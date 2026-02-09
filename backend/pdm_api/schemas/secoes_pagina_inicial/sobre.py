@@ -7,6 +7,7 @@ class BannerSchema(BaseModel):
     titulo: str
     subtitulo: str
     link_pdf: str
+    link_pdf2: str
     o_que: str
     por_que: str
     para_quem: str
