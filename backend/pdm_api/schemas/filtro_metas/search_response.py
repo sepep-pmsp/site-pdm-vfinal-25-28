@@ -33,6 +33,24 @@ class AtributoListCardSchema(BaseModel):
             raise ValueError('Invalid tipo for AtributoListCardSchema')
         return self
     
+class AcaoEstrategicaSchema(BaseModel):
+    numero: str
+    descricao: str
+    concluida: bool
+
+
+class AtributoListObjCardSchema(BaseModel):
+
+    titulo: str
+    valor: list[AcaoEstrategicaSchema]
+    tipo: Literal['list'] = 'list'
+
+    @model_validator(mode='after')
+    def validate_tipo(self):
+        if self.tipo != 'list':
+            raise ValueError('Invalid tipo for AtributoListObjCardSchema')
+        return self
+    
 class MetaMapSchema(BaseModel):
 
     status_regionalizacao: Literal["não regionalizável", "regionalizável", "regionalizada"]
@@ -46,7 +64,7 @@ class MetaCardSchema(BaseModel):
 
     numero: str
     projecao: AtributoStrCardSchema
-    acoes_estrategicas: Optional[AtributoListCardSchema]=None
+    acoes_estrategicas: Optional[AtributoListObjCardSchema]=None
     indicador: AtributoStrCardSchema
     orgaos_responsaveis: AtributoListCardSchema
     eixo_nome: str

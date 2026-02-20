@@ -8,14 +8,37 @@ from cadastros_basicos.models.vinculos_externos import ODS, PlanoSetorial
 
 from .relacionamentos_meta import MetaOrgao, MetaSubprefeitura, MetaZona, MetaODS, MetaPlanoSetorial, StatusRegionalizacao
 
+from .status_monitoramento import StatusMonitoramento
+
 
 class Meta(models.Model):
-
+    #general
     numero = models.IntegerField(blank=False, null=False, verbose_name="Número da Meta")
     destaque = models.CharField(max_length=500, null=False, blank=False, unique=True, verbose_name="Destaque da Meta")
     descricao = models.TextField(blank=False, null=False, verbose_name="Descrição da Meta")
     indicador = models.CharField(max_length=500, blank=False, null=False, verbose_name="Indicador da Meta")
     projecao = models.CharField(max_length=500, blank=False, null=False, verbose_name="Projeção da Meta")
+
+    # evolucao_meta_txt = models.TextField(
+    #     blank=True,
+    #     null= True, #?
+    #     verbose_name="Descrição da Evolução da Meta"
+    # )
+    # evolucao_meta_pct = models.FloatField(
+    #     blank=True,
+    #     null=False,
+    #     default=0.0,
+    #     verbose_name="Evolução da Meta (%)"
+
+    # )
+
+    
+    # monitoramento= models.TextChoices(
+    #     verbose_name= "Monitoramento"
+    # )
+
+    
+
 
     status_regionalizacao = models.CharField(
         max_length=50,
@@ -38,7 +61,12 @@ class Meta(models.Model):
         verbose_name="Tema relacionado",
         on_delete=models.CASCADE
     )
+#   Resultados apurados -> not Many to Many
+    # data_result_ap
+    # qtdd_result_ap
 
+
+#   Órgãos Responsáveis
     orgaos_responsaveis = models.ManyToManyField(
         Orgao,
         blank=True,
@@ -46,7 +74,7 @@ class Meta(models.Model):
         verbose_name="Órgãos responsáveis",
         through='MetaOrgao'
     )
-
+    # Subprefetirua com Entregas
     subprefeituras_entregas = models.ManyToManyField(
         SubPrefeitura,
         blank=True,
@@ -54,7 +82,7 @@ class Meta(models.Model):
         verbose_name="Subprefeituras com entregas",
         through='MetaSubprefeitura'
     )
-
+#   Zonas com entregas
     zonas_entregas = models.ManyToManyField(
         Zona,
         blank=True,
@@ -62,7 +90,7 @@ class Meta(models.Model):
         verbose_name="Zonas com entregas",
         through='MetaZona'
     )
-
+#ODS relacionadas à meta
     ods_relacionados = models.ManyToManyField(
         ODS,
         blank=True,
@@ -70,7 +98,7 @@ class Meta(models.Model):
         verbose_name="ODS relacionados",
         through='MetaODS'
     )
-
+#   Planos setoriais relacionados
     planos_setoriais_relacionados = models.ManyToManyField(
         PlanoSetorial,
         blank=True,
@@ -128,7 +156,7 @@ class Meta(models.Model):
         return self.eixo.cor_secundaria
     
     @property
-    def titulo(self):
+    def titulo(self): #General
 
         destaque_negrito = f"<strong>{self.destaque}</strong>"
         desc_com_destaque = self.descricao.replace(self.destaque, destaque_negrito)
@@ -141,11 +169,17 @@ class Meta(models.Model):
         frase = f'Essa meta faz parte do eixo {self.eixo.nome}.'
 
         return [frase, resumo] if resumo else frase
-
+    # Ações estratégicas
     @property
     def acoes_estrategicas_as_list(self):
-
-        return [acao.descricao for acao in self.acoes_estrategicas.all()]
+        return [
+            {
+                "numero": acao.numero,
+                "descricao": acao.descricao,
+                "concluida": acao.concluida,
+            }
+            for acao in self.acoes_estrategicas.all()
+        ]
     
     def checagem_destaque(self):
 

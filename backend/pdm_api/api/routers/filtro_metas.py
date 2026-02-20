@@ -22,7 +22,8 @@ from pdm_api.schemas.filtro_metas.search_response import (
                                                             MetaListingSchema,
                                                             AtributoStrCardSchema,
                                                             AtributoListCardSchema,
-                                                            MetaMapSchema
+                                                            AtributoListObjCardSchema,
+                                                            MetaMapSchema,
                                                             )
 
 from pdm_api.utils.static_files.images import get_abs_link
@@ -201,7 +202,10 @@ def search_metas(request, params: SearchParamSchema):
                 eixo_cor_secundaria=meta.cor_secundaria_eixo,
                 eixo_frase=meta.frase_pertencimento_eixo,
                 projecao=AtributoStrCardSchema(titulo="PROJEÇÃO", valor=meta.projecao), 
-                acoes_estrategicas=AtributoListCardSchema(titulo="AÇÕES ESTRATÉGICAS", valor=meta.acoes_estrategicas_as_list),
+                acoes_estrategicas=AtributoListObjCardSchema(
+                    titulo="AÇÕES ESTRATÉGICAS", 
+                    valor=meta.acoes_estrategicas_as_list
+                    ),
                 indicador=AtributoStrCardSchema(titulo="INDICADOR", valor=meta.indicador),
                 orgaos_responsaveis=AtributoListCardSchema(titulo="ÓRGÃOS RESPONSÁVEIS", valor=meta.orgaos_responsaveis_list),
                 regionalizacao=regionalizacao

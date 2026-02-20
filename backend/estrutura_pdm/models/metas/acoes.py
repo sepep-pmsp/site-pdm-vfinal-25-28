@@ -32,6 +32,7 @@ class AcaoEstrategica(models.Model):
     posicao = models.IntegerField(blank=False, null=False, verbose_name="Ordem de Apresentação da Ação Estratégica")
     descricao = models.CharField(max_length=5000, verbose_name="Descrição da Ação Estratégica")
     numero = models.CharField(max_length=20, unique=True, verbose_name="Número da Ação Estratégica")
+    concluida = models.BooleanField(null=False, default=False)
 
     meta = models.ForeignKey(
         Meta,
