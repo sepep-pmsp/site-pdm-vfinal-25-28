@@ -72,6 +72,7 @@ class MetaCardSchema(BaseModel):
     eixo_cor_principal: str
     eixo_cor_secundaria: str
     eixo_frase: list[str]=[]
+    evolucao: Optional[str]=None
     monitoramento: StatusMonitoramento
     regionalizacao: MetaMapSchema
 

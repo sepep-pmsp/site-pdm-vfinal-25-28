@@ -18,6 +18,7 @@ class Meta(models.Model):
     descricao = models.TextField(blank=False, null=False, verbose_name="Descrição da Meta")
     indicador = models.CharField(max_length=500, blank=False, null=False, verbose_name="Indicador da Meta")
     projecao = models.CharField(max_length=500, blank=False, null=False, verbose_name="Projeção da Meta")
+    evolucao= models.TextField(blank=True, null=True, verbose_name="Evolução da Meta")
     
     status_monitoramento = models.CharField(
         max_length=50,
