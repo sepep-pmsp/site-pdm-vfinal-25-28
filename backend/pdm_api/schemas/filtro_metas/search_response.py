@@ -1,5 +1,6 @@
 from pydantic import BaseModel, model_validator, field_validator
 from typing import Optional, Literal
+from estrutura_pdm.models.metas.status_monitoramento import StatusMonitoramento
 
 class MetaListingSchema(BaseModel):
 
@@ -71,7 +72,10 @@ class MetaCardSchema(BaseModel):
     eixo_cor_principal: str
     eixo_cor_secundaria: str
     eixo_frase: list[str]=[]
+    monitoramento: StatusMonitoramento
     regionalizacao: MetaMapSchema
+
+    
 
 class MetaResponseSchema(BaseModel):
 

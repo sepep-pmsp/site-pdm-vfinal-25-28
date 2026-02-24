@@ -18,6 +18,14 @@ class Meta(models.Model):
     descricao = models.TextField(blank=False, null=False, verbose_name="Descrição da Meta")
     indicador = models.CharField(max_length=500, blank=False, null=False, verbose_name="Indicador da Meta")
     projecao = models.CharField(max_length=500, blank=False, null=False, verbose_name="Projeção da Meta")
+    
+    status_monitoramento = models.CharField(
+        max_length=50,
+        choices=StatusMonitoramento.choices,
+        default=StatusMonitoramento.PLANEJAMENTO,
+        verbose_name="Monitoramento"
+    )
+
 
     # evolucao_meta_txt = models.TextField(
     #     blank=True,
@@ -31,15 +39,9 @@ class Meta(models.Model):
     #     verbose_name="Evolução da Meta (%)"
 
     # )
-
-    
-    # monitoramento= models.TextChoices(
-    #     verbose_name= "Monitoramento"
-    # )
-
     
 
-
+   
     status_regionalizacao = models.CharField(
         max_length=50,
         choices=StatusRegionalizacao.choices,
@@ -61,6 +63,7 @@ class Meta(models.Model):
         verbose_name="Tema relacionado",
         on_delete=models.CASCADE
     )
+    
 #   Resultados apurados -> not Many to Many
     # data_result_ap
     # qtdd_result_ap

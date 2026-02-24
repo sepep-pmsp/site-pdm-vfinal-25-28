@@ -208,6 +208,7 @@ def search_metas(request, params: SearchParamSchema):
                     ),
                 indicador=AtributoStrCardSchema(titulo="INDICADOR", valor=meta.indicador),
                 orgaos_responsaveis=AtributoListCardSchema(titulo="ÓRGÃOS RESPONSÁVEIS", valor=meta.orgaos_responsaveis_list),
+                monitoramento=meta.status_monitoramento,
                 regionalizacao=regionalizacao
             )
 
