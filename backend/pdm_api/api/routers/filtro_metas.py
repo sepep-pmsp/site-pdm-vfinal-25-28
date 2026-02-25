@@ -22,7 +22,8 @@ from pdm_api.schemas.filtro_metas.search_response import (
                                                             MetaListingSchema,
                                                             AtributoStrCardSchema,
                                                             AtributoListCardSchema,
-                                                            AtributoListObjCardSchema,
+                                                            AcoesEstrategicasCardSchema,
+                                                            ResultadosApuradosCardSchema,
                                                             MetaMapSchema,
                                                             )
 
@@ -202,7 +203,7 @@ def search_metas(request, params: SearchParamSchema):
                 eixo_cor_secundaria=meta.cor_secundaria_eixo,
                 eixo_frase=meta.frase_pertencimento_eixo,
                 projecao=AtributoStrCardSchema(titulo="PROJEÇÃO", valor=meta.projecao), 
-                acoes_estrategicas=AtributoListObjCardSchema(
+                acoes_estrategicas=AcoesEstrategicasCardSchema(
                     titulo="AÇÕES ESTRATÉGICAS", 
                     valor=meta.acoes_estrategicas_as_list
                     ),
@@ -210,7 +211,11 @@ def search_metas(request, params: SearchParamSchema):
                 orgaos_responsaveis=AtributoListCardSchema(titulo="ÓRGÃOS RESPONSÁVEIS", valor=meta.orgaos_responsaveis_list),
                 evolucao=meta.evolucao,
                 monitoramento=meta.status_monitoramento,
-                regionalizacao=regionalizacao
+                resultados_apurados=ResultadosApuradosCardSchema(
+                    titulo="RESULTADOS APURADOS", 
+                    valor=meta.resultados_apurados_as_list
+                    ),
+                regionalizacao=regionalizacao,
             )
 
             meta_response = MetaResponseSchema(

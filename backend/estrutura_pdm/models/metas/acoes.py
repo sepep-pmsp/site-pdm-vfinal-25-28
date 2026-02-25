@@ -72,6 +72,7 @@ class AcaoEstrategica(models.Model):
             raise ValidationError({
                 'numero': 'O número da ação estratégica deve conter apenas dígitos.'
             })
+            
         
         return self.numero
 

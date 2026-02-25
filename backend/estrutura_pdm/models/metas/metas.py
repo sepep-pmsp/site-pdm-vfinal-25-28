@@ -1,5 +1,5 @@
 from django.db import models
-from django.core.exceptions import ValidationError
+from django.core.exceptions import ValidationError, ObjectDoesNotExist
 
 from ..eixos import Eixo, Tema
 from cadastros_basicos.models.estrutura_administrativa import Orgao
@@ -27,22 +27,6 @@ class Meta(models.Model):
         verbose_name="Monitoramento"
     )
 
-
-    # evolucao_meta_txt = models.TextField(
-    #     blank=True,
-    #     null= True, #?
-    #     verbose_name="Descrição da Evolução da Meta"
-    # )
-    # evolucao_meta_pct = models.FloatField(
-    #     blank=True,
-    #     null=False,
-    #     default=0.0,
-    #     verbose_name="Evolução da Meta (%)"
-
-    # )
-    
-
-   
     status_regionalizacao = models.CharField(
         max_length=50,
         choices=StatusRegionalizacao.choices,
@@ -64,11 +48,6 @@ class Meta(models.Model):
         verbose_name="Tema relacionado",
         on_delete=models.CASCADE
     )
-    
-#   Resultados apurados -> not Many to Many
-    # data_result_ap
-    # qtdd_result_ap
-
 
 #   Órgãos Responsáveis
     orgaos_responsaveis = models.ManyToManyField(
@@ -173,6 +152,20 @@ class Meta(models.Model):
         frase = f'Essa meta faz parte do eixo {self.eixo.nome}.'
 
         return [frase, resumo] if resumo else frase
+    
+    # Resultados Apurados
+    @property
+    def resultados_apurados_as_list(self):
+        return[
+            {
+                'qtdd_resultados_apurados': resultados.qtdd,
+                'mes': resultados.mes,
+                'ano': resultados.ano,
+                'data': resultados.data
+            }
+            for resultados in self.resultados_apurados.all() #-> ForeingKey related name (models/metas/resultados_apurados.py)
+        ]
+
     # Ações estratégicas
     @property
     def acoes_estrategicas_as_list(self):
@@ -204,8 +197,14 @@ class Meta(models.Model):
                 'tema': 'O tema selecionado não pertence ao eixo relacionado.'
             })
         
-        if self.status_regionalizacao == StatusRegionalizacao.NAO_REGIONALIZAVEL and self.mapa.exists():
-            raise ValidationError("Não é possível associar um mapa a uma meta que não é regionalizável.")
+        if self.status_regionalizacao == StatusRegionalizacao.NAO_REGIONALIZAVEL:
+            try:
+                mapa=self.mapa
+                if mapa.exists():
+                    raise ValidationError("Não é possível associar um mapa a uma meta que não é regionalizável.")
+            except ObjectDoesNotExist:
+                pass
+        
 
     class Meta:
         verbose_name = "Meta"

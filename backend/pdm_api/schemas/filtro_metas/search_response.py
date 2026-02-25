@@ -1,6 +1,7 @@
 from pydantic import BaseModel, model_validator, field_validator
 from typing import Optional, Literal
 from estrutura_pdm.models.metas.status_monitoramento import StatusMonitoramento
+from datetime import date
 
 class MetaListingSchema(BaseModel):
 
@@ -34,13 +35,13 @@ class AtributoListCardSchema(BaseModel):
             raise ValueError('Invalid tipo for AtributoListCardSchema')
         return self
     
+#Ações Estrategicas
 class AcaoEstrategicaSchema(BaseModel):
     numero: str
     descricao: str
     concluida: bool
 
-
-class AtributoListObjCardSchema(BaseModel):
+class AcoesEstrategicasCardSchema(BaseModel):
 
     titulo: str
     valor: list[AcaoEstrategicaSchema]
@@ -49,9 +50,29 @@ class AtributoListObjCardSchema(BaseModel):
     @model_validator(mode='after')
     def validate_tipo(self):
         if self.tipo != 'list':
-            raise ValueError('Invalid tipo for AtributoListObjCardSchema')
+            raise ValueError('Invalid tipo for AcoesEstrategicasCardSchema')
         return self
-    
+
+#Resultados Apurados
+class ResultadoApuradoSchema(BaseModel):
+    qtdd_resultados_apurados: int
+    mes: str
+    ano: int
+    data: date
+
+class ResultadosApuradosCardSchema(BaseModel):
+
+    titulo: str
+    valor: list[ResultadoApuradoSchema]
+    tipo: Literal['list'] = 'list'
+
+    @model_validator(mode='after')
+    def validate_tipo(self):
+        if self.tipo != 'list':
+            raise ValueError('Invalid tipo for ResultadosApuradosCardSchema')
+        return self
+
+#Mapas    
 class MetaMapSchema(BaseModel):
 
     status_regionalizacao: Literal["não regionalizável", "regionalizável", "regionalizada"]
@@ -60,12 +81,12 @@ class MetaMapSchema(BaseModel):
     map_legenda: Optional[str]=None
     map_rodape: Optional[str]=None
 
-
+# Meta
 class MetaCardSchema(BaseModel):
 
     numero: str
     projecao: AtributoStrCardSchema
-    acoes_estrategicas: Optional[AtributoListObjCardSchema]=None
+    acoes_estrategicas: Optional[AcoesEstrategicasCardSchema]=None
     indicador: AtributoStrCardSchema
     orgaos_responsaveis: AtributoListCardSchema
     eixo_nome: str
@@ -74,6 +95,7 @@ class MetaCardSchema(BaseModel):
     eixo_frase: list[str]=[]
     evolucao: Optional[str]=None
     monitoramento: StatusMonitoramento
+    resultados_apurados: Optional[ResultadosApuradosCardSchema]=None
     regionalizacao: MetaMapSchema
 
     
