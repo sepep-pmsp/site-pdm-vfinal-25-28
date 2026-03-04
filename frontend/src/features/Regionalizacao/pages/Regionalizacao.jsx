@@ -11,8 +11,8 @@ export default function Regionalizacao() {
   if (!regionalizacao) return <div>Carregando...</div>;
 
   return (
-    <div className="pt-20 px-4 h-full lg:h-[63rem]" style={{ maxWidth: "1458px", height:"auto", margin: "0 auto" }}>
-      <div className="lg:flex lg:items-start lg:justify-center lg:flex-col lg:flex-nowrap lg:w-[90%]">
+    <div className="pt-20 px-4 h-full lg:h-[63rem] max-w-container">
+      <div className="lg:flex lg:items-start lg:justify-center lg:flex-col lg:flex-nowrap lg:w-full">
         <h1 className="lg:text-7xl text-5xl text-[var(--color-navy)] ">
           {regionalizacao.titulo}
         </h1>

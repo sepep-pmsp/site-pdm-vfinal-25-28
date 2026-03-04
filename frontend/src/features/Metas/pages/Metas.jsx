@@ -72,13 +72,13 @@ export default function Metas() {
         <div className="pt-20 bg-white">
             {/* --- HEADER --- */}
             <div className="bg-[var(--color-navy)] px-4 py-8">
-                <div className="flex flex-row items-center justify-start gap-8 md:relative max-w-[1200px] mx-auto" style={{ maxWidth: "1427px", height: "auto", margin: "0 auto" }}>
+                <div className="flex flex-row items-center justify-start gap-8 md:relative max-w-container">
                     <img className="w-24 md:w-32" src={logo} alt="Logo" />
                     <h2 className="text-white text-2xl md:text-4xl uppercase font-bebas-bold">conheça as metas</h2>
                 </div>
             </div>
             <div className="bg-gray-50">
-                <div className="flex flex-col md:flex-row items-center justify-center gap-10 px-6" style={{ maxWidth: "1427px", height: "auto", margin: "0 auto" }}>
+                <div className="flex flex-col md:flex-row items-center justify-center gap-10 px-6 max-w-container">
                     <div className="flex flex-col items-start gap-5 text-[1.1rem] md:!text-xl w-full pt-8">
                         <span>
                             <strong>Neste painel você pode conferir todas as metas deste Programa,</strong>{" "}visualizá-las por eixo estratégico ou pelos subtemas a que se referem.
@@ -87,12 +87,12 @@ export default function Metas() {
                             Clique na meta para ver suas informações completas!
                         </span>
                     </div>
-                    <div className="relative lg:left-7">
+                    <div className="w-full">
                         <OrcamentoSection />
                     </div>
                 </div>
             </div>
-            <div ref={scrollRef} className="flex flex-col md:flex-row items-center justify-center gap-18 px-4 scroll-mt-24 py-10" style={{ maxWidth: "1592px", height: "auto", margin: "0 auto" }}>
+            <div ref={scrollRef} className="flex flex-col md:flex-row items-center justify-center gap-18 px-4 scroll-mt-24 py-10 max-w-container">
                 <div className="w-full md:w-6/12 py-8">
                     <FiltroMeta onCardsUpdate={(res) => setMetas(res.metas)} eixoIdFromNav={eixoIdFiltro} />
                 </div>
