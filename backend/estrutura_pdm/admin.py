@@ -14,6 +14,7 @@ from .models.metas import (
     ResultadosApurados,
 )
 from .models.pdm import PDM, DocumentoPDM, TipoDocumentoPDM
+from .models.conheca_metas import ConhecaMetas
 from cadastros_basicos.models.estrutura_administrativa import Orgao
 
 # Register your models here.
@@ -149,3 +150,25 @@ class PDMAdmin(admin.ModelAdmin):
     search_fields = ('nome', 'ano_inicio', 'ano_fim', 'nome_prefeito')
     inlines = [PDMDocumentoInline]
 
+#Conheça as Metas
+@admin.register(ConhecaMetas)
+class ConhecaMetasAdmin(admin.ModelAdmin):
+    list_display=(
+        'nome',
+        'publicado',
+        'recursos_empenhados',
+        'metas_atingidas',
+        'metas_mais_50',
+        'metas_andamento_atingida',
+        'execucao_total',
+
+    )
+    search_fields=(
+        'nome',
+        'publicado',
+        'recursos_empenhados',
+        'metas_atingidas',
+        'metas_mais_50',
+        'metas_andamento_atingida',
+        'execucao_total',
+    )
