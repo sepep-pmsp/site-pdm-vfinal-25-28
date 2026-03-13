@@ -1,8 +1,20 @@
 from django.contrib import admin
 
 from .models.eixos import Eixo, Tema
-from .models.metas import Meta, MetaOrgao, MetaSubprefeitura, MetaZona, AcaoEstrategica, AcaoOrgao, MetaPlanoSetorial, MetaODS, MapaMeta
+from .models.metas import (
+    Meta, 
+    MetaOrgao, 
+    MetaSubprefeitura, 
+    MetaZona, 
+    AcaoEstrategica, 
+    AcaoOrgao, 
+    MetaPlanoSetorial, 
+    MetaODS, 
+    MapaMeta,
+    ResultadosApurados,
+)
 from .models.pdm import PDM, DocumentoPDM, TipoDocumentoPDM
+from .models.conheca_metas import ConhecaMetas
 from cadastros_basicos.models.estrutura_administrativa import Orgao
 
 # Register your models here.
@@ -33,6 +45,16 @@ class EixoAdmin(admin.ModelAdmin):
     list_display = ('nome', 'descricao', 'resumo')
     search_fields = ('nome', 'descricao')
     inlines = [EixoInline]
+
+#Resultados Apurados
+class ResultadosApuradosInline(admin.TabularInline):
+    '''Criar Sub-aba de Resultados Apurados dentro das Metas'''
+    model=ResultadosApurados
+    extra=0
+    verbose_name="Resultado Apurado"
+    verbose_name_plural="Resultados Apurados"
+    readonly_fields=['data'] #gera data automaticamente
+
 
 class AcaoEstrategicaInline(admin.TabularInline):
     model = AcaoEstrategica
@@ -80,10 +102,15 @@ class MapaMetaAdmin(admin.ModelAdmin):
 class MetaAdmin(admin.ModelAdmin):
     list_display = ('numero', 'destaque', 'descricao')
     search_fields = ('numero', 'destaque')
-    inlines = [AcaoEstrategicaInline, 
-                                            MetaOrgaoInline, 
-                                            MetaSubprefeituraInline, MetaZonaInline, 
-                                            MetaODSInline, MetaPlanoSetorialInline]
+    inlines = [
+        AcaoEstrategicaInline,
+        MetaOrgaoInline,
+        MetaSubprefeituraInline, 
+        MetaZonaInline,
+        MetaODSInline, 
+        MetaPlanoSetorialInline,
+        ResultadosApuradosInline,
+    ]
 
 
 @admin.register(TipoDocumentoPDM)
@@ -123,3 +150,25 @@ class PDMAdmin(admin.ModelAdmin):
     search_fields = ('nome', 'ano_inicio', 'ano_fim', 'nome_prefeito')
     inlines = [PDMDocumentoInline]
 
+#Conheça as Metas
+@admin.register(ConhecaMetas)
+class ConhecaMetasAdmin(admin.ModelAdmin):
+    list_display=(
+        'nome',
+        'publicado',
+        'recursos_empenhados',
+        'metas_atingidas',
+        'metas_mais_50',
+        'metas_andamento_atingida',
+        'execucao_total',
+
+    )
+    search_fields=(
+        'nome',
+        'publicado',
+        'recursos_empenhados',
+        'metas_atingidas',
+        'metas_mais_50',
+        'metas_andamento_atingida',
+        'execucao_total',
+    )

@@ -109,6 +109,12 @@ class Banner(models.Model):
     subtitulo = models.CharField(max_length=800, verbose_name="Subtítulo")
 
     link_pdf = models.URLField(verbose_name='Link para o PDF do PDM')
+    link_pdf2= models.URLField(
+        verbose_name='Link para o segundo PDF',
+        blank=True,
+        null=True,
+        default=""
+        )
 
     what = models.CharField(max_length=800, verbose_name="O que é?")
     why = models.CharField(max_length=800, verbose_name="Por que fazer o PDM?")

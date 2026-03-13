@@ -22,7 +22,9 @@ from pdm_api.schemas.filtro_metas.search_response import (
                                                             MetaListingSchema,
                                                             AtributoStrCardSchema,
                                                             AtributoListCardSchema,
-                                                            MetaMapSchema
+                                                            AcoesEstrategicasCardSchema,
+                                                            ResultadosApuradosCardSchema,
+                                                            MetaMapSchema,
                                                             )
 
 from pdm_api.utils.static_files.images import get_abs_link
@@ -201,10 +203,19 @@ def search_metas(request, params: SearchParamSchema):
                 eixo_cor_secundaria=meta.cor_secundaria_eixo,
                 eixo_frase=meta.frase_pertencimento_eixo,
                 projecao=AtributoStrCardSchema(titulo="PROJEÇÃO", valor=meta.projecao), 
-                acoes_estrategicas=AtributoListCardSchema(titulo="AÇÕES ESTRATÉGICAS", valor=meta.acoes_estrategicas_as_list),
+                acoes_estrategicas=AcoesEstrategicasCardSchema(
+                    titulo="AÇÕES ESTRATÉGICAS", 
+                    valor=meta.acoes_estrategicas_as_list
+                    ),
                 indicador=AtributoStrCardSchema(titulo="INDICADOR", valor=meta.indicador),
                 orgaos_responsaveis=AtributoListCardSchema(titulo="ÓRGÃOS RESPONSÁVEIS", valor=meta.orgaos_responsaveis_list),
-                regionalizacao=regionalizacao
+                evolucao=meta.evolucao,
+                monitoramento=meta.status_monitoramento,
+                resultados_apurados=ResultadosApuradosCardSchema(
+                    titulo="RESULTADOS APURADOS", 
+                    valor=meta.resultados_apurados_as_list
+                    ),
+                regionalizacao=regionalizacao,
             )
 
             meta_response = MetaResponseSchema(

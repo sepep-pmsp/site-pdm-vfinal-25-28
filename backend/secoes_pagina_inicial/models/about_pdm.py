@@ -17,6 +17,12 @@ class AboutPDM(models.Model):
         related_name='about_pdm',
         verbose_name="Carta do Prefeito"
     )
+    link_pdf_about= models.URLField(
+        verbose_name='Link para o PDF',
+        blank=True,
+        null=True,
+        default=""
+        )
     criado_em = models.DateTimeField(auto_now_add=True)
     criado_por = models.ForeignKey(
         User,

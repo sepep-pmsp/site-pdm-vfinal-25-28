@@ -62,6 +62,17 @@ export default function About() {
                   </p>
                 </CustomButton>
               </div>
+              {about.link_pdf_about && (
+                <div className="w-28 h-20 md:w-38 lg:w-48">
+                    <CustomButton
+                    type="link"
+                    className="all_buttons uppercase"
+                    onClick={() => window.open(about.link_pdf_about, "_blank")}
+                    >
+                    <p className="roboto-black">resultados</p>
+                    </CustomButton>
+                </div>
+                )}
             </div>
           </div>
         </div>

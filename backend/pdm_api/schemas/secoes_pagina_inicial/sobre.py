@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from typing import Optional
 
 
 class BannerSchema(BaseModel):
@@ -7,6 +8,7 @@ class BannerSchema(BaseModel):
     titulo: str
     subtitulo: str
     link_pdf: str
+    link_pdf2: Optional[str] = None
     o_que: str
     por_que: str
     para_quem: str

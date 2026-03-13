@@ -37,6 +37,7 @@ def about_pdm(request) -> AboutPDMSchema:
         'subtitulo' : about_pdm.subtitulo,
         'paragrafo' : about_pdm.paragrafo_as_str,
         'link_img' :  get_abs_link(request, about_pdm.banner_image) if about_pdm.banner_image else '',
+        'link_pdf_about' : about_pdm.link_pdf_about,
     }
 
     carta = about_pdm.carta_do_prefeito
@@ -202,6 +203,7 @@ def sobre_pagina_inicial(request) -> SecaoSobreSchema:
         titulo=banner_obj.titulo,
         subtitulo=banner_obj.subtitulo,
         link_pdf=banner_obj.link_pdf,
+        link_pdf2=banner_obj.link_pdf2,
         o_que=banner_obj.what,
         por_que=banner_obj.why,
         para_quem=banner_obj.whom
