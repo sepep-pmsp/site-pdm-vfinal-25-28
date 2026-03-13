@@ -12,6 +12,8 @@ from .models.metas import (
     MetaODS, 
     MapaMeta,
     ResultadosApurados,
+    MapaPlanejado,
+    MapaExecutado,
 )
 from .models.pdm import PDM, DocumentoPDM, TipoDocumentoPDM
 from .models.conheca_metas import ConhecaMetas
@@ -92,10 +94,27 @@ class MetaPlanoSetorialInline(admin.TabularInline):
     verbose_name = "Plano Setorial relacionado à Meta"
     verbose_name_plural = "Planos Setoriais relacionados à Meta"
 
+#Mapa Meta
+class MapaPlanejadoInline(admin.TabularInline):
+    model=MapaPlanejado
+    extra=0
+    verbose_name="Mapa Planejado"
+    verbose_name_plural="Mapas Planejados"
+
+class MapaExecutadoInline(admin.TabularInline):
+    model=MapaExecutado
+    extra=0
+    verbose_name="Mapa Executado"
+    verbose_name_plural="Mapas Executados"
+
 @admin.register(MapaMeta)
 class MapaMetaAdmin(admin.ModelAdmin):
-    list_display = ('meta__numero', 'indicador_legenda', 'nota_rodape', 'frase_regionalizacao')
-    search_fields = ('meta__numero', 'indicador_legenda', 'nota_rodape', 'frase_regionalizacao')
+    list_display = ('meta__numero', 'frase_regionalizacao')
+    search_fields = ('meta__numero', 'frase_regionalizacao')
+    inlines=[
+        MapaExecutadoInline,
+        MapaPlanejadoInline,
+    ]
 
 
 @admin.register(Meta)
