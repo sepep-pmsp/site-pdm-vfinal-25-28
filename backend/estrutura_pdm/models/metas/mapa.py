@@ -37,7 +37,14 @@ class MapaMeta(models.Model):
         super().save(*args, **kwargs)
 
 class MapaPlanejado(MapaAbstract):
-
+    meta=models.OneToOneField(
+        Meta,
+        on_delete=models.CASCADE,
+        related_name='mapa_planejado',
+        verbose_name='Meta',
+        null=True,
+        blank=True
+    )
     mapa_meta = models.OneToOneField(
         MapaMeta,
         on_delete=models.CASCADE,
@@ -55,6 +62,14 @@ class MapaPlanejado(MapaAbstract):
     
 
 class MapaExecutado(MapaAbstract):
+    meta=models.OneToOneField(
+        Meta,
+        on_delete=models.CASCADE,
+        related_name='mapa_executado',
+        verbose_name='Meta',
+        null=True,
+        blank=True
+    )
     mapa_meta = models.OneToOneField(
         MapaMeta,
         on_delete=models.CASCADE,

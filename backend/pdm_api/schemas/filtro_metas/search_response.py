@@ -72,14 +72,19 @@ class ResultadosApuradosCardSchema(BaseModel):
             raise ValueError('Invalid tipo for ResultadosApuradosCardSchema')
         return self
 
-#Mapas    
-class MetaMapSchema(BaseModel):
-
+# Mapas
+## MapasAbstract
+class MapaSchema(BaseModel):
     status_regionalizacao: Literal["não regionalizável", "regionalizável", "regionalizada"]
-    nota_regionalizacao: Optional[str]=None
     map_image: Optional[str]=None
     map_legenda: Optional[str]=None
     map_rodape: Optional[str]=None
+
+## MapaMeta
+class MetaMapSchema(BaseModel):
+    
+    status_regionalizacao: Literal["não regionalizável", "regionalizável", "regionalizada"]
+    nota_regionalizacao: Optional[str]=None #frase_regionalizacao
 
 # Meta
 class MetaCardSchema(BaseModel):
@@ -96,7 +101,9 @@ class MetaCardSchema(BaseModel):
     evolucao: Optional[str]=None
     monitoramento: StatusMonitoramento
     resultados_apurados: Optional[ResultadosApuradosCardSchema]=None
-    regionalizacao: MetaMapSchema
+    regionalizacao_metamap: MetaMapSchema
+    regionalizacao_planejado: MapaSchema
+    regionalizacao_executado: MapaSchema
 
     
 

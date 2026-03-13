@@ -6,3 +6,4 @@ from .mapa import (
     MapaPlanejado
 )
 from.resultados_apurados import ResultadosApurados
+from .mapa_abstract import MapaMetaAbstract

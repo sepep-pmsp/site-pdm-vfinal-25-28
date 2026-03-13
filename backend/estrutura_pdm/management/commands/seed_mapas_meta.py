@@ -1,7 +1,7 @@
 import json
 import os
 from django.core.management.base import BaseCommand
-from estrutura_pdm.models.metas import Meta, MapaMeta
+from estrutura_pdm.models.metas import Meta, MapaMetaAbstract
 from estrutura_pdm.models.metas.relacionamentos_meta import StatusRegionalizacao
 from estrutura_pdm.queries.metas import get_meta_by_numero, get_mapa
 from cadastros_basicos.queries.superuser import get_superuser
@@ -66,7 +66,7 @@ class Command(BaseCommand):
                     self.stdout.write(self.style.SUCCESS(f'Meta Regionalizável {meta_num} já possui Mapa associado. Pulando...'))
                     continue
 
-                map_obj = MapaMeta(
+                map_obj = MapaMetaAbstract(
                     meta=meta_obj,
                     map_image=None,
                     indicador_legenda=None,
@@ -82,7 +82,7 @@ class Command(BaseCommand):
                     self.stdout.write(self.style.SUCCESS(f'Meta Regionalizável {meta_num} já possui Mapa associado. Pulando...'))
                     continue
 
-                map_obj = MapaMeta(
+                map_obj = MapaMetaAbstract(
                     meta=meta_obj,
                     map_image=self.__create_map_image(meta_data['mapa_file'], meta_num),
                     indicador_legenda=meta_data['indicador_legenda'],
