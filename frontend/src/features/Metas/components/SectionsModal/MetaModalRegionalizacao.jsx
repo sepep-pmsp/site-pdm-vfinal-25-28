@@ -52,13 +52,13 @@ export default function MetaModalRegionalizacao({ meta }) {
           </figcaption>
         )}
 
-        <div className="flex items-center justify-center w-full">
+        <div className="flex items-center justify-center w-auto">
             {imagemUrl && (
             <div style={{ border: `3px solid ${corPrincipal}`,padding: `1rem`,borderRadius: `2rem`,height: `auto`,display: "flex",alignItems: "center",justifyContent: "center",}} className="flex items-center justify-center">
                 <SafeSVG
                 src={corrigirUrlImagem(imagemUrl)}
                 alt="Mapa da regionalização"
-                className="mt-4 rounded-xl h-auto "
+                className="mt-4 rounded-xl h-auto w-full object-contain"
                 />
             </div>
             )}

@@ -107,6 +107,8 @@ class MetaCardSchema(BaseModel):
 
     
 
+    
+
 class MetaResponseSchema(BaseModel):
 
     id: str
