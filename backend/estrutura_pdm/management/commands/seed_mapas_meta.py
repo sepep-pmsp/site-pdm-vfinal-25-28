@@ -1,9 +1,21 @@
 import json
 import os
 from django.core.management.base import BaseCommand
-from estrutura_pdm.models.metas import Meta, MapaMetaAbstract
+from estrutura_pdm.models.metas import (
+    Meta, 
+    MapaMetaAbstract,
+    MapaMeta,
+    MapaExecutado,
+    MapaPlanejado,
+)
 from estrutura_pdm.models.metas.relacionamentos_meta import StatusRegionalizacao
-from estrutura_pdm.queries.metas import get_meta_by_numero, get_mapa
+from estrutura_pdm.queries.metas import (
+    get_meta_by_numero, 
+    get_mapa,
+    get_mapa_executado,
+    get_mapa_planejado,
+    get_mapa_meta,
+)
 from cadastros_basicos.queries.superuser import get_superuser
 from static_files.models import Imagem
 from django.core.files import File
@@ -60,35 +72,51 @@ class Command(BaseCommand):
             meta_obj.status_regionalizacao = meta_data['status_regionalizacao']
             meta_obj.save()
 
+            mapa_meta_obj=get_mapa_meta(meta_obj, raise_error=False)
+
+            #REGIONALIZAVEL
             if meta_obj.status_regionalizacao  == StatusRegionalizacao.REGIONALIZAVEL:
-                
-                if get_mapa(meta_obj, raise_error=False) is not None:
-                    self.stdout.write(self.style.SUCCESS(f'Meta Regionalizável {meta_num} já possui Mapa associado. Pulando...'))
-                    continue
+                ## Mapa Meta
+                if mapa_meta_obj is not None:
+                    self.stdout.write(self.style.SUCCESS(f'Meta Regionalizável {meta_num} já possui MapaMeta associado. Pulando...'))
+                else:
+                    mapa_meta_obj= MapaMeta(
+                        meta=meta_obj,
+                        frase_regionalizacao=meta_data['nota_regionalizacao']
+                    )
 
-                map_obj = MapaMetaAbstract(
-                    meta=meta_obj,
-                    map_image=None,
-                    indicador_legenda=None,
-                    nota_rodape=None,
-                    frase_regionalizacao=meta_data['nota_regionalizacao']
-                )
-
-                map_obj.save()
+                ## Mapa Planejado
+                ### Não tem como Regionalizavel ter mapa. Se eu não me engano, essa devia ser só a forma deles passarem a frase de regionalziação antes.
+                mapa_meta_obj.save()
                 self.stdout.write(self.style.SUCCESS(f'Criado relacionamento de Mapa para Meta Regionalizável {meta_num}'))
+
+            # REGIONALIZADA
             elif meta_obj.status_regionalizacao ==  StatusRegionalizacao.REGIONALIZADA:
-                
-                if get_mapa(meta_obj, raise_error=False) is not None:
-                    self.stdout.write(self.style.SUCCESS(f'Meta Regionalizável {meta_num} já possui Mapa associado. Pulando...'))
-                    continue
+                ## Mapa Meta
+                if mapa_meta_obj is not None:
+                    self.stdout.write(self.style.SUCCESS(f'Meta Regionalizada {meta_num} já possui MapaMeta associado. Pulando...'))
+                else:
+                    mapa_meta_obj= MapaMeta(
+                        meta=meta_obj,
+                    )
+                mapa_meta_obj.save()
+                self.stdout.write(self.style.SUCCESS(f'Criado relacionamento de MapaMeta para Meta Regionalizada {meta_num}'))
 
-                map_obj = MapaMetaAbstract(
-                    meta=meta_obj,
-                    map_image=self.__create_map_image(meta_data['mapa_file'], meta_num),
-                    indicador_legenda=meta_data['indicador_legenda'],
-                    nota_rodape=meta_data['nota_rodape'],
-                    frase_regionalizacao=None
-                )
+                ## Mapa Planejado
+                mapa_plan_obj = get_mapa_planejado(meta_obj, raise_error=False)
 
-                map_obj.save()
-                self.stdout.write(self.style.SUCCESS(f'Atualizado relacionamento de Mapa para Meta Regionalizada {meta_num}'))
+                if mapa_plan_obj is not None:
+                    self.stdout.write(self.style.SUCCESS(f'Meta Regionalizada {meta_num} já possui Mapa Planejado associado. Pulando...'))
+                else:
+                    mapa_plan_obj= MapaPlanejado(
+                        meta=meta_obj,
+                        map_image=self.__create_map_image(meta_data['mapa_file'], meta_num),
+                        indicador_legenda=meta_data['indicador_legenda'],
+                        nota_rodape=meta_data['nota_rodape'],
+                    )
+
+                mapa_plan_obj.save()
+                self.stdout.write(self.style.SUCCESS(f'Criado ou atuaizando Mapa Planejado para Meta Regionalizada {meta_num}'))
+
+                ##Mapa Executado
+                ### Considerando que o seed apenas lê o arquivo do json, e não existia mapa executado quando o json foi feito, eu vou só não fazer essa parte.
