@@ -10,12 +10,15 @@ export default function SectionIntroSobre({
   selectedButton
 }) {
   const isMobile = useIsMobile(1026);
-  const { banner } = sobre;
+  const banner = sobre?.banner;
   const buttonsData = [
     { label: "o que é?", message: banner.o_que },
     { label: "por quê?", message: banner.por_que },
     { label: "para quem?", message: banner.para_quem }
   ];
+  console.log("sobre:", sobre);
+    console.log("banner:", banner);
+    console.log("link_pdf2:", banner?.link_pdf2);
 
   return (
     <div>
@@ -84,7 +87,7 @@ export default function SectionIntroSobre({
               </div>
             </div>
           </div>
-          <div className="max-xl:w-full max-xl:max-w-xs max-xl:h-auto max-xl:text-xl max-xl:relative max-xl:px-8 max-xl:py-6 max-xl:top-0">
+          <div className="max-xl:w-full max-xl:max-w-xs max-xl:h-auto max-xl:text-xl max-xl:relative max-xl:px-8 max-xl:py-6 max-xl:top-0 flex flex-col items-center flex-nowrap justify-center gap-10">
             <CustomButton
               type="download"
               target={banner.link_pdf}
@@ -96,6 +99,21 @@ export default function SectionIntroSobre({
                 <br></br> do Programa<br></br>de metas
               </p>
             </CustomButton>
+            {banner?.link_pdf2 && (
+            <div className="max-xl:w-full max-xl:max-w-xs max-xl:h-auto max-xl:text-xl max-xl:relative max-xl:px-8 max-xl:py-6 max-xl:top-0 flex flex-col items-center flex-nowrap justify-center">
+                <CustomButton
+                type="link"
+                className="h-24 w-42 shadow-[0px_9px_20px_1px_#00000052] flex items-center justify-center flex-nowrap flex-col transition-all duration-[0.3s] ease-[ease-in-out] text-[color:var(--color-white)] cursor-pointer bg-[color:var(--color-cyan-medium)] p-8 rounded-2xl hover:-translate-y-2.5 md:h-44 md:w-72"
+                onClick={() =>
+                    window.open(banner.link_pdf2, "_blank", "noopener,noreferrer")
+                }
+                >
+                <p className="text-sm uppercase text-white md:text-2xl">
+                    Baixar o relatório de execução anual - 2025
+                </p>
+                </CustomButton>
+            </div>
+            )}
           </div>
         </div>
       </section>

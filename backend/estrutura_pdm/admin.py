@@ -1,8 +1,22 @@
 from django.contrib import admin
 
 from .models.eixos import Eixo, Tema
-from .models.metas import Meta, MetaOrgao, MetaSubprefeitura, MetaZona, AcaoEstrategica, AcaoOrgao, MetaPlanoSetorial, MetaODS, MapaMeta
+from .models.metas import (
+    Meta, 
+    MetaOrgao, 
+    MetaSubprefeitura, 
+    MetaZona, 
+    AcaoEstrategica, 
+    AcaoOrgao, 
+    MetaPlanoSetorial, 
+    MetaODS, 
+    MapaMeta,
+    ResultadosApurados,
+    MapaPlanejado,
+    MapaExecutado,
+)
 from .models.pdm import PDM, DocumentoPDM, TipoDocumentoPDM
+from .models.conheca_metas import ConhecaMetas
 from cadastros_basicos.models.estrutura_administrativa import Orgao
 
 # Register your models here.
@@ -33,6 +47,16 @@ class EixoAdmin(admin.ModelAdmin):
     list_display = ('nome', 'descricao', 'resumo')
     search_fields = ('nome', 'descricao')
     inlines = [EixoInline]
+
+#Resultados Apurados
+class ResultadosApuradosInline(admin.TabularInline):
+    '''Criar Sub-aba de Resultados Apurados dentro das Metas'''
+    model=ResultadosApurados
+    extra=0
+    verbose_name="Resultado Apurado"
+    verbose_name_plural="Resultados Apurados"
+    readonly_fields=['data'] #gera data automaticamente
+
 
 class AcaoEstrategicaInline(admin.TabularInline):
     model = AcaoEstrategica
@@ -70,21 +94,51 @@ class MetaPlanoSetorialInline(admin.TabularInline):
     verbose_name = "Plano Setorial relacionado à Meta"
     verbose_name_plural = "Planos Setoriais relacionados à Meta"
 
+# Mapa Meta
+class MapaPlanejadoInline(admin.StackedInline):
+    model=MapaPlanejado
+    extra=0
+    max_num=1
+    verbose_name="Mapa Planejado"
+    verbose_name_plural="Mapas Planejados"
+
+class MapaExecutadoInline(admin.StackedInline):
+    model=MapaExecutado
+    extra=0
+    max_num=1
+    verbose_name="Mapa Executado"
+    verbose_name_plural="Mapas Executados"
+
+class MapaMetaInline(admin.StackedInline):
+    model=MapaMeta
+    extra=0
+    max_num=1
+    verbose_name="Mapa Meta"
+    verbose_name_plural="Mapa Metas"
+
 @admin.register(MapaMeta)
 class MapaMetaAdmin(admin.ModelAdmin):
-    list_display = ('meta__numero', 'indicador_legenda', 'nota_rodape', 'frase_regionalizacao')
-    search_fields = ('meta__numero', 'indicador_legenda', 'nota_rodape', 'frase_regionalizacao')
+    list_display = ('meta__numero', 'frase_regionalizacao')
+    search_fields = ('meta__numero', 'frase_regionalizacao')
 
 
 @admin.register(Meta)
 class MetaAdmin(admin.ModelAdmin):
     list_display = ('numero', 'destaque', 'descricao')
     search_fields = ('numero', 'destaque')
-    inlines = [AcaoEstrategicaInline, 
-                                            MetaOrgaoInline, 
-                                            MetaSubprefeituraInline, MetaZonaInline, 
-                                            MetaODSInline, MetaPlanoSetorialInline]
-
+    inlines = [
+        AcaoEstrategicaInline,
+        MetaOrgaoInline,
+        MetaSubprefeituraInline, 
+        MetaZonaInline,
+        MetaODSInline, 
+        MetaPlanoSetorialInline,
+        ResultadosApuradosInline,
+        MapaMetaInline,
+        MapaExecutadoInline,
+        MapaPlanejadoInline,
+    ]
+    
 
 @admin.register(TipoDocumentoPDM)
 class TipoDocumentoPDMAdmin(admin.ModelAdmin):
@@ -123,3 +177,25 @@ class PDMAdmin(admin.ModelAdmin):
     search_fields = ('nome', 'ano_inicio', 'ano_fim', 'nome_prefeito')
     inlines = [PDMDocumentoInline]
 
+#Conheça as Metas
+@admin.register(ConhecaMetas)
+class ConhecaMetasAdmin(admin.ModelAdmin):
+    list_display=(
+        'nome',
+        'publicado',
+        'recursos_empenhados',
+        'metas_atingidas',
+        'metas_mais_50',
+        'metas_andamento_atingida',
+        'execucao_total',
+
+    )
+    search_fields=(
+        'nome',
+        'publicado',
+        'recursos_empenhados',
+        'metas_atingidas',
+        'metas_mais_50',
+        'metas_andamento_atingida',
+        'execucao_total',
+    )

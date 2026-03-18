@@ -43,7 +43,9 @@ class Command(BaseCommand):
             criado_em=data_hoje,
             modificado_por=superuser,
             modificado_em=data_hoje,
-            published=True
+            published=True,
+            link_pdf_about=about_data.get('link_pdf_about', ''),
+
         )
 
         

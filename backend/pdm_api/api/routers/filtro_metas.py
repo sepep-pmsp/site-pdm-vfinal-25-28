@@ -22,11 +22,17 @@ from pdm_api.schemas.filtro_metas.search_response import (
                                                             MetaListingSchema,
                                                             AtributoStrCardSchema,
                                                             AtributoListCardSchema,
-                                                            MetaMapSchema
+                                                            AcoesEstrategicasCardSchema,
+                                                            ResultadosApuradosCardSchema,
+                                                            MetaMapSchema,
                                                             )
 
 from pdm_api.utils.static_files.images import get_abs_link
-from pdm_api.utils.mapa_meta import solve_mapa_meta
+from pdm_api.utils.mapa_meta import (
+    solve_mapa_meta,
+    solve_mapa_executado,
+    solve_mapa_planejado,
+)
 
 
 router = Router(tags=["Filtro de Metas"])
@@ -193,6 +199,8 @@ def search_metas(request, params: SearchParamSchema):
             )
 
             regionalizacao = solve_mapa_meta(request, meta)
+            regionalizacao_planejado = solve_mapa_planejado(request, meta)
+            regionalizacao_executado = solve_mapa_executado(request, meta)
 
             card = MetaCardSchema(
                 numero=meta.numero_as_str,
@@ -201,10 +209,22 @@ def search_metas(request, params: SearchParamSchema):
                 eixo_cor_secundaria=meta.cor_secundaria_eixo,
                 eixo_frase=meta.frase_pertencimento_eixo,
                 projecao=AtributoStrCardSchema(titulo="PROJEÇÃO", valor=meta.projecao), 
-                acoes_estrategicas=AtributoListCardSchema(titulo="AÇÕES ESTRATÉGICAS", valor=meta.acoes_estrategicas_as_list),
+                acoes_estrategicas=AcoesEstrategicasCardSchema(
+                    titulo="AÇÕES ESTRATÉGICAS", 
+                    valor=meta.acoes_estrategicas_as_list
+                    ),
                 indicador=AtributoStrCardSchema(titulo="INDICADOR", valor=meta.indicador),
                 orgaos_responsaveis=AtributoListCardSchema(titulo="ÓRGÃOS RESPONSÁVEIS", valor=meta.orgaos_responsaveis_list),
-                regionalizacao=regionalizacao
+                evolucao=meta.evolucao,
+                monitoramento=meta.status_monitoramento,
+                resultados_apurados=ResultadosApuradosCardSchema(
+                    titulo="RESULTADOS APURADOS", 
+                    valor=meta.resultados_apurados_as_list
+                    ),
+                regionalizacao_metamap=regionalizacao,
+                regionalizacao_planejado=regionalizacao_planejado,
+                regionalizacao_executado=regionalizacao_executado,
+
             )
 
             meta_response = MetaResponseSchema(

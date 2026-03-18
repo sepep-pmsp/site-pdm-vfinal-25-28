@@ -57,6 +57,7 @@ class Command(BaseCommand):
                 titulo=banner_data['titulo'],
                 subtitulo=banner_data['subtitulo'],
                 link_pdf=banner_data['link_pdf'],
+                link_pdf2=banner_data['link_pdf2'],#link_pdf2=banner_data.get('link_pdf2', '')
                 what=banner_data['what'],
                 why=banner_data['why'],
                 whom=banner_data['whom'],
