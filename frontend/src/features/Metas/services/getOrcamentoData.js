@@ -9,3 +9,15 @@ export async function getOrcamentoData() {
     return await response.json();
   }
 }
+
+export async function getConhecaMetasData() {
+  if (!USE_API) return null;
+
+  const response = await fetch(`${API_BASE_URL}/visao_geral/conheca_metas`);
+
+  if (!response.ok) {
+    throw new Error("Erro ao carregar dados do conheca_metas");
+  }
+
+  return await response.json();
+}

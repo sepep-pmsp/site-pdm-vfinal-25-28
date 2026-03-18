@@ -1,36 +1,50 @@
 import React, { useEffect, useState } from 'react'
-import { getOrcamentoData } from "../../../services/getOrcamentoData";
+import { getOrcamentoData, getConhecaMetasData  } from "../../../services/getOrcamentoData";
 
 export default function CarouselOrcamento() {
     const [data, setData] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [recursosEmpenhados, setRecursosEmpenhados] = useState(null);
 
     useEffect(() => {
         async function fetchData() {
-            const response = await getOrcamentoData();
-            const valores = response.orcamentos_por_eixo.map((eixo) => ({
-                titulo: eixo.nome,
-                corPrincipal: eixo.cor_principal,
-                metasPorEixo: eixo.qtd_metas,
-                totalMetas: response.total_metas,
-                orcamento: eixo.orcamento,
-                orcamentoTotal: response.orcamento_total
-            }));
-            setData(valores);
+            try {
+                const [orcamentoResponse, conhecaMetasResponse] = await Promise.all([
+                    getOrcamentoData(),
+                    getConhecaMetasData(),
+                ]);
+
+                const valores = orcamentoResponse.orcamentos_por_eixo.map((eixo) => ({
+                    titulo: eixo.nome,
+                    corPrincipal: eixo.cor_principal,
+                    metasPorEixo: eixo.qtd_metas,
+                    totalMetas: orcamentoResponse.total_metas,
+                    orcamento: eixo.orcamento,
+                    orcamentoTotal: orcamentoResponse.orcamento_total,
+                }));
+
+                setData(valores);
+                setRecursosEmpenhados(conhecaMetasResponse?.recursos_empenhados ?? null);
+            } catch (error) {
+                console.error("Erro ao buscar dados do orçamento:", error);
+            }
         }
+
         fetchData();
     }, []);
 
     const handlePrev = () =>
         setCurrentIndex((p) => (p === 0 ? data.length - 1 : p - 1));
+
     const handleNext = () =>
         setCurrentIndex((p) => (p === data.length - 1 ? 0 : p + 1));
 
     if (!data.length) return null;
+
     const eixo = data[currentIndex];
 
     const fmtCompactBRL = (value) => {
-        if (!value) return "";
+        if (value === null || value === undefined) return "";
 
         const numeric = Number(value);
 
@@ -39,8 +53,17 @@ export default function CarouselOrcamento() {
             currency: "BRL",
             notation: "compact",
             compactDisplay: "short",
-            maximumFractionDigits: 1
+            maximumFractionDigits: 1,
         }).format(numeric);
+    };
+
+    const fmtBi = (value) => {
+        if (value === null || value === undefined) return "--";
+
+        return `${Number(value).toLocaleString("pt-BR", {
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 2,
+        })} bi`;
     };
 
     return (
@@ -83,7 +106,7 @@ export default function CarouselOrcamento() {
                     <p className='text-center'><strong>Orçamento total:</strong> {fmtCompactBRL(eixo.orcamentoTotal)}</p>
                 </div>
                 <div className='bg-[var(--color-navy)] w-full rounded-2xl py-2 px-8 text-white flex flex-col lg:flex-row items-center justify-center gap-2'>
-                    <h2 className='text-6xl w-30'>13 bi</h2>
+                    <h2 className='text-6xl w-35'>{fmtBi(recursosEmpenhados)}</h2>
                     <p className='text-xl'>De <strong>recursos empenhados</strong> até o momento</p>
                 </div>
             </section>

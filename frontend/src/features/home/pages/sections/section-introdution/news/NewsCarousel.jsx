@@ -57,7 +57,7 @@ return (
                             </a>
                         ))}
 
-                    <div className="relative left-[47%] top-[1.6rem] w-80 news-mobile-carousel">
+                    <div className="relative left-[47%] top-[1.6rem] w-80 max-md:w-full news-mobile-carousel">
                         {news.map((_, index) => (
                             <button
                                 key={index}

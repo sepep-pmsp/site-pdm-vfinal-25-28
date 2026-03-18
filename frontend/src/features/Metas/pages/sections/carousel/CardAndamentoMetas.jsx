@@ -1,7 +1,7 @@
 import { useEixosMetas } from '../../../hooks/useMetasIndicadores';
 
 export default function CardAndamentoMetas() {
-    const indicadores = useEixosMetas({ usarBackend: false });
+    const indicadores = useEixosMetas({ usarBackend: true });
 
     return (
         <div className='bg-white w-full p-4 shadow-md flex flex-col justify-center items-center gap-8 rounded-2xl h-full xl:!h-[29.4rem]'>

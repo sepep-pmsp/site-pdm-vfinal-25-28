@@ -1,75 +1,59 @@
-import { useMemo } from "react";
+import { useState, useEffect } from "react";
+// Importe a função que consome a nova API (ajuste o caminho de acordo com seu projeto)
+import { getConhecaMetasData } from "../services/getOrcamentoData"; 
 
-export function useEixosMetas({ metas = [], indicadoresBackend = null, usarBackend = true,}) {
-  return useMemo(() => {
+export function useEixosMetas({ usarBackend = true } = {}) {
+  // Estado que vai guardar os nossos cards formatados
+  const [indicadores, setIndicadores] = useState([]);
 
-    // 🔹 DADOS MOCKADOS (quando API ainda não estiver pronta)
+  useEffect(() => {
+    // 🔹 DADOS MOCKADOS (quando a API estiver desligada)
     if (!usarBackend) {
-      return [
-        {
-          id: "atingidas",
-          valor: 12,
-          label: "Metas atingidas",
-        },
-        {
-          id: "mais50",
-          valor: 126,
-          label: "Metas com mais de 50% de execução",
-        },
-        {
-          id: "andamento",
-          valor: "82%",
-          label: "Em andamento e/ou atingidas",
-        },
-        {
-          id: "execucaoTotal",
-          valor: "26%",
-          label: "Execução total do PDM",
-        },
-      ];
+      setIndicadores([
+        { id: "atingidas", valor: 12, label: "Metas atingidas" },
+        { id: "mais50", valor: 126, label: "Metas com mais de 50% de execução" },
+        { id: "andamento", valor: "82%", label: "Em andamento e/ou atingidas" },
+        { id: "execucaoTotal", valor: "26%", label: "Execução total do PDM" },
+      ]);
+      return; // Para a execução do useEffect aqui
     }
 
-    // 🔹 Se for usar backend mas ainda não tiver metas
-    if (!metas.length) return [];
+    // 🔹 DADOS REAIS DA API
+    async function fetchDadosDaApi() {
+      try {
+        const data = await getConhecaMetasData();
+        
+        // Montamos o array exatamente como o seu JSX espera,
+        // usando as chaves que vêm direto do backend!
+        setIndicadores([
+          {
+            id: "atingidas",
+            valor: data.metas_atingidas ?? 0,
+            label: "Metas atingidas",
+          },
+          {
+            id: "mais50",
+            valor: data.metas_mais_50 ?? 0,
+            label: "Metas com mais de 50% de execução",
+          },
+          {
+            id: "andamento",
+            valor: `${data.metas_andamento_atingida ?? 0}%`, // Adicionamos o %
+            label: "Em andamento e/ou atingidas",
+          },
+          {
+            id: "execucaoTotal",
+            valor: `${data.execucao_total ?? 0}%`, // Adicionamos o %
+            label: "Execução total do PDM",
+          },
+        ]);
+      } catch (error) {
+        console.error("Erro ao carregar os dados das metas:", error);
+      }
+    }
 
-    const totalMetas = metas.length;
+    fetchDadosDaApi();
+  }, [usarBackend]);
 
-    const metasAtingidas = metas.filter(
-      (m) => m.monitoramento === "atingida"
-    ).length;
-
-    const metasAndamentoOuAtingidas = metas.filter(
-      (m) =>
-        m.monitoramento === "progresso" ||
-        m.monitoramento === "atingida"
-    ).length;
-
-    const percentualAndamento =
-      totalMetas > 0
-        ? Math.round((metasAndamentoOuAtingidas / totalMetas) * 100)
-        : 0;
-
-    return [
-      {
-        id: "atingidas",
-        valor: metasAtingidas,
-        label: "Metas atingidas",
-      },
-      {
-        id: "mais50",
-        valor: indicadoresBackend?.metas_50_execucao ?? 0,
-        label: "Metas com mais de 50% de execução",
-      },
-      {
-        id: "andamento",
-        valor: `${percentualAndamento}%`,
-        label: "Em andamento e/ou atingidas",
-      },
-      {
-        id: "execucaoTotal",
-        valor: `${indicadoresBackend?.percentual_execucao_total ?? 0}%`,
-        label: "Execução total do PDM",
-      },
-    ];
-  }, [metas, indicadoresBackend, usarBackend]);
+  return indicadores;
 }
