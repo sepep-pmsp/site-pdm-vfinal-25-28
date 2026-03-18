@@ -94,27 +94,32 @@ class MetaPlanoSetorialInline(admin.TabularInline):
     verbose_name = "Plano Setorial relacionado à Meta"
     verbose_name_plural = "Planos Setoriais relacionados à Meta"
 
-#Mapa Meta
-class MapaPlanejadoInline(admin.TabularInline):
+# Mapa Meta
+class MapaPlanejadoInline(admin.StackedInline):
     model=MapaPlanejado
     extra=0
+    max_num=1
     verbose_name="Mapa Planejado"
     verbose_name_plural="Mapas Planejados"
 
-class MapaExecutadoInline(admin.TabularInline):
+class MapaExecutadoInline(admin.StackedInline):
     model=MapaExecutado
     extra=0
+    max_num=1
     verbose_name="Mapa Executado"
     verbose_name_plural="Mapas Executados"
+
+class MapaMetaInline(admin.StackedInline):
+    model=MapaMeta
+    extra=0
+    max_num=1
+    verbose_name="Mapa Meta"
+    verbose_name_plural="Mapa Metas"
 
 @admin.register(MapaMeta)
 class MapaMetaAdmin(admin.ModelAdmin):
     list_display = ('meta__numero', 'frase_regionalizacao')
     search_fields = ('meta__numero', 'frase_regionalizacao')
-    inlines=[
-        MapaExecutadoInline,
-        MapaPlanejadoInline,
-    ]
 
 
 @admin.register(Meta)
@@ -129,8 +134,11 @@ class MetaAdmin(admin.ModelAdmin):
         MetaODSInline, 
         MetaPlanoSetorialInline,
         ResultadosApuradosInline,
+        MapaMetaInline,
+        MapaExecutadoInline,
+        MapaPlanejadoInline,
     ]
-
+    
 
 @admin.register(TipoDocumentoPDM)
 class TipoDocumentoPDMAdmin(admin.ModelAdmin):

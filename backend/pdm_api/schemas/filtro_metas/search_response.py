@@ -40,6 +40,8 @@ class AcaoEstrategicaSchema(BaseModel):
     numero: str
     descricao: str
     concluida: bool
+    evolucao_negrito: Optional[str]
+    descricao_evolucao: Optional[str]
 
 class AcoesEstrategicasCardSchema(BaseModel):
 

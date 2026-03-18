@@ -174,6 +174,9 @@ class Meta(models.Model):
                 "numero": acao.numero,
                 "descricao": acao.descricao,
                 "concluida": acao.concluida,
+                "evolucao_negrito": acao.evolucao_negrito,
+                "descricao_evolucao" : acao.descricao_evolucao,
+
             }
             for acao in self.acoes_estrategicas.all()
         ]
