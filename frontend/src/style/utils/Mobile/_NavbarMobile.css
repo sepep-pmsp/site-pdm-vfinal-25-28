@@ -22,7 +22,8 @@
         flex-direction: row;
         justify-content: flex-start;
         width: 20rem;
-        gap: 2rem
+        gap: 2rem;
+        padding:0;
     }
 
     .navbar-desktop {
@@ -67,7 +68,8 @@
         flex-direction: row;
         justify-content: flex-start;
         width: 20rem;
-        gap: 2rem
+        gap: 2rem;
+        padding:0;
     }
 
     .navbar_span {
@@ -97,7 +99,8 @@
         flex-direction: row;
         justify-content: flex-start;
         width: 20rem;
-        gap: 2rem
+        gap: 2rem;
+        padding:0;
     }
 
     .navbar-desktop {

@@ -20,7 +20,7 @@ export default function About() {
   if (!about) return <div>Carregando...</div>;
 
   return (
-    <div className="px-4" style={{ maxWidth: "1458px", margin: "0 auto" }}>
+    <div className="px-4 max-w-container">
       <div className="flex flex-col items-start justify-start gap-6 my-2 w-full">
         <div className="w-full flex flex-col items-start">
           <h2 className="text-4xl w-60 text-[var(--color-navy)] lg:w-full lg:text-8xl lg:relative lg:left-8">

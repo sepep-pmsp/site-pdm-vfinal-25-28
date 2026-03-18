@@ -21,7 +21,7 @@ export default function SectionPlanejamento({ sobre }) {
         <h1 className="text-white text-7xl px-6">como é feito</h1>
       </div>
       <div className="flex flex-col items-center justify-center flex-nowrap w-full gap-8 py-8">
-        <div className="max-md:w-80 max-xl:w-180 max-2xl:max-w-7xl lg:w-[100rem] flex justify-center items-start" style={{ maxWidth: "1305px", height:"auto", margin: "0 auto" }}>
+        <div className="max-md:w-80 max-xl:w-180 max-2xl:max-w-7xl lg:w-[100rem] flex justify-center items-start max-w-container">
           <p className="max-md:max-w-80 max-md:text-lg max-lg:w-full max-xl:w-180 max-2xl:w-[60rem] lg:w-auto text-2xl text-[var(--color-navy)] tirar-padding roboto-regular texto-como-e-feito-mobile">{como_feito.texto}</p>
         </div>
         <section className="max-lg:w-[45rem] max-lg:h-80 max-md:w-80 max-md:h-[40rem] max-md:left-0 lg:relative min-w-min h-[40rem] overflow-hidden">

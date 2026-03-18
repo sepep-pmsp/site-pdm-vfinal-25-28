@@ -192,7 +192,7 @@ export default function Navbar() {
 
   return (
     <div className="fixed p-2 bg-white z-30 w-full navbar-container">
-      <div className="flex flex-row justify-around gap-56 items-center p-2 display-navbar">
+      <div className="flex flex-row justify-between gap-8 items-center p-2 px-32 display-navbar">
         <a href="/">
             <div>
                 <span className="text-4xl roboto-light navbar_span">

@@ -1,75 +1,101 @@
-import React from "react";
+import React, { useState } from "react";
 import { corrigirUrlImagem } from "@/shared/utils/imageUtils";
 import SafeSVG from "@/shared/components/ui/SafeSVG";
 
+function normalize(s) {
+    return (s || "")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .trim();
+}
+
+function ToggleMapa({ checked, onChange, color = "#CEFA05" }) {
+    return (
+        <label className="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" className="sr-only peer" checked={checked} onChange={(e) => onChange(e.target.checked)} />
+            <div className="w-10 h-6 lg:w-16 lg:h-8 rounded-full duration-300 " style={{ boxShadow: `0px 0px 17px 3px color-mix(in srgb, ${color}, black 40%) inset`, lineHeight: 1 }}></div>
+            <span className="w-4 h-4 absolute top-1 lg:left-1 lg:h-6 lg:w-6 rounded-full duration-300 peer-checked:translate-x-5 lg:peer-checked:translate-x-8 peer-hover:scale-95" style={{ backgroundColor: "white", }} />
+        </label>
+    );
+}
+
 export default function MetaModalRegionalizacao({ meta }) {
-  if (!meta?.card?.regionalizacao) return null;
+    const [isExecutada, setIsExecutada] = useState(true);
+    const card = meta?.card;
+    const corPrincipal = card?.eixo_cor_principal || "#16A34A";
+    const metamap = card?.regionalizacao_metamap || {};
+    const planejado = card?.regionalizacao_planejado || {};
+    const executado = card?.regionalizacao_executado || {};
 
-  const reg = meta.card.regionalizacao;
-  const normalize = (s) =>
-    (s || "")
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .toLowerCase()
-      .trim();
+    if (!metamap.status_regionalizacao) return null;
 
-  const status = normalize(reg.status_regionalizacao);
-  const isNaoRegionalizavel = 
-    status === "nao regionalizavel" || 
-    status === "nao regionalizável";
+    const status = normalize(metamap.status_regionalizacao);
+    const isNaoRegionalizavel = status === "nao regionalizavel";
+    const nota = metamap.nota_regionalizacao || null;
 
-  const imagemUrl = reg.imagem || reg.mapa_file || reg.map_image || null;
-  const legenda = reg.map_legenda || reg.indicador_legenda || null;
-  const rodape = reg.map_rodape || reg.nota_rodape || null;
-  
-  const corPrincipal = meta.card.eixo_cor_principal;
+    const urlPlanejada = planejado.map_image;
+    const urlExecutada = executado.map_image;
 
-  return (
-    <div className="flex flex-col items-center justify-center w-full px-2">
-      <div className="w-full h-2" style={{ backgroundColor: corPrincipal }}/>
-      <div className="flex flex-col flex-nowrap items-start justify-around gap-8 py-12 shadow-[1px_8px_20px_#00000080] m-8 p-8 rounded-[2rem] border-solid w-full bg-white">
-        <div className="flex flex-col flex-nowrap items-start justify-center gap-12">
-          <h3 style={{ color: corPrincipal }} className="text-4xl font-semibold">
-            Regionalização
-          </h3>
-          
-          {isNaoRegionalizavel && (
-            <p className="font-bold text-lg capitalize">
-              {reg.status_regionalizacao}
-            </p>
-          )}
-          
-          {reg.nota_regionalizacao && (
-            <p className="font-bold text-lg">
-              {reg.nota_regionalizacao}
-            </p>
-          )}
-        </div>
+    const legenda = isExecutada ? executado.map_legenda : planejado.map_legenda;
 
-        {legenda && (
-          <figcaption className="text-2xl text-center underline" aria-hidden="true">
-            {legenda}
-          </figcaption>
-        )}
+    const showToggle = !isNaoRegionalizavel;
+    const activeUrl = isExecutada ? urlExecutada : urlPlanejada;
+    const mapFilter = isExecutada ? "none" : "grayscale(1) contrast(1.05)";
 
-        <div className="flex items-center justify-center w-auto">
-            {imagemUrl && (
-            <div style={{ border: `3px solid ${corPrincipal}`,padding: `1rem`,borderRadius: `2rem`,height: `auto`,display: "flex",alignItems: "center",justifyContent: "center",}} className="flex items-center justify-center">
-                <SafeSVG
-                src={corrigirUrlImagem(imagemUrl)}
-                alt="Mapa da regionalização"
-                className="mt-4 rounded-xl h-auto w-full object-contain"
-                />
+    return (
+        <div className="w-full bg-white flex flex-col gap-2 lg:gap-5">
+            <span className="block w-full h-0.5" style={{ background: corPrincipal }} />
+            <div className="flex items-center justify-between px-2 pt-3">
+                <h3 className="text-base font-semibold uppercase tracking-wide pl-3 lg:text-4xl" style={{ color: corPrincipal }}>
+                    Regionalização
+                </h3>
             </div>
-            )}
-        </div>
 
-        {rodape && (
-          <div className="text-xl mt-2 text-justify italic w-6/12" style={{ color: "#444" }}>
-            {">> "}{rodape}
-          </div>
-        )}
-      </div>
-    </div>
-  );
+            <div className="px-2 pt-3">
+                <p className="font-bold text-sm capitalize text-gray-700">
+                    {metamap.status_regionalizacao}
+                </p>
+                {nota ? (
+                    <p className="font-semibold text-sm text-gray-700 mt-2">{nota}</p>
+                ) : null}
+            </div>
+
+            {!isNaoRegionalizavel ? (
+                <div className="flex flex-col justify-center items-center w-full mt-4">
+                    <div className="flex flex-col items-end justify-center w-full lg:items-start">
+                        {/* TOGGLE */}
+                        <div className="flex items-center justify-center gap-3 px-6 py-2 rounded-t-xl text-white font-bold text-xs uppercase shadow-sm z-10 relative right-4 lg:left-15" style={{ backgroundColor: corPrincipal }}>
+                            <span className={`transition-opacity duration-300 ${!isExecutada ? 'opacity-100' : 'opacity-50'}`}>
+                                <p className="text-[7px] md:text-xs uppercase">Planejada</p>
+                            </span>
+                            {showToggle ? (
+                                <ToggleMapa checked={isExecutada} onChange={setIsExecutada} color={corPrincipal} />
+                            ) : null}
+                            <span className={`transition-opacity duration-300 ${isExecutada ? 'opacity-100' : 'opacity-50'}`}>
+                                <p className="text-[7px] md:text-xs uppercase">Executada</p>
+                            </span>
+                        </div>
+                        <div className="w-full relative -mt-[1px] lg:rounded-[49px] rounded-2xl shadow-[inset_0_0_15px_2px_#0000004a] overflow-hidden bg-gray-50">
+                            {activeUrl ? (
+                                <SafeSVG src={corrigirUrlImagem(activeUrl)} />
+                            ) : (
+                            <div className="w-full h-60 flex flex-col items-center justify-center text-gray-400">
+                                <i className="fa-regular fa-image text-4xl mb-2"></i>
+                                <span className="font-medium text-sm uppercase tracking-wider">Item não cadastrado/informado</span>
+                            </div>
+)}
+                        </div>
+                    </div>
+                </div>
+            ) : null}
+            {legenda ? (
+                <div className="px-2 pt-3">
+                    <figcaption className="text-xs text-center underline text-gray-700">
+                        {legenda}
+                    </figcaption>
+                </div>
+            ) : null}
+        </div>
+    );
 }

@@ -34,7 +34,7 @@ useEffect(() => {
 
 return (
     <div className="flex justify-center flex-nowrap">
-        <section className="relative bg-[color:var(--color-white)] shadow-[1px_1px_20px_#00000045] w-[90rem] h-32 rounded-[3rem] bottom-16 p-4 z-10 news-mobile">
+        <section className="relative bg-[color:var(--color-white)] shadow-[1px_1px_20px_#00000045] w-full h-32 rounded-[3rem] bottom-16 p-4 z-10 max-w-container">
             <div className="flex flex-row justify-center items-center flex-wrap h-full news_navbar_text">
                 <div className="w-4/12">
                     <h2 className="text-[var(--color-cyan-medium)] text-3xl xl:text-5xl">na<br /> mídia</h2>
@@ -57,7 +57,7 @@ return (
                             </a>
                         ))}
 
-                    <div className="relative left-[47%] top-[1.6rem] w-80 news-mobile-carousel">
+                    <div className="relative left-[47%] top-[1.6rem] w-80 max-md:w-full news-mobile-carousel">
                         {news.map((_, index) => (
                             <button
                                 key={index}
