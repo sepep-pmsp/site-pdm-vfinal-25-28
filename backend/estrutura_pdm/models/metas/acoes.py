@@ -33,6 +33,19 @@ class AcaoEstrategica(models.Model):
     descricao = models.CharField(max_length=5000, verbose_name="Descrição da Ação Estratégica")
     numero = models.CharField(max_length=20, unique=True, verbose_name="Número da Ação Estratégica")
     concluida = models.BooleanField(null=False, default=False)
+    evolucao_negrito = models.CharField(
+        max_length=5000, 
+        blank=True, 
+        null=True,
+        verbose_name="Texto de Evolução (Negrito)"
+    )
+    descricao_evolucao = models.CharField(
+        max_length=5000, 
+        blank=True, 
+        null=True, 
+        verbose_name="Descrição da Evolução",
+    )
+
 
     meta = models.ForeignKey(
         Meta,
