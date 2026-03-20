@@ -19,9 +19,9 @@ export default function TransparenciaMonitoramento() {
         </h1>
         <div className="h-1 w-full bg-[color:var(--color-navy)]"></div>
       </div>
-      <div className="flex flex-col lg:flex-row pt-10 gap-8 justify-between items-start">
+      <div className="flex flex-col lg:flex-row pt-10 gap-8 justify-evenly items-start">
         {transparencia.recursos.map((item, index) => (
-          <div key={index} className="flex flex-col gap-6 flex-1 max-w-[30rem]">
+          <div key={index} className="flex flex-col gap-6 flex-1 ">
             <h3 className="text-2xl min-h-[4rem]">
               {item.subtitulo}
             </h3>

@@ -27,8 +27,8 @@ export default function DesktopSectionsLayout({ sections, monitoramentoId = "mon
             </div>
           </main>
           {monitoramento && (
-            <aside className="col-span-4">
-              <div className="sticky top-6">
+            <aside className="col-span-4 relative bottom-62">
+              <div className="sticky pt-6 top-6">
                 <div style={{ '--bg-desktop': bgDesktop }} className="rounded-2xl  bg-white p-4 shadow-xl lg:bg-[var(--bg-desktop)] w-full h-full">
                   <h4 className="text-lg font-bold uppercase mb-3 md:text-4xl pt-3" style={{ color: monitoramento.color }} >
                     {monitoramento.label}

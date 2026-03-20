@@ -42,11 +42,14 @@ export default function MetaModalAcoesEstrategicas({ meta }) {
             <div className="w-full md:w-2/3 flex flex-col rounded-xl overflow-hidden shadow-sm lg:relative lg:bottom-6" style={{ backgroundColor: bgLight }}>
                 {acoes.map((acao, index) => {
                     const isOpen = openIndex === index;
+                    
+                    // Lógica para verificar se há algum texto de evolução (independente de estar concluída ou não)
+                    const temEvolucao = acao.evolucao_negrito || acao.descricao_evolucao;
+
                     return (
                         <div key={index} className={`flex flex-col w-full lg:!border-b ${index === 0 ? 'border-t' : ''}`} style={{ borderColor: corPrincipal }}>
                             <button onClick={() => toggleAccordion(index)} className="flex flex-row items-center justify-between w-full p-4 md:p-6 text-left transition-colors hover:bg-black/5" >
                                 <span className="text-sm md:text-base font-medium pr-4 text-gray-900 leading-snug">
-                                    {/* Exibe o número e a descrição principal */}
                                     {acao.numero} - {acao.descricao}
                                 </span>
                                 <div className="flex items-center gap-3 shrink-0">
@@ -61,15 +64,20 @@ export default function MetaModalAcoesEstrategicas({ meta }) {
                                 </div>
                             </button>
                             <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-                                <div className="p-4 md:p-6 pt-0 text-sm md:text-base text-gray-700">
-                                    {acao.concluida ? (
+                                <div className="p-4 md:p-6 pt-0 text-sm md:!text-base text-gray-700">
+                                    {temEvolucao ? (
                                         <>
-                                            {acao.evolucao_negrito && <strong className="block mb-1">{acao.evolucao_negrito}</strong>}
-                                            {acao.descricao_evolucao ? acao.descricao_evolucao : (!acao.evolucao_negrito && "Ação concluída.")}
+                                            {acao.evolucao_negrito && <strong className="block">{acao.evolucao_negrito}</strong>}
+                                            {acao.descricao_evolucao && <p className="!text-base">{acao.descricao_evolucao}</p>}
                                         </>
                                     ) : (
-                                        <p className="italic text-gray-500">Esta ação ainda não foi concluída.</p>
+                                        acao.concluida ? (
+                                            <p>Ação concluída.</p>
+                                        ) : (
+                                            <p className="italic text-gray-500">Esta ação ainda não foi concluída.</p>
+                                        )
                                     )}
+
                                 </div>
                             </div>
                         </div>
