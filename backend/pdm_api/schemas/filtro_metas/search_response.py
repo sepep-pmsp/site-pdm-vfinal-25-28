@@ -57,7 +57,7 @@ class AcoesEstrategicasCardSchema(BaseModel):
 
 #Resultados Apurados
 class ResultadoApuradoSchema(BaseModel):
-    qtdd_resultados_apurados: int
+    qtdd_resultados_apurados: str
     mes: str
     ano: int
     data: date
