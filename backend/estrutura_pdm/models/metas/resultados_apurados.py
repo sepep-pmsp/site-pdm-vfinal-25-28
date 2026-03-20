@@ -42,7 +42,12 @@ class Meses(models.TextChoices):
 
 
 class ResultadosApurados(models.Model):
-    qtdd = models.IntegerField(blank=False, null=False, verbose_name="Quantidade de Resultados Apurados")
+    qtdd = models.CharField(
+        max_length=500,
+        blank=False, 
+        null=False, 
+        verbose_name="Quantidade de Resultados Apurados"
+    )
     mes= models.CharField(
         choices=[("", "Selecione uma opção")]+Meses.choices,
         verbose_name="Mês (data)"

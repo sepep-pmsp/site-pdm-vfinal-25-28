@@ -6,7 +6,14 @@ from cadastros_basicos.models.estrutura_administrativa import Orgao
 from cadastros_basicos.models.regionalizacao import SubPrefeitura, Zona
 from cadastros_basicos.models.vinculos_externos import ODS, PlanoSetorial
 
-from .relacionamentos_meta import MetaOrgao, MetaSubprefeitura, MetaZona, MetaODS, MetaPlanoSetorial, StatusRegionalizacao
+from .relacionamentos_meta import (
+    MetaOrgao, 
+    MetaSubprefeitura, 
+    MetaZona, 
+    MetaODS, 
+    MetaPlanoSetorial, 
+    StatusRegionalizacao
+)
 
 from .status_monitoramento import StatusMonitoramento
 
