@@ -87,7 +87,7 @@ export default function MetaModalMonitoramento({ meta }) {
                                 </button>
                             ) : <div className="w-6 px-2"></div>}
                         </div>
-                        <div className="w-full text-center py-4 md:py-6 text-3xl md:text-5xl font-bold text-white transition-all duration-300" style={{ background: corPrincipal }}>
+                        <div className="w-full text-center py-5 md:py-6 text-2xl md:text-4xl font-bold text-white transition-all duration-300 break-all" style={{ background: corPrincipal }}>
                             {resultadoExibido ? resultadoExibido.qtdd_resultados_apurados.toLocaleString('pt-BR') : "-"}
                         </div>
                     </div>

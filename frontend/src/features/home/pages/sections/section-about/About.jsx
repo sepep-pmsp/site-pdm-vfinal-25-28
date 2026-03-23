@@ -69,7 +69,7 @@ export default function About() {
                     className="all_buttons uppercase"
                     onClick={() => window.open(about.link_pdf_about, "_blank")}
                     >
-                    <p className="roboto-black">resultados</p>
+                    <p className="roboto-black">Balanço<br/>2025</p>
                     </CustomButton>
                 </div>
                 )}

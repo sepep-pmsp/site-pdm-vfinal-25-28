@@ -12,7 +12,7 @@ export default function TransparenciaMonitoramento() {
   if (!transparencia) return <div>Carregando...</div>;
 
   return (
-    <div className="py-20 px-4 h-auto max-w-container">
+    <div className="py-20 h-auto max-w-container">
       <div className="flex items-start justify-center flex-col flex-nowrap w-full">
         <h1 className="text-[5rem] text-[var(--color-navy)] title-mobile ">
           {transparencia.titulo}

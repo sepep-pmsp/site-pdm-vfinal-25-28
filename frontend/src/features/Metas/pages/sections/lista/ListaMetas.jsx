@@ -13,6 +13,10 @@ export default function ListaMetas({ metas, onSelectMeta }) {
   const metasOrdenadas = [...metas].sort(
     (a, b) => Number(a.listing.numero) - Number(b.listing.numero)
   );
+  const corrigirPontuacao = (htmlStr) => {
+    if (!htmlStr) return "";
+    return htmlStr.replace(/<\/strong>\s*([,.;:])/gi, '$1</strong>');
+  };
 
   return (
     <div className="w-full flex justify-end">
@@ -25,7 +29,7 @@ export default function ListaMetas({ metas, onSelectMeta }) {
                 <span className="text-7xl font-bebas-regular lista-metas-numero" style={{ color: meta?.listing?.eixo_cor_principal }}>
                   {meta?.listing?.numero}
                 </span>
-                <p className="text-base leading-snug lista-metas-titulo max-w-sm [&_strong]:block"dangerouslySetInnerHTML={{ __html: meta?.listing?.titulo }}/>
+                <p  className="text-base leading-snug lista-metas-titulo max-w-sm [&_strong]:block" dangerouslySetInnerHTML={{ __html: corrigirPontuacao(meta?.listing?.titulo) }} />
               </div>
             </div>
           </div>
