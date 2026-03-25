@@ -83,7 +83,7 @@ export default function Grid_menu_navbar({ onClose }) {
               />
             </div>
 
-            <div onClick={() => goTo("/metas")} className="slide-right-in-logo bg-[var(--color-indigo-950)] cursor-pointer flex flex-col flex-nowrap justify-between items-start">
+            <div onClick={() => goTo("/EmManutenção")} className="slide-right-in-logo bg-[var(--color-indigo-950)] cursor-pointer flex flex-col flex-nowrap justify-between items-start">
               <button>
                 <div>
                   <img

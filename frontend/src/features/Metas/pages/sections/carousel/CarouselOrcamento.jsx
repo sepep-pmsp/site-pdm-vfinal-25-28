@@ -67,10 +67,10 @@ export default function CarouselOrcamento() {
     };
 
     return (
-        <div className='bg-white w-full p-4 shadow-md flex flex-col justify-center items-center gap-8 rounded-2xl'>
+        <div className='bg-white w-full p-4 shadow-md flex flex-col justify-center items-center gap-8 rounded-2xl xl:!h-[29.4rem]'>
             <section className='!flex flex-col lg:flex-row w-full'>
-                <div className='w-full h-full p-4 rounded-lg flex flex-col justify-center items-center gap-4'>
-                    <span className='w-full flex flex-row flex-nowrap items-center justify-center gap-4'>
+                <div className='w-full h-full  rounded-lg flex flex-col justify-center items-center gap-4'>
+                    <span className='w-full flex flex-row flex-nowrap items-center justify-center gap-4 xl:relative xl:bottom-6'>
                         <h2 className='text-2xl font-bold uppercase'>Total de metas</h2>
                         <span className='w-25 h-0.5 bg-black'></span>
                     </span>
@@ -79,8 +79,8 @@ export default function CarouselOrcamento() {
                         <p className='text-[var(--color-navy)] !text-base'>Metas divididas em <strong className='underline'>4 diferentes eixos</strong></p>
                     </div>
                 </div>
-                <div className='w-full h-full p-4 rounded-lg flex flex-col justify-center items-center gap-4'>
-                    <span className='w-full flex flex-row flex-nowrap items-center justify-center gap-4'>
+                <div className='w-full h-full rounded-lg flex flex-col justify-center items-center gap-4'>
+                    <span className='w-full flex flex-row flex-nowrap items-center justify-center gap-4 xl:relative xl:bottom-3'>
                         <h2 className='text-2xl font-bold uppercase w-30'>Metas Por Eixo</h2>
                         <span className='w-30 h-0.5 bg-black'></span>
                     </span>

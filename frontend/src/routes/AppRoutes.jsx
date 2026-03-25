@@ -7,6 +7,7 @@ import Metas from "@/features/Metas/pages/Metas";
 import Sobre from "@/features/Sobre/pages/Sobre";
 import ParticipacaoSocial from "@/features/Participacao/pages/ParticipacaoSocial";
 import TransparenciaContainer from "@/features/Transparencia/pages/TransparenciaContainer";
+import EmManutenção from "../features/Metas/components/EmManutenção";
 
 
 export default function AppRoutes() {
@@ -19,6 +20,7 @@ export default function AppRoutes() {
       <Route path="/metas" element={<Metas />}>
         <Route path=":slug" element={<Metas />} /> 
       </Route>
+      <Route path="/EmManutenção" element={<EmManutenção/>} />
       <Route path="/sobre" element={<Sobre/>} />
       <Route path="/participacao-social" element={<ParticipacaoSocial/>} />
     </Routes>
