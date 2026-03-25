@@ -16,6 +16,7 @@ export default function SectionIndicadores({ sobre }) {
           <div className="max-lg:w-80 max-2xl:max-w-3xl lg:flex flex-col flex-nowrap items-start justify-center w-[61rem] mt-10 div-titulo-ind-mobile">
             <h2 className="text-7xl font-bold mb-4 text-[var(--color-navy)] titulo-ind-mobile">indicadores</h2>
             <p className="max-lg:w-80 lg:text-xl">
+                {indicadores.texto}
                 <img src={Tabela}/>
             </p>
           </div>
