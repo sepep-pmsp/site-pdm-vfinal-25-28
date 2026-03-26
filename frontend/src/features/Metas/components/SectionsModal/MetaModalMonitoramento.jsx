@@ -25,6 +25,15 @@ export default function MetaModalMonitoramento({ meta }) {
         setCurrentIndex((prev) => (prev === resultados.length - 1 ? 0 : prev + 1));
     };
 
+    const formatValorSeguro = (valor) => {
+        if (valor === null || valor === undefined) return "";
+        if (typeof valor === "number") { return valor.toLocaleString("pt-BR");}
+        if (valor instanceof Date) { return valor.toLocaleDateString("pt-BR");}
+        if (typeof valor === "string") {return valor.trim() !== "" ? valor : "-";}
+        if (typeof valor === "object") { try {return JSON.stringify(valor); } catch {return "";} }
+        return String(valor);
+    };
+
     return (
         <div className="flex flex-col w-full py-4 transition-colors">
             <div className="md:hidden w-full flex flex-col">
@@ -87,8 +96,8 @@ export default function MetaModalMonitoramento({ meta }) {
                                 </button>
                             ) : <div className="w-6 px-2"></div>}
                         </div>
-                        <div className="w-full text-center py-5 md:py-6 text-2xl md:text-4xl font-bold text-white transition-all duration-300 break-all" style={{ background: corPrincipal }}>
-                            {resultadoExibido ? resultadoExibido.qtdd_resultados_apurados.toLocaleString('pt-BR') : "-"}
+                        <div className="uppercase w-full text-center py-5 md:py-6 text-2xl md:text-4xl font-bold text-white transition-all duration-300 break-all" style={{ background: corPrincipal }}>
+                            {formatValorSeguro(resultadoExibido?.resultados_apurados_value)}
                         </div>
                     </div>
                 </div>
