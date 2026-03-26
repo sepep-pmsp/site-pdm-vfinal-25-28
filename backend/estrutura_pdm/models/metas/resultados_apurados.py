@@ -42,11 +42,12 @@ class Meses(models.TextChoices):
 
 
 class ResultadosApurados(models.Model):
-    qtdd = models.CharField(
+    resultado_value = models.CharField(
         max_length=500,
         blank=False, 
-        null=False, 
-        verbose_name="Quantidade de Resultados Apurados"
+        null=False,
+        default="-",
+        verbose_name="Valor de Resultados Apurados"
     )
     mes= models.CharField(
         choices=[("", "Selecione uma opção")]+Meses.choices,
@@ -79,8 +80,8 @@ class ResultadosApurados(models.Model):
         '''
         super().clean() 
         #obrigatoriedade dos campos
-        if not self.qtdd:
-            raise ValidationError({'qtdd':'Quantidade é um campo obrigatório'})
+        if not self.resultado_value:
+            raise ValidationError({'resultado_value':'Quantidade é um campo obrigatório'})
         
         ##ano
         if not self.ano:

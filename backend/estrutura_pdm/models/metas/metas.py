@@ -165,10 +165,10 @@ class Meta(models.Model):
     def resultados_apurados_as_list(self):
         return[
             {
-                'qtdd_resultados_apurados': resultados.qtdd,
+                'resultados_apurados_value': resultados.resultado_value,
                 'mes': resultados.mes,
                 'ano': resultados.ano,
-                'data': resultados.data
+                'data': resultados.data,
             }
             for resultados in self.resultados_apurados.all() #-> ForeingKey related name (models/metas/resultados_apurados.py)
         ]
