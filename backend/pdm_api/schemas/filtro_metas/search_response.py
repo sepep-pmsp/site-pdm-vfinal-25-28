@@ -1,7 +1,8 @@
 from pydantic import BaseModel, model_validator, field_validator
 from typing import Optional, Literal
-from estrutura_pdm.models.metas.status_monitoramento import StatusMonitoramento
 from datetime import date
+from estrutura_pdm.models.metas.status_monitoramento import StatusMonitoramento
+from pdm_api.utils.transforma_type import transformar_str
 
 class MetaListingSchema(BaseModel):
 
@@ -57,10 +58,16 @@ class AcoesEstrategicasCardSchema(BaseModel):
 
 #Resultados Apurados
 class ResultadoApuradoSchema(BaseModel):
-    qtdd_resultados_apurados: str
+    resultados_apurados_value: str
     mes: str
     ano: int
     data: date
+
+    @field_validator("resultados_apurados_value", mode="before")
+    @classmethod
+    def value_as_str(cls, value):
+        return transformar_str(value=value)
+
 
 class ResultadosApuradosCardSchema(BaseModel):
 
