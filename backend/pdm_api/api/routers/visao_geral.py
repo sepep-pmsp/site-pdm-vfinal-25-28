@@ -9,6 +9,7 @@ from pdm_api.schemas.visao_geral import (
     DadosOrcamentoGeralSchema, 
     OrcamentoEixoSchema,
     ConhecaMetasSchema,
+    ConhecaMetasCardSchema,
 )
 
 router = Router(tags=["Visão Geral"])
@@ -49,34 +50,16 @@ def orcamento_geral(request)->DadosOrcamentoGeralSchema:
     
     return DadosOrcamentoGeralSchema(**orcamento_geral)
 
-@router.get("/conheca_metas", response= ConhecaMetasSchema, tags=["Visão Geral"])
-def conheca_metas(request)-> ConhecaMetasSchema:
+@router.get("/conheca_metas", response= ConhecaMetasCardSchema, tags=["Visão Geral"])
+def conheca_metas(request)-> ConhecaMetasCardSchema:
     '''
     Retorna as informações gerais que serão mostrados na aba Conheça Metas.
     '''
-    conheca_metas=get_conheca_metas()
+    conheca_metas=ConhecaMetasCardSchema(
+            titulo="CONHECA METAS",
+            list_conheca_metas=get_conheca_metas() or []
+    )
+    
+    return conheca_metas
 
-    if conheca_metas is None:
-        parsed_conheca_metas = {
-        'nome' : None,
-        'publicado' : None,
-        'recursos_empenhados' : None,
-        'metas_atingidas' : None,
-        'metas_mais_50' : None,
-        'metas_andamento_atingida' : None,
-        'execucao_total' : None,
-    }
-        
-    else:
-        parsed_conheca_metas = {
-            'nome' : conheca_metas.nome,
-            'publicado' : conheca_metas.publicado,
-            'recursos_empenhados' : conheca_metas.recursos_empenhados,
-            'metas_atingidas' : conheca_metas.metas_atingidas,
-            'metas_mais_50' : conheca_metas.metas_mais_50,
-            'metas_andamento_atingida' : conheca_metas.metas_andamento_atingida,
-            'execucao_total' : conheca_metas.execucao_total,
-        }
-
-    return ConhecaMetasSchema(**parsed_conheca_metas)
 

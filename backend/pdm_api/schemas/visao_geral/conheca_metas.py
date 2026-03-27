@@ -1,12 +1,30 @@
 from pydantic import BaseModel
 from typing import Optional
+from pdm_api.utils.transforma_type import transformar_str
+from pydantic import BaseModel, model_validator, field_validator
+
 
 class ConhecaMetasSchema(BaseModel):
     nome: Optional[str]
-    recursos_empenhados: Optional[float]
-    metas_atingidas: Optional[int]
-    metas_mais_50: Optional[int]
-    metas_andamento_atingida: Optional[float]
-    execucao_total: Optional[float]
+    valor: Optional[str]
+    ordem: Optional[int]
+
+    @field_validator("valor", mode="before")
+    @classmethod
+    def value_as_str(cls, value):
+        return transformar_str(value=value)
+    
+class ConhecaMetasCardSchema(BaseModel):
+    titulo: str
+    list_conheca_metas: list[ConhecaMetasSchema]
+    tipo: Optional['list'] = 'list'
+
+    @model_validator(mode='after')
+    def validate_tipo(self):
+        if self.tipo != 'list':
+            raise ValueError('Invalid tipo for ConhecaMetasCardSchema')
+        return self
+
+
 
 
