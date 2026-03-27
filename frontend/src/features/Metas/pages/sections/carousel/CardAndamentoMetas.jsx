@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEixosMetas } from '../../../hooks/useMetasIndicadores';
 
 export default function CardAndamentoMetas() {
@@ -9,9 +10,10 @@ export default function CardAndamentoMetas() {
                 <h2 className='text-2xl font-bold uppercase'>andamento das metas</h2>
                 <span className='w-30 h-0.5 bg-black'></span>
             </span>
+            
             <div className="flex flex-wrap items-center justify-center gap-8 xl:grid xl:justify-items-center xl:items-center xl:justify-center xl:content-center xl:grid-cols-[200px_200px]">
                 {indicadores.map((item) => (
-                    <div key={item.id} className="text-white text-center bg-[var(--color-navy)] rounded-3xl p-4 w-full h-full">
+                    <div key={item.id} className="text-white text-center bg-[var(--color-navy)] rounded-3xl p-4 w-full h-full flex flex-col justify-center items-center">
                         <h2 className="text-4xl lg:text-7xl font-bold">{item.valor}</h2>
                         <p className="text-sm lg:text-lg mt-2">{item.label}</p>
                     </div>
