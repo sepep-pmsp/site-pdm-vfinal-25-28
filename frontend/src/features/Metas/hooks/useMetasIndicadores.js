@@ -34,12 +34,12 @@ export function useEixosMetas({ usarBackend = true } = {}) {
           {
             id: "mais50",
             valor: data.metas_mais_50 ?? 0,
-            label: "Metas com mais de 50% de execução",
+            label: "Metas com 50% ou mais de execução",
           },
           {
             id: "andamento",
-            valor: `${data.metas_andamento_atingida ?? 0}%`, // Adicionamos o %
-            label: "Em andamento e/ou atingidas",
+            valor: `${data.metas_andamento_atingida ?? 0}`, // Adicionamos o %
+            label: "em andamento e/ou atingidas",
           },
           {
             id: "execucaoTotal",
