@@ -183,19 +183,11 @@ class ConhecaMetasAdmin(admin.ModelAdmin):
     list_display=(
         'nome',
         'publicado',
-        'recursos_empenhados',
-        'metas_atingidas',
-        'metas_mais_50',
-        'metas_andamento_atingida',
-        'execucao_total',
+        'ordem',
 
     )
     search_fields=(
         'nome',
         'publicado',
-        'recursos_empenhados',
-        'metas_atingidas',
-        'metas_mais_50',
-        'metas_andamento_atingida',
-        'execucao_total',
+        'ordem',
     )
