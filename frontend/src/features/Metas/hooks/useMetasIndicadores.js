@@ -21,7 +21,9 @@ export function useEixosMetas({ usarBackend = true } = {}) {
                     const listaOrdenada = [...data.list_conheca_metas].sort(
                         (a, b) => a.ordem - b.ordem
                     );
-                    const indicadoresFormatados = listaOrdenada.map((item, index) => ({
+                    const indicadoresFormatados = listaOrdenada
+                    .filter(item => !item.nome?.toLowerCase().includes("recursos empenhados"))
+                    .map((item, index) => ({
                         id: `ind-${index}`,
                         valor: item.valor,
                         label: item.nome

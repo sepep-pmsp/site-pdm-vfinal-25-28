@@ -7,29 +7,31 @@ export default function CarouselOrcamento() {
     const [recursosEmpenhados, setRecursosEmpenhados] = useState(null);
 
     useEffect(() => {
-        async function fetchData() {
-            try {
-                const [orcamentoResponse, conhecaMetasResponse] = await Promise.all([
-                    getOrcamentoData(),
-                    getConhecaMetasData(),
-                ]);
+    async function fetchData() {
+        try {
+            const [orcamentoResponse, conhecaMetasResponse] = await Promise.all([
+                getOrcamentoData(),
+                getConhecaMetasData(),
+            ]);
 
-                const valores = orcamentoResponse.orcamentos_por_eixo.map((eixo) => ({
-                    titulo: eixo.nome,
-                    corPrincipal: eixo.cor_principal,
-                    metasPorEixo: eixo.qtd_metas,
-                    totalMetas: orcamentoResponse.total_metas,
-                    orcamento: eixo.orcamento,
-                    orcamentoTotal: orcamentoResponse.orcamento_total,
-                }));
-
-                setData(valores);
-                setRecursosEmpenhados(conhecaMetasResponse?.recursos_empenhados ?? null);
-            } catch (error) {
-                console.error("Erro ao buscar dados do orçamento:", error);
-            }
+            const valores = orcamentoResponse.orcamentos_por_eixo.map((eixo) => ({
+                titulo: eixo.nome,
+                corPrincipal: eixo.cor_principal,
+                metasPorEixo: eixo.qtd_metas,
+                totalMetas: orcamentoResponse.total_metas,
+                orcamento: eixo.orcamento,
+                orcamentoTotal: orcamentoResponse.orcamento_total,
+            }));
+            setData(valores);
+            const recursos = conhecaMetasResponse?.list_conheca_metas?.find(
+                (item) => item.nome?.toLowerCase().includes("recursos empenhados")
+            );
+            const valorNumerico = Number(recursos?.valor);
+            setRecursosEmpenhados(!isNaN(valorNumerico) ? valorNumerico : null);
+        } catch (error) {
+            console.error("Erro ao buscar dados do orçamento:", error);
         }
-
+    }
         fetchData();
     }, []);
 
