@@ -96,9 +96,8 @@ export default function MetaModalMonitoramento({ meta }) {
                                 </button>
                             ) : <div className="w-6 px-2"></div>}
                         </div>
-                        <div className="uppercase w-full text-center py-5 md:py-6 text-2xl md:text-2xl font-bold text-white transition-all duration-300 break-all" style={{ background: corPrincipal }}>
-                            {formatValorSeguro(resultadoExibido?.resultados_apurados_value)}
-                        </div>
+                        <div className="normal-case w-full text-center py-5 md:py-6 text-2xl md:text-2xl font-bold text-white transition-all duration-300 break-all" style={{ background: corPrincipal }} dangerouslySetInnerHTML={{ __html: formatValorSeguro(resultadoExibido?.resultados_apurados_value) }}/>
+                            
                     </div>
                 </div>
                 <span className="w-full border-t border-dotted md:border-solid md:border-t-2 my-2" style={{ borderColor: corPrincipal }} />
