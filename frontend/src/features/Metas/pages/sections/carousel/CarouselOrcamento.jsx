@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { getOrcamentoData, getConhecaMetasData } from "../../../services/getOrcamentoData";
+import { parseNumeroBR } from "../../../hooks/parseNumeroBR";
+
+const normalize = (text) =>
+    (text || "")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .trim();
 
 export default function CarouselOrcamento() {
     const [data, setData] = useState([]);
@@ -24,7 +32,13 @@ export default function CarouselOrcamento() {
                 }));
 
                 setData(valores);
-                setRecursosEmpenhados(conhecaMetasResponse?.recursos_empenhados ?? null);
+
+                const recursoItem = conhecaMetasResponse?.list_conheca_metas?.find(
+                    (item) => normalize(item?.nome) === "recursos empenhados"
+                );
+
+                const valorNumerico = parseNumeroBR(recursoItem?.valor);
+                setRecursosEmpenhados(valorNumerico);
             } catch (error) {
                 console.error("Erro ao buscar dados do orçamento:", error);
             }
@@ -114,7 +128,7 @@ export default function CarouselOrcamento() {
                         <strong>Orçamento total:</strong> {fmtCompactBRL(eixo.orcamentoTotal)}
                     </p>
                 </div>
-                <div className='bg-[var(--color-navy)] w-full rounded-2xl py-2 px-8 text-white flex flex-col lg:flex-row items-center justify-center gap-2'>
+                <div className='bg-[var(--color-navy)] w-full rounded-2xl py-2 px-8 text-white flex flex-col lg:flex-row items-center justify-center lg:gap-8 gap-2'>
                     <h2 className='text-6xl w-35'>{fmtBi(recursosEmpenhados)}</h2>
                     <p className='text-xl'>De <strong>recursos empenhados</strong> até o momento</p>
                 </div>
