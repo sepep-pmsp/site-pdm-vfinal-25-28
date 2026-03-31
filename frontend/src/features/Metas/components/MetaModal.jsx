@@ -53,17 +53,12 @@ export default function MetaModal({ meta, onClose }) {
     <div className="bg-white h-full w-full overflow-y-auto">
       <MetaModalHeader meta={meta} onClose={handleClose} />
       <MetaModalTitle meta={meta} title={parsedTitle} color={color} />
-
-      {/* Mobile */}
       <div className="md:hidden">
         <MobileSectionsCarousel sections={sections} />
       </div>
-
-      {/* Desktop */}
-      <div className="hidden md:block lg:relative lg:bottom-30">
+      <div className="hidden md:block lg:relative lg:bottom-10">
         <DesktopSectionsLayout color={color} sections={sections} monitoramentoId="monitoramento" />
       </div>
-
       <MetaModalFooter card={meta.card} />
     </div>
   );

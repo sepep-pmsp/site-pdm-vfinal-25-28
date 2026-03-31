@@ -26,8 +26,7 @@ export default function CardEixos({ eixo, onClose }) {
 
     const navigate = useNavigate();
     const goToMetas = (eixoId) => {
-        // navigate("/metas", { state: { eixoIdFiltro: eixoId } });
-        navigate("/EmManutenção");
+        navigate("/metas", { state: { eixoIdFiltro: eixoId } });
     };
 
     useEffect(() => {
