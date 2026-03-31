@@ -28,6 +28,7 @@ export default function CardAndamentoMetas() {
                 <h2 className='text-2xl font-bold uppercase'>andamento das metas</h2>
                 <span className='w-30 h-0.5 bg-black'></span>
             </span>
+            
             <div className="flex flex-wrap items-center justify-center gap-8 xl:grid xl:justify-items-center xl:items-center xl:justify-center xl:content-center xl:grid-cols-[200px_200px]">
                 {indicadores.map((item) => (
                     <div key={item.id} className="text-white text-center bg-[var(--color-navy)] rounded-3xl p-4 w-full h-full flex flex-col items-center justify-around">

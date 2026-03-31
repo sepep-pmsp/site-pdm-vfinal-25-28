@@ -15,13 +15,12 @@ export default function CarouselOrcamento() {
     const [recursosEmpenhados, setRecursosEmpenhados] = useState(null);
 
     useEffect(() => {
-        async function fetchData() {
-            try {
-                const [orcamentoResponse, conhecaMetasResponse] = await Promise.all([
-                    getOrcamentoData(),
-                    getConhecaMetasData(),
-                ]);
-
+    async function fetchData() {
+        try {
+            const [orcamentoResponse, conhecaMetasResponse] = await Promise.all([
+                getOrcamentoData(),
+                getConhecaMetasData(),
+            ]);
                 const valores = orcamentoResponse.orcamentos_por_eixo.map((eixo) => ({
                     titulo: eixo.nome,
                     corPrincipal: eixo.cor_principal,
