@@ -57,7 +57,7 @@ export default function NavBarMobile({ onClose }) {
           </div>
 
           <div
-            onClick={() => goTo("/EmManutenção")}
+            onClick={() => goTo("/metas")}
             className="mobile-right-in-logo bg-[var(--color-indigo-950)] cursor-pointer flex flex-col flex-nowrap justify-between items-start"
           >
             <button>

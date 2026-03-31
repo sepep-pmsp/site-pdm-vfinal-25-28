@@ -1,42 +1,67 @@
-import { useState, useEffect } from "react";
-import { getConhecaMetasData } from "../services/getOrcamentoData"; 
+import { useMemo } from "react";
 
-export function useEixosMetas({ usarBackend = true } = {}) {
-    const [indicadores, setIndicadores] = useState([]);
+const MOCK_INDICADORES = [
+  {
+    id: "atingidas",
+    valor: "12",
+    label: "Metas atingidas",
+    ordem: 1,
+  },
+  {
+    id: "mais50",
+    valor: "126",
+    label: "Metas com 50% ou mais de execução",
+    ordem: 2,
+  },
+  {
+    id: "andamento",
+    valor: "82%",
+    label: "112 metas em progresso e/ou atingidas",
+    ordem: 3,
+  },
+  {
+    id: "execucaoTotal",
+    valor: "26%",
+    label: "Execução total do PdM",
+    ordem: 4,
+  },
+];
 
-    useEffect(() => {
-        if (!usarBackend) {
-            setIndicadores([
-                { id: "atingidas", valor: 12, label: "Metas atingidas" },
-                { id: "mais50", valor: 126, label: "Metas com mais de 50% de execução" },
-                { id: "andamento", valor: "82%", label: "Em andamento e/ou atingidas" },
-                { id: "execucaoTotal", valor: "26%", label: "Execução total do PDM" },
-            ]);
-            return;
-        }
-        async function fetchDadosDaApi() {
-            try {
-                const data = await getConhecaMetasData();
-                if (data && Array.isArray(data.list_conheca_metas)) {
-                    const listaOrdenada = [...data.list_conheca_metas].sort(
-                        (a, b) => a.ordem - b.ordem
-                    );
-                    const indicadoresFormatados = listaOrdenada
-                    .filter(item => !item.nome?.toLowerCase().includes("recursos empenhados"))
-                    .map((item, index) => ({
-                        id: `ind-${index}`,
-                        valor: item.valor,
-                        label: item.nome
-                    }));
+const normalize = (text) =>
+  (text || "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim();
 
-                    setIndicadores(indicadoresFormatados);
-                }
-            } catch (error) {
-                console.error("Erro ao carregar os dados das metas:", error);
-            }
-        }
-        fetchDadosDaApi();
-    }, [usarBackend]);
+const makeIdFromNome = (nome, ordem) => {
+  const base = normalize(nome).replace(/[^a-z0-9]+/g, "-");
+  return `${base || "item"}-${ordem ?? "sem-ordem"}`;
+};
 
-    return indicadores;
+export function useEixosMetas({
+  indicadoresBackend = null,
+  usarBackend = true,
+}) {
+  return useMemo(() => {
+    if (!usarBackend) {
+      return MOCK_INDICADORES;
+    }
+
+    const lista = Array.isArray(indicadoresBackend?.list_conheca_metas)
+      ? indicadoresBackend.list_conheca_metas
+      : [];
+
+    if (!lista.length) return [];
+
+    return lista
+      .filter((item) => normalize(item?.nome) !== "recursos empenhados")
+      .sort((a, b) => (a?.ordem ?? 999) - (b?.ordem ?? 999))
+      .map((item) => ({
+        id: makeIdFromNome(item?.nome, item?.ordem),
+        valor: item?.valor ?? "Item não informado",
+        label: item?.nome ?? "Item não informado",
+        ordem: item?.ordem ?? null,
+      }));
+  }, [indicadoresBackend, usarBackend]);
 }

@@ -14,7 +14,7 @@ export default function DesktopSectionsLayout({ sections, monitoramentoId = "mon
   const bgDesktop = hexToRgba(color, 0.08);
 
   return (
-    <section className="hidden md:block">
+    <section className="hidden md:block mt-10">
       <div className="px-6" style={{ maxWidth: "1800px", margin: "0 auto" }}>
         <div className="grid grid-cols-12 gap-6">
             <main className={monitoramento ? "col-span-8 lg:w-4/5" : "col-span-12"}>
@@ -27,7 +27,7 @@ export default function DesktopSectionsLayout({ sections, monitoramentoId = "mon
             </div>
           </main>
           {monitoramento && (
-            <aside className="col-span-4 relative bottom-62">
+            <aside className="col-span-4 relative bottom-60">
               <div className="sticky pt-6 top-6">
                 <div style={{ '--bg-desktop': bgDesktop }} className="rounded-2xl  bg-white p-4 shadow-xl lg:bg-[var(--bg-desktop)] w-full h-full">
                   <h4 className="text-lg font-bold uppercase mb-3 md:text-4xl pt-3" style={{ color: monitoramento.color }} >

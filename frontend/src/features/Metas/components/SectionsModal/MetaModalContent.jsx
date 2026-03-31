@@ -21,20 +21,17 @@ export default function MetaModalContent({ meta }) {
         )}
         <span className="w-full h-0.5" style={{ background: corPrincipal }}></span>
         {card.orgaos_responsaveis && (
-            <div className="flex flex-row gap-2 items-center justify-start pl-3 lg:gap-20">
+            <div className="flex lg:flex-row gap-2 flex-col items-start lg:items-center lg:justify-start pl-3 lg:gap-20">
               <h3 style={{ color: corPrincipal }} className="text-base lg:text-4xl font-bebas-bold">
                 Órgão
               </h3>
-              <p style={{ color: corPrincipal }} className="lg:text-5xl text-xs font-bebas-book flex flex-row ">
+              <section style={{ color: corPrincipal }} className="!flex flex-wrap lg:flex-row w-full gap-2">
                 {card.orgaos_responsaveis.valor.map((sigla, index) => (
-                    <>
-                        <span key={index}>
-                            {sigla}
-                        </span>
-                        <span>•</span>
-                    </>
+                    <span className="flex flex-row" key={index}>
+                        <h6 className="lg:text-5xl text-xl font-bebas-book flex flex-row">{sigla} • </h6>
+                    </span>
                 ))}
-              </p>
+              </section>
             </div>
         )}
         <span className="w-full h-1 lg:hidden" style={{ background: corPrincipal }}></span>

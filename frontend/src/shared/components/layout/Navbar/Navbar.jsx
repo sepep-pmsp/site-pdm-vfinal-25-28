@@ -128,7 +128,7 @@ export default function Navbar() {
               </h2>
           </div>
         ),
-        action: () => goTo("/EmManutenção"),
+        action: () => goTo("/metas"),
       },
       { height: '[33.3333%]', bgColor: 'bg-[var(--color-blue)] menu-tile-before-blue', content:  () => (<span></span>), leakColor: '#b91c1b' },
     ],

@@ -41,7 +41,6 @@ export default function MetaModalRegionalizacao({ meta }) {
 
     const showToggle = !isNaoRegionalizavel;
     const activeUrl = isExecutada ? urlExecutada : urlPlanejada;
-    const mapFilter = isExecutada ? "none" : "grayscale(1) contrast(1.05)";
 
     return (
         <div className="w-full bg-white flex flex-col gap-2 lg:gap-5">
