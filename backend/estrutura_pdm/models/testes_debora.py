@@ -22,6 +22,17 @@ class TestesDebora(models.Model):
     )
     regra = models.BooleanField(default=False, verbose_name="Regra")
 
+    @property
+    def abinha_as_list(self):
+        return[
+            {
+                'cor_abinha': abinha.cor_abinha,
+                'fruta': abinha.fruta,
+                'quantidade_abinha' : abinha.quantidade_abinha
+            }
+            for abinha in self.abinha_da_debora.all()
+        ]
+
     class Meta:
         verbose_name = "Teste"
         verbose_name_plural = "Testes"

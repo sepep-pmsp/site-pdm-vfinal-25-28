@@ -18,6 +18,7 @@ from .models.metas import (
 from .models.pdm import PDM, DocumentoPDM, TipoDocumentoPDM
 from .models.conheca_metas import ConhecaMetas
 from .models.testes_debora import TestesDebora
+from .models.abinha_debora import AbinhaDebora
 from cadastros_basicos.models.estrutura_administrativa import Orgao
 
 # Register your models here.
@@ -195,7 +196,16 @@ class ConhecaMetasAdmin(admin.ModelAdmin):
 
 
 #TestesDebora
+
+class AbinhaDeboraInline(admin.TabularInline):
+    model = AbinhaDebora
+    extra = 0
+    verbose_name = "Abinha"
+    verbose_name_plural = "Abinhas"
+
 @admin.register(TestesDebora)
 class TestesDebora(admin.ModelAdmin):
     list_display = ('nome', 'valor_aleatorio', 'ordem_aparicao')
     search_fields = ('nome', 'ordem_aparicao')
+    inlines = [AbinhaDeboraInline]
+

@@ -12,6 +12,8 @@ from pdm_api.schemas.visao_geral import (
     ConhecaMetasSchema,
     ConhecaMetasCardSchema,
     TestesDeboraCardSchema,
+    TestesDeboraSchema,
+    AbinhaCardSchema,
 )
 
 router = Router(tags=["Visão Geral"])
@@ -67,9 +69,44 @@ def conheca_metas(request)-> ConhecaMetasCardSchema:
 @router.get("/testes_debora", response= TestesDeboraCardSchema, tags=["Visão Geral"])
 def testes_debora(request)-> TestesDeboraCardSchema:
     ''''''
-    testes_debora = TestesDeboraCardSchema(
-        titulo="TESTES DEBORA",
-        list_testes_debora= get_testes_debora() or []
-    )
+    testes_debora = get_testes_debora()
 
-    return testes_debora
+    testes_debora_final = []
+
+    for teste in testes_debora:
+
+        teste_debora_item = TestesDeboraSchema(
+            nome=teste['nome'],
+            valor_aleatorio=teste['valor_aleatorio'],
+            ordem_aparicao=teste['ordem_aparicao'],
+            regra=teste['regra'],
+            abinha_da_debora=AbinhaCardSchema(
+                titulo="Abinha",
+                valor=teste['abinha_as_list']
+            ),
+        )
+
+        testes_debora_final.append(teste_debora_item)
+
+    listing = TestesDeboraCardSchema(
+                titulo='Testes Debora',
+                list_testes_debora = testes_debora_final
+            )
+    
+    return listing
+
+    # for teste in testes_debora:
+    #     teste_debora_final = TestesDeboraSchema(
+    #         nome= teste['nome'],
+    #         valor_aleatorio = teste['valor_aleatorio'],
+    #         ordem_aparicao = teste['ordem_aparicao'],
+    #         regra=teste['regra'],
+            
+    #         abinha_da_debora = AbinhaCardSchema(
+    #             titulo = "Abinha",
+    #             valor = teste['abinha_as_list']
+    #         ),
+    #     )
+    #     testes_debora_final.append(testes_debora_final)
+
+    #     
