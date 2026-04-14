@@ -4,12 +4,14 @@ from ninja.errors import HttpError
 
 from estrutura_pdm.queries.eixos import total_metas_eixo, get_eixos
 from estrutura_pdm.queries.conheca_metas import get_conheca_metas
+from estrutura_pdm.queries.testes_debora import get_testes_debora
 
 from pdm_api.schemas.visao_geral import (
     DadosOrcamentoGeralSchema, 
     OrcamentoEixoSchema,
     ConhecaMetasSchema,
     ConhecaMetasCardSchema,
+    TestesDeboraCardSchema,
 )
 
 router = Router(tags=["Visão Geral"])
@@ -62,4 +64,12 @@ def conheca_metas(request)-> ConhecaMetasCardSchema:
     
     return conheca_metas
 
+@router.get("/testes_debora", response= TestesDeboraCardSchema, tags=["Visão Geral"])
+def testes_debora(request)-> TestesDeboraCardSchema:
+    ''''''
+    testes_debora = TestesDeboraCardSchema(
+        titulo="TESTES DEBORA",
+        list_testes_debora= get_testes_debora() or []
+    )
 
+    return testes_debora

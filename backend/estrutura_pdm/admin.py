@@ -17,6 +17,7 @@ from .models.metas import (
 )
 from .models.pdm import PDM, DocumentoPDM, TipoDocumentoPDM
 from .models.conheca_metas import ConhecaMetas
+from .models.testes_debora import TestesDebora
 from cadastros_basicos.models.estrutura_administrativa import Orgao
 
 # Register your models here.
@@ -191,3 +192,10 @@ class ConhecaMetasAdmin(admin.ModelAdmin):
         'publicado',
         'ordem',
     )
+
+
+#TestesDebora
+@admin.register(TestesDebora)
+class TestesDebora(admin.ModelAdmin):
+    list_display = ('nome', 'valor_aleatorio', 'ordem_aparicao')
+    search_fields = ('nome', 'ordem_aparicao')
