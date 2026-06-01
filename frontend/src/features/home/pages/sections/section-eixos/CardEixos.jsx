@@ -37,47 +37,36 @@ export default function CardEixos({ eixo, onClose }) {
     }, [isExiting, onClose]);
 
     return (
-        <div
-            className={`p-8 text-white card-eixos ${isExiting ? animationSet.out : animationSet.in}`}
-            style={{ bgStyle: colorBackground, ...bgStyle }}
-        >
-            <button
-                onClick={() => setIsExiting(true)}
-                className="absolute top-4 right-4 text-white text-2xl"
-            >
-                <i className="fa-solid fa-xmark text-6xl"></i>
+        <div className={`p-8 text-white card-eixos ${isExiting ? animationSet.out : animationSet.in}`} style={{ bgStyle: colorBackground, ...bgStyle }} >
+            <button onClick={() => setIsExiting(true)} className="absolute top-4 right-4 text-white">
+                <i className="fa-solid fa-xmark md:text-6xl text-4xl"></i>
             </button>
             <div className="grid gap-4 items-start p-4 conteudo-eixos grid-cols-1 md:grid-cols-2">
-                <div className="p-4 w-full md:w-[25rem] flex flex-col gap-4 container-eixos-mobile order-1 md:order-none">
+                <div className="w-full md:w-[25rem] flex flex-col gap-4 container-eixos-mobile order-1 md:order-none">
                     <section>
                         <SafeSVG src={corrigirUrlImagem(eixo.imagem)} className="w-auto h-28"/>
                     </section>
                     <section className="p-4">
-                        <ul className="listCard">
+                        <ul className="listCard text-left">
                             {eixo.lista.map((item, i) => (
                                 <li key={i} className="itemListCard py-1">
-                                    <p className="text-xl capitalize">{item}</p>
+                                    <p className="md:text-xl capitalize">{item}</p>
                                 </li>
                             ))}
                         </ul>
                     </section>
                 </div>
                 <div className="order-2 md:order-none md:col-start-2 md:row-start-1">
-                    <section className="flex flex-col items-center md:items-start relative md:right-8 max-md:text-sm 2xl:min-h-full 2xl:flex 2xl:items-center 2xl:justify-center 2xl:gap-12">
+                    <section className="!flex flex-col items-center justify-start md:items-center md:justify-center">
                         {eixo.texto.map((paragrafo, i) => (
-                            <p className="py-2" key={i}>
+                            <p className="py-2 text-left" key={i}>
                                 {paragrafo}
                             </p>
                         ))}
                     </section>
                 </div>
-                <section className="order-3 md:order-none md:col-start-1 md:row-start-2">
-                    <CustomButton
-                        onClick={() => goToMetas(eixo.id)}
-                        type="link"
-                        style={{ color: eixo.cor_principal }}
-                        className="buttons_metas bg-[var(--color-white)] h-28 text-3xl uppercase font-family cursor-pointer w-full md:w-auto"
-                    >
+                <section className="pt-4 order-3 md:order-none md:col-start-1 md:row-start-2 max-md:w-full">
+                    <CustomButton onClick={() => goToMetas(eixo.id)} type="link" style={{ color: eixo.cor_principal }} className="buttons_metas bg-[var(--color-white)] h-28 md:text-3xl uppercase font-family cursor-pointer w-full">
                         veja as metas
                     </CustomButton>
                 </section>

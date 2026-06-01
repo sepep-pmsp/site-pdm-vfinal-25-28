@@ -123,7 +123,7 @@ export default function Navbar() {
         content: () => (
           <div className="cursor-pointer flex flex-col flex-nowrap justify-between items-start slide-right-in-logo h-full w-full">
               <img className="w-20 md:w-32 p-4 invert-[1] slide-right-in-item-logo" src={Logo_PDM_fPreto} alt="" />
-              <h2 className="text-2xl text-white w-32 absolute bottom-4 right-2 text-start invisible md:visible">
+              <h2 className="md:text-2xl text-white w-32 absolute bottom-2 md:bottom-4 left-1 md:right-2 text-start md:visible">
                 conheça as metas
               </h2>
           </div>

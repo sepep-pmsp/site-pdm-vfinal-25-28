@@ -43,19 +43,15 @@ export default function About() {
               {about.paragrafo}
             </p>
             <div className="flex flex-row items-start justify-start gap-4 w-full max-sm:justify-start max-sm:gap-8 max-sm:relative max-sm:top-10 md:justify-center md:relative md:top-10 xl:top-15">
-              <div className="w-28 h-20 md:w-38 lg:w-48">
-                <CustomButton
-                  type="link"
-                  className="all_buttons uppercase"
-                  onClick={() => goTo("/sobre")}
-                >
-                  <p className="btn-about">saiba +</p>
+              <div className="w-28 h-20 md:w-38 lg:w-48 ">
+                <CustomButton type="link" className="all_buttons uppercase" onClick={() => goTo("/sobre")}>
+                  <p className="btn-about max-md:text-sm!">saiba +</p>
                 </CustomButton>
               </div>
 
               {/* Botão que abre modal */}
               <div className="w-28 h-20 md:w-38 lg:w-48">
-                <CustomButton type="modal" onClick={() => setShowModal(true)} className="all_buttons uppercase">
+                <CustomButton type="modal" onClick={() => setShowModal(true)} className="all_buttons uppercase max-md:text-xs">
                   <p className="roboto-regular">
                     palavra do prefeito <br />{" "}
                     <strong className="roboto-black">leia aqui!</strong>
@@ -64,11 +60,7 @@ export default function About() {
               </div>
               {about.link_pdf_about && (
                 <div className="w-28 h-20 md:w-38 lg:w-48">
-                    <CustomButton
-                    type="link"
-                    className="all_buttons uppercase"
-                    onClick={() => window.open(about.link_pdf_about, "_blank")}
-                    >
+                    <CustomButton type="link" className="all_buttons uppercase max-md:text-xs" onClick={() => window.open(about.link_pdf_about, "_blank")}>
                     <p className="roboto-black">Balanço<br/>2025</p>
                     </CustomButton>
                 </div>

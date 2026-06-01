@@ -48,7 +48,7 @@ export default function NewsCarousel() {
               {newsList.map((newsItem, index) => (
                 <a key={index} href={newsItem.link}target="_blank"rel="noopener noreferrer"className={`truncate-link absolute transition-all text-center duration-700 ease-in-out underline roboto-regular ${index === current ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2 pointer-events-none"}`}>{newsItem.titulo}</a>
               ))}
-              <div className="relative left-[47%] top-[1.6rem] w-80 max-md:w-full news-mobile-carousel">
+              <div className="relative left-[47%] top-[1.6rem] w-80 news-mobile-carousel max-md:w-28">
                 {newsList.map((_, index) => (
                   <button key={index} onClick={() => handleSelect(index)} className={`m-1_2 w-2 h-2 rounded-full ${index === current ? "bg-black" : "bg-gray-400" } focus:outline-none`}aria-label={`Ir para notícia ${index + 1}`}></button>
                 ))}

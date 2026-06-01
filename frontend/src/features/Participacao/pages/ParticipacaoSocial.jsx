@@ -67,7 +67,7 @@ export default function ParticipacaoSocial() {
   };
 
   return (
-    <div>
+    <>
       <div className="flex items-start justify-center flex-col w-full pt-24 max-w-container">
         <h1 className="max-xl:text-5xl max-xl:relative max-xl:left-15 max-lg:left-0 lg:text-7xl text-[var(--color-navy)]">Participação Social</h1>
         <div className="w-full h-1  bg-[color:var(--color-navy)]"></div>
@@ -90,6 +90,6 @@ export default function ParticipacaoSocial() {
         onClose={() => setSelecionado(null)}
       />
       <Audiencia audiencia={data.audiencia} />
-    </div>
+    </>
   );
 }
