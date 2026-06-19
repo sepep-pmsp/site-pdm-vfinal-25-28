@@ -3,28 +3,15 @@ import { corrigirUrlImagem } from "@/shared/utils/imageUtils";
 import { useFiltrosMetas } from "../../../hooks/useFiltrosMetas";
 import SafeSVG from "@/shared/components/ui/SafeSVG";
 
-export default function FiltroMetaMobile({
-  onCardsUpdate,
-  regionalizacao,
-  zonas,
-  orgaos,
-  planosSetoriais,
-  eixos,
-  ods,
-  eixoIdFromNav
-}) {
-  const { data, filtrosSelecionados, toggleSelecionado, limparFiltros } =
-    useFiltrosMetas(onCardsUpdate);
-
+export default function FiltroMetaMobile({ onCardsUpdate, regionalizacao, zonas, orgaos, planosSetoriais, eixos, ods, eixoIdFromNav }) {
+  const { data, filtrosSelecionados, toggleSelecionado, limparFiltros } = useFiltrosMetas(onCardsUpdate);
   const [open, setOpen] = useState(false);
   const [eixoAberto, setEixoAberto] = useState(null);
   const [subprefOpen, setSubprefOpen] = useState(false);
   const [planosOpen, setPlanosOpen] = useState(false);
   const [orgaoOpen, setOrgaoOpen] = useState(false);
   const [zonaSelecionada, setZonaSelecionada] = useState(null);
-
   const panelRef = useRef(null);
-
   const stripHtml = (s = "") =>
     s
       .toString()
@@ -229,66 +216,28 @@ export default function FiltroMetaMobile({
 
   const CheckSvg = ({ checked, stroke = "#000" }) => (
     <svg viewBox="0 0 24 24" className="block h-6 w-6">
-      <rect
-        x="1.5"
-        y="1.5"
-        width="21"
-        height="21"
-        rx="4"
-        ry="4"
-        fill="none"
-        stroke={stroke}
-        strokeWidth="2.5"
-      />
+      <rect x="1.5" y="1.5" width="21" height="21" rx="4" ry="4" fill="none" stroke={stroke} strokeWidth="2.5"/>
       {checked && (
-        <polyline
-          points="20 6 9 17 4 12"
-          fill="none"
-          stroke={stroke}
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
+        <polyline points="20 6 9 17 4 12" fill="none" stroke={stroke} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
       )}
     </svg>
   );
 
   const subprefsFiltradas = zonaSelecionada
-    ? (
-        regionalizacaoArr.find((r) => r.id === zonaSelecionada)
-          ?.subprefeituras || []
-      )
-        .map((sp) => ({
-          id: sp?.id ?? sp?.codigo ?? sp?.value,
-          nome: stripHtml(sp?.nome ?? sp?.label ?? sp?.title ?? "")
-        }))
-        .sort((a, b) =>
-          a.nome.localeCompare(b.nome, "pt", { sensitivity: "base" })
-        )
-    : subprefListAll.sort((a, b) =>
-        a.nome.localeCompare(b.nome, "pt", { sensitivity: "base" })
-      );
+    ? ( regionalizacaoArr.find((r) => r.id === zonaSelecionada)   ?.subprefeituras || [] )
+        .map((sp) => ({ id: sp?.id ?? sp?.codigo ?? sp?.value, nome: stripHtml(sp?.nome ?? sp?.label ?? sp?.title ?? "") }))
+        .sort((a, b) => a.nome.localeCompare(b.nome, "pt", { sensitivity: "base" }) )
+    : subprefListAll.sort((a, b) => a.nome.localeCompare(b.nome, "pt", { sensitivity: "base" }) );
 
   const isLoading = !data;
+  const temFiltroSelecionado = Object.values(filtrosSelecionados || {}).some ( (valor) => Array.isArray(valor) && valor.length > 0 ) || Boolean(zonaSelecionada);
 
   return (
     <>
-      <div className="xxl:hidden bg-[var(--color-navy,#0A2540)] text-white">
+      <div className="xxl:hidden bg-[var(--color-navy,#0A2540)] text-white w-full">
         <div className="max-xxl:min-w-sm xxl:w-screen">
-          <button
-            type="button"
-            onClick={toggleOpen}
-            aria-expanded={open}
-            className="w-full"
-          >
-            <div
-              className="bg-[#46C0CC] text-white font-extrabold uppercase tracking-wide px-6 flex items-center justify-center text-center min-h-[140px]"
-              style={{
-                fontFamily: '"Bebas Neue", sans-serif',
-                fontSize: 26,
-                letterSpacing: "1px"
-              }}
-            >
+          <button type="button" onClick={toggleOpen} aria-expanded={open} className="w-full">
+            <div className="bg-[#46C0CC] text-white font-extrabold uppercase tracking-wide px-6 flex items-center justify-center text-center min-h-[140px]" style={{ fontFamily: '"Bebas Neue", sans-serif', fontSize: 26, letterSpacing: "1px" }}>
               <span className="leading-tight">Clique para ver os filtros</span>
             </div>
           </button>
@@ -297,31 +246,14 @@ export default function FiltroMetaMobile({
       </div>
 
       {open && (
-        <div
-          role="dialog"
-          aria-modal="true"
-          className="fixed inset-0 z-[1000] xxl:hidden"
-        >
+        <div role="dialog" aria-modal="true" className="fixed inset-0 z-[1000] xxl:hidden">
           <div className="absolute inset-0 bg-white" />
-          <div
-            ref={panelRef}
-            className="relative z-[1001] h-full w-full bg-white text-[var(--color-navy,#0A2540)] flex flex-col"
-          >
-            <button
-              type="button"
-              onClick={toggleOpen}
-              className="w-full text-left"
-            >
-              <div
-                className="bg-[#46C0CC] text-white text-center uppercase tracking-wide px-4 py-3"
-                style={{
-                  fontFamily: '"Bebas Neue", sans-serif',
-                  fontSize: "28px",
-                  letterSpacing: "1px"
-                }}
-              >
-                Filtrar
-              </div>
+          <div ref={panelRef} className="relative z-[1001] h-full w-full bg-white text-[var(--color-navy,#0A2540)] flex flex-col">
+            <button type="button" onClick={toggleOpen} className="w-full text-left">
+                <div className="bg-[#46C0CC] text-white uppercase tracking-wide px-4 py-3 flex items-center justify-center gap-3" style={{ fontFamily: '"Bebas Neue", sans-serif', fontSize: "28px", letterSpacing: "1px", }}>
+                    {!temFiltroSelecionado && ( <i className="fa-solid fa-xmark text-2xl relative bottom-0.5"></i> )}
+                    <h2> {temFiltroSelecionado ? "Filtrar" : "Voltar"} </h2>
+                </div>    
             </button>
             <div className="h-3 bg-white" />
 
@@ -331,15 +263,7 @@ export default function FiltroMetaMobile({
               ) : (
                 <>
                   <div className="flex justify-center">
-                    <button
-                      type="button"
-                      onClick={() => {
-                        limparFiltros();
-                        setZonaSelecionada(null);
-                      }}
-                      className="h-12 px-8 w-60 rounded-xl border-2 border-slate-800 text-slate-800 font-normal uppercase text-xl tracking-[0.12em]"
-                      style={{ fontFamily: '"Bebas Neue", sans-serif' }}
-                    >
+                    <button type="button" onClick={() => { limparFiltros(); setZonaSelecionada(null); }} className="h-12 px-8 w-60 rounded-xl border-2 border-slate-800 text-slate-800 font-normal uppercase text-xl tracking-[0.12em]" style={{ fontFamily: '"Bebas Neue", sans-serif' }} >
                       Limpar tudo
                     </button>
                   </div>
@@ -379,35 +303,12 @@ export default function FiltroMetaMobile({
                               ? ["CAPITAL", "DO FUTURO"]
                               : [e.nome];
                             return (
-                              <button
-                                key={e.id}
-                                type="button"
-                                onClick={() => {
-                                  toggleSelecionado("eixos", e.id);
-                                  setEixoAberto(e.id);
-                                }}
-                                className={`rounded-2xl px-3 py-4 text-left shadow ${
-                                  active
-                                    ? "ring-2 ring-offset-2 ring-slate-900 ring-offset-white"
-                                    : ""
-                                }`}
-                                style={{ backgroundColor: e.cor }}
-                              >
+                              <button key={e.id} type="button" onClick={() => { toggleSelecionado("eixos", e.id); setEixoAberto(e.id);}} className={`rounded-2xl px-3 py-4 text-left shadow ${ active ? "ring-2 ring-offset-2 ring-slate-900 ring-offset-white" : ""}`} style={{ backgroundColor: e.cor }}>
                                 <span
                                   className="block text-white leading-[1.05]"
-                                  style={{
-                                    fontFamily: '"Bebas Neue", sans-serif',
-                                    fontSize: "22px",
-                                    letterSpacing: "0.02em",
-                                    textTransform: "uppercase",
-                                    fontWeight: 700
-                                  }}
-                                >
+                                  style={{ fontFamily: '"Bebas Neue", sans-serif', fontSize: "22px", letterSpacing: "0.02em", textTransform: "uppercase", fontWeight: 700  }}>
                                   {lines.map((p, i) => (
-                                    <span
-                                      key={i}
-                                      className={i === 0 ? "" : "block"}
-                                    >
+                                    <span key={i} className={i === 0 ? "" : "block"}>
                                       {p}
                                     </span>
                                   ))}
@@ -427,37 +328,16 @@ export default function FiltroMetaMobile({
                         const temas = eixoSel?.temas ?? [];
                         const bg = eixoSel?.cor || "#2FB157";
                         return (
-                          <div
-                            className="mt-3 mx-2 rounded-2xl shadow relative overflow-hidden"
-                            style={{ backgroundColor: bg }}
-                          >
+                          <div className="mt-3 mx-2 rounded-2xl shadow relative overflow-hidden" style={{ backgroundColor: bg }} >
                             <div className="relative">
-                              <button
-                                type="button"
-                                onClick={() => setEixoAberto(null)}
-                                aria-label="Fechar"
-                                className="absolute right-1 top-0 h-9 w-9 grid place-items-center text-white"
-                                style={{ zIndex: 1 }}
-                              >
-                                <svg
-                                  viewBox="0 0 24 24"
-                                  className="h-6 w-6"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  strokeWidth="2.5"
-                                  strokeLinecap="round"
-                                >
+                              <button type="button" onClick={() => setEixoAberto(null)} aria-label="Fechar" className="absolute right-1 top-0 h-9 w-9 grid place-items-center text-white" style={{ zIndex: 1 }}>
+                                <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
                                   <line x1="18" y1="6" x2="6" y2="18" />
                                   <line x1="6" y1="6" x2="18" y2="18" />
                                 </svg>
                               </button>
                               <div className="px-3 pt-8 pb-1">
-                                <div
-                                  className="h-px w-full"
-                                  style={{
-                                    background: "rgba(255,255,255,.85)"
-                                  }}
-                                />
+                                <div className="h-px w-full" style={{ background: "rgba(255,255,255,.85)"}}/>
                               </div>
                             </div>
                             <ul className="px-3 pb-3">
@@ -467,30 +347,14 @@ export default function FiltroMetaMobile({
                                 return (
                                   <li key={sub.id} className="py-2">
                                     {idx > 0 && (
-                                      <div
-                                        className="h-px w-full mb-2"
-                                        style={{
-                                          background: "rgba(255,255,255,.55)"
-                                        }}
-                                      />
-                                    )}
-                                    <button
-                                      type="button"
-                                      role="checkbox"
-                                      aria-checked={checked}
-                                      onClick={() =>
-                                        toggleSelecionado("subeixos", sub.id)
-                                      }
-                                      className="w-full flex items-center justify-between gap-3 py-1 text-left"
-                                    >
+                                      <div className="h-px w-full mb-2" style={{ background: "rgba(255,255,255,.55)" }} />
+                                      )}
+                                    <button type="button" role="checkbox" aria-checked={checked} onClick={() => toggleSelecionado("subeixos", sub.id) } className="w-full flex items-center justify-between gap-3 py-1 text-left">
                                       <span className="text-white text-[14px] leading-5 flex-1">
                                         {sub.nome}
                                       </span>
                                       <span className="shrink-0">
-                                        <CheckSvg
-                                          checked={checked}
-                                          stroke="#FFFFFF"
-                                        />
+                                        <CheckSvg checked={checked} stroke="#FFFFFF"/>
                                       </span>
                                     </button>
                                   </li>
@@ -515,25 +379,7 @@ export default function FiltroMetaMobile({
                         );
                         const isActive = zonaSelecionada === zonaObj?.id;
                         return (
-                        <button
-                            key={name}
-                            onClick={() => {
-                            if (!zonaObj?.id) return;
-                            const isSame = zonaSelecionada === zonaObj.id;
-                            toggleSelecionado("zonas", zonaObj.id);
-                            setZonaSelecionada(isSame ? null : zonaObj.id);
-                            setSubprefOpen(true);
-                            }}
-                            className={[
-                            "h-16 w-full grid place-items-center rounded-xl border-2 font-bold uppercase tracking-wide transition-all duration-200",
-                            isActive
-                                ? "bg-black text-white border-black scale-[1.02] shadow-md"
-                                : "bg-white text-slate-900 border-black"
-                            ].join(" ")}
-                            style={{
-                            fontFamily: '"Bebas Neue", sans-serif',
-                            }}>
-                            {isCentro ? (
+                        <button key={name} onClick={() => { if (!zonaObj?.id) return; const isSame = zonaSelecionada === zonaObj.id; toggleSelecionado("zonas", zonaObj.id); setZonaSelecionada(isSame ? null : zonaObj.id); setSubprefOpen(true); }} className={[ "h-16 w-full grid place-items-center rounded-xl border-2 font-bold uppercase tracking-wide transition-all duration-200", isActive ? "bg-black text-white border-black scale-[1.02] shadow-md" : "bg-white text-slate-900 border-black"].join(" ")} style={{fontFamily: '"Bebas Neue", sans-serif',}}> {isCentro ? (
                             <span className="text-[13px]">CENTRO</span>
                             ) : (
                             <span className="leading-tight text-center">
@@ -548,16 +394,8 @@ export default function FiltroMetaMobile({
                         })}
                     </div>
                     <div className="mt-6 text-left">
-                      <button
-                        type="button"
-                        onClick={() => setSubprefOpen((v) => !v)}
-                        className="w-full h-10 rounded-xl border-2 border-black text-black grid grid-cols-[1fr_auto] items-center px-4"
-                        aria-expanded={subprefOpen}
-                      >
-                        <span
-                          className="justify-self-center text-[14px] font-bold uppercase tracking-wide"
-                          style={{ fontFamily: '"Bebas Neue", sans-serif' }}
-                        >
+                      <button type="button" onClick={() => setSubprefOpen((v) => !v)} className="w-full h-10 rounded-xl border-2 border-black text-black grid grid-cols-[1fr_auto] items-center px-4" aria-expanded={subprefOpen}>
+                        <span className="justify-self-center text-[14px] font-bold uppercase tracking-wide" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
                           Subprefeitura
                         </span>
                         <span className="justify-self-end">
@@ -574,20 +412,9 @@ export default function FiltroMetaMobile({
                             return (
                               <li key={sub.id} className="py-2">
                                 {idx > 0 && (
-                                  <div
-                                    className="h-px w-full mb-2"
-                                    style={{ background: "rgba(0,0,0,.2)" }}
-                                  />
+                                  <div className="h-px w-full mb-2" style={{ background: "rgba(0,0,0,.2)" }}/>
                                 )}
-                                <button
-                                  type="button"
-                                  role="checkbox"
-                                  aria-checked={checked}
-                                  onClick={() =>
-                                    toggleSelecionado("subprefeituras", sub.id)
-                                  }
-                                  className="w-full flex items-center justify-between gap-3 py-1 text-left"
-                                >
+                                <button type="button" role="checkbox" aria-checked={checked} onClick={() => toggleSelecionado("subprefeituras", sub.id) } className="w-full flex items-center justify-between gap-3 py-1 text-left">
                                   <span className="text-[14px] leading-5 text-slate-900 flex-1">
                                     {sub.nome}
                                   </span>
@@ -615,16 +442,8 @@ export default function FiltroMetaMobile({
                       Pesquise por órgão responsável!
                     </h3>
 
-                    <button
-                      type="button"
-                      onClick={() => setOrgaoOpen((v) => !v)}
-                      className="w-full h-10 rounded-xl border-2 border-black text-black grid grid-cols-[1fr_auto] items-center px-4"
-                      aria-expanded={orgaoOpen}
-                    >
-                      <span
-                        className="justify-self-center text-[14px] font-bold uppercase tracking-wide"
-                        style={{ fontFamily: '"Bebas Neue", sans-serif' }}
-                      >
+                    <button type="button" onClick={() => setOrgaoOpen((v) => !v)} className="w-full h-10 rounded-xl border-2 border-black text-black grid grid-cols-[1fr_auto] items-center px-4" aria-expanded={orgaoOpen}>
+                      <span className="justify-self-center text-[14px] font-bold uppercase tracking-wide" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
                         Órgão
                       </span>
                       <span className="justify-self-end">
@@ -635,18 +454,7 @@ export default function FiltroMetaMobile({
                     {orgaoOpen && (
                       <div className="mt-3 rounded-xl border border-black/10 shadow-sm">
                         <div className="p-2">
-                          <button
-                            type="button"
-                            onClick={() => {
-                              const selected = new Set(
-                                (filtrosSelecionados?.orgaos || []).map(String)
-                              );
-                              const allIds = orgaosList.map((o) =>
-                                String(o.id)
-                              );
-                              const hasMissing = allIds.some(
-                                (id) => !selected.has(id)
-                              );
+                          <button type="button" onClick={() => { const selected = new Set(   (filtrosSelecionados?.orgaos || []).map(String) ); const allIds = orgaosList.map((o) =>   String(o.id) ); const hasMissing = allIds.some(   (id) => !selected.has(id) );
                               if (hasMissing) {
                                 orgaosList.forEach((o) => {
                                   if (!selected.has(String(o.id)))
@@ -658,9 +466,7 @@ export default function FiltroMetaMobile({
                                     toggleSelecionado("orgaos", o.id);
                                 });
                               }
-                            }}
-                            className="w-full h-9 rounded-lg border border-black/50 text-black text-[12px] font-semibold"
-                          >
+                            }} className="w-full h-9 rounded-lg border border-black/50 text-black text-[12px] font-semibold">
                             Selecionar tudo
                           </button>
                         </div>
@@ -683,23 +489,12 @@ export default function FiltroMetaMobile({
                                   {idx > 0 && (
                                     <div className="h-px w-full mb-2 bg-black/20" />
                                   )}
-                                  <button
-                                    type="button"
-                                    role="checkbox"
-                                    aria-checked={checked}
-                                    onClick={() =>
-                                      toggleSelecionado("orgaos", org.id)
-                                    }
-                                    className="w-full flex items-center justify-between gap-3 py-1 text-left"
-                                  >
+                                  <button type="button" role="checkbox" aria-checked={checked} onClick={() => toggleSelecionado("orgaos", org.id) } className="w-full flex items-center justify-between gap-3 py-1 text-left">
                                     <span className="text-[14px] leading-5 text-slate-900 flex-1">
                                       {org.nome}
                                     </span>
                                     <span className="shrink-0">
-                                      <CheckSvg
-                                        checked={checked}
-                                        stroke="#000"
-                                      />
+                                      <CheckSvg checked={checked} stroke="#000"/>
                                     </span>
                                   </button>
                                 </li>
@@ -717,16 +512,8 @@ export default function FiltroMetaMobile({
                       Pesquise pela relação com outros planos municipais!
                     </h3>
 
-                    <button
-                      type="button"
-                      onClick={() => setPlanosOpen((v) => !v)}
-                      className="w-full h-10 rounded-xl border-2 border-black text-black grid grid-cols-[1fr_auto] items-center px-4"
-                      aria-expanded={planosOpen}
-                    >
-                      <span
-                        className="justify-self-center text-[12px] font-bold uppercase tracking-wide"
-                        style={{ fontFamily: '"Bebas Neue", sans-serif' }}
-                      >
+                    <button type="button" onClick={() => setPlanosOpen((v) => !v)} className="w-full h-10 rounded-xl border-2 border-black text-black grid grid-cols-[1fr_auto] items-center px-4" aria-expanded={planosOpen}>
+                      <span className="justify-self-center text-[12px] font-bold uppercase tracking-wide" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>
                         Planos vinculados
                       </span>
                       <span className="justify-self-end">
@@ -737,20 +524,7 @@ export default function FiltroMetaMobile({
                     {planosOpen && (
                       <div className="mt-3 rounded-xl border border-black/10 shadow-sm">
                         <div className="p-2">
-                          <button
-                            type="button"
-                            onClick={() => {
-                              const selected = new Set(
-                                (
-                                  filtrosSelecionados?.planos_vinculados || []
-                                ).map(String)
-                              );
-                              const allIds = planosList.map((p) =>
-                                String(p.id)
-                              );
-                              const hasMissing = allIds.some(
-                                (id) => !selected.has(id)
-                              );
+                          <button type="button" onClick={() => { const selected = new Set(   (     filtrosSelecionados?.planos_vinculados || []   ).map(String) ); const allIds = planosList.map((p) =>   String(p.id) ); const hasMissing = allIds.some(   (id) => !selected.has(id) );
                               if (hasMissing) {
                                 planosList.forEach((p) => {
                                   if (!selected.has(String(p.id)))
@@ -768,53 +542,23 @@ export default function FiltroMetaMobile({
                                     );
                                 });
                               }
-                            }}
-                            className="w-full h-9 rounded-lg border border-black/50 text-black text-[12px] font-semibold"
-                          >
+                            }} className="w-full h-9 rounded-lg border border-black/50 text-black text-[12px] font-semibold">
                             Selecionar tudo
                           </button>
                         </div>
 
                         <ul className="max-h-64 overflow-y-auto px-2 pb-2">
-                          {[...planosList]
-                            .sort((a, b) =>
-                              (a?.nome || "").localeCompare(
-                                b?.nome || "",
-                                "pt",
-                                { sensitivity: "base" }
-                              )
-                            )
-                            .map((plano, idx) => {
-                              const checked = new Set(
-                                (
-                                  filtrosSelecionados?.planos_vinculados || []
-                                ).map(String)
-                              ).has(String(plano.id));
+                          {[...planosList].sort((a, b) =>(a?.nome || "").localeCompare(  b?.nome || "",  "pt",  { sensitivity: "base" }))
+                            .map((plano, idx) => { const checked = new Set( (   filtrosSelecionados?.planos_vinculados || [] ).map(String) ).has(String(plano.id));
                               return (
                                 <li key={plano.id} className="py-2">
-                                  {idx > 0 && (
-                                    <div className="h-px w-full mb-2 bg-black/20" />
-                                  )}
-                                  <button
-                                    type="button"
-                                    role="checkbox"
-                                    aria-checked={checked}
-                                    onClick={() =>
-                                      toggleSelecionado(
-                                        "planos_vinculados",
-                                        plano.id
-                                      )
-                                    }
-                                    className="w-full flex items-center justify-between gap-3 py-1 text-left"
-                                  >
+                                     {idx > 0 && (   <div className="h-px w-full mb-2 bg-black/20" /> )}
+                                  <button type="button" role="checkbox" aria-checked={checked} onClick={() =>toggleSelecionado(  "planos_vinculados",  plano.id) } className="w-full flex items-center justify-between gap-3 py-1 text-left">
                                     <span className="text-[14px] leading-5 text-slate-900 flex-1">
                                       {plano.nome}
                                     </span>
                                     <span className="shrink-0">
-                                      <CheckSvg
-                                        checked={checked}
-                                        stroke="#000"
-                                      />
+                                      <CheckSvg checked={checked} stroke="#000" />
                                     </span>
                                   </button>
                                 </li>
@@ -824,42 +568,20 @@ export default function FiltroMetaMobile({
                       </div>
                     )}
                   </section>
-
                   <hr className="border-slate-700 mt-6" />
-
                   <section className="space-y-2">
                     <h3 className="text-[16px] font-semibold uppercase tracking-wide text-slate-700 text-center">
                       Filtre de acordo com os Objetivos de Desenvolvimento
                       Sustentável — ODS
                     </h3>
-
                     <div className="grid grid-cols-3 gap-2">
                       {(odsList ?? []).map((odsItem) => {
                         const active = filtrosSelecionados.ods.includes(
                           odsItem.id
                         );
                         return (
-                          <button
-                            key={odsItem.id}
-                            type="button"
-                            onClick={() => toggleSelecionado("ods", odsItem.id)}
-                            className={[
-                              "rounded-lg p-2 border text-center transition-all duration-200 overflow-hidden",
-                              active
-                                ? "ring-2 ring-slate-800 border-slate-800"
-                                : "border-slate-200"
-                            ].join(" ")}
-                            style={{
-                              backgroundColor: odsItem?.cor || "transparent"
-                            }}
-                            aria-pressed={active}
-                            title={odsItem.nome}
-                          >
-                            <SafeSVG
-                              src={corrigirUrlImagem(odsItem.icone)}
-                              alt={odsItem.nome}
-                              className="w-12 h-12 mx-auto"
-                            />
+                          <button key={odsItem.id} type="button" onClick={() => toggleSelecionado("ods", odsItem.id)} className={[ "rounded-lg p-2 border text-center transition-all duration-200 overflow-hidden", active ? "ring-2 ring-slate-800 border-slate-800"   : "border-slate-200" ].join(" ")} style={{ backgroundColor: odsItem?.cor || "transparent"}} aria-pressed={active} title={odsItem.nome} >
+                            <SafeSVG src={corrigirUrlImagem(odsItem.icone)} alt={odsItem.nome} className="w-12 h-12 mx-auto"/>
                             <div className="mt-1 text-white text-[12px] font-semibold leading-4">
                               {odsItem.nome}
                             </div>

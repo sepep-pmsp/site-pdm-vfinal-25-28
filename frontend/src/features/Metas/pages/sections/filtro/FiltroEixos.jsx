@@ -1,153 +1,101 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
-export default function FiltroEixos({
-  eixos,
-  filtrosSelecionados,
-  toggleSelecionado,
-  eixoIdFromNav,
-  onLimparFiltros,
-}) {
+const colorBackground = {
+  "universo sp":          { main: "var(--color-green)", light: "#87C98E",},
+  "cidade empreendedora": { main: "#0000AB",            light: "#9898CC",},
+  "viver sao paulo":      { main: "#F16622",            light: "#D6A790",},
+  "capital do futuro":    { main: "#792D49",            light: "#C2849B",},
+};
+
+function normalize(texto) { return (texto || "") .normalize("NFD") .replace(/[\u0300-\u036f]/g, "") .toLowerCase() .trim(); }
+
+function getIdForFilter(id) {
+  const numberId = Number(id);
+  return Number.isNaN(numberId) ? id : numberId;
+}
+
+function isSelected(lista = [], id) {
+  return Array.isArray(lista) && lista.some((item) => String(item) === String(id));
+}
+
+export default function FiltroEixosCards({eixos = [],filtrosSelecionados = {},toggleSelecionado,eixoIdFromNav,subeixoFilterKey = "subeixos",}) {
   const [eixosAbertos, setEixosAbertos] = useState([]);
   const [initialFilterApplied, setInitialFilterApplied] = useState(false);
 
-  const toggleDropdown = (id) => {
-    setEixosAbertos((prev) =>
-      prev.includes(id) ? prev.filter((e) => e !== id) : [...prev, id]
-    );
-  };
-
-  const colorBackground = {
-    "universo sp": { backgroundColor: "var(--color-green)" },
-    "viver sao paulo": { backgroundColor: "#F16622" },
-    "cidade empreendedora": { backgroundColor: "#0000AB" },
-    "capital do futuro": { backgroundColor: "#792D49" },
-  };
-
-  const normalize = (s) =>
-    (s || "")
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .toLowerCase()
-      .trim();
-
-  // Se quiser garantir que eixoIdFromNav e ids usem o mesmo tipo (number), normaliza aqui
-  const eixoIdFromNavNum = useMemo(() => {
+  const eixoIdFromNavNormalized = useMemo(() => {
     if (eixoIdFromNav == null) return null;
-    const n = Number(eixoIdFromNav);
-    return Number.isNaN(n) ? eixoIdFromNav : n;
+    return getIdForFilter(eixoIdFromNav);
   }, [eixoIdFromNav]);
 
-  // Ordena os eixos por id sem mutar o original
   const sortedEixos = useMemo(() => {
     if (!Array.isArray(eixos)) return [];
+
     return [...eixos].sort((a, b) => {
-      const ida = Number(a.id);
-      const idb = Number(b.id);
-      if (!Number.isNaN(ida) && !Number.isNaN(idb)) return ida - idb;
-      // fallback para string compare
+      const idA = Number(a.id);
+      const idB = Number(b.id);
+
+      if (!Number.isNaN(idA) && !Number.isNaN(idB)) {
+        return idA - idB;
+      }
+
       return String(a.id).localeCompare(String(b.id));
     });
   }, [eixos]);
 
   useEffect(() => {
-    if (eixoIdFromNavNum != null && !initialFilterApplied) {
-      setEixosAbertos([eixoIdFromNavNum]);
+    if (eixoIdFromNavNormalized == null || initialFilterApplied) return;
+    const idKey = String(eixoIdFromNavNormalized);
+    setEixosAbertos((prev) => prev.includes(idKey) ? prev : [...prev, idKey]);
+    if (!isSelected(filtrosSelecionados.eixos, eixoIdFromNavNormalized)) { toggleSelecionado("eixos", eixoIdFromNavNormalized); }
 
-      if (!filtrosSelecionados.eixos.includes(eixoIdFromNavNum)) {
-        toggleSelecionado("eixos", eixoIdFromNavNum);
-      }
-      setInitialFilterApplied(true);
-    }
-    
-  }, [eixoIdFromNavNum, initialFilterApplied, filtrosSelecionados.eixos, toggleSelecionado]);
+    setInitialFilterApplied(true);
+    }, [ eixoIdFromNavNormalized, initialFilterApplied, filtrosSelecionados.eixos, toggleSelecionado, ]);
 
-  if (!eixos) {
-    return <p>Carregando eixos...</p>;
+  function toggleDropdown(idKey) {
+    setEixosAbertos((prev) =>
+      prev.includes(idKey) ? prev.filter((item) => item !== idKey) : [...prev, idKey]);
+  }
+
+  if (!Array.isArray(eixos) || eixos.length === 0) {
+    return <p className="text-sm text-gray-500">Carregando eixos...</p>;
   }
 
   return (
-    <div className="h-full flex flex-col items-start w-[19rem] relative bottom-4">
+    <div className="flex md:flex-wrap lg:flex-row lg:flex-nowrap gap-6 py-6 items-start justify-start w-full px-2">
       {sortedEixos.map(({ nome, id, temas }) => {
-        // garantir que o id usado aqui tenha o mesmo tipo que usamos acima (Number ou string)
-        const idNormalized = Number(id);
-        const idForState = Number.isNaN(idNormalized) ? id : idNormalized;
-
-        const isAberto = eixosAbertos.includes(idForState);
+        const idForFilter = getIdForFilter(id);
+        const idKey = String(idForFilter);
+        const isAberto = eixosAbertos.includes(idKey);
         const normalizedNome = normalize(nome);
-        const bgStyle = colorBackground[normalizedNome] || {
-          backgroundColor: "transparent",
-        };
+        const colors = colorBackground[normalizedNome] || { main: "var(--color-navy)", light: "#9CA3AF", };
+        const eixoSelecionado = isSelected( filtrosSelecionados.eixos, idForFilter );
+        const subeixosSelecionados = filtrosSelecionados[subeixoFilterKey] || [];
 
         return (
-          <div key={idForState}>
-            <div
-              onClick={() => {
-                toggleSelecionado("eixos", idForState);
-                toggleDropdown(idForState);
-                console.log(`Clicou no eixo ${idForState}`);
-              }}
-              className="flex flex-col items-start justify-between flex-nowrap rounded-r-3xl overflow-hidden cursor-pointer transition-all duration-300"
-              style={{
-                ...bgStyle,
-                width: isAberto ? "21.5rem" : "6rem",
-                height: "21rem",
-                marginBottom: isAberto ? "-12px" : "-20px",
-              }}
-            >
-              <div className="flex justify-between items-center flex-row flex-nowrap">
-                <div
-                  className={`text-white transition-all duration-300 p-2 ${
-                    isAberto
-                      ? "rotate-0 text-4xl flex flex-col"
-                      : "rotate-270 text-4xl w-60 relative right-20 top-35"
-                  }`}
-                >
-                  <h2 className="w-80 pt-4">{nome.toUpperCase()}</h2>
-                </div>
-                {isAberto && (
-                  <button
-                    className="text-white absolute left-[19rem]"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      toggleDropdown(idForState);
-                      if (onLimparFiltros) {
-                        onLimparFiltros();
-                      }
-                    }}
-                  >
-                    <i className="fa-solid fa-xmark" style={{ fontSize: "2rem" }}></i>
-                  </button>
-                )}
-              </div>
+          <article key={idKey} className="w-auto lg:w-1/3 overflow-hidden rounded-lg shadow-md transition-colors duration-500 ease-out md:w-40" style={{ backgroundColor: isAberto ? colors.light : colors.main,}}>
+            <div role="button" tabIndex={0} onClick={() => toggleDropdown(idKey)} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { toggleDropdown(idKey); } }} className="relative flex h-[6.4rem] w-full cursor-pointer items-center justify-between rounded-lg px-6 py-5" style={{ backgroundColor: colors.main }}>
+              <h3 className="w-auto lg:max-w-40 text-left text-xl xl:text-3xl uppercase leading-none text-white"> {nome} </h3>
 
-              {isAberto && (
-                <div className="mt-2 ml-4 overflow-y-auto overflow-x-hidden scroll-smooth scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-gray-400 no-scrollbar-arrows h-60 w-[20rem]">
-                  {Array.isArray(temas) &&
-                    temas.map((sub) => (
-                      <label
-                        key={sub.id}
-                        className="mb-1 text-white text-xl flex flex-row-reverse justify-between items-center pr-8"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <input
-                          type="checkbox"
-                          className="mr-2 bg-white m-0 custom-checkbox"
-                          checked={filtrosSelecionados.subeixos.includes(sub.id)}
-                          onChange={() => toggleSelecionado("subeixos", sub.id)}
-                        />
-                        <span className="custom-checkbox-eixos"></span>
-                        <div className="w-60 py-1">
-                          <span className="w-70 capitalize">{sub.nome}</span>
-                          <div
-                            style={{ backgroundColor: "white", height: "1px", width: "90%" }}
-                          ></div>
-                        </div>
-                      </label>
-                    ))}
-                </div>
-              )}
+              <button type="button" aria-label={`Filtrar eixo ${nome}`} aria-pressed={eixoSelecionado} onClick={(event) => { event.stopPropagation(); toggleSelecionado("eixos", idForFilter);}} className="absolute right-3 top-3 grid h-6 w-6 place-items-center rounded-full border-2 border-white transition" style={{ backgroundColor: eixoSelecionado ? "white" : "transparent",}}> 
+                <i className="fa-solid fa-check text-white" style={{ color: eixoSelecionado ? colors.main : "white", }}></i>
+              </button>
             </div>
-          </div>
+
+            <div  className={`flex flex-col gap-3 px-5 overflow-hiddentransition-all duration-300 ease-in-out ${isAberto ? "max-h-96 opacity-100 py-4" : "max-h-0 opacity-0 py-0 pointer-events-none"}`}>
+                {Array.isArray(temas) && temas.length > 0 ? (
+                    temas.map((sub) => { const subIdForFilter = getIdForFilter(sub.id); const subSelecionado = isSelected(subeixosSelecionados, subIdForFilter);
+                    return (
+                        <button key={sub.id ?? subIdForFilter} type="button" onClick={() => toggleSelecionado(subeixoFilterKey, subIdForFilter)} className="flex w-full items-center justify-between gap-3 text-left text-sm leading-tight text-white transition duration-300 ">
+                        <p>{sub.nome}</p>
+                        <span className={` grid h-5 w-5 shrink-0 place-items-center rounded-full !border-2 border-white transition ${subSelecionado ? "bg-white" : "bg-transparent"}`}>
+                            <i className="fa-solid fa-check" style={{   color: subSelecionado ? colors.main : "white", }}></i>
+                        </span>
+                        </button>
+                    );})
+                ) : ( <p className="text-sm text-white"> Nenhum sub-eixo encontrado. </p> )
+                }
+                </div>
+          </article>
         );
       })}
     </div>
