@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { getOrcamentoData, getConhecaMetasData } from "../../../services/getOrcamentoData";
-import { parseNumeroBR } from "../../../hooks/parseNumeroBR";
+//import { parseNumeroBR } from "../../../hooks/parseNumeroBR";
 
-const normalize = (text) =>
-    (text || "")
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .toLowerCase()
-        .trim();
+// const normalize = (text) =>
+//     (text || "")
+//         .normalize("NFD")
+//         .replace(/[\u0300-\u036f]/g, "")
+//         .toLowerCase()
+//         .trim();
 
 export default function CarouselOrcamento() {
     const [data, setData] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [recursosEmpenhados, setRecursosEmpenhados] = useState(null);
+    // const [recursosEmpenhados, setRecursosEmpenhados] = useState(null);
 
     useEffect(() => {
     async function fetchData() {
         try {
-            const [orcamentoResponse, conhecaMetasResponse] = await Promise.all([
+            //conhecaMetasResponse
+            const [orcamentoResponse, ] = await Promise.all([
                 getOrcamentoData(),
                 getConhecaMetasData(),
             ]);
@@ -32,12 +33,12 @@ export default function CarouselOrcamento() {
 
                 setData(valores);
 
-                const recursoItem = conhecaMetasResponse?.list_conheca_metas?.find(
-                    (item) => normalize(item?.nome) === "recursos empenhados"
-                );
+                // const recursoItem = conhecaMetasResponse?.list_conheca_metas?.find(
+                //     (item) => normalize(item?.nome) === "recursos empenhados"
+                // );
 
-                const valorNumerico = parseNumeroBR(recursoItem?.valor);
-                setRecursosEmpenhados(valorNumerico);
+                // const valorNumerico = parseNumeroBR(recursoItem?.valor);
+                // setRecursosEmpenhados(valorNumerico);
             } catch (error) {
                 console.error("Erro ao buscar dados do orçamento:", error);
             }
@@ -69,32 +70,32 @@ export default function CarouselOrcamento() {
         }).format(numeric);
     };
 
-    const fmtBi = (value) => {
-        if (value === null || value === undefined) return "--";
+    // const fmtBi = (value) => {
+    //     if (value === null || value === undefined) return "--";
 
-        return `${Number(value).toLocaleString("pt-BR", {
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 2,
-        })} bi`;
-    };
+    //     return `${Number(value).toLocaleString("pt-BR", {
+    //         minimumFractionDigits: 0,
+    //         maximumFractionDigits: 2,
+    //     })} bi`;
+    // };
 
     return (
-        <div className='bg-white w-full p-4 shadow-md flex flex-col justify-center items-center gap-8 rounded-2xl xl:!h-[29.4rem]'>
-            <section className='!flex flex-col lg:flex-row w-full'>
-                <div className='w-full h-full rounded-lg flex flex-col justify-center items-center gap-4'>
-                    <span className='w-full flex flex-row flex-nowrap items-center justify-center gap-4 xl:relative xl:bottom-6 xl:right-6'>
+        <div className='bg-white w-full p-4 shadow-md flex flex-col justify-center xl:justify-start items-center gap-8 rounded-2xl xl:h-full'>
+            <section className='!flex flex-col lg:flex-row xl:justify-start xl:items-center w-full'>
+                <div className='w-full h-full flex flex-col justify-center xl:justify-start items-center gap-4 xl:!h-56'>
+                    <span className='w-full flex flex-row flex-nowrap items-center justify-start gap-4'>
                         <h2 className='text-2xl font-bold uppercase'>Total de metas</h2>
                         <span className='w-25 h-0.5 bg-black'></span>
                     </span>
-                    <div className='w-full 2xl:w-70'>
-                        <h1 className='text-[var(--color-navy)] text-7xl lg:text-9xl'>{eixo.totalMetas}</h1>
-                        <p className='text-[var(--color-navy)] !text-base'>
+                    <div className='w-full 2xl:w-70 flex flex-col items-center justify-center gap-6'>
+                        <h1 className='text-[var(--color-navy)] text-7xl lg:text-9xl text-center xl:relative xl:right-3'>{eixo.totalMetas}</h1>
+                        <p className='text-[var(--color-navy)] !text-base max-md:text-center'>
                             Metas divididas em <strong className='underline'>4 diferentes eixos</strong>
                         </p>
                     </div>
                 </div>
-                <div className='w-full h-full rounded-lg flex flex-col justify-center items-center gap-4'>
-                    <span className='w-full flex flex-row flex-nowrap items-center justify-center gap-4 xl:relative xl:bottom-3'>
+                <div className='w-full h-full flex flex-col justify-center items-center gap-4'>
+                    <span className='w-full flex flex-row flex-nowrap items-center justify-start gap-4'>
                         <h2 className='text-2xl font-bold uppercase w-30'>Metas Por Eixo</h2>
                         <span className='w-30 h-0.5 bg-black'></span>
                     </span>
@@ -121,16 +122,16 @@ export default function CarouselOrcamento() {
                     </div>
                 </div>
             </section>
-            <section className='!flex flex-col items-center justify-center gap-8'>
+            <section className='!flex flex-col items-center justify-center gap-8 w-full'>
                 <div className='bg-white w-full !border-2 !border-[var(--color-navy)] rounded-full py-2 px-8 text-[var(--color-navy)]'>
                     <p className='text-center'>
                         <strong>Orçamento total:</strong> {fmtCompactBRL(eixo.orcamentoTotal)}
                     </p>
                 </div>
-                <div className='bg-[var(--color-navy)] w-full rounded-2xl py-2 px-8 text-white flex flex-col lg:flex-row items-center justify-center lg:gap-8 gap-2'>
+                {/* <div className='bg-[var(--color-navy)] w-full rounded-2xl py-2 px-8 text-white flex flex-col lg:flex-row items-center justify-center lg:gap-8 gap-2'>
                     <h2 className='text-6xl w-35'>{fmtBi(recursosEmpenhados)}</h2>
                     <p className='text-xl'>De <strong>recursos empenhados</strong> até o momento</p>
-                </div>
+                </div> */}
             </section>
         </div>
     );
