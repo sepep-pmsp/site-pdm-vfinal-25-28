@@ -4,7 +4,7 @@ import TelefoneIcon from '../../../assets/svg/telefone.svg'
 
 export default function ContatosFooter() {
   return (
-    <div className='flex flex-col gap-4'>
+    <div className='flex flex-col gap-3'>
       <div>
         <p className='text-[23px]'>Contatos:</p>
       </div>

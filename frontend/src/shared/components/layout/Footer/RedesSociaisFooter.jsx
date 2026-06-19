@@ -6,9 +6,9 @@ import youtubeIcon from "../../../assets/social/youtube.svg";
 
 export default function RedesSociaisFooter() {
   return (
-    <div className="p-2 flex flex-col items-start gap-4 relative top-8">
-      <div className="flex items-center gap-4">
-        <p className="text-[23px] w-56">Siga a Prefeitura de SP nas redes sociais: </p>
+    <div className="px-2 flex flex-col items-start gap-8 relative">
+      <div className="flex items-end gap-4">
+        <p className="text-[23px] w-60">Siga a Prefeitura de SP nas redes sociais: </p>
         <div>
           <button>
             <a target="blank" href="https://www.facebook.com/PrefSP">

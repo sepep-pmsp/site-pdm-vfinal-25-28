@@ -50,11 +50,10 @@ export default function About() {
               </div>
 
               {/* Botão que abre modal */}
-              <div className="w-28 h-20 md:w-38 lg:w-48">
+              <div className="w-29 h-20 md:w-38 lg:w-48">
                 <CustomButton type="modal" onClick={() => setShowModal(true)} className="all_buttons uppercase max-md:text-xs">
                   <p className="roboto-regular">
                     palavra do prefeito <br />{" "}
-                    <strong className="roboto-black">leia aqui!</strong>
                   </p>
                 </CustomButton>
               </div>
