@@ -14,9 +14,9 @@ export default function Footer() {
   }
 
   return (
-    <div className="text-white h-full w-full flex items-center flex-nowrap flex-row footer">
-      <div className="pt-4 bg-[var(--color-navy)] h-[25rem]">
-        <div className="relative w-80 left-60">
+    <div className="text-white h-full w-full flex items-center flex-nowrap  flex-row footer">
+      <div className="pt-4 bg-[var(--color-navy)] h-[25rem] flex flex-col gap-18">
+        <div className="relative w-80 left-60 xl:top-10">
           <img
             src={logo_prefeitura}
             alt="Logo oficial da prefeitura de São Paulo"

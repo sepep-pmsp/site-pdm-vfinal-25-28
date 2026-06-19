@@ -16,10 +16,6 @@ export default function SectionIntroSobre({
     { label: "por quê?", message: banner.por_que },
     { label: "para quem?", message: banner.para_quem }
   ];
-  console.log("sobre:", sobre);
-    console.log("banner:", banner);
-    console.log("link_pdf2:", banner?.link_pdf2);
-
   return (
     <div>
       <section className={`relative w-full flex min-h-full overflow-hidden transition-all duration-500 section-mobile-about ${selectedButton !== null ? "max-lg:h-[175vh]" : "max-lg:h-[140vh]"} xl:h-[87vh] lg:h-[75vh]`}>

@@ -64,7 +64,7 @@ export default function Audiencia({ audiencia }) {
             <div className="xl:relative xl:bottom-50">
                 <div className="flex flex-col items-start justify-center gap-8 p-4 bottom-0 xl:gap-24 xl:flex xl:flex-row xl:items-center xl:flex-nowrap xl:justify-center xl:relative xl:pl-20 xl:bottom-20" style={{ maxWidth: "1427px", height: "auto", margin: "0 auto" }}>
                     <h2 className="text-4xl md:text-5xl text-[var(--color-navy)]">
-                        "São Paulo quer ouvir você"
+                        São Paulo quer ouvir você
                     </h2>
                     <p className="md:text-3xl text-[var(--color-navy)] xl:w-[85rem]">
                         Veja como foram as audiências públicas realizadas – setoriais e em
