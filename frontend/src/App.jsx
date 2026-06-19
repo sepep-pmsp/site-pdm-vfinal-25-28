@@ -6,6 +6,7 @@ import CookiesBanner from "@/shared/components/feedback/CookiesBanner";
 import VLibras from "@/shared/components/ui/VLibras";
 import Navbar from "@/shared/components/layout/Navbar/Navbar";
 import Footer from "@/shared/components/layout/Footer/Footer";
+import ScrollToTop from "./shared/components/ui/ScrollToTop";
 
 function App() {
     useEffect(() => {
@@ -17,6 +18,7 @@ function App() {
             <>
                 <Navbar />
                 <CookiesBanner />
+                <ScrollToTop />
                 <AppRoutes />
                 <VLibras requireCookieConsent={false} />
                 <Footer />
