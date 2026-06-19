@@ -59,7 +59,7 @@ export default function Navbar() {
         content: () => (
           <div className="text-white w-full h-full flex flex-col items-start justify-start text-2xl p-4 cursor-pointer slide-bottom-in">
             <h2 className="z-2 slide-bottom-in-item">sobre o pdm</h2>
-            <img className="max-md:absolute max-md:left-[2.7rem] max-md:w-36 md:absolute left-0 bottom-0 select-none pointer-events-none" src={Vector_Sobre} />
+            <img className="max-md:absolute max-md:left-[2.7rem] max-md:w-36 md:absolute left-14 bottom-0 select-none pointer-events-none" src={Vector_Sobre} />
           </div>
         ),
         action: () => goTo("/sobre"),
@@ -70,7 +70,7 @@ export default function Navbar() {
         content: () => (
           <div className="text-white w-full h-full flex flex-col-reverse items-start justify-center px-6 py-4 text-2xl cursor-pointer slide-top-in overflow-auto">
             <h2 className="absolute bottom-4 z-2 slide-top-in-item">histórico</h2>
-            <img className="max-md:absolute max-md:left-[2.7rem] max-md:w-36 md:absolute w-[16.5rem] left-0 top-0 select-none pointer-events-none" src={Vector} />
+            <img className="max-md:absolute max-md:left-[2.7rem] max-md:w-36 md:absolute w-[16.5rem] left-15 top-0 select-none pointer-events-none" src={Vector} />
           </div>
         ),
         action: () => goTo("/historico"),
@@ -97,18 +97,29 @@ export default function Navbar() {
         height: '1/3', // from original config
         bgColor: 'bg-[var(--color-green)] rounded-tl-[2rem] menu-tile-before',
         content: () => (
-          <div className="flex items-start justify-start flex-row p-6 w-full h-full cursor-pointer slide-right-in-img">
-            <img className="w-36 slide-right-in-item-img" src={Universo_SP} alt="" />
-          </div>
+          <>
+            <div className="flex items-start justify-start flex-row p-4 w-full h-full cursor-pointer slide-right-in-img">
+                <img className="w-36 lg:w-60 slide-right-in-item-img" src={Universo_SP} alt="" />
+            </div>
+            <span className="bg-white w-25 xl:w-35 flex items-center justify-center pr-2 relative left-5 bottom-2 xl:left-6 xl:bottom-20 rounded-l-xl">
+                <h6 className="text-[var(--color-green)] py-1 px-2 text-lg xl:text-3xl">eixo</h6>
+            </span>
+          </>
+          
         ),
         action: () => goToEixo("universo"),
       },
       { // 2.2 capital do futuro
         height: '2/3', // from original config
-        bgColor: 'bg-[var(--color-purple-red)] rounded-br-[0rem] md:rounded-br-[2rem]',
+        bgColor: 'bg-[var(--color-purple-red)] rounded-bl-[2rem] md:rounded-br-[2rem]',
         content: () => (
-          <div className="flex items-end justify-start p-6 w-full h-full cursor-pointer slide-top-in-img">
-            <img className="w-36 slide-top-in-item-img" src={Capital_Futuro} alt="" />
+          <div className="flex flex-col-reverse justify-around h-full">
+            <div className="flex items-end justify-start p-3 w-full h-full cursor-pointer slide-top-in-img">
+                <img className="w-36 xl:w-60 slide-top-in-item-img relative bottom-2" src={Capital_Futuro} alt="" />
+            </div>
+            <span className="bg-white w-19 xl:w-30 flex items-center justify-start pr-2 pl-2 relative left-12 xl:left-45.5 top-5 xl:top-10 rounded-l-xl">
+                <h6 className="text-[var(--color-purple-red)] py-1 px-2 text-lg xl:text-3xl">eixo</h6>
+            </span>
           </div>
         ),
         action: () => goToEixo("capital"),
@@ -123,7 +134,7 @@ export default function Navbar() {
         content: () => (
           <div className="cursor-pointer flex flex-col flex-nowrap justify-between items-start slide-right-in-logo h-full w-full">
               <img className="w-20 md:w-32 p-4 invert-[1] slide-right-in-item-logo" src={Logo_PDM_fPreto} alt="" />
-              <h2 className="md:text-2xl text-white w-32 absolute bottom-2 md:bottom-4 left-1 md:right-2 text-start md:visible">
+              <h2 className="md:text-2xl text-white w-32 absolute bottom-2 md:bottom-4 left-5 md:right-2 text-start md:visible">
                 conheça as metas
               </h2>
           </div>
@@ -138,18 +149,28 @@ export default function Navbar() {
         height: '[66.6666%]', // approx 69%
         bgColor: 'bg-[var(--color-orange-red)] rounded-tr-[2rem]',
         content: () => (
-          <div className="flex flex-col justify-start items-end p-6 w-full h-full slide-bottom-in-img cursor-pointer">
-            <img className="w-36 slide-bottom-in-item-img" src={Viver_SP} alt="" />
+          <div className="flex flex-col justify-between h-full items-center">
+            <div className="flex flex-col justify-start items-end p-3 w-full h-full slide-bottom-in-img cursor-pointer">
+                <img className="w-36 xl:w-60 slide-bottom-in-item-img relative top-3 xl:top-0" src={Viver_SP} alt="" />
+            </div>
+            <span className="bg-white w-20 xl:w-30 flex items-center justify-start pr-2 pl-2 relative left-6 xl:left-30 bottom-5 rounded-l-xl">
+                <h6 className="text-[var(--color-orange-red)] py-1 px-2 text-lg xl:text-3xl">eixo</h6>
+            </span>
           </div>
         ),
         action: () => goToEixo("viver"),
       },
       { // 4.3 cidade empreendedora
         height: '[33.3333%]',
-        bgColor: 'bg-[var(--color-blue)] rounded-br-[0rem] md:rounded-br-[2rem] slide-left-in-img menu-tile-right',
+        bgColor: 'bg-[var(--color-blue)] rounded-br-[2rem] md:rounded-br-[2rem] slide-right-in-img menu-tile-right',
         content: () => (
-          <div className="flex justify-end items-end p-6 w-full h-full cursor-pointer">
-            <img className="w-32 slide-left-in-item-img" src={Cidade_Empreendedora} alt="" />
+          <div className="flex flex-row-reverse justify-between items-center h-full">
+            <div className="flex justify-start items-end p-4 w-full h-full cursor-pointer">
+                <img className="w-34 xl:w-64 slide-right-in-item-img relative xl:right-27" src={Cidade_Empreendedora} alt="" />
+            </div>
+            <span className="bg-white w-20 xl:w-34 flex items-center justify-start xl:justify-end pr-2 pl-2 relative right-5 top-5 xl:right-38 xl:top-20 rounded-r-xl">
+                <h6 className="text-[var(--color-blue)] py-1 px-2 text-lg xl:text-3xl">eixo</h6>
+            </span>
           </div>
         ),
         action: () => goToEixo("cidade"),
@@ -191,40 +212,31 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="fixed p-2 bg-white z-30 w-full navbar-container">
-      <div className="flex flex-row justify-between gap-8 items-center p-2 px-32 display-navbar">
-        <a href="/">
-            <div>
-                <span className="text-4xl roboto-light navbar_span">
-                    PREFEITURA DE SÃO PAULO |{" "}
-                    <span>
-                    <strong className="font-bebas-regular">PROGRAMA DE METAS</strong>
-                    </span>
-                </span>
+    <div className="fixed p-2 bg-white z-30 w-full">
+        <div className="flex flex-row justify-between max-md:items-center px-3 lg:!px-35 lg:!py-3">
+            <div className="flex flex-col lg:gap-2 lg:flex-row lg:items-center"> 
+                <p className="uppercase text-lg lg:text-4xl roboto-light">prefeitura de são paulo</p>
+                <span className="h-8 bg-[black] w-0.5 max-lg:hidden"></span>
+                <h3 className="uppercase text-lg lg:text-4xl">programa de metas</h3>
             </div>
-        </a>
-        <div className="z-50 relative btn-menu-navbar">
-          <button
-            className="z-50 relative"
-            onClick={toggleMenu}
-            aria-expanded={isOpen}
-            aria-controls="main-menu"
-          >
-            <h2 className="text-4xl">
-              <strong>menu</strong>
-            </h2>
-          </button>
+            <div className="z-50 relative">
+                <button className="z-50 relative flex flex-row items-center" onClick={toggleMenu} aria-expanded={isOpen} aria-controls="main-menu">
+                    <h2 className="text-2xl md:text-4xl"> <strong>menu</strong></h2>
+                    <label className="lg:hidden">
+                        <div className="w-9 h-10 cursor-pointer flex flex-col items-center justify-center gap-2.5">
+                            <div className="w-[60%] h-[3px] bg-black rounded-sm transition-all duration-300 origin-left translate-y-[0.45rem]"></div>
+                            <div className="w-[60%] h-[3px] bg-black rounded-md transition-all duration-300 origin-center peer-checked:hidden"></div>
+                            <div className="w-[60%] h-[3px] bg-black rounded-md transition-all duration-300 origin-left -translate-y-[0.45rem] peer-checked:rotate-[45deg]"></div>
+                        </div>
+                    </label>
+                </button>
+            </div>
         </div>
-      </div>
-      {isOpen && (
-        <div
-          id="main-menu"
-          role="dialog"
-          className={`${animacao} fixed inset-0 bg-white z-50`}
-        >
-          <WindowsTilesGrid columnsConfig={columnsConfig} onClose={closeMenu} />
-        </div>
-      )}
+        {isOpen && (
+            <div id="main-menu" role="dialog" className={`${animacao} fixed inset-0 bg-white z-50`} >
+                <WindowsTilesGrid columnsConfig={columnsConfig} onClose={closeMenu} />
+            </div>
+        )} 
     </div>
   );
 }
