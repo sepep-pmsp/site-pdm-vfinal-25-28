@@ -105,7 +105,7 @@ export default function SectionIntroSobre({
                 }
                 >
                 <p className="text-sm uppercase text-white md:text-2xl">
-                    Baixar o relatório de execução anual - 2025
+                    Baixar o Balanço de Execução Semestral - 2026
                 </p>
                 </CustomButton>
             </div>

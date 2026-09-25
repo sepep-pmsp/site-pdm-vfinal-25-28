@@ -60,7 +60,7 @@ export default function About() {
               {about.link_pdf_about && (
                 <div className="w-28 h-20 md:w-38 lg:w-48">
                     <CustomButton type="link" className="all_buttons uppercase max-md:text-xs" onClick={() => window.open(about.link_pdf_about, "_blank")}>
-                    <p className="roboto-black">Balanço<br/>2025</p>
+                    <p className="roboto-black">Balanço<br/>2026</p>
                     </CustomButton>
                 </div>
                 )}
