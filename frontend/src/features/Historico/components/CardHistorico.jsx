@@ -58,16 +58,8 @@ export default function CarrosselHistorico() {
       {isMobile ? (
         <div className="carrossel-touch flex flex-col items-start justify-center flex-nowrap gap-12 h-full">
           {historico.map((card) => (
-            <div
-              key={card.id}
-              className="flex flex-col items-start justify-center flex-nowrap gap-12"
-            >
-              <CardItem
-                card={card}
-                animating={false}
-                openedCardId={openedCardId}
-                setOpenedCardId={setOpenedCardId}
-              />
+            <div key={card.id} className="flex flex-col items-start justify-center flex-nowrap gap-12">
+              <CardItem card={card} animating={false} openedCardId={openedCardId} setOpenedCardId={setOpenedCardId}/>
             </div>
           ))}
         </div>
