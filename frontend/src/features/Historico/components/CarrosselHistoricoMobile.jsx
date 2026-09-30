@@ -17,24 +17,11 @@ export default function CarrosselHistoricoMobile() {
 
   return (
     <div
-      className="w-full max-w-screen overflow-x-auto overflow-y-hidden px-4 py-4"
-      style={{
-        WebkitOverflowScrolling: "touch",
-        touchAction: "pan-x",
-      }}
-    >
+      className="w-full max-w-screen overflow-x-auto overflow-y-hidden px-4 py-4" style={{  WebkitOverflowScrolling: "touch",  touchAction: "pan-x",}}>
       <div className="flex gap-8 items-start snap-x snap-mandatory">
         {historico.map((card) => (
-          <div
-            key={card.id}
-            className="flex-shrink-0 snap-center"
-            style={{ width: "20rem" }} 
-          >
-            <CardItemMobile
-              card={card}
-              openedCardId={openedCardId}
-              setOpenedCardId={setOpenedCardId}
-            />
+          <div key={card.id} className="flex-shrink-0 snap-center" style={{ width: "20rem" }} >
+            <CardItemMobile card={card} openedCardId={openedCardId} setOpenedCardId={setOpenedCardId}/>
           </div>
         ))}
       </div>
